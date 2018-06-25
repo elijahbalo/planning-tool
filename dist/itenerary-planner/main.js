@@ -1435,7 +1435,7 @@ module.exports = "<div>\n  <app-main-header></app-main-header>\n</div>\n\n<div c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".img-resize {\n  height: 500px;\n  width: 100%; }\n\n.margin {\n  margin-bottom: 3%;\n  height: 380px;\n  width: 32.8%;\n  font-size: 13px; }\n\n.empty-card {\n  height: 380px;\n  width: 32.8%;\n  font-size: 13px; }\n"
+module.exports = ".img-resize {\n  height: 650px;\n  width: 100%; }\n\n.margin {\n  margin-bottom: 3%;\n  height: 380px;\n  width: 32.8%;\n  font-size: 13px; }\n\n.empty-card {\n  height: 380px;\n  width: 32.8%;\n  font-size: 13px; }\n"
 
 /***/ }),
 
