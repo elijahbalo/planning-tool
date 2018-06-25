@@ -1,0 +1,45 @@
+<div class="container">
+<div class="card-container">
+  <div id="slideshow">
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <img [src]="images[0]" alt="Random first slide" class="img-responsive img-resize">
+    <div class="carousel-caption text">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[1]" alt="Random second slide" class="img-responsive img-resize">
+    <div class="carousel-caption text">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img [src]="images[2]" alt="Random third slide" class="img-responsive img-resize">
+    <div class="carousel-caption text">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+</div>
+<div *ngIf="view" class="layers">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+    natoque penatibus et magnis dis parturient montes, nascetur 
+    ridiculus mus. Donec quam felis, ultricies nec.
+</div>
+<div *ngIf="!view" class="layers" style="margin-bottom:3%;">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+    natoque penatibus et magnis dis parturient montes, nascetur 
+    ridiculus mus. Donec quam felis, ultricies nec.
+</div>
+<div *ngIf="view" class="layers" style="font-weight:bold; margin-bottom:3%">
+  VIEW THIS ITENERARY
+  <img src="../../assets/images/right-arrow.png">
+</div>
+</div>
+</div>

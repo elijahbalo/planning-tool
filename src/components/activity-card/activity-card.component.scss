@@ -1,0 +1,33 @@
+.card-container{
+    height:100%;
+    width:100%;
+    position: relative;
+    border-width:1px;
+    border-style:solid;
+    border-color:#E0E0E0;
+  }
+  
+  .img-resize{
+    height:300px;
+    width:100%;
+  }
+
+  .text{
+    position: absolute;
+    margin-left:2%;
+    bottom:2%;
+    font-size:12.5px;
+    color:white;
+  }
+
+ .tag{
+     background-color:red;
+     font-size:12.5px;
+     top:0;
+     width:35%;
+     margin:0;
+     position:absolute;
+     height:15%;
+     padding:2%;
+     color:white;
+ }

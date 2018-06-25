@@ -1,0 +1,57 @@
+
+.main{
+    padding:3%;
+}
+
+.outer-box{
+    background-color: white;
+    padding:3%;
+}
+
+.inner-box-head{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    padding:1%;
+    margin-bottom:2%;
+
+}
+.inner-box-body{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+.note{
+   width:65%;
+   word-wrap:break-word;
+   margin-top:10%;
+   margin-left:11%;
+   font-weight:bold;
+
+}
+
+.icon{
+    height:19px;
+  }
+
+ 
+  .my-card{
+    height:380px;
+    width:75%;
+    font-size:13px;
+    margin-left:8%;
+  }
+
+  .activity{
+      width:95%;
+  
+  }
+
+  .col{
+      display:flex;
+      flex-direction:column;
+  }
+
+  .list{
+      margin-bottom:2%;
+  }

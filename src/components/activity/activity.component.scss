@@ -1,0 +1,66 @@
+.height{
+    border-style:solid;
+    display:inline-block;
+    border-width:thin;
+    margin-top:5%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.item{
+    height:100%;
+    width:100%;
+}
+.outer-flex{
+    display:flex;
+    flex-direction:row;
+
+}
+.flex-container {
+    display: flex;
+   /*  border-top-style: dashed;
+    border-color:#E0E0E0; */
+    flex-direction: row;
+    padding-top:1%;
+    padding-bottom:0%;
+    justify-content:space-around; 
+    
+  }
+.middle-flex{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.icon{
+    height:19px;
+  }
+
+  .inner-flex{
+      display:flex;
+      flex-direction:row;
+      justify-content:space-between;
+  }
+
+  .main-flex{
+      display:flex;
+      flex-direction:column;
+  }
+  .list{
+      margin-bottom:0%;
+  }
+  .activity-card{
+    height:400px; 
+    width:33%;
+    font-size:13px;
+
+}
+.alt-flex{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}

@@ -1,0 +1,90 @@
+
+<div class="container-fluid ">
+  <div style="font-weight:bold; margin-top:7%">
+    <h1>BUILD YOUR OWN ITENERARY</h1>
+  </div>
+  <div style="margin-top:5%">
+      Lorem ipsum dolor sit amet, 
+      consectetuer adipiscing elit. 
+      Aenean commodo ligula eget dolor.
+       Aenean massa. 
+  </div>
+  <div style="margin-top:7%" >
+    <h6>GRADE LEVEL</h6>
+    <form>
+  <div class="form-check my-radio-btn">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <label class="form-check-label" for="exampleRadios1">
+       Preschool/Kindergaten and Grades 1-2/Cycle 1
+      </label>
+    </div>
+    <div class="form-check my-radio-btn">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+      <label class="form-check-label" for="exampleRadios2">
+       Grades 3-6/Cycles 2-3
+      </label>
+    </div>
+    <div class="form-check my-radio-btn">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+         Grades 7-8/Secondary 1-2
+        </label>
+      </div>
+      <div class="form-check my-radio-btn">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+        <label class="form-check-label" for="exampleRadios2">
+         Grades 9-12/Secondary 3-5
+        </label>
+      </div>
+      </form>
+    </div>
+     
+    <div style="margin-top:7%;">
+    <div style="font-weight:bold; font-size:11px; margin-left:1%;">
+      DATE RANGE:
+    </div>
+    <div class="input-group" style="width:100%; margin-left:1%;">
+        <select class="custom-select" id="inputGroupSelect04" style=" font-size:13px">
+          <option selected >Choose your dates...</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="margin-top:2%; ">
+        <ngb-datepicker #dp (select)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t" >
+          
+          </ngb-datepicker>
+          
+          <ng-template #t let-date="date" let-focused="focused">
+            <span class="custom-day"
+                  [class.focused]="focused"
+                  [class.range]="isFrom(date) || isTo(date) || isInside(date) || isHovered(date)"
+                  [class.faded]="isHovered(date) || isInside(date)"
+                  (mouseenter)="hoveredDate = date"
+                  (mouseleave)="hoveredDate = null">
+              {{ date.day }}
+            </span>
+          </ng-template>
+        </div>
+          <div class="form-check my-radio-btn" style="margin-bottom:13%;">
+            <div style="margin-bottom:2%;   margin-top:5%;">
+              <h6>HALF DAY OR FULL DAY?:</h6>
+            </div>
+            <form>
+              <div style="float:left; margin-right:9%;">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+              Half Day
+              </label>
+            </div>
+            <div style="float:left; margin-right:9%;">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+              Full Day
+              </label>
+            </div>
+            </form>
+            </div>
+            
+        
+</div>
