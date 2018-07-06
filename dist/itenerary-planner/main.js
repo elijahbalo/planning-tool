@@ -81,7 +81,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n \n\n<!--outlet for router navigation-->\n<router-outlet></router-outlet>\n\n\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n <!-- <div>\n        <ul>\n                <li *ngFor=\"let item of items | async\">\n                     <div *ngFor=\"let list of item.activities\">{{list.name| json}}</div>\n                \n                    \n                </li>\n            </ul>\n </div>  -->\n\n\n<!--  <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" placeholder=\"Title..\">\n <Form>\n <input type=\"radio\" [(ngModel)]=\"length\" value=\"Half-Day...\" name=\"length\" placeholder=\"Title..\">\n <input type=\"radio\" [(ngModel)]=\"length\" value=\"Full-Day...\" name=\"length\" placeholder=\"Title..\">\n </Form>\n<textarea [(ngModel)]=\"content\" name=\"content\" placeholder=\"Content..\"></textarea>\n<input type=\"submit\" value=\"Add a Post\" (click)=\"addPost()\">  -->\n<!--outlet for router navigation--> \n<router-outlet></router-outlet>\n\n\n"
 
 /***/ }),
 
@@ -107,23 +107,53 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
+/* harmony import */ var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/add/operator/catch */ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js");
+/* harmony import */ var rxjs_add_observable_throw__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/add/observable/throw */ "./node_modules/rxjs-compat/_esm5/add/observable/throw.js");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
 
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
-        this.title = 'app';
+    function AppComponent(db) {
+        this.db = db;
+        this.items = db.collection('/itineraries').snapshotChanges().map(function (actions) {
+            return actions.map(function (a) {
+                var data = a.payload.doc.data();
+                var id = a.payload.doc.id;
+                return __assign({ id: id }, data);
+            });
+        });
     }
+    AppComponent.prototype.addPost = function () {
+        this.db.collection('/itineraries').add({ 'name': this.title, 'description': this.content, 'length': this.length });
+    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
             styles: [__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")]
-        })
+        }),
+        __metadata("design:paramtypes", [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestore"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -155,24 +185,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/sticky-footer/sticky-footer.component */ "./src/components/sticky-footer/sticky-footer.component.ts");
 /* harmony import */ var _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/confirm-sticker/confirm-sticker.component */ "./src/components/confirm-sticker/confirm-sticker.component.ts");
 /* harmony import */ var _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/warning/warning.component */ "./src/components/warning/warning.component.ts");
-/* harmony import */ var _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/main-header/main-header.component */ "./src/components/main-header/main-header.component.ts");
-/* harmony import */ var _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/main-footer/main-footer.component */ "./src/components/main-footer/main-footer.component.ts");
-/* harmony import */ var _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/submit-form/submit-form.component */ "./src/components/submit-form/submit-form.component.ts");
-/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../pages/landing-page/landing-page.component */ "./src/pages/landing-page/landing-page.component.ts");
-/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../pages/confirm-page/confirm-page.component */ "./src/pages/confirm-page/confirm-page.component.ts");
-/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/design-page/design-page.component */ "./src/pages/design-page/design-page.component.ts");
-/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/submit-page/submit-page.component */ "./src/pages/submit-page/submit-page.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ng-simple-slideshow */ "./node_modules/ng-simple-slideshow/ng-simple-slideshow.es5.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/calendar/calendar.component */ "./src/components/calendar/calendar.component.ts");
+/* harmony import */ var _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/main-header/main-header.component */ "./src/components/main-header/main-header.component.ts");
+/* harmony import */ var _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/main-footer/main-footer.component */ "./src/components/main-footer/main-footer.component.ts");
+/* harmony import */ var _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/submit-form/submit-form.component */ "./src/components/submit-form/submit-form.component.ts");
+/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../pages/landing-page/landing-page.component */ "./src/pages/landing-page/landing-page.component.ts");
+/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/confirm-page/confirm-page.component */ "./src/pages/confirm-page/confirm-page.component.ts");
+/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/design-page/design-page.component */ "./src/pages/design-page/design-page.component.ts");
+/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/submit-page/submit-page.component */ "./src/pages/submit-page/submit-page.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ng-simple-slideshow */ "./node_modules/ng-simple-slideshow/ng-simple-slideshow.es5.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -204,7 +242,7 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_21__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_22__["AppComponent"],
                 _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_4__["EmptyCardComponent"],
                 _components_card_card_component__WEBPACK_IMPORTED_MODULE_3__["CardComponent"],
                 _components_build_build_component__WEBPACK_IMPORTED_MODULE_5__["BuildComponent"],
@@ -215,25 +253,28 @@ var AppModule = /** @class */ (function () {
                 _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_10__["StickyFooterComponent"],
                 _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_11__["ConfirmStickerComponent"],
                 _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_12__["WarningComponent"],
-                _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_13__["MainHeaderComponent"],
-                _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_14__["MainFooterComponent"],
-                _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_15__["SubmitFormComponent"],
-                _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_16__["LandingPageComponent"],
-                _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_18__["DesignPageComponent"],
-                _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_17__["ConfirmPageComponent"],
-                _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_19__["SubmitPageComponent"]
+                _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_14__["MainHeaderComponent"],
+                _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_13__["CalendarComponent"],
+                _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_15__["MainFooterComponent"],
+                _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_16__["SubmitFormComponent"],
+                _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_17__["LandingPageComponent"],
+                _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_19__["DesignPageComponent"],
+                _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_18__["ConfirmPageComponent"],
+                _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_20__["SubmitPageComponent"]
             ],
             imports: [
-                ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_22__["SlideshowModule"],
+                ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_23__["SlideshowModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModule"].forRoot(),
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_20__["AppRoutingModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_23__["HttpClientModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_24__["FormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_24__["ReactiveFormsModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_21__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_25__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_26__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_26__["ReactiveFormsModule"],
+                angularfire2__WEBPACK_IMPORTED_MODULE_28__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_24__["environment"].firebase),
+                angularfire2_firestore__WEBPACK_IMPORTED_MODULE_27__["AngularFirestoreModule"]
             ],
-            providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_21__["AppComponent"]]
+            providers: [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_27__["AngularFirestoreModule"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_22__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -250,7 +291,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n <div class=\"card-container\">\n   \n      <img [src]=\"image\" alt=\"Random first slide\" class=\"img-responsive img-resize\">\n      <div class=\"tag\"> CURRENT SELECTION</div>\n      <div class=\"text\" >\n        <h5 style=\"font-size:12.5px; font-weight:bold;\">SPECIAL EXHIBITION</h5>\n        <h2  style=\"font-size:25px; font-weight:bold; margin-top:1%;\">WONDERS OF THE ARCTIC</h2>\n        <p  style=\"font-size:11px; font-weight:bold; \">Nulla vitae elit libero, a pharetra augue mollis interdum.\n            Nulla vitae elit libero, a pharetra augue mollis interdum.\n            Nulla vitae elit libero, a pharetra augue mollis interdum.\n        </p>\n   </div>\n\n </div>\n</div>"
+module.exports = "<div class=\"container\">\n <div class=\"card-container\" (click)=\"changeItem(item)\">\n   \n      <img src=\"{{item.img}}\" alt=\"Random first slide\" class=\"img-responsive img-resize\">\n      <div class=\"tag\"> CURRENT SELECTION</div>\n      <div class=\"text\" >\n        <h5 style=\"font-size:12.5px; font-weight:bold;\">SPECIAL EXHIBITION</h5>\n        <h2  style=\"font-size:20px; font-weight:bold; margin-top:1%;\">{{item.name}}</h2>\n       \n   </div>\n\n </div>\n</div>"
 
 /***/ }),
 
@@ -261,7 +302,7 @@ module.exports = "<div class=\"container\">\n <div class=\"card-container\">\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card-container {\n  height: 100%;\n  width: 100%;\n  position: relative;\n  border-width: 1px;\n  border-style: solid;\n  border-color: #E0E0E0; }\n\n.img-resize {\n  height: 300px;\n  width: 100%; }\n\n.text {\n  position: absolute;\n  margin-left: 2%;\n  bottom: 2%;\n  font-size: 12.5px;\n  color: white; }\n\n.tag {\n  background-color: red;\n  font-size: 12.5px;\n  top: 0;\n  width: 35%;\n  margin: 0;\n  position: absolute;\n  height: 15%;\n  padding: 2%;\n  color: white; }\n"
+module.exports = ".card-container {\n  height: 100%;\n  width: 100%;\n  position: relative;\n  border-width: 1px;\n  border-style: solid;\n  border-color: #E0E0E0; }\n\n.img-resize {\n  height: 180px;\n  width: 100%; }\n\n.text {\n  position: absolute;\n  margin-left: 2%;\n  bottom: 2%;\n  font-size: 12.5px;\n  color: white; }\n\n.tag {\n  background-color: red;\n  font-size: 12.5px;\n  top: 0;\n  width: 35%;\n  margin: 0;\n  position: absolute;\n  height: 15%;\n  padding: 2%;\n  color: white; }\n"
 
 /***/ }),
 
@@ -288,13 +329,21 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var ActivityCardComponent = /** @class */ (function () {
     function ActivityCardComponent() {
+        this.newItem = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
     ActivityCardComponent.prototype.ngOnInit = function () {
+    };
+    ActivityCardComponent.prototype.changeItem = function (event) {
+        this.newItem.emit(event);
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
-    ], ActivityCardComponent.prototype, "image", void 0);
+    ], ActivityCardComponent.prototype, "item", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], ActivityCardComponent.prototype, "newItem", void 0);
     ActivityCardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-activity-card',
@@ -317,7 +366,7 @@ var ActivityCardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"outer-flex\">\n  \n<div style=\"margin-left:1%; width:7%; font-size:15px; font-weight:bold;\">\n\n        <img  *ngIf=\"selected\" src=\"../../assets/images/check.png\" class=\"icon\">\n  \n 9:30 AM\n</div>\n<div style=\"border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;\">\n \n</div>\n</div>\n\n<div class=\"flex-container\" *ngIf=\"swap || !display\">\n \n  <div *ngIf=\"showImage\">\n <img class=\"img-fluid item\" alt=\"Responsive image\" src=\"../../assets/images/6.jpg\">\n  </div>\n  <div *ngIf=\"!adjust\" class=\"middle-flex\" style=\"width:65%; \">\n      <div style=\"font-size:12.5px; font-weight:bold;\">\n       \n       CINE+\n      </div>\n      <div style=\"font-size:20px; font-weight:bold;\">\n       WONDERS OF THE ARCTIC\n      </div>\n      <div *ngIf=\"showDescription\" style=\"margin-bottom:2%; \"> \n         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n         Aenean commodo ligula eget dolor. Aenean massa. \n         Cum sociis natoque penatibus et magnis dis parturient montes,\n         Aenean massa. \n         Cum sociis natoque penatibus et magnis dis parturient montes,\n         Aenean massa. \n         Cum sociis natoque penatibus et magnis dis parturient montes,\n      </div>\n      <div style=\"font-size:12.5px\">\n        45 Minutes, Cine+\n      </div>\n     </div>\n  <div *ngIf=\"adjust\" class=\"middle-flex\" style=\"width:65%;\">\n   <div style=\"font-size:12.5px; font-weight:bold;\">\n    \n    CINE+\n   </div>\n   <div style=\"font-size:20px; font-weight:bold;\">\n    WONDERS OF THE ARCTIC\n   </div>\n   <div style=\"margin-bottom:2%; \"> \n      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n      Aenean commodo ligula eget dolor. Aenean massa. \n      Cum sociis natoque penatibus et magnis dis parturient montes,\n      Aenean massa. \n      Cum sociis natoque penatibus et magnis dis parturient montes,\n      Aenean massa. \n      Cum sociis natoque penatibus et magnis dis parturient montes,\n   </div>\n   <div style=\"font-size:12.5px\">\n     45 Minutes, Cine+\n   </div>\n  </div>\n  <div *ngIf=\"showTools\" style=\"align-self: center; margin-right:5%\" class=\"inner-flex\">\n   <div style=\"margin-right:50px\"><div *ngIf=\"!details\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/info.png\"  (click)=\"toggleDetails()\" class=\"icon\"></a></div>\n   <div *ngIf=\"details\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/cancel.png\"  (click)=\"toggleDetails()\" class=\"icon\"></a></div>\n   <div style=\"font-weight:bold; font-size:12.5px\">DETAILS</div></div>\n  \n    <div><div><a href=\"javascript: void(0)\"><img src=\"../../assets/images/undo.png\" (click)=\"toggleSwap()\" class=\"icon\"></a></div><div style=\"font-weight:bold; font-size:12.5px\">SWAP</div></div>\n  </div>\n</div>\n  <div *ngIf=\"details && swap\" style=\"margin-left:19%; width:60%;\">\n   <div style=\"font-size:17px; font-weight:bold;\">\n     DETAILS\n   </div>\n   <div style=\"margin-top:2%; font-size:13px\">\n      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n      Aenean commodo ligula eget dolor. Aenean massa. \n      Cum sociis natoque penatibus et magnis dis parturient montes,\n      Aenean massa. \n      Cum sociis natoque penatibus et magnis dis parturient montes,\n      Aenean massa. \n      Cum sociis natoque penatibus et magnis dis parturient montes,\n      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n      Aenean commodo ligula eget dolor. Aenean massa. \n      Cum sociis natoque penatibus et magnis dis parturient montes,\n      Aenean massa. \n      Cum sociis natoque penatibus et magnis dis parturient montes,\n      Aenean massa. \n      Cum sociis natoque penatibus et magnis dis parturient montes,\n      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n          Aenean commodo ligula eget dolor. Aenean massa. \n          Cum sociis natoque penatibus et magnis dis parturient montes,\n          Aenean massa. \n          Cum sociis natoque penatibus et magnis dis parturient montes,\n          Aenean massa. \n          Cum sociis natoque penatibus et magnis dis parturient montes,</p>\n   </div>\n\n   <div style=\"font-size:17px; font-weight:bold; margin-top:3%\">\n     CURRICULUM CONNECTIONS\n   </div>\n   <div style=\"margin-top:2%; font-size:13px; \">\n   <ul>\n     <li class=\"list\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n     <li class=\"list\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n   </ul>\n  </div>\n  </div>\n\n\n\n  <div class=\"alt-flex\" *ngIf=\"!swap && display\">\n  <div style=\"width:98%; margin-left:0%; margin-top:1%\">\n      <div class=\"row\" >\n    <div class=\"activity-card\" *ngFor=\"let image of images\"> \n        <app-activity-card [image]=\"image\" (click)=\"toggleSwap()\"></app-activity-card>\n    </div>\n  </div>\n </div>\n \n</div>"
+module.exports = "<div class=\"outer-flex\">\n  \n<div style=\"margin-left:1%; width:7%; font-size:15px; font-weight:bold;\">\n\n        <img  *ngIf=\"selected\" src=\"../../assets/images/check.png\" class=\"icon\">\n  \n 9:30 AM\n</div>\n<div style=\"border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;\">\n \n</div>\n</div>\n\n<div class=\"flex-container\" *ngIf=\"swap || !display\">\n \n  <div *ngIf=\"showImage\" class=\"img-flex\"> \n <img class=\"img-responsive img-resize\" src=\"{{selectedItem.img}}\">\n  </div>\n  <div *ngIf=\"!adjust\" class=\"middle-flex\" style=\"width:60%;\">\n      <div style=\"font-size:12.5px; font-weight:bold;\">\n       \n       {{selectedItem.type}}\n      </div>\n      <div style=\"font-size:20px; font-weight:bold;\">\n       {{selectedItem.name}}\n      </div>\n      <div *ngIf=\"showDescription\" style=\"margin-bottom:2%;\"> \n         {{selectedItem.description}}\n      </div>\n      <div style=\"font-size:12.5px\">\n        {{selectedItem.duration}} Minutes, {{selectedItem.place}}\n      </div>\n     </div>\n  <div *ngIf=\"adjust\" class=\"middle-flex\" style=\"width:60%;\">\n   <div style=\"font-size:12.5px; font-weight:bold;\">\n    \n    {{selectedItem.type}}\n   </div>\n   <div style=\"font-size:20px; font-weight:bold;\">\n    {{selectedItem.name}}\n   </div>\n   <div style=\"margin-bottom:2%; \"> \n     {{selectedItem.description}}\n   </div>\n   <div style=\"font-size:12.5px\">\n    {{selectedItem.duration}} Minutes, {{selectedItem.place}}\n   </div>\n  </div>\n  <div *ngIf=\"showTools\" style=\"align-self: center;\" class=\"inner-flex\">\n   <div style=\"margin-right:10px\"><div *ngIf=\"!details\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/info.png\"  (click)=\"toggleDetails()\" class=\"icon\"></a></div>\n   <div *ngIf=\"details\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/cancel.png\"  (click)=\"toggleDetails()\" class=\"icon\"></a></div>\n   <div style=\"font-weight:bold; font-size:12.5px\">DETAILS</div></div>\n  \n    <div><div><a href=\"javascript: void(0)\"><img src=\"../../assets/images/undo.png\" (click)=\"toggleSwap()\" class=\"icon\"></a></div><div style=\"font-weight:bold; font-size:12.5px\">SWAP</div></div>\n  </div>\n</div>\n  <div *ngIf=\"details && swap\" style=\"margin-left:19%; width:60%;\">\n   <div style=\"font-size:17px; font-weight:bold;\">\n     DETAILS\n   </div>\n   <div style=\"margin-top:2%; font-size:13px\">\n      {{selectedItem.details}}\n      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n          Aenean commodo ligula eget dolor. Aenean massa. \n          Cum sociis natoque penatibus et magnis dis parturient montes,\n          Aenean massa. \n          Cum sociis natoque penatibus et magnis dis parturient montes,\n          Aenean massa. \n          Cum sociis natoque penatibus et magnis dis parturient montes,</p>\n   </div>\n\n   <div style=\"font-size:17px; font-weight:bold; margin-top:3%\">\n     CURRICULUM CONNECTIONS\n   </div>\n   <div style=\"margin-top:2%; font-size:13px; \">\n   <ul>\n     <li class=\"list\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n     <li class=\"list\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n   </ul>\n  </div>\n  </div>\n\n\n\n  <div class=\"alt-flex\" *ngIf=\"!swap && display\">\n  <div style=\"width:98%; margin-left:0%; margin-top:1%\">\n      <div class=\"row\" >\n    <div class=\"activity-card\" *ngFor=\"let item of items | async\"> \n        <app-activity-card [item]=\"item\" (newItem)=\"itemChange($event)\" (click)=\"toggleSwap()\"></app-activity-card>\n    </div>\n  </div>\n </div>\n \n</div>"
 
 /***/ }),
 
@@ -328,7 +377,7 @@ module.exports = "<div class=\"outer-flex\">\n  \n<div style=\"margin-left:1%; w
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".height {\n  border-style: solid;\n  display: inline-block;\n  border-width: thin;\n  margin-top: 5%; }\n\nimg {\n  max-width: 100%;\n  max-height: 100%; }\n\n.item {\n  height: 100%;\n  width: 100%; }\n\n.outer-flex {\n  display: flex;\n  flex-direction: row; }\n\n.flex-container {\n  display: flex;\n  /*  border-top-style: dashed;\r\n    border-color:#E0E0E0; */\n  flex-direction: row;\n  padding-top: 1%;\n  padding-bottom: 0%;\n  justify-content: space-around; }\n\n.middle-flex {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between; }\n\n.icon {\n  height: 19px; }\n\n.inner-flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.main-flex {\n  display: flex;\n  flex-direction: column; }\n\n.list {\n  margin-bottom: 0%; }\n\n.activity-card {\n  height: 400px;\n  width: 33%;\n  font-size: 13px; }\n\n.alt-flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n"
+module.exports = ".height {\n  border-style: solid;\n  display: inline-block;\n  border-width: thin;\n  margin-top: 5%; }\n\nimg {\n  max-width: 100%;\n  max-height: 100%; }\n\n.img-resize {\n  height: 200px;\n  width: 90%; }\n\n.outer-flex {\n  display: flex;\n  flex-direction: row;\n  margin-top: 20px; }\n\n.flex-container {\n  display: flex;\n  /*  border-top-style: dashed;\r\n    border-color:#E0E0E0; */\n  flex-direction: row;\n  padding-top: 1%;\n  justify-content: flex-start; }\n\n.img-flex {\n  display: flex;\n  width: 18%; }\n\n.middle-flex {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  margin-right: 5%; }\n\n.icon {\n  height: 19px; }\n\n.inner-flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.main-flex {\n  display: flex;\n  flex-direction: column; }\n\n.list {\n  margin-bottom: 0%; }\n\n.activity-card {\n  height: 200px;\n  width: 23.5%;\n  font-size: 12px; }\n\n.alt-flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n"
 
 /***/ }),
 
@@ -345,6 +394,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -357,9 +415,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var ActivityComponent = /** @class */ (function () {
-    function ActivityComponent(_http) {
+    function ActivityComponent(_http, db) {
         this._http = _http;
+        this.db = db;
         this.showImage = true;
         this.showTools = true;
         this.showDescription = true;
@@ -368,12 +428,25 @@ var ActivityComponent = /** @class */ (function () {
         this.swap = false;
         this.display = true;
         this.selected = false;
+        this.fromConfirm = false;
+        this.activity = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.items = db.collection('/activities').snapshotChanges().map(function (actions) {
+            return actions.map(function (a) {
+                var data = a.payload.doc.data();
+                var id = a.payload.doc.id;
+                return __assign({ id: id }, data);
+            });
+        });
     }
     ActivityComponent.prototype.ngOnInit = function () {
         var _this = this;
         this._http.get('https://picsum.photos/list')
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (images) { return _this._randomImageUrls(images); }))
             .subscribe(function (images) { return _this.images = images; });
+    };
+    ActivityComponent.prototype.itemChange = function (event) {
+        this.selectedItem = event;
+        this.activity.emit(event);
     };
     ActivityComponent.prototype._randomImageUrls = function (images) {
         return [1, 2, 3].map(function () {
@@ -424,13 +497,29 @@ var ActivityComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
     ], ActivityComponent.prototype, "display", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], ActivityComponent.prototype, "item", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], ActivityComponent.prototype, "selectedItem", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], ActivityComponent.prototype, "fromConfirm", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], ActivityComponent.prototype, "activity", void 0);
     ActivityComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-activity',
             template: __webpack_require__(/*! ./activity.component.html */ "./src/components/activity/activity.component.html"),
             styles: [__webpack_require__(/*! ./activity.component.scss */ "./src/components/activity/activity.component.scss")]
         }),
-        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], angularfire2_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"]])
     ], ActivityComponent);
     return ActivityComponent;
 }());
@@ -446,7 +535,7 @@ var ActivityComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container-fluid \">\n  <div style=\"font-weight:bold; margin-top:7%\">\n    <h1>BUILD YOUR OWN ITENERARY</h1>\n  </div>\n  <div style=\"margin-top:5%\">\n      Lorem ipsum dolor sit amet, \n      consectetuer adipiscing elit. \n      Aenean commodo ligula eget dolor.\n       Aenean massa. \n  </div>\n  <div style=\"margin-top:7%\" >\n    <h6>GRADE LEVEL</h6>\n    <form>\n  <div class=\"form-check my-radio-btn\">\n      <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n      <label class=\"form-check-label\" for=\"exampleRadios1\">\n       Preschool/Kindergaten and Grades 1-2/Cycle 1\n      </label>\n    </div>\n    <div class=\"form-check my-radio-btn\">\n      <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n      <label class=\"form-check-label\" for=\"exampleRadios2\">\n       Grades 3-6/Cycles 2-3\n      </label>\n    </div>\n    <div class=\"form-check my-radio-btn\">\n        <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n        <label class=\"form-check-label\" for=\"exampleRadios1\">\n         Grades 7-8/Secondary 1-2\n        </label>\n      </div>\n      <div class=\"form-check my-radio-btn\">\n        <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n        <label class=\"form-check-label\" for=\"exampleRadios2\">\n         Grades 9-12/Secondary 3-5\n        </label>\n      </div>\n      </form>\n    </div>\n     \n    <div style=\"margin-top:7%;\">\n    <div style=\"font-weight:bold; font-size:11px; margin-left:1%;\">\n      DATE RANGE:\n    </div>\n    <div class=\"input-group\" style=\"width:100%; margin-left:1%;\">\n        <select class=\"custom-select\" id=\"inputGroupSelect04\" style=\" font-size:13px\">\n          <option selected >Choose your dates...</option>\n        </select>\n      </div>\n    </div>\n\n    <div style=\"margin-top:2%; overflow:scroll\">\n        <ngb-datepicker #dp (select)=\"onDateSelection($event)\" [displayMonths]=\"2\" [dayTemplate]=\"t\" >\n          \n          </ngb-datepicker>\n          \n          <ng-template #t let-date=\"date\" let-focused=\"focused\">\n            <span class=\"custom-day\"\n                  [class.focused]=\"focused\"\n                  [class.range]=\"isFrom(date) || isTo(date) || isInside(date) || isHovered(date)\"\n                  [class.faded]=\"isHovered(date) || isInside(date)\"\n                  (mouseenter)=\"hoveredDate = date\"\n                  (mouseleave)=\"hoveredDate = null\">\n              {{ date.day }}\n            </span>\n          </ng-template>\n        </div>\n          <div class=\"form-check my-radio-btn\" style=\"margin-bottom:13%;\">\n            <div style=\"margin-bottom:2%;   margin-top:5%;\">\n              <h6>HALF DAY OR FULL DAY?:</h6>\n            </div>\n            <form>\n              <div style=\"float:left; margin-right:9%;\">\n              <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n              <label class=\"form-check-label\" for=\"exampleRadios1\">\n              Half Day\n              </label>\n            </div>\n            <div style=\"float:left; margin-right:9%;\">\n              <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n              <label class=\"form-check-label\" for=\"exampleRadios1\">\n              Full Day\n              </label>\n            </div>\n            </form>\n            </div>\n            \n        \n</div>"
+module.exports = "\n<div class=\"container-fluid \">\n  <div style=\"font-weight:bold; margin-top:7%\">\n    <h1>BUILD YOUR OWN ITENERARY</h1>\n  </div>\n  <div style=\"margin-top:5%\">\n      Lorem ipsum dolor sit amet, \n      consectetuer adipiscing elit. \n      Aenean commodo ligula eget dolor.\n       Aenean massa. \n  </div>\n  <div style=\"margin-top:7%\" >\n    <h6>GRADE LEVEL</h6>\n    <form>\n  <div class=\"form-check my-radio-btn\">\n      <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n      <label class=\"form-check-label\" for=\"exampleRadios1\">\n       Preschool/Kindergaten and Grades 1-2/Cycle 1\n      </label>\n    </div>\n    <div class=\"form-check my-radio-btn\">\n      <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n      <label class=\"form-check-label\" for=\"exampleRadios2\">\n       Grades 3-6/Cycles 2-3\n      </label>\n    </div>\n    <div class=\"form-check my-radio-btn\">\n        <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"option1\" checked>\n        <label class=\"form-check-label\" for=\"exampleRadios1\">\n         Grades 7-8/Secondary 1-2\n        </label>\n      </div>\n      <div class=\"form-check my-radio-btn\">\n        <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios2\" value=\"option2\">\n        <label class=\"form-check-label\" for=\"exampleRadios2\">\n         Grades 9-12/Secondary 3-5\n        </label>\n      </div>\n      </form>\n    </div>\n     \n    <div style=\"margin-top:7%;\">\n    <div style=\"font-weight:bold; font-size:11px; margin-left:1%;\">\n      DATE RANGE:\n    </div>\n    <div class=\"input-group\" style=\"width:100%; margin-left:1%;\">\n        <select class=\"custom-select\" id=\"inputGroupSelect04\" style=\" font-size:13px\">\n          <option selected >Choose your dates...</option>\n        </select>\n      </div>\n    </div>\n\n    <div style=\"margin-top:2%; overflow:scroll\">\n        <ngb-datepicker #dp (select)=\"onDateSelection($event)\" [displayMonths]=\"2\" [dayTemplate]=\"t\" >\n          \n          </ngb-datepicker>\n          \n          <ng-template #t let-date=\"date\" let-focused=\"focused\">\n            <span class=\"custom-day\"\n                  [class.focused]=\"focused\"\n                  [class.range]=\"isFrom(date) || isTo(date) || isInside(date) || isHovered(date)\"\n                  [class.faded]=\"isHovered(date) || isInside(date)\"\n                  (mouseenter)=\"hoveredDate = date\"\n                  (mouseleave)=\"hoveredDate = null\">\n              {{ date.day }}\n            </span>\n          </ng-template>\n        </div>\n          <div class=\"form-check my-radio-btn\" style=\"margin-bottom:13%;\">\n            <div style=\"margin-bottom:2%;   margin-top:5%;\">\n              <h6>HALF DAY OR FULL DAY?:</h6>\n            </div>\n            <form>\n              <div style=\"float:left; margin-right:9%;\">\n              <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"Half-Day\" checked>\n              <label class=\"form-check-label\" for=\"exampleRadios1\">\n              Half Day\n              </label>\n            </div>\n            <div style=\"float:left; margin-right:9%;\">\n              <input class=\"form-check-input\" type=\"radio\" name=\"exampleRadios\" id=\"exampleRadios1\" value=\"Full-Day\" checked>\n              <label class=\"form-check-label\" for=\"exampleRadios1\">\n              Full Day\n              </label>\n            </div>\n            </form>\n            </div>\n            \n        \n</div>"
 
 /***/ }),
 
@@ -534,6 +623,101 @@ var BuildComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/components/calendar/calendar.component.html":
+/*!*********************************************************!*\
+  !*** ./src/components/calendar/calendar.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div style=\"margin-top:2%; overflow:scroll\">\n  <ngb-datepicker #dp (select)=\"onDateSelection($event)\" [displayMonths]=\"2\" [dayTemplate]=\"t\" >\n    \n    </ngb-datepicker>\n    \n    <ng-template #t let-date=\"date\" let-focused=\"focused\">\n      <span class=\"custom-day\"\n            [class.focused]=\"focused\"\n            [class.range]=\"isFrom(date) || isTo(date) || isInside(date) || isHovered(date)\"\n            [class.faded]=\"isHovered(date) || isInside(date)\"\n            (mouseenter)=\"hoveredDate = date\"\n            (mouseleave)=\"hoveredDate = null\">\n        {{ date.day }}\n      </span>\n    </ng-template>\n  </div>"
+
+/***/ }),
+
+/***/ "./src/components/calendar/calendar.component.scss":
+/*!*********************************************************!*\
+  !*** ./src/components/calendar/calendar.component.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".my-container {\n  height: 10%;\n  width: 100%;\n  border-width: 1px;\n  border-style: solid;\n  background-color: white;\n  border-color: #E0E0E0; }\n\n.my-radio-btn {\n  margin-bottom: 1%; }\n\n.custom-day {\n  text-align: center;\n  padding: 0.185rem 0.25rem;\n  display: inline-block;\n  height: 2rem;\n  width: 2rem; }\n\n.custom-day.focused {\n  background-color: #e6e6e6; }\n\n.custom-day.range, .custom-day:hover {\n  background-color: red;\n  color: white; }\n\n.custom-day.faded {\n  background-color: #DCDCDC; }\n\n#new-btn {\n  white-space: normal; }\n\n#footer {\n  border-top-color: #E0E0E0;\n  border-top-style: solid;\n  border-top-width: thin;\n  padding: 6%; }\n"
+
+/***/ }),
+
+/***/ "./src/components/calendar/calendar.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/components/calendar/calendar.component.ts ***!
+  \*******************************************************/
+/*! exports provided: CalendarComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CalendarComponent", function() { return CalendarComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var equals = function (one, two) {
+    return one && two && two.year === one.year && two.month === one.month && two.day === one.day;
+};
+var before = function (one, two) {
+    return !one || !two ? false : one.year === two.year ? one.month === two.month ? one.day === two.day
+        ? false : one.day < two.day : one.month < two.month : one.year < two.year;
+};
+var after = function (one, two) {
+    return !one || !two ? false : one.year === two.year ? one.month === two.month ? one.day === two.day
+        ? false : one.day > two.day : one.month > two.month : one.year > two.year;
+};
+var CalendarComponent = /** @class */ (function () {
+    function CalendarComponent(calendar) {
+        var _this = this;
+        this.isHovered = function (date) { return _this.fromDate && !_this.toDate && _this.hoveredDate && after(date, _this.fromDate) && before(date, _this.hoveredDate); };
+        this.isInside = function (date) { return after(date, _this.fromDate) && before(date, _this.toDate); };
+        this.isFrom = function (date) { return equals(date, _this.fromDate); };
+        this.isTo = function (date) { return equals(date, _this.toDate); };
+        this.fromDate = calendar.getToday();
+        this.toDate = calendar.getNext(calendar.getToday(), 'd', 10);
+    }
+    CalendarComponent.prototype.ngOnInit = function () {
+    };
+    CalendarComponent.prototype.onDateSelection = function (date) {
+        if (!this.fromDate && !this.toDate) {
+            this.fromDate = date;
+        }
+        else if (this.fromDate && !this.toDate && after(date, this.fromDate)) {
+            this.toDate = date;
+        }
+        else {
+            this.toDate = null;
+            this.fromDate = date;
+        }
+    };
+    CalendarComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-calendar',
+            template: __webpack_require__(/*! ./calendar.component.html */ "./src/components/calendar/calendar.component.html"),
+            styles: [__webpack_require__(/*! ./calendar.component.scss */ "./src/components/calendar/calendar.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbCalendar"]])
+    ], CalendarComponent);
+    return CalendarComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/components/card/card.component.html":
 /*!*************************************************!*\
   !*** ./src/components/card/card.component.html ***!
@@ -541,7 +725,7 @@ var BuildComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n<div class=\"card-container\">\n  <div id=\"slideshow\">\n<ngb-carousel *ngIf=\"images\">\n  <ng-template ngbSlide>\n    <img [src]=\"images[0]\" alt=\"Random first slide\" class=\"img-responsive img-resize\">\n    <div class=\"carousel-caption text\">\n      <h3>First slide label</h3>\n      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>\n    </div>\n  </ng-template>\n  <ng-template ngbSlide>\n    <img [src]=\"images[1]\" alt=\"Random second slide\" class=\"img-responsive img-resize\">\n    <div class=\"carousel-caption text\">\n      <h3>Second slide label</h3>\n      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>\n    </div>\n  </ng-template>\n  <ng-template ngbSlide>\n    <img [src]=\"images[2]\" alt=\"Random third slide\" class=\"img-responsive img-resize\">\n    <div class=\"carousel-caption text\">\n      <h3>Third slide label</h3>\n      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>\n    </div>\n  </ng-template>\n</ngb-carousel>\n</div>\n<div *ngIf=\"view\" class=\"layers\">\n    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n    natoque penatibus et magnis dis parturient montes, nascetur \n    ridiculus mus. Donec quam felis, ultricies nec.\n</div>\n<div *ngIf=\"!view\" class=\"layers\" style=\"margin-bottom:3%;\">\n    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n    natoque penatibus et magnis dis parturient montes, nascetur \n    ridiculus mus. Donec quam felis, ultricies nec.\n</div>\n<div *ngIf=\"view\" class=\"layers\" style=\"font-weight:bold; margin-bottom:3%\">\n  VIEW THIS ITENERARY\n  <img src=\"../../assets/images/right-arrow.png\">\n</div>\n</div>\n</div>"
+module.exports = "<div class=\"container\">\n<div class=\"card-container\">\n  <div id=\"slideshow\">\n<ngb-carousel *ngIf=\"images\">\n  <ng-template ngbSlide>\n    <img [src]=\"images[0]\" alt=\"Random first slide\" class=\"img-responsive img-resize\">\n    <div class=\"carousel-caption text\">\n      <h3>{{item.name}}</h3>\n      <p>{{item.start}}-{{item.end}}</p>\n    </div>\n  </ng-template>\n  <ng-template ngbSlide>\n    <img [src]=\"images[1]\" alt=\"Random second slide\" class=\"img-responsive img-resize\">\n    <div class=\"carousel-caption text\">\n        <h3>{{item.name}}</h3>\n        <p>{{item.start}}-{{item.end}}</p>\n    </div>\n  </ng-template>\n  <ng-template ngbSlide>\n    <img [src]=\"images[2]\" alt=\"Random third slide\" class=\"img-responsive img-resize\">\n    <div class=\"carousel-caption text\">\n        <h3>{{item.name}}</h3>\n        <p>{{item.start}}-{{item.end}}</p>\n    </div>\n  </ng-template>\n</ngb-carousel>\n</div>\n<div *ngIf=\"view\" class=\"layers\">\n    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n    natoque penatibus et magnis dis parturient montes, nascetur \n    ridiculus mus. Donec quam felis, ultricies nec.\n</div>\n<div *ngIf=\"!view\" class=\"layers\" style=\"margin-bottom:3%;\">\n    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n    natoque penatibus et magnis dis parturient montes, nascetur \n    ridiculus mus. Donec quam felis, ultricies nec.\n</div>\n<div *ngIf=\"view\" class=\"layers\" style=\"font-weight:bold; margin-bottom:3%\">\n  VIEW THIS ITENERARY\n  <img src=\"../../assets/images/right-arrow.png\">\n</div>\n</div>\n</div>"
 
 /***/ }),
 
@@ -602,6 +786,10 @@ var CardComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
     ], CardComponent.prototype, "view", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], CardComponent.prototype, "item", void 0);
     CardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-card',
@@ -687,7 +875,7 @@ var ConfirmStickerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron main\">\n <div class=\"outer-box\">\n<div class=\"inner-box-head \">\n <div><h1>FIRST AVE. GRADE 3 CLASS- ITENERARY 2</h1></div>\n <div><div><div><a href=\"javascript: void(0)\" (click)=\"navigateToDesign()\"><img src=\"../../assets/images/edit.png\" class=\"icon\"></a></div><div style=\"font-weight:bold; font-size:12.5px\">EDIT</div></div></div>\n</div>\n<div class=\"inner-box-body\">\n  <div class=\"column\">\n<div class=\"my-card\">\n    <app-card [view]=\"view\"></app-card>\n</div>\n<div class=\"note\">\n  <h4>IMPORTANT:</h4>\n  <p>Activities can accomodate up to 30 people.\n     Please create additional Iteneraries for  larger groups.\n  </p>\n</div>\n</div>\n<div class=\"activity\">\n<div class=\"column\">\n  <div class=\"list\">\n  <app-activity [showImage]=\"showImage\" [showTools]=\"showTools\" [showDescription]=\"showDescription\" [adjust]=\"adjust\" [display]=\"display\"></app-activity>\n</div>\n<div class=\"list\">\n    <app-activity [showImage]=\"showImage\" [showTools]=\"showTools\" [showDescription]=\"showDescription\" [adjust]=\"adjust\" [display]=\"display\"></app-activity>\n  </div>\n  <div class=\"list\">\n      <app-activity [showImage]=\"showImage\" [showTools]=\"showTools\" [showDescription]=\"showDescription\" [adjust]=\"adjust\" [display]=\"display\"></app-activity>\n    </div>\n    <div class=\"list\">\n        <app-activity [showImage]=\"showImage\" [showTools]=\"showTools\" [showDescription]=\"showDescription\" [adjust]=\"adjust\" [display]=\"display\"></app-activity>\n      </div>\n      <div class=\"list\">\n          <app-activity [showImage]=\"showImage\" [showTools]=\"showTools\" [showDescription]=\"showDescription\" [adjust]=\"adjust\" [display]=\"display\"></app-activity>\n        </div>\n        <div class=\"list\">\n            <app-activity [showImage]=\"showImage\" [showTools]=\"showTools\" [showDescription]=\"showDescription\" [adjust]=\"adjust\" [display]=\"display\"></app-activity>\n          </div>\n          <div class=\"list\">\n        <app-activity [showImage]=\"showImage\" [showTools]=\"showTools\" [showDescription]=\"showDescription\" [adjust]=\"adjust\" [display]=\"display\"></app-activity>\n      </div>\n      <div class=\"list\">\n          <app-activity [showImage]=\"showImage\" [showTools]=\"showTools\" [showDescription]=\"showDescription\" [adjust]=\"adjust\" [display]=\"display\"></app-activity>\n        </div>\n        <div class=\"list\">\n            <app-activity [showImage]=\"showImage\" [showTools]=\"showTools\" [showDescription]=\"showDescription\" [adjust]=\"adjust\" [display]=\"display\"></app-activity>\n          </div>\n          \n</div>\n</div>\n\n\n</div>\n</div>\n</div>\n"
+module.exports = "<div class=\"jumbotron main\">\n <div class=\"outer-box\">\n<div class=\"inner-box-head \">\n <div><h1>FIRST AVE. GRADE 3 CLASS- ITENERARY 2</h1></div>\n <div><div><div><a href=\"javascript: void(0)\" (click)=\"navigateToDesign()\"><img src=\"../../assets/images/edit.png\" class=\"icon\"></a></div><div style=\"font-weight:bold; font-size:12.5px\">EDIT</div></div></div>\n</div>\n<div class=\"inner-box-body\">\n  <div class=\"column\">\n<div class=\"my-card\">\n    <app-card [view]=\"view\"></app-card>\n</div>\n<div class=\"note\">\n  <h4>IMPORTANT:</h4>\n  <p>Activities can accomodate up to 30 people.\n     Please create additional Iteneraries for  larger groups.\n  </p>\n</div>\n</div>\n<div class=\"activity\">\n<div class=\"column\">\n  <div class=\"list\" *ngFor=\"let activity of activities\">\n  <app-activity [selectedItem]=\"activity\" [showImage]=\"showImage\" [showTools]=\"showTools\" [showDescription]=\"showDescription\" [adjust]=\"adjust\" [display]=\"display\"></app-activity>\n</div>\n\n</div>\n</div>\n\n\n</div>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -735,6 +923,7 @@ var ConfirmComponent = /** @class */ (function () {
         this.adjust = false;
         this.view = false;
         this.display = false;
+        this.activities = JSON.parse(localStorage.getItem('activities'));
     }
     ConfirmComponent.prototype.ngOnInit = function () {
     };
@@ -1042,7 +1231,7 @@ var MainHeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"stick\">\n<div>\n<div style=\"background-color:black; width:25%; height:80px; border-right-width:thin; border-right-style:solid;  border-right-color:white; float:left;\">\n <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold; \">PRESERVE YOUR ITENERARY</div><div style=\"color:white; font-size:12px; width:70%;\">copy the public share link and return to your itenerary later </div></div>\n</div>\n<div  style=\"background-color:black; width:25%; height:80px; float:left;\">\n    <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold;\">PRINT YOUR ITENERARY</div><div style=\"color:white; font-size:12px; width:70%;\">Print a hard copy of PDF. NOTE: this does not constitute a reservation! </div></div>\n</div>\n<div  style=\"background-color:darkred; width:25%; height:80px; float:left;\">\n    <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold;\">8/8 TIME SLOTS COMPLETE</div><div style=\"color:white; font-size:12px; width:70%;\">You're done. Next Step: Confirm your itenerary before submitting </div></div>\n</div>\n<div  style=\"background-color:red; width:25%; height:80px; float:left;\">\n  <div style=\"margin-top:20px; margin-left:160px;\"><a href=\"javascript:void(0)\" (click)=\"navigate(page)\"><div style=\"float:left; font-size:25px; font-weight:bold; color:white;\" >NEXT</div><div style=\"width:0;height: 0; border-top: 10px solid transparent; border-left: 15px solid white; border-bottom: 10px solid transparent; float:left; margin-left:20px; margin-top:10px;\"></div></a></div>\n</div>\n</div>\n</div>"
+module.exports = "<div class=\"stick\">\n<div>\n<div style=\"background-color:black; width:25%; height:80px; border-right-width:thin; border-right-style:solid;  border-right-color:white; float:left;\">\n <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold; \">PRESERVE YOUR ITENERARY</div><div style=\"color:white; font-size:12px; width:70%;\">copy the public share link and return to your itenerary later </div></div>\n</div>\n<div  style=\"background-color:black; width:25%; height:80px; float:left;\">\n    <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold;\">PRINT YOUR ITENERARY</div><div style=\"color:white; font-size:12px; width:70%;\">Print a hard copy of PDF. NOTE: this does not constitute a reservation! </div></div>\n</div>\n<div  style=\"background-color:darkred; width:25%; height:80px; float:left;\">\n    <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold;\">8/8 TIME SLOTS COMPLETE</div><div style=\"color:white; font-size:12px; width:70%;\">You're done. Next Step: Confirm your itenerary before submitting </div></div>\n</div>\n<div  style=\"background-color:red; width:25%; height:80px; float:left;\">\n  <div style=\"margin-top:20px; margin-left:160px;\"><a href=\"javascript:void(0)\" (click)=\"navigate()\"><div style=\"float:left; font-size:25px; font-weight:bold; color:white;\" >NEXT</div><div style=\"width:0;height: 0; border-top: 10px solid transparent; border-left: 15px solid white; border-bottom: 10px solid transparent; float:left; margin-left:20px; margin-top:10px;\"></div></a></div>\n</div>\n</div>\n</div>"
 
 /***/ }),
 
@@ -1088,7 +1277,7 @@ var StickyFooterComponent = /** @class */ (function () {
     StickyFooterComponent.prototype.ngOnInit = function () {
     };
     StickyFooterComponent.prototype.navigate = function () {
-        this.router.navigateByUrl(this.page);
+        this.router.navigate([this.page]);
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -1250,7 +1439,15 @@ __webpack_require__.r(__webpack_exports__);
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 var environment = {
-    production: false
+    production: false,
+    firebase: {
+        apiKey: "AIzaSyAqb1AZM_xWPycGFuWByknU7WPsTQ0auxk",
+        authDomain: "planning-tool-532b0.firebaseapp.com",
+        databaseURL: "https://planning-tool-532b0.firebaseio.com",
+        projectId: "planning-tool-532b0",
+        storageBucket: "planning-tool-532b0.appspot.com",
+        messagingSenderId: "429282485430"
+    }
 };
 /*
  * In development mode, to ignore zone related error stack frames such as
@@ -1289,6 +1486,37 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 
 /***/ }),
 
+/***/ "./src/models/activity.ts":
+/*!********************************!*\
+  !*** ./src/models/activity.ts ***!
+  \********************************/
+/*! exports provided: Activity */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Activity", function() { return Activity; });
+var Activity = /** @class */ (function () {
+    function Activity(name, type, length, description, on, qc, fees, img, ageRange, timeOfYear, timeSlots) {
+        this.name = name;
+        this.type = type;
+        this.length = length;
+        this.description = description;
+        this.on = on;
+        this.qc = qc;
+        this.fees = fees;
+        this.img = img;
+        this.ageRange = ageRange;
+        this.timeOfYear = timeOfYear;
+        this.timeSlots = timeSlots;
+    }
+    return Activity;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/pages/confirm-page/confirm-page.component.html":
 /*!************************************************************!*\
   !*** ./src/pages/confirm-page/confirm-page.component.html ***!
@@ -1322,6 +1550,7 @@ module.exports = ""
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfirmPageComponent", function() { return ConfirmPageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1332,8 +1561,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var ConfirmPageComponent = /** @class */ (function () {
-    function ConfirmPageComponent() {
+    function ConfirmPageComponent(router, route) {
+        this.router = router;
+        this.route = route;
         this.page = "SubmitPage";
     }
     ConfirmPageComponent.prototype.ngOnInit = function () {
@@ -1344,7 +1576,8 @@ var ConfirmPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./confirm-page.component.html */ "./src/pages/confirm-page/confirm-page.component.html"),
             styles: [__webpack_require__(/*! ./confirm-page.component.scss */ "./src/pages/confirm-page/confirm-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]])
     ], ConfirmPageComponent);
     return ConfirmPageComponent;
 }());
@@ -1360,7 +1593,7 @@ var ConfirmPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <app-header></app-header>\n</div>\n\n<div class=\"container-fluid\">\n  <div style=\"margin-left:2%; margin-top:2%;\">\n <div style=\" font-weight:bold; font-size:50px;\">\n   DESIGN YOUR ITINERARY\n </div>\n <div style=\"font-size:15px;\">\n   Build your itinerary...your way! Choose from our programs for each timeslot of your visit\n </div>\n </div>\n</div>\n\n<div style=\"background-color:#F0F0F0; height:200px; margin-top:2%; padding:2%;\">\n<div style=\"background-color:white; height:120px; padding:1.5%;\"><div style=\"font-size:40px;  \">\n  FIRST AVE. GRADE 3 CLASS - ITINERARY 1</div>\n</div>\n</div>\n\n<div class=\"container-fluid\" style=\"margin-left:2%;\">\n<div style=\"font-weight:bold; font-size:25px; margin-top:2%;\">\nITINERARY\n</div>\n<div>\n    <div class=\"activity\">\n        <app-activity></app-activity>\n       </div>\n       <div class=\"activity\">\n               <app-activity></app-activity>\n              </div>\n              <div class=\"activity\">\n                   <app-activity></app-activity>\n                  </div>\n                  <div class=\"activity\">\n                       <app-activity></app-activity>\n                      </div>\n       \n</div>\n</div>\n\n<div style=\"width:100%\">\n  <app-sticky-footer [page]=\"page\"></app-sticky-footer>\n</div>"
+module.exports = "\n\n\n<div>\n  <app-header></app-header>\n</div>\n\n<div class=\"container-fluid\">\n  <div style=\"margin-left:2%; margin-top:2%;\">\n <div style=\" font-weight:bold; font-size:50px;\">\n   DESIGN YOUR ITINERARY\n </div>\n <div style=\"font-size:15px;\">\n   Build your itinerary...your way! Choose from our programs for each timeslot of your visit\n </div>\n </div>\n</div>\n\n<div style=\"background-color:#F0F0F0; height:200px; margin-top:2%; padding:2%;\">\n<div style=\"background-color:white; height:120px; padding:1.5%;\"><div style=\"font-size:40px;  \">\n  FIRST AVE. GRADE 3 CLASS - ITINERARY 1</div>\n</div>\n</div>\n\n<div class=\"container-fluid\" style=\"margin-left:2%;\">\n<div style=\"font-weight:bold; font-size:25px; margin-top:2%;\">\nITINERARY\n</div>\n<div>\n    <div class=\"activity\">\n        <app-activity *ngFor=\"let item of items | async\" [item]=\"item\" (activity)=\"getActivity($event)\"></app-activity>\n       </div>\n       \n</div>\n</div>\n\n<div style=\"width:100%\">\n    <div class=\"stick\">\n        <div>\n        <div style=\"background-color:black; width:25%; height:80px; border-right-width:thin; border-right-style:solid;  border-right-color:white; float:left;\">\n         <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold; \">PRESERVE YOUR ITENERARY</div><div style=\"color:white; font-size:12px; width:70%;\">copy the public share link and return to your itenerary later </div></div>\n        </div>\n        <div  style=\"background-color:black; width:25%; height:80px; float:left;\">\n            <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold;\">PRINT YOUR ITENERARY</div><div style=\"color:white; font-size:12px; width:70%;\">Print a hard copy of PDF. NOTE: this does not constitute a reservation! </div></div>\n        </div>\n        <div  style=\"background-color:darkred; width:25%; height:80px; float:left;\">\n            <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold;\">8/8 TIME SLOTS COMPLETE</div><div style=\"color:white; font-size:12px; width:70%;\">You're done. Next Step: Confirm your itenerary before submitting </div></div>\n        </div>\n        <div  style=\"background-color:red; width:25%; height:80px; float:left;\">\n          <div style=\"margin-top:20px; margin-left:160px;\"><a href=\"javascript:void(0)\" (click)=\"navigate()\"><div style=\"float:left; font-size:25px; font-weight:bold; color:white;\" >NEXT</div><div style=\"width:0;height: 0; border-top: 10px solid transparent; border-left: 15px solid white; border-bottom: 10px solid transparent; float:left; margin-left:20px; margin-top:10px;\"></div></a></div>\n        </div>\n        </div>\n        </div>\n</div>"
 
 /***/ }),
 
@@ -1371,7 +1604,7 @@ module.exports = "<div>\n  <app-header></app-header>\n</div>\n\n<div class=\"con
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".activity {\n  width: 100%;\n  margin-bottom: 2%; }\n"
+module.exports = ".activity {\n  width: 100%;\n  margin-bottom: 2%; }\n\n.stick {\n  position: fixed;\n  bottom: 0;\n  width: 100%; }\n\n.bg {\n  height: 90px;\n  border-style: solid; }\n\n.saturate {\n  -webkit-filter: saturate(3);\n          filter: saturate(3); }\n\n.grayscale {\n  -webkit-filter: grayscale(100%);\n          filter: grayscale(100%); }\n\n.contrast {\n  -webkit-filter: contrast(160%);\n          filter: contrast(160%); }\n\n.brightness {\n  -webkit-filter: brightness(0.25);\n          filter: brightness(0.25); }\n\n.blur {\n  -webkit-filter: blur(3px);\n          filter: blur(3px); }\n\n.invert {\n  -webkit-filter: invert(100%);\n          filter: invert(100%); }\n\n.sepia {\n  -webkit-filter: sepia(100%);\n          filter: sepia(100%); }\n\n.huerotate {\n  -webkit-filter: hue-rotate(180deg);\n          filter: hue-rotate(180deg); }\n\n.rss.opacity {\n  -webkit-filter: opacity(50%);\n          filter: opacity(50%); }\n"
 
 /***/ }),
 
@@ -1386,6 +1619,20 @@ module.exports = ".activity {\n  width: 100%;\n  margin-bottom: 2%; }\n"
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DesignPageComponent", function() { return DesignPageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var _models_activity__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../models/activity */ "./src/models/activity.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
+/* harmony import */ var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/add/operator/catch */ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js");
+/* harmony import */ var rxjs_add_observable_throw__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/add/observable/throw */ "./node_modules/rxjs-compat/_esm5/add/observable/throw.js");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1396,11 +1643,38 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
+
+
+
 var DesignPageComponent = /** @class */ (function () {
-    function DesignPageComponent() {
-        this.page = "ConfirmPage";
+    function DesignPageComponent(db, router, route) {
+        this.db = db;
+        this.router = router;
+        this.route = route;
+        this.page = "/ConfirmPage";
+        this.activities = [];
+        this.items = db.collection('/activities').snapshotChanges().map(function (actions) {
+            return actions.map(function (a) {
+                var data = a.payload.doc.data();
+                var id = a.payload.doc.id;
+                return __assign({ id: id }, data);
+            });
+        });
     }
     DesignPageComponent.prototype.ngOnInit = function () {
+    };
+    DesignPageComponent.prototype.navigate = function () {
+        this.router.navigate([this.page]);
+    };
+    DesignPageComponent.prototype.getActivity = function (event) {
+        if (!(this.activities.some(function (item) { return item.name === event.name; }))) {
+            this.activities.push(new _models_activity__WEBPACK_IMPORTED_MODULE_2__["Activity"](event.name, event.type, event.length, event.description, event.on, event.qc, event.fees, event.img, event.ageRange, event.timeOfYear, event.timeSlots));
+        }
+        localStorage.setItem('activities', JSON.stringify(this.activities));
+        console.log(this.activities);
     };
     DesignPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1408,7 +1682,8 @@ var DesignPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./design-page.component.html */ "./src/pages/design-page/design-page.component.html"),
             styles: [__webpack_require__(/*! ./design-page.component.scss */ "./src/pages/design-page/design-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
     ], DesignPageComponent);
     return DesignPageComponent;
 }());
@@ -1424,7 +1699,7 @@ var DesignPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <app-main-header></app-main-header>\n</div>\n\n<div class=\"container-fluid\" style=\"padding:0%\">\n\n<div  style=\"margin-top:2%; margin-left:1%;\">\n  <div style=\"float:left; font-size:12px; font-weight:bold;\">PLAN YOUR VISITz</div>\n  <div style=\"width:0;height: 0; border-top: 4.5px solid transparent; border-left: 6px solid black; \n  border-bottom: 4.5px solid transparent; float:left; margin-left:20px; margin-top:4px;\"></div>\n</div>\n<br>\n<div style=\"margin-right:2%; margin-left:1.5%;\">\n  <div style=\"float:left; font-weight:bold; font-size:50px;\">\n    PLAN A SCHOOL TRIP\n  </div>\n  <div style=\"float:right; margin-top:1%;\">\n      <div style=\"float:left; font-size:25px; font-weight:bold; color:#808080\">PLAN YOUR VISIT</div>\n      <div style=\"width:0;height: 0; border-top: 8px solid transparent; border-left: 12px solid #808080; \n      border-bottom: 8px solid transparent; float:left; margin-left:20px; margin-top:12px;\"></div>\n    </div>\n</div>\n\n<div >\n  <img src=\"../../assets/images/landing.jpg\" class=\"img-responsive img-resize\">\n</div>\n\n\n<div style=\"margin-left:2%; margin-top:2%;\">\n<div style=\" font-weight:bold; font-size:35px;\">\n    PLAN YOUR DAY AT THE MUSEUM\n  </div>\n<div style=\"font-size:17px; width:50%; margin-top:0.8%\">\n    Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, \n    , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an\n    <br><br>\n    Get started with our sample iteneraries below or build your own.\n</div>\n</div>\n\n</div>\n\n\n  <div style=\"margin-left:2%; margin-top:2%\">\n        <div class=\"row\" style=\"margin-bottom:2%; margin-left:0.1%\">\n            <div style=\"font-weight:bold; margin-top:8px;\">FILTER ITENERARIES:</div>\n          <div class=\"input-group\" style=\"width:12%; margin-left:1%;\">\n                  <select class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; font-size:13px\">\n                    <option selected>All Grades </option>\n                    <option value=\"1\">One</option>\n                    <option value=\"2\">Two</option>\n                    <option value=\"3\">Three</option>\n                  </select>\n                </div>\n                <div class=\"input-group\" style=\"width:12%; margin-left:1%;\">\n                      <select class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; font-size:13px\">\n                        <option selected >All Date Ranges</option>\n                        <option value=\"1\">One</option>\n                        <option value=\"2\">Two</option>\n                        <option value=\"3\">Three</option>\n                      </select>\n                    </div>\n                    <div class=\"input-group\" style=\"width:12%;margin-left:1%;\">\n                          <select class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; font-size:13px\">\n                            <option selected >Half-day and full-day</option>\n                            <option value=\"1\">One</option>\n                            <option value=\"2\">Two</option>\n                            <option value=\"3\">Three</option>\n                          </select>\n                        </div>\n                        <div style=\"width:8%; margin-left:1%; height:35px; font-size:12px; font-weight:bold; border-style:solid; padding:0.4%;\">\n                            SHOW THE RESULTS\n                        </div>\n                      </div>\n           \n  <div class=\"row\" style=\"margin-left:0%;\">\n          <div  class=\"empty-card\" >\n          <app-empty-card></app-empty-card>\n          </div>\n  <div class=\"margin\" >\n  <app-card></app-card>\n  </div>\n  <div class=\"margin\" >\n          <app-card></app-card>\n          </div>\n          <div class=\"margin\" >\n                  <app-card></app-card>\n                  </div>\n                  <div class=\"margin\" >\n                          <app-card></app-card>\n                          </div>\n                          <div class=\"margin\" >\n                                  <app-card></app-card>\n                                  </div>\n                                  <div class=\"margin\" >\n                                      <app-card></app-card>\n                                      </div>\n                                      <div class=\"margin\" >\n                                              <app-card></app-card>\n                                              </div>\n                                              <div class=\"margin\" >\n                                                      <app-card></app-card>\n                                                      </div>\n                                  \n\n</div>\n\n<nav aria-label=\"...\">\n    <ul class=\"pagination pagination-lg\">\n      <li class=\"page-item\" style=\"margin-right:0.5%;\">\n        <a class=\"page-link\" href=\"#\" tabindex=\"-1\">1</a>\n      </li>\n      <li class=\"page-item\" style=\"margin-right:0.5%;\"><a class=\"page-link\" href=\"#\">2</a></li>\n      <li class=\"page-item\" style=\"margin-right:0.5%;\"><a class=\"page-link\" href=\"#\">3</a></li>\n    </ul>\n  </nav>\n</div>\n\n<div>\n  <app-main-footer></app-main-footer>\n</div>\n"
+module.exports = "<div>\n  <app-main-header></app-main-header>\n</div>\n\n<div class=\"container-fluid\" style=\"padding:0%\">\n\n<div  style=\"margin-top:2%; margin-left:1%;\">\n  <div style=\"float:left; font-size:12px; font-weight:bold;\">PLAN YOUR VISITz</div>\n  <div style=\"width:0;height: 0; border-top: 4.5px solid transparent; border-left: 6px solid black; \n  border-bottom: 4.5px solid transparent; float:left; margin-left:20px; margin-top:4px;\"></div>\n</div>\n<br>\n<div style=\"margin-right:2%; margin-left:1.5%;\">\n  <div style=\"float:left; font-weight:bold; font-size:50px;\">\n    PLAN A SCHOOL TRIP\n  </div>\n  <div style=\"float:right; margin-top:1%;\">\n      <div style=\"float:left; font-size:25px; font-weight:bold; color:#808080\">PLAN YOUR VISIT</div>\n      <div style=\"width:0;height: 0; border-top: 8px solid transparent; border-left: 12px solid #808080; \n      border-bottom: 8px solid transparent; float:left; margin-left:20px; margin-top:12px;\"></div>\n    </div>\n</div>\n\n<div >\n  <img src=\"../../assets/images/landing.jpg\" class=\"img-responsive img-resize\">\n</div>\n\n\n<div style=\"margin-left:2%; margin-top:2%;\">\n<div style=\" font-weight:bold; font-size:35px;\">\n    PLAN YOUR DAY AT THE MUSEUM\n  </div>\n<div style=\"font-size:17px; width:50%; margin-top:0.8%\">\n    Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, \n    , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an\n    <br><br>\n    Get started with our sample iteneraries below or build your own.\n</div>\n</div>\n\n</div>\n\n\n  <div style=\"margin-left:2%; margin-top:2%\">\n        <div class=\"row\" style=\"margin-bottom:2%; margin-left:0.1%\">\n            <div style=\"font-weight:bold; margin-top:8px;\">FILTER ITENERARIES:</div>\n          <div class=\"input-group\" style=\"width:12%; margin-left:1%;\">\n                  <select class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; font-size:13px\">\n                    <option selected>All Grades </option>\n                    <option value=\"1\">One</option>\n                    <option value=\"2\">Two</option>\n                    <option value=\"3\">Three</option>\n                  </select>\n                </div>\n                <div  style=\"width:12%; margin-left:1%;\">\n                      <button type=\"button\" class=\"btn \" style=\"width:100%; background-color:grey;\" (click)=\"open(content)\"> Select Date Range</button>\n                    </div>\n                    <div class=\"input-group\" style=\"width:12%;margin-left:1%;\">\n                          <select class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; font-size:13px\">\n                            <option selected >Half-day and full-day</option>\n                            <option value=\"1\">One</option>\n                            <option value=\"2\">Two</option>\n                            <option value=\"3\">Three</option>\n                          </select>\n                        </div>\n                        <div style=\"width:8%; margin-left:1%; height:35px; font-size:12px; font-weight:bold; border-style:solid; padding:0.4%;\">\n                            SHOW THE RESULTS\n                        </div>\n                      </div>\n           \n  <div class=\"row\" style=\"margin-left:0%;\">\n          <div  class=\"empty-card\" >\n          <app-empty-card></app-empty-card>\n          </div>\n  \n  <div class=\"margin\"*ngFor=\"let item of items | async\" >\n          <app-card [item]=\"item\"></app-card>\n          </div>\n\n</div>\n\n<nav aria-label=\"...\">\n    <ul class=\"pagination pagination-lg\">\n      <li class=\"page-item\" style=\"margin-right:0.5%;\">\n        <a class=\"page-link\" href=\"#\" tabindex=\"-1\">1</a>\n      </li>\n      <li class=\"page-item\" style=\"margin-right:0.5%;\"><a class=\"page-link\" href=\"#\">2</a></li>\n      <li class=\"page-item\" style=\"margin-right:0.5%;\"><a class=\"page-link\" href=\"#\">3</a></li>\n    </ul>\n  </nav>\n</div>\n\n<div>\n  <app-main-footer></app-main-footer>\n</div>\n\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\n    <div style=\"width:100%\">\n        <div style=\"margin-bottom:5%; margin-top:2%; text-align:center;\">\n          <h4>SELECT YOUR DATE RANGE</h4>\n        </div>\n          <div > \n    <app-calendar></app-calendar>\n\n    </div>\n    <div id=footer>\n        <div style=\"margin-bottom:30px; margin-left:10%; padding-bottom:2%;\">\n        <div>\n        <button type=\"button\" class=\"btn btn-danger\" id=\"new-btn\"  (click)=\"d('Cross click')\"  (click)=\"navigateToDesignPage()\"> <div style=\"float:left;\">Done</div> </button>\n      </div>\n      \n  </div>\n  </div>\n    \n\n    \n  </div>\n  </ng-template>"
 
 /***/ }),
 
@@ -1450,6 +1725,19 @@ module.exports = ".img-resize {\n  height: 400px;\n  width: 100%; }\n\n.margin {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LandingPageComponent", function() { return LandingPageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
+/* harmony import */ var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/add/operator/catch */ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js");
+/* harmony import */ var rxjs_add_observable_throw__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/add/observable/throw */ "./node_modules/rxjs-compat/_esm5/add/observable/throw.js");
+var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1460,10 +1748,30 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
+
+
 var LandingPageComponent = /** @class */ (function () {
-    function LandingPageComponent() {
+    function LandingPageComponent(modalService, db) {
+        this.modalService = modalService;
+        this.db = db;
+        this.items = db.collection('/itineraries').snapshotChanges().map(function (actions) {
+            return actions.map(function (a) {
+                var data = a.payload.doc.data();
+                var id = a.payload.doc.id;
+                return __assign({ id: id }, data);
+            });
+        });
     }
     LandingPageComponent.prototype.ngOnInit = function () {
+    };
+    LandingPageComponent.prototype.open = function (content) {
+        var _this = this;
+        this.modalService.open(content).result.then(function (result) {
+            _this.closeResult = "Closed with: " + result;
+        });
     };
     LandingPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1471,7 +1779,7 @@ var LandingPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./landing-page.component.html */ "./src/pages/landing-page/landing-page.component.html"),
             styles: [__webpack_require__(/*! ./landing-page.component.scss */ "./src/pages/landing-page/landing-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"], angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
     ], LandingPageComponent);
     return LandingPageComponent;
 }());
