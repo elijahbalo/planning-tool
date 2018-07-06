@@ -10,13 +10,14 @@ img {
     max-height: 100%;
 }
 
-.item{
-    height:100%;
-    width:100%;
-}
+.img-resize{
+    height:200px;
+    width:90%;
+  }
 .outer-flex{
     display:flex;
     flex-direction:row;
+    margin-top:20px;
 
 }
 .flex-container {
@@ -25,14 +26,20 @@ img {
     border-color:#E0E0E0; */
     flex-direction: row;
     padding-top:1%;
-    padding-bottom:0%;
-    justify-content:space-around; 
+    //padding-bottom:0%;
+    justify-content:flex-start; 
     
+  }
+  .img-flex{
+      display:flex;
+      width:18%;
   }
 .middle-flex{
     display:flex;
+  
     flex-direction: column;
     justify-content: space-between;
+    margin-right:5%
 }
 
 
@@ -43,6 +50,7 @@ img {
   .inner-flex{
       display:flex;
       flex-direction:row;
+  
       justify-content:space-between;
   }
 
@@ -54,9 +62,9 @@ img {
       margin-bottom:0%;
   }
   .activity-card{
-    height:400px; 
-    width:33%;
-    font-size:13px;
+    height:200px; 
+    width:23.5%;
+    font-size:12px;
 
 }
 .alt-flex{

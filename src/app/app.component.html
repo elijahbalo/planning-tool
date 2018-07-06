@@ -1,7 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
- 
+ <!-- <div>
+        <ul>
+                <li *ngFor="let item of items | async">
+                     <div *ngFor="let list of item.activities">{{list.name| json}}</div>
+                
+                    
+                </li>
+            </ul>
+ </div>  -->
 
-<!--outlet for router navigation-->
+
+<!--  <input type="text" [(ngModel)]="title" name="title" placeholder="Title..">
+ <Form>
+ <input type="radio" [(ngModel)]="length" value="Half-Day..." name="length" placeholder="Title..">
+ <input type="radio" [(ngModel)]="length" value="Full-Day..." name="length" placeholder="Title..">
+ </Form>
+<textarea [(ngModel)]="content" name="content" placeholder="Content.."></textarea>
+<input type="submit" value="Add a Post" (click)="addPost()">  -->
+<!--outlet for router navigation--> 
 <router-outlet></router-outlet>
 
 

@@ -11,7 +11,7 @@ import {map} from 'rxjs/operators';
 export class CardComponent implements OnInit {
   @Input() view=true;  
   images: Array<string>;
-
+  @Input() item : any;
   constructor(private _http: HttpClient) {}
 
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 
 
 @Component({
@@ -8,11 +8,19 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ActivityCardComponent implements OnInit {
 
-@Input() image: any;
+@Input() item: any;
+@Output() newItem: EventEmitter<any> = new EventEmitter<any>();
+
+
 
   constructor() {}
 
   ngOnInit() {
   }
+ 
+changeItem(event: any){
+  
+  this.newItem.emit(event);
+}
 
 }

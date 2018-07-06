@@ -18,34 +18,10 @@
 </div>
 <div class="activity">
 <div class="column">
-  <div class="list">
-  <app-activity [showImage]="showImage" [showTools]="showTools" [showDescription]="showDescription" [adjust]="adjust" [display]="display"></app-activity>
+  <div class="list" *ngFor="let activity of activities">
+  <app-activity [selectedItem]="activity" [showImage]="showImage" [showTools]="showTools" [showDescription]="showDescription" [adjust]="adjust" [display]="display"></app-activity>
 </div>
-<div class="list">
-    <app-activity [showImage]="showImage" [showTools]="showTools" [showDescription]="showDescription" [adjust]="adjust" [display]="display"></app-activity>
-  </div>
-  <div class="list">
-      <app-activity [showImage]="showImage" [showTools]="showTools" [showDescription]="showDescription" [adjust]="adjust" [display]="display"></app-activity>
-    </div>
-    <div class="list">
-        <app-activity [showImage]="showImage" [showTools]="showTools" [showDescription]="showDescription" [adjust]="adjust" [display]="display"></app-activity>
-      </div>
-      <div class="list">
-          <app-activity [showImage]="showImage" [showTools]="showTools" [showDescription]="showDescription" [adjust]="adjust" [display]="display"></app-activity>
-        </div>
-        <div class="list">
-            <app-activity [showImage]="showImage" [showTools]="showTools" [showDescription]="showDescription" [adjust]="adjust" [display]="display"></app-activity>
-          </div>
-          <div class="list">
-        <app-activity [showImage]="showImage" [showTools]="showTools" [showDescription]="showDescription" [adjust]="adjust" [display]="display"></app-activity>
-      </div>
-      <div class="list">
-          <app-activity [showImage]="showImage" [showTools]="showTools" [showDescription]="showDescription" [adjust]="adjust" [display]="display"></app-activity>
-        </div>
-        <div class="list">
-            <app-activity [showImage]="showImage" [showTools]="showTools" [showDescription]="showDescription" [adjust]="adjust" [display]="display"></app-activity>
-          </div>
-          
+
 </div>
 </div>
 

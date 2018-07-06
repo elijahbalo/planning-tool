@@ -11,12 +11,15 @@ export class StickyFooterComponent implements OnInit {
 @Input() page:string;
 
   constructor(private router: Router,
-    private route:ActivatedRoute) { }
+    private route:ActivatedRoute) {
 
+
+     }
+      
   ngOnInit() {
   }
   navigate(){
-    this.router.navigateByUrl(this.page);
+    this.router.navigate([this.page]);
     
   }
 }

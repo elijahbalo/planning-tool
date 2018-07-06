@@ -13,9 +13,12 @@ export class ConfirmComponent implements OnInit {
  adjust=false;
  view=false;
  display=false;
+activities;
 
   constructor( private router: Router,
-    private route:ActivatedRoute) { }
+    private route:ActivatedRoute) {
+      this.activities = JSON.parse(localStorage.getItem('activities'));
+     }
 
   ngOnInit() {
   }

@@ -13,53 +13,41 @@
 
 <div class="flex-container" *ngIf="swap || !display">
  
-  <div *ngIf="showImage">
- <img class="img-fluid item" alt="Responsive image" src="../../assets/images/6.jpg">
+  <div *ngIf="showImage" class="img-flex"> 
+ <img class="img-responsive img-resize" src="{{selectedItem.img}}">
   </div>
-  <div *ngIf="!adjust" class="middle-flex" style="width:65%; ">
+  <div *ngIf="!adjust" class="middle-flex" style="width:60%;">
       <div style="font-size:12.5px; font-weight:bold;">
        
-       CINE+
+       {{selectedItem.type}}
       </div>
       <div style="font-size:20px; font-weight:bold;">
-       WONDERS OF THE ARCTIC
+       {{selectedItem.name}}
       </div>
-      <div *ngIf="showDescription" style="margin-bottom:2%; "> 
-         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-         Aenean commodo ligula eget dolor. Aenean massa. 
-         Cum sociis natoque penatibus et magnis dis parturient montes,
-         Aenean massa. 
-         Cum sociis natoque penatibus et magnis dis parturient montes,
-         Aenean massa. 
-         Cum sociis natoque penatibus et magnis dis parturient montes,
+      <div *ngIf="showDescription" style="margin-bottom:2%;"> 
+         {{selectedItem.description}}
       </div>
       <div style="font-size:12.5px">
-        45 Minutes, Cine+
+        {{selectedItem.duration}} Minutes, {{selectedItem.place}}
       </div>
      </div>
-  <div *ngIf="adjust" class="middle-flex" style="width:65%;">
+  <div *ngIf="adjust" class="middle-flex" style="width:60%;">
    <div style="font-size:12.5px; font-weight:bold;">
     
-    CINE+
+    {{selectedItem.type}}
    </div>
    <div style="font-size:20px; font-weight:bold;">
-    WONDERS OF THE ARCTIC
+    {{selectedItem.name}}
    </div>
    <div style="margin-bottom:2%; "> 
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-      Aenean commodo ligula eget dolor. Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes,
-      Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes,
-      Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes,
+     {{selectedItem.description}}
    </div>
    <div style="font-size:12.5px">
-     45 Minutes, Cine+
+    {{selectedItem.duration}} Minutes, {{selectedItem.place}}
    </div>
   </div>
-  <div *ngIf="showTools" style="align-self: center; margin-right:5%" class="inner-flex">
-   <div style="margin-right:50px"><div *ngIf="!details"><a href="javascript: void(0)"><img src="../../assets/images/info.png"  (click)="toggleDetails()" class="icon"></a></div>
+  <div *ngIf="showTools" style="align-self: center;" class="inner-flex">
+   <div style="margin-right:10px"><div *ngIf="!details"><a href="javascript: void(0)"><img src="../../assets/images/info.png"  (click)="toggleDetails()" class="icon"></a></div>
    <div *ngIf="details"><a href="javascript: void(0)"><img src="../../assets/images/cancel.png"  (click)="toggleDetails()" class="icon"></a></div>
    <div style="font-weight:bold; font-size:12.5px">DETAILS</div></div>
   
@@ -71,20 +59,7 @@
      DETAILS
    </div>
    <div style="margin-top:2%; font-size:13px">
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-      Aenean commodo ligula eget dolor. Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes,
-      Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes,
-      Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes,
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-      Aenean commodo ligula eget dolor. Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes,
-      Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes,
-      Aenean massa. 
-      Cum sociis natoque penatibus et magnis dis parturient montes,
+      {{selectedItem.details}}
       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
           Aenean commodo ligula eget dolor. Aenean massa. 
           Cum sociis natoque penatibus et magnis dis parturient montes,
@@ -110,8 +85,8 @@
   <div class="alt-flex" *ngIf="!swap && display">
   <div style="width:98%; margin-left:0%; margin-top:1%">
       <div class="row" >
-    <div class="activity-card" *ngFor="let image of images"> 
-        <app-activity-card [image]="image" (click)="toggleSwap()"></app-activity-card>
+    <div class="activity-card" *ngFor="let item of items | async"> 
+        <app-activity-card [item]="item" (newItem)="itemChange($event)" (click)="toggleSwap()"></app-activity-card>
     </div>
   </div>
  </div>

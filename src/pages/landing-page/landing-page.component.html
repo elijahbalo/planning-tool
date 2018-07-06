@@ -52,13 +52,8 @@
                     <option value="3">Three</option>
                   </select>
                 </div>
-                <div class="input-group" style="width:12%; margin-left:1%;">
-                      <select class="custom-select" id="inputGroupSelect04" style="font-weight:bold; font-size:13px">
-                        <option selected >All Date Ranges</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </select>
+                <div  style="width:12%; margin-left:1%;">
+                      <button type="button" class="btn " style="width:100%; background-color:grey;" (click)="open(content)"> Select Date Range</button>
                     </div>
                     <div class="input-group" style="width:12%;margin-left:1%;">
                           <select class="custom-select" id="inputGroupSelect04" style="font-weight:bold; font-size:13px">
@@ -77,31 +72,10 @@
           <div  class="empty-card" >
           <app-empty-card></app-empty-card>
           </div>
-  <div class="margin" >
-  <app-card></app-card>
-  </div>
-  <div class="margin" >
-          <app-card></app-card>
+  
+  <div class="margin"*ngFor="let item of items | async" >
+          <app-card [item]="item"></app-card>
           </div>
-          <div class="margin" >
-                  <app-card></app-card>
-                  </div>
-                  <div class="margin" >
-                          <app-card></app-card>
-                          </div>
-                          <div class="margin" >
-                                  <app-card></app-card>
-                                  </div>
-                                  <div class="margin" >
-                                      <app-card></app-card>
-                                      </div>
-                                      <div class="margin" >
-                                              <app-card></app-card>
-                                              </div>
-                                              <div class="margin" >
-                                                      <app-card></app-card>
-                                                      </div>
-                                  
 
 </div>
 
@@ -119,3 +93,26 @@
 <div>
   <app-main-footer></app-main-footer>
 </div>
+
+<ng-template #content let-c="close" let-d="dismiss">
+    <div style="width:100%">
+        <div style="margin-bottom:5%; margin-top:2%; text-align:center;">
+          <h4>SELECT YOUR DATE RANGE</h4>
+        </div>
+          <div > 
+    <app-calendar></app-calendar>
+
+    </div>
+    <div id=footer>
+        <div style="margin-bottom:30px; margin-left:10%; padding-bottom:2%;">
+        <div>
+        <button type="button" class="btn btn-danger" id="new-btn"  (click)="d('Cross click')"  (click)="navigateToDesignPage()"> <div style="float:left;">Done</div> </button>
+      </div>
+      
+  </div>
+  </div>
+    
+
+    
+  </div>
+  </ng-template>

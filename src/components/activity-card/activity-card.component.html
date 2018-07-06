@@ -1,15 +1,12 @@
 <div class="container">
- <div class="card-container">
+ <div class="card-container" (click)="changeItem(item)">
    
-      <img [src]="image" alt="Random first slide" class="img-responsive img-resize">
+      <img src="{{item.img}}" alt="Random first slide" class="img-responsive img-resize">
       <div class="tag"> CURRENT SELECTION</div>
       <div class="text" >
         <h5 style="font-size:12.5px; font-weight:bold;">SPECIAL EXHIBITION</h5>
-        <h2  style="font-size:25px; font-weight:bold; margin-top:1%;">WONDERS OF THE ARCTIC</h2>
-        <p  style="font-size:11px; font-weight:bold; ">Nulla vitae elit libero, a pharetra augue mollis interdum.
-            Nulla vitae elit libero, a pharetra augue mollis interdum.
-            Nulla vitae elit libero, a pharetra augue mollis interdum.
-        </p>
+        <h2  style="font-size:20px; font-weight:bold; margin-top:1%;">{{item.name}}</h2>
+       
    </div>
 
  </div>

@@ -1,0 +1,41 @@
+.my-container{
+    height:10%;
+    width:100%;
+    border-width:1px;
+    border-style:solid;
+    background-color:white;
+    border-color:#E0E0E0;
+  }
+
+ .my-radio-btn{
+     margin-bottom:1%;
+ } 
+
+ .custom-day {
+    text-align: center;
+    padding: 0.185rem 0.25rem;
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+  }
+  .custom-day.focused {
+    background-color: #e6e6e6;
+  }
+  .custom-day.range, .custom-day:hover {
+    background-color:red;
+    color: white;
+  }
+  .custom-day.faded {
+    background-color: #DCDCDC;
+  }
+
+  #new-btn {
+    white-space: normal;
+}
+#footer{
+  border-top-color:#E0E0E0;
+  border-top-style:solid;
+  border-top-width:thin;
+  padding:6%;
+ 
+}
