@@ -23,32 +23,34 @@
 </div>
 
 <div class="container-fluid" style="margin-left:2%;">
-<div style="font-weight:bold; font-size:25px; margin-top:2%;">
+  <div  style="font-weight:bold; font-size:25px; margin-top:2%;">
+<div  style="font-weight:bold; font-size:25px;"> 
 ITINERARY
 </div>
-<div>
-    <div class="activity">
-        <app-activity *ngFor="let item of items | async" [item]="item" (activity)="getActivity($event)"></app-activity>
+<div *ngIf="!set" style="font-weight:bold; font-size:20px; float:right; margin-right:2%">
+    <a href="javascript:void(0)" (click)="reset()">Reset</a>
+  </div>
+  </div>
+<div *ngIf="!set">
+    <div *ngIf='!isEdit' class="activity">
+        <app-activity *ngFor="let item of items | async" [item]="item" [time]="time" (index)="populate($event)" (activity)="getActivity($event)" [set]="set" (remove)="remove($event)"></app-activity>
        </div>
        
+       <div *ngIf='isEdit' class="activity">
+        <app-activity *ngFor="let item of items" [selectedItem]="item" [time]="time"  [swap]='swap' [display]='display' [showTools]='showTools' [edited]='edited' [set]="set" [selected]='selected' (index)="populate($event)" (activity)="getActivity($event)" (remove)="remove($event)"></app-activity>
+       </div>  
+</div>
+<div *ngIf="set">
+    <div *ngIf='!isEdit' class="activity">
+        <app-activity *ngFor="let itinerary of itineraries" [itinerary]="itinerary" [item]="item" [time]="time" (index)="populate($event)" (activity)="getActivity($event)" [set]="set" (remove)="remove($event)"></app-activity>
+       </div>
+       
+       <div *ngIf='isEdit' class="activity">
+        <app-activity *ngFor="let itinerary of itineraries" [itinerary]="itinerary" [selectedItem]="item" [time]="time"  [swap]='swap' [display]='display' [showTools]='showTools' [edited]='edited' [set]="set" [selected]='selected' (index)="populate($event)" (activity)="getActivity($event)" (remove)="remove($event)"></app-activity>
+       </div>  
 </div>
 </div>
 
 <div style="width:100%">
-    <div class="stick">
-        <div>
-        <div style="background-color:black; width:25%; height:80px; border-right-width:thin; border-right-style:solid;  border-right-color:white; float:left;">
-         <div style="margin-top:20px; margin-left:100px;"><div style="color:white; font-weight:bold; ">PRESERVE YOUR ITENERARY</div><div style="color:white; font-size:12px; width:70%;">copy the public share link and return to your itenerary later </div></div>
-        </div>
-        <div  style="background-color:black; width:25%; height:80px; float:left;">
-            <div style="margin-top:20px; margin-left:100px;"><div style="color:white; font-weight:bold;">PRINT YOUR ITENERARY</div><div style="color:white; font-size:12px; width:70%;">Print a hard copy of PDF. NOTE: this does not constitute a reservation! </div></div>
-        </div>
-        <div  style="background-color:darkred; width:25%; height:80px; float:left;">
-            <div style="margin-top:20px; margin-left:100px;"><div style="color:white; font-weight:bold;">8/8 TIME SLOTS COMPLETE</div><div style="color:white; font-size:12px; width:70%;">You're done. Next Step: Confirm your itenerary before submitting </div></div>
-        </div>
-        <div  style="background-color:red; width:25%; height:80px; float:left;">
-          <div style="margin-top:20px; margin-left:160px;"><a href="javascript:void(0)" (click)="navigate()"><div style="float:left; font-size:25px; font-weight:bold; color:white;" >NEXT</div><div style="width:0;height: 0; border-top: 10px solid transparent; border-left: 15px solid white; border-bottom: 10px solid transparent; float:left; margin-left:20px; margin-top:10px;"></div></a></div>
-        </div>
-        </div>
-        </div>
+  <app-sticky-footer [count]="count" [page]="page" [set]="set"></app-sticky-footer>
 </div>

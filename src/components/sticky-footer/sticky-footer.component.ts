@@ -9,10 +9,12 @@ import { Router,ActivatedRoute } from '@angular/router';
 export class StickyFooterComponent implements OnInit {
 
 @Input() page:string;
-
+@Input() count;
+@Input() set:any;
+number
   constructor(private router: Router,
     private route:ActivatedRoute) {
-
+  
 
      }
       

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router,ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+//import * as nodemailer from 'nodemailer';
 
+//declare var mail: any;
 
 @Component({
   selector: 'app-confirm-page',
@@ -10,16 +13,22 @@ import { Router,ActivatedRoute } from '@angular/router';
 
 
 export class ConfirmPageComponent implements OnInit {
-  page="SubmitPage"
-
-
-  constructor( private router: Router,
-    private route:ActivatedRoute) { 
-    
   
+  page="SubmitPage"
+  number = localStorage.getItem('count');
+  endpoint = 'https://your-project.cloudfunctions.net/httpEmail';
+  constructor( private router: Router, 
+    private route:ActivatedRoute, private http: HttpClient) { 
+     //this.mailer.send();
   }
 
   ngOnInit() {
   }
+
+
+  
+  
+
+
 
 }

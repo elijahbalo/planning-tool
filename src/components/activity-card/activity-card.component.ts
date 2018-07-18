@@ -10,10 +10,13 @@ export class ActivityCardComponent implements OnInit {
 
 @Input() item: any;
 @Output() newItem: EventEmitter<any> = new EventEmitter<any>();
+@Output() length: EventEmitter<any> = new EventEmitter<any>();
 
 
 
-  constructor() {}
+  constructor() {
+    
+  }
 
   ngOnInit() {
   }
@@ -21,6 +24,7 @@ export class ActivityCardComponent implements OnInit {
 changeItem(event: any){
   
   this.newItem.emit(event);
+  this.length.emit(event.length);
 }
 
 }

@@ -18,9 +18,135 @@
 </div>
 <div class="activity">
 <div class="column">
+  <div *ngIf="!set">
   <div class="list" *ngFor="let activity of activities">
-  <app-activity [selectedItem]="activity" [showImage]="showImage" [showTools]="showTools" [showDescription]="showDescription" [adjust]="adjust" [display]="display"></app-activity>
+  
+
+
+
+    <div class="outer-flex">
+  
+      
+      <div style="border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;">
+       {{timeConvert(activity.time)}}
+      </div>
+      </div>
+      
+      <div class="flex-container" *ngIf="swap || !display">
+       
+        <div *ngIf="showImage" class="img-flex"> 
+       <img class="img-responsive img-resize" src="{{selectedItem.img}}">
+        </div>
+        <div *ngIf="!adjust" class="middle-flex" style="width:60%;">
+            <div style="font-size:12.5px; font-weight:bold;">
+             
+             {{activity.type}}
+            </div>
+            <div style="font-size:20px; font-weight:bold;">
+             {{activity.name}} {{activity.order}}
+            </div>
+            <div *ngIf="showDescription" style="margin-bottom:2%;"> 
+               {{activity.description}}
+            </div>
+            <div style="font-size:12.5px">
+              {{activity.duration}} Minutes, {{activity.place}}
+            </div>
+           </div>
+        <div *ngIf="adjust" class="middle-flex" style="width:60%;">
+         <div style="font-size:12.5px; font-weight:bold;">
+          
+          {{activity.type}}
+         </div>
+         <div style="font-size:20px; font-weight:bold;">
+          {{activity.name}}
+         </div>
+         <div style="margin-bottom:2%; "> 
+           {{activity.description}}
+         </div>
+         <div style="font-size:12.5px">
+          {{activity.duration}} Minutes, {{activity.place}}
+         </div>
+        </div>
+        <div *ngIf="showTools" style="align-self: center;" class="inner-flex">
+         <div style="margin-right:10px"><div *ngIf="!details"><a href="javascript: void(0)"><img src="../../assets/images/info.png"  (click)="toggleDetails()" class="icon"></a></div>
+         <div *ngIf="details"><a href="javascript: void(0)"><img src="../../assets/images/cancel.png"  (click)="toggleDetails()" class="icon"></a></div>
+         <div style="font-weight:bold; font-size:12.5px">DETAILS</div></div>
+        
+          <div><div><a href="javascript: void(0)"><img src="../../assets/images/undo.png" (click)="toggleSwap()" class="icon"></a></div><div style="font-weight:bold; font-size:12.5px">SWAP</div></div>
+        </div>
+      </div>
+    
+    
+
 </div>
+
+
+</div>
+
+<div *ngIf="set">
+    <div class="list" *ngFor="let itinerary of itineraries">
+    
+  
+  
+  
+      <div class="outer-flex">
+    
+        
+        <div style="border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;">
+         {{itinerary.time}}
+        </div>
+        </div>
+        
+        <div class="flex-container" *ngIf="swap || !display">
+         
+          <div *ngIf="showImage" class="img-flex"> 
+         <img class="img-responsive img-resize" src="{{selectedItem.img}}">
+          </div>
+          <div *ngIf="!adjust" class="middle-flex" style="width:60%;">
+              <div style="font-size:12.5px; font-weight:bold;">
+               
+               {{itinerary.type}}
+              </div>
+              <div style="font-size:20px; font-weight:bold;">
+               {{itinerary.name}} {{itinerary.order}}
+              </div>
+              <div *ngIf="showDescription" style="margin-bottom:2%;"> 
+                 {{itinerary.description}}
+              </div>
+              <div style="font-size:12.5px">
+                {{itinerary.duration}} Minutes, {{itinerary.place}}
+              </div>
+             </div>
+          <div *ngIf="adjust" class="middle-flex" style="width:60%;">
+           <div style="font-size:12.5px; font-weight:bold;">
+            
+              {{itinerary.type}}
+            </div>
+            <div style="font-size:20px; font-weight:bold;">
+             {{itinerary.name}} {{itinerary.order}}
+            </div>
+            <div *ngIf="showDescription" style="margin-bottom:2%;"> 
+               {{itinerary.description}}
+            </div>
+            <div style="font-size:12.5px">
+              {{itinerary.duration}} Minutes, {{itinerary.place}}
+           </div>
+          </div>
+          <div *ngIf="showTools" style="align-self: center;" class="inner-flex">
+           <div style="margin-right:10px"><div *ngIf="!details"><a href="javascript: void(0)"><img src="../../assets/images/info.png"  (click)="toggleDetails()" class="icon"></a></div>
+           <div *ngIf="details"><a href="javascript: void(0)"><img src="../../assets/images/cancel.png"  (click)="toggleDetails()" class="icon"></a></div>
+           <div style="font-weight:bold; font-size:12.5px">DETAILS</div></div>
+          
+            <div><div><a href="javascript: void(0)"><img src="../../assets/images/undo.png" (click)="toggleSwap()" class="icon"></a></div><div style="font-weight:bold; font-size:12.5px">SWAP</div></div>
+          </div>
+        </div>
+      
+      
+  
+  </div>
+  
+  
+  </div>
 
 </div>
 </div>

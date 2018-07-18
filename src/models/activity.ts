@@ -1,5 +1,7 @@
 export class Activity {
     constructor(
+        public time: number,
+        public selection: number,
         public name: String,
         public type: String, 
         public length: number,
@@ -10,7 +12,7 @@ export class Activity {
         public img: String,
         public ageRange: String,
         public timeOfYear: String[],
-        public timeSlots: String[]
-
+        public timeSlots: String[],
+        public order: number
         ){}
 }

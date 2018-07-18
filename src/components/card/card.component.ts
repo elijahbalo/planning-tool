@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
-
+import { Router,ActivatedRoute } from '@angular/router';
+import { Activity} from '../../models/activity';
 
 @Component({
   selector: 'app-card',
@@ -9,16 +10,20 @@ import {map} from 'rxjs/operators';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
+  activities: Activity[] = [];
   @Input() view=true;  
   images: Array<string>;
   @Input() item : any;
-  constructor(private _http: HttpClient) {}
+  constructor(private _http: HttpClient,private router: Router,
+    private route:ActivatedRoute) {}
 
 
   ngOnInit() {
     this._http.get('https://picsum.photos/list')
         .pipe(map((images: Array<{id: number}>) => this._randomImageUrls(images)))
         .subscribe(images => this.images = images);
+
+
   }
 
   private _randomImageUrls(images: Array<{id: number}>): Array<string> {
@@ -28,6 +33,44 @@ export class CardComponent implements OnInit {
     });
   }
 
+
+  navigateToDesign(){
+      this.item.activities.map(activity =>{
+        this.activities.push(new Activity(
+            activity.time,
+            0,
+            activity.name,
+            activity.type,
+            activity.length,
+            activity.description,
+            activity.on,
+            activity.qc,
+            activity.fees,
+            activity.img,
+            activity.ageRange,
+            activity.timeOfYear,
+            activity.timeSlots,
+            activity.order));  
+      })
+   /*  this.activities.push(new Activity(
+        this.dates[this.select.order],
+        this.select.order,
+        event.name,
+        event.type,
+        event.length,
+        event.description,
+        event.on,
+        event.qc,
+        event.fees,
+        event.img,
+        event.ageRange,
+        event.timeOfYear,
+        event.timeSlots,
+        event.order));     */
+    localStorage.setItem("itinerary", JSON.stringify(this.activities))
+    localStorage.setItem("set", JSON.stringify(true))
+    this.router.navigate(["/DesignPage"]); 
+  }
  /* private ResizeImage() {
     var filesToUpload = document.getElementById('imageFile').files;
     var file = filesToUpload[0];

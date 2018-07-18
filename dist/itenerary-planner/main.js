@@ -81,7 +81,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n <!-- <div>\n        <ul>\n                <li *ngFor=\"let item of items | async\">\n                     <div *ngFor=\"let list of item.activities\">{{list.name| json}}</div>\n                \n                    \n                </li>\n            </ul>\n </div>  -->\n\n\n<!--  <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" placeholder=\"Title..\">\n <Form>\n <input type=\"radio\" [(ngModel)]=\"length\" value=\"Half-Day...\" name=\"length\" placeholder=\"Title..\">\n <input type=\"radio\" [(ngModel)]=\"length\" value=\"Full-Day...\" name=\"length\" placeholder=\"Title..\">\n </Form>\n<textarea [(ngModel)]=\"content\" name=\"content\" placeholder=\"Content..\"></textarea>\n<input type=\"submit\" value=\"Add a Post\" (click)=\"addPost()\">  -->\n<!--outlet for router navigation--> \n<router-outlet></router-outlet>\n\n\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<!-- <div>\n        <ul>\n                <li *ngFor=\"let item of items | async\">\n                     <div *ngFor=\"let list of item.activities\">{{list.name| json}}</div> \n             \n                    \n                </li>\n            </ul>\n </div>   -->\n\n<!--  <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" placeholder=\"Title..\">\n <Form>\n <input type=\"radio\" [(ngModel)]=\"length\" value=\"Half-Day...\" name=\"length\" placeholder=\"Title..\">\n <input type=\"radio\" [(ngModel)]=\"length\" value=\"Full-Day...\" name=\"length\" placeholder=\"Title..\">\n </Form>\n<textarea [(ngModel)]=\"content\" name=\"content\" placeholder=\"Content..\"></textarea>\n<input type=\"submit\" value=\"Add a Post\" (click)=\"addPost()\">  -->\n<!--outlet for router navigation--> \n<router-outlet></router-outlet>\n\n\n"
 
 /***/ }),
 
@@ -186,21 +186,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/confirm-sticker/confirm-sticker.component */ "./src/components/confirm-sticker/confirm-sticker.component.ts");
 /* harmony import */ var _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/warning/warning.component */ "./src/components/warning/warning.component.ts");
 /* harmony import */ var _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/calendar/calendar.component */ "./src/components/calendar/calendar.component.ts");
-/* harmony import */ var _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/main-header/main-header.component */ "./src/components/main-header/main-header.component.ts");
-/* harmony import */ var _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/main-footer/main-footer.component */ "./src/components/main-footer/main-footer.component.ts");
-/* harmony import */ var _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/submit-form/submit-form.component */ "./src/components/submit-form/submit-form.component.ts");
-/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../pages/landing-page/landing-page.component */ "./src/pages/landing-page/landing-page.component.ts");
-/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/confirm-page/confirm-page.component */ "./src/pages/confirm-page/confirm-page.component.ts");
-/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/design-page/design-page.component */ "./src/pages/design-page/design-page.component.ts");
-/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/submit-page/submit-page.component */ "./src/pages/submit-page/submit-page.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ng-simple-slideshow */ "./node_modules/ng-simple-slideshow/ng-simple-slideshow.es5.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
+/* harmony import */ var _components_timeline_timeline_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/timeline/timeline.component */ "./src/components/timeline/timeline.component.ts");
+/* harmony import */ var _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/main-header/main-header.component */ "./src/components/main-header/main-header.component.ts");
+/* harmony import */ var _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/main-footer/main-footer.component */ "./src/components/main-footer/main-footer.component.ts");
+/* harmony import */ var _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/submit-form/submit-form.component */ "./src/components/submit-form/submit-form.component.ts");
+/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/landing-page/landing-page.component */ "./src/pages/landing-page/landing-page.component.ts");
+/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/confirm-page/confirm-page.component */ "./src/pages/confirm-page/confirm-page.component.ts");
+/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/design-page/design-page.component */ "./src/pages/design-page/design-page.component.ts");
+/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/submit-page/submit-page.component */ "./src/pages/submit-page/submit-page.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ng-simple-slideshow */ "./node_modules/ng-simple-slideshow/ng-simple-slideshow.es5.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -236,13 +237,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_22__["AppComponent"],
+                _app_component__WEBPACK_IMPORTED_MODULE_23__["AppComponent"],
                 _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_4__["EmptyCardComponent"],
                 _components_card_card_component__WEBPACK_IMPORTED_MODULE_3__["CardComponent"],
                 _components_build_build_component__WEBPACK_IMPORTED_MODULE_5__["BuildComponent"],
@@ -253,28 +255,29 @@ var AppModule = /** @class */ (function () {
                 _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_10__["StickyFooterComponent"],
                 _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_11__["ConfirmStickerComponent"],
                 _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_12__["WarningComponent"],
-                _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_14__["MainHeaderComponent"],
+                _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_15__["MainHeaderComponent"],
+                _components_timeline_timeline_component__WEBPACK_IMPORTED_MODULE_14__["TimelineComponent"],
                 _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_13__["CalendarComponent"],
-                _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_15__["MainFooterComponent"],
-                _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_16__["SubmitFormComponent"],
-                _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_17__["LandingPageComponent"],
-                _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_19__["DesignPageComponent"],
-                _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_18__["ConfirmPageComponent"],
-                _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_20__["SubmitPageComponent"]
+                _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_16__["MainFooterComponent"],
+                _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_17__["SubmitFormComponent"],
+                _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_18__["LandingPageComponent"],
+                _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_20__["DesignPageComponent"],
+                _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_19__["ConfirmPageComponent"],
+                _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_21__["SubmitPageComponent"]
             ],
             imports: [
-                ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_23__["SlideshowModule"],
+                ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_24__["SlideshowModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModule"].forRoot(),
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_21__["AppRoutingModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_25__["HttpClientModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_26__["FormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_26__["ReactiveFormsModule"],
-                angularfire2__WEBPACK_IMPORTED_MODULE_28__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_24__["environment"].firebase),
-                angularfire2_firestore__WEBPACK_IMPORTED_MODULE_27__["AngularFirestoreModule"]
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_22__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_26__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_27__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_27__["ReactiveFormsModule"],
+                angularfire2__WEBPACK_IMPORTED_MODULE_29__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_25__["environment"].firebase),
+                angularfire2_firestore__WEBPACK_IMPORTED_MODULE_28__["AngularFirestoreModule"]
             ],
-            providers: [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_27__["AngularFirestoreModule"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_22__["AppComponent"]]
+            providers: [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_28__["AngularFirestoreModule"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_23__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -330,11 +333,13 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var ActivityCardComponent = /** @class */ (function () {
     function ActivityCardComponent() {
         this.newItem = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.length = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
     }
     ActivityCardComponent.prototype.ngOnInit = function () {
     };
     ActivityCardComponent.prototype.changeItem = function (event) {
         this.newItem.emit(event);
+        this.length.emit(event.length);
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -344,6 +349,10 @@ var ActivityCardComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
         __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
     ], ActivityCardComponent.prototype, "newItem", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], ActivityCardComponent.prototype, "length", void 0);
     ActivityCardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-activity-card',
@@ -366,7 +375,7 @@ var ActivityCardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"outer-flex\">\n  \n<div style=\"margin-left:1%; width:7%; font-size:15px; font-weight:bold;\">\n\n        <img  *ngIf=\"selected\" src=\"../../assets/images/check.png\" class=\"icon\">\n  \n 9:30 AM\n</div>\n<div style=\"border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;\">\n \n</div>\n</div>\n\n<div class=\"flex-container\" *ngIf=\"swap || !display\">\n \n  <div *ngIf=\"showImage\" class=\"img-flex\"> \n <img class=\"img-responsive img-resize\" src=\"{{selectedItem.img}}\">\n  </div>\n  <div *ngIf=\"!adjust\" class=\"middle-flex\" style=\"width:60%;\">\n      <div style=\"font-size:12.5px; font-weight:bold;\">\n       \n       {{selectedItem.type}}\n      </div>\n      <div style=\"font-size:20px; font-weight:bold;\">\n       {{selectedItem.name}}\n      </div>\n      <div *ngIf=\"showDescription\" style=\"margin-bottom:2%;\"> \n         {{selectedItem.description}}\n      </div>\n      <div style=\"font-size:12.5px\">\n        {{selectedItem.duration}} Minutes, {{selectedItem.place}}\n      </div>\n     </div>\n  <div *ngIf=\"adjust\" class=\"middle-flex\" style=\"width:60%;\">\n   <div style=\"font-size:12.5px; font-weight:bold;\">\n    \n    {{selectedItem.type}}\n   </div>\n   <div style=\"font-size:20px; font-weight:bold;\">\n    {{selectedItem.name}}\n   </div>\n   <div style=\"margin-bottom:2%; \"> \n     {{selectedItem.description}}\n   </div>\n   <div style=\"font-size:12.5px\">\n    {{selectedItem.duration}} Minutes, {{selectedItem.place}}\n   </div>\n  </div>\n  <div *ngIf=\"showTools\" style=\"align-self: center;\" class=\"inner-flex\">\n   <div style=\"margin-right:10px\"><div *ngIf=\"!details\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/info.png\"  (click)=\"toggleDetails()\" class=\"icon\"></a></div>\n   <div *ngIf=\"details\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/cancel.png\"  (click)=\"toggleDetails()\" class=\"icon\"></a></div>\n   <div style=\"font-weight:bold; font-size:12.5px\">DETAILS</div></div>\n  \n    <div><div><a href=\"javascript: void(0)\"><img src=\"../../assets/images/undo.png\" (click)=\"toggleSwap()\" class=\"icon\"></a></div><div style=\"font-weight:bold; font-size:12.5px\">SWAP</div></div>\n  </div>\n</div>\n  <div *ngIf=\"details && swap\" style=\"margin-left:19%; width:60%;\">\n   <div style=\"font-size:17px; font-weight:bold;\">\n     DETAILS\n   </div>\n   <div style=\"margin-top:2%; font-size:13px\">\n      {{selectedItem.details}}\n      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n          Aenean commodo ligula eget dolor. Aenean massa. \n          Cum sociis natoque penatibus et magnis dis parturient montes,\n          Aenean massa. \n          Cum sociis natoque penatibus et magnis dis parturient montes,\n          Aenean massa. \n          Cum sociis natoque penatibus et magnis dis parturient montes,</p>\n   </div>\n\n   <div style=\"font-size:17px; font-weight:bold; margin-top:3%\">\n     CURRICULUM CONNECTIONS\n   </div>\n   <div style=\"margin-top:2%; font-size:13px; \">\n   <ul>\n     <li class=\"list\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n     <li class=\"list\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n   </ul>\n  </div>\n  </div>\n\n\n\n  <div class=\"alt-flex\" *ngIf=\"!swap && display\">\n  <div style=\"width:98%; margin-left:0%; margin-top:1%\">\n      <div class=\"row\" >\n    <div class=\"activity-card\" *ngFor=\"let item of items | async\"> \n        <app-activity-card [item]=\"item\" (newItem)=\"itemChange($event)\" (click)=\"toggleSwap()\"></app-activity-card>\n    </div>\n  </div>\n </div>\n \n</div>"
+module.exports = "<div *ngIf=\"!set\">\n<div  class=\"outer-flex\">\n  \n<div *ngIf=\"!edited\" style=\"margin-left:1%; width:7%; font-size:15px; font-weight:bold;\">\n\n        <img  *ngIf=\"selected\" src=\"../../assets/images/check.png\" class=\"icon\">\n  \n{{timeConvert(date[item.order])}}\n</div>\n\n<div *ngIf=\"edited\" style=\"margin-left:1%; width:7%; font-size:15px; font-weight:bold;\">\n\n    <img  *ngIf=\"selected\" src=\"../../assets/images/check.png\" class=\"icon\">\n\n{{timeConvert(selectedItem.time)}}\n</div>\n<div style=\"border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;\">\n \n</div>\n</div>\n\n\n<div class=\"flex-container\" *ngIf=\"swap || !display\">\n \n  <div *ngIf=\"showImage\" class=\"img-flex\"> \n <img class=\"img-responsive img-resize\" src=\"{{selectedItem.img}}\">\n  </div>\n  <div *ngIf=\"!adjust\" class=\"middle-flex\" style=\"width:60%;\">\n      <div style=\"font-size:12.5px; font-weight:bold;\">\n       \n       {{selectedItem.type}}\n      </div>\n      <div style=\"font-size:20px; font-weight:bold;\">\n       {{selectedItem.name}}\n      </div>\n      <div *ngIf=\"showDescription\" style=\"margin-bottom:2%;\"> \n         {{selectedItem.description}}\n      </div>\n      <div style=\"font-size:12.5px\">\n        {{selectedItem.duration}} Minutes, {{selectedItem.place}}\n      </div>\n     </div>\n  <div *ngIf=\"adjust\" class=\"middle-flex\" style=\"width:60%;\">\n   <div style=\"font-size:12.5px; font-weight:bold;\">\n    \n    {{selectedItem.type}}\n   </div>\n   <div style=\"font-size:20px; font-weight:bold;\">\n    {{selectedItem.name}}\n   </div>\n   <div style=\"margin-bottom:2%; \"> \n     {{selectedItem.description}}\n   </div>\n   <div style=\"font-size:12.5px\">\n    {{selectedItem.duration}} Minutes, {{selectedItem.place}}\n   </div>\n  </div>\n  <div *ngIf=\"showTools\" style=\"align-self: center;\" class=\"inner-flex\">\n   <div style=\"margin-right:10px\"><div *ngIf=\"!details\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/info.png\"  (click)=\"toggleDetails()\" class=\"icon\"></a></div>\n   <div *ngIf=\"details\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/cancel.png\"  (click)=\"toggleDetails()\" class=\"icon\"></a></div>\n   <div style=\"font-weight:bold; font-size:12.5px\">DETAILS</div></div>\n  \n    <div *ngIf='!edited'><div><a href=\"javascript: void(0)\"><img src=\"../../assets/images/undo.png\" (click)=\"toggleSwap(item.order)\" class=\"icon\"></a></div><div style=\"font-weight:bold; font-size:12.5px\">SWAP</div></div>\n    <div *ngIf='edited'><div><a href=\"javascript: void(0)\"><img src=\"../../assets/images/undo.png\" (click)=\"toggleSwap(selectedItem.selection)\" class=\"icon\"></a></div><div style=\"font-weight:bold; font-size:12.5px\">SWAP</div></div>\n  </div>\n</div>\n  <div *ngIf=\"details && swap\" style=\"margin-left:19%; width:60%;\">\n   <div style=\"font-size:17px; font-weight:bold;\">\n     DETAILS\n   </div>\n   <div style=\"margin-top:2%; font-size:13px\">\n      {{selectedItem.details}}\n      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n          Aenean commodo ligula eget dolor. Aenean massa. \n          Cum sociis natoque penatibus et magnis dis parturient montes,\n          Aenean massa. \n          Cum sociis natoque penatibus et magnis dis parturient montes,\n          Aenean massa. \n          Cum sociis natoque penatibus et magnis dis parturient montes,</p>\n   </div>\n\n   <div style=\"font-size:17px; font-weight:bold; margin-top:3%\">\n     CURRICULUM CONNECTIONS\n   </div>\n   <div style=\"margin-top:2%; font-size:13px; \">\n   <ul>\n     <li class=\"list\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n     <li class=\"list\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n   </ul>\n  </div>\n  </div>\n\n\n\n  <div class=\"alt-flex\" *ngIf=\"!swap && display\">\n  <div style=\"width:98%; margin-left:0%; margin-top:1%\">\n      <div class=\"row\" >\n    <div class=\"activity-card\" *ngFor=\"let item of items | async\"> \n        <app-activity-card [item]=\"item\" (newItem)=\"itemChange($event)\" (length)=\"getLength($event)\" (click)=\"toggleSwap(item.order)\"></app-activity-card>\n    </div>\n  </div>\n </div>\n \n</div>\n\n\n</div>\n\n\n\n\n\n\n\n\n\n  \n\n\n\n\n\n<div *ngIf=\"set\">\n  \n    <div  class=\"outer-flex\" > \n      \n    \n    \n    <div style=\"margin-left:1%; width:7%; font-size:15px; font-weight:bold;\">\n    \n   \n    \n    {{itinerary.time}}\n    </div>\n    <div style=\"border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;\">\n     \n    </div>\n    </div>\n    \n    \n    <div class=\"flex-container\" >\n     \n      <div  class=\"img-flex\"> \n     <img class=\"img-responsive img-resize\" src=\"{{itinerary.img}}\">\n      </div>\n      <div  class=\"middle-flex\" style=\"width:60%;\">\n          <div style=\"font-size:12.5px; font-weight:bold;\">\n           \n           {{itinerary.type}}\n          </div>\n          <div style=\"font-size:20px; font-weight:bold;\">\n           {{itinerary.name}}\n          </div>\n          <div  style=\"margin-bottom:2%;\"> \n             {{itinerary.description}}\n          </div>\n          <div style=\"font-size:12.5px\">\n            {{itinerary.duration}} Minutes, {{itinerary.place}}\n          </div>\n         </div>\n    \n  <div  style=\"align-self: center;\" class=\"inner-flex\">\n       <div  style=\"margin-right:10px\"><div *ngIf=\"!expand\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/info.png\"  (click)=\"toggleDetails2()\" class=\"icon\"></a></div>\n       <div *ngIf=\"expand\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/cancel.png\"  (click)=\"toggleDetails2()\" class=\"icon\"></a></div>\n       <div style=\"font-weight:bold; font-size:12.5px\">DETAILS</div></div>\n      \n        \n      </div>\n    </div>\n      <div *ngIf=\"expand\"  style=\"margin-left:19%; width:60%;\">\n       <div style=\"font-size:17px; font-weight:bold;\">\n         DETAILS\n       </div>\n       <div style=\"margin-top:2%; font-size:13px\">\n          {{itinerary.details}}\n          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n              Aenean commodo ligula eget dolor. Aenean massa. \n              Cum sociis natoque penatibus et magnis dis parturient montes,\n              Aenean massa. \n              Cum sociis natoque penatibus et magnis dis parturient montes,\n              Aenean massa. \n              Cum sociis natoque penatibus et magnis dis parturient montes,</p>\n       </div>\n    \n       <div style=\"font-size:17px; font-weight:bold; margin-top:3%\">\n         CURRICULUM CONNECTIONS\n       </div>\n       <div style=\"margin-top:2%; font-size:13px; \">\n       <ul>\n         <li class=\"list\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n         <li class=\"list\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>\n       </ul>\n      </div>\n      </div> \n    \n    \n    \n      \n    \n\n    </div>\n    \n  \n  \n  \n  "
 
 /***/ }),
 
@@ -420,6 +429,7 @@ var ActivityComponent = /** @class */ (function () {
     function ActivityComponent(_http, db) {
         this._http = _http;
         this.db = db;
+        this.set = false;
         this.showImage = true;
         this.showTools = true;
         this.showDescription = true;
@@ -429,40 +439,43 @@ var ActivityComponent = /** @class */ (function () {
         this.display = true;
         this.selected = false;
         this.fromConfirm = false;
+        this.startTime = 20;
+        this.expand = false;
+        this.edited = false;
         this.activity = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
-        this.items = db.collection('/activities').snapshotChanges().map(function (actions) {
+        this.count = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.index = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.remove = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+    }
+    ActivityComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.items = this.db.collection('/activities').snapshotChanges().map(function (actions) {
             return actions.map(function (a) {
                 var data = a.payload.doc.data();
                 var id = a.payload.doc.id;
                 return __assign({ id: id }, data);
             });
         });
-    }
-    ActivityComponent.prototype.ngOnInit = function () {
-        var _this = this;
+        this.date = JSON.parse(localStorage.getItem('dates'));
         this._http.get('https://picsum.photos/list')
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (images) { return _this._randomImageUrls(images); }))
             .subscribe(function (images) { return _this.images = images; });
     };
     ActivityComponent.prototype.itemChange = function (event) {
         this.selectedItem = event;
-        this.activity.emit(event);
-    };
-    ActivityComponent.prototype._randomImageUrls = function (images) {
-        return [1, 2, 3].map(function () {
-            var randomId = images[Math.floor(Math.random() * images.length)].id;
-            return "https://picsum.photos/900/500?image=" + randomId;
-        });
-    };
-    ActivityComponent.prototype.toggleDetails = function () {
-        if (!this.details) {
-            this.details = true;
+        if (this.edited) {
+            this.index.emit(this.selectedItem);
         }
         else {
-            this.details = false;
+            this.index.emit(this.item);
         }
+        this.activity.emit(event);
+        this.date = JSON.parse(localStorage.getItem('dates'));
     };
-    ActivityComponent.prototype.toggleSwap = function () {
+    ActivityComponent.prototype.getLength = function (event) {
+        this.length = event;
+    };
+    ActivityComponent.prototype.toggleSwap = function (event) {
         this.details = false;
         if (!this.selected) {
             this.selected = true;
@@ -474,9 +487,73 @@ var ActivityComponent = /** @class */ (function () {
             this.swap = true;
         }
         else {
+            this.remove.emit(event);
             this.swap = false;
         }
+        //this.remove.emit(event);
     };
+    ActivityComponent.prototype.toggleSwap2 = function () {
+        this.swap = !(this.swap);
+    };
+    ActivityComponent.prototype._randomImageUrls = function (images) {
+        return [1, 2, 3].map(function () {
+            var randomId = images[Math.floor(Math.random() * images.length)].id;
+            return "https://picsum.photos/900/500?image=" + randomId;
+        });
+    };
+    ActivityComponent.prototype.timeConvert = function (data) {
+        if (!data) {
+            return 'select for time';
+        }
+        else {
+            var minutes = data % 60;
+            var hours = (data - minutes) / 60;
+            if (minutes < 10) {
+                var min = '0' + minutes;
+                return hours + ':' + min;
+            }
+            else {
+                return hours + ':' + minutes;
+            }
+        }
+    };
+    ActivityComponent.prototype.toggleDetails = function () {
+        if (!this.details) {
+            this.details = true;
+        }
+        else {
+            this.details = false;
+        }
+    };
+    ActivityComponent.prototype.toggleDetails2 = function () {
+        if (this.expand == false) {
+            this.expand = true;
+        }
+        else {
+            this.expand = false;
+        }
+    };
+    ActivityComponent.prototype.timeOfDay = function (data) {
+        if (data >= 720) {
+            return 'PM';
+        }
+        else {
+            if (!data) {
+                return '';
+            }
+            else {
+                return 'AM';
+            }
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], ActivityComponent.prototype, "set", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], ActivityComponent.prototype, "itinerary", void 0);
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
@@ -496,7 +573,15 @@ var ActivityComponent = /** @class */ (function () {
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
+    ], ActivityComponent.prototype, "swap", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
     ], ActivityComponent.prototype, "display", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], ActivityComponent.prototype, "selected", void 0);
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
@@ -510,9 +595,29 @@ var ActivityComponent = /** @class */ (function () {
         __metadata("design:type", Object)
     ], ActivityComponent.prototype, "fromConfirm", void 0);
     __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], ActivityComponent.prototype, "time", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], ActivityComponent.prototype, "edited", void 0);
+    __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
         __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
     ], ActivityComponent.prototype, "activity", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], ActivityComponent.prototype, "count", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], ActivityComponent.prototype, "index", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], ActivityComponent.prototype, "remove", void 0);
     ActivityComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-activity',
@@ -725,7 +830,7 @@ var CalendarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n<div class=\"card-container\">\n  <div id=\"slideshow\">\n<ngb-carousel *ngIf=\"images\">\n  <ng-template ngbSlide>\n    <img [src]=\"images[0]\" alt=\"Random first slide\" class=\"img-responsive img-resize\">\n    <div class=\"carousel-caption text\">\n      <h3>{{item.name}}</h3>\n      <p>{{item.start}}-{{item.end}}</p>\n    </div>\n  </ng-template>\n  <ng-template ngbSlide>\n    <img [src]=\"images[1]\" alt=\"Random second slide\" class=\"img-responsive img-resize\">\n    <div class=\"carousel-caption text\">\n        <h3>{{item.name}}</h3>\n        <p>{{item.start}}-{{item.end}}</p>\n    </div>\n  </ng-template>\n  <ng-template ngbSlide>\n    <img [src]=\"images[2]\" alt=\"Random third slide\" class=\"img-responsive img-resize\">\n    <div class=\"carousel-caption text\">\n        <h3>{{item.name}}</h3>\n        <p>{{item.start}}-{{item.end}}</p>\n    </div>\n  </ng-template>\n</ngb-carousel>\n</div>\n<div *ngIf=\"view\" class=\"layers\">\n    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n    natoque penatibus et magnis dis parturient montes, nascetur \n    ridiculus mus. Donec quam felis, ultricies nec.\n</div>\n<div *ngIf=\"!view\" class=\"layers\" style=\"margin-bottom:3%;\">\n    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n    natoque penatibus et magnis dis parturient montes, nascetur \n    ridiculus mus. Donec quam felis, ultricies nec.\n</div>\n<div *ngIf=\"view\" class=\"layers\" style=\"font-weight:bold; margin-bottom:3%\">\n  VIEW THIS ITENERARY\n  <img src=\"../../assets/images/right-arrow.png\">\n</div>\n</div>\n</div>"
+module.exports = "<div class=\"container\">\n<div class=\"card-container\">\n  <div id=\"slideshow\">\n<ngb-carousel *ngIf=\"images\">\n  <ng-template ngbSlide>\n    <img [src]=\"images[0]\" alt=\"Random first slide\" class=\"img-responsive img-resize\">\n    <div class=\"carousel-caption text\">\n      <h3></h3>\n      <p></p>\n    </div>\n  </ng-template>\n  <ng-template ngbSlide>\n    <img [src]=\"images[1]\" alt=\"Random second slide\" class=\"img-responsive img-resize\">\n    <div class=\"carousel-caption text\">\n        <h3></h3>\n        <p></p>\n    </div>\n  </ng-template>\n  <ng-template ngbSlide>\n    <img [src]=\"images[2]\" alt=\"Random third slide\" class=\"img-responsive img-resize\">\n    <div class=\"carousel-caption text\">\n        <h3></h3>\n        <p></p>\n    </div>\n  </ng-template>\n</ngb-carousel>\n</div>\n<div *ngIf=\"view\" class=\"layers\">\n    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n    natoque penatibus et magnis dis parturient montes, nascetur \n    ridiculus mus. Donec quam felis, ultricies nec.\n</div>\n<div *ngIf=\"!view\" class=\"layers\" style=\"margin-bottom:3%;\">\n    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n    natoque penatibus et magnis dis parturient montes, nascetur \n    ridiculus mus. Donec quam felis, ultricies nec.\n</div>\n<div *ngIf=\"view\" class=\"layers\" style=\"font-weight:bold; margin-bottom:3%\">\n  <a href=\"javascript:void(0)\" (click)=\"navigateToDesign()\">VIEW THIS ITENERARY</a>\n  <img src=\"../../assets/images/right-arrow.png\">\n</div>\n</div>\n</div>"
 
 /***/ }),
 
@@ -753,6 +858,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _models_activity__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../models/activity */ "./src/models/activity.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -765,9 +872,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
+
 var CardComponent = /** @class */ (function () {
-    function CardComponent(_http) {
+    function CardComponent(_http, router, route) {
         this._http = _http;
+        this.router = router;
+        this.route = route;
+        this.activities = [];
         this.view = true;
     }
     CardComponent.prototype.ngOnInit = function () {
@@ -781,6 +893,30 @@ var CardComponent = /** @class */ (function () {
             var randomId = images[Math.floor(Math.random() * images.length)].id;
             return "https://picsum.photos/900/500?image=" + randomId;
         });
+    };
+    CardComponent.prototype.navigateToDesign = function () {
+        var _this = this;
+        this.item.activities.map(function (activity) {
+            _this.activities.push(new _models_activity__WEBPACK_IMPORTED_MODULE_4__["Activity"](activity.time, 0, activity.name, activity.type, activity.length, activity.description, activity.on, activity.qc, activity.fees, activity.img, activity.ageRange, activity.timeOfYear, activity.timeSlots, activity.order));
+        });
+        /*  this.activities.push(new Activity(
+             this.dates[this.select.order],
+             this.select.order,
+             event.name,
+             event.type,
+             event.length,
+             event.description,
+             event.on,
+             event.qc,
+             event.fees,
+             event.img,
+             event.ageRange,
+             event.timeOfYear,
+             event.timeSlots,
+             event.order));     */
+        localStorage.setItem("itinerary", JSON.stringify(this.activities));
+        localStorage.setItem("set", JSON.stringify(true));
+        this.router.navigate(["/DesignPage"]);
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
@@ -796,7 +932,8 @@ var CardComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./card.component.html */ "./src/components/card/card.component.html"),
             styles: [__webpack_require__(/*! ./card.component.scss */ "./src/components/card/card.component.scss")]
         }),
-        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]])
+        __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
     ], CardComponent);
     return CardComponent;
 }());
@@ -875,7 +1012,7 @@ var ConfirmStickerComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"jumbotron main\">\n <div class=\"outer-box\">\n<div class=\"inner-box-head \">\n <div><h1>FIRST AVE. GRADE 3 CLASS- ITENERARY 2</h1></div>\n <div><div><div><a href=\"javascript: void(0)\" (click)=\"navigateToDesign()\"><img src=\"../../assets/images/edit.png\" class=\"icon\"></a></div><div style=\"font-weight:bold; font-size:12.5px\">EDIT</div></div></div>\n</div>\n<div class=\"inner-box-body\">\n  <div class=\"column\">\n<div class=\"my-card\">\n    <app-card [view]=\"view\"></app-card>\n</div>\n<div class=\"note\">\n  <h4>IMPORTANT:</h4>\n  <p>Activities can accomodate up to 30 people.\n     Please create additional Iteneraries for  larger groups.\n  </p>\n</div>\n</div>\n<div class=\"activity\">\n<div class=\"column\">\n  <div class=\"list\" *ngFor=\"let activity of activities\">\n  <app-activity [selectedItem]=\"activity\" [showImage]=\"showImage\" [showTools]=\"showTools\" [showDescription]=\"showDescription\" [adjust]=\"adjust\" [display]=\"display\"></app-activity>\n</div>\n\n</div>\n</div>\n\n\n</div>\n</div>\n</div>\n"
+module.exports = "<div class=\"jumbotron main\">\n <div class=\"outer-box\">\n<div class=\"inner-box-head \">\n <div><h1>FIRST AVE. GRADE 3 CLASS- ITENERARY 2</h1></div>\n <div><div><div><a href=\"javascript: void(0)\" (click)=\"navigateToDesign()\"><img src=\"../../assets/images/edit.png\" class=\"icon\"></a></div><div style=\"font-weight:bold; font-size:12.5px\">EDIT</div></div></div>\n</div>\n<div class=\"inner-box-body\">\n  <div class=\"column\">\n<div class=\"my-card\">\n    <app-card [view]=\"view\"></app-card>\n</div>\n<div class=\"note\">\n  <h4>IMPORTANT:</h4>\n  <p>Activities can accomodate up to 30 people.\n     Please create additional Iteneraries for  larger groups.\n  </p>\n</div>\n</div>\n<div class=\"activity\">\n<div class=\"column\">\n  <div *ngIf=\"!set\">\n  <div class=\"list\" *ngFor=\"let activity of activities\">\n  \n\n\n\n    <div class=\"outer-flex\">\n  \n      \n      <div style=\"border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;\">\n       {{timeConvert(activity.time)}}\n      </div>\n      </div>\n      \n      <div class=\"flex-container\" *ngIf=\"swap || !display\">\n       \n        <div *ngIf=\"showImage\" class=\"img-flex\"> \n       <img class=\"img-responsive img-resize\" src=\"{{selectedItem.img}}\">\n        </div>\n        <div *ngIf=\"!adjust\" class=\"middle-flex\" style=\"width:60%;\">\n            <div style=\"font-size:12.5px; font-weight:bold;\">\n             \n             {{activity.type}}\n            </div>\n            <div style=\"font-size:20px; font-weight:bold;\">\n             {{activity.name}} {{activity.order}}\n            </div>\n            <div *ngIf=\"showDescription\" style=\"margin-bottom:2%;\"> \n               {{activity.description}}\n            </div>\n            <div style=\"font-size:12.5px\">\n              {{activity.duration}} Minutes, {{activity.place}}\n            </div>\n           </div>\n        <div *ngIf=\"adjust\" class=\"middle-flex\" style=\"width:60%;\">\n         <div style=\"font-size:12.5px; font-weight:bold;\">\n          \n          {{activity.type}}\n         </div>\n         <div style=\"font-size:20px; font-weight:bold;\">\n          {{activity.name}}\n         </div>\n         <div style=\"margin-bottom:2%; \"> \n           {{activity.description}}\n         </div>\n         <div style=\"font-size:12.5px\">\n          {{activity.duration}} Minutes, {{activity.place}}\n         </div>\n        </div>\n        <div *ngIf=\"showTools\" style=\"align-self: center;\" class=\"inner-flex\">\n         <div style=\"margin-right:10px\"><div *ngIf=\"!details\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/info.png\"  (click)=\"toggleDetails()\" class=\"icon\"></a></div>\n         <div *ngIf=\"details\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/cancel.png\"  (click)=\"toggleDetails()\" class=\"icon\"></a></div>\n         <div style=\"font-weight:bold; font-size:12.5px\">DETAILS</div></div>\n        \n          <div><div><a href=\"javascript: void(0)\"><img src=\"../../assets/images/undo.png\" (click)=\"toggleSwap()\" class=\"icon\"></a></div><div style=\"font-weight:bold; font-size:12.5px\">SWAP</div></div>\n        </div>\n      </div>\n    \n    \n\n</div>\n\n\n</div>\n\n<div *ngIf=\"set\">\n    <div class=\"list\" *ngFor=\"let itinerary of itineraries\">\n    \n  \n  \n  \n      <div class=\"outer-flex\">\n    \n        \n        <div style=\"border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;\">\n         {{itinerary.time}}\n        </div>\n        </div>\n        \n        <div class=\"flex-container\" *ngIf=\"swap || !display\">\n         \n          <div *ngIf=\"showImage\" class=\"img-flex\"> \n         <img class=\"img-responsive img-resize\" src=\"{{selectedItem.img}}\">\n          </div>\n          <div *ngIf=\"!adjust\" class=\"middle-flex\" style=\"width:60%;\">\n              <div style=\"font-size:12.5px; font-weight:bold;\">\n               \n               {{itinerary.type}}\n              </div>\n              <div style=\"font-size:20px; font-weight:bold;\">\n               {{itinerary.name}} {{itinerary.order}}\n              </div>\n              <div *ngIf=\"showDescription\" style=\"margin-bottom:2%;\"> \n                 {{itinerary.description}}\n              </div>\n              <div style=\"font-size:12.5px\">\n                {{itinerary.duration}} Minutes, {{itinerary.place}}\n              </div>\n             </div>\n          <div *ngIf=\"adjust\" class=\"middle-flex\" style=\"width:60%;\">\n           <div style=\"font-size:12.5px; font-weight:bold;\">\n            \n              {{itinerary.type}}\n            </div>\n            <div style=\"font-size:20px; font-weight:bold;\">\n             {{itinerary.name}} {{itinerary.order}}\n            </div>\n            <div *ngIf=\"showDescription\" style=\"margin-bottom:2%;\"> \n               {{itinerary.description}}\n            </div>\n            <div style=\"font-size:12.5px\">\n              {{itinerary.duration}} Minutes, {{itinerary.place}}\n           </div>\n          </div>\n          <div *ngIf=\"showTools\" style=\"align-self: center;\" class=\"inner-flex\">\n           <div style=\"margin-right:10px\"><div *ngIf=\"!details\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/info.png\"  (click)=\"toggleDetails()\" class=\"icon\"></a></div>\n           <div *ngIf=\"details\"><a href=\"javascript: void(0)\"><img src=\"../../assets/images/cancel.png\"  (click)=\"toggleDetails()\" class=\"icon\"></a></div>\n           <div style=\"font-weight:bold; font-size:12.5px\">DETAILS</div></div>\n          \n            <div><div><a href=\"javascript: void(0)\"><img src=\"../../assets/images/undo.png\" (click)=\"toggleSwap()\" class=\"icon\"></a></div><div style=\"font-weight:bold; font-size:12.5px\">SWAP</div></div>\n          </div>\n        </div>\n      \n      \n  \n  </div>\n  \n  \n  </div>\n\n</div>\n</div>\n\n\n</div>\n</div>\n</div>\n"
 
 /***/ }),
 
@@ -886,7 +1023,7 @@ module.exports = "<div class=\"jumbotron main\">\n <div class=\"outer-box\">\n<d
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".main {\n  padding: 3%; }\n\n.outer-box {\n  background-color: white;\n  padding: 3%; }\n\n.inner-box-head {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  padding: 1%;\n  margin-bottom: 2%; }\n\n.inner-box-body {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.note {\n  width: 65%;\n  word-wrap: break-word;\n  margin-top: 10%;\n  margin-left: 11%;\n  font-weight: bold; }\n\n.icon {\n  height: 19px; }\n\n.my-card {\n  height: 380px;\n  width: 75%;\n  font-size: 13px;\n  margin-left: 8%; }\n\n.activity {\n  width: 95%; }\n\n.col {\n  display: flex;\n  flex-direction: column; }\n\n.list {\n  margin-bottom: 2%; }\n"
+module.exports = ".main {\n  padding: 3%; }\n\n.outer-box {\n  background-color: white;\n  padding: 3%; }\n\n.inner-box-head {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  padding: 1%;\n  margin-bottom: 2%; }\n\n.inner-box-body {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.note {\n  width: 65%;\n  word-wrap: break-word;\n  margin-top: 10%;\n  margin-left: 11%;\n  font-weight: bold; }\n\n.icon {\n  height: 19px; }\n\n.my-card {\n  height: 380px;\n  width: 75%;\n  font-size: 13px;\n  margin-left: 8%; }\n\n.activity {\n  width: 95%; }\n\n.col {\n  display: flex;\n  flex-direction: column; }\n\n.list {\n  margin-bottom: 2%; }\n\n.height {\n  border-style: solid;\n  display: inline-block;\n  border-width: thin;\n  margin-top: 5%; }\n\nimg {\n  max-width: 100%;\n  max-height: 100%; }\n\n.img-resize {\n  height: 200px;\n  width: 90%; }\n\n.outer-flex {\n  display: flex;\n  flex-direction: row;\n  margin-top: 20px; }\n\n.flex-container {\n  display: flex;\n  /*  border-top-style: dashed;\r\n    border-color:#E0E0E0; */\n  flex-direction: row;\n  padding-top: 1%;\n  justify-content: flex-start; }\n\n.img-flex {\n  display: flex;\n  width: 18%; }\n\n.middle-flex {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  margin-right: 5%; }\n\n.icon {\n  height: 19px; }\n\n.inner-flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.main-flex {\n  display: flex;\n  flex-direction: column; }\n\n.list {\n  margin-bottom: 0%; }\n\n.activity-card {\n  height: 200px;\n  width: 23.5%;\n  font-size: 12px; }\n\n.alt-flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n"
 
 /***/ }),
 
@@ -923,12 +1060,27 @@ var ConfirmComponent = /** @class */ (function () {
         this.adjust = false;
         this.view = false;
         this.display = false;
-        this.activities = JSON.parse(localStorage.getItem('activities'));
     }
     ConfirmComponent.prototype.ngOnInit = function () {
+        this.set = JSON.parse(localStorage.getItem("set"));
+        localStorage.setItem('edit', JSON.stringify(false));
+        this.itineraries = JSON.parse(localStorage.getItem("itinerary"));
+        this.activities = JSON.parse(localStorage.getItem('activities'));
     };
     ConfirmComponent.prototype.navigateToDesign = function () {
+        localStorage.setItem('edit', JSON.stringify(true));
         this.router.navigateByUrl('DesignPage');
+    };
+    ConfirmComponent.prototype.timeConvert = function (data) {
+        var minutes = data % 60;
+        var hours = (data - minutes) / 60;
+        if (minutes < 10) {
+            var min = '0' + minutes;
+            return hours + ':' + min;
+        }
+        else {
+            return hours + ':' + minutes;
+        }
     };
     ConfirmComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1231,7 +1383,7 @@ var MainHeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"stick\">\n<div>\n<div style=\"background-color:black; width:25%; height:80px; border-right-width:thin; border-right-style:solid;  border-right-color:white; float:left;\">\n <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold; \">PRESERVE YOUR ITENERARY</div><div style=\"color:white; font-size:12px; width:70%;\">copy the public share link and return to your itenerary later </div></div>\n</div>\n<div  style=\"background-color:black; width:25%; height:80px; float:left;\">\n    <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold;\">PRINT YOUR ITENERARY</div><div style=\"color:white; font-size:12px; width:70%;\">Print a hard copy of PDF. NOTE: this does not constitute a reservation! </div></div>\n</div>\n<div  style=\"background-color:darkred; width:25%; height:80px; float:left;\">\n    <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold;\">8/8 TIME SLOTS COMPLETE</div><div style=\"color:white; font-size:12px; width:70%;\">You're done. Next Step: Confirm your itenerary before submitting </div></div>\n</div>\n<div  style=\"background-color:red; width:25%; height:80px; float:left;\">\n  <div style=\"margin-top:20px; margin-left:160px;\"><a href=\"javascript:void(0)\" (click)=\"navigate()\"><div style=\"float:left; font-size:25px; font-weight:bold; color:white;\" >NEXT</div><div style=\"width:0;height: 0; border-top: 10px solid transparent; border-left: 15px solid white; border-bottom: 10px solid transparent; float:left; margin-left:20px; margin-top:10px;\"></div></a></div>\n</div>\n</div>\n</div>"
+module.exports = "<div class=\"stick\">\n<div>\n<div style=\"background-color:black; width:25%; height:80px; border-right-width:thin; border-right-style:solid;  border-right-color:white; float:left;\">\n <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold; \">PRESERVE YOUR ITENERARY</div><div style=\"color:white; font-size:12px; width:70%;\">copy the public share link and return to your itenerary later </div></div>\n</div>\n<div  style=\"background-color:black; width:25%; height:80px; float:left;\">\n    <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold;\">PRINT YOUR ITENERARY</div><div style=\"color:white; font-size:12px; width:70%;\">Print a hard copy of PDF. NOTE: this does not constitute a reservation! </div></div>\n</div>\n<div  style=\"background-color:darkred; width:25%; height:80px; float:left;\">\n    <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold;\">{{count}}/12 TIME SLOTS COMPLETE</div><div style=\"color:white; font-size:12px; width:70%;\">You're done. Next Step: Confirm your itenerary before submitting </div></div>\n</div>\n<div  style=\"background-color:red; width:25%; height:80px; float:left;\">\n  <div style=\"margin-top:20px; margin-left:160px;\"><a href=\"javascript:void(0)\" (click)=\"navigate()\"><div style=\"float:left; font-size:25px; font-weight:bold; color:white;\" >NEXT</div><div style=\"width:0;height: 0; border-top: 10px solid transparent; border-left: 15px solid white; border-bottom: 10px solid transparent; float:left; margin-left:20px; margin-top:10px;\"></div></a></div>\n</div>\n</div>\n</div>"
 
 /***/ }),
 
@@ -1283,6 +1435,14 @@ var StickyFooterComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", String)
     ], StickyFooterComponent.prototype, "page", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], StickyFooterComponent.prototype, "count", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], StickyFooterComponent.prototype, "set", void 0);
     StickyFooterComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-sticky-footer',
@@ -1356,6 +1516,73 @@ var SubmitFormComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], SubmitFormComponent);
     return SubmitFormComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/components/timeline/timeline.component.html":
+/*!*********************************************************!*\
+  !*** ./src/components/timeline/timeline.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"outer-flex\">\n  \n  <div style=\"margin-left:1%; width:7%; font-size:15px; font-weight:bold;\">\n  \n          <img  *ngIf=\"selected\" src=\"../../assets/images/check.png\" class=\"icon\">\n    \n  {{time}}\n  </div>\n  <div style=\"border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;\">\n   \n  </div>\n  </div>"
+
+/***/ }),
+
+/***/ "./src/components/timeline/timeline.component.scss":
+/*!*********************************************************!*\
+  !*** ./src/components/timeline/timeline.component.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".height {\n  border-style: solid;\n  display: inline-block;\n  border-width: thin;\n  margin-top: 5%; }\n\nimg {\n  max-width: 100%;\n  max-height: 100%; }\n\n.img-resize {\n  height: 200px;\n  width: 90%; }\n\n.outer-flex {\n  display: flex;\n  flex-direction: row;\n  margin-top: 20px; }\n\n.flex-container {\n  display: flex;\n  /*  border-top-style: dashed;\n    border-color:#E0E0E0; */\n  flex-direction: row;\n  padding-top: 1%;\n  justify-content: flex-start; }\n\n.img-flex {\n  display: flex;\n  width: 18%; }\n\n.middle-flex {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  margin-right: 5%; }\n\n.icon {\n  height: 19px; }\n\n.inner-flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.main-flex {\n  display: flex;\n  flex-direction: column; }\n\n.list {\n  margin-bottom: 0%; }\n\n.activity-card {\n  height: 200px;\n  width: 23.5%;\n  font-size: 12px; }\n\n.alt-flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n"
+
+/***/ }),
+
+/***/ "./src/components/timeline/timeline.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/components/timeline/timeline.component.ts ***!
+  \*******************************************************/
+/*! exports provided: TimelineComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TimelineComponent", function() { return TimelineComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TimelineComponent = /** @class */ (function () {
+    function TimelineComponent() {
+    }
+    TimelineComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], TimelineComponent.prototype, "time", void 0);
+    TimelineComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-timeline',
+            template: __webpack_require__(/*! ./timeline.component.html */ "./src/components/timeline/timeline.component.html"),
+            styles: [__webpack_require__(/*! ./timeline.component.scss */ "./src/components/timeline/timeline.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TimelineComponent);
+    return TimelineComponent;
 }());
 
 
@@ -1497,7 +1724,9 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Activity", function() { return Activity; });
 var Activity = /** @class */ (function () {
-    function Activity(name, type, length, description, on, qc, fees, img, ageRange, timeOfYear, timeSlots) {
+    function Activity(time, selection, name, type, length, description, on, qc, fees, img, ageRange, timeOfYear, timeSlots, order) {
+        this.time = time;
+        this.selection = selection;
         this.name = name;
         this.type = type;
         this.length = length;
@@ -1509,6 +1738,7 @@ var Activity = /** @class */ (function () {
         this.ageRange = ageRange;
         this.timeOfYear = timeOfYear;
         this.timeSlots = timeSlots;
+        this.order = order;
     }
     return Activity;
 }());
@@ -1524,7 +1754,7 @@ var Activity = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <app-header></app-header>\n</div>\n\n<div class=\"container-fluid\">\n  <div style=\"margin-left:2%; margin-top:2%;\">\n <div style=\" font-weight:bold; font-size:50px;\">\n   REVIEW & CONFIRM YOUR ITINERARY\n </div>\n <div style=\"font-size:15px;\">\n  Review the information below before we move on to the next step\n   when we'll submit our itinerary to the Museum's call center\n </div>\n </div>\n</div>\n\n<div style=\"margin-top:2%;\">\n  <app-confirm></app-confirm>\n</div>\n\n<div>\n  <app-sticky-footer [page]=\"page\"></app-sticky-footer>\n</div>"
+module.exports = "<div>\n  <app-header></app-header>\n</div>\n\n<div class=\"container-fluid\">\n  <div style=\"margin-left:2%; margin-top:2%;\">\n <div style=\" font-weight:bold; font-size:50px;\">\n   REVIEW & CONFIRM YOUR ITINERARY\n </div>\n <div style=\"font-size:15px;\">\n  Review the information below before we move on to the next step\n   when we'll submit our itinerary to the Museum's call center\n </div>\n </div>\n</div>\n\n<div style=\"margin-top:2%;\">\n  <app-confirm></app-confirm>\n</div>\n\n<div>\n  <app-sticky-footer [count]=\"number\" [page]=\"page\"></app-sticky-footer>\n</div>\n\n"
 
 /***/ }),
 
@@ -1551,6 +1781,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfirmPageComponent", function() { return ConfirmPageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1562,11 +1793,18 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
+//import * as nodemailer from 'nodemailer';
+//declare var mail: any;
 var ConfirmPageComponent = /** @class */ (function () {
-    function ConfirmPageComponent(router, route) {
+    function ConfirmPageComponent(router, route, http) {
         this.router = router;
         this.route = route;
+        this.http = http;
         this.page = "SubmitPage";
+        this.number = localStorage.getItem('count');
+        this.endpoint = 'https://your-project.cloudfunctions.net/httpEmail';
+        //this.mailer.send();
     }
     ConfirmPageComponent.prototype.ngOnInit = function () {
     };
@@ -1577,7 +1815,7 @@ var ConfirmPageComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./confirm-page.component.scss */ "./src/pages/confirm-page/confirm-page.component.scss")]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], ConfirmPageComponent);
     return ConfirmPageComponent;
 }());
@@ -1593,7 +1831,7 @@ var ConfirmPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n\n<div>\n  <app-header></app-header>\n</div>\n\n<div class=\"container-fluid\">\n  <div style=\"margin-left:2%; margin-top:2%;\">\n <div style=\" font-weight:bold; font-size:50px;\">\n   DESIGN YOUR ITINERARY\n </div>\n <div style=\"font-size:15px;\">\n   Build your itinerary...your way! Choose from our programs for each timeslot of your visit\n </div>\n </div>\n</div>\n\n<div style=\"background-color:#F0F0F0; height:200px; margin-top:2%; padding:2%;\">\n<div style=\"background-color:white; height:120px; padding:1.5%;\"><div style=\"font-size:40px;  \">\n  FIRST AVE. GRADE 3 CLASS - ITINERARY 1</div>\n</div>\n</div>\n\n<div class=\"container-fluid\" style=\"margin-left:2%;\">\n<div style=\"font-weight:bold; font-size:25px; margin-top:2%;\">\nITINERARY\n</div>\n<div>\n    <div class=\"activity\">\n        <app-activity *ngFor=\"let item of items | async\" [item]=\"item\" (activity)=\"getActivity($event)\"></app-activity>\n       </div>\n       \n</div>\n</div>\n\n<div style=\"width:100%\">\n    <div class=\"stick\">\n        <div>\n        <div style=\"background-color:black; width:25%; height:80px; border-right-width:thin; border-right-style:solid;  border-right-color:white; float:left;\">\n         <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold; \">PRESERVE YOUR ITENERARY</div><div style=\"color:white; font-size:12px; width:70%;\">copy the public share link and return to your itenerary later </div></div>\n        </div>\n        <div  style=\"background-color:black; width:25%; height:80px; float:left;\">\n            <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold;\">PRINT YOUR ITENERARY</div><div style=\"color:white; font-size:12px; width:70%;\">Print a hard copy of PDF. NOTE: this does not constitute a reservation! </div></div>\n        </div>\n        <div  style=\"background-color:darkred; width:25%; height:80px; float:left;\">\n            <div style=\"margin-top:20px; margin-left:100px;\"><div style=\"color:white; font-weight:bold;\">8/8 TIME SLOTS COMPLETE</div><div style=\"color:white; font-size:12px; width:70%;\">You're done. Next Step: Confirm your itenerary before submitting </div></div>\n        </div>\n        <div  style=\"background-color:red; width:25%; height:80px; float:left;\">\n          <div style=\"margin-top:20px; margin-left:160px;\"><a href=\"javascript:void(0)\" (click)=\"navigate()\"><div style=\"float:left; font-size:25px; font-weight:bold; color:white;\" >NEXT</div><div style=\"width:0;height: 0; border-top: 10px solid transparent; border-left: 15px solid white; border-bottom: 10px solid transparent; float:left; margin-left:20px; margin-top:10px;\"></div></a></div>\n        </div>\n        </div>\n        </div>\n</div>"
+module.exports = "\n\n\n<div>\n  <app-header></app-header>\n</div>\n\n<div class=\"container-fluid\">\n  <div style=\"margin-left:2%; margin-top:2%;\">\n <div style=\" font-weight:bold; font-size:50px;\">\n   DESIGN YOUR ITINERARY\n </div>\n <div style=\"font-size:15px;\">\n   Build your itinerary...your way! Choose from our programs for each timeslot of your visit\n </div>\n </div>\n</div>\n\n<div style=\"background-color:#F0F0F0; height:200px; margin-top:2%; padding:2%;\">\n<div style=\"background-color:white; height:120px; padding:1.5%;\"><div style=\"font-size:40px;  \">\n  FIRST AVE. GRADE 3 CLASS - ITINERARY 1</div>\n</div>\n</div>\n\n<div class=\"container-fluid\" style=\"margin-left:2%;\">\n  <div  style=\"font-weight:bold; font-size:25px; margin-top:2%;\">\n<div  style=\"font-weight:bold; font-size:25px;\"> \nITINERARY\n</div>\n<div *ngIf=\"!set\" style=\"font-weight:bold; font-size:20px; float:right; margin-right:2%\">\n    <a href=\"javascript:void(0)\" (click)=\"reset()\">Reset</a>\n  </div>\n  </div>\n<div *ngIf=\"!set\">\n    <div *ngIf='!isEdit' class=\"activity\">\n        <app-activity *ngFor=\"let item of items | async\" [item]=\"item\" [time]=\"time\" (index)=\"populate($event)\" (activity)=\"getActivity($event)\" [set]=\"set\" (remove)=\"remove($event)\"></app-activity>\n       </div>\n       \n       <div *ngIf='isEdit' class=\"activity\">\n        <app-activity *ngFor=\"let item of items\" [selectedItem]=\"item\" [time]=\"time\"  [swap]='swap' [display]='display' [showTools]='showTools' [edited]='edited' [set]=\"set\" [selected]='selected' (index)=\"populate($event)\" (activity)=\"getActivity($event)\" (remove)=\"remove($event)\"></app-activity>\n       </div>  \n</div>\n<div *ngIf=\"set\">\n    <div *ngIf='!isEdit' class=\"activity\">\n        <app-activity *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\" [item]=\"item\" [time]=\"time\" (index)=\"populate($event)\" (activity)=\"getActivity($event)\" [set]=\"set\" (remove)=\"remove($event)\"></app-activity>\n       </div>\n       \n       <div *ngIf='isEdit' class=\"activity\">\n        <app-activity *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\" [selectedItem]=\"item\" [time]=\"time\"  [swap]='swap' [display]='display' [showTools]='showTools' [edited]='edited' [set]=\"set\" [selected]='selected' (index)=\"populate($event)\" (activity)=\"getActivity($event)\" (remove)=\"remove($event)\"></app-activity>\n       </div>  \n</div>\n</div>\n\n<div style=\"width:100%\">\n  <app-sticky-footer [count]=\"count\" [page]=\"page\" [set]=\"set\"></app-sticky-footer>\n</div>"
 
 /***/ }),
 
@@ -1656,25 +1894,97 @@ var DesignPageComponent = /** @class */ (function () {
         this.route = route;
         this.page = "/ConfirmPage";
         this.activities = [];
-        this.items = db.collection('/activities').snapshotChanges().map(function (actions) {
+        this.selection = new Array(7);
+        this.dates = new Array(12);
+        this.time = 45;
+        this.count = 0;
+        this.edited = true;
+        this.swap = true;
+        this.display = true;
+        this.showTools = true;
+        this.selected = true;
+    }
+    DesignPageComponent.prototype.ngOnInit = function () {
+        this.set = JSON.parse(localStorage.getItem("set"));
+        this.dates[0] = 570;
+        localStorage.setItem('dates', JSON.stringify(this.dates));
+        this.edit = JSON.parse(localStorage.getItem('edit'));
+        this.checkEdit();
+        this.itineraries = JSON.parse(localStorage.getItem("itinerary"));
+    };
+    DesignPageComponent.prototype.checkEdit = function () {
+        if (!this.edit) {
+            this.items = this.db.collection('/activities', function (ref) { return ref.orderBy('order'); }).snapshotChanges().map(function (actions) {
+                return actions.map(function (a) {
+                    var data = a.payload.doc.data();
+                    var id = a.payload.doc.id;
+                    console.log(id);
+                    return __assign({ id: id }, data);
+                });
+            });
+            this.isEdit = false;
+        }
+        else {
+            this.items = JSON.parse(localStorage.getItem('activities'));
+            this.isEdit = true;
+        }
+    };
+    DesignPageComponent.prototype.reset = function () {
+        this.items = this.db.collection('/activities', function (ref) { return ref.orderBy('order'); }).snapshotChanges().map(function (actions) {
             return actions.map(function (a) {
                 var data = a.payload.doc.data();
                 var id = a.payload.doc.id;
+                console.log(id);
                 return __assign({ id: id }, data);
             });
         });
-    }
-    DesignPageComponent.prototype.ngOnInit = function () {
+        this.isEdit = false;
+        localStorage.setItem('edit', JSON.stringify(false));
+        this.activities = [];
+        localStorage.removeItem('activities');
     };
     DesignPageComponent.prototype.navigate = function () {
         this.router.navigate([this.page]);
     };
+    DesignPageComponent.prototype.populate = function (event) {
+        this.select = event;
+        if (event.order != 0) {
+            this.dates[event.order] = this.dates[event.order - 1] + this.duration;
+            var next = this.dates[event.order + 1];
+            /*   while(next != null ) {
+                this.dates[event.order + 1] = this.dates[event.order] + this.activities[event.oder + 1].length;
+                next = next + 1
+              } */
+        }
+        localStorage.setItem('dates', JSON.stringify(this.dates));
+        if ((!this.selection.some(function (item) { return item === event.id; }))) {
+            this.count++;
+        }
+        localStorage.setItem('count', JSON.stringify(this.count));
+        console.log(event.id, event.order);
+        this.selection[event.order] = event.id;
+        console.log(this.selection);
+    };
+    DesignPageComponent.prototype.placeEdit = function () {
+    };
     DesignPageComponent.prototype.getActivity = function (event) {
+        this.duration = event.length;
+        this.time = this.time + event.length;
         if (!(this.activities.some(function (item) { return item.name === event.name; }))) {
-            this.activities.push(new _models_activity__WEBPACK_IMPORTED_MODULE_2__["Activity"](event.name, event.type, event.length, event.description, event.on, event.qc, event.fees, event.img, event.ageRange, event.timeOfYear, event.timeSlots));
+            this.activities.push(new _models_activity__WEBPACK_IMPORTED_MODULE_2__["Activity"](this.dates[this.select.order], this.select.order, event.name, event.type, event.length, event.description, event.on, event.qc, event.fees, event.img, event.ageRange, event.timeOfYear, event.timeSlots, event.order));
         }
         localStorage.setItem('activities', JSON.stringify(this.activities));
         console.log(this.activities);
+    };
+    DesignPageComponent.prototype.remove = function (event) {
+        console.log(event);
+        var items = JSON.parse(localStorage.getItem('activities'));
+        console.log(items);
+        var index = items.findIndex(function (i) { return i.selection === event; });
+        items.splice(index, 1);
+        this.activities = items;
+        console.log(items);
+        localStorage.setItem('activities', JSON.stringify(items));
     };
     DesignPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -1766,6 +2076,7 @@ var LandingPageComponent = /** @class */ (function () {
         });
     }
     LandingPageComponent.prototype.ngOnInit = function () {
+        localStorage.setItem("set", JSON.stringify(false));
     };
     LandingPageComponent.prototype.open = function (content) {
         var _this = this;

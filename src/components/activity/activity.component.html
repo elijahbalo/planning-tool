@@ -1,15 +1,24 @@
-<div class="outer-flex">
+<div *ngIf="!set">
+<div  class="outer-flex">
   
-<div style="margin-left:1%; width:7%; font-size:15px; font-weight:bold;">
+<div *ngIf="!edited" style="margin-left:1%; width:7%; font-size:15px; font-weight:bold;">
 
         <img  *ngIf="selected" src="../../assets/images/check.png" class="icon">
   
- 9:30 AM
+{{timeConvert(date[item.order])}}
+</div>
+
+<div *ngIf="edited" style="margin-left:1%; width:7%; font-size:15px; font-weight:bold;">
+
+    <img  *ngIf="selected" src="../../assets/images/check.png" class="icon">
+
+{{timeConvert(selectedItem.time)}}
 </div>
 <div style="border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;">
  
 </div>
 </div>
+
 
 <div class="flex-container" *ngIf="swap || !display">
  
@@ -51,7 +60,8 @@
    <div *ngIf="details"><a href="javascript: void(0)"><img src="../../assets/images/cancel.png"  (click)="toggleDetails()" class="icon"></a></div>
    <div style="font-weight:bold; font-size:12.5px">DETAILS</div></div>
   
-    <div><div><a href="javascript: void(0)"><img src="../../assets/images/undo.png" (click)="toggleSwap()" class="icon"></a></div><div style="font-weight:bold; font-size:12.5px">SWAP</div></div>
+    <div *ngIf='!edited'><div><a href="javascript: void(0)"><img src="../../assets/images/undo.png" (click)="toggleSwap(item.order)" class="icon"></a></div><div style="font-weight:bold; font-size:12.5px">SWAP</div></div>
+    <div *ngIf='edited'><div><a href="javascript: void(0)"><img src="../../assets/images/undo.png" (click)="toggleSwap(selectedItem.selection)" class="icon"></a></div><div style="font-weight:bold; font-size:12.5px">SWAP</div></div>
   </div>
 </div>
   <div *ngIf="details && swap" style="margin-left:19%; width:60%;">
@@ -86,9 +96,111 @@
   <div style="width:98%; margin-left:0%; margin-top:1%">
       <div class="row" >
     <div class="activity-card" *ngFor="let item of items | async"> 
-        <app-activity-card [item]="item" (newItem)="itemChange($event)" (click)="toggleSwap()"></app-activity-card>
+        <app-activity-card [item]="item" (newItem)="itemChange($event)" (length)="getLength($event)" (click)="toggleSwap(item.order)"></app-activity-card>
     </div>
   </div>
  </div>
  
 </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<div *ngIf="set">
+  
+    <div  class="outer-flex" > 
+      
+    
+    
+    <div style="margin-left:1%; width:7%; font-size:15px; font-weight:bold;">
+    
+   
+    
+    {{itinerary.time}}
+    </div>
+    <div style="border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;">
+     
+    </div>
+    </div>
+    
+    
+    <div class="flex-container" >
+     
+      <div  class="img-flex"> 
+     <img class="img-responsive img-resize" src="{{itinerary.img}}">
+      </div>
+      <div  class="middle-flex" style="width:60%;">
+          <div style="font-size:12.5px; font-weight:bold;">
+           
+           {{itinerary.type}}
+          </div>
+          <div style="font-size:20px; font-weight:bold;">
+           {{itinerary.name}}
+          </div>
+          <div  style="margin-bottom:2%;"> 
+             {{itinerary.description}}
+          </div>
+          <div style="font-size:12.5px">
+            {{itinerary.duration}} Minutes, {{itinerary.place}}
+          </div>
+         </div>
+    
+  <div  style="align-self: center;" class="inner-flex">
+       <div  style="margin-right:10px"><div *ngIf="!expand"><a href="javascript: void(0)"><img src="../../assets/images/info.png"  (click)="toggleDetails2()" class="icon"></a></div>
+       <div *ngIf="expand"><a href="javascript: void(0)"><img src="../../assets/images/cancel.png"  (click)="toggleDetails2()" class="icon"></a></div>
+       <div style="font-weight:bold; font-size:12.5px">DETAILS</div></div>
+      
+        
+      </div>
+    </div>
+      <div *ngIf="expand"  style="margin-left:19%; width:60%;">
+       <div style="font-size:17px; font-weight:bold;">
+         DETAILS
+       </div>
+       <div style="margin-top:2%; font-size:13px">
+          {{itinerary.details}}
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+              Aenean commodo ligula eget dolor. Aenean massa. 
+              Cum sociis natoque penatibus et magnis dis parturient montes,
+              Aenean massa. 
+              Cum sociis natoque penatibus et magnis dis parturient montes,
+              Aenean massa. 
+              Cum sociis natoque penatibus et magnis dis parturient montes,</p>
+       </div>
+    
+       <div style="font-size:17px; font-weight:bold; margin-top:3%">
+         CURRICULUM CONNECTIONS
+       </div>
+       <div style="margin-top:2%; font-size:13px; ">
+       <ul>
+         <li class="list">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+         <li class="list">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+       </ul>
+      </div>
+      </div> 
+    
+    
+    
+      
+    
+
+    </div>
+    
+  
+  
+  
+  
