@@ -15,6 +15,8 @@ export class AppComponent {
   content:string;
   length:string;
   public items: Observable<any[]>;
+  
+
 
   constructor(private db: AngularFirestore) {
       this.items = db.collection('/itineraries').snapshotChanges().map(actions => {

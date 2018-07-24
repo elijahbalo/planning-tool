@@ -93,11 +93,14 @@
 
 
   <div class="alt-flex" *ngIf="!swap && display">
-  <div style="width:98%; margin-left:0%; margin-top:1%">
+  <div style="margin-left:0%; margin-top:1%">
+    <div class="my-row">
       <div class="row" >
     <div class="activity-card" *ngFor="let item of items | async"> 
         <app-activity-card [item]="item" (newItem)="itemChange($event)" (length)="getLength($event)" (click)="toggleSwap(item.order)"></app-activity-card>
     </div>
+
+  </div>
   </div>
  </div>
  

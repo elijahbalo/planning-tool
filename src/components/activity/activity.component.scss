@@ -50,7 +50,6 @@ img {
   .inner-flex{
       display:flex;
       flex-direction:row;
-  
       justify-content:space-between;
   }
 
@@ -63,12 +62,12 @@ img {
   }
   .activity-card{
     height:200px; 
-    width:23.5%;
+    width:350px;
     font-size:12px;
-
 }
 .alt-flex{
     display:flex;
     flex-direction:row;
     justify-content:space-between;
 }
+

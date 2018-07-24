@@ -1,8 +1,6 @@
 .card-container{
     height:100%;
     width:100%;
-    border-width:1px;
-    border-style:solid;
     border-color:red;
     text-align:center;
     padding:5.5%;
@@ -12,6 +10,10 @@
     word-wrap: break-word;
   }
   
+  .my-btn{
+margin-top:4%;
+margin-left:32%;
+  }
   #new-btn {
     white-space: normal;
 }
@@ -22,4 +24,26 @@
   border-top-width:thin;
   padding:6%;
  
+}
+
+@media only screen and (max-width: 850px) {
+  .my-btn{
+    margin-top:4%;
+    margin-left:28%;
+      }
+      #new-btn {
+        white-space: normal;
+    }
+}
+
+
+
+@media only screen and (max-width: 750px) {
+  .my-btn{
+    margin-top:4%;
+    margin-left:28%;
+      }
+      #new-btn {
+        white-space: normal;
+    }
 }
