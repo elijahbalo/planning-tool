@@ -1,0 +1,49 @@
+.outer{
+margin-left:2%;
+ margin-top:2%;
+}
+
+.heading{
+font-weight:bold;
+ font-size:50px;  
+}
+
+.description{
+font-size:15px;
+}
+
+
+@media only screen and (max-width: 414px) {
+    .outer{
+        margin:8%;
+         }
+         
+ .heading{
+         font-weight:bold;
+          font-size:21px;  
+         }
+         
+ .description{
+         font-size:12px;
+         margin-bottom:12%;
+         }
+    
+    }
+
+
+@media only screen and (max-width: 375px) {
+.outer{
+       margin:8%;
+        }
+        
+.heading{
+        font-weight:bold;
+         font-size:21px;  
+        }
+        
+.description{
+        font-size:12px;
+        margin-bottom:12%;
+        }
+
+}

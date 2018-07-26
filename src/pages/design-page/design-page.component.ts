@@ -42,13 +42,14 @@ selected = true
   }
 
   ngOnInit() {
-
+   // retreive the set variable from local storage
     this.set = JSON.parse(localStorage.getItem("set"))
     this.dates[0] = 570
+    // set date number in localstorage
     localStorage.setItem('dates', JSON.stringify(this.dates));
     this.edit = JSON.parse(localStorage.getItem('edit')) 
     this.checkEdit();
-    
+    // load the itinerary from local storage if using pre-defined itinerary
     this.itineraries = JSON.parse(localStorage.getItem("itinerary"))
     
   }
