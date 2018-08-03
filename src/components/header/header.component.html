@@ -1,29 +1,51 @@
 <div class="img-container" >
     <img class="logo"  src="../../assets/images/logo.jpg"> 
   </div>
-<nav class="navbar bg-dark bg" >
+<nav class="navbar bg-dark bg my-nav" >
   
-<div class="nav-text" >SCHOOL TRIP PLANNER</div>
-    <!-- <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="margin-right:18%;">
-        <div class="btn-group mr-2" role="group" aria-label="First group" >
-          <button type="button" class="btn btn-secondary" style=" width:200px; color:black;"><div style="border-radius:100%; background-color:black; width:30px; color:white;">1</div> DESIGN</button>
-          <button type="button" class="btn btn-secondary" style="background-color:white; width:150px; color:red;"><div style="border-radius:100%; background-color:red; width:30px; color:white;">2</div> CONFIRM</button>
-          <button type="button" class="btn btn-secondary" style=" width:100px;">3</button>
-        </div>
-      </div> -->
-      <!-- <div style="color:white; background-color: black; width:70px; padding:0.25%; float:right; margin-right:0; text-align:center;" (click)="open(content)">
-
-        <div style="margin-left:2%;">
-        <div style="font-size:25px;">X</div>
-        <div>EXIT</div>
-      </div>
-      </div> -->
+<span class="nav-text" >SCHOOL TRIP PLANNER</span>
+      <span *ngIf="innerWidth > 1024" class="progress-nav">
+          <ul class="progress-nav__list">
+            <li class="progress-nav__item progress-nav__item--on">
+              <span class="progress-nav__item-nmbr"><i>1</i></span>
+              <span class="progress-nav__item-text">Design</span>
+            </li>
+            <li class="progress-nav__item">
+              <span class="progress-nav__item-nmbr"><i>2</i></span>
+              <span class="progress-nav__item-text">Confirm</span>
+            </li>
+            <li class="progress-nav__item">
+              <span class="progress-nav__item-nmbr"><i>3</i></span>
+              <span class="progress-nav__item-text">Submit</span>
+            </li>
+          </ul>
+        </span>
+        <span class="warning">
+         <div>x</div>
+         <div>EXIT</div>
+        </span>
   </nav>
 
+  <span *ngIf="innerWidth < 1024" class="progress-nav">
+      <ul class="progress-nav__list">
+        <li class="progress-nav__item progress-nav__item--on">
+          <span class="progress-nav__item-nmbr"><i>1</i></span>
+          <span class="progress-nav__item-text">Design</span>
+        </li>
+        <li class="progress-nav__item">
+          <span class="progress-nav__item-nmbr"><i>2</i></span>
+          <span class="progress-nav__item-text">Confirm</span>
+        </li>
+        <li class="progress-nav__item">
+          <span class="progress-nav__item-nmbr"><i>3</i></span>
+          <span class="progress-nav__item-text">Submit</span>
+        </li>
+      </ul>
+    </span>
 
   <ng-template #content let-c="close" let-d="dismiss">
       <div style="width:100%">
-          <button type="button"  (click)="d('Cross click')" style="background-color:black; float:right; height:70px; width:70px; ">
+          <button type="button"  (click)="d('Cross click')" style="background-color:black; float:right; height:70px; width:70px;">
               <div style="color:white; ">
                 x
               </div>
@@ -34,3 +56,17 @@
       <app-warning></app-warning>
     </div>
     </ng-template>
+
+
+
+
+
+
+
+
+  
+      
+      
+      
+      
+ 

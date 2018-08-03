@@ -1,49 +1,594 @@
+
+
+
+// $$$$$$$$$$$$$$$$$$$$$$$$$
+// $$$$$'`$$$$$$$$$$$$$'`$$$
+// $$$$$$  $$$$$$$$$$$  $$$$
+// $$$$$$$  '$/ `/ `$' .$$$$
+// $$$$$$$$. i  i  /! .$$$$$
+// $$$$$$$$$.--'--'   $$$$$$
+// $$^^$$$$$'        J$$$$$$
+// $$$   ~""   `.   .$$$$$$$
+// $$$$$e,      ;  .$$$$$$$$
+// $$$$$$$$$$$.'   $$$$$$$$$
+// $$$$$$$$$$$$.    $$$$$$$$
+// $$$$$$$$$$$$$     $$$$$$$
+
+$progress_nav_item_height: 50px;
+$item_clr_1: #e5e5e5;
+$item_clr_2: #cacaca;
+$item_clr_3: #e5e5e5;
+$default_item_clr: $item_clr_2;
+$item_clr_on: #e1261c;
+
+/////////////////////////////////////////////////////////////////////////
+
+.progress-nav {
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    display:table;
+    margin-top:6px;
+	margin-right:18%;
+    overflow:hidden;
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+.progress-nav__item {
+	float:left;
+    display:block;
+    width:160px;
+	height:$progress_nav_item_height;
+	padding:10px 25px 10px 15px;
+	border-radius:0 50px 50px 0;
+  background:$default_item_clr;
+	position:relative;
+  // @Elijah: In case you're unfamiliar w/ scss syntax...
+  // Ampersand (&) in this context refers to the selector to which it's nested inside.
+  // So, in this context &:nth-child(1) is the same as .progress-nav__item:nth-child(1)
+  &:nth-child(1) {padding-left:15px;z-index:3;}
+  &:nth-child(2) {background:$item_clr_1;z-index:2;}
+  &:nth-child(3) {z-index:1;}
+  &:nth-child(2):before,
+  &:nth-child(3):before {
+    display:block;
+	  content:'';
+	  width:50px;
+    height:100%;
+    position:absolute;
+    background:$item_clr_2;
+    z-index:-1;
+    left:-50px;
+    top:0;
+  }
+  &:nth-child(2):before {background:$item_clr_1;}
+  &:nth-child(3):before {background:$item_clr_2;}
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+.progress-nav__item-nmbr {
+  width:30px;
+	background:#fff;
+	border-radius:100%;
+	font-weight:bold;
+	display:block;
+  height:100%;
+	float:left;
+}
+
+.progress-nav__item-text {
+	float:left;
+	display:block;
+	margin-left:12px;
+	font-weight:bold;
+  font-size:14px;
+	position:relative;
+  text-transform:uppercase;
+  transform:translateY(-50%);
+	top:50%;
+}
+
+.progress-nav__item-nmbr i {
+	margin:0 auto;
+	display:table;
+	position:relative;
+	transform:translateY(-50%);
+	top:50%;
+}
+
+.progress-nav__item--on {
+	background:#fff;
+    color:$item_clr_on;
+    border-radius:50px;
+  // Again here, same as declaring ".progress-nav__item--on .progress-nav__item-numbr { ... }"
+  .progress-nav__item-nmbr {background:$item_clr_on;}
+  .progress-nav__item-nmbr i {color:#fff;}
+}
+
+
+
+
+
 .bg{
+   padding-right:0px;
    height:80px;
 }
 
 .logo{
-height:80px;
- width:100px;
+height:30px;
+ width:30px;
 }
 
 .img-container{
+padding:21px;
  float:left;
 }
-
+.my-nav{
+ height:70px;
+ margin-bottom:1.5%;
+}
 .nav-text{
 color:white;
-font-size:25px;
+font-family: "futura-pt", "Helvetica Neue", Arial;
+font-size:1.4rem;
 float:left; 
-font-weight:bold;
+}
+.warning{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    background-color:black;
+    color:white;
+    height:70px;
+    width:50px;
+    text-align:center;
+    padding-top:1%;
 }
 
-.nav1{
-    height:60px;
-    background-color:purple;
-    border-radius:20%;
-    margin-left:54%;
-    position:absolute;
-    width:10%;
-}.nav2{
-    height:60px;
-    background-color:red;
-    border-radius:20%;
-    margin-left:46%;
-    position:absolute;
-    width:10%;
-    
+@media only screen and (max-width: 1090px) {
+
+    $progress_nav_item_height: 50px;
+$item_clr_1: #e5e5e5;
+$item_clr_2: #cacaca;
+$item_clr_3: #e5e5e5;
+$default_item_clr: $item_clr_2;
+$item_clr_on: #e1261c;
+
+/////////////////////////////////////////////////////////////////////////
+
+.progress-nav {
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    display:table;
+    margin-top:6px;
+	margin:auto;
+    overflow:hidden;
 }
 
-.nav3{
-    height:60px;
-    background-color:white;
-    border-radius:48%;
-    margin-left:38%;
+/////////////////////////////////////////////////////////////////////////
+
+.progress-nav__item {
+	float:left;
+    display:block;
+    width:145px;
+	height:$progress_nav_item_height;
+	padding:10px 25px 10px 15px;
+	border-radius:0 50px 50px 0;
+  background:$default_item_clr;
+	position:relative;
+  // @Elijah: In case you're unfamiliar w/ scss syntax...
+  // Ampersand (&) in this context refers to the selector to which it's nested inside.
+  // So, in this context &:nth-child(1) is the same as .progress-nav__item:nth-child(1)
+  &:nth-child(1) {padding-left:15px;z-index:3;}
+  &:nth-child(2) {background:$item_clr_1;z-index:2;}
+  &:nth-child(3) {z-index:1;}
+  &:nth-child(2):before,
+  &:nth-child(3):before {
+    display:block;
+	  content:'';
+	  width:50px;
+    height:100%;
     position:absolute;
-    width:20%;
-    
+    background:$item_clr_2;
+    z-index:-1;
+    left:-50px;
+    top:0;
+  }
+  &:nth-child(2):before {background:$item_clr_1;}
+  &:nth-child(3):before {background:$item_clr_2;}
 }
+
+/////////////////////////////////////////////////////////////////////////
+
+.progress-nav__item-nmbr {
+  width:30px;
+	background:#fff;
+	border-radius:100%;
+	font-weight:bold;
+	display:block;
+  height:100%;
+	float:left;
+}
+
+.progress-nav__item-text {
+	float:left;
+	display:block;
+	margin-left:12px;
+	font-weight:bold;
+  font-size:14px;
+	position:relative;
+  text-transform:uppercase;
+  transform:translateY(-50%);
+	top:50%;
+}
+
+.progress-nav__item-nmbr i {
+	margin:0 auto;
+	display:table;
+	position:relative;
+	transform:translateY(-50%);
+	top:50%;
+}
+
+.progress-nav__item--on {
+	background:#fff;
+    color:$item_clr_on;
+    border-radius:50px;
+  // Again here, same as declaring ".progress-nav__item--on .progress-nav__item-numbr { ... }"
+  .progress-nav__item-nmbr {background:$item_clr_on;}
+  .progress-nav__item-nmbr i {color:#fff;}
+}
+
+
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+    $progress_nav_item_height: 50px;
+$item_clr_1: #e5e5e5;
+$item_clr_2: #cacaca;
+$item_clr_3: #e5e5e5;
+$default_item_clr: $item_clr_2;
+$item_clr_on: #e1261c;
+
+/////////////////////////////////////////////////////////////////////////
+
+.progress-nav {
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    display:table;
+    margin-top:6px;
+	margin:auto;
+    overflow:hidden;
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+.progress-nav__item {
+	float:left;
+    display:block;
+    width:145px;
+	height:$progress_nav_item_height;
+	padding:10px 25px 10px 15px;
+	border-radius:0 50px 50px 0;
+  background:$default_item_clr;
+	position:relative;
+  // @Elijah: In case you're unfamiliar w/ scss syntax...
+  // Ampersand (&) in this context refers to the selector to which it's nested inside.
+  // So, in this context &:nth-child(1) is the same as .progress-nav__item:nth-child(1)
+  &:nth-child(1) {padding-left:15px;z-index:3;}
+  &:nth-child(2) {background:$item_clr_1;z-index:2;}
+  &:nth-child(3) {z-index:1;}
+  &:nth-child(2):before,
+  &:nth-child(3):before {
+    display:block;
+	  content:'';
+	  width:50px;
+    height:100%;
+    position:absolute;
+    background:$item_clr_2;
+    z-index:-1;
+    left:-50px;
+    top:0;
+  }
+  &:nth-child(2):before {background:$item_clr_1;}
+  &:nth-child(3):before {background:$item_clr_2;}
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+.progress-nav__item-nmbr {
+  width:30px;
+	background:#fff;
+	border-radius:100%;
+	font-weight:bold;
+	display:block;
+  height:100%;
+	float:left;
+}
+
+.progress-nav__item-text {
+	float:left;
+	display:block;
+	margin-left:12px;
+	font-weight:bold;
+  font-size:14px;
+	position:relative;
+  text-transform:uppercase;
+  transform:translateY(-50%);
+	top:50%;
+}
+
+.progress-nav__item-nmbr i {
+	margin:0 auto;
+	display:table;
+	position:relative;
+	transform:translateY(-50%);
+	top:50%;
+}
+
+.progress-nav__item--on {
+	background:#fff;
+    color:$item_clr_on;
+    border-radius:50px;
+  // Again here, same as declaring ".progress-nav__item--on .progress-nav__item-numbr { ... }"
+  .progress-nav__item-nmbr {background:$item_clr_on;}
+  .progress-nav__item-nmbr i {color:#fff;}
+}
+
+.img-container{
+    padding:0;
+    float:left;
+   }
+
+
+}
+
+
+@media only screen and (max-width: 900px) {
+
+$progress_nav_item_height: 40px;
+$item_clr_1: #e5e5e5;
+$item_clr_2: #cacaca;
+$item_clr_3: #e5e5e5;
+$default_item_clr: $item_clr_2;
+$item_clr_on: #e1261c;
+
+/////////////////////////////////////////////////////////////////////////
+
+.progress-nav {
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    display:table;
+    margin-top:6px;
+	margin:auto;
+    overflow:hidden;
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+.progress-nav__item {
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+   
+	float:left;
+    display:block;
+    width:115px;
+	height:$progress_nav_item_height;
+	padding:10px 25px 10px 15px;
+	border-radius:0 50px 50px 0;
+  background:$default_item_clr;
+	position:relative;
+  // @Elijah: In case you're unfamiliar w/ scss syntax...
+  // Ampersand (&) in this context refers to the selector to which it's nested inside.
+  // So, in this context &:nth-child(1) is the same as .progress-nav__item:nth-child(1)
+  &:nth-child(1) {padding-left:15px;z-index:3;}
+  &:nth-child(2) {background:$item_clr_1;z-index:2;}
+  &:nth-child(3) {z-index:1;}
+  &:nth-child(2):before,
+  &:nth-child(3):before {
+    display:block;
+	  content:'';
+	  width:50px;
+    height:100%;
+    position:absolute;
+    background:$item_clr_2;
+    z-index:-1;
+    left:-50px;
+    top:0;
+  }
+  &:nth-child(2):before {background:$item_clr_1;}
+  &:nth-child(3):before {background:$item_clr_2;}
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+.progress-nav__item-nmbr {
+    font-size:0.5rem;
+  width:20px;
+	background:#fff;
+	border-radius:100%;
+	font-weight:bold;
+	display:block;
+  height:100%;
+	float:left;
+}
+
+.progress-nav__item-text {
+    float:left;
+	display:block;
+	margin-left:12px;
+	font-weight:bold;
+  font-size:0.5rem;
+	position:relative;
+  text-transform:uppercase;
+  transform:translateY(-50%);
+	top:50%;
+}
+
+.progress-nav__item-nmbr i {
+	margin:0 auto;
+	display:table;
+	position:relative;
+	transform:translateY(-50%);
+	top:50%;
+}
+
+.progress-nav__item--on {
+	background:#fff;
+    color:$item_clr_on;
+    border-radius:50px;
+  // Again here, same as declaring ".progress-nav__item--on .progress-nav__item-numbr { ... }"
+  .progress-nav__item-nmbr {background:$item_clr_on;}
+  .progress-nav__item-nmbr i {color:#fff;}
+}
+
+.img-container{
+    padding:0;
+    float:left;
+   }
+
+
+
+}
+
+@media only screen and (max-width: 660px) {
+
+    $progress_nav_item_height: 35px;
+    $item_clr_1: #e5e5e5;
+    $item_clr_2: #cacaca;
+    $item_clr_3: #e5e5e5;
+    $default_item_clr: $item_clr_2;
+    $item_clr_on: #e1261c;
+    
+    /////////////////////////////////////////////////////////////////////////
+    
+    .progress-nav {
+        font-family: "futura-pt", "Helvetica Neue", Arial;
+        display:table;
+        margin:auto;
+        padding:0;
+        overflow:hidden;
+    }
+    
+    /////////////////////////////////////////////////////////////////////////
+    
+    .progress-nav__item {
+        font-family: "futura-pt", "Helvetica Neue", Arial;
+       
+        float:left;
+        display:block;
+        width:75px;
+        height:$progress_nav_item_height;
+        padding:10px 5px 10px 15px;
+        border-radius:0 50px 50px 0;
+      background:$default_item_clr;
+        position:relative;
+      // @Elijah: In case you're unfamiliar w/ scss syntax...
+      // Ampersand (&) in this context refers to the selector to which it's nested inside.
+      // So, in this context &:nth-child(1) is the same as .progress-nav__item:nth-child(1)
+      &:nth-child(1) {padding-left:15px;z-index:3;}
+      &:nth-child(2) {background:$item_clr_1;z-index:2;}
+      &:nth-child(3) {z-index:1;}
+      &:nth-child(2):before,
+      &:nth-child(3):before {
+        display:block;
+          content:'';
+          width:50px;
+        height:100%;
+        position:absolute;
+        background:$item_clr_2;
+        z-index:-1;
+        left:-50px;
+        top:0;
+      }
+      &:nth-child(2):before {background:$item_clr_1;}
+      &:nth-child(3):before {background:$item_clr_2;}
+    }
+    
+    /////////////////////////////////////////////////////////////////////////
+    
+    .progress-nav__item-nmbr {
+        font-size:0.1rem;
+      width:15px;
+        background:#fff;
+        border-radius:100%;
+        font-weight:bold;
+        display:block;
+      height:100%;
+        float:left;
+        margin:0;
+    }
+    
+    .progress-nav__item-text {
+        float:left;
+        display:block;
+        margin-left:8px;
+        font-weight:bold;
+      font-size:7px;
+        position:relative;
+      text-transform:uppercase;
+      transform:translateY(-50%);
+        top:50%;
+    }
+    
+    .progress-nav__item-nmbr i {
+        margin:0 auto;
+        display:table;
+        position:relative;
+        transform:translateY(-50%);
+        top:50%;
+    }
+    
+    .progress-nav__item--on {
+        background:#fff;
+        color:$item_clr_on;
+        border-radius:50px;
+      // Again here, same as declaring ".progress-nav__item--on .progress-nav__item-numbr { ... }"
+      .progress-nav__item-nmbr {background:$item_clr_on;}
+      .progress-nav__item-nmbr i {color:#fff;}
+    }
+    
+    
+    .img-container{
+        padding:0;
+        float:left;
+       }
+    }
+
+    @media only screen and (max-width: 435px) {
+
+
+        .bg{
+            height:80px;
+         }
+         
+         .logo{
+          
+            height:20px;
+             width:20px;
+            }
+    
+            .img-container{
+                padding:0;
+                float:left;
+               }
+            .navbar{
+                height:45px;
+            }
+            .nav-text{
+                color:white;
+                font-size:12px;
+                float:left; 
+                font-weight:bold;
+                }
+    
+                .warning{
+                    font-family: "futura-pt", "Helvetica Neue", Arial;
+                    font-size:0.8rem;
+                    background-color:black;
+                    color:white;
+                    height:45px;
+                    width:50px;
+                    text-align:center;
+                    padding-top:1%;
+                }
+            }
 // screen widths not larger than 414 pixels
 @media only screen and (max-width: 414px) {
 
@@ -72,33 +617,7 @@ font-weight:bold;
             font-weight:bold;
             }
 
-     .nav1{
-         height:60px;
-         background-color:purple;
-         border-radius:20%;
-         margin-left:54%;
-         position:absolute;
-         width:10%;
-     }.nav2{
-         height:60px;
-         background-color:red;
-         border-radius:20%;
-         margin-left:46%;
-         position:absolute;
-         width:10%;
-         
-     }
      
-     .nav3{
-         height:60px;
-         background-color:white;
-         border-radius:48%;
-         margin-left:38%;
-         position:absolute;
-         width:20%;
-         
-     }
-
 }
 @media only screen and (max-width: 375px) {
 
@@ -126,32 +645,5 @@ font-weight:bold;
             float:left; 
             font-weight:bold;
             }
-
-     .nav1{
-         height:60px;
-         background-color:purple;
-         border-radius:20%;
-         margin-left:54%;
-         position:absolute;
-         width:10%;
-     }.nav2{
-         height:60px;
-         background-color:red;
-         border-radius:20%;
-         margin-left:46%;
-         position:absolute;
-         width:10%;
-         
-     }
-     
-     .nav3{
-         height:60px;
-         background-color:white;
-         border-radius:48%;
-         margin-left:38%;
-         position:absolute;
-         width:20%;
-         
-     }
 
 }

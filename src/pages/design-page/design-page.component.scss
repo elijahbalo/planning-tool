@@ -1,6 +1,47 @@
+.content-title{
+font-family: "futura-pt", "Helvetica Neue", Arial;
+font-size:3rem;
+color:#4a4a4a
+}
+
+.description{
+font-family:Arial;
+font-size:1rem;
+color:#4a4a4a
+}
+
+.pad{
+ background-color:#e5e5e5; 
+ height:145px; 
+ margin-top:2%; 
+ padding:1.5%;
+}
+
+.sub-header{
+background-color:white; 
+font-family: "futura-pt", "Helvetica Neue", Arial;
+font-size:2rem;
+color:#4a4a4a;
+height:100px; 
+padding:1.5%;
+}
+
+.activity-title{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+font-weight:bold; 
+font-size:25px;
+}
+
 .activity{
     width:100%;
     margin-bottom:2%;
+}
+
+.reset{
+font-family: "futura-pt", "Helvetica Neue", Arial;
+font-size:20px; 
+float:right; 
+margin-right:2%
 }
 
 .stick{
@@ -14,12 +55,8 @@
     border-style:solid;
  }
  
- .saturate { filter: saturate(3); }
-.grayscale { filter: grayscale(100%); }
-.contrast { filter: contrast(160%); }
-.brightness { filter: brightness(0.25); }
-.blur { filter: blur(3px); }
-.invert { filter: invert(100%); }
-.sepia { filter: sepia(100%); }
-.huerotate { filter: hue-rotate(180deg); }
-.rss.opacity { filter: opacity(50%); }
+ a:link {
+    text-decoration: none;
+    color:#4a4a4a;
+  }
+  

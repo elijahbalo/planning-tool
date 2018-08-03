@@ -4,24 +4,23 @@
 
 <div class="container-fluid" style="padding:0%">
 
-<div  style="margin-top:2%;">
+<!-- <div  style="margin-top:2%;">
  <div class="plan1" >PLAN YOUR VISIT</div>
   <div style="width:0;height: 0; border-top: 4.5px solid transparent; border-left: 6px solid black; 
   border-bottom: 4.5px solid transparent; float:left; margin-left:20px; margin-top:4px;"></div> 
-</div>
-<br>
-<div style="margin-right:2%">
+</div> -->
+
+<div class="content-title">
   <div class="plan2">
     PLAN A SCHOOL TRIP
   </div>
   <div style="float:right; margin-top:1%;">
       <div class="plan3" >PLAN YOUR VISIT</div>
-      <div style="width:0;height: 0; border-top: 8px solid transparent; border-left: 12px solid #808080; 
-      border-bottom: 8px solid transparent; float:left; margin-left:20px; margin-top:12px;"></div>
+      <div class="pointer" ></div>
     </div>
 </div>
 
-<div >
+<div>
   <img src="../../assets/images/newlanding.jpg" class="img-responsive img-resize">
 </div>
 
@@ -38,34 +37,39 @@
 </div>
 </div>
 
-</div>
+
 
 
   <div class="filter">
+    <div style="font-family:futura-pt, Helvetica Neue, Arial">
         <div class="row"  style="margin-bottom:2%; margin-left:0.1%">
             <div class="filtertext" >FILTER ITENERARIES:</div>
           <div class="input-group" class="grades">
-                  <select class="custom-select" id="inputGroupSelect04" style="font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;">
-                    <option selected>All Grades </option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                  <select  class="custom-select" id="inputGroupSelect04" style="font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;" [(ngModel)]="grades" (change)="filterExact('grades', grades)">
+                      <option [ngValue]="undefined" disabled  selected> select your grade</option>
+                    <option value="Kinder to Gr.2">Kinder to Gr.2</option>
+                    <option value="Gr 3-5">Gr 3-5</option>
+                    <option value="Gr 6-8">Gr 6-8</option>
                   </select>
                 </div>
-                <div class="date" >
-                      <button type="button" class="btn " style="width:100%; background-color:#f7f7f7; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:black" (click)="open(content)"> Select Date Range</button>
+                <div class="input-group" class="date" >
+                      <select  class="custom-select" id="inputGroupSelect04" style="font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;" [(ngModel)]="timeOfYear" (change)="filterExact('timeOfYear', timeOfYear)">
+                          <option [ngValue]="undefined" disabled  selected> select time of year </option>
+                          <option value="October-April">October-April</option>
+                          <option value="May-June">May-June</option>
+                        </select>
                     </div>
                     <div class="input-group" class="day" >
-                          <select class="custom-select" id="inputGroupSelect04" style="font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;">
-                            <option selected >Half-day and full-day</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                        <select  class="custom-select" id="inputGroupSelect04" style="font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;" [(ngModel)]="day" (change)="filterExact('day', day)">
+                            <option [ngValue]="undefined" disabled  selected> Half-Day or Full-Day</option>
+                            <option value="Half-day">Half-Day</option>
+                            <option value="Full-day">Full-Day</option>
                           </select>
                         </div>
                         <div class="show">
-                          <button type="button" class="btn " style="width:100%; background-color:#8a8d8a; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:#f7f7f7" (click)="open(content)"> Show result</button>
+                          <button type="button" class="btn " style="width:100%; background-color:#8a8d8a; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:#f7f7f7" (click)="reset()"> Show All</button>
                         </div>
+                      </div>
                       </div>
            
   <div class="row" style="margin-left:0%;">
@@ -73,10 +77,10 @@
           <app-empty-card></app-empty-card>
           </div>
   
-  <div class="margin"*ngFor="let item of items | async" >
+  <div class="margin"*ngFor="let item of filtered " >
           <app-card [item]="item"></app-card>
           </div>
-
+          
 </div>
 
 <nav aria-label="...">
@@ -95,21 +99,21 @@
 </div>
 
 <ng-template #content let-c="close" let-d="dismiss">
-    <div style="width:100%">
-        <div style="margin-bottom:5%; margin-top:2%; text-align:center;">
-          <h4>SELECT YOUR DATE RANGE</h4>
+    <div style="width:1000px">
+        <div style="margin-bottom:2px; margin-top:2%;  font-family: futura-pt, Helvetica Neue, Arial;">
+          <h4 style="padding-left:13px;">SELECT YOUR DATE RANGE</h4>
         </div>
-          <div > 
+          <div style="padding:13px;"> 
     <app-calendar></app-calendar>
 
     </div>
     <div id=footer>
-        <div style="margin-bottom:30px; margin-left:10%; padding-bottom:2%;">
-        <div>
+        <div style="margin-bottom:40px;  padding-bottom:13px; padding-left:13px;">
+
         <button type="button" class="btn btn-danger" id="new-btn"  (click)="d('Cross click')"  (click)="navigateToDesignPage()"> <div style="float:left;">Done</div> </button>
       </div>
       
-  </div>
+
   </div>
     
 

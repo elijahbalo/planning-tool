@@ -11,6 +11,11 @@ img {
 }
 
 .img-resize{
+    height:300px;
+    width:90%;
+  }
+
+  .img-res{
     height:200px;
     width:90%;
   }
@@ -60,10 +65,12 @@ img {
   .list{
       margin-bottom:0%;
   }
+  
   .activity-card{
-    height:200px; 
-    width:350px;
+    height:280px; 
+    width:450px;
     font-size:12px;
+    
 }
 .alt-flex{
     display:flex;

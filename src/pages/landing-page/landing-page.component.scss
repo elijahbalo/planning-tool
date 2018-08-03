@@ -12,51 +12,71 @@
    
 }
 
-
 .empty-card{
     height:380px; 
     width:32.8%;
     font-size:13px;
+}
+.content-title{  
+padding:15px;
+padding-bottom:0;
+margin-bottom: 20px;
+clear: both;
 
-   
+}
+.pointer{
+width:0;
+height:0; 
+border-top:8px solid transparent; 
+border-left: 12px solid #808080; 
+border-bottom: 8px solid transparent; 
+float:left; 
+margin-left:20px; 
+margin-top:12px;
 }
 .plan1{
 float:left; 
 font-size:12px; 
 font-weight:bold;
-margin-left:1.5%; 
+font-family: "futura-pt", "Helvetica Neue", Arial;
 }
 .plan2{
 float:left; 
 font-weight:bold;
-margin-left:1.5%;
-font-size:40px;
+font-size:3rem;
 color:#4a4a4a;
+font-family: "futura-pt", "Helvetica Neue", Arial;
 }
 .plan3{
 float:left; 
 font-size:25px; 
 font-weight:bold;
 color:#8a8d8a;
+font-family: "futura-pt", "Helvetica Neue", Arial;
 }
 .text1{
-color:#4a4a4a;
-margin-left:1.5%; 
+color:#4a4a4a; 
 margin-top:2%;
+padding:15px;
 }
 .text2{
-font-weight:bold; 
-font-size:40px;
+
+padding-bottom:0;
+margin-bottom: 20px;
+font-size:3rem;
+clear: both;
 color:#4a4a4a;
-;
+font-family: "futura-pt", "Helvetica Neue", Arial;
 }
 .text3{
-font-size:17px; 
-width:80%; 
-margin-top:0.8%;
+
+padding-bottom:0;
+margin-bottom: 20px;
+font-size:1rem;
+font-weight:lighter;
+clear: both;
 color:#4a4a4a;
-
-
+font-family: Arial;
 }
 
 .filter{
@@ -134,8 +154,61 @@ margin-left:1%;
        
     }
 
-    
   }
+
+  @media only screen and (max-width: 1024px) {
+    
+    .plan1{
+        float:left; 
+        font-size:12px; 
+        font-weight:bold;
+        font-family: "futura-pt", "Helvetica Neue", Arial;
+        }
+        .plan2{
+        float:left; 
+        font-weight:bold;
+        font-size:1.5rem;
+        color:#4a4a4a;
+        font-family: "futura-pt", "Helvetica Neue", Arial;
+        }
+        .plan3{
+        float:left; 
+        font-size:1rem; 
+        font-weight:bold;
+        color:#8a8d8a;
+        font-family: "futura-pt", "Helvetica Neue", Arial;
+        }
+        .pointer{
+            width:0;
+            height:0; 
+            border-top:8px solid transparent; 
+            border-left: 8px solid #808080; 
+            border-bottom: 5px solid transparent; 
+            float:left; 
+            margin-left:10px; 
+            margin-top:6px;
+            }
+       
+        .text2{
+        padding-bottom:0;
+        margin-bottom: 10px;
+        font-size:1.5rem;
+        clear: both;
+        color:#4a4a4a;
+        font-family: "futura-pt", "Helvetica Neue", Arial;
+        }
+        .text3{
+        padding-bottom:0;
+        margin-bottom: 20px;
+        font-size:1rem;
+        font-weight:lighter;
+        clear: both;
+        color:#4a4a4a;
+        font-family:Arial;
+        }
+
+  }
+  
 
 
   @media only screen and (max-width: 1006px) {
@@ -187,23 +260,7 @@ margin-left:1%;
     
     }
 
-    .text1{
-
-        margin-left:1%; 
-        margin-top:2%;
-        }
-        .text2{
-        font-weight:bold; 
-        font-size:35px;
-        margin-left:1%; 
-        }
-        .text3{
-        font-size:17px; 
-        margin-left:1%; 
-        width:93%; 
-        margin-top:0.8%;
-        
-        }
+    
 
         
   }
@@ -340,6 +397,7 @@ margin-left:1%;
 
    
   @media only screen and (max-width: 600px) {
+
     .margin{
         margin-bottom:8%;
         height:380px;
@@ -390,7 +448,7 @@ margin-left:1%;
     
   }
 
-  @media only screen and (max-width: 470px) {
+  /* @media only screen and (max-width: 480px) {
     .margin{
         margin-bottom:8%;
         height:380px;
@@ -439,7 +497,7 @@ margin-left:1%;
             }
       
     
-  }
+  } */
   @media only screen and (max-width: 414px) {
     .margin{
         margin-bottom:12%;

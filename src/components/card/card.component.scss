@@ -19,15 +19,25 @@
 }
 
 .layers{
+  font-family:Arial;
   text-align:justify;
   padding-left:4%;
   padding-right:4%;
-  margin-top:3%;
+  margin-top:5%;
+  color:#4a4a4a;
+}
+
+.link{
+font-family: "futura-pt", "Helvetica Neue", Arial;
+margin-bottom:6%;
 }
 
 .img-resize{
-  height:250px;
+  height:220px;
   width:100%;
 }
 
-
+a:link {
+  text-decoration: none;
+  color:#4a4a4a;
+}

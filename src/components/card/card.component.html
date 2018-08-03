@@ -1,26 +1,29 @@
 <div class="container">
 <div class="card-container">
   <div id="slideshow">
-<ngb-carousel *ngIf="images">
+<ngb-carousel *ngIf="images" style="font-family:futura-pt, Helvetica Neue, Arial">
   <ng-template ngbSlide>
     <img [src]="images[0]" alt="Random first slide" class="img-responsive img-resize">
     <div class="carousel-caption text">
-      <h3></h3>
-      <p></p>
+      <h3>{{item.grades}}</h3>
+      <h4>{{item.timeOfYear}}</h4>
+      <p>{{item.day}}</p>
     </div>
   </ng-template>
   <ng-template ngbSlide>
     <img [src]="images[1]" alt="Random second slide" class="img-responsive img-resize">
     <div class="carousel-caption text">
-        <h3></h3>
-        <p></p>
+        <h3>{{item.grades}}</h3>
+        <h4>{{item.timeOfYear}}</h4>
+        <p>{{item.day}}</p>
     </div>
   </ng-template>
   <ng-template ngbSlide>
     <img [src]="images[2]" alt="Random third slide" class="img-responsive img-resize">
     <div class="carousel-caption text">
-        <h3></h3>
-        <p></p>
+        <h3>{{item.grades}}</h3>
+        <h4>{{item.timeOfYear}}</h4>
+        <p>{{item.day}}</p>
     </div>
   </ng-template>
 </ngb-carousel>
@@ -37,7 +40,7 @@
     natoque penatibus et magnis dis parturient montes, nascetur 
     ridiculus mus. Donec quam felis, ultricies nec.
 </div>
-<div *ngIf="view" class="layers" style="font-weight:bold; margin-bottom:3%">
+<div *ngIf="view" class="layers link" >
   <a href="javascript:void(0)" (click)="navigateToDesign()">VIEW THIS ITENERARY</a>
   <img src="../../assets/images/right-arrow.png">
 </div>

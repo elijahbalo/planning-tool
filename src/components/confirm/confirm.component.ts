@@ -26,6 +26,7 @@ itineraries
     localStorage.setItem('edit',JSON.stringify(false))
     this.itineraries = JSON.parse(localStorage.getItem("itinerary"))
     this.activities = JSON.parse(localStorage.getItem('activities'));
+
   }
   navigateToDesign(){
     localStorage.setItem('edit', JSON.stringify(true))

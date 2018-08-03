@@ -22,8 +22,8 @@ export class CardComponent implements OnInit {
     this._http.get('https://picsum.photos/list')
         .pipe(map((images: Array<{id: number}>) => this._randomImageUrls(images)))
         .subscribe(images => this.images = images);
-
-
+     
+      
   }
 
   private _randomImageUrls(images: Array<{id: number}>): Array<string> {
