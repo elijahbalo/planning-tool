@@ -1,7 +1,7 @@
 .img-resize{
   height:auto;
   width:100%;
-  
+  object-fit:cover;
 }
 
 .margin{
@@ -212,6 +212,14 @@ margin-left:1%;
 
 
   @media only screen and (max-width: 1006px) {
+      
+    .img-resize{
+        height:250px;
+        width:100%;
+        object-fit:cover;
+      }
+      
+
     .filtertext{
         font-weight:bold; 
         margin-top:8px;
@@ -397,6 +405,12 @@ margin-left:1%;
 
    
   @media only screen and (max-width: 600px) {
+    .img-resize{
+        height:200px;
+        width:100%;
+        object-fit:cover;
+      }
+      
 
     .margin{
         margin-bottom:8%;

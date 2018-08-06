@@ -5,14 +5,14 @@
 
         <img  *ngIf="selected" src="../../assets/images/check.png" class="icon">
   
-{{timeConvert(date[item.order])}}
+{{timeConvert(date[item.order])}} {{timeOfDay(date[item.order])}}
 </div>
 
 <div *ngIf="edited" style="margin-left:1%; width:7%; font-size:15px; font-weight:bold;">
 
     <img  *ngIf="selected" src="../../assets/images/check.png" class="icon">
 
-{{timeConvert(selectedItem.time)}}
+{{timeConvert(selectedItem.time)}} {{timeOfDay(selectedItem.time)}}
 </div>
 <div style="border-top-style:dashed; border-width:thin; border-color:grey; width:90%; align-self:center;">
  
@@ -26,32 +26,32 @@
  <img class="img-responsive img-res" src="{{selectedItem.img}}">
   </div>
   <div *ngIf="!adjust" class="middle-flex" style="width:60%;">
-      <div style="font-size:12.5px; font-weight:bold;">
+      <div style="font-size:12.5px;font-family:futura-pt,Helvetica Neue, Arial; font-weight:bold;">
        
        {{selectedItem.type}}
       </div>
-      <div style="font-size:20px; font-weight:bold;">
+      <div style="font-size:20px; font-family:futura-pt,Helvetica Neue, Arial; font-weight:bold;">
        {{selectedItem.name}}
       </div>
-      <div *ngIf="showDescription" style="margin-bottom:2%;"> 
+      <div *ngIf="showDescription" style="margin-bottom:2%; font-family: Arial;"> 
          {{selectedItem.description}}
       </div>
-      <div style="font-size:12.5px">
+      <div style="font-size:12.5px; font-family:futura-pt,Helvetica Neue, Arial;">
         {{selectedItem.duration}} Minutes, {{selectedItem.place}}
       </div>
      </div>
   <div *ngIf="adjust" class="middle-flex" style="width:60%;">
-   <div style="font-size:12.5px; font-weight:bold;">
+   <div style="font-size:12.5px; font-family:futura-pt,Helvetica Neue, Arial; font-weight:bold;">
     
     {{selectedItem.type}}
    </div>
-   <div style="font-size:20px; font-weight:bold;">
+   <div style="font-size:20px; font-family:futura-pt,Helvetica Neue, Arial;  font-weight:bold;">
     {{selectedItem.name}}
    </div>
-   <div style="margin-bottom:2%; "> 
+   <div style="margin-bottom:2%; font-family:Arial;"> 
      {{selectedItem.description}}
    </div>
-   <div style="font-size:12.5px">
+   <div style="font-size:12.5px; font-family:futura-pt,Helvetica Neue, Arial;">
     {{selectedItem.duration}} Minutes, {{selectedItem.place}}
    </div>
   </div>

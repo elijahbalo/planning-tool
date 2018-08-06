@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Activity} from '../../models/activity';
 import { Router,ActivatedRoute } from '@angular/router';
+import * as Lodash from 'lodash';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
@@ -34,6 +35,9 @@ display = true
 showTools = true
 selected = true
 
+filtered: any;
+filters = {}
+
   constructor(
     private db: AngularFirestore,private router: Router,
     private route:ActivatedRoute
@@ -48,7 +52,9 @@ selected = true
     // set date number in localstorage
     localStorage.setItem('dates', JSON.stringify(this.dates));
     this.edit = JSON.parse(localStorage.getItem('edit')) 
+
     this.checkEdit();
+    this.filterExact('grades',JSON.parse(localStorage.getItem("filter")))
     // load the itinerary from local storage if using pre-defined itinerary
     this.itineraries = JSON.parse(localStorage.getItem("itinerary"))
     
@@ -61,6 +67,7 @@ checkEdit(){
         const data = a.payload.doc.data();
         const id = a.payload.doc.id;
         console.log(id)
+        this.applyFilters()
         return { id, ...data };
       });
     });
@@ -94,6 +101,25 @@ reset(){
   navigate(){
     this.router.navigate([this.page])
   }
+
+
+
+
+
+  private applyFilters() {
+    console.log('action called')
+   
+    this.filtered = Lodash.filter(this.items, Lodash.conforms(this.filters))
+    }
+
+    filterExact(property: string, rule: any) {
+      this.filters[property] = val => val == rule
+      this.applyFilters()
+    }
+
+
+
+
 
   populate(event){
     this.select = event;

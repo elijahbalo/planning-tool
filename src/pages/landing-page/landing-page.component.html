@@ -43,10 +43,10 @@
   <div class="filter">
     <div style="font-family:futura-pt, Helvetica Neue, Arial">
         <div class="row"  style="margin-bottom:2%; margin-left:0.1%">
-            <div class="filtertext" >FILTER ITENERARIES:</div>
+            <div class="filtertext" >FILTER ITINERARIES:</div>
           <div class="input-group" class="grades">
                   <select  class="custom-select" id="inputGroupSelect04" style="font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;" [(ngModel)]="grades" (change)="filterExact('grades', grades)">
-                      <option [ngValue]="undefined" disabled  selected> select your grade</option>
+                      <option [ngValue]="undefined" disabled  selected> Select Your Grade</option>
                     <option value="Kinder to Gr.2">Kinder to Gr.2</option>
                     <option value="Gr 3-5">Gr 3-5</option>
                     <option value="Gr 6-8">Gr 6-8</option>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="input-group" class="date" >
                       <select  class="custom-select" id="inputGroupSelect04" style="font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;" [(ngModel)]="timeOfYear" (change)="filterExact('timeOfYear', timeOfYear)">
-                          <option [ngValue]="undefined" disabled  selected> select time of year </option>
+                          <option [ngValue]="undefined" disabled  selected> Select Time of Year </option>
                           <option value="October-April">October-April</option>
                           <option value="May-June">May-June</option>
                         </select>

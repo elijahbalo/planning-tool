@@ -20,7 +20,7 @@ const after = (one: NgbDateStruct, two: NgbDateStruct) =>
 })
 export class BuildComponent implements OnInit {
  hoveredDate: NgbDateStruct;
-
+ grades: string;
   fromDate: NgbDateStruct;
   toDate: NgbDateStruct;
   constructor( calendar: NgbCalendar) {
@@ -46,6 +46,10 @@ export class BuildComponent implements OnInit {
   isFrom = date => equals(date, this.fromDate);
   isTo = date => equals(date, this.toDate);
 
- 
+ setFilter(){
+   console.log('filter set')
+   console.log(this.grades)
+   localStorage.setItem('filter', JSON.stringify(this.grades))
+ }
 }
 

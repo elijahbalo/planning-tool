@@ -9,19 +9,27 @@
   }
   
   .img-resize{
-    height:250px;
+    height:210px;
     width:100%;
+    object-fit:cover; 
   }
 
   .text{
     position: absolute;
     margin-left:2%;
-    bottom:2%;
-    font-family: "futura-pt", "Helvetica Neue", Arial;
-    font-size:12.5px;
+    bottom:4%;
     color:white;
   }
-
+.text2{
+font-family: "futura-pt", "Helvetica Neue", Arial;
+font-size:1.5rem;
+}
+.text3{
+  font-family:Arial;
+  width:80%;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+  }
  .tag{
      background-color:red;
      font-size:12.5px;

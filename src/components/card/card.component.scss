@@ -11,12 +11,22 @@
 
 }
 
-.text{
-  text-align:justify;
-  padding-left:2%;
-  padding-right:2%
 
+.text{
+  position: absolute;
+  margin-left:2.5%;
+  bottom:10%;
+  color:white;
 }
+.text2{
+font-family: "futura-pt", "Helvetica Neue", Arial;
+font-size:1.5rem;
+}
+.text3{
+  font-family:Arial;
+  
+  }
+  
 
 .layers{
   font-family:Arial;
@@ -35,9 +45,11 @@ margin-bottom:6%;
 .img-resize{
   height:220px;
   width:100%;
+  object-fit: cover;
 }
 
 a:link {
   text-decoration: none;
   color:#4a4a4a;
 }
+
