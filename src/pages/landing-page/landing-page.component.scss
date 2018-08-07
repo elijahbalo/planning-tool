@@ -17,11 +17,11 @@
     width:32.8%;
     font-size:13px;
 }
-.content-title{  
+.my-content{
 padding:15px;
 padding-bottom:0;
 margin-bottom: 20px;
-clear: both;
+
 
 }
 .pointer{
@@ -65,6 +65,7 @@ padding-bottom:0;
 margin-bottom: 20px;
 font-size:3rem;
 clear: both;
+font-weight:bold;
 color:#4a4a4a;
 font-family: "futura-pt", "Helvetica Neue", Arial;
 }
@@ -162,21 +163,21 @@ margin-left:1%;
         float:left; 
         font-size:12px; 
         font-weight:bold;
-        font-family: "futura-pt"
+     
         }
         .plan2{
         float:left; 
         font-weight:bold;
         font-size:1.5rem;
         color:#4a4a4a;
-        font-family: "futura-pt"
+    
         }
         .plan3{
         float:left; 
         font-size:1rem; 
         font-weight:bold;
         color:#8a8d8a;
-        font-family: "futura-pt"
+      
         }
         .pointer{
             width:0;
@@ -195,7 +196,7 @@ margin-left:1%;
         font-size:1.5rem;
         clear: both;
         color:#4a4a4a;
-        font-family: "futura-pt"
+
         }
         .text3{
         padding-bottom:0;
@@ -204,7 +205,7 @@ margin-left:1%;
         font-weight:lighter;
         clear: both;
         color:#4a4a4a;
-        font-family:Arial;
+     
         }
 
   }
