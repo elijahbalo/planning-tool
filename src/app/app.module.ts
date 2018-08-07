@@ -12,7 +12,6 @@ import { StickyFooterComponent} from '../components/sticky-footer/sticky-footer.
 import { ConfirmStickerComponent} from '../components/confirm-sticker/confirm-sticker.component';
 import { WarningComponent} from '../components/warning/warning.component';
 import { CalendarComponent} from '../components/calendar/calendar.component';
-import { TimelineComponent} from '../components/timeline/timeline.component';
 import { MainHeaderComponent} from '../components/main-header/main-header.component';
 import { MainFooterComponent} from '../components/main-footer/main-footer.component';
 import { SubmitFormComponent} from '../components/submit-form/submit-form.component';
@@ -43,7 +42,6 @@ import { AngularFireModule } from 'angularfire2';
     ConfirmStickerComponent,
     WarningComponent,
     MainHeaderComponent,
-    TimelineComponent,
     CalendarComponent,
     MainFooterComponent,
     SubmitFormComponent,
