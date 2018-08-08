@@ -26,6 +26,10 @@ export class LandingPageComponent implements OnInit {
     
   }
   ngOnInit(){
+    localStorage.setItem('landing', JSON.stringify(true));
+    localStorage.setItem('submit', JSON.stringify(false));
+    localStorage.setItem('design', JSON.stringify(false));
+    localStorage.setItem('confirm', JSON.stringify(false));
     this.items = this.db.collection('/itineraries').valueChanges().subscribe(items => {
       this.items=items
       this.applyFilters()

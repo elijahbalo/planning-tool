@@ -46,6 +46,10 @@ filters = {}
   }
 
   ngOnInit() {
+    localStorage.setItem('design', JSON.stringify(true));
+    localStorage.setItem('submit', JSON.stringify(false));
+    localStorage.setItem('landing', JSON.stringify(false));
+    localStorage.setItem('confirm', JSON.stringify(false));
    // retreive the set variable from local storage
     this.set = JSON.parse(localStorage.getItem("set"))
     this.dates[0] = 570

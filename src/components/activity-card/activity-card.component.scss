@@ -9,7 +9,7 @@
   }
   
   .img-resize{
-    height:210px;
+    height:240px;
     width:100%;
     object-fit:cover; 
   }
@@ -21,13 +21,14 @@
     color:white;
   }
 .text2{
-font-family:"Helvetica Neue";
 font-weight:bold;
 font-size:1.5rem;
 }
 .text3{
   font-family:Arial;
-  width:80%;
+  width: 400px; 
+  height:20px;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;  
   }

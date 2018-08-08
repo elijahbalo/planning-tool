@@ -5,8 +5,8 @@
   <app-header></app-header>
 </div>
 
-<div class="container-fluid">
-  <div style="margin-left:2%;">
+<div class="my-container">
+  <div class="box-margin">
  <div class="mytitle">
    DESIGN YOUR ITINERARY
  </div>
@@ -14,7 +14,7 @@
    Build your itinerary...your way! Choose from our programs for each timeslot of your visit
  </div>
  </div>
-</div>
+
 
 <div class="pad">
 <div class="sub-header">
@@ -22,14 +22,14 @@
 </div>
 </div>
 
-<div class="container-fluid" style="margin-left:2%;">
+<div class="box-margin" >
   <div  style="font-weight:bold; font-size:25px; margin-top:2%;">
-<div class="activity-title" > 
+<span class="activity-title" > 
 ITINERARY
-</div>
-<div *ngIf="!set" class="reset">
+</span>
+<span *ngIf="!set" class="reset">
     <a href="javascript:void(0)" (click)="reset()">Reset</a>
-  </div>
+</span>
   </div>
 <div *ngIf="!set">
     <div *ngIf='!isEdit' class="activity">
@@ -50,7 +50,7 @@ ITINERARY
        </div>  
 </div>
 </div>
-
+</div>
 <div style="width:100%">
   <app-sticky-footer [count]="count" [page]="page" [set]="set"></app-sticky-footer>
 </div>

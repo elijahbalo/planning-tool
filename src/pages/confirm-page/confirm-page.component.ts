@@ -23,6 +23,10 @@ export class ConfirmPageComponent implements OnInit {
   }
 
   ngOnInit() {
+    localStorage.setItem('confirm', JSON.stringify(true));
+    localStorage.setItem('submit', JSON.stringify(false));
+    localStorage.setItem('design', JSON.stringify(false));
+    localStorage.setItem('landing', JSON.stringify(false));
   }
 
 

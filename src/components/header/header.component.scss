@@ -37,6 +37,7 @@ $item_clr_on: #e1261c;
 	float:left;
     display:block;
     width:160px;
+    cursor: pointer;
 	height:$progress_nav_item_height;
 	padding:10px 25px 10px 15px;
 	border-radius:0 50px 50px 0;
@@ -69,7 +70,9 @@ $item_clr_on: #e1261c;
 .progress-nav__item-nmbr {
   width:30px;
 	background:#fff;
-	border-radius:100%;
+  border-radius:100%;
+ /*  color:#fff;
+  background:$item_clr_on; */
 	font-weight:bold;
 	display:block;
   height:100%;
@@ -80,7 +83,8 @@ $item_clr_on: #e1261c;
 	float:left;
 	display:block;
 	margin-left:12px;
-	font-weight:bold;
+  font-weight:bold;
+  // color:$item_clr_on;
   font-size:14px;
 	position:relative;
   text-transform:uppercase;
@@ -98,11 +102,11 @@ $item_clr_on: #e1261c;
 
 .progress-nav__item--on {
 	background:#fff;
-    color:$item_clr_on;
+   
     border-radius:50px;
   // Again here, same as declaring ".progress-nav__item--on .progress-nav__item-numbr { ... }"
-  .progress-nav__item-nmbr {background:$item_clr_on;}
-  .progress-nav__item-nmbr i {color:#fff;}
+  /* .progress-nav__item-nmbr {background:$item_clr_on;}
+  .progress-nav__item-nmbr i {color:#fff;} */
 }
 
 
@@ -117,6 +121,7 @@ $item_clr_on: #e1261c;
 .logo{
 height:30px;
  width:30px;
+ cursor: pointer;
 }
 
 .img-container{

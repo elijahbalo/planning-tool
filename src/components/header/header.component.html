@@ -1,22 +1,54 @@
 <div class="img-container" >
-    <img class="logo"  src="../../assets/images/logo.jpg"> 
+    <img class="logo"  src="../../assets/images/logo.jpg" (click)="navigateToLanding()"> 
   </div>
 <nav class="navbar bg-dark bg my-nav" >
   
 <span class="nav-text" >SCHOOL TRIP PLANNER</span>
-      <span *ngIf="innerWidth > 1024" class="progress-nav">
+      <span *ngIf="innerWidth > 1024 && design" class="progress-nav">
           <ul class="progress-nav__list">
-            <li class="progress-nav__item progress-nav__item--on">
-              <span class="progress-nav__item-nmbr"><i>1</i></span>
+            <li class="progress-nav__item progress-nav__item--on" (click)="navigateToDesign()">
+              <span class="progress-nav__item-nmbr" style="color:#fff; background:red;"><i>1</i></span>
+              <span class="progress-nav__item-text" style=" color:red;">Design</span>
+            </li>
+            <li class="progress-nav__item" (click)="navigateToConfirm()">
+              <span class="progress-nav__item-nmbr" ><i>2</i></span>
+              <span class="progress-nav__item-text" >Confirm</span>
+            </li>
+            <li class="progress-nav__item" (click)="navigateToSubmit()">
+              <span class="progress-nav__item-nmbr"><i>3</i></span>
+              <span class="progress-nav__item-text">Submit</span>
+            </li>
+          </ul>
+        </span>
+        <span *ngIf="innerWidth > 1024 && confirm" class="progress-nav" >
+          <ul class="progress-nav__list" style=" background-color:#fff;">
+            <li class="progress-nav__item progress-nav__item--on" style=" background-color:#fff;"  (click)="navigateToDesign()">
+              <span class="progress-nav__item-nmbr" style="color:#fff; background:#4a4a4a"><i>1</i></span>
               <span class="progress-nav__item-text">Design</span>
             </li>
-            <li class="progress-nav__item">
+            <li class="progress-nav__item"  (click)="navigateToConfirm()">
+              <span class="progress-nav__item-nmbr" style="color:#fff; background:red;"><i>2</i></span>
+              <span class="progress-nav__item-text" style=" color:red;">Confirm</span>
+            </li>
+            <li class="progress-nav__item" (click)="navigateToSubmit()">
+              <span class="progress-nav__item-nmbr"><i>3</i></span>
+              <span class="progress-nav__item-text">Submit</span>
+            </li>
+          </ul>
+        </span>
+        <span *ngIf="innerWidth > 1024 && submit" class="progress-nav">
+          <ul class="progress-nav__list">
+            <li class="progress-nav__item progress-nav__item--on" (click)="navigateToDesign()">
+              <span class="progress-nav__item-nmbr" style="color:#fff; background:#4a4a4a"><i>1</i></span>
+              <span class="progress-nav__item-text">Design</span>
+            </li>
+            <li class="progress-nav__item" (click)="navigateToConfirm()">
               <span class="progress-nav__item-nmbr"><i>2</i></span>
               <span class="progress-nav__item-text">Confirm</span>
             </li>
-            <li class="progress-nav__item">
-              <span class="progress-nav__item-nmbr"><i>3</i></span>
-              <span class="progress-nav__item-text">Submit</span>
+            <li class="progress-nav__item" (click)="navigateToSubmit()">
+              <span class="progress-nav__item-nmbr" style="color:#fff; background:red;"><i>3</i></span>
+              <span class="progress-nav__item-text" style=" color:red;">Submit</span>
             </li>
           </ul>
         </span>

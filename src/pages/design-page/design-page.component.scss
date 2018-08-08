@@ -1,3 +1,8 @@
+.my-container{
+    max-width:1455px;
+    margin:auto;
+}
+
 .mytitle{
 font-weight:bold;
 font-size:3rem;
@@ -9,10 +14,13 @@ font-family:Arial;
 font-size:1rem;
 color:#4a4a4a
 }
-
+.box-margin{
+margin-left:2.5%;
+}
 .pad{
  background-color:#e5e5e5; 
  height:145px; 
+ 
  margin-top:2%; 
  padding:1.5%;
 }
@@ -20,7 +28,6 @@ color:#4a4a4a
 .sub-header{
 background-color:white; 
 font-size:2rem;
-font-weight:bold;
 color:#4a4a4a;
 height:100px; 
 padding:1.5%;
@@ -33,7 +40,6 @@ font-size:25px;
 
 .activity{
     width:100%;
-    margin-bottom:2%;
 }
 
 .reset{
@@ -59,3 +65,13 @@ margin-right:2%
     color:#4a4a4a;
   }
   
+  @media only screen and (max-width: 1470px) {
+    .my-container{
+        max-width:100%;
+        margin:auto;
+    }
+    .box-margin{
+        margin-left:2.5%;
+        margin-right:2.5%;
+        }
+  }
