@@ -14,9 +14,9 @@
   <div class="plan2">
     PLAN A SCHOOL TRIP
   </div>
-  <div style="float:right; margin-top:1%;">
+  <div style="float:right; margin-top:3%"><a href="#">
       <div class="plan3" >PLAN YOUR VISIT</div>
-      <div class="pointer" ></div>
+      <div class="pointer" ></div></a>
     </div>
 </div>
 
@@ -38,7 +38,7 @@
 </div>
 
 
-
+<div class="card-title">VIEW OUR ITINERARIES</div>
   <div class="filter">
     <div style="font-family:futura-pt, Helvetica Neue, Arial">
         <div class="row"  style="margin-bottom:2%; margin-left:0.1%">
@@ -46,27 +46,27 @@
           <div class="input-group" class="grades">
                   <select  class="custom-select" id="inputGroupSelect04" style="font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;" [(ngModel)]="grades" (change)="filterExact('grades', grades)">
                       <option [ngValue]="undefined" disabled  selected> Select Your Grade</option>
-                    <option value="Kinder to Gr.2">Kinder to Gr.2</option>
-                    <option value="Gr 3-5">Gr 3-5</option>
-                    <option value="Gr 6-8">Gr 6-8</option>
+                    <option value="Kinder to Gr.2">Kindergaten to Grade 2</option>
+                    <option value="Gr 3-5">Grades 3&ndash;5</option>
+                    <option value="Gr 6-8">Grades 6&ndash;8</option>
                   </select>
                 </div>
                 <div class="input-group" class="date" >
                       <select  class="custom-select" id="inputGroupSelect04" style="font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;" [(ngModel)]="timeOfYear" (change)="filterExact('timeOfYear', timeOfYear)">
                           <option [ngValue]="undefined" disabled  selected> Select Time of Year </option>
-                          <option value="October-April">October-April</option>
-                          <option value="May-June">May-June</option>
+                          <option value="October-April">Oct&ndash;Apr</option>
+                          <option value="May-June">May&ndash;Jun</option>
                         </select>
                     </div>
                     <div class="input-group" class="day" >
                         <select  class="custom-select" id="inputGroupSelect04" style="font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;" [(ngModel)]="day" (change)="filterExact('day', day)">
                             <option [ngValue]="undefined" disabled  selected> Half-Day or Full-Day</option>
-                            <option value="Half-day">Half-Day</option>
-                            <option value="Full-day">Full-Day</option>
+                            <option value="Half-day">Half&ndash;Day</option>
+                            <option value="Full-day">Full&ndash;Day</option>
                           </select>
                         </div>
                         <div class="show">
-                          <button type="button" class="btn " style="width:100%; background-color:#8a8d8a; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:#f7f7f7" (click)="reset()"> Show All</button>
+                          <button type="button" class="btn " style="width:100%; background-color:#8a8d8a; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:#f7f7f7" (click)="reset()"> Clear All Filters</button>
                         </div>
                       </div>
                       </div>
@@ -84,7 +84,7 @@
           
 </div>
 
-<nav>
+<nav style="margin-bottom:10%">
     <ul class="pagination pagination-lg" style="margin-left:0">
       <li class="page-item" >
         <a class="page-link" style="border-radius:0; color:#e5e5e5; background-color:#4a4a4a" href="#" tabindex="-1">1</a>
