@@ -1,8 +1,15 @@
+
 .my-container{
+
     max-width:1455px;
     margin:auto;
 }
-
+h1 {
+    line-height: 1.25;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+}
 .img-resize{
   height:auto;
   width:100%;
@@ -10,24 +17,24 @@
 }
 
 .margin{
+    margin-right:1%;
     margin-bottom:3%;
     height:400px;
-    width:32.8%;
+    width:32%;
     font-size:13px;
    
 }
-
+.pagination-lg{
+    border:none;
+}
 .empty-card{
     height:400px; 
-    width:32.8%;
+    width:32%;
     font-size:13px;
 }
 .my-content{
-padding:15px;
-padding-bottom:0;
+padding-bottom:15px;
 margin-bottom: 20px;
-
-
 }
 .pointer{
 width:0;
@@ -43,6 +50,7 @@ margin-top:12px;
 float:left; 
 font-size:12px; 
 font-weight:bold;
+text-transform: uppercase;
 font-family: "futura-pt", "Helvetica Neue", Arial;
 }
 .plan2{
@@ -50,6 +58,7 @@ float:left;
 font-weight:bold;
 font-size:3rem;
 color:#4a4a4a;
+text-transform: uppercase;
 font-family: "futura-pt", "Helvetica Neue", Arial;
 }
 .plan3{
@@ -62,7 +71,7 @@ font-family: "futura-pt", "Helvetica Neue", Arial;
 .text1{
 color:#4a4a4a; 
 margin-top:2%;
-padding:15px;
+padding-bottom:15px;
 }
 .text2{
 
@@ -76,7 +85,7 @@ font-family: "futura-pt", "Helvetica Neue", Arial;
 }
 .text3{
 
-padding-bottom:0;
+padding:15px;
 margin-bottom: 20px;
 font-size:1rem;
 font-weight:lighter;
@@ -86,7 +95,7 @@ font-family: Arial;
 }
 
 .filter{
-margin-left:1.5%; 
+margin-left:0%; 
 margin-top:2%;  
 }
 .filtertext{
@@ -123,34 +132,77 @@ width:15%;
 margin-left:1%; 
 
 }
-.my-btn{
-    font-family: "futura-pt", "Helvetica Neue", Arial;
-    font-weight:bold;
-    margin-top:4%;
-    margin-left:30%;
-      }
-      #new-btn {
-        white-space: normal;
-    }
-    
-    #footer{
-      border-top-color:#E0E0E0;
-      border-top-style:solid;
-      border-top-width:thin;
-      padding:6%;
-     
-    }
-a:link {
-   
-    color:red
-  }
-  
-
+.build{
+    color:red;
+}
 @media only screen and (max-width: 1470px) {
     .my-container{
+        padding:15px;
         max-width:100%;
         margin:auto;
     }
+
+    
+.pointer{
+    width:0;
+    height:0; 
+    border-top:8px solid transparent; 
+    border-left: 12px solid #808080; 
+    border-bottom: 8px solid transparent; 
+    float:left; 
+    margin-left:20px; 
+    margin-top:12px;
+    }
+    .plan1{
+    float:left; 
+    font-size:12px; 
+    font-weight:bold;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    }
+    .plan2{
+    float:left; 
+    font-weight:bold;
+    font-size:3rem;
+    color:#4a4a4a;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    }
+    .plan3{
+    float:left; 
+    font-size:25px; 
+    font-weight:bold;
+    color:#8a8d8a;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    }
+    .text1{
+    color:#4a4a4a; 
+    margin-top:2%;
+    padding:15px;
+    }
+    .text2{
+    
+    padding-bottom:0;
+    margin-bottom: 20px;
+    font-size:3rem;
+    font-weight:bold;
+    clear: both;
+    color:#4a4a4a;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    }
+    .text3{
+    
+    padding-bottom:0;
+    margin-bottom: 20px;
+    font-size:1rem;
+    font-weight:lighter;
+    clear: both;
+    color:#4a4a4a;
+    font-family: Arial;
+    }
+    .filter{
+        margin-left:1.5%; 
+        margin-top:2%;  
+        }
+    
 }
 @media only screen and (max-width: 1300px) {
   

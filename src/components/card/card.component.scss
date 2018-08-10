@@ -5,6 +5,7 @@
   border-style:solid;
   border-color:#E0E0E0;
   position: relative;
+
 }
 
 #slideshow{
@@ -28,6 +29,7 @@
   margin-left:2.5%;
   top:40%;
   font-weight:bold;
+  z-index: 2;
   color:#fff;
 font-family: "futura-pt", "Helvetica Neue", Arial;
 font-size:1.5rem;
@@ -46,6 +48,7 @@ font-size:1.5rem;
   padding-right:4%;
   margin-top:2%;
   color:#4a4a4a;
+  cursor: pointer;
 }
 
 .link{
@@ -59,11 +62,11 @@ margin-bottom:2%;
   height:220px;
   width:100%;
   object-fit: cover;
+  
 }
 
 a:link {
   text-decoration: none;
   color:#4a4a4a;
 }
-
 
