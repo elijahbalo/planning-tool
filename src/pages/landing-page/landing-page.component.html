@@ -33,7 +33,7 @@
     Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, 
     , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an
     <br><br>
-    Get started with our sample iteneraries below or build your own.
+    Get started with our sample iteneraries below or <a href="javascript:void(0)" (click)="open(content)"> build your own  </a>
 </div>
 </div>
 
@@ -72,12 +72,11 @@
                       </div>
            
   <div class="row" style="margin-left:0%;">
-        
+          
   
   <div class="margin"*ngFor="let item of filtered " >
           <app-card [item]="item"></app-card>
           </div>
-
 
           <div  class="empty-card" >
             <app-empty-card></app-empty-card>
@@ -101,21 +100,25 @@
 </div>
 
 <ng-template #content let-c="close" let-d="dismiss">
-    <div style="width:1000px">
-        <div style="margin-bottom:2px; margin-top:2%;  font-family: futura-pt, Helvetica Neue, Arial;">
-          <h4 style="padding-left:13px;">SELECT YOUR DATE RANGE</h4>
-        </div>
-          <div style="padding:13px;"> 
-    <app-calendar></app-calendar>
+    <div style="width:100%">
+        <button type="button"  (click)="d('Cross click')" style="background-color:black; float:right; height:70px; width:70px; ">
+            <div style="color:white; ">
+              x
+            </div>
+            <div style="color:white; font-weight:bold; font-size:12px;">
+              CLOSE
+            </div>
+          </button>
+    <app-build></app-build>
 
-    </div>
+    
     <div id=footer>
-        <div style="margin-bottom:40px;  padding-bottom:13px; padding-left:13px;">
-
-        <button type="button" class="btn btn-danger" id="new-btn"  (click)="d('Cross click')"  (click)="navigateToDesignPage()"> <div style="float:left;">Done</div> </button>
+        <div style="margin-bottom:30px;">
+        <div>
+        <button type="button" class="btn btn-danger" id="new-btn"  (click)="d('Cross click')"  (click)="navigateToDesignPage()"> <div style="float:left;">CONTINUE</div> <div style="width:0;height: 0; border-top: 5px solid transparent; border-left: 10px solid white; border-bottom: 5px solid transparent; float:left; margin-left:28px; margin-top:6px;"></div></button>
       </div>
       
-
+  </div>
   </div>
     
 

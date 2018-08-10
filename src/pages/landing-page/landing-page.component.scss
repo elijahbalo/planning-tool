@@ -11,14 +11,14 @@
 
 .margin{
     margin-bottom:3%;
-    height:380px;
+    height:400px;
     width:32.8%;
     font-size:13px;
    
 }
 
 .empty-card{
-    height:380px; 
+    height:400px; 
     width:32.8%;
     font-size:13px;
 }
@@ -123,6 +123,28 @@ width:15%;
 margin-left:1%; 
 
 }
+.my-btn{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-weight:bold;
+    margin-top:4%;
+    margin-left:30%;
+      }
+      #new-btn {
+        white-space: normal;
+    }
+    
+    #footer{
+      border-top-color:#E0E0E0;
+      border-top-style:solid;
+      border-top-width:thin;
+      padding:6%;
+     
+    }
+a:link {
+   
+    color:red
+  }
+  
 
 @media only screen and (max-width: 1470px) {
     .my-container{

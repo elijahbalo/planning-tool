@@ -4,6 +4,7 @@
   border-width:1px;
   border-style:solid;
   border-color:#E0E0E0;
+  position: relative;
 }
 
 #slideshow{
@@ -13,35 +14,45 @@
 
 
 .text{
-  position: absolute;
-  margin-left:2.5%;
-  bottom:10%;
-  font-weight:bold;
-  color:white;
+  
+  
+}
+.text1{
+  font-family:Arial;
+  padding-left:2%;
+  padding-right:2%;
+  margin-top:1%;
 }
 .text2{
+  position: absolute;
+  margin-left:2.5%;
+  top:40%;
+  font-weight:bold;
+  color:#fff;
 font-family: "futura-pt", "Helvetica Neue", Arial;
 font-size:1.5rem;
 }
 .text3{
   font-family:Arial;
-  
+  padding-left:2%;
+  padding-right:2%;
   }
   
 
 .layers{
   font-family:Arial;
   text-align:justify;
-  padding-left:4%;
+  padding-left:2%;
   padding-right:4%;
-  margin-top:5%;
+  margin-top:2%;
   color:#4a4a4a;
 }
 
 .link{
 font-family: "futura-pt", "Helvetica Neue", Arial;
 font-weight:bold;
-margin-bottom:6%;
+margin-top:4%;
+margin-bottom:2%;
 }
 
 .img-resize{
@@ -54,4 +65,5 @@ a:link {
   text-decoration: none;
   color:#4a4a4a;
 }
+
 

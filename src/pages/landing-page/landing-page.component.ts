@@ -45,7 +45,6 @@ export class LandingPageComponent implements OnInit {
       this.closeResult = `Closed with: ${result}`;
     });
   }
-
   resizeImage(){
     let value = false;
     if (screen.width < 1024) {
@@ -96,3 +95,4 @@ export class LandingPageComponent implements OnInit {
     this.filtered= this.items;
   }
 }
+
