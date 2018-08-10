@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
-import  {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDateAdapter,  NgbDateNativeAdapter} from '@ng-bootstrap/ng-bootstrap';
 
-const equals = (one: NgbDateStruct, two: NgbDateStruct) =>
+/* const equals = (one: NgbDateStruct, two: NgbDateStruct) =>
   one && two && two.year === one.year && two.month === one.month && two.day === one.day;
 
 const before = (one: NgbDateStruct, two: NgbDateStruct) =>
@@ -11,14 +11,23 @@ const before = (one: NgbDateStruct, two: NgbDateStruct) =>
 
 const after = (one: NgbDateStruct, two: NgbDateStruct) =>
   !one || !two ? false : one.year === two.year ? one.month === two.month ? one.day === two.day
-    ? false : one.day > two.day : one.month > two.month : one.year > two.year;
+    ? false : one.day > two.day : one.month > two.month : one.year > two.year; */
 
 @Component({
   selector: 'app-build',
   templateUrl: './build.component.html',
-  styleUrls: ['./build.component.scss']
+  styleUrls: ['./build.component.scss'],
+
+  providers: [{provide: NgbDateAdapter, useClass: NgbDateNativeAdapter}]
 })
 export class BuildComponent implements OnInit {
+
+
+  model1: Date;
+  model2: Date;
+
+
+
  hoveredDate: NgbDateStruct;
  grades: string;
   fromDate: NgbDateStruct;
@@ -30,7 +39,7 @@ export class BuildComponent implements OnInit {
 
   ngOnInit() {
   }
-  onDateSelection(date: NgbDateStruct) {
+  /* onDateSelection(date: NgbDateStruct) {
     if (!this.fromDate && !this.toDate) {
       this.fromDate = date;
     } else if (this.fromDate && !this.toDate && after(date, this.fromDate)) {
@@ -44,7 +53,10 @@ export class BuildComponent implements OnInit {
   isHovered = date => this.fromDate && !this.toDate && this.hoveredDate && after(date, this.fromDate) && before(date, this.hoveredDate);
   isInside = date => after(date, this.fromDate) && before(date, this.toDate);
   isFrom = date => equals(date, this.fromDate);
-  isTo = date => equals(date, this.toDate);
+  isTo = date => equals(date, this.toDate); */
+  get today() {
+    return new Date();
+  }
 
  setFilter(){
    console.log('filter set')
@@ -52,4 +64,5 @@ export class BuildComponent implements OnInit {
    localStorage.setItem('filter', JSON.stringify(this.grades))
  }
 }
+
 

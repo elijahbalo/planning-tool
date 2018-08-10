@@ -1,4 +1,3 @@
-
 <div class="container-fluid" style="font-family: Arial">
   <div style="font-weight:bold; margin-top:7%">
     <h1>BUILD YOUR OWN ITINERARY</h1>
@@ -12,74 +11,84 @@
   <div style="margin-top:7%" >
     <h6>GRADE LEVEL</h6>
     <form>
-  <div class="form-check my-radio-btn">
-      <input class="form-check-input" [(ngModel)]="grades"  type="radio" name="exampleRadios1" id="exampleRadios1" value="Prek-Gr. 2" (ngModelChange)="setFilter()" >
-      <label class="form-check-label" for="exampleRadios1">
-       Preschool/Kindergaten and Grades 1-2/Cycle 1
-      </label>
-    </div>
-    <div class="form-check my-radio-btn">
-      <input class="form-check-input" [(ngModel)]="grades" type="radio" name="exampleRadios2" id="exampleRadios2" value="Gr. 3-5" (ngModelChange)="setFilter()">
-      <label class="form-check-label" for="exampleRadios2">
-       Grades 3-5
-      </label>
-    </div>
-    <div class="form-check my-radio-btn">
-        <input class="form-check-input" [(ngModel)]="grades" type="radio" name="exampleRadios3" id="exampleRadios3" value="Gr. 6-8" (ngModelChange)="setFilter()" >
-        <label class="form-check-label" for="exampleRadios3">
-         Grades 6-8
-         </label>
-      </div>
 
+      <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Prek-Gr. 2"id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+              Preschool/Kindergaten and Grades 1-2/Cycle 1
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input"  type="checkbox" value="Gr. 3-5" id="defaultCheck2" >
+          <label class="form-check-label" for="defaultCheck2">
+              Grades 3-5
+          </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input"  type="checkbox" value="Gr. 6-8" id="defaultCheck2">
+            <label class="form-check-label" for="defaultCheck2">
+                Grades 6-8
+            </label>
+          </div>
+    
+ 
       </form>
     </div>
      
-    <div style="margin-top:7%;">
-    <div style="font-weight:bold; font-size:11px; margin-left:1%;">
-      DATE RANGE:
-    </div>
-    <div class="input-group" style="width:100%; margin-left:1%;">
-        <select class="custom-select" id="inputGroupSelect04" style=" font-size:13px">
-          <option selected >Choose your dates...</option>
-        </select>
-      </div>
-    </div>
-
-    <div style="margin-top:2%; overflow:scroll">
-        <ngb-datepicker #dp (select)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t" >
-          
-          </ngb-datepicker>
-          
-          <ng-template #t let-date="date" let-focused="focused">
-            <span class="custom-day"
-                  [class.focused]="focused"
-                  [class.range]="isFrom(date) || isTo(date) || isInside(date) || isHovered(date)"
-                  [class.faded]="isHovered(date) || isInside(date)"
-                  (mouseenter)="hoveredDate = date"
-                  (mouseleave)="hoveredDate = null">
-              {{ date.day }}
-            </span>
-          </ng-template>
-        </div>
-          <div class="form-check my-radio-btn" style="margin-bottom:13%;">
-            <div style="margin-bottom:2%;   margin-top:5%;">
-              <h6>HALF DAY OR FULL DAY?:</h6>
-            </div>
-            <form>
-              <div style="float:left; margin-right:9%;">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Half-Day" checked>
+    <div style="margin-top:7%" >
+      <h6>HALF DAY OR FULL DAY?:</h6>
+      <form>
+          <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
               <label class="form-check-label" for="exampleRadios1">
-              Half Day
+               Half Day
               </label>
             </div>
-            <div style="float:left; margin-right:9%;">
-              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Full-Day" checked>
-              <label class="form-check-label" for="exampleRadios1">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
               Full Day
               </label>
             </div>
+  
+        </form>
+      </div>
+   
+      
+     <div style="margin-top:7%; margin-bottom:2%;">
+       <h6>Choose your date below:</h6>
+     </div>
+      <div >
+          <ngb-datepicker #d1  [(ngModel)]="model1" #c1="ngModel"></ngb-datepicker>
+      
+    
+       
+       
+        </div>
+    
+       <!--  <div class="col-6">
+            <form class="form-inline">
+              <div class="form-group">
+                <div class="input-group">
+                  <input class="form-control" placeholder="yyyy-mm-dd"
+                         name="d2" #c2="ngModel" [(ngModel)]="model2" ngbDatepicker #d2="ngbDatepicker">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" (click)="d2.toggle()" type="button">
+                      <img src="img/calendar-icon.svg" style="width: 1.2rem; height: 1rem; cursor: pointer;"/>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </form>
-            </div>
+        
             
+            <button class="btn btn-sm btn-outline-primary" (click)="model2 = today">Select Today</button>
+         
+        
+        
+            
+          </div> -->
+       
+          
         
 </div>
