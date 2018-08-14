@@ -15,10 +15,7 @@ import 'rxjs/add/observable/throw';
 })
 export class LandingPageComponent implements OnInit {
 
-  offset = 2;
-  nextKey: any; // for next button
-  prevKeys: any[] = []; // for prev button
-
+ 
   p: number = 1;
 
 
