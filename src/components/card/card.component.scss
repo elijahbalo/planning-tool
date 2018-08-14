@@ -2,9 +2,19 @@
   height:100%;
   width:100%;
   border-width:1px;
+  cursor:pointer;
   border-style:solid;
   border-color:#E0E0E0;
-
+  background: transparent;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+  
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: transparent;
 
 }
 
@@ -16,40 +26,35 @@
 
 .text{
   
-  
-}
-.text1{
-  font-family:Arial;
-  padding-left:3%;
-  padding-right:2%;
-  margin-top:1%;
-}
-.text2{
   position: absolute;
   margin-left:2.5%;
   bottom:20px;
   left:20px;
   line-height:100%;
   max-width:80%;
-  font-weight:bold;
   z-index: 2;
   color:#fff;
 font-family: "futura-pt", "Helvetica Neue", Arial;
 font-size:1.5rem;
 }
-.text3{
+.text1{
   font-family:Arial;
-  padding-left:3%;
-  padding-right:2%;
+font-size:1rem;
+font-weight:lighter;
+}
+.text2{
+  font-weight:bold;
+}
+.text3{
+  
+  font-size:1rem;
   }
   
 
 .layers{
   font-family:Arial;
   text-align:justify;
-  padding-left:3%;
-  padding-bottom:3%;
-  padding-right:4%;
+  padding:20px;
   font-size:14;
   margin-top:2%;
   color:#4a4a4a;

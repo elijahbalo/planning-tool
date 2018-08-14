@@ -11,21 +11,40 @@
 </div> -->
 
 <div class="my-content">
-  <div class="plan2">
+  <!-- <div class="plan2">
     PLAN A SCHOOL TRIP
-  </div>
-  <div style="float:right; margin-top:3%"><a href="#">
+  </div> -->
+  <!-- <div style="float:right; margin-top:3%"><a href="#">
       <div class="plan3" >PLAN YOUR VISIT</div>
       <div class="pointer" ></div></a>
+    </div> -->
+</div>
+
+<div style="position:relative">
+  <img src="http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg" class="img-responsive img-resize">
+  <div class="text">
+     
+    
+    <div class="text3">
+
+        <div><a style="color:white; background:white" href="#">
+            <div class="plan3" >PLAN YOUR VISIT &#9655;</div>
+            
+        </a></div>
+        <div class="text1">
+            PLAN A SCHOOL TRIP
+          </div>
+        <div class="text2" >
+            PLAN YOUR DAY AT THE MUSEUM
+          </div>
+        Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, 
+        , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an
+    </div>
     </div>
 </div>
 
-<div>
-  <img src="../../assets/images/newlanding.jpg" class="img-responsive img-resize">
-</div>
 
-
-<div class="text1">
+<!-- <div class="text1">
 <div class="text2" >
     PLAN YOUR DAY AT THE MUSEUM
   </div>
@@ -36,10 +55,127 @@
     Get started with our sample iteneraries below or <a class="build" href="javascript:void(0)" (click)="open(content)"> build your own  </a>
 </div>
 </div>
+ -->
+
+<!-- <div class="card-title">VIEW OUR ITINERARIES</div> -->
+<div class="content">
+<div class="side-bar">
+<div class="first">
+  <div style="float:left;margin:4%; font-size:1.5rem">Filter By</div>
+ <div style="float:right; background:#8a8d8a; padding:3px; margin:4%; color:#fff; font-size:1rem; cursor:pointer">Clear All</div>
+</div>
+
+<div>
+<div class="selection">
+  <div class="ftext">
+    GRADE
+  </div>
+  <div class="boxes">
+      <label class="lab">Kindergaten to Grade 1
+          <span class="checkmark"></span>
+          
+        </label>
+        <input  class="check" style="float:right;" type="checkbox" value="Kinder to Gr.2" id="defaultCheck1">
+  
+  </div>
 
 
-<div class="card-title">VIEW OUR ITINERARIES</div>
-  <div class="filter">
+  
+  <div class="boxes">
+      <label class="lab"> Grades 3 to 5
+          <span class="checkmark"></span>
+          
+        </label>
+        <input  style="float:right;" type="checkbox" value="Gr 3-5" id="defaultCheck1">
+  </div>
+
+
+  <div class="boxes">
+      <label class="lab"> Grades 6 to 8
+          <span class="checkmark"></span>
+          
+        </label>
+        <input  style="float:right;" type="checkbox" value="Gr 6-8" id="defaultCheck1">
+  </div>
+
+</div>
+
+
+
+<div class="selection">
+  <div class="ftext">
+      TIME OF YEAR
+    </div>
+    <div class="boxes">
+        <label class="lab">October to April
+            <span class="checkmark"></span>
+           
+          </label>
+          <input  style="float:right;" type="checkbox" value="Kinder to Gr.2" id="defaultCheck1">
+    </div>
+  
+  
+    
+    <div class="boxes">
+        <label class="lab">May to June
+            <span class="checkmark"></span>
+            
+          </label>
+          <input  style="float:right;" type="checkbox" value="Kinder to Gr.2" id="defaultCheck1">
+    </div>
+  </div>
+
+
+
+
+  <div class="selection">
+    <div class="ftext">
+        LENGTH
+      </div>
+      <div class="boxes">
+          <label class="lab">Half&ndash;Day
+              <span class="checkmark"></span>
+             
+            </label>
+            <input  style="float:right;" type="radio" value="Kinder to Gr.2" id="defaultCheck1">
+      </div>
+    
+    
+      
+      <div class="boxes">
+          <label class="lab">Full&ndash;Day
+              <span class="checkmark"></span>
+              
+            </label>
+            <input  style="float:right;" type="radio" value="Kinder to Gr.2" id="defaultCheck1">
+      </div>
+    </div>
+    
+ 
+    
+  
+</div>
+</div>
+<div class="itineraries">
+ <div style="height:5%">
+  <div class="ti" >Itineraries</div>
+  <div class="my-btn" (click)="open(content)">
+  Build Your Own
+  </div></div>
+  <div class="row" style="margin-left:0%;">
+          
+  
+  <div class="margin" *ngFor="let item of filtered| paginate: { itemsPerPage: 4, currentPage: p } " >
+          <app-card [item]="item"></app-card>
+          </div>
+</div>
+<pagination-controls class="pag" (pageChange)="p = $event"
+                                  directionLinks="false"
+   
+></pagination-controls>
+</div>
+
+  <!-- <div class="filter">
     <div style="font-family:futura-pt, Helvetica Neue, Arial">
         <div class="row"  style="margin-bottom:2%; margin-left:0.1%">
             <div class="filtertext" >FILTER ITINERARIES:</div>
@@ -93,7 +229,9 @@
       <li class="page-item" style="border-radius:0" ><a class="page-link" style="border-radius:0; color:#4a4a4a" href="#">3</a></li>
     </ul>
   </nav>
+</div> -->
 </div>
+
 </div>
 <div>
   <app-main-footer></app-main-footer>
@@ -115,7 +253,7 @@
     <div id=footer>
         <div style="margin-bottom:30px;">
         <div>
-        <button type="button" class="btn btn-danger" id="new-btn"  (click)="d('Cross click')"  (click)="navigateToDesignPage()"> <div style="float:left;">CONTINUE</div> <div style="width:0;height: 0; border-top: 5px solid transparent; border-left: 10px solid white; border-bottom: 5px solid transparent; float:left; margin-left:28px; margin-top:6px;"></div></button>
+        <button type="button" class="btn btn-danger" style="margin:3%" (click)="d('Cross click')"  (click)="navigateToDesignPage()"> <div style="float:left;">CONTINUE</div> <div style="width:0;height: 0; border-top: 5px solid transparent; border-left: 10px solid white; border-bottom: 5px solid transparent; float:left; margin-left:28px; margin-top:6px;"></div></button>
       </div>
       
   </div>

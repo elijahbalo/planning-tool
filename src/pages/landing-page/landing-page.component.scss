@@ -11,9 +11,10 @@ h1 {
     font-family: "futura-pt", "Helvetica Neue", Arial;
 }
 .img-resize{
-  height:auto;
+  height:500px;
   width:100%;
   object-fit:cover;
+  padding:1%;
 }
 
 .card-title{
@@ -22,22 +23,68 @@ h1 {
     font-size:1.5rem;
     font-family: "futura-pt", "Helvetica Neue", Arial;
   }
+  .pag /deep/ .ngx-pagination .current {
+    background: #4a4a4a;
+  }
 
-.margin{
-    margin-right:1%;
+  .pag /deep/ .ngx-pagination li {
+      border-style:solid;
+      border-width:1px;
+    border-color: #e5e5e5;
+    margin-right:0px;
+    
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+
+  }
+ .margin{
+    margin-right:3%;
     margin-bottom:3%;
-    height:360px;
-    width:32%;
+    height:350px;
+    width:45%;
     font-size:13px;
    
-}
+} 
 .pagination-lg{
     border:none;
 }
-.empty-card{
+/* .empty-card{
     height:360px; 
     width:32%;
     font-size:13px;
+} */
+.boxes{
+
+ width:90%;
+
+ margin-bottom:2px;
+ margin-left:3%;
+
+
+
+}
+
+.first{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+}
+.selection{
+    margin-top:10%;
+}
+.checkmark{
+    
+}
+.ftext{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-size:1rem;
+    margin-bottom:1%;
+    margin-left:3%;
+    color:#8a8d8a
+}
+.ti{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    display:inline-block;
+  
+font-size:2.5rem;
+color:#4a4a4a;  
 }
 .my-content{
 padding-bottom:15px;
@@ -47,7 +94,7 @@ margin-bottom: 20px;
 width:0;
 height:0; 
 border-top:8px solid transparent; 
-border-left: 12px solid #808080; 
+border-left: 12px solid white; 
 border-bottom: 8px solid transparent; 
 float:left; 
 margin-left:20px; 
@@ -69,36 +116,66 @@ text-transform: uppercase;
 font-family: "futura-pt", "Helvetica Neue", Arial;
 }
 .plan3{
-float:left; 
-font-size:25px; 
+font-size:0.8rem;
+margin-bottom:2%;
 font-weight:bold;
-color:#8a8d8a;
 font-family: "futura-pt", "Helvetica Neue", Arial;
+}
+.text{
+
+color:#fff; 
+}
+
+
+  input[type=checkbox]:checked {
+   background:green;
+  } 
+.selection{
+    font-family: "futura-pt", "Helvetica Neue", Arial;   
 }
 .text1{
-color:#4a4a4a; 
-margin-top:2%;
-padding-bottom:15px;
+  font-size:3rem;
+  margin-bottom:8%;
+  font-weight:bold;  
+  font-family: "futura-pt", "Helvetica Neue", Arial;
 }
 .text2{
-
-padding-bottom:0;
-margin-bottom: 20px;
-font-size:3rem;
-font-weight:bold;
-clear: both;
-color:#4a4a4a;
-font-family: "futura-pt", "Helvetica Neue", Arial;
+  font-size:1.7rem;  
+  margin-bottom:1%;
+  
 }
 .text3{
-max-width:80%;
+    position:absolute;
+    top:20%;
+    left:22%;
+max-width:55%;
 padding:15px;
+text-align:center;
 margin-bottom: 20px;
 font-size:1rem;
 font-weight:lighter;
 clear: both;
-color:#4a4a4a;
-font-family: Arial;
+font-family:Arial;
+}
+.content{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+.side-bar{
+ display:flex;
+ flex-direction:column;
+ width:32%;
+ height:1500px;
+ border-color:#e5e5e5;
+ border-width:1px;
+ border-style:solid;
+}
+
+.itineraries{
+width:68%;
+padding:1.5%;
+
 }
 
 .filter{
@@ -142,6 +219,22 @@ margin-left:1%;
 .build{
     color:red;
 }
+.point{
+    color:#fff;
+}
+.my-btn{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    display:inline-block;
+  font-weight:lighter;
+font-size:1rem;
+padding:7px;
+color:#fff;  
+background:red;
+margin-left:3%;
+cursor:pointer;
+      }
+
+
 @media only screen and (max-width: 1470px) {
     .my-container{
         max-width:100%;
@@ -160,7 +253,7 @@ margin-left:1%;
         padding:15px;
         margin-bottom: 20px;
         }
-.pointer{
+/* .pointer{
     width:0;
     height:0; 
     border-top:8px solid transparent; 
@@ -218,11 +311,11 @@ margin-left:1%;
     .filter{
         margin-left:1.5%; 
         margin-top:2%;  
-        }
+        } */
     
 }
 @media only screen and (max-width: 1300px) {
-  
+/*   
 .grades{
     width:26%;
      margin-left:1%;
@@ -238,11 +331,11 @@ margin-left:1%;
     width:12%; 
     margin-left:46%;
     margin-top:1%;
-    }
+    } */
   }
 
 @media only screen and (max-width: 1220px) {
-    .margin{
+   /*  .margin{
         margin-bottom:5%;
         height:380px;
         width:49%;
@@ -256,13 +349,13 @@ margin-left:1%;
         font-size:13px;
     
        
-    }
+    } */
 
   }
 
   @media only screen and (max-width: 1024px) {
     
-    .plan1{
+    /* .plan1{
         float:left; 
         font-size:12px; 
         font-weight:bold;
@@ -309,7 +402,7 @@ margin-left:1%;
         clear: both;
         color:#4a4a4a;
      
-        }
+        } */
 
   }
   
@@ -317,7 +410,7 @@ margin-left:1%;
 
   @media only screen and (max-width: 1006px) {
       
-    .img-resize{
+    /* .img-resize{
         height:250px;
         width:100%;
         object-fit:cover;
@@ -352,12 +445,12 @@ margin-left:1%;
         margin-left:1%;
         margin-top:4%;
   
-        }
+        } */
       }
 
 
 @media only screen and (max-width: 1000px) {
-    .margin{
+   /*  .margin{
         margin-bottom:3%;
         height:380px;
         width:49%;
@@ -371,14 +464,14 @@ margin-left:1%;
         font-size:13px;
     
     }
-
+ */
     
 
         
   }
 
   @media only screen and (max-width: 850px) {
-    .margin{
+    /* .margin{
         margin-bottom:5%;
         height:380px;
         width:49%;
@@ -416,12 +509,12 @@ margin-left:1%;
         margin-left:1%;
         margin-top:4%;
   
-        }
+        } */
   
   }
 
   @media only screen and (max-width: 750px) {
-    .margin{
+  /*   .margin{
         margin-bottom:8%;
         height:380px;
         width:49%;
@@ -460,11 +553,11 @@ margin-left:1%;
         margin-top:5%;
   
         }
-     
+      */
   }
 
   @media only screen and (max-width: 650px) {
-    .margin{
+ /*    .margin{
         margin-bottom:10%;
         height:380px;
         width:50%;
@@ -503,13 +596,13 @@ margin-left:1%;
         margin-left:1%;
         margin-top:5.5%;
   
-        }
+        } */
 
   }
 
    
   @media only screen and (max-width: 600px) {
-    .img-resize{
+    /* .img-resize{
         height:200px;
         width:100%;
         object-fit:cover;
@@ -562,7 +655,7 @@ margin-left:1%;
             margin-top:6%;
       
             }
-      
+       */
     
   }
 
@@ -617,7 +710,7 @@ margin-left:1%;
     
   } */
   @media only screen and (max-width: 414px) {
-    .margin{
+    /* .margin{
         margin-bottom:12%;
         height:380px;
         width:95%;
@@ -695,11 +788,11 @@ margin-left:1%;
       
             }
           
-
+ */
 
   }
   @media only screen and (max-width: 375px) {
-    .margin{
+    /* .margin{
         margin-bottom:12%;
         height:380px;
         width:95%;
@@ -774,12 +867,12 @@ margin-left:1%;
             margin-left:1%;
             margin-top:9%;
       
-            }
+            } */
           }
     
 
   @media only screen and (max-width: 320px) {
-    .margin{
+    /* .margin{
         margin-bottom:12%;
         height:380px;
         width:95%;
@@ -852,6 +945,6 @@ margin-left:1%;
 
             margin-top:9%;
       
-            }
+            } */
           }
     

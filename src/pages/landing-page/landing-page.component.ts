@@ -15,6 +15,14 @@ import 'rxjs/add/observable/throw';
 })
 export class LandingPageComponent implements OnInit {
 
+  offset = 2;
+  nextKey: any; // for next button
+  prevKeys: any[] = []; // for prev button
+
+  p: number = 1;
+
+
+
   closeResult: string;
   items: any
   filtered: any;
@@ -22,7 +30,7 @@ export class LandingPageComponent implements OnInit {
   grades: string;
   timeOfYear: string;
   day: string;
-  constructor(private modalService: NgbModal,private db: AngularFirestore,) {
+  constructor(private modalService: NgbModal,private db: AngularFirestore) {
     
   }
   ngOnInit(){
@@ -36,7 +44,11 @@ export class LandingPageComponent implements OnInit {
     })
     localStorage.setItem("set",JSON.stringify(false))
     console.log(this.items)
+  
+
   }
+
+
 
 
 

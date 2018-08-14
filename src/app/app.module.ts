@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgxPaginationModule} from 'ngx-pagination'; 
 import { CardComponent} from '../components/card/card.component';
 import { EmptyCardComponent} from '../components/empty-card/empty-card.component';
 import { BuildComponent} from '../components/build/build.component';
@@ -59,6 +60,7 @@ import { AngularFireModule } from 'angularfire2';
     HttpClientModule,
     FormsModule, 
     ReactiveFormsModule,
+    NgxPaginationModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule
   ],

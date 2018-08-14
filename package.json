@@ -38,6 +38,7 @@
     "lodash": "^4.17.10",
     "ng-simple-slideshow": "^1.2.2",
     "ng-slideshow": "^0.8.2",
+    "ngx-pagination": "^3.2.0",
     "nodemailer": "^4.6.7",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.2.1",

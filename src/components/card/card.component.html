@@ -1,21 +1,23 @@
 
-    <div class="card-container">
+    <div class="card-container" (click)="navigateToDesign()">
        <div style="position:relative">
          <img src="{{item.img}}" alt="Random first slide" class="img-responsive img-resize">
-      
-          
+      <div class="text">
+         <div class="text1">{{item.grades}}, {{item.day}}</div>
           <div class=text2>{{item.title}}</div>
+          <div class="text3">{{item.timeOfYear}}</div>
+          </div>
       </div>
       <div style="cursor:pointer">
-        <div class="text1">{{item.grades}}, {{item.day}}</div>
-        <div class="text3">{{item.timeOfYear}}</div>
-    <div *ngIf="view" class="layers" (click)="navigateToDesign()">
+        
+        
+    <div *ngIf="view" class="layers" >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
         Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
         natoque penatibus et magnis dis parturient montes, nascetur 
         ridiculus mus. Donec quam felis, ultricies nec.
     </div>
-    <div *ngIf="!view" class="layers"  (click)="navigateToDesign()">
+    <div *ngIf="!view" class="layers" >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
         Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
         natoque penatibus et magnis dis parturient montes, nascetur 
