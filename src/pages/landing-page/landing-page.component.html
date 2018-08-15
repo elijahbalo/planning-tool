@@ -62,7 +62,7 @@
 <div class="side-bar">
 <div class="first">
   <div style="float:left;margin:4%; font-size:1.5rem">Filter By</div>
- <div style="float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer">Clear All</div>
+ <div style="float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer" (click)="reset()">Clear All</div>
 </div>
 
 <div>
@@ -76,7 +76,7 @@
           <span class="checkmark"></span>
           
         </label>
-        <input  class="check" [(ngModel)]="grades" style="float:right;" type="checkbox" value="Kinder to Gr.2" id="defaultCheck1">
+        <input [(ngModel)]="KinderTo2" style="float:right;" (change)="filterBoolean('KinderTo2',KinderTo2)" type="checkbox" class="cbox" [ngModelOptions]="{standalone: true}">
   
   </div>
 
@@ -87,7 +87,7 @@
           <span class="checkmark"></span>
           
         </label>
-        <input  style="float:right;" [(ngModel)]="grades" type="checkbox" value="Gr 3-5" id="defaultCheck1">
+        <input #cb2 class="check" style="float:right;" (change)="logCheckbox(cb2)"  type="checkbox" value="Gr 3-5">
   </div>
 
 
@@ -96,7 +96,7 @@
           <span class="checkmark"></span>
           
         </label>
-        <input  style="float:right;" [(ngModel)]="grades" type="checkbox" value="Gr 6-8" id="defaultCheck1">
+        <input #cb3 class="check" style="float:right;" (change)="logCheckbox(cb3)"  type="checkbox" value="Gr 6-8">
   </div>
 </form>
 </div>
@@ -142,16 +142,17 @@
               <label class="form-check-label" for="exampleRadios1">
                Half Day
               </label>
-              <input style="float:right" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <input style="float:right"[(ngModel)]="day"
+              (change)="filterExact('day', day)" type="radio" name="exampleRadios"  value="Half-day" class="rad">
             </div>
             <div class="boxes">
               
               <label class="form-check-label" for="exampleRadios2">
               Full Day
               </label>
-              <input  style="float:right" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-            </div>
-  
+              <input  style="float:right" [(ngModel)]="day"
+              (change)="filterExact1('day', day)"  type="radio" name="exampleRadios" value="Full-day" class="rad">
+     </div>
         </form>
     </div>
     

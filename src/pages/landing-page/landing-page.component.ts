@@ -3,6 +3,10 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { Observable } from 'rxjs/Observable';
 import { AngularFirestore } from 'angularfire2/firestore';
 import * as Lodash from 'lodash';
+import * as $ from 'jquery';
+
+
+
 import { Router,ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -18,8 +22,9 @@ export class LandingPageComponent implements OnInit {
  
   p: number = 1;
 
-
-
+  log = '';
+  KinderTo2: boolean;
+  checkboxValue:boolean;
   closeResult: string;
   items: any
   filtered: any;
@@ -62,6 +67,14 @@ export class LandingPageComponent implements OnInit {
   }
   }
 
+  logCheckbox(element: HTMLInputElement): void {
+    console.log(`Checkbox ${element.value} was ${element.checked ? '' : 'un'}checked\n`);
+    this.grades= element.value;
+    console.log(this.grades)
+  }
+
+
+
   private applyFilters() {
     console.log('action called')
     if ((this.grades == "empty")){
@@ -70,7 +83,8 @@ export class LandingPageComponent implements OnInit {
     else{
     this.filtered = Lodash.filter(this.items, Lodash.conforms(this.filters))
     }
-    console.log(this.filtered)
+    console.log(this.grades)
+  
   }
 
   private applyFilters1() {
@@ -84,8 +98,27 @@ export class LandingPageComponent implements OnInit {
     this.filtered = Lodash.filter(this.items, Lodash.conforms(this.filters))
     console.log(this.filtered)
   }
-  
+
+
+  filterBoolean(property: string, rule: boolean) {
+    if (!rule) this.removeFilter(property)
+    else {
+      this.filters[property] = val => val
+      this.applyFilters()
+    }
+  }
+
+
+  removeFilter(property: string) {
+    delete this.filters[property]
+    this[property] = null
+    this.applyFilters()
+  }
+
+
+
   filterExact(property: string, rule: any) {
+
     this.filters[property] = val => val == rule
     this.applyFilters()
   }
@@ -101,6 +134,8 @@ export class LandingPageComponent implements OnInit {
   }
 
   reset(){
+    $('.cbox').prop('checked', false);
+    $('.rad').prop('checked', false);
     this.filtered= this.items;
   }
 }
