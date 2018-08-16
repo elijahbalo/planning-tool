@@ -88,7 +88,7 @@
           <span class="checkmark"></span>
           
         </label>
-        <input [(ngModel)]="Gr3To5" style="float:right;" (change)="filterBoolean1('Gr3To5',Gr3To5)" type="checkbox" class="cbox" [ngModelOptions]="{standalone: true}">
+        <input [(ngModel)]="Gr3To5" style="float:right;" (change)="filterBoolean('Gr3To5',Gr3To5)" type="checkbox" class="cbox" [ngModelOptions]="{standalone: true}">
   </div>
   </form>
 
@@ -115,7 +115,7 @@
             <span class="checkmark"></span>
            
           </label>
-          <input  style="float:right;" [(ngModel)]="timeOfYear" type="checkbox" value="October-April" id="defaultCheck1">
+          <input  [(ngModel)]="OctoberToApril" style="float:right;" (change)="filterBoolean('OctoberToApril',OctoberToApril)" type="checkbox" class="cbox" [ngModelOptions]="{standalone: true}">
     </div>
   
   
@@ -125,7 +125,7 @@
             <span class="checkmark"></span>
             
           </label>
-          <input  style="float:right;" [(ngModel)]="timeOfYear" type="checkbox" value="May-June" id="defaultCheck1">
+          <input [(ngModel)]="MayToJune" style="float:right;" (change)="filterBoolean('MayToJune',MayToJune)" type="checkbox" class="cbox" [ngModelOptions]="{standalone: true}">
     </div>
     </form>
   </div>

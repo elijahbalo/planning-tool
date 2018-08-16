@@ -32,12 +32,15 @@ second:boolean
   KinderTo2: boolean;
   Gr3To5: boolean;
   Gr6To8: boolean;
+  OctoberToApril:boolean;
+  MayToJune:boolean;
   checkboxValue:boolean;
   closeResult: string;
   items: any
   filtered:any;
   filters = {}
   filters1 = {}
+  
   grades: string;
   timeOfYear: string;
   day: string;
@@ -107,74 +110,17 @@ second:boolean
   
   }
 
-  private applyFilters1(first) {
-    this.first=first
-    console.log('action called')
-    let newlyFilter = Lodash.filter(this.items, Lodash.conforms(this.filters1))
-    console.log(newlyFilter)
-    this.filtered = newlyFilter;
-    /* if (this.filtered === undefined || this.filtered.length == 0) {
-      this.filtered = newlyFilter;
-      console.log(true)
-      console.log(this.filtered)
-      console.log(newlyFilter)
-  }
-  else{
-       console.log(false)
 
-  newlyFilter.map((elem)=> this.filtered.push(elem));
-  console.log(this.filtered)
-  console.log(newlyFilter)
-  } */
-
-
-  
-  }
-  
-
-  private applyFilters2(second) {
-    this.second=second
-    console.log('action called')
-    let newlyFilter = Lodash.filter(this.items, Lodash.conforms(this.filters1))
-    console.log(newlyFilter)
-    this.filtered = newlyFilter;
-    /* if (this.filtered === undefined || this.filtered.length == 0) {
-      this.filtered = newlyFilter;
-      console.log(true)
-      console.log(this.filtered)
-      console.log(newlyFilter)
-  }
-  else{
-       console.log(false)
-
-  newlyFilter.map((elem)=> this.filtered.push(elem));
-  console.log(this.filtered)
-  console.log(newlyFilter)
-  } */
-
-
-  
-  }
-
-
-
-
-  filterBoolean1(property: string, rule: boolean) {
+  filterBoolean(property: string, rule: boolean) {
+    this.first = rule;
     if (!rule) this.removeFilter(property)
     else {
       this.filters[property] = val => val
-      this.applyFilters1(rule)
+      console.log(this.filters)
+      this.applyFilters()
     }
   }
 
-
-  filterBoolean2(property: string, rule: boolean) {
-    if (!rule) this.removeFilter(property)
-    else {
-      this.filters1[property] = val => val
-      this.applyFilters2(rule)
-    }
-  }
 
   removeFilter(property: string) {
     delete this.filters[property]
@@ -185,9 +131,11 @@ second:boolean
 
 
   filterExact(property: string, rule: any) {
-
+  
     this.filters[property] = val => val == rule
+   
     this.applyFilters()
+  
   }
 
  /*  filterExact1(property: string, rule: any) {
