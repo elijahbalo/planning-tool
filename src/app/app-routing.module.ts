@@ -7,7 +7,7 @@ import { ConfirmPageComponent} from '../pages/confirm-page/confirm-page.componen
 import { SubmitPageComponent} from '../pages/submit-page/submit-page.component';
 
 const routes: Routes = [
- {path: '', redirectTo: 'LandingPage', pathMatch: 'full'}, 
+{path: '', redirectTo: 'LandingPage', pathMatch: 'full'}, 
   {path: 'LandingPage', component: LandingPageComponent},
   {path: 'DesignPage', component: DesignPageComponent },
   {path: 'ConfirmPage', component: ConfirmPageComponent},

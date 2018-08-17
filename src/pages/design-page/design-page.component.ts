@@ -130,10 +130,10 @@ reset(){
        if (event.order != 0){
          this.dates[event.order] = this.dates[event.order - 1] + this.duration
            let next = this.dates[event.order + 1]
-       /*   while(next != null ) {
+         while(next != null ) {
            this.dates[event.order + 1] = this.dates[event.order] + this.activities[event.oder + 1].length;
            next = next + 1
-         } */
+         } 
        }
      
     localStorage.setItem('dates', JSON.stringify(this.dates));

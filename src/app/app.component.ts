@@ -17,6 +17,8 @@ export class AppComponent {
   public items: Observable<any[]>;
   
 
+  
+ 
 
   constructor(private db: AngularFirestore) {
       this.items = db.collection('/itineraries').snapshotChanges().map(actions => {
@@ -31,5 +33,9 @@ export class AppComponent {
   public addPost(){
    this.db.collection('/itineraries').add({'name': this.title, 'description': this.content, 'length': this.length});
   }
+
+
+
+
   }
 
