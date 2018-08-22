@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import { Router,ActivatedRoute } from '@angular/router';
@@ -10,6 +10,12 @@ import { Activity} from '../../models/activity';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
+
+
+ @Output() set: EventEmitter<any> = new EventEmitter<any>();
+
+
+
   activities: Activity[] = [];
   @Input() view=true;  
   images: Array<string>;
@@ -35,6 +41,9 @@ export class CardComponent implements OnInit {
 
 
   navigateToDesign(){
+      localStorage.setItem("grade", JSON.stringify(this.item.grades))
+      localStorage.setItem("title", JSON.stringify(this.item.title))
+      localStorage.setItem("year", JSON.stringify(this.item.timeOfYear))
       this.item.activities.map(activity =>{
         this.activities.push(new Activity(
             activity.time,
@@ -52,24 +61,11 @@ export class CardComponent implements OnInit {
             activity.timeSlots,
             activity.order));  
       })
-   /*  this.activities.push(new Activity(
-        this.dates[this.select.order],
-        this.select.order,
-        event.name,
-        event.type,
-        event.length,
-        event.description,
-        event.on,
-        event.qc,
-        event.fees,
-        event.img,
-        event.ageRange,
-        event.timeOfYear,
-        event.timeSlots,
-        event.order));     */
-    localStorage.setItem("itinerary", JSON.stringify(this.activities))
-    localStorage.setItem("set", JSON.stringify(true))
-    this.router.navigate(["/DesignPage"]); 
+      localStorage.setItem("itinerary", JSON.stringify(this.activities))
+      this.set.emit(true);
+
+      
+
   }
  /* private ResizeImage() {
     var filesToUpload = document.getElementById('imageFile').files;

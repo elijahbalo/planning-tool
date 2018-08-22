@@ -1,0 +1,96 @@
+.flex{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    max-width:900px;
+    height:170px;
+    color:#4a4a4a;
+  }
+  
+  .time{
+  display:flex;
+  flex-direction:row;
+  width:7%;
+  font-family: "futura-pt", "Helvetica Neue", Arial;
+  
+  }
+  
+  .first1{
+    background-color:#e5e5e5;
+  width:95%;
+  height:25px;
+  font-size:0.85rem;
+
+  
+  }
+
+  .value{
+      
+      margin-left:8px;
+      margin-top:2px;
+  }
+  .second1{
+  width:5%;
+  background-color:#e5e5e5;
+  }
+  
+  
+  
+  .img{
+      position:relative;
+  height:150px;
+  width:200px;
+
+  }
+  .btext{
+      position:relative;
+      font-family: "futura-pt", "Helvetica Neue", Arial;
+  font-weight:bold;
+  margin-bottom:1%;
+  }
+
+  .img-res{
+  width:100%
+
+  }
+
+  .textt{
+  width:55%;
+  display:flex;
+  flex-direction:column;
+  margin-right:10px;
+  }
+  
+  .title1{
+  font-family: "futura-pt", "Helvetica Neue", Arial;
+  font-weight:bold;
+  margin-bottom:1%;
+  }
+  .bod{
+    font-family:  Arial;
+    font-weight:lighter;
+  max-width:85%;
+  height:90px;
+  color:#8a8d8a;
+
+  }
+  
+  .icon{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+  display:flex;
+  flex-direction:column;
+  margin-top:2%
+  }
+  
+  .img-res{
+    object-fit:cover;
+    height:20px;
+    width:20px;
+    margin-left:8px;
+  }
+.det{
+    font-size:0.9rem;
+    text-decoration:underline;
+}
+
+

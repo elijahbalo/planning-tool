@@ -1,12 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { EllipsisModule } from 'ngx-ellipsis';
 import {NgxPaginationModule} from 'ngx-pagination'; 
 import { CardComponent} from '../components/card/card.component';
 import { EmptyCardComponent} from '../components/empty-card/empty-card.component';
 import { BuildComponent} from '../components/build/build.component';
 import { ActivityComponent} from '../components/activity/activity.component';
 import { ActivityCardComponent} from '../components/activity-card/activity-card.component';
+import { ActivityDisplayComponent} from '../components/activity-display/activity-display.component';
+import {EmptyActivityDisplayComponent} from '../components/empty-activity-display/empty-activity-display.component'
 import { HeaderComponent} from '../components/header/header.component';
 import { ConfirmComponent} from '../components/confirm/confirm.component';
 import { StickyFooterComponent} from '../components/sticky-footer/sticky-footer.component';
@@ -17,6 +20,7 @@ import { MainHeaderComponent} from '../components/main-header/main-header.compon
 import { MainFooterComponent} from '../components/main-footer/main-footer.component';
 import { SubmitFormComponent} from '../components/submit-form/submit-form.component';
 import { LandingPageComponent} from '../pages/landing-page/landing-page.component';
+import { BrowsePageComponent} from '../pages/browse-page/browse-page.component';
 import { ConfirmPageComponent} from '../pages/confirm-page/confirm-page.component';
 import { DesignPageComponent} from '../pages/design-page/design-page.component';
 import { SubmitPageComponent} from '../pages/submit-page/submit-page.component';
@@ -32,10 +36,13 @@ import { AngularFireModule } from 'angularfire2';
 @NgModule({
   declarations: [
     AppComponent,
+   
     EmptyCardComponent,
     CardComponent,
     BuildComponent,
     ActivityComponent,
+    ActivityDisplayComponent,
+    EmptyActivityDisplayComponent,
     ActivityCardComponent,
     HeaderComponent,
     ConfirmComponent,
@@ -47,6 +54,7 @@ import { AngularFireModule } from 'angularfire2';
     MainFooterComponent,
     SubmitFormComponent,
     LandingPageComponent,
+    BrowsePageComponent,
     DesignPageComponent,
     ConfirmPageComponent,
     SubmitPageComponent
@@ -56,6 +64,7 @@ import { AngularFireModule } from 'angularfire2';
     SlideshowModule,
     NgbModule.forRoot(),
     BrowserModule,
+    EllipsisModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule, 
