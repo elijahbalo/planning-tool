@@ -39,6 +39,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/design-page/design-page.component */ "./src/pages/design-page/design-page.component.ts");
 /* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/confirm-page/confirm-page.component */ "./src/pages/confirm-page/confirm-page.component.ts");
 /* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/submit-page/submit-page.component */ "./src/pages/submit-page/submit-page.component.ts");
+/* harmony import */ var _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/browse-page/browse-page.component */ "./src/pages/browse-page/browse-page.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -51,12 +52,14 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
     { path: '', redirectTo: 'LandingPage', pathMatch: 'full' },
     { path: 'LandingPage', component: _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_2__["LandingPageComponent"] },
     { path: 'DesignPage', component: _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_3__["DesignPageComponent"] },
     { path: 'ConfirmPage', component: _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_4__["ConfirmPageComponent"] },
-    { path: 'SubmitPage', component: _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_5__["SubmitPageComponent"] }
+    { path: 'SubmitPage', component: _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_5__["SubmitPageComponent"] },
+    { path: 'BrowsePage', component: _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_6__["BrowsePageComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -81,7 +84,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<!-- <div>\n        <ul>\n                <li *ngFor=\"let item of items | async\">\n                     <div *ngFor=\"let list of item.activities\">{{list.name| json}}</div> \n             \n                    \n                </li>\n            </ul>\n </div>   -->\n\n<!--  <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" placeholder=\"Title..\">\n <Form>\n <input type=\"radio\" [(ngModel)]=\"length\" value=\"Half-Day...\" name=\"length\" placeholder=\"Title..\">\n <input type=\"radio\" [(ngModel)]=\"length\" value=\"Full-Day...\" name=\"length\" placeholder=\"Title..\">\n </Form>\n<textarea [(ngModel)]=\"content\" name=\"content\" placeholder=\"Content..\"></textarea>\n<input type=\"submit\" value=\"Add a Post\" (click)=\"addPost()\">  -->\n<!--outlet for router navigation--> \n<!-- \n\n<div class=\"btn-toolbar\" role=\"toolbar\" aria-label=\"Toolbar with button groups\" style=\"margin:18%;\">\n        <div class=\"btn-group mr-2\" role=\"group\" aria-label=\"First group\" >\n<div style=\"border-radius:100%; background-color:black; height:30px; width:30px; color:white; box-shadow:5px 5px blue\">1</div> <div>DESIGN</div>\n  <div style=\"border-radius:100%; background-color:red; height:30px; width:30px; color:white;\">2</div> <div>CONFIRM</div>\n         \n        </div>\n      </div>\n -->\n\n\n \n<router-outlet></router-outlet>\n\n\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<!-- <div>\n        <ul>\n                <li *ngFor=\"let item of items | async\">\n                     <div *ngFor=\"let list of item.activities\">{{list.name| json}}</div> \n             \n                    \n                </li>\n            </ul>\n </div>   -->\n\n<!--  <input type=\"text\" [(ngModel)]=\"title\" name=\"title\" placeholder=\"Title..\">\n <Form>\n <input type=\"radio\" [(ngModel)]=\"length\" value=\"Half-Day...\" name=\"length\" placeholder=\"Title..\">\n <input type=\"radio\" [(ngModel)]=\"length\" value=\"Full-Day...\" name=\"length\" placeholder=\"Title..\">\n </Form>\n<textarea [(ngModel)]=\"content\" name=\"content\" placeholder=\"Content..\"></textarea>\n<input type=\"submit\" value=\"Add a Post\" (click)=\"addPost()\">  -->\n<!--outlet for router navigation--> \n<!-- \n\n<div class=\"btn-toolbar\" role=\"toolbar\" aria-label=\"Toolbar with button groups\" style=\"margin:18%;\">\n        <div class=\"btn-group mr-2\" role=\"group\" aria-label=\"First group\" >\n<div style=\"border-radius:100%; background-color:black; height:30px; width:30px; color:white; box-shadow:5px 5px blue\">1</div> <div>DESIGN</div>\n  <div style=\"border-radius:100%; background-color:red; height:30px; width:30px; color:white;\">2</div> <div>CONFIRM</div>\n         \n        </div>\n      </div>\n -->\n<!-- <div class=\"flex\">\n<div class=\"time\">\n<div class=\"first\">9:30AM</div>\n<div class=\"second\"></div>\n\n</div>\n\n\n\n<div class=\"img\"> </div>\n\n<div class=\"text\">\n<div class=\"title\"> Globe Trekkers at The Canadian Children's Museum</div>\n<div class=\"body\">\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. \nAenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, \nnascetur ridiculus mus. Donec quam felis, \n</div>\n</div>\n\n\n<div class=\"icon\">\n<div class=\"info\">\n  <img class=\"img-responsive img-res\" src=\"../assets/images/info2.png\">\n</div>\n<div class=\"det\">\nDetails\n</div>    \n    </div>\n\n\n</div>\n -->\n<router-outlet></router-outlet>\n\n\n"
 
 /***/ }),
 
@@ -92,7 +95,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "html, body {\n  position: relative;\n  height: 100%; }\n\nbody {\n  background: #eee;\n  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  color: #000;\n  margin: 0;\n  padding: 0; }\n\n.swiper-container {\n  width: 100%;\n  height: 100%; }\n\n.swiper-slide {\n  text-align: center;\n  font-size: 18px;\n  background: #fff;\n  /* Center slide text vertically */\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n"
+module.exports = ".flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  max-width: 900px;\n  height: 170px; }\n\n.time {\n  display: flex;\n  flex-direction: row;\n  width: 7%; }\n\n.first {\n  background-color: grey;\n  width: 95%;\n  height: 25px; }\n\n.second {\n  width: 5%;\n  background-color: grey; }\n\n.img {\n  height: 150px;\n  width: 200px;\n  border-style: solid;\n  border-width: thin;\n  border-color: grey; }\n\n.text {\n  width: 55%;\n  display: flex;\n  flex-direction: column;\n  margin-right: 10px; }\n\n.title {\n  font-weight: bold;\n  margin-bottom: 1%; }\n\n.body {\n  max-width: 85%; }\n\n.icon {\n  display: flex;\n  flex-direction: column;\n  margin-top: 2%; }\n\n.img-res {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 25px;\n  width: 25px;\n  margin-left: 8px; }\n"
 
 /***/ }),
 
@@ -175,33 +178,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
-/* harmony import */ var _components_card_card_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/card/card.component */ "./src/components/card/card.component.ts");
-/* harmony import */ var _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/empty-card/empty-card.component */ "./src/components/empty-card/empty-card.component.ts");
-/* harmony import */ var _components_build_build_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/build/build.component */ "./src/components/build/build.component.ts");
-/* harmony import */ var _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/activity/activity.component */ "./src/components/activity/activity.component.ts");
-/* harmony import */ var _components_activity_card_activity_card_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/activity-card/activity-card.component */ "./src/components/activity-card/activity-card.component.ts");
-/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/header/header.component */ "./src/components/header/header.component.ts");
-/* harmony import */ var _components_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/confirm/confirm.component */ "./src/components/confirm/confirm.component.ts");
-/* harmony import */ var _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/sticky-footer/sticky-footer.component */ "./src/components/sticky-footer/sticky-footer.component.ts");
-/* harmony import */ var _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/confirm-sticker/confirm-sticker.component */ "./src/components/confirm-sticker/confirm-sticker.component.ts");
-/* harmony import */ var _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/warning/warning.component */ "./src/components/warning/warning.component.ts");
-/* harmony import */ var _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/calendar/calendar.component */ "./src/components/calendar/calendar.component.ts");
-/* harmony import */ var _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/main-header/main-header.component */ "./src/components/main-header/main-header.component.ts");
-/* harmony import */ var _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/main-footer/main-footer.component */ "./src/components/main-footer/main-footer.component.ts");
-/* harmony import */ var _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/submit-form/submit-form.component */ "./src/components/submit-form/submit-form.component.ts");
-/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../pages/landing-page/landing-page.component */ "./src/pages/landing-page/landing-page.component.ts");
-/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../pages/confirm-page/confirm-page.component */ "./src/pages/confirm-page/confirm-page.component.ts");
-/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../pages/design-page/design-page.component */ "./src/pages/design-page/design-page.component.ts");
-/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/submit-page/submit-page.component */ "./src/pages/submit-page/submit-page.component.ts");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ng-simple-slideshow */ "./node_modules/ng-simple-slideshow/ng-simple-slideshow.es5.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
+/* harmony import */ var ngx_ellipsis__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-ellipsis */ "./node_modules/ngx-ellipsis/fesm5/ngx-ellipsis.js");
+/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var _components_card_card_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/card/card.component */ "./src/components/card/card.component.ts");
+/* harmony import */ var _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/empty-card/empty-card.component */ "./src/components/empty-card/empty-card.component.ts");
+/* harmony import */ var _components_build_build_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/build/build.component */ "./src/components/build/build.component.ts");
+/* harmony import */ var _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/activity/activity.component */ "./src/components/activity/activity.component.ts");
+/* harmony import */ var _components_activity_card_activity_card_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/activity-card/activity-card.component */ "./src/components/activity-card/activity-card.component.ts");
+/* harmony import */ var _components_activity_display_activity_display_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/activity-display/activity-display.component */ "./src/components/activity-display/activity-display.component.ts");
+/* harmony import */ var _components_empty_activity_display_empty_activity_display_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/empty-activity-display/empty-activity-display.component */ "./src/components/empty-activity-display/empty-activity-display.component.ts");
+/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/header/header.component */ "./src/components/header/header.component.ts");
+/* harmony import */ var _components_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/confirm/confirm.component */ "./src/components/confirm/confirm.component.ts");
+/* harmony import */ var _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/sticky-footer/sticky-footer.component */ "./src/components/sticky-footer/sticky-footer.component.ts");
+/* harmony import */ var _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/confirm-sticker/confirm-sticker.component */ "./src/components/confirm-sticker/confirm-sticker.component.ts");
+/* harmony import */ var _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/warning/warning.component */ "./src/components/warning/warning.component.ts");
+/* harmony import */ var _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/calendar/calendar.component */ "./src/components/calendar/calendar.component.ts");
+/* harmony import */ var _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/main-header/main-header.component */ "./src/components/main-header/main-header.component.ts");
+/* harmony import */ var _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/main-footer/main-footer.component */ "./src/components/main-footer/main-footer.component.ts");
+/* harmony import */ var _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/submit-form/submit-form.component */ "./src/components/submit-form/submit-form.component.ts");
+/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../pages/landing-page/landing-page.component */ "./src/pages/landing-page/landing-page.component.ts");
+/* harmony import */ var _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../pages/browse-page/browse-page.component */ "./src/pages/browse-page/browse-page.component.ts");
+/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../pages/confirm-page/confirm-page.component */ "./src/pages/confirm-page/confirm-page.component.ts");
+/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../pages/design-page/design-page.component */ "./src/pages/design-page/design-page.component.ts");
+/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../pages/submit-page/submit-page.component */ "./src/pages/submit-page/submit-page.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ng-simple-slideshow */ "./node_modules/ng-simple-slideshow/ng-simple-slideshow.es5.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -238,46 +245,54 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_23__["AppComponent"],
-                _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_5__["EmptyCardComponent"],
-                _components_card_card_component__WEBPACK_IMPORTED_MODULE_4__["CardComponent"],
-                _components_build_build_component__WEBPACK_IMPORTED_MODULE_6__["BuildComponent"],
-                _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_7__["ActivityComponent"],
-                _components_activity_card_activity_card_component__WEBPACK_IMPORTED_MODULE_8__["ActivityCardComponent"],
-                _components_header_header_component__WEBPACK_IMPORTED_MODULE_9__["HeaderComponent"],
-                _components_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_10__["ConfirmComponent"],
-                _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_11__["StickyFooterComponent"],
-                _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_12__["ConfirmStickerComponent"],
-                _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_13__["WarningComponent"],
-                _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_15__["MainHeaderComponent"],
-                _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_14__["CalendarComponent"],
-                _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_16__["MainFooterComponent"],
-                _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_17__["SubmitFormComponent"],
-                _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_18__["LandingPageComponent"],
-                _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_20__["DesignPageComponent"],
-                _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_19__["ConfirmPageComponent"],
-                _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_21__["SubmitPageComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_27__["AppComponent"],
+                _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_6__["EmptyCardComponent"],
+                _components_card_card_component__WEBPACK_IMPORTED_MODULE_5__["CardComponent"],
+                _components_build_build_component__WEBPACK_IMPORTED_MODULE_7__["BuildComponent"],
+                _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_8__["ActivityComponent"],
+                _components_activity_display_activity_display_component__WEBPACK_IMPORTED_MODULE_10__["ActivityDisplayComponent"],
+                _components_empty_activity_display_empty_activity_display_component__WEBPACK_IMPORTED_MODULE_11__["EmptyActivityDisplayComponent"],
+                _components_activity_card_activity_card_component__WEBPACK_IMPORTED_MODULE_9__["ActivityCardComponent"],
+                _components_header_header_component__WEBPACK_IMPORTED_MODULE_12__["HeaderComponent"],
+                _components_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_13__["ConfirmComponent"],
+                _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_14__["StickyFooterComponent"],
+                _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_15__["ConfirmStickerComponent"],
+                _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_16__["WarningComponent"],
+                _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_18__["MainHeaderComponent"],
+                _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_17__["CalendarComponent"],
+                _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_19__["MainFooterComponent"],
+                _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_20__["SubmitFormComponent"],
+                _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_21__["LandingPageComponent"],
+                _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_22__["BrowsePageComponent"],
+                _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_24__["DesignPageComponent"],
+                _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_23__["ConfirmPageComponent"],
+                _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_25__["SubmitPageComponent"]
             ],
             imports: [
-                ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_24__["SlideshowModule"],
+                ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_28__["SlideshowModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbModule"].forRoot(),
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_22__["AppRoutingModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_26__["HttpClientModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_27__["FormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_27__["ReactiveFormsModule"],
-                ngx_pagination__WEBPACK_IMPORTED_MODULE_3__["NgxPaginationModule"],
-                angularfire2__WEBPACK_IMPORTED_MODULE_29__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_25__["environment"].firebase),
-                angularfire2_firestore__WEBPACK_IMPORTED_MODULE_28__["AngularFirestoreModule"]
+                ngx_ellipsis__WEBPACK_IMPORTED_MODULE_3__["EllipsisModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_26__["AppRoutingModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_30__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_31__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_31__["ReactiveFormsModule"],
+                ngx_pagination__WEBPACK_IMPORTED_MODULE_4__["NgxPaginationModule"],
+                angularfire2__WEBPACK_IMPORTED_MODULE_33__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_29__["environment"].firebase),
+                angularfire2_firestore__WEBPACK_IMPORTED_MODULE_32__["AngularFirestoreModule"]
             ],
-            providers: [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_28__["AngularFirestoreModule"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_23__["AppComponent"]]
+            providers: [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_32__["AngularFirestoreModule"]],
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_27__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -362,6 +377,73 @@ var ActivityCardComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], ActivityCardComponent);
     return ActivityCardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/components/activity-display/activity-display.component.html":
+/*!*************************************************************************!*\
+  !*** ./src/components/activity-display/activity-display.component.html ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"flex\">\n  <div class=\"time\">\n  <div class=\"first1\"><span class=\"value\">{{itinerary.time}}</span></div>\n  <div class=\"second1\"></div>\n  \n  </div>\n  \n  \n  \n  <div class=\"img\">\n    <img class=\"img-responsive img\" src=\"{{itinerary.img}}\">\n  \n  </div>\n  \n  <div class=\"textt\">\n  <div class=\"title1\">{{itinerary.name}}</div>\n  <div class=\"bod\" ellipsis>\n  {{itinerary.description}}\n  </div>\n  </div>\n  \n  \n  <div class=\"icon\">\n  <div class=\"info\">\n    <img class=\"img-responsive img-res\" src=\"../assets/images/info2.png\">\n  </div>\n  <div class=\"det\">\n  Details\n  </div>    \n      </div>\n  \n  \n  </div>\n  "
+
+/***/ }),
+
+/***/ "./src/components/activity-display/activity-display.component.scss":
+/*!*************************************************************************!*\
+  !*** ./src/components/activity-display/activity-display.component.scss ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  max-width: 900px;\n  height: 170px;\n  color: #4a4a4a; }\n\n.time {\n  display: flex;\n  flex-direction: row;\n  width: 7%;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.first1 {\n  background-color: #e5e5e5;\n  width: 95%;\n  height: 25px;\n  font-size: 0.85rem; }\n\n.value {\n  margin-left: 8px;\n  margin-top: 2px; }\n\n.second1 {\n  width: 5%;\n  background-color: #e5e5e5; }\n\n.img {\n  position: relative;\n  height: 150px;\n  width: 200px; }\n\n.btext {\n  position: relative;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-bottom: 1%; }\n\n.img-res {\n  width: 100%; }\n\n.textt {\n  width: 55%;\n  display: flex;\n  flex-direction: column;\n  margin-right: 10px; }\n\n.title1 {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-bottom: 1%; }\n\n.bod {\n  font-family: Arial;\n  font-weight: lighter;\n  max-width: 85%;\n  height: 90px;\n  color: #8a8d8a; }\n\n.icon {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  display: flex;\n  flex-direction: column;\n  margin-top: 2%; }\n\n.img-res {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 20px;\n  width: 20px;\n  margin-left: 8px; }\n\n.det {\n  font-size: 0.9rem;\n  text-decoration: underline; }\n"
+
+/***/ }),
+
+/***/ "./src/components/activity-display/activity-display.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/components/activity-display/activity-display.component.ts ***!
+  \***********************************************************************/
+/*! exports provided: ActivityDisplayComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActivityDisplayComponent", function() { return ActivityDisplayComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ActivityDisplayComponent = /** @class */ (function () {
+    function ActivityDisplayComponent() {
+    }
+    ActivityDisplayComponent.prototype.ngOnInit = function () {
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], ActivityDisplayComponent.prototype, "itinerary", void 0);
+    ActivityDisplayComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-activity-display',
+            template: __webpack_require__(/*! ./activity-display.component.html */ "./src/components/activity-display/activity-display.component.html"),
+            styles: [__webpack_require__(/*! ./activity-display.component.scss */ "./src/components/activity-display/activity-display.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ActivityDisplayComponent);
+    return ActivityDisplayComponent;
 }());
 
 
@@ -841,7 +923,7 @@ var CalendarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <div class=\"card-container\" (click)=\"navigateToDesign()\">\n       <div style=\"position:relative\">\n         <img src=\"{{item.img}}\" alt=\"Random first slide\" class=\"img-responsive img-resize\">\n      <div class=\"text\">\n        \n          <div class=text2>{{item.title}}</div>\n          \n          </div>\n      </div>\n      <div >\n          <div class=\"des\">\n        <div class=\"text1\">{{item.grades}}, {{item.day}}</div>\n        <div class=\"text3\">{{item.timeOfYear}}</div>\n        </div>\n    <div *ngIf=\"view\" class=\"layers\" >\n        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n        natoque penatibus et magnis dis parturient montes, nascetur \n        ridiculus mus. Donec quam felis, ultricies nec.\n    </div>\n    <div *ngIf=\"!view\" class=\"layers\" >\n        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n        natoque penatibus et magnis dis parturient montes, nascetur \n        ridiculus mus. Donec quam felis, ultricies nec.\n    </div>\n    </div>\n    <!-- <div *ngIf=\"view\" class=\"layers link\" >\n      <a href=\"javascript:void(0)\" (click)=\"navigateToDesign()\">VIEW THIS ITINERARY</a>\n     <svg><img src=\"../../assets/images/right-arrow.png\"></svg>\n    </div> -->\n    </div>\n  "
+module.exports = "\n    <div class=\"card-container\" (click)=\"navigateToDesign()\">\n       <div style=\"position:relative\">\n         <img src=\"{{item.img}}\" alt=\"Random first slide\" class=\"img-responsive img-resize\">\n      <div class=\"text\">\n        <div class=\"text1\">{{item.grades}}, {{item.day}}</div>\n          <div class=text2>{{item.title}}</div>\n          <div class=\"text3\">{{item.timeOfYear}}</div>\n          \n          </div>\n          <div class=\"d-icon\">i</div>\n          <div class=\"details\">Details</div>\n      </div>\n      <div>\n        \n<!--     <div *ngIf=\"view\" class=\"layers\" >\n        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n        natoque penatibus et magnis dis parturient montes, nascetur \n        ridiculus mus. Donec quam felis, ultricies nec.\n    </div>\n    <div *ngIf=\"!view\" class=\"layers\" >\n        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n        natoque penatibus et magnis dis parturient montes, nascetur \n        ridiculus mus. Donec quam felis, ultricies nec.\n    </div> -->\n    </div>\n    <!-- <div *ngIf=\"view\" class=\"layers link\" >\n      <a href=\"javascript:void(0)\" (click)=\"navigateToDesign()\">VIEW THIS ITINERARY</a>\n     <svg><img src=\"../../assets/images/right-arrow.png\"></svg>\n    </div> -->\n    </div>\n  "
 
 /***/ }),
 
@@ -852,7 +934,7 @@ module.exports = "\n    <div class=\"card-container\" (click)=\"navigateToDesign
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card-container {\n  height: 100%;\n  width: 100%;\n  border-width: 1px;\n  cursor: pointer;\n  border-style: solid;\n  border-color: #E0E0E0;\n  background: transparent;\n  background-image: initial;\n  background-position-x: initial;\n  background-position-y: initial;\n  background-size: initial;\n  background-attachment: initial;\n  background-origin: initial;\n  background-clip: initial;\n  background-color: transparent; }\n\n#slideshow {\n  width: 100%; }\n\n.text {\n  position: absolute;\n  margin-left: 2.5%;\n  bottom: 20px;\n  left: 20px;\n  line-height: 100%;\n  max-width: 80%;\n  z-index: 2;\n  color: #fff;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1.5rem; }\n\n.text2 {\n  font-weight: bold; }\n\n.des {\n  padding-left: 20px;\n  padding-top: 5px;\n  font-family: Arial;\n  font-size: 8; }\n\n.layers {\n  font-family: Arial;\n  text-align: justify;\n  padding-left: 20px;\n  padding-right: 20px;\n  padding-top: 5px;\n  padding-bottom: 20px;\n  font-size: 14;\n  margin-top: 2%;\n  color: #4a4a4a;\n  cursor: pointer; }\n\n.link {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-top: 4%;\n  margin-bottom: 2%; }\n\n.img-resize {\n  height: 220px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\na:link {\n  text-decoration: none;\n  color: #4a4a4a; }\n"
+module.exports = ".card-container {\n  height: 100%;\n  width: 100%;\n  border-width: 1px;\n  cursor: pointer;\n  border-style: solid;\n  border-color: #E0E0E0;\n  background: transparent;\n  background-image: initial;\n  background-position-x: initial;\n  background-position-y: initial;\n  background-size: initial;\n  background-attachment: initial;\n  background-origin: initial;\n  background-clip: initial;\n  background-color: transparent; }\n\n#slideshow {\n  width: 100%; }\n\n.text {\n  position: absolute;\n  margin-left: 2.5%;\n  bottom: 20px;\n  left: 20px;\n  line-height: 100%;\n  max-width: 80%;\n  z-index: 2;\n  color: #fff;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1.5rem;\n  background-color: rgba(0, 0, 0, 0.1); }\n\n.text1 {\n  font-family: Arial;\n  font-size: 0.8rem; }\n\n.text2 {\n  font-weight: bold; }\n\n.text3 {\n  font-weight: lighter;\n  font-size: 1rem; }\n\n.des {\n  padding-left: 20px;\n  padding-top: 5px;\n  font-family: Arial;\n  font-size: 8; }\n\n.layers {\n  font-family: Arial;\n  text-align: justify;\n  padding-left: 20px;\n  padding-right: 20px;\n  padding-top: 5px;\n  padding-bottom: 20px;\n  font-size: 14;\n  margin-top: 2%;\n  color: #4a4a4a;\n  cursor: pointer; }\n\n.link {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-top: 4%;\n  margin-bottom: 2%; }\n\n.img-resize {\n  height: 230px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\na:link {\n  text-decoration: none;\n  color: #4a4a4a; }\n\n.details {\n  position: absolute;\n  bottom: 13px;\n  right: 17px;\n  line-height: 100%;\n  text-decoration: underline;\n  max-width: 80%;\n  color: #fff;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.7rem;\n  background-color: rgba(0, 0, 0, 0.2); }\n\n.d-icon {\n  position: absolute;\n  bottom: 33px;\n  right: 25px;\n  color: #fff;\n  border-color: #fff;\n  border-style: solid;\n  font-size: 0.7em;\n  border-width: 2px;\n  padding-top: 0.5%;\n  padding-bottom: 0.5%;\n  padding-left: 2%;\n  padding-right: 2%;\n  border-radius: 50%;\n  background-color: rgba(0, 0, 0, 0.2); }\n"
 
 /***/ }),
 
@@ -890,6 +972,7 @@ var CardComponent = /** @class */ (function () {
         this._http = _http;
         this.router = router;
         this.route = route;
+        this.set = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
         this.activities = [];
         this.view = true;
     }
@@ -907,28 +990,19 @@ var CardComponent = /** @class */ (function () {
     };
     CardComponent.prototype.navigateToDesign = function () {
         var _this = this;
+        localStorage.setItem("grade", JSON.stringify(this.item.grades));
+        localStorage.setItem("title", JSON.stringify(this.item.title));
+        localStorage.setItem("year", JSON.stringify(this.item.timeOfYear));
         this.item.activities.map(function (activity) {
             _this.activities.push(new _models_activity__WEBPACK_IMPORTED_MODULE_4__["Activity"](activity.time, 0, activity.name, activity.type, activity.length, activity.description, activity.on, activity.qc, activity.fees, activity.img, activity.ageRange, activity.timeOfYear, activity.timeSlots, activity.order));
         });
-        /*  this.activities.push(new Activity(
-             this.dates[this.select.order],
-             this.select.order,
-             event.name,
-             event.type,
-             event.length,
-             event.description,
-             event.on,
-             event.qc,
-             event.fees,
-             event.img,
-             event.ageRange,
-             event.timeOfYear,
-             event.timeSlots,
-             event.order));     */
         localStorage.setItem("itinerary", JSON.stringify(this.activities));
-        localStorage.setItem("set", JSON.stringify(true));
-        this.router.navigate(["/DesignPage"]);
+        this.set.emit(true);
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], CardComponent.prototype, "set", void 0);
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
         __metadata("design:type", Object)
@@ -1103,6 +1177,69 @@ var ConfirmComponent = /** @class */ (function () {
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]])
     ], ConfirmComponent);
     return ConfirmComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/components/empty-activity-display/empty-activity-display.component.html":
+/*!*************************************************************************************!*\
+  !*** ./src/components/empty-activity-display/empty-activity-display.component.html ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"flex\">\n    <div class=\"time\">\n    <div class=\"first1\"><span class=\"value\">{{itinerary.time}}</span></div>\n    <div class=\"second1\"></div>\n    \n    </div>\n    \n    \n    \n    <div class=\"img\">\n      <img class=\"img-responsive img\" src=\"{{itinerary.img}}\">\n    \n    </div>\n    \n    <div class=\"textt\">\n    <div class=\"title1\">{{itinerary.name}}</div>\n    <div class=\"bod\" ellipsis>\n    {{itinerary.description}}\n    </div>\n    </div>\n    \n    \n    <div class=\"icon\">\n    <div class=\"info\">\n      <img class=\"img-responsive img-res\" src=\"../assets/images/info2.png\">\n    </div>\n    <div class=\"det\">\n    Details\n    </div>    \n        </div>\n    \n    \n    </div>\n    "
+
+/***/ }),
+
+/***/ "./src/components/empty-activity-display/empty-activity-display.component.scss":
+/*!*************************************************************************************!*\
+  !*** ./src/components/empty-activity-display/empty-activity-display.component.scss ***!
+  \*************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  max-width: 900px;\n  height: 170px;\n  color: #4a4a4a; }\n\n.time {\n  display: flex;\n  flex-direction: row;\n  width: 7%;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.first1 {\n  background-color: #e5e5e5;\n  width: 95%;\n  height: 25px;\n  font-size: 0.85rem; }\n\n.value {\n  margin-left: 8px;\n  margin-top: 2px; }\n\n.second1 {\n  width: 5%;\n  background-color: #e5e5e5; }\n\n.img {\n  position: relative;\n  height: 150px;\n  width: 200px; }\n\n.btext {\n  position: relative;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-bottom: 1%; }\n\n.img-res {\n  width: 100%; }\n\n.textt {\n  width: 55%;\n  display: flex;\n  flex-direction: column;\n  margin-right: 10px; }\n\n.title1 {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-bottom: 1%; }\n\n.bod {\n  font-family: Arial;\n  font-weight: lighter;\n  max-width: 85%;\n  height: 90px;\n  color: #8a8d8a; }\n\n.icon {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  display: flex;\n  flex-direction: column;\n  margin-top: 2%;\n  visibility: hidden; }\n\n.img-res {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 20px;\n  width: 20px;\n  margin-left: 8px; }\n\n.det {\n  font-size: 0.9rem;\n  text-decoration: underline; }\n"
+
+/***/ }),
+
+/***/ "./src/components/empty-activity-display/empty-activity-display.component.ts":
+/*!***********************************************************************************!*\
+  !*** ./src/components/empty-activity-display/empty-activity-display.component.ts ***!
+  \***********************************************************************************/
+/*! exports provided: EmptyActivityDisplayComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmptyActivityDisplayComponent", function() { return EmptyActivityDisplayComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var EmptyActivityDisplayComponent = /** @class */ (function () {
+    function EmptyActivityDisplayComponent() {
+    }
+    EmptyActivityDisplayComponent.prototype.ngOnInit = function () {
+    };
+    EmptyActivityDisplayComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-empty-activity-display',
+            template: __webpack_require__(/*! ./empty-activity-display.component.html */ "./src/components/empty-activity-display/empty-activity-display.component.html"),
+            styles: [__webpack_require__(/*! ./empty-activity-display.component.scss */ "./src/components/empty-activity-display/empty-activity-display.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], EmptyActivityDisplayComponent);
+    return EmptyActivityDisplayComponent;
 }());
 
 
@@ -1305,7 +1442,7 @@ var HeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<footer id=\"secondary-footer\" tabindex=\"-1\">\n    <ul class=\"footer-sitemap\"><li id=\"menu-item-452\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-452\"><a href=\"https://www.historymuseum.ca/visit/\">Visit</a>\n  <ul class=\"sub-menu\">\n    <li id=\"menu-item-5102\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-5102\"><a href=\"/visit/#admission-fees\">Admission Fees</a></li>\n    <li id=\"menu-item-456\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-456\"><a href=\"https://www.historymuseum.ca/visit/cineplus/\">CINÉ+</a></li>\n    <li id=\"menu-item-458\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-458\"><a href=\"https://www.historymuseum.ca/visit/childrens-museum/\">Children&#8217;s Museum</a></li>\n    <li id=\"menu-item-4231\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-4231\"><a href=\"https://www.historymuseum.ca/visit/groups/\">Group Visits</a></li>\n    <li id=\"menu-item-457\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-457\"><a href=\"https://www.historymuseum.ca/learn/activities/\">Activities</a></li>\n  </ul>\n  </li>\n  <li id=\"menu-item-459\" class=\"menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-8 current_page_item menu-item-has-children menu-item-459\"><a href=\"https://www.historymuseum.ca/exhibitions/\">Exhibitions</a>\n  <ul class=\"sub-menu\">\n    <li id=\"menu-item-460\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-460\"><a href=\"https://www.historymuseum.ca/exhibitions/special-exhibitions/\">Special Exhibitions</a></li>\n    <li id=\"menu-item-463\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-463\"><a href=\"https://www.historymuseum.ca/exhibitions/online-exhibitions/\">Online Exhibitions</a></li>\n    <li id=\"menu-item-466\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-466\"><a href=\"https://www.historymuseum.ca/exhibitions/travelling-exhibitions/\">Travelling Exhibitions</a></li>\n  </ul>\n  </li>\n  <li id=\"menu-item-467\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-467\"><a href=\"https://www.historymuseum.ca/learn/\">Learn</a>\n  <ul class=\"sub-menu\">\n    <li id=\"menu-item-468\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-468\"><a href=\"https://www.historymuseum.ca/learn/resource-centre/\">Resource Centre</a></li>\n    <li id=\"menu-item-469\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-469\"><a href=\"https://www.historymuseum.ca/collections\">Collections</a></li>\n    <li id=\"menu-item-472\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-472\"><a href=\"https://www.historymuseum.ca/learn/research/\">Research</a></li>\n    <li id=\"menu-item-3825\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-3825\"><a href=\"https://www.historymuseum.ca/learn/school-programs/\">School Programs</a></li>\n  </ul>\n  </li>\n  <li id=\"menu-item-474\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-474\"><a href=\"https://www.historymuseum.ca/shop/\">Shop</a>\n  <ul class=\"sub-menu\">\n    <li id=\"menu-item-5123\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-5123\"><a href=\"/shop/#memberships\">Memberships</a></li>\n    <li id=\"menu-item-5103\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-5103\"><a href=\"/boutique/\">Online Gift Shop</a></li>\n    <li id=\"menu-item-5122\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-5122\"><a href=\"https://www.historymuseum.ca/boutique/category-categorie/all-books/museum-publications/\">Publications</a></li>\n  </ul>\n  </li>\n  <li id=\"menu-item-484\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-484\"><a href=\"https://www.historymuseum.ca/support/\">Support</a>\n  <ul class=\"sub-menu\">\n    <li id=\"menu-item-4248\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-4248\"><a href=\"https://www.historymuseum.ca/support/\">Make a Donation</a></li>\n    <li id=\"menu-item-491\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-491\"><a href=\"/support/#tabs\">Ways of Giving</a></li>\n    <li id=\"menu-item-3426\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-3426\"><a href=\"https://www.historymuseum.ca/support/volunteering/\">Volunteer</a></li>\n  </ul>\n  </li>\n  <li id=\"menu-item-485\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-485\"><a href=\"https://www.historymuseum.ca/about/\">About</a>\n  <ul class=\"sub-menu\">\n    <li id=\"menu-item-5124\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-5124\"><a href=\"/about/the-corporation/#tabs\">The Corporation</a></li>\n    <li id=\"menu-item-499\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-499\"><a href=\"https://www.historymuseum.ca/blog\">Blog</a></li>\n    <li id=\"menu-item-10180\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-10180\"><a href=\"https://www.historymuseum.ca/about/media-centre/\">Media Centre</a></li>\n    <li id=\"menu-item-500\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-500\"><a href=\"https://www.historymuseum.ca/about/facility-rentals/\">Facility Rentals</a></li>\n    <li id=\"menu-item-498\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-498\"><a href=\"https://www.historymuseum.ca/about/contact-us/\">Contact Us</a></li>\n    <li id=\"menu-item-4131\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-4131\"><a href=\"https://www.historymuseum.ca/about/jobs/\">Jobs</a></li>\n  </ul>\n  </li>\n  </ul>\t\n  \n  <a class=\"hwm-subscribe-bar\" target=\"_blank\" href=\"http://web.historymuseum.ca/cn/ae6hw/cmh-form\">\n    <div class=\"hwm-subscribe-bar-wrapper\">\n      <main class=\"subscribe-bar-main\">\n        <h2 class=\"subscribe-bar-title\">Get the Inside Scoop</h2>\n        <p class=\"subscribe-bar-desc\">Subscribe to our mailing list.</p>\n      </main>\n      <span class=\"subscribe-bar-button\">\n        Subscribe\t\t</span>\n    </div>\n  </a></footer><!--End #secondary-footer-->\n  <svg xmlns=\"http://www.w3.org/2000/svg\" style=\"display:none;\">\n      <symbol id=\"twitter\" viewBox=\"0 0 49.221 40\">\n    <path d=\"M49.22,4.734c-1.809,0.804-3.756,1.346-5.799,1.589c2.086-1.249,3.686-3.228,4.439-5.587\n    c-1.951,1.158-4.111,1.998-6.412,2.452C39.605,1.227,36.982,0,34.077,0c-5.576,0-10.098,4.521-10.098,10.099\n    c0,0.791,0.089,1.562,0.262,2.302C15.848,11.978,8.407,7.958,3.427,1.848C2.557,3.339,2.06,5.074,2.06,6.926\n    c0,3.504,1.782,6.595,4.492,8.405c-1.654-0.053-3.212-0.508-4.573-1.264c-0.001,0.041-0.001,0.084-0.001,0.127\n    c0,4.893,3.48,8.973,8.1,9.903c-0.847,0.229-1.739,0.354-2.66,0.354c-0.651,0-1.284-0.062-1.9-0.182\n    c1.285,4.012,5.015,6.934,9.433,7.014c-3.456,2.709-7.809,4.322-12.541,4.322c-0.814,0-1.618-0.049-2.408-0.143\n    C4.47,38.33,9.778,40,15.48,40c18.576,0,28.732-15.387,28.732-28.731c0-0.438-0.01-0.873-0.029-1.308\n    C46.156,8.539,47.866,6.759,49.22,4.734z\"></path>\n      </symbol>\n      <symbol id=\"facebook\" viewBox=\"18.891 10.326 18.586 40\">\n    <path d=\"M37.477,23.278h-6.33v-4.151c0-1.56,1.033-1.923,1.762-1.923c0.727,0,4.467,0,4.467,0v-6.854l-6.152-0.023\n    c-6.829,0-8.383,5.112-8.383,8.383v4.569h-3.949v7.062h3.949c0,9.063,0,19.985,0,19.985h8.307c0,0,0-11.029,0-19.985h5.605\n    L37.477,23.278z\"></path>\n      </symbol>\n    <symbol id=\"instagram\" viewBox=\"0 0 40 40\">\n    <path d=\"M20 9.597c-5.646 0-10.323 4.596-10.323 10.323 0 5.726 4.597 10.322 10.323 10.322s10.322-4.677 10.322-10.322-4.678-10.323-10.322-10.323zm0 16.935c-3.629 0-6.613-2.982-6.613-6.612 0-3.629 2.984-6.613 6.613-6.613s6.613 2.984 6.613 6.613c0 3.63-2.984 6.612-6.613 6.612z\"/><circle cx=\"30.726\" cy=\"9.355\" r=\"2.339\"/><path d=\"M36.773 3.306c-2.095-2.177-5.081-3.306-8.466-3.306h-16.615c-7.014 0-11.692 4.678-11.692 11.693v16.532c0 3.469 1.129 6.451 3.387 8.63 2.176 2.097 5.081 3.145 8.386 3.145h16.451c3.468 0 6.371-1.128 8.468-3.145 2.179-2.096 3.308-5.081 3.308-8.549v-16.613c0-3.387-1.129-6.29-3.227-8.387zm-.484 25c0 2.502-.726 4.518-2.178 5.889-1.451 1.371-3.467 2.096-5.887 2.096h-16.451c-2.419 0-4.436-.725-5.887-2.096-1.452-1.452-2.177-3.469-2.177-5.969v-16.533c0-2.419.726-4.436 2.177-5.887 1.371-1.371 3.468-2.097 5.887-2.097h16.612c2.42 0 4.437.726 5.888 2.177 1.371 1.452 2.178 3.468 2.178 5.806v16.613h-.162v.001z\"/>\n    </symbol>\n  </svg>\n  \n  <footer id=\"main-footer\" class=\"en\">\n    <div class=\"hwm-section-wrapper\">\n    <p class=\"slogan h2\">Your Country.<br /> Your History.<br /> Your Museum.</p>\n    <ul class=\"footer-social-media\">\n      <li><a class=\"facebook\" href=\"https://www.facebook.com/CanMusHistory/\" title=\"Facebook\"><svg class=\"icon facebook\"><use xlink:href=\"#facebook\" /></svg>Facebook</a></li>\n      <li><a class=\"twitter\" href=\"https://twitter.com/CanMusHistory\" title=\"Twitter\"><svg class=\"icon twitter\"><use xlink:href=\"#twitter\" /></svg>Twitter</a></li>\n      <li><a class=\"instagram\" href=\"https://www.instagram.com/canmushistory/\" title=\"Instagram\"><svg class=\"icon instagram\"><use xlink:href=\"#instagram\" /></svg>Twitter</a></li>\n    </ul>\n    <footer>\n      <img class=\"canada-wordmark\" src=\"https://www.historymuseum.ca/wp-content/themes/hwm-2015/_images/canada-wordmark.svg\" width=\"100\" height=\"24\" alt=\"Symbol of the Government of Canada\" />\n      <div class=\"outro\">\n      <p class=\"copyright-text\">&copy; Canadian Museum of History</p>\n      <ul class=\"disclaimer-list\">\n      <li><a href=\"https://www.historymuseum.ca/about/privacy-statement/\">Privacy Statement</a></li>\n      <li><a href=\"https://www.historymuseum.ca/about/copyright-and-permissions/\">Copyright</a></li>\n      </ul>\n      </div><!--End .outro-->\n    </footer>\n    </div><!--End .hwm-section-wrapper-->\n  </footer><!--End #main-footer-->\n  "
+module.exports = "\n  \n  <footer id=\"main-footer\" class=\"en\">\n    <div class=\"hwm-section-wrapper\">\n    <p class=\"slogan h2\">Your Country.<br /> Your History.<br /> Your Museum.</p>\n    <ul class=\"footer-social-media\">\n      <li><a class=\"facebook\" href=\"https://www.facebook.com/CanMusHistory/\" title=\"Facebook\"><svg class=\"icon facebook\"><use xlink:href=\"#facebook\" /></svg>Facebook</a></li>\n      <li><a class=\"twitter\" href=\"https://twitter.com/CanMusHistory\" title=\"Twitter\"><svg class=\"icon twitter\"><use xlink:href=\"#twitter\" /></svg>Twitter</a></li>\n      <li><a class=\"instagram\" href=\"https://www.instagram.com/canmushistory/\" title=\"Instagram\"><svg class=\"icon instagram\"><use xlink:href=\"#instagram\" /></svg>Twitter</a></li>\n    </ul>\n    <footer>\n      <img class=\"canada-wordmark\" src=\"https://www.historymuseum.ca/wp-content/themes/hwm-2015/_images/canada-wordmark.svg\" width=\"100\" height=\"24\" alt=\"Symbol of the Government of Canada\" />\n      <div class=\"outro\">\n      <p class=\"copyright-text\">&copy; Canadian Museum of History</p>\n      <ul class=\"disclaimer-list\">\n      <li><a href=\"https://www.historymuseum.ca/about/privacy-statement/\">Privacy Statement</a></li>\n      <li><a href=\"https://www.historymuseum.ca/about/copyright-and-permissions/\">Copyright</a></li>\n      </ul>\n      </div><!--End .outro-->\n    </footer>\n    </div><!--End .hwm-section-wrapper-->\n  </footer><!--End #main-footer-->\n  "
 
 /***/ }),
 
@@ -1368,7 +1505,7 @@ var MainFooterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header id=\"main-header\">\n\t\n\t<div class=\"header\">\n\t\t<ul class=\"hwm-bypass\">\n\t<li><a id=\"bypass-main\" href=\"#main-content\">Skip to main content</a></li>\n\t<li><a id=\"bypass-footer\" href=\"#secondary-footer\">Skip to main navigation</a></li>\n</ul>\t\t\n<a href=\"https://www.historymuseum.ca\" class=\"main-logo main-logo-en\" title=\"Go to the Home page\">\n\t<img src=\"https://www.historymuseum.ca/wp-content/themes/hwm-2015/_images/chm-main-logo.svg\" width=\"300\" height=\"44\" alt=\"Logo of the Canadian Museum of History\" />\n</a><!--End .main-logo-->\n\t\t\n\t\t<a href=\"#menu-handle\" id=\"main-menu-handle\" title=\"Main Menu\">\n\t\t\t<span class=\"text-val\">Main Menu</span>\n\t\t\t<span class=\"handle-bars-icon\">\n\t\t\t\t<b class=\"bar\"></b>\n\t\t\t\t<b class=\"bar\"></b>\n\t\t\t\t<b class=\"bar\"></b>\n\t\t\t</span>\n\t\t</a><!--End #main-menu-handle-->\n\t</div><!--End .header-->\n\t\n\t<nav id=\"main-menu\">\n\t\t<div class=\"form-wrapper\">\n\t\t\t<form>\n\t\t\t\t<input placeholder=\"Search ...\" type=\"text\" />\n\t\t\t\t<div class=\"button-wrapper\">\n\t\t\t\t\t<button>Search</button>\n\t\t\t\t</div><!--End .button-wrapper-->\n\t\t\t</form>\n\t\t</div><!--End .form-wrapper-->\n\t\t\n\t\t<ul>\n\n<span class=\"search-display\">\n\t<form role=\"search\" method=\"get\" class=\"search-form\" action=\"/search/\">\n    \t<label for=\"s\">Search</label>\n\t\t<input class=\"search-input\" type=\"search\" value=\"\" \n\t\tname=\"q\" id=\"s\" placeholder=\"Search...\" autocomplete=\"off\" />\n    \t<div class=\"form-button-wrapper\">\n\t        <svg class=\"search-icon\"><use xlink:href=\"#magnifying-glass\" /></svg>\n\t        <button type=\"submit\">Search</button>\n        </div>\n    </form>\n</span>\n\t<li id=\"menu-item-210\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-210\"><a href=\"https://www.historymuseum.ca/visit/\">Visit</a></li>\n<li id=\"menu-item-193\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-193\"><a href=\"https://www.historymuseum.ca/exhibitions/\">Exhibitions</a></li>\n<li id=\"menu-item-194\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-194\"><a href=\"https://www.historymuseum.ca/learn/\">Learn</a></li>\n<li id=\"menu-item-196\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-196\"><a href=\"https://www.historymuseum.ca/shop/\">Shop</a></li>\n<li id=\"menu-item-197\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-197\"><a href=\"https://www.historymuseum.ca/support/\">Support</a></li>\n<li id=\"menu-item-195\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-195\"><a href=\"https://www.historymuseum.ca/about/\">About</a></li>\n\t<li>\n\t\t<a class=\"icon magnifying-glass\" href=\"#search\" title=\"Search\">\n\t\t\t<svg class=\"icon magnifying-glass\"><use xlink:href=\"#magnifying-glass\" /></svg>Search\n\t\t</a>\n\t</li>\n\t<li><a id=\"language-toggle\" href=\"https://www.museedelhistoire.ca/\" title=\"Français\">Français</a></li>\n</ul>\t</nav><!--End #main-menu-->\n\n</header>"
+module.exports = "<header id=\"main-header\"class=\"gault\">\n\t\n\t<div class=\"header\">\n\t\t<ul class=\"hwm-bypass\">\n\t<li><a id=\"bypass-main\" href=\"#main-content\">Skip to main content</a></li>\n\t<li><a id=\"bypass-footer\" href=\"#secondary-footer\">Skip to main navigation</a></li>\n</ul>\t\t\n<a href=\"https://alpha.historymuseum.ca\" class=\"main-logo main-logo-en\" title=\"Go to the Home page\">\n\t<img src=\"https://alpha.historymuseum.ca/wp-content/themes/hwm-2015/_images/chm-main-logo.svg\" width=\"300\" height=\"44\" alt=\"Logo of the Canadian Museum of History\" />\n</a><!--End .main-logo-->\n\t\t\n\t\t<a href=\"#menu-handle\" id=\"main-menu-handle\" title=\"Main Menu\">\n\t\t\t<span class=\"text-val\">Main Menu</span>\n\t\t\t<span class=\"handle-bars-icon\">\n\t\t\t\t<b class=\"bar\"></b>\n\t\t\t\t<b class=\"bar\"></b>\n\t\t\t\t<b class=\"bar\"></b>\n\t\t\t</span>\n\t\t</a><!--End #main-menu-handle-->\n\t</div><!--End .header-->\n\t\n\t<nav id=\"main-menu\">\n\t\t<div class=\"form-wrapper\">\n\t\t\t<form>\n\t\t\t\t<input placeholder=\"Search ...\" type=\"text\" />\n\t\t\t\t<div class=\"button-wrapper\">\n\t\t\t\t\t<button>Search</button>\n\t\t\t\t</div><!--End .button-wrapper-->\n\t\t\t</form>\n\t\t</div><!--End .form-wrapper-->\n\t\t\n\t\t<ul>\n\n<span class=\"search-display\">\n\t<form role=\"search\" method=\"get\" class=\"search-form\" action=\"/search/\">\n    \t<label for=\"s\">Search</label>\n\t\t<input class=\"search-input\" type=\"search\" value=\"\" \n\t\tname=\"q\" id=\"s\" placeholder=\"Search...\" autocomplete=\"off\" />\n    \t<div class=\"form-button-wrapper\">\n\t        <svg class=\"search-icon\"><use xlink:href=\"#magnifying-glass\" /></svg>\n\t        <button type=\"submit\">Search</button>\n        </div>\n    </form>\n</span>\n\t<li id=\"menu-item-210\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-210\"><a href=\"https://alpha.historymuseum.ca/visit/\">Visit</a></li>\n<li id=\"menu-item-193\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-193\"><a href=\"https://alpha.historymuseum.ca/exhibitions/\">Exhibitions</a></li>\n<li id=\"menu-item-194\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-194\"><a href=\"https://alpha.historymuseum.ca/learn/\">Learn</a></li>\n<li id=\"menu-item-196\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-196\"><a href=\"https://alpha.historymuseum.ca/shop/\">Shop</a></li>\n<li id=\"menu-item-197\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-197\"><a href=\"https://alpha.historymuseum.ca/support/\">Support</a></li>\n<li id=\"menu-item-195\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-195\"><a href=\"https://alpha.historymuseum.ca/about/\">About</a></li>\n\t<li>\n\t\t<a class=\"icon magnifying-glass\" href=\"#search\" title=\"Search\">\n\t\t\t<svg class=\"icon magnifying-glass\"><use xlink:href=\"#magnifying-glass\" /></svg>Search\n\t\t</a>\n\t</li>\n\t<li><a id=\"language-toggle\" href=\"\" title=\"Français\">Français</a></li>\n</ul>\t</nav><!--End #main-menu-->\n\n</header>"
 
 /***/ }),
 
@@ -1379,7 +1516,7 @@ module.exports = "<header id=\"main-header\">\n\t\n\t<div class=\"header\">\n\t\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "#main-header {\n  box-sizing: border-box;\n  background: none;\n  height: 120px;\n  position: relative;\n  padding-left: 40px; }\n"
 
 /***/ }),
 
@@ -1728,6 +1865,1263 @@ var Activity = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/pages/browse-page/browse-page.component.html":
+/*!**********************************************************!*\
+  !*** ./src/pages/browse-page/browse-page.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<div>\n  <app-main-header></app-main-header>\n<span class=\"plan\">PLAN YOUR VISIT </span><span class=\"arrow-right\"></span>\n<div class=\"h1\"> PLAN A SCHOOL TRIP</div>\n  \n\n  <div class=\"h3\"> <div *ngIf=\"active\" class=\"my-btn1\">BROWSE</div>\n  <div *ngIf=\"!active\" class=\"my-btn\">BROWSE</div>\n  \n  <div *ngIf=\"active\" class=\"my-btn\">CREATE</div>\n  \n</div>\n\n\n<div class=\"my-container\">\n  <div class=\"my-bg\" >\n    <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-resize\"> \n\n\n  \n  \n  </div>\n\n\n\n  </div>\n\n<!-- <div class=\"text1\">\n<div class=\"text2\" >\n    PLAN YOUR DAY AT THE MUSEUM\n  </div>\n<div class=\"text3\">\n    Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, \n    , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an\n    <br><br>\n    Get started with our sample iteneraries below or <a class=\"build\" href=\"javascript:void(0)\" (click)=\"open(content)\"> build your own  </a>\n</div>\n</div>\n -->\n\n<!-- <div class=\"card-title\">VIEW OUR ITINERARIES</div> -->\n<div class=\"content\">\n<div class=\"side-bar\">\n<div class=\"first\">\n  <div style=\"float:left;margin:4%; font-size:1.5rem\">Filter By</div>\n <div style=\"float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer\" (click)=\"reset()\">Clear All</div>\n</div>\n\n<div>\n<div class=\"selection\">\n  \n  <div class=\"ftext\">\n    GRADE\n  </div>\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\">Kindergaten to Grade 2\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"KinderTo2\" style=\"float:right;\" (change)=\"filterBoolean('KinderTo2',KinderTo2)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  \n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 3 to 5\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr3To5\" style=\"float:right;\" (change)=\"filterBoolean1('Gr3To5',Gr3To5)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 6 to 8\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr6To8\" style=\"float:right;\" (change)=\"filterBoolean2('Gr6To8',Gr6To8)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n</form>\n</div>\n\n\n\n<div class=\"selection\">\n  <form>\n  <div class=\"ftext\">\n      TIME OF YEAR\n    </div>\n    <div class=\"boxes\">\n        <label class=\"lab\">October to April\n            <span class=\"checkmark\"></span>\n           \n          </label>\n          <input  [(ngModel)]=\"OctoberToApril\" style=\"float:right;\" (change)=\"filterBoolean3('OctoberToApril',OctoberToApril)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n  \n  \n    \n    <div class=\"boxes\">\n        <label class=\"lab\">May to June\n            <span class=\"checkmark\"></span>\n            \n          </label>\n          <input [(ngModel)]=\"MayToJune\" style=\"float:right;\" (change)=\"filterBoolean4('MayToJune',MayToJune)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    </form>\n  </div>\n\n\n\n\n  <div class=\"selection\">\n  \n    <div class=\"ftext\">\n        LENGTH\n      </div>\n      <form>\n          <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios1\">\n               Half Day\n              </label>\n              <input style=\"float:right\"[(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\" type=\"radio\" name=\"exampleRadios\"  value=\"Half-day\" class=\"rad\">\n            </div>\n            <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios2\">\n              Full Day\n              </label>\n              <input  style=\"float:right\" [(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\"  type=\"radio\" name=\"exampleRadios\" value=\"Full-day\" class=\"rad\">\n     </div>\n        </form>\n    </div>\n    \n \n    \n  \n</div>\n</div>\n<div *ngIf=\"!set\" class=\"itineraries\">\n \n <div style=\"height:5%; position:relative;\">\n  <div class=\"ti\" >Itineraries</div>\n <!--  <div class=\"my-btn\" (click)=\"open(content)\">\n  Build Your Own\n  </div></div> -->\n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\" *ngFor=\"let item of filtered| paginate: { itemsPerPage: 4, currentPage: p } \" >\n          <app-card [item]=\"item\"  (set)=\"getSet($event)\"></app-card>\n          </div>\n</div>\n<pagination-controls class=\"pag\" (pageChange)=\"p = $event\"\n                                  directionLinks=\"false\"\n   \n></pagination-controls>\n</div>\n\n  <!-- <div class=\"filter\">\n    <div style=\"font-family:futura-pt, Helvetica Neue, Arial\">\n        <div class=\"row\"  style=\"margin-bottom:2%; margin-left:0.1%\">\n            <div class=\"filtertext\" >FILTER ITINERARIES:</div>\n          <div class=\"input-group\" class=\"grades\">\n                  <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"grades\" (change)=\"filterExact('grades', grades)\">\n                      <option [ngValue]=\"undefined\" disabled  selected> Select Your Grade</option>\n                    <option value=\"Kinder to Gr.2\">Kindergaten to Grade 2</option>\n                    <option value=\"Gr 3-5\">Grades 3&ndash;5</option>\n                    <option value=\"Gr 6-8\">Grades 6&ndash;8</option>\n                  </select>\n                </div>\n                <div class=\"input-group\" class=\"date\" >\n                      <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"timeOfYear\" (change)=\"filterExact('timeOfYear', timeOfYear)\">\n                          <option [ngValue]=\"undefined\" disabled  selected> Select Time of Year </option>\n                          <option value=\"October-April\">Oct&ndash;Apr</option>\n                          <option value=\"May-June\">May&ndash;Jun</option>\n                        </select>\n                    </div>\n                    <div class=\"input-group\" class=\"day\" >\n                        <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"day\" (change)=\"filterExact('day', day)\">\n                            <option [ngValue]=\"undefined\" disabled  selected> Half-Day or Full-Day</option>\n                            <option value=\"Half-day\">Half&ndash;Day</option>\n                            <option value=\"Full-day\">Full&ndash;Day</option>\n                          </select>\n                        </div>\n                        <div class=\"show\">\n                          <button type=\"button\" class=\"btn \" style=\"width:100%; background-color:#8a8d8a; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:#f7f7f7\" (click)=\"reset()\"> Clear All Filters</button>\n                        </div>\n                      </div>\n                      </div>\n           \n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\"*ngFor=\"let item of filtered \" >\n          <app-card [item]=\"item\"></app-card>\n          </div>\n\n          <div  class=\"empty-card\" >\n            <app-empty-card></app-empty-card>\n            </div>\n          \n</div>\n\n<nav style=\"margin-bottom:10%\">\n    <ul class=\"pagination pagination-lg\" style=\"margin-left:0\">\n      <li class=\"page-item\" >\n        <a class=\"page-link\" style=\"border-radius:0; color:#e5e5e5; background-color:#4a4a4a\" href=\"#\" tabindex=\"-1\">1</a>\n      </li>\n      <li class=\"page-item\" style=\"border-radius:0\"><a class=\"page-link\" style=\"color:#4a4a4a\" href=\"#\">2</a></li>\n      <li class=\"page-item\" style=\"border-radius:0\" ><a class=\"page-link\" style=\"border-radius:0; color:#4a4a4a\" href=\"#\">3</a></li>\n    </ul>\n  </nav>\n</div> -->\n</div>\n\n\n<div *ngIf=\"set\" class=\"activities\">\n<div class=\"row\">\n  <div class=\"left\" (click)=\"back()\">\n    <div class=\"arrow-left\"></div>\n  </div>\n\n <div class=\"back-title\">Itineraries</div>\n</div>\n  <div style=\"margin-bottom:2%; position:relative;\">\n      <img src=\"../../assets/images/photo3.jpeg\" alt=\"Random first slide\" class=\"img-responsive banner\">\n      <div class=\"btext\">\n      <div class=\"btext1\">{{grade}}</div>\n      <div class=\"btext2\">{{title}}</div>\n      <div class=\"btext3\">{{year}}</div>\n      </div>\n    </div>\n<app-activity-display *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\"></app-activity-display>\n    \n<app-empty-activity-display></app-empty-activity-display>\n\n\n\n        </div>\n</div>\n\n\n\n\n\n</div>\n<div>\n  <app-main-footer></app-main-footer>\n</div>\n\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\n    <div style=\"width:100%\">\n        <button type=\"button\"  (click)=\"d('Cross click')\" style=\"background-color:black; float:right; height:70px; width:70px; \">\n            <div style=\"color:white; \">\n              x\n            </div>\n            <div style=\"color:white; font-weight:bold; font-size:12px;\">\n              CLOSE\n            </div>\n          </button>\n    <app-build></app-build>\n\n    \n    <div id=footer>\n        <div style=\"margin-bottom:30px;\">\n        <div>\n        <button type=\"button\" class=\"btn btn-danger\" style=\"margin:3%\" (click)=\"d('Cross click')\"  (click)=\"navigateToDesignPage()\"> <div style=\"float:left;\">CONTINUE</div> <div style=\"width:0;height: 0; border-top: 5px solid transparent; border-left: 10px solid white; border-bottom: 5px solid transparent; float:left; margin-left:28px; margin-top:6px;\"></div></button>\n      </div>\n      \n  </div>\n  </div>\n    \n\n    \n  </div>\n  </ng-template>\n"
+
+/***/ }),
+
+/***/ "./src/pages/browse-page/browse-page.component.scss":
+/*!**********************************************************!*\
+  !*** ./src/pages/browse-page/browse-page.component.scss ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".my-container {\n  margin: auto; }\n\n.img-resize {\n  height: 350px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\n.left {\n  padding-top: 1.5%;\n  padding-bottom: 1.5%;\n  padding-left: 1.5%;\n  padding-right: 1.5%;\n  background-color: #8a8d8a;\n  margin-bottom: 2%;\n  width: 4.5%;\n  border-radius: 50%;\n  cursor: pointer; }\n\n.back-title {\n  float: left;\n  margin-left: 220px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1.5rem;\n  color: #4a4a4a; }\n\n.arrow-left {\n  width: 0;\n  height: 0;\n  border-top: 5px solid transparent;\n  border-bottom: 5px solid transparent;\n  border-right: 5px solid #fff;\n  margin: auto; }\n\n.banner {\n  width: 100%;\n  height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\n.btext {\n  position: absolute;\n  color: #fff;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  bottom: 10%;\n  left: 3%;\n  font-size: 2rem;\n  background-color: rgba(0, 0, 0, 0.2); }\n\n.btext1 {\n  font-family: Arial;\n  font-size: 1rem; }\n\n.btext3 {\n  font-size: 1rem; }\n\n.my-bg {\n  position: relative;\n  bottom: 120px;\n  z-index: -5;\n  margin-bottom: -120px; }\n\n.h {\n  position: absolute;\n  top: 250px;\n  left: 25%;\n  font-size: 12px;\n  color: #fff;\n  max-width: 80%; }\n\n.plan {\n  position: absolute;\n  top: 250px;\n  left: 25%;\n  font-size: 12px;\n  color: #fff;\n  max-width: 80%;\n  display: inline-block; }\n\n.arrow-right {\n  position: absolute;\n  top: 253px;\n  left: 28%;\n  display: inline-block;\n  width: 10%;\n  height: 0;\n  margin-left: 4%;\n  border-top: 5px solid transparent;\n  border-bottom: 5px solid transparent;\n  border-left: 5px solid white; }\n\n.my-header {\n  position: absolute;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  top: 250px;\n  left: 35%;\n  text-align: center;\n  color: #fff; }\n\n.h1 {\n  position: absolute;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  top: 295px;\n  left: 25%;\n  text-align: center;\n  color: #fff; }\n\n.h2 {\n  margin-bottom: 35%;\n  font-family: Arial;\n  font-weight: normal;\n  font-size: 1.5rem; }\n\n.h3 {\n  position: absolute;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  top: 13.6%;\n  left: 50%;\n  text-align: center;\n  color: #fff; }\n\n.card-title {\n  color: #4a4a4a;\n  font-weight: bold;\n  font-size: 1.5rem;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.pag /deep/ .ngx-pagination .current {\n  background: #4a4a4a; }\n\n.pag /deep/ .ngx-pagination li {\n  border-style: solid;\n  border-width: 1px;\n  border-color: #e5e5e5;\n  margin-right: 0px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.margin {\n  margin-right: 3%;\n  margin-bottom: 3%;\n  height: 230px;\n  width: 45%;\n  font-size: 13px; }\n\n.pagination-lg {\n  border: none; }\n\n/* .empty-card{\n    height:360px; \n    width:32%;\n    font-size:13px;\n} */\n\n.boxes {\n  width: 90%;\n  margin-bottom: 2px;\n  margin-left: 3%; }\n\n.first {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.selection {\n  margin-top: 10%; }\n\n.ftext {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1rem;\n  margin-bottom: 1%;\n  margin-left: 3%;\n  color: #8a8d8a; }\n\n.my-content {\n  padding-bottom: 15px;\n  margin-bottom: 20px; }\n\n.pointer {\n  width: 0;\n  height: 0;\n  border-top: 8px solid transparent;\n  border-left: 12px solid white;\n  border-bottom: 8px solid transparent;\n  float: left;\n  margin-left: 20px;\n  margin-top: 12px; }\n\n.plan1 {\n  float: left;\n  font-size: 12px;\n  font-weight: bold;\n  text-transform: uppercase;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.plan2 {\n  float: left;\n  font-weight: bold;\n  font-size: 3rem;\n  color: #4a4a4a;\n  text-transform: uppercase;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.plan3 {\n  font-size: 0.8rem;\n  margin-bottom: 2%;\n  font-weight: bold;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.text {\n  color: #fff; }\n\ninput[type=checkbox]:checked {\n  background: green; }\n\n.selection {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.text1 {\n  font-size: 3rem;\n  margin-bottom: 8%;\n  font-weight: bold;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.text2 {\n  font-size: 1.7rem;\n  margin-bottom: 1%; }\n\n.text3 {\n  position: absolute;\n  top: 20%;\n  left: 22%;\n  max-width: 55%;\n  padding: 15px;\n  text-align: center;\n  margin-bottom: 20px;\n  font-size: 1rem;\n  font-weight: lighter;\n  clear: both;\n  font-family: Arial; }\n\n.content {\n  max-width: 1300px;\n  padding-top: 2%;\n  margin: auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.side-bar {\n  display: flex;\n  flex-direction: column;\n  width: 32%;\n  height: 1500px;\n  border-color: #e5e5e5;\n  border-width: 1px;\n  border-style: solid; }\n\n.itineraries {\n  width: 65%;\n  padding: 0.9%; }\n\n.activities {\n  width: 65%; }\n\n.filter {\n  margin-left: 0%;\n  margin-top: 2%; }\n\n.filtertext {\n  font-weight: bold;\n  margin-top: 8px; }\n\n.filter2 {\n  margin-bottom: 2%;\n  margin-left: 0.1%; }\n\n.grade {\n  font-weight: bold;\n  margin-top: 8px; }\n\n.grades {\n  width: 15%;\n  margin-left: 1%;\n  height: 10px; }\n\n.select {\n  font-weight: bold;\n  font-size: 13px; }\n\n.date {\n  width: 15%;\n  margin-left: 1%; }\n\n.day {\n  width: 15%;\n  margin-left: 1%;\n  height: 10px; }\n\n.show {\n  width: 15%;\n  margin-left: 1%; }\n\n.build {\n  color: red; }\n\n.point {\n  color: #fff; }\n\n.ti {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 2rem;\n  position: relative;\n  color: #4a4a4a; }\n\n.my-btn {\n  background: #4a4a4a;\n  cursor: pointer;\n  display: inline;\n  width: 200px;\n  font-size: 0.8rem;\n  font-weight: bold;\n  padding-left: 50px;\n  padding-right: 50px;\n  padding-top: 25px;\n  padding-bottom: 25px; }\n\n.my-btn1 {\n  background: #fff;\n  width: 200px;\n  cursor: pointer;\n  display: inline;\n  color: #8a8d8a;\n  font-size: 0.8rem;\n  font-weight: bold;\n  padding-left: 50px;\n  padding-right: 50px;\n  padding-top: 25px;\n  padding-bottom: 25px; }\n\n@media only screen and (max-width: 1470px) {\n  .my-container {\n    max-width: 100%;\n    margin: auto; }\n  .card-title {\n    padding: 15px;\n    color: #4a4a4a;\n    font-weight: bold;\n    font-size: 1.5rem;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n  .my-content {\n    padding: 15px;\n    margin-bottom: 20px; }\n  /* .pointer{\n    width:0;\n    height:0; \n    border-top:8px solid transparent; \n    border-left: 12px solid #808080; \n    border-bottom: 8px solid transparent; \n    float:left; \n    margin-left:20px; \n    margin-top:12px;\n    }\n    .plan1{\n    float:left; \n    font-size:12px; \n    font-weight:bold;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n    }\n    .plan2{\n    float:left; \n    font-weight:bold;\n    font-size:3rem;\n    color:#4a4a4a;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n    }\n    .plan3{\n    float:left; \n    font-size:25px; \n    font-weight:bold;\n    color:#8a8d8a;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n    }\n    .text1{\n    color:#4a4a4a; \n    margin-top:2%;\n    padding:15px;\n    }\n    .text2{\n    \n    padding-bottom:0;\n    margin-bottom: 20px;\n    font-size:3rem;\n    font-weight:bold;\n    clear: both;\n    color:#4a4a4a;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n    }\n    .text3{\n    \n    padding-bottom:0;\n    margin-bottom: 20px;\n    font-size:1rem;\n    font-weight:lighter;\n    clear: both;\n    color:#4a4a4a;\n    font-family: Arial;\n    }\n    .filter{\n        margin-left:1.5%; \n        margin-top:2%;  \n        } */ }\n\n@media only screen and (max-width: 1300px) {\n  /*   \n.grades{\n    width:26%;\n     margin-left:1%;\n }\n .date{\n width:26%; margin-left:1%;\n }\n .day{\n width:26%;margin-left:1%;\n }  \n \n .show{\n    width:12%; \n    margin-left:46%;\n    margin-top:1%;\n    } */ }\n\n@media only screen and (max-width: 1220px) {\n  /*  .margin{\n        margin-bottom:5%;\n        height:380px;\n        width:49%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n       \n    } */ }\n\n@media only screen and (max-width: 1024px) {\n  /* .plan1{\n        float:left; \n        font-size:12px; \n        font-weight:bold;\n     \n        }\n        .plan2{\n        float:left; \n        font-weight:bold;\n        font-size:1.5rem;\n        color:#4a4a4a;\n    \n        }\n        .plan3{\n        float:left; \n        font-size:1rem; \n        font-weight:bold;\n        color:#8a8d8a;\n      \n        }\n        .pointer{\n            width:0;\n            height:0; \n            border-top:8px solid transparent; \n            border-left: 8px solid #808080; \n            border-bottom: 5px solid transparent; \n            float:left; \n            margin-left:10px; \n            margin-top:6px;\n            }\n       \n        .text2{\n        padding-bottom:0;\n        margin-bottom: 10px;\n        font-size:1.5rem;\n        clear: both;\n        color:#4a4a4a;\n\n        }\n        .text3{\n        padding-bottom:0;\n        margin-bottom: 20px;\n        font-size:1rem;\n        font-weight:lighter;\n        clear: both;\n        color:#4a4a4a;\n     \n        } */ }\n\n@media only screen and (max-width: 1006px) {\n  /* .img-resize{\n        height:250px;\n        width:100%;\n        object-fit:cover;\n      }\n      \n\n    .filtertext{\n        font-weight:bold; \n        margin-top:8px;\n        margin-left:37%;\n        }\n    .grades{\n        width:95%;\n         margin-left:1%;\n         \n     }\n     .date{\n     width:95%; \n     margin-left:1%;\n     margin-top:4%;\n    \n     }\n     .day{\n     width:95%;\n     margin-left:1%;\n     margin-top:1.5%;\n  \n     }  \n     \n     .show{\n        width:95%; \n        margin-left:1%;\n        margin-top:4%;\n  \n        } */ }\n\n@media only screen and (max-width: 1000px) {\n  /*  .margin{\n        margin-bottom:3%;\n        height:380px;\n        width:49%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n    }\n */ }\n\n@media only screen and (max-width: 850px) {\n  /* .margin{\n        margin-bottom:5%;\n        height:380px;\n        width:49%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n       \n    }\n    .grades{\n        width:95%;\n         margin-left:1%;\n         \n     }\n     .date{\n     width:95%; \n     margin-left:1%;\n     margin-top:4.2%;\n    \n     }\n     .day{\n     width:95%;\n     margin-left:1%;\n     margin-top:1.5%;\n  \n     }  \n     \n     .show{\n        width:95%; \n        margin-left:1%;\n        margin-top:4%;\n  \n        } */ }\n\n@media only screen and (max-width: 750px) {\n  /*   .margin{\n        margin-bottom:8%;\n        height:380px;\n        width:49%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n       \n    }\n    .grades{\n        width:95%;\n         margin-left:1%;\n         \n     }\n     .date{\n     width:95%; \n     margin-left:1%;\n     margin-top:5%;\n    \n     }\n     .day{\n     width:95%;\n     margin-left:1%;\n     margin-top:1.5%;\n  \n     }  \n     \n     .show{\n        width:95%; \n        margin-left:1%;\n        margin-top:5%;\n  \n        }\n      */ }\n\n@media only screen and (max-width: 650px) {\n  /*    .margin{\n        margin-bottom:10%;\n        height:380px;\n        width:50%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n       \n    }\n\n    .grades{\n        width:95%;\n         margin-left:1%;\n         \n     }\n     .date{\n     width:95%; \n     margin-left:1%;\n     margin-top:5.5%;\n    \n     }\n     .day{\n     width:95%;\n     margin-left:1%;\n     margin-top:1.5%;\n  \n     }  \n     \n     .show{\n        width:95%; \n        margin-left:1%;\n        margin-top:5.5%;\n  \n        } */ }\n\n@media only screen and (max-width: 600px) {\n  /* .img-resize{\n        height:200px;\n        width:100%;\n        object-fit:cover;\n      }\n      \n\n    .margin{\n        margin-bottom:8%;\n        height:380px;\n        width:95%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:95%;\n        font-size:13px;\n        margin-bottom:3%;\n       \n    }\n\n    .filtertext{\n        font-weight:bold; \n        margin-top:8px;\n        margin-left:1%;\n        }\n\n        .grades{\n            width:95%;\n             margin-left:1%;\n             \n         }\n         .date{\n         width:95%; \n         margin-left:1%;\n         margin-top:6%;\n        \n         }\n         .day{\n         width:95%;\n         margin-left:1%;\n         margin-top:1.5%;\n      \n         }  \n         \n         .show{\n            width:95%; \n            margin-left:1%;\n            margin-top:6%;\n      \n            }\n       */ }\n\n/* @media only screen and (max-width: 480px) {\n    .margin{\n        margin-bottom:8%;\n        height:380px;\n        width:98%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:98%;\n        font-size:13px;\n        margin-bottom:3%;\n       \n    }\n\n    .filtertext{\n        font-weight:bold; \n        margin-top:8px;\n        margin-left:0%;\n        }\n\n        .grades{\n            width:92%;\n             margin-left:1%;\n             \n         }\n         .date{\n         width:92%; \n         margin-left:1%;\n         margin-top:7%;\n        \n         }\n         .day{\n         width:92%;\n         margin-left:1%;\n         margin-top:1.5%;\n      \n         }  \n         \n         .show{\n            width:92%; \n            margin-left:1%;\n            margin-top:7%;\n      \n            }\n      \n    \n  } */\n\n@media only screen and (max-width: 414px) {\n  /* .margin{\n        margin-bottom:12%;\n        height:380px;\n        width:95%;\n        font-size:13px;\n       \n    }\n\n    .plan1{\n        float:left; \n        font-size:12px; \n        font-weight:bold;\n        }\n        .plan2{\n        float:left; \n        margin-left:10px;\n        font-weight:bold; font-size:28px;\n        }\n        .plan3{\n        float:left; \n        font-size:0px; \n        font-weight:bold; \n        color:\"#808080\";\n        }\n\n    .empty-card{\n        height:380px; \n        width:92%;\n        font-size:8px;\n        margin-bottom:8%;\n       \n    }\n\n\n    .text1{\n\n        margin-left:1%; \n        margin-top:2%;\n        }\n        .text2{\n        font-weight:bold; \n        font-size:25px;\n        margin-left:1%; \n        }\n        .text3{\n        font-size:12px; \n        margin-left:1%;\n        width:80%; \n        margin-top:0.8%;\n        \n        }\n\n        .grades{\n            width:92%;\n             margin-left:1%;\n             \n         }\n         .date{\n         width:92%; \n         margin-left:1%;\n         margin-top:9%;\n         \n        \n         }\n         .day{\n         width:92%;\n         margin-left:1%;\n         margin-top:2.7%;\n      \n         }  \n         \n         .show{\n            width:92%; \n            margin-left:1%;\n            margin-top:9%;\n      \n            }\n          \n */ }\n\n@media only screen and (max-width: 375px) {\n  /* .margin{\n        margin-bottom:12%;\n        height:380px;\n        width:95%;\n        font-size:13px;\n       \n    }\n\n    .plan1{\n        float:left; \n        font-size:12px; \n        font-weight:bold;\n        }\n        .plan2{\n        float:left; \n        font-weight:bold; font-size:25px;\n        }\n        .plan3{\n        float:left; \n        font-size:0px; \n        font-weight:bold; \n        color:\"#808080\";\n        }\n\n    .empty-card{\n        height:380px; \n        width:92%;\n        font-size:8px;\n        margin-bottom:8%;\n       \n    }\n\n\n    .text1{\n\n        margin-left:1%;\n        margin-top:2%;\n        }\n        .text2{\n         margin-left:1%; \n        font-weight:bold; \n        font-size:25px;\n        }\n        .text3{\n        margin-left:1%; \n        font-size:12px; \n        width:80%; \n        margin-top:0.8%;\n        \n        }\n\n        .grades{\n            width:92%;\n             margin-left:1%;\n             \n         }\n         .date{\n         width:92%; \n         margin-left:1%;\n         margin-top:9%;\n         \n        \n         }\n         .day{\n         width:92%;\n         margin-left:1%;\n         margin-top:2.2%;\n      \n         }  \n         \n         .show{\n            width:92%; \n            margin-left:1%;\n            margin-top:9%;\n      \n            } */ }\n\n@media only screen and (max-width: 320px) {\n  /* .margin{\n        margin-bottom:12%;\n        height:380px;\n        width:95%;\n        font-size:13px;\n       \n    }\n\n    .plan1{\n        float:left; \n        font-size:12px; \n        font-weight:bold;\n        }\n        .plan2{\n        float:left; \n        font-weight:bold; font-size:25px;\n        }\n        .plan3{\n        float:left; \n        font-size:0px; \n        font-weight:bold; \n        color:\"#808080\";\n        }\n\n    .empty-card{\n        height:380px; \n        width:92%;\n        font-size:8px;\n        margin-bottom:8%;\n       \n    }\n\n\n    .text1{\n\n        margin-left:1%;\n        margin-top:2%;\n        }\n        .text2{\n        font-weight:bold; \n        font-size:25px;\n        margin-left:1%;\n        }\n        .text3{\n        font-size:12px; \n        width:80%; \n        margin-top:0.8%;\n        margin-left:1%;\n        \n        }\n\n        .grades{\n            width:92%;\n            \n             \n         }\n         .date{\n         width:92%; \n         margin-top:9%;\n         \n        \n         }\n         .day{\n         width:92%;\n         margin-top:1.5%;\n      \n         }  \n         \n         .show{\n            width:92%; \n\n            margin-top:9%;\n      \n            } */ }\n"
+
+/***/ }),
+
+/***/ "./src/pages/browse-page/browse-page.component.ts":
+/*!********************************************************!*\
+  !*** ./src/pages/browse-page/browse-page.component.ts ***!
+  \********************************************************/
+/*! exports provided: BrowsePageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BrowsePageComponent", function() { return BrowsePageComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
+/* harmony import */ var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/add/operator/catch */ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js");
+/* harmony import */ var rxjs_add_observable_throw__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/add/observable/throw */ "./node_modules/rxjs-compat/_esm5/add/observable/throw.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var BrowsePageComponent = /** @class */ (function () {
+    function BrowsePageComponent(modalService, db, router, changeDetector, route) {
+        this.modalService = modalService;
+        this.db = db;
+        this.router = router;
+        this.changeDetector = changeDetector;
+        this.route = route;
+        this.set = false;
+        this.first = false;
+        this.second = false;
+        this.third = false;
+        this.fourth = false;
+        this.fifth = false;
+        this.sixth = false;
+        this.active = true;
+        this.p = 1;
+        this.log = '';
+        this.filters = {};
+        this.filters1 = {};
+    }
+    BrowsePageComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.items = this.db.collection('/itineraries').valueChanges().subscribe(function (items) {
+            _this.items = items;
+            _this.applyFilters();
+        });
+        console.log(this.items);
+    };
+    BrowsePageComponent.prototype.getSet = function (event) {
+        this.set = event;
+        this.itineraries = JSON.parse(localStorage.getItem("itinerary"));
+        this.grade = JSON.parse(localStorage.getItem("grade"));
+        this.title = JSON.parse(localStorage.getItem("title"));
+        this.year = JSON.parse(localStorage.getItem("year"));
+    };
+    BrowsePageComponent.prototype.back = function () {
+        this.set = false;
+        this.changeDetector.detectChanges();
+        localStorage.removeItem('itinerary');
+    };
+    BrowsePageComponent.prototype.open = function (content) {
+        var _this = this;
+        this.modalService.open(content).result.then(function (result) {
+            _this.closeResult = "Closed with: " + result;
+        });
+    };
+    BrowsePageComponent.prototype.resizeImage = function () {
+        var value = false;
+        if (screen.width < 1024) {
+            value = true;
+            return value;
+        }
+    };
+    BrowsePageComponent.prototype.logCheckbox = function (element) {
+        console.log("Checkbox " + element.value + " was " + (element.checked ? '' : 'un') + "checked\n");
+        this.grades = element.value;
+        console.log(this.grades);
+    };
+    BrowsePageComponent.prototype.applyFilters = function () {
+        console.log('action called');
+        var newlyFilter = lodash__WEBPACK_IMPORTED_MODULE_3__["filter"](this.items, lodash__WEBPACK_IMPORTED_MODULE_3__["conforms"](this.filters));
+        console.log(newlyFilter);
+        this.filtered = newlyFilter;
+        /* if (this.filtered === undefined || this.filtered.length == 0) {
+          this.filtered = newlyFilter;
+          console.log(true)
+          console.log(this.filtered)
+          console.log(newlyFilter)
+      }
+      else{
+           console.log(false)
+    
+      newlyFilter.map((elem)=> this.filtered.push(elem));
+      console.log(this.filtered)
+      console.log(newlyFilter)
+      } */
+    };
+    BrowsePageComponent.prototype.filterExact = function (property, rule) {
+        this.sixth = true;
+        console.log(this.day);
+        if (this.day == "Half-day") {
+            console.log("callinghalf");
+            this.filtered = this.items.filter(function (elem) { return elem.day == "Half-day"; });
+        }
+        else {
+            console.log("callingfull");
+            this.filtered = this.items.filter(function (elem) { return elem.day == "Full-day"; });
+        }
+    };
+    BrowsePageComponent.prototype.filterBoolean = function (property, rule) {
+        var _this = this;
+        this.first = true;
+        if (!rule)
+            this.removeFilter(property);
+        else {
+            if (this.fourth == true || this.fifth == true || this.sixth == true) {
+                console.log("external checked");
+                // check if an internal checkbox has been selected
+                if (this.second == true || this.third == true) {
+                    console.log("intenal checked");
+                    //go through all the checked boxes and filter
+                    if (this.fourth == true) {
+                        console.log("logged fourth");
+                        if (this.second == true) {
+                            var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                            var sec = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                            var firstFilter = first.filter(function (elem) { return elem.KinderTo2; });
+                            var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
+                            if (this.day == "Half-day") {
+                                var fil = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                                var fils = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            }
+                            if (this.day == "Full-day") {
+                                var fil = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                                var fils = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            }
+                            fil.map(function (elem) { return _this.filtered.push(elem); });
+                            fils.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                        if (this.third == true) {
+                            var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                            var sec = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                            var firstFilter = first.filter(function (elem) { return elem.KinderTo2; });
+                            var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
+                            if (this.day == "Half-day") {
+                                var fil1 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                                var fils1 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            }
+                            if (this.day == "Full-day") {
+                                var fil1 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                                var fils1 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            }
+                            fil1.map(function (elem) { return _this.filtered.push(elem); });
+                            fils1.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                    }
+                    if (this.fifth == true) {
+                        console.log("logged fifth");
+                        if (this.second == true) {
+                            var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                            var sec = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                            var firstFilter = first.filter(function (elem) { return elem.KinderTo2; });
+                            var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
+                            if (this.day == "Half-day") {
+                                var fil2 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                                var fils2 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            }
+                            if (this.day == "Full-day") {
+                                var fil2 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                                var fils2 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            }
+                            fil2.map(function (elem) { return _this.filtered.push(elem); });
+                            fils2.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                        if (this.third == true) {
+                            var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                            var sec = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                            var firstFilter = first.filter(function (elem) { return elem.KinderTo2; });
+                            var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
+                            if (this.day == "Half-day") {
+                                var fil3 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                                var fils3 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            }
+                            if (this.day == "Full-day") {
+                                var fil3 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                                var fils3 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            }
+                            fil3.map(function (elem) { return _this.filtered.push(elem); });
+                            fils3.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                    }
+                    /*    if (this.sixth == true){
+                         console.log("logged sixth")
+                        if (this.second == true){
+                          let first = this.items.filter(elem => elem.day == this.day)
+                          let sec = this.items.filter(elem => elem.Gr3To5 == true)
+                          let firstFilter = first.filter(elem => elem.KinderTo2)
+                          let secFilter = sec.filter(elem => elem.KinderTo2)
+                       
+                          firstFilter.map(elem=>this.filtered.push(elem))
+                          secFilter.map(elem=>this.filtered.push(elem))
+                         }
+                
+                
+                         if (this.third == true){
+                          let first = this.items.filter(elem => elem.day == this.day)
+                          let sec = this.items.filter(elem => elem.Gr6To8 == true)
+                          let firstFilter = first.filter(elem => elem.KinderTo2)
+                          let secFilter = sec.filter(elem => elem.KinderTo2)
+                       
+                          firstFilter.map(elem=>this.filtered.push(elem))
+                          secFilter.map(elem=>this.filtered.push(elem))
+                         }
+                       }
+                       */
+                }
+                else {
+                    console.log("internal not checked");
+                    this.filtered = this.filtered.filter(function (elem) { return elem.KinderTo2 == true; });
+                }
+            }
+            else {
+                var result = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                if (this.second == true || this.third == true) {
+                    result.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                else {
+                    this.filtered = result;
+                }
+            }
+        }
+    };
+    BrowsePageComponent.prototype.filterBoolean1 = function (property, rule) {
+        var _this = this;
+        this.second = true;
+        if (!rule)
+            this.removeFilter1(property);
+        else {
+            if (this.fourth == true || this.fifth == true || this.sixth == true) {
+                console.log("external checked");
+                // check if an internal checkbox has been selected
+                if (this.first == true || this.third == true) {
+                    console.log("intenal checked");
+                    //go through all the checked boxes and filter
+                    if (this.fourth == true) {
+                        if (this.first == true) {
+                            var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                            var sec = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                            var firstFilter = first.filter(function (elem) { return elem.Gr3To5; });
+                            var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
+                            if (this.day == "Half-day") {
+                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            }
+                            if (this.day == "Full-day") {
+                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            }
+                            fil4.map(function (elem) { return _this.filtered.push(elem); });
+                            fils4.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                        if (this.third == true) {
+                            var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                            var sec = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                            var firstFilter = first.filter(function (elem) { return elem.Gr3To5; });
+                            var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
+                            if (this.day == "Half-day") {
+                                var fil5 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                                var fils5 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            }
+                            if (this.day == "Full-day") {
+                                var fil5 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                                var fils5 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            }
+                            fil5.map(function (elem) { return _this.filtered.push(elem); });
+                            fils5.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                    }
+                    if (this.fifth == true) {
+                        if (this.first == true) {
+                            var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                            var sec = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                            var firstFilter = first.filter(function (elem) { return elem.Gr3To5; });
+                            var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
+                            if (this.day == "Half-day") {
+                                var fil6 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                                var fils6 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            }
+                            if (this.day == "Full-day") {
+                                var fil6 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                                var fils6 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            }
+                            fil6.map(function (elem) { return _this.filtered.push(elem); });
+                            fils6.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                        if (this.third == true) {
+                            var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                            var sec = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                            var firstFilter = first.filter(function (elem) { return elem.Gr3To5; });
+                            var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
+                            if (this.day == "Half-day") {
+                                var fil7 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                                var fils7 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            }
+                            if (this.day == "Full-day") {
+                                var fil7 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                                var fils7 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            }
+                            fil7.map(function (elem) { return _this.filtered.push(elem); });
+                            fils7.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                    }
+                    /* if (this.sixth == true){
+                     let third = this.items.filter(elem => elem.day == this.day)
+             
+                     let thirdFilter = third.filter(elem => elem.Gr3To5)
+                     thirdFilter.map(elem=>this.filtered.push(elem))
+                    } */
+                }
+                else {
+                    console.log("internal not checked");
+                    this.filtered = this.filtered.filter(function (elem) { return elem.Gr3To5 == true; });
+                }
+            }
+            else {
+                var result = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                if (this.first == true || this.third == true) {
+                    result.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                else {
+                    this.filtered = result;
+                }
+            }
+        }
+    };
+    BrowsePageComponent.prototype.filterBoolean2 = function (property, rule) {
+        var _this = this;
+        this.third = true;
+        if (!rule)
+            this.removeFilter2(property);
+        else {
+            if (this.fourth == true || this.fifth == true || this.sixth == true) {
+                console.log("external checked");
+                // check if an internal checkbox has been selected
+                if (this.second == true || this.first == true) {
+                    console.log("intenal checked");
+                    //go through all the checked boxes and filter
+                    if (this.fourth == true) {
+                        if (this.first == true) {
+                            var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                            var sec = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                            var firstFilter = first.filter(function (elem) { return elem.Gr6To8; });
+                            var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
+                            if (this.day == "Half-day") {
+                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            }
+                            if (this.day == "Full-day") {
+                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            }
+                            fil4.map(function (elem) { return _this.filtered.push(elem); });
+                            fils4.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                        if (this.second == true) {
+                            var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                            var sec = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                            var firstFilter = first.filter(function (elem) { return elem.Gr6To8; });
+                            var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
+                            if (this.day == "Half-day") {
+                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            }
+                            if (this.day == "Full-day") {
+                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            }
+                            fil4.map(function (elem) { return _this.filtered.push(elem); });
+                            fils4.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                    }
+                    if (this.fifth == true) {
+                        if (this.first == true) {
+                            var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                            var sec = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                            var firstFilter = first.filter(function (elem) { return elem.Gr6To8; });
+                            var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
+                            if (this.day == "Half-day") {
+                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            }
+                            if (this.day == "Full-day") {
+                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            }
+                            fil4.map(function (elem) { return _this.filtered.push(elem); });
+                            fils4.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                        if (this.second == true) {
+                            var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                            var sec = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                            var firstFilter = first.filter(function (elem) { return elem.Gr6To8; });
+                            var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
+                            if (this.day == "Half-day") {
+                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            }
+                            if (this.day == "Full-day") {
+                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            }
+                            fil4.map(function (elem) { return _this.filtered.push(elem); });
+                            fils4.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                    }
+                    /*
+                           if (this.sixth == true){
+                            let third = this.items.filter(elem => elem.day == this.day)
+                    
+                            let thirdFilter = third.filter(elem => elem.Gr6To8)
+                            thirdFilter.map(elem=>this.filtered.push(elem))
+                           }
+                           */
+                }
+                else {
+                    console.log("internal not checked");
+                    this.filtered = this.filtered.filter(function (elem) { return elem.Gr6To8 == true; });
+                }
+            }
+            else {
+                var result = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                if (this.first == true || this.second == true) {
+                    result.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                else {
+                    this.filtered = result;
+                }
+            }
+        }
+    };
+    BrowsePageComponent.prototype.filterBoolean3 = function (property, rule) {
+        var _this = this;
+        this.fourth = true;
+        if (!rule)
+            this.removeFilter3(property);
+        else {
+            //check if external has been checked
+            if (this.first == true || this.second == true || this.third == true || this.sixth == true) {
+                // check if an internal checkbox has been selected
+                if (this.fifth == true) {
+                    console.log("intenal checked");
+                    //go through all the checked boxes and filter
+                    if (this.first == true) {
+                        var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                        if (this.day == "Half-day") {
+                            console.log("fitering full days");
+                            var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                            console.log(fill1);
+                        }
+                        if (this.day == "Full-day") {
+                            (console.log("filtering half days"));
+                            var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                    }
+                    if (this.second == true) {
+                        var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                        if (this.day == "Half-day") {
+                            var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fill2.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    if (this.third == true) {
+                        var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                        if (this.day == "Half-day") {
+                            var fill3 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fill3 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fill3.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    /*  if (this.sixth == true){
+                      let third = this.items.filter(elem => elem.day == this.day)
+                
+                      let thirdFilter = third.filter(elem => elem.MayToJune)
+                      thirdFilter.map(elem=>this.filtered.push(elem))
+                     }
+                 */
+                }
+                else {
+                    this.filtered = this.filtered.filter(function (elem) { return elem.OctoberToApril == true; });
+                }
+            }
+            else {
+                var result = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                if (this.fifth == true) {
+                    result.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                else {
+                    this.filtered = result;
+                }
+            }
+        }
+    };
+    BrowsePageComponent.prototype.filterBoolean4 = function (property, rule) {
+        var _this = this;
+        this.fifth = true;
+        if (!rule)
+            this.removeFilter4(property);
+        else {
+            //check if external has been checked
+            if (this.first == true || this.second == true || this.third == true || this.sixth == true) {
+                console.log("external checked");
+                // check if an internal checkbox has been selected
+                if (this.fourth == true) {
+                    //go through all the checked boxes and filter
+                    if (this.first == true) {
+                        var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                        if (this.day == "Half-day") {
+                            console.log("fitering full days");
+                            var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                            console.log(fill1);
+                        }
+                        if (this.day == "Full-day") {
+                            (console.log("filtering half days"));
+                            var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                    }
+                    if (this.second == true) {
+                        var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                        if (this.day == "Half-day") {
+                            var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fill2.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    if (this.third == true) {
+                        var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                        if (this.day == "Half-day") {
+                            var fill3 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fill3 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fill3.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    /*  if (this.sixth == true){
+                      let third = this.items.filter(elem => elem.day == this.day)
+              
+                      let thirdFilter = third.filter(elem => elem.OctoberToApril)
+                      thirdFilter.map(elem=>this.filtered.push(elem))
+                     }
+               */
+                }
+                else {
+                    console.log("internal not checked");
+                    this.filtered = this.filtered.filter(function (elem) { return elem.MayToJune == true; });
+                }
+            }
+            else {
+                var result = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                if (this.fourth == true) {
+                    result.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                else {
+                    this.filtered = result;
+                }
+            }
+        }
+    };
+    BrowsePageComponent.prototype.removeFilter = function (property) {
+        var _this = this;
+        this.first = false;
+        if (this.fourth == true || this.fifth == true || this.sixth == true) {
+            this.filtered = this.filtered.filter(function (elem) { return elem.KinderTo2 == false; });
+            console.log("external checked");
+            // check if an internal checkbox has been selected
+            if (this.second == true || this.third == true) {
+                console.log("intenal checked");
+                //go through all the checked boxes and filter
+                if (this.fourth == true) {
+                    console.log("logged fourth");
+                    if (this.second == true) {
+                        var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                        var sec = first.filter(function (elem) { return elem.Gr3To5 == true; });
+                        var firstFilter = sec.filter(function (elem) { return elem.KinderTo2; });
+                        var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
+                        if (this.day == "Half-day") {
+                            var fil = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            var fils = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fil = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            var fils = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fil.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    if (this.third == true) {
+                        var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                        var sec = first.filter(function (elem) { return elem.Gr6To8 == true; });
+                        var firstFilter = sec.filter(function (elem) { return elem.KinderTo2; });
+                        var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
+                        if (this.day == "Half-day") {
+                            var fil1 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            var fils1 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fil1 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            var fils1 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fil1.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                }
+                if (this.fifth == true) {
+                    console.log("logged fifth");
+                    if (this.second == true) {
+                        var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                        var sec = first.filter(function (elem) { return elem.Gr3To5 == true; });
+                        var firstFilter = sec.filter(function (elem) { return elem.KinderTo2; });
+                        var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
+                        if (this.day == "Half-day") {
+                            var fil2 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fil2 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fil2.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    if (this.third == true) {
+                        var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                        var sec = first.filter(function (elem) { return elem.Gr6To8 == true; });
+                        var firstFilter = sec.filter(function (elem) { return elem.KinderTo2; });
+                        var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
+                        if (this.day == "Half-day") {
+                            var fil3 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fil3 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fil3.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                }
+                /*    if (this.sixth == true){
+                     console.log("logged sixth")
+                    if (this.second == true){
+                      let first = this.items.filter(elem => elem.day == this.day)
+                      let sec = this.items.filter(elem => elem.Gr3To5 == true)
+                      let firstFilter = first.filter(elem => elem.KinderTo2)
+                      let secFilter = sec.filter(elem => elem.KinderTo2)
+                   
+                      firstFilter.map(elem=>this.filtered.push(elem))
+                      secFilter.map(elem=>this.filtered.push(elem))
+                     }
+            
+            
+                     if (this.third == true){
+                      let first = this.items.filter(elem => elem.day == this.day)
+                      let sec = this.items.filter(elem => elem.Gr6To8 == true)
+                      let firstFilter = first.filter(elem => elem.KinderTo2)
+                      let secFilter = sec.filter(elem => elem.KinderTo2)
+                   
+                      firstFilter.map(elem=>this.filtered.push(elem))
+                      secFilter.map(elem=>this.filtered.push(elem))
+                     }
+                   }
+                   */
+            }
+            else {
+                console.log("internal not checked");
+                console.log(this.day);
+                if (this.fourth == true) {
+                    var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                    if (this.day == "Half-day") {
+                        console.log("fitering full days");
+                        var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                        console.log(fill1);
+                    }
+                    if (this.day == "Full-day") {
+                        (console.log("filtering half days"));
+                        var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill1.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                if (this.fifth == true) {
+                    var second = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                    if (this.day == "Half-day") {
+                        var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                    }
+                    if (this.day == "Full-day") {
+                        var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill2.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                /*  if (this.sixth == true){
+                  let second = this.items.filter(elem => elem.day == this.day)
+                  second.map(elem=>this.filtered.push(elem))
+                 } */
+            }
+        }
+        else {
+            if (this.second == false && this.third == false) {
+                this.applyFilters();
+            }
+            else {
+                console.log("removetrue");
+                console.log(this.filtered);
+                this.filtered = this.filtered.filter(function (elem) { return elem.KinderTo2 == false; });
+            }
+        }
+    };
+    BrowsePageComponent.prototype.removeFilter1 = function (property) {
+        var _this = this;
+        this.second = false;
+        if (this.fourth == true || this.fifth == true || this.sixth == true) {
+            this.filtered = this.filtered.filter(function (elem) { return elem.Gr3To5 == false; });
+            console.log("external checked");
+            // check if an internal checkbox has been selected
+            if (this.first == true || this.third == true) {
+                console.log("intenal checked");
+                //go through all the checked boxes and filter
+                if (this.fourth == true) {
+                    if (this.first == true) {
+                        console.log("first is checked");
+                        var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                        var sec = first.filter(function (elem) { return elem.KinderTo2 == true; });
+                        console.log(sec);
+                        var firstFilter = sec.filter(function (elem) { return elem.Gr3To5; });
+                        var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
+                        if (this.day == "Half-day") {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fil4.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    if (this.third == true) {
+                        var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                        var sec = first.filter(function (elem) { return elem.Gr6To8 == true; });
+                        var firstFilter = sec.filter(function (elem) { return elem.Gr3To5; });
+                        var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
+                        if (this.day == "Half-day") {
+                            var fil5 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fil5 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fil5.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                }
+                if (this.fifth == true) {
+                    if (this.first == true) {
+                        var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                        var sec = first.filter(function (elem) { return elem.KinderTo2 == true; });
+                        var firstFilter = sec.filter(function (elem) { return elem.Gr3To5; });
+                        var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
+                        if (this.day == "Half-day") {
+                            var fil6 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fil6 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fil6.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    if (this.third == true) {
+                        var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                        var sec = first.filter(function (elem) { return elem.Gr6To8 == true; });
+                        var firstFilter = sec.filter(function (elem) { return elem.Gr3To5; });
+                        var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
+                        if (this.day == "Half-day") {
+                            var fil7 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fil7 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fil7.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                }
+                /* if (this.sixth == true){
+                 let third = this.items.filter(elem => elem.day == this.day)
+         
+                 let thirdFilter = third.filter(elem => elem.Gr3To5)
+                 thirdFilter.map(elem=>this.filtered.push(elem))
+                } */
+            }
+            else {
+                if (this.fourth == true) {
+                    var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                    if (this.day == "Half-day") {
+                        console.log("fitering full days");
+                        var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                        console.log(fill1);
+                    }
+                    if (this.day == "Full-day") {
+                        (console.log("filtering half days"));
+                        var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill1.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                if (this.fifth == true) {
+                    var second = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                    if (this.day == "Half-day") {
+                        var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                    }
+                    if (this.day == "Full-day") {
+                        var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill2.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                /*
+                         if (this.sixth == true){
+                          let second = this.items.filter(elem => elem.day == this.day)
+                          second.map(elem=>this.filtered.push(elem))
+                         } */
+            }
+        }
+        else {
+            if (this.first == false && this.third == false) {
+                this.applyFilters();
+            }
+            else {
+                console.log("removetrue");
+                console.log(this.filtered);
+                this.filtered = this.filtered.filter(function (elem) { return elem.Gr3To5 == false; });
+            }
+        }
+    };
+    BrowsePageComponent.prototype.removeFilter2 = function (property) {
+        var _this = this;
+        this.third = false;
+        if (this.fourth == true || this.fifth == true || this.sixth == true) {
+            this.filtered = this.filtered.filter(function (elem) { return elem.Gr6To8 == false; });
+            console.log("external checked");
+            // check if an internal checkbox has been selected
+            if (this.second == true || this.first == true) {
+                console.log("intenal checked");
+                //go through all the checked boxes and filter
+                if (this.fourth == true) {
+                    if (this.first == true) {
+                        var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                        var sec = first.filter(function (elem) { return elem.KinderTo2 == true; });
+                        var firstFilter = sec.filter(function (elem) { return elem.Gr6To8; });
+                        var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
+                        if (this.day == "Half-day") {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fil4.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    if (this.second == true) {
+                        var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                        var sec = first.filter(function (elem) { return elem.Gr3To5 == true; });
+                        var firstFilter = sec.filter(function (elem) { return elem.Gr6To8; });
+                        var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
+                        if (this.day == "Half-day") {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fil4.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                }
+                if (this.fifth == true) {
+                    if (this.first == true) {
+                        var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                        var sec = first.filter(function (elem) { return elem.KinderTo2 == true; });
+                        var firstFilter = sec.filter(function (elem) { return elem.Gr6To8; });
+                        var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
+                        if (this.day == "Half-day") {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fil4.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    if (this.second == true) {
+                        var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                        var sec = first.filter(function (elem) { return elem.Gr3To5 == true; });
+                        var firstFilter = sec.filter(function (elem) { return elem.Gr6To8; });
+                        var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
+                        if (this.day == "Half-day") {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        }
+                        if (this.day == "Full-day") {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        }
+                        fil4.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                }
+                /*
+                       if (this.sixth == true){
+                        let third = this.items.filter(elem => elem.day == this.day)
+                
+                        let thirdFilter = third.filter(elem => elem.Gr6To8)
+                        thirdFilter.map(elem=>this.filtered.push(elem))
+                       }
+                       */
+            }
+            else {
+                console.log("internal not checked");
+                if (this.fourth == true) {
+                    var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                    if (this.day == "Half-day") {
+                        console.log("fitering full days");
+                        var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                        console.log(fill1);
+                    }
+                    if (this.day == "Full-day") {
+                        (console.log("filtering half days"));
+                        var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill1.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                if (this.fifth == true) {
+                    var second = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                    if (this.day == "Half-day") {
+                        var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                    }
+                    if (this.day == "Full-day") {
+                        var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill2.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                /*
+                         if (this.sixth == true){
+                          let second = this.items.filter(elem => elem.day == this.day)
+                          second.map(elem=>this.filtered.push(elem))
+                         } */
+            }
+        }
+        else {
+            if (this.second == false && this.first == false) {
+                this.applyFilters();
+            }
+            else {
+                console.log("removetrue");
+                console.log(this.filtered);
+                this.filtered = this.filtered.filter(function (elem) { return elem.Gr6To8 == false; });
+            }
+        }
+    };
+    BrowsePageComponent.prototype.removeFilter3 = function (property) {
+        var _this = this;
+        this.fourth = false;
+        // check if external was selected 
+        if (this.first == true || this.second == true || this.third == true || this.sixth == true) {
+            this.filtered = this.filtered.filter(function (elem) { return elem.OctoberToApril == false; });
+            console.log("external checked");
+            // check if an internal checkbox has been selected
+            if (this.fifth == true) {
+                console.log("intenal checked");
+                //go through all the checked boxes and filter
+                if (this.first == true) {
+                    var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                    if (this.day == "Half-day") {
+                        console.log("fitering full days");
+                        var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                        console.log(fill1);
+                    }
+                    if (this.day == "Full-day") {
+                        (console.log("filtering half days"));
+                        var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                }
+                if (this.second == true) {
+                    var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                    if (this.day == "Half-day") {
+                        var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                    }
+                    if (this.day == "Full-day") {
+                        var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill2.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                if (this.third == true) {
+                    var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                    if (this.day == "Half-day") {
+                        var fill3 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                    }
+                    if (this.day == "Full-day") {
+                        var fill3 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill3.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                /*  if (this.sixth == true){
+                  let third = this.items.filter(elem => elem.day == this.day)
+            
+                  let thirdFilter = third.filter(elem => elem.MayToJune)
+                  thirdFilter.map(elem=>this.filtered.push(elem))
+                 }
+             */
+            }
+            else {
+                console.log("internal not checked");
+                if (this.first == true) {
+                    var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                    if (this.day == "Half-day") {
+                        console.log("fitering full days");
+                        var fill5 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                        console.log(fill5);
+                    }
+                    if (this.day == "Full-day") {
+                        (console.log("filtering half days"));
+                        var fill5 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill5.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                if (this.second == true) {
+                    var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                    if (this.day == "Half-day") {
+                        console.log("fitering full days");
+                        var fill6 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                        console.log(fill6);
+                    }
+                    if (this.day == "Full-day") {
+                        (console.log("filtering half days"));
+                        var fill6 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill6.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                if (this.third == true) {
+                    var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                    if (this.day == "Half-day") {
+                        console.log("fitering full days");
+                        var fill7 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                        console.log(fill1);
+                    }
+                    if (this.day == "Full-day") {
+                        (console.log("filtering half days"));
+                        var fill7 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill7.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                /* if (this.sixth == true){
+                 let second = this.items.filter(elem => elem.day == this.day)
+                 second.map(elem=>this.filtered.push(elem))
+                }
+          */
+            }
+        }
+        else {
+            if (this.fifth == false) {
+                this.applyFilters();
+            }
+            else {
+                console.log("removetrue");
+                console.log(this.filtered);
+                this.filtered = this.filtered.filter(function (elem) { return elem.OctoberToApril == false; });
+            }
+        }
+    };
+    BrowsePageComponent.prototype.removeFilter4 = function (property) {
+        var _this = this;
+        this.fifth = false;
+        if (this.first == true || this.second == true || this.third == true || this.sixth == true) {
+            this.filtered = this.filtered.filter(function (elem) { return elem.MayToJune == false; });
+            // check if an internal checkbox has been selected
+            if (this.fourth == true) {
+                //go through all the checked boxes and filter
+                if (this.first == true) {
+                    var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                    if (this.day == "Half-day") {
+                        console.log("fitering full days");
+                        var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                        console.log(fill1);
+                    }
+                    if (this.day == "Full-day") {
+                        (console.log("filtering half days"));
+                        var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                }
+                if (this.second == true) {
+                    var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                    if (this.day == "Half-day") {
+                        var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                    }
+                    if (this.day == "Full-day") {
+                        var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill2.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                if (this.third == true) {
+                    var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                    if (this.day == "Half-day") {
+                        var fill3 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                    }
+                    if (this.day == "Full-day") {
+                        var fill3 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill3.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                /*  if (this.sixth == true){
+                  let third = this.items.filter(elem => elem.day == this.day)
+          
+                  let thirdFilter = third.filter(elem => elem.OctoberToApril)
+                  thirdFilter.map(elem=>this.filtered.push(elem))
+                 }
+           */
+            }
+            else {
+                console.log("internal not checked");
+                if (this.first == true) {
+                    var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                    if (this.day == "Half-day") {
+                        console.log("fitering full days");
+                        var fill5 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                        console.log(fill5);
+                    }
+                    if (this.day == "Full-day") {
+                        (console.log("filtering half days"));
+                        var fill5 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill5.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                if (this.second == true) {
+                    var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                    if (this.day == "Half-day") {
+                        console.log("fitering full days");
+                        var fill6 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                        console.log(fill6);
+                    }
+                    if (this.day == "Full-day") {
+                        (console.log("filtering half days"));
+                        var fill6 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill6.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                if (this.third == true) {
+                    var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                    if (this.day == "Half-day") {
+                        console.log("fitering full days");
+                        var fill7 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                        console.log(fill1);
+                    }
+                    if (this.day == "Full-day") {
+                        (console.log("filtering half days"));
+                        var fill7 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                    }
+                    fill7.map(function (elem) { return _this.filtered.push(elem); });
+                }
+                /*  if (this.sixth == true){
+                  let second = this.items.filter(elem => elem.day == this.day)
+                  second.map(elem=>this.filtered.push(elem))
+                 } */
+            }
+        }
+        else {
+            if (this.fourth == false) {
+                this.applyFilters();
+            }
+            else {
+                console.log("removetrue");
+                console.log(this.filtered);
+                this.filtered = this.filtered.filter(function (elem) { return elem.MayToJune == false; });
+            }
+        }
+    };
+    /*  filterExact1(property: string, rule: any) {
+       this.filters[property] = val => val == rule
+       this.applyFilters1()
+     }
+   
+     filterExact2(property: string, rule: any) {
+       this.filters[property] = val => val == rule
+       this.applyFilters2()
+     } */
+    BrowsePageComponent.prototype.reset = function () {
+        jquery__WEBPACK_IMPORTED_MODULE_4__('.cbox').prop('checked', false);
+        jquery__WEBPACK_IMPORTED_MODULE_4__('.rad').prop('checked', false);
+        this.removeFilter("day");
+        this.removeFilter("KinderTo2");
+        this.removeFilter("Gr3To5");
+        this.removeFilter("Gr6To8");
+        this.first = false;
+        this.second = false;
+        this.third = false;
+        this.fourth = false;
+        this.fifth = false;
+        this.filtered = this.items;
+    };
+    BrowsePageComponent.prototype.navigateToDesignPage = function () {
+        this.router.navigate(["/DesignPage"]);
+    };
+    BrowsePageComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-browse-page',
+            template: __webpack_require__(/*! ./browse-page.component.html */ "./src/pages/browse-page/browse-page.component.html"),
+            styles: [__webpack_require__(/*! ./browse-page.component.scss */ "./src/pages/browse-page/browse-page.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"], angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"]])
+    ], BrowsePageComponent);
+    return BrowsePageComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/pages/confirm-page/confirm-page.component.html":
 /*!************************************************************!*\
   !*** ./src/pages/confirm-page/confirm-page.component.html ***!
@@ -1816,7 +3210,7 @@ var ConfirmPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n\n\n<div>\n  <app-header></app-header>\n</div>\n\n<div class=\"my-container\">\n  <div class=\"box-margin\">\n <div class=\"mytitle\">\n   DESIGN YOUR ITINERARY\n </div>\n <div class=\"description\">\n   Build your itinerary...your way! Choose from our programs for each timeslot of your visit\n </div>\n </div>\n\n\n<div class=\"pad\">\n<div class=\"sub-header\">\n  FIRST AVE. GRADE 3 CLASS - ITINERARY 1\n</div>\n</div>\n\n<div class=\"box-margin\" >\n  <div  style=\"font-weight:bold; font-size:25px; margin-top:2%;\">\n<span class=\"activity-title\" > \nITINERARY\n</span>\n<span *ngIf=\"!set\" class=\"reset\">\n    <a href=\"javascript:void(0)\" (click)=\"reset()\">Reset</a>\n</span>\n  </div>\n<div *ngIf=\"!set\">\n    <div *ngIf='!isEdit' class=\"activity\">\n        <app-activity *ngFor=\"let item of items | async\" [item]=\"item\" [time]=\"time\" (index)=\"populate($event)\" (activity)=\"getActivity($event)\" [set]=\"set\" (remove)=\"remove($event)\"></app-activity>\n       </div>\n       \n       <div *ngIf='isEdit' class=\"activity\">\n        <app-activity *ngFor=\"let item of items\" [selectedItem]=\"item\" [time]=\"time\"  [swap]='swap' [display]='display' [showTools]='showTools' [edited]='edited' [set]=\"set\" [selected]='selected' (index)=\"populate($event)\" (activity)=\"getActivity($event)\" (remove)=\"remove($event)\"></app-activity>\n       </div>  \n</div>\n<div *ngIf=\"set\">\n    <div *ngIf='!isEdit' class=\"activity\">\n        <app-activity *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\" [item]=\"item\" [time]=\"time\" (index)=\"populate($event)\" (activity)=\"getActivity($event)\" [set]=\"set\" (remove)=\"remove($event)\"></app-activity>\n       </div>\n       \n       <div *ngIf='isEdit' class=\"activity\">\n        <app-activity *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\" [selectedItem]=\"item\" [time]=\"time\"  [swap]='swap' [display]='display' [showTools]='showTools' [edited]='edited' [set]=\"set\" [selected]='selected' (index)=\"populate($event)\" (activity)=\"getActivity($event)\" (remove)=\"remove($event)\"></app-activity>\n       </div>  \n</div>\n</div>\n</div>\n<div style=\"width:100%\">\n  <app-sticky-footer [count]=\"count\" [page]=\"page\" [set]=\"set\"></app-sticky-footer>\n</div>"
+module.exports = "\n\n\n<div>\n  <app-header></app-header>\n</div>\n\n<div class=\"my-container\">\n  <div class=\"box-margin\">\n <div class=\"mytitle\">\n   DESIGN YOUR ITINERARY\n </div>\n <div class=\"description\">\n   Build your itinerary...your way! Choose from our programs for each timeslot of your visit\n </div>\n </div>\n\n\n<div class=\"pad\">\n<div class=\"sub-header\">\n  FIRST AVE. GRADE 3 CLASS - ITINERARY 1\n</div>\n</div>\n\n<div class=\"box-margin\" >\n  <div  style=\"font-weight:bold; font-size:25px; margin-top:2%;\">\n<span class=\"activity-title\" > \nITINERARY\n</span>\n<span *ngIf=\"!set\" class=\"reset\">\n    <a href=\"javascript:void(0)\" (click)=\"reset()\">Reset</a>\n</span>\n  </div>\n<div *ngIf=\"!set\">\n    <div *ngIf='!isEdit' class=\"activity\">\n        <app-activity *ngFor=\"let item of items | async\" [item]=\"item\" [time]=\"time\" (index)=\"populate($event)\" (activity)=\"getActivity($event)\" [set]=\"set\" (remove)=\"remove($event)\"></app-activity>\n       </div>\n       \n       <div *ngIf='isEdit' class=\"activity\">\n        <app-activity *ngFor=\"let item of items\" [selectedItem]=\"item\" [time]=\"time\"  [swap]='swap' [display]='display' [showTools]='showTools' [edited]='edited' [set]=\"set\" [selected]='selected' (index)=\"populate($event)\" (activity)=\"getActivity($event)\" (remove)=\"remove($event)\"></app-activity>\n       </div>  \n</div>\n<div *ngIf=\"set\">\n    <div *ngIf='!isEdit' class=\"activity\">\n        <app-activity *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\" [item]=\"item\" [time]=\"time\" (index)=\"populate($event)\" (activity)=\"getActivity($event)\" [set]=\"set\" (remove)=\"remove($event)\"></app-activity>\n       </div>\n       \n       <div *ngIf='isEdit' class=\"activity\">\n        <app-activity *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\" [selectedItem]=\"item\" [time]=\"time\"  [swap]='swap' [display]='display' [showTools]='showTools' [edited]='edited' [set]=\"set\" [selected]='selected' (index)=\"populate($event)\" (activity)=\"getActivity($event)\" (remove)=\"remove($event)\"></app-activity>\n       </div>  \n</div>\n</div>\n</div>\n<div style=\"width:100%; margin-top:3%;\">\n  <app-sticky-footer [count]=\"count\" [page]=\"page\" [set]=\"set\"></app-sticky-footer>\n</div>"
 
 /***/ }),
 
@@ -1827,7 +3221,7 @@ module.exports = "\n\n\n<div>\n  <app-header></app-header>\n</div>\n\n<div class
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".my-container {\n  max-width: 1455px;\n  margin: auto; }\n\n.mytitle {\n  font-weight: bold;\n  font-size: 3rem;\n  color: #4a4a4a; }\n\n.description {\n  font-family: Arial;\n  font-size: 1rem;\n  color: #4a4a4a; }\n\n.box-margin {\n  margin-left: 2.5%; }\n\n.pad {\n  background-color: #e5e5e5;\n  height: 145px;\n  margin-top: 2%;\n  padding: 1.5%; }\n\n.sub-header {\n  background-color: white;\n  font-size: 2rem;\n  color: #4a4a4a;\n  height: 100px;\n  padding: 1.5%; }\n\n.activity-title {\n  font-weight: bold;\n  font-size: 25px; }\n\n.activity {\n  width: 100%; }\n\n.reset {\n  font-weight: bold;\n  font-size: 20px;\n  float: right;\n  margin-right: 2%; }\n\n.stick {\n  position: fixed;\n  bottom: 0;\n  width: 100%; }\n\n.bg {\n  height: 90px;\n  border-style: solid; }\n\na:link {\n  text-decoration: none;\n  color: #4a4a4a; }\n\n@media only screen and (max-width: 1470px) {\n  .my-container {\n    max-width: 100%;\n    margin: auto; }\n  .box-margin {\n    margin-left: 2.5%;\n    margin-right: 2.5%; } }\n"
+module.exports = ".my-container {\n  max-width: 1455px;\n  margin: auto; }\n\n.mytitle {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  font-size: 3rem;\n  color: #4a4a4a; }\n\n.description {\n  font-family: Arial;\n  font-size: 1rem;\n  color: #4a4a4a; }\n\n.box-margin {\n  margin-left: 2.5%; }\n\n.pad {\n  background-color: #e5e5e5;\n  height: 145px;\n  margin-top: 2%;\n  padding: 1.5%; }\n\n.sub-header {\n  background-color: white;\n  font-size: 2rem;\n  color: #4a4a4a;\n  height: 100px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  padding: 1.5%; }\n\n.activity-title {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  font-size: 25px; }\n\n.activity {\n  width: 100%; }\n\n.reset {\n  font-weight: bold;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 20px;\n  float: right;\n  margin-right: 2%; }\n\n.stick {\n  position: fixed;\n  bottom: 0;\n  width: 100%; }\n\n.bg {\n  height: 90px;\n  border-style: solid; }\n\na:link {\n  text-decoration: none;\n  color: #4a4a4a; }\n\n@media only screen and (max-width: 1470px) {\n  .my-container {\n    max-width: 100%;\n    margin: auto; }\n  .box-margin {\n    margin-left: 2.5%;\n    margin-right: 2.5%; } }\n"
 
 /***/ }),
 
@@ -1958,10 +3352,10 @@ var DesignPageComponent = /** @class */ (function () {
         if (event.order != 0) {
             this.dates[event.order] = this.dates[event.order - 1] + this.duration;
             var next = this.dates[event.order + 1];
-            /*   while(next != null ) {
+            while (next != null) {
                 this.dates[event.order + 1] = this.dates[event.order] + this.activities[event.oder + 1].length;
-                next = next + 1
-              } */
+                next = next + 1;
+            }
         }
         localStorage.setItem('dates', JSON.stringify(this.dates));
         if ((!this.selection.some(function (item) { return item === event.id; }))) {
@@ -2016,7 +3410,7 @@ var DesignPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <app-main-header></app-main-header>\n</div>\n\n<div class=\"my-container\" style=\"padding:0%\">\n\n<!-- <div  style=\"margin-top:2%;\">\n <div class=\"plan1\" >PLAN YOUR VISIT</div>\n  <div style=\"width:0;height: 0; border-top: 4.5px solid transparent; border-left: 6px solid black; \n  border-bottom: 4.5px solid transparent; float:left; margin-left:20px; margin-top:4px;\"></div> \n</div> -->\n\n<div class=\"my-content\">\n  <!-- <div class=\"plan2\">\n    PLAN A SCHOOL TRIP\n  </div> -->\n  <!-- <div style=\"float:right; margin-top:3%\"><a href=\"#\">\n      <div class=\"plan3\" >PLAN YOUR VISIT</div>\n      <div class=\"pointer\" ></div></a>\n    </div> -->\n</div>\n\n<div style=\"position:relative\">\n  <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-responsive img-resize\">\n  <div class=\"text\">\n     \n    \n    <div class=\"text3\">\n\n       <!--  <div><a style=\"color:white; background:white\" href=\"#\">\n            <div class=\"plan3\" >PLAN YOUR VISIT &#9655;</div>\n            \n        </a></div> -->\n        <div class=\"text1\">\n            PLAN A SCHOOL TRIP\n          </div>\n        <div class=\"text2\" >\n            PLAN YOUR DAY AT THE MUSEUM\n          </div>\n        Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, \n        , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an\n    </div>\n    </div>\n</div>\n\n\n<!-- <div class=\"text1\">\n<div class=\"text2\" >\n    PLAN YOUR DAY AT THE MUSEUM\n  </div>\n<div class=\"text3\">\n    Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, \n    , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an\n    <br><br>\n    Get started with our sample iteneraries below or <a class=\"build\" href=\"javascript:void(0)\" (click)=\"open(content)\"> build your own  </a>\n</div>\n</div>\n -->\n\n<!-- <div class=\"card-title\">VIEW OUR ITINERARIES</div> -->\n<div class=\"content\">\n<div class=\"side-bar\">\n<div class=\"first\">\n  <div style=\"float:left;margin:4%; font-size:1.5rem\">Filter By</div>\n <div style=\"float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer\" (click)=\"reset()\">Clear All</div>\n</div>\n\n<div>\n<div class=\"selection\">\n  \n  <div class=\"ftext\">\n    GRADE\n  </div>\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\">Kindergaten to Grade 2\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"KinderTo2\" style=\"float:right;\" (change)=\"filterBoolean('KinderTo2',KinderTo2)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  \n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 3 to 5\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr3To5\" style=\"float:right;\" (change)=\"filterBoolean('Gr3To5',Gr3To5)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 6 to 8\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr6To8\" style=\"float:right;\" (change)=\"filterBoolean('Gr6To8',Gr6To8)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n</form>\n</div>\n\n\n\n<div class=\"selection\">\n  <form>\n  <div class=\"ftext\">\n      TIME OF YEAR\n    </div>\n    <div class=\"boxes\">\n        <label class=\"lab\">October to April\n            <span class=\"checkmark\"></span>\n           \n          </label>\n          <input  [(ngModel)]=\"OctoberToApril\" style=\"float:right;\" (change)=\"filterBoolean('OctoberToApril',OctoberToApril)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n  \n  \n    \n    <div class=\"boxes\">\n        <label class=\"lab\">May to June\n            <span class=\"checkmark\"></span>\n            \n          </label>\n          <input [(ngModel)]=\"MayToJune\" style=\"float:right;\" (change)=\"filterBoolean('MayToJune',MayToJune)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    </form>\n  </div>\n\n\n\n\n  <div class=\"selection\">\n  \n    <div class=\"ftext\">\n        LENGTH\n      </div>\n      <form>\n          <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios1\">\n               Half Day\n              </label>\n              <input style=\"float:right\"[(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\" type=\"radio\" name=\"exampleRadios\"  value=\"Half-day\" class=\"rad\">\n            </div>\n            <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios2\">\n              Full Day\n              </label>\n              <input  style=\"float:right\" [(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\"  type=\"radio\" name=\"exampleRadios\" value=\"Full-day\" class=\"rad\">\n     </div>\n        </form>\n    </div>\n    \n \n    \n  \n</div>\n</div>\n<div class=\"itineraries\">\n <div style=\"height:5%; position:relative;\">\n  <div class=\"ti\" >Itineraries</div>\n  <div class=\"my-btn\" (click)=\"open(content)\">\n  Build Your Own\n  </div></div>\n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\" *ngFor=\"let item of filtered| paginate: { itemsPerPage: 4, currentPage: p } \" >\n          <app-card [item]=\"item\"></app-card>\n          </div>\n</div>\n<pagination-controls class=\"pag\" (pageChange)=\"p = $event\"\n                                  directionLinks=\"false\"\n   \n></pagination-controls>\n</div>\n\n  <!-- <div class=\"filter\">\n    <div style=\"font-family:futura-pt, Helvetica Neue, Arial\">\n        <div class=\"row\"  style=\"margin-bottom:2%; margin-left:0.1%\">\n            <div class=\"filtertext\" >FILTER ITINERARIES:</div>\n          <div class=\"input-group\" class=\"grades\">\n                  <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"grades\" (change)=\"filterExact('grades', grades)\">\n                      <option [ngValue]=\"undefined\" disabled  selected> Select Your Grade</option>\n                    <option value=\"Kinder to Gr.2\">Kindergaten to Grade 2</option>\n                    <option value=\"Gr 3-5\">Grades 3&ndash;5</option>\n                    <option value=\"Gr 6-8\">Grades 6&ndash;8</option>\n                  </select>\n                </div>\n                <div class=\"input-group\" class=\"date\" >\n                      <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"timeOfYear\" (change)=\"filterExact('timeOfYear', timeOfYear)\">\n                          <option [ngValue]=\"undefined\" disabled  selected> Select Time of Year </option>\n                          <option value=\"October-April\">Oct&ndash;Apr</option>\n                          <option value=\"May-June\">May&ndash;Jun</option>\n                        </select>\n                    </div>\n                    <div class=\"input-group\" class=\"day\" >\n                        <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"day\" (change)=\"filterExact('day', day)\">\n                            <option [ngValue]=\"undefined\" disabled  selected> Half-Day or Full-Day</option>\n                            <option value=\"Half-day\">Half&ndash;Day</option>\n                            <option value=\"Full-day\">Full&ndash;Day</option>\n                          </select>\n                        </div>\n                        <div class=\"show\">\n                          <button type=\"button\" class=\"btn \" style=\"width:100%; background-color:#8a8d8a; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:#f7f7f7\" (click)=\"reset()\"> Clear All Filters</button>\n                        </div>\n                      </div>\n                      </div>\n           \n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\"*ngFor=\"let item of filtered \" >\n          <app-card [item]=\"item\"></app-card>\n          </div>\n\n          <div  class=\"empty-card\" >\n            <app-empty-card></app-empty-card>\n            </div>\n          \n</div>\n\n<nav style=\"margin-bottom:10%\">\n    <ul class=\"pagination pagination-lg\" style=\"margin-left:0\">\n      <li class=\"page-item\" >\n        <a class=\"page-link\" style=\"border-radius:0; color:#e5e5e5; background-color:#4a4a4a\" href=\"#\" tabindex=\"-1\">1</a>\n      </li>\n      <li class=\"page-item\" style=\"border-radius:0\"><a class=\"page-link\" style=\"color:#4a4a4a\" href=\"#\">2</a></li>\n      <li class=\"page-item\" style=\"border-radius:0\" ><a class=\"page-link\" style=\"border-radius:0; color:#4a4a4a\" href=\"#\">3</a></li>\n    </ul>\n  </nav>\n</div> -->\n</div>\n\n</div>\n<div>\n  <app-main-footer></app-main-footer>\n</div>\n\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\n    <div style=\"width:100%\">\n        <button type=\"button\"  (click)=\"d('Cross click')\" style=\"background-color:black; float:right; height:70px; width:70px; \">\n            <div style=\"color:white; \">\n              x\n            </div>\n            <div style=\"color:white; font-weight:bold; font-size:12px;\">\n              CLOSE\n            </div>\n          </button>\n    <app-build></app-build>\n\n    \n    <div id=footer>\n        <div style=\"margin-bottom:30px;\">\n        <div>\n        <button type=\"button\" class=\"btn btn-danger\" style=\"margin:3%\" (click)=\"d('Cross click')\"  (click)=\"navigateToDesignPage()\"> <div style=\"float:left;\">CONTINUE</div> <div style=\"width:0;height: 0; border-top: 5px solid transparent; border-left: 10px solid white; border-bottom: 5px solid transparent; float:left; margin-left:28px; margin-top:6px;\"></div></button>\n      </div>\n      \n  </div>\n  </div>\n    \n\n    \n  </div>\n  </ng-template>\n"
+module.exports = "\n<div>\n  <app-main-header></app-main-header>\n  <div class=\"my-header\"><div class=\"h1\"> PLAN A SCHOOL TRIP</div>\n  \n  <div class=\"h2\"> PLAN YOUR DAY AT THE MUSEUM</div>\n  <div class=\"h3\"> <div class=\"my-btn\" (click)=\"navigateToBrowsePage()\">BROWSE ITINERARIES</div><div class=\"my-btn\">CREATE YOUR OWN</div></div>\n\n</div>\n\n<div class=\"my-container\">\n  <div class=\"my-bg\" >\n    <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-resize\"> \n\n\n  \n  \n  </div>\n\n\n\n  </div>\n  \n</div>\n<div>\n  <app-main-footer></app-main-footer>\n</div>\n\n\n \n\n"
 
 /***/ }),
 
@@ -2027,7 +3421,7 @@ module.exports = "<div>\n  <app-main-header></app-main-header>\n</div>\n\n<div c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".my-container {\n  max-width: 1455px;\n  margin: auto; }\n\nh1 {\n  line-height: 1.25;\n  font-weight: bold;\n  text-transform: uppercase;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.img-resize {\n  height: 500px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  padding: 1%; }\n\n.card-title {\n  color: #4a4a4a;\n  font-weight: bold;\n  font-size: 1.5rem;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.pag /deep/ .ngx-pagination .current {\n  background: #4a4a4a; }\n\n.pag /deep/ .ngx-pagination li {\n  border-style: solid;\n  border-width: 1px;\n  border-color: #e5e5e5;\n  margin-right: 0px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.margin {\n  margin-right: 3%;\n  margin-bottom: 3%;\n  height: 370px;\n  width: 45%;\n  font-size: 13px; }\n\n.pagination-lg {\n  border: none; }\n\n/* .empty-card{\r\n    height:360px; \r\n    width:32%;\r\n    font-size:13px;\r\n} */\n\n.boxes {\n  width: 90%;\n  margin-bottom: 2px;\n  margin-left: 3%; }\n\n.first {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.selection {\n  margin-top: 10%; }\n\n.ftext {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1rem;\n  margin-bottom: 1%;\n  margin-left: 3%;\n  color: #8a8d8a; }\n\n.my-content {\n  padding-bottom: 15px;\n  margin-bottom: 20px; }\n\n.pointer {\n  width: 0;\n  height: 0;\n  border-top: 8px solid transparent;\n  border-left: 12px solid white;\n  border-bottom: 8px solid transparent;\n  float: left;\n  margin-left: 20px;\n  margin-top: 12px; }\n\n.plan1 {\n  float: left;\n  font-size: 12px;\n  font-weight: bold;\n  text-transform: uppercase;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.plan2 {\n  float: left;\n  font-weight: bold;\n  font-size: 3rem;\n  color: #4a4a4a;\n  text-transform: uppercase;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.plan3 {\n  font-size: 0.8rem;\n  margin-bottom: 2%;\n  font-weight: bold;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.text {\n  color: #fff; }\n\ninput[type=checkbox]:checked {\n  background: green; }\n\n.selection {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.text1 {\n  font-size: 3rem;\n  margin-bottom: 8%;\n  font-weight: bold;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.text2 {\n  font-size: 1.7rem;\n  margin-bottom: 1%; }\n\n.text3 {\n  position: absolute;\n  top: 20%;\n  left: 22%;\n  max-width: 55%;\n  padding: 15px;\n  text-align: center;\n  margin-bottom: 20px;\n  font-size: 1rem;\n  font-weight: lighter;\n  clear: both;\n  font-family: Arial; }\n\n.content {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.side-bar {\n  display: flex;\n  flex-direction: column;\n  width: 32%;\n  height: 1500px;\n  border-color: #e5e5e5;\n  border-width: 1px;\n  border-style: solid; }\n\n.itineraries {\n  width: 68%;\n  padding: 1.5%; }\n\n.filter {\n  margin-left: 0%;\n  margin-top: 2%; }\n\n.filtertext {\n  font-weight: bold;\n  margin-top: 8px; }\n\n.filter2 {\n  margin-bottom: 2%;\n  margin-left: 0.1%; }\n\n.grade {\n  font-weight: bold;\n  margin-top: 8px; }\n\n.grades {\n  width: 15%;\n  margin-left: 1%;\n  height: 10px; }\n\n.select {\n  font-weight: bold;\n  font-size: 13px; }\n\n.date {\n  width: 15%;\n  margin-left: 1%; }\n\n.day {\n  width: 15%;\n  margin-left: 1%;\n  height: 10px; }\n\n.show {\n  width: 15%;\n  margin-left: 1%; }\n\n.build {\n  color: red; }\n\n.point {\n  color: #fff; }\n\n.ti {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  display: inline-block;\n  font-size: 2rem;\n  position: relative;\n  top: 2.5px;\n  color: #4a4a4a; }\n\n.my-btn {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  display: inline-block;\n  font-weight: lighter;\n  font-size: 0.8rem;\n  padding: 7px;\n  color: #fff;\n  background: red;\n  margin-left: 4%;\n  cursor: pointer; }\n\n@media only screen and (max-width: 1470px) {\n  .my-container {\n    max-width: 100%;\n    margin: auto; }\n  .card-title {\n    padding: 15px;\n    color: #4a4a4a;\n    font-weight: bold;\n    font-size: 1.5rem;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n  .my-content {\n    padding: 15px;\n    margin-bottom: 20px; }\n  /* .pointer{\r\n    width:0;\r\n    height:0; \r\n    border-top:8px solid transparent; \r\n    border-left: 12px solid #808080; \r\n    border-bottom: 8px solid transparent; \r\n    float:left; \r\n    margin-left:20px; \r\n    margin-top:12px;\r\n    }\r\n    .plan1{\r\n    float:left; \r\n    font-size:12px; \r\n    font-weight:bold;\r\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\r\n    }\r\n    .plan2{\r\n    float:left; \r\n    font-weight:bold;\r\n    font-size:3rem;\r\n    color:#4a4a4a;\r\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\r\n    }\r\n    .plan3{\r\n    float:left; \r\n    font-size:25px; \r\n    font-weight:bold;\r\n    color:#8a8d8a;\r\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\r\n    }\r\n    .text1{\r\n    color:#4a4a4a; \r\n    margin-top:2%;\r\n    padding:15px;\r\n    }\r\n    .text2{\r\n    \r\n    padding-bottom:0;\r\n    margin-bottom: 20px;\r\n    font-size:3rem;\r\n    font-weight:bold;\r\n    clear: both;\r\n    color:#4a4a4a;\r\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\r\n    }\r\n    .text3{\r\n    \r\n    padding-bottom:0;\r\n    margin-bottom: 20px;\r\n    font-size:1rem;\r\n    font-weight:lighter;\r\n    clear: both;\r\n    color:#4a4a4a;\r\n    font-family: Arial;\r\n    }\r\n    .filter{\r\n        margin-left:1.5%; \r\n        margin-top:2%;  \r\n        } */ }\n\n@media only screen and (max-width: 1300px) {\n  /*   \r\n.grades{\r\n    width:26%;\r\n     margin-left:1%;\r\n }\r\n .date{\r\n width:26%; margin-left:1%;\r\n }\r\n .day{\r\n width:26%;margin-left:1%;\r\n }  \r\n \r\n .show{\r\n    width:12%; \r\n    margin-left:46%;\r\n    margin-top:1%;\r\n    } */ }\n\n@media only screen and (max-width: 1220px) {\n  /*  .margin{\r\n        margin-bottom:5%;\r\n        height:380px;\r\n        width:49%;\r\n        font-size:13px;\r\n       \r\n    }\r\n\r\n    .empty-card{\r\n        height:380px; \r\n        width:49%;\r\n        font-size:13px;\r\n    \r\n       \r\n    } */ }\n\n@media only screen and (max-width: 1024px) {\n  /* .plan1{\r\n        float:left; \r\n        font-size:12px; \r\n        font-weight:bold;\r\n     \r\n        }\r\n        .plan2{\r\n        float:left; \r\n        font-weight:bold;\r\n        font-size:1.5rem;\r\n        color:#4a4a4a;\r\n    \r\n        }\r\n        .plan3{\r\n        float:left; \r\n        font-size:1rem; \r\n        font-weight:bold;\r\n        color:#8a8d8a;\r\n      \r\n        }\r\n        .pointer{\r\n            width:0;\r\n            height:0; \r\n            border-top:8px solid transparent; \r\n            border-left: 8px solid #808080; \r\n            border-bottom: 5px solid transparent; \r\n            float:left; \r\n            margin-left:10px; \r\n            margin-top:6px;\r\n            }\r\n       \r\n        .text2{\r\n        padding-bottom:0;\r\n        margin-bottom: 10px;\r\n        font-size:1.5rem;\r\n        clear: both;\r\n        color:#4a4a4a;\r\n\r\n        }\r\n        .text3{\r\n        padding-bottom:0;\r\n        margin-bottom: 20px;\r\n        font-size:1rem;\r\n        font-weight:lighter;\r\n        clear: both;\r\n        color:#4a4a4a;\r\n     \r\n        } */ }\n\n@media only screen and (max-width: 1006px) {\n  /* .img-resize{\r\n        height:250px;\r\n        width:100%;\r\n        object-fit:cover;\r\n      }\r\n      \r\n\r\n    .filtertext{\r\n        font-weight:bold; \r\n        margin-top:8px;\r\n        margin-left:37%;\r\n        }\r\n    .grades{\r\n        width:95%;\r\n         margin-left:1%;\r\n         \r\n     }\r\n     .date{\r\n     width:95%; \r\n     margin-left:1%;\r\n     margin-top:4%;\r\n    \r\n     }\r\n     .day{\r\n     width:95%;\r\n     margin-left:1%;\r\n     margin-top:1.5%;\r\n  \r\n     }  \r\n     \r\n     .show{\r\n        width:95%; \r\n        margin-left:1%;\r\n        margin-top:4%;\r\n  \r\n        } */ }\n\n@media only screen and (max-width: 1000px) {\n  /*  .margin{\r\n        margin-bottom:3%;\r\n        height:380px;\r\n        width:49%;\r\n        font-size:13px;\r\n       \r\n    }\r\n\r\n    .empty-card{\r\n        height:380px; \r\n        width:49%;\r\n        font-size:13px;\r\n    \r\n    }\r\n */ }\n\n@media only screen and (max-width: 850px) {\n  /* .margin{\r\n        margin-bottom:5%;\r\n        height:380px;\r\n        width:49%;\r\n        font-size:13px;\r\n       \r\n    }\r\n\r\n    .empty-card{\r\n        height:380px; \r\n        width:49%;\r\n        font-size:13px;\r\n    \r\n       \r\n    }\r\n    .grades{\r\n        width:95%;\r\n         margin-left:1%;\r\n         \r\n     }\r\n     .date{\r\n     width:95%; \r\n     margin-left:1%;\r\n     margin-top:4.2%;\r\n    \r\n     }\r\n     .day{\r\n     width:95%;\r\n     margin-left:1%;\r\n     margin-top:1.5%;\r\n  \r\n     }  \r\n     \r\n     .show{\r\n        width:95%; \r\n        margin-left:1%;\r\n        margin-top:4%;\r\n  \r\n        } */ }\n\n@media only screen and (max-width: 750px) {\n  /*   .margin{\r\n        margin-bottom:8%;\r\n        height:380px;\r\n        width:49%;\r\n        font-size:13px;\r\n       \r\n    }\r\n\r\n    .empty-card{\r\n        height:380px; \r\n        width:49%;\r\n        font-size:13px;\r\n    \r\n       \r\n    }\r\n    .grades{\r\n        width:95%;\r\n         margin-left:1%;\r\n         \r\n     }\r\n     .date{\r\n     width:95%; \r\n     margin-left:1%;\r\n     margin-top:5%;\r\n    \r\n     }\r\n     .day{\r\n     width:95%;\r\n     margin-left:1%;\r\n     margin-top:1.5%;\r\n  \r\n     }  \r\n     \r\n     .show{\r\n        width:95%; \r\n        margin-left:1%;\r\n        margin-top:5%;\r\n  \r\n        }\r\n      */ }\n\n@media only screen and (max-width: 650px) {\n  /*    .margin{\r\n        margin-bottom:10%;\r\n        height:380px;\r\n        width:50%;\r\n        font-size:13px;\r\n       \r\n    }\r\n\r\n    .empty-card{\r\n        height:380px; \r\n        width:49%;\r\n        font-size:13px;\r\n    \r\n       \r\n    }\r\n\r\n    .grades{\r\n        width:95%;\r\n         margin-left:1%;\r\n         \r\n     }\r\n     .date{\r\n     width:95%; \r\n     margin-left:1%;\r\n     margin-top:5.5%;\r\n    \r\n     }\r\n     .day{\r\n     width:95%;\r\n     margin-left:1%;\r\n     margin-top:1.5%;\r\n  \r\n     }  \r\n     \r\n     .show{\r\n        width:95%; \r\n        margin-left:1%;\r\n        margin-top:5.5%;\r\n  \r\n        } */ }\n\n@media only screen and (max-width: 600px) {\n  /* .img-resize{\r\n        height:200px;\r\n        width:100%;\r\n        object-fit:cover;\r\n      }\r\n      \r\n\r\n    .margin{\r\n        margin-bottom:8%;\r\n        height:380px;\r\n        width:95%;\r\n        font-size:13px;\r\n       \r\n    }\r\n\r\n    .empty-card{\r\n        height:380px; \r\n        width:95%;\r\n        font-size:13px;\r\n        margin-bottom:3%;\r\n       \r\n    }\r\n\r\n    .filtertext{\r\n        font-weight:bold; \r\n        margin-top:8px;\r\n        margin-left:1%;\r\n        }\r\n\r\n        .grades{\r\n            width:95%;\r\n             margin-left:1%;\r\n             \r\n         }\r\n         .date{\r\n         width:95%; \r\n         margin-left:1%;\r\n         margin-top:6%;\r\n        \r\n         }\r\n         .day{\r\n         width:95%;\r\n         margin-left:1%;\r\n         margin-top:1.5%;\r\n      \r\n         }  \r\n         \r\n         .show{\r\n            width:95%; \r\n            margin-left:1%;\r\n            margin-top:6%;\r\n      \r\n            }\r\n       */ }\n\n/* @media only screen and (max-width: 480px) {\r\n    .margin{\r\n        margin-bottom:8%;\r\n        height:380px;\r\n        width:98%;\r\n        font-size:13px;\r\n       \r\n    }\r\n\r\n    .empty-card{\r\n        height:380px; \r\n        width:98%;\r\n        font-size:13px;\r\n        margin-bottom:3%;\r\n       \r\n    }\r\n\r\n    .filtertext{\r\n        font-weight:bold; \r\n        margin-top:8px;\r\n        margin-left:0%;\r\n        }\r\n\r\n        .grades{\r\n            width:92%;\r\n             margin-left:1%;\r\n             \r\n         }\r\n         .date{\r\n         width:92%; \r\n         margin-left:1%;\r\n         margin-top:7%;\r\n        \r\n         }\r\n         .day{\r\n         width:92%;\r\n         margin-left:1%;\r\n         margin-top:1.5%;\r\n      \r\n         }  \r\n         \r\n         .show{\r\n            width:92%; \r\n            margin-left:1%;\r\n            margin-top:7%;\r\n      \r\n            }\r\n      \r\n    \r\n  } */\n\n@media only screen and (max-width: 414px) {\n  /* .margin{\r\n        margin-bottom:12%;\r\n        height:380px;\r\n        width:95%;\r\n        font-size:13px;\r\n       \r\n    }\r\n\r\n    .plan1{\r\n        float:left; \r\n        font-size:12px; \r\n        font-weight:bold;\r\n        }\r\n        .plan2{\r\n        float:left; \r\n        margin-left:10px;\r\n        font-weight:bold; font-size:28px;\r\n        }\r\n        .plan3{\r\n        float:left; \r\n        font-size:0px; \r\n        font-weight:bold; \r\n        color:\"#808080\";\r\n        }\r\n\r\n    .empty-card{\r\n        height:380px; \r\n        width:92%;\r\n        font-size:8px;\r\n        margin-bottom:8%;\r\n       \r\n    }\r\n\r\n\r\n    .text1{\r\n\r\n        margin-left:1%; \r\n        margin-top:2%;\r\n        }\r\n        .text2{\r\n        font-weight:bold; \r\n        font-size:25px;\r\n        margin-left:1%; \r\n        }\r\n        .text3{\r\n        font-size:12px; \r\n        margin-left:1%;\r\n        width:80%; \r\n        margin-top:0.8%;\r\n        \r\n        }\r\n\r\n        .grades{\r\n            width:92%;\r\n             margin-left:1%;\r\n             \r\n         }\r\n         .date{\r\n         width:92%; \r\n         margin-left:1%;\r\n         margin-top:9%;\r\n         \r\n        \r\n         }\r\n         .day{\r\n         width:92%;\r\n         margin-left:1%;\r\n         margin-top:2.7%;\r\n      \r\n         }  \r\n         \r\n         .show{\r\n            width:92%; \r\n            margin-left:1%;\r\n            margin-top:9%;\r\n      \r\n            }\r\n          \r\n */ }\n\n@media only screen and (max-width: 375px) {\n  /* .margin{\r\n        margin-bottom:12%;\r\n        height:380px;\r\n        width:95%;\r\n        font-size:13px;\r\n       \r\n    }\r\n\r\n    .plan1{\r\n        float:left; \r\n        font-size:12px; \r\n        font-weight:bold;\r\n        }\r\n        .plan2{\r\n        float:left; \r\n        font-weight:bold; font-size:25px;\r\n        }\r\n        .plan3{\r\n        float:left; \r\n        font-size:0px; \r\n        font-weight:bold; \r\n        color:\"#808080\";\r\n        }\r\n\r\n    .empty-card{\r\n        height:380px; \r\n        width:92%;\r\n        font-size:8px;\r\n        margin-bottom:8%;\r\n       \r\n    }\r\n\r\n\r\n    .text1{\r\n\r\n        margin-left:1%;\r\n        margin-top:2%;\r\n        }\r\n        .text2{\r\n         margin-left:1%; \r\n        font-weight:bold; \r\n        font-size:25px;\r\n        }\r\n        .text3{\r\n        margin-left:1%; \r\n        font-size:12px; \r\n        width:80%; \r\n        margin-top:0.8%;\r\n        \r\n        }\r\n\r\n        .grades{\r\n            width:92%;\r\n             margin-left:1%;\r\n             \r\n         }\r\n         .date{\r\n         width:92%; \r\n         margin-left:1%;\r\n         margin-top:9%;\r\n         \r\n        \r\n         }\r\n         .day{\r\n         width:92%;\r\n         margin-left:1%;\r\n         margin-top:2.2%;\r\n      \r\n         }  \r\n         \r\n         .show{\r\n            width:92%; \r\n            margin-left:1%;\r\n            margin-top:9%;\r\n      \r\n            } */ }\n\n@media only screen and (max-width: 320px) {\n  /* .margin{\r\n        margin-bottom:12%;\r\n        height:380px;\r\n        width:95%;\r\n        font-size:13px;\r\n       \r\n    }\r\n\r\n    .plan1{\r\n        float:left; \r\n        font-size:12px; \r\n        font-weight:bold;\r\n        }\r\n        .plan2{\r\n        float:left; \r\n        font-weight:bold; font-size:25px;\r\n        }\r\n        .plan3{\r\n        float:left; \r\n        font-size:0px; \r\n        font-weight:bold; \r\n        color:\"#808080\";\r\n        }\r\n\r\n    .empty-card{\r\n        height:380px; \r\n        width:92%;\r\n        font-size:8px;\r\n        margin-bottom:8%;\r\n       \r\n    }\r\n\r\n\r\n    .text1{\r\n\r\n        margin-left:1%;\r\n        margin-top:2%;\r\n        }\r\n        .text2{\r\n        font-weight:bold; \r\n        font-size:25px;\r\n        margin-left:1%;\r\n        }\r\n        .text3{\r\n        font-size:12px; \r\n        width:80%; \r\n        margin-top:0.8%;\r\n        margin-left:1%;\r\n        \r\n        }\r\n\r\n        .grades{\r\n            width:92%;\r\n            \r\n             \r\n         }\r\n         .date{\r\n         width:92%; \r\n         margin-top:9%;\r\n         \r\n        \r\n         }\r\n         .day{\r\n         width:92%;\r\n         margin-top:1.5%;\r\n      \r\n         }  \r\n         \r\n         .show{\r\n            width:92%; \r\n\r\n            margin-top:9%;\r\n      \r\n            } */ }\n"
+module.exports = ".my-container {\n  margin: auto; }\n\n.img-resize {\n  height: 850px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\n.my-bg {\n  position: relative;\n  bottom: 120px;\n  z-index: -5;\n  margin-bottom: -120px; }\n\n.my-header {\n  position: absolute;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  top: 250px;\n  left: 35%;\n  text-align: center;\n  color: #fff; }\n\n.h1 {\n  margin-bottom: 10%;\n  font-size: 3rem;\n  cursor: pointer; }\n\n.h2 {\n  margin-bottom: 35%;\n  font-family: Arial;\n  font-weight: normal;\n  font-size: 1.5rem; }\n\n.my-btn {\n  background: red;\n  cursor: pointer;\n  display: inline;\n  margin: 5px;\n  font-size: 0.7rem;\n  font-weight: bold;\n  padding: 2.5%; }\n"
 
 /***/ }),
 
@@ -2044,13 +3438,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
-/* harmony import */ var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/add/operator/catch */ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js");
-/* harmony import */ var rxjs_add_observable_throw__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/add/observable/throw */ "./node_modules/rxjs-compat/_esm5/add/observable/throw.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
+/* harmony import */ var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/add/operator/catch */ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js");
+/* harmony import */ var rxjs_add_observable_throw__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/add/observable/throw */ "./node_modules/rxjs-compat/_esm5/add/observable/throw.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2067,102 +3458,17 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
 var LandingPageComponent = /** @class */ (function () {
-    function LandingPageComponent(modalService, db) {
+    function LandingPageComponent(modalService, db, router, route) {
         this.modalService = modalService;
         this.db = db;
-        this.p = 1;
-        this.log = '';
-        this.filters = {};
-        this.filters1 = {};
+        this.router = router;
+        this.route = route;
     }
     LandingPageComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        localStorage.setItem('landing', JSON.stringify(true));
-        localStorage.setItem('submit', JSON.stringify(false));
-        localStorage.setItem('design', JSON.stringify(false));
-        localStorage.setItem('confirm', JSON.stringify(false));
-        this.db.collection('/itineraries').valueChanges().subscribe(function (items) {
-            _this.items = items;
-            _this.applyFilters();
-        });
-        localStorage.setItem("set", JSON.stringify(false));
-        console.log(this.items);
     };
-    LandingPageComponent.prototype.open = function (content) {
-        var _this = this;
-        this.modalService.open(content).result.then(function (result) {
-            _this.closeResult = "Closed with: " + result;
-        });
-    };
-    LandingPageComponent.prototype.resizeImage = function () {
-        var value = false;
-        if (screen.width < 1024) {
-            value = true;
-            return value;
-        }
-    };
-    LandingPageComponent.prototype.logCheckbox = function (element) {
-        console.log("Checkbox " + element.value + " was " + (element.checked ? '' : 'un') + "checked\n");
-        this.grades = element.value;
-        console.log(this.grades);
-    };
-    LandingPageComponent.prototype.applyFilters = function () {
-        console.log('action called');
-        var newlyFilter = lodash__WEBPACK_IMPORTED_MODULE_3__["filter"](this.items, lodash__WEBPACK_IMPORTED_MODULE_3__["conforms"](this.filters));
-        console.log(newlyFilter);
-        this.filtered = newlyFilter;
-        /* if (this.filtered === undefined || this.filtered.length == 0) {
-          this.filtered = newlyFilter;
-          console.log(true)
-          console.log(this.filtered)
-          console.log(newlyFilter)
-      }
-      else{
-           console.log(false)
-    
-      newlyFilter.map((elem)=> this.filtered.push(elem));
-      console.log(this.filtered)
-      console.log(newlyFilter)
-      } */
-    };
-    LandingPageComponent.prototype.filterBoolean = function (property, rule) {
-        this.first = rule;
-        if (!rule)
-            this.removeFilter(property);
-        else {
-            this.filters[property] = function (val) { return val; };
-            console.log(this.filters);
-            this.applyFilters();
-        }
-    };
-    LandingPageComponent.prototype.removeFilter = function (property) {
-        delete this.filters[property];
-        this[property] = null;
-        this.applyFilters();
-    };
-    LandingPageComponent.prototype.filterExact = function (property, rule) {
-        this.filters[property] = function (val) { return val == rule; };
-        this.applyFilters();
-    };
-    /*  filterExact1(property: string, rule: any) {
-       this.filters[property] = val => val == rule
-       this.applyFilters1()
-     }
-   
-     filterExact2(property: string, rule: any) {
-       this.filters[property] = val => val == rule
-       this.applyFilters2()
-     } */
-    LandingPageComponent.prototype.reset = function () {
-        jquery__WEBPACK_IMPORTED_MODULE_4__('.cbox').prop('checked', false);
-        jquery__WEBPACK_IMPORTED_MODULE_4__('.rad').prop('checked', false);
-        this.removeFilter("day");
-        this.removeFilter("KinderTo2");
-        this.removeFilter("Gr3To5");
-        this.removeFilter("Gr6To8");
-        this.filtered = this.items;
+    LandingPageComponent.prototype.navigateToBrowsePage = function () {
+        this.router.navigate(["/BrowsePage"]);
     };
     LandingPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -2170,7 +3476,8 @@ var LandingPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./landing-page.component.html */ "./src/pages/landing-page/landing-page.component.html"),
             styles: [__webpack_require__(/*! ./landing-page.component.scss */ "./src/pages/landing-page/landing-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"], angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
+        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"], angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
     ], LandingPageComponent);
     return LandingPageComponent;
 }());
