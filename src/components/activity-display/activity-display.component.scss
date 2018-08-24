@@ -3,8 +3,8 @@
     flex-direction:row;
     justify-content:space-between;
     max-width:900px;
-    height:170px;
     color:#4a4a4a;
+
   }
   
   .time{
@@ -15,6 +15,76 @@
   
   }
   
+  .big-box{
+   width:90%;
+ 
+   background:#e5e5e5;;
+   display:flex;
+   flex-wrap: wrap;
+   justify-content:space-between;
+   margin-bottom:3%;
+
+  }
+.activities{
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+width:50%;
+margin-top:2%;
+}
+.pic{
+  position:relative;
+  height:100px;
+  width:32%;
+  margin-bottom:3%;
+  border-style:solid;
+  border-color:grey;
+  border-width:thin;
+
+}
+
+.pics{
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  cursor:pointer;
+}
+
+.des{
+  display:flex;
+  flex-direction:column;
+  width:57%;
+   height:100px;
+}
+
+.act-title{
+  font-family: "futura-pt", "Helvetica Neue", Arial;
+  font-weight:bold;
+  margin-bottom:1%; 
+}
+.act-des{
+  font-family:  Arial;
+  font-weight:lighter;
+max-width:85%;
+height:90px;
+color:#8a8d8a;
+}
+
+
+.type{
+  margin-top:1%;
+  font-family: "futura-pt", "Helvetica Neue", Arial;
+  font-weight:bold;
+}
+
+  .big-box2{
+    width:90%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    margin-bottom:3%;
+ 
+   }
   .first1{
     background-color:#e5e5e5;
   width:95%;
@@ -40,18 +110,28 @@
       position:relative;
   height:150px;
   width:200px;
+  margin-bottom:3%;
+  object-fit:cover;
 
   }
+
+  .swap-text{
+    position:absolute;
+    bottom:5px;
+    right:5px;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-weight:bold;
+    cursor:pointer;
+    color:#fff;
+  }
+
   .btext{
-      position:relative;
-      font-family: "futura-pt", "Helvetica Neue", Arial;
-  font-weight:bold;
+  position:relative;
   margin-bottom:1%;
   }
 
   .img-res{
   width:100%
-
   }
 
   .textt{
@@ -66,6 +146,7 @@
   font-weight:bold;
   margin-bottom:1%;
   }
+
   .bod{
     font-family:  Arial;
     font-weight:lighter;
@@ -74,7 +155,12 @@
   color:#8a8d8a;
 
   }
-  
+  .bod1{
+    font-family:  Arial;
+    font-weight:lighter;
+  max-width:85%;
+  color:#8a8d8a;
+  }
   .icon{
     font-family: "futura-pt", "Helvetica Neue", Arial;
   display:flex;
@@ -91,6 +177,7 @@
 .det{
     font-size:0.9rem;
     text-decoration:underline;
+    cursor:pointer;
 }
 
 

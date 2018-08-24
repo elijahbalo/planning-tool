@@ -16,8 +16,8 @@
   }
   
   .first1{
-    background-color:#e5e5e5;
-  width:95%;
+    background-color:#fff;
+  width:50%;
   height:25px;
   font-size:0.85rem;
 
@@ -25,22 +25,40 @@
   }
 
   .value{
+    font-family:Arial;
+      margin-left:5px;
       
-      margin-left:8px;
-      margin-top:2px;
   }
   .second1{
-  width:5%;
+  width:50%;
   background-color:#e5e5e5;
+  font-size:2rem;
+  height:50px;
+  cursor:pointer;
+
   }
   
   
   
   .img{
-     
+    border-style:dashed;
+    border-width:1px;
+    border-color:#8a8d8a;
+
       position:relative;
   height:150px;
   width:200px;
+
+  }
+
+  .new{
+      margin:17%;
+      text-decoration:underline;
+      font-family: "futura-pt", "Helvetica Neue", Arial;
+      font-weight:bold;
+      color:#4a4a4a;
+      font-size:0.9rem;
+      cursor:pointer;
 
   }
   .btext{
@@ -82,6 +100,7 @@
   flex-direction:column;
   margin-top:2%;
   visibility:hidden;
+
   }
   
   .img-res{

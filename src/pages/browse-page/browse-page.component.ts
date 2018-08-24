@@ -22,7 +22,7 @@ export class BrowsePageComponent implements OnInit {
 
 
 itineraries
-
+titles
 title
 grade
 year
@@ -38,6 +38,8 @@ sixth = false
 
 active=true
 prop
+
+newSet= false
 
  
   p: number = 1;
@@ -83,6 +85,14 @@ this.itineraries = JSON.parse(localStorage.getItem("itinerary"))
 this.grade = JSON.parse(localStorage.getItem("grade"))
 this.title = JSON.parse(localStorage.getItem("title"))
 this.year = JSON.parse(localStorage.getItem("year"))
+this.titles = JSON.parse(localStorage.getItem("titles"))
+}
+
+add(event){
+  this.itineraries.push(0)
+  console.log(this.itineraries)
+  this.newSet = event
+
 }
 
 back(){
@@ -96,6 +106,7 @@ back(){
       this.closeResult = `Closed with: ${result}`;
     });
   }
+
   resizeImage(){
     let value = false;
     if (screen.width < 1024) {

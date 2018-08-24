@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import { Router,ActivatedRoute } from '@angular/router';
 import { Activity} from '../../models/activity';
+import { ActivityBrief } from '../../models/activityBrief'
 
 @Component({
   selector: 'app-card',
@@ -15,7 +16,7 @@ export class CardComponent implements OnInit {
  @Output() set: EventEmitter<any> = new EventEmitter<any>();
 
 
-
+  titles: any[] = [];
   activities: Activity[] = [];
   @Input() view=true;  
   images: Array<string>;
@@ -45,6 +46,8 @@ export class CardComponent implements OnInit {
       localStorage.setItem("title", JSON.stringify(this.item.title))
       localStorage.setItem("year", JSON.stringify(this.item.timeOfYear))
       this.item.activities.map(activity =>{
+
+        this.titles.push(new ActivityBrief(activity.time,activity.name))
         this.activities.push(new Activity(
             activity.time,
             0,
@@ -62,6 +65,7 @@ export class CardComponent implements OnInit {
             activity.order));  
       })
       localStorage.setItem("itinerary", JSON.stringify(this.activities))
+      localStorage.setItem("titles", JSON.stringify(this.titles))
       this.set.emit(true);
 
       

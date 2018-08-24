@@ -41,7 +41,7 @@
 
 <!-- <div class="card-title">VIEW OUR ITINERARIES</div> -->
 <div class="content">
-<div class="side-bar">
+<div *ngIf="!set" class="side-bar">
 <div class="first">
   <div style="float:left;margin:4%; font-size:1.5rem">Filter By</div>
  <div style="float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer" (click)="reset()">Clear All</div>
@@ -145,6 +145,17 @@
   
 </div>
 </div>
+
+
+<div *ngIf="set" class="side-bar" >
+<div class="side-title">
+ SCHEDULE
+</div>
+<div *ngFor="let title of titles" class="brief" > 
+  <span class="brief1">{{title.time}}</span>
+<span class="brief2">{{title.name}}</span>
+</div>
+</div>
 <div *ngIf="!set" class="itineraries">
  
  <div style="height:5%; position:relative;">
@@ -231,7 +242,7 @@
 
  <div class="back-title">Itineraries</div>
 </div>
-  <div style="margin-bottom:2%; position:relative;">
+  <div style="position:relative;">
       <img src="../../assets/images/photo3.jpeg" alt="Random first slide" class="img-responsive banner">
       <div class="btext">
       <div class="btext1">{{grade}}</div>
@@ -239,9 +250,25 @@
       <div class="btext3">{{year}}</div>
       </div>
     </div>
-<app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary"></app-activity-display>
+    <div class="link" >
+
+      <div class="urlbox">
+        <div class="url">http://planning-tool.herokuapp.com/BrowsePage</div>
+        <div class="url-btn">COPY URL</div>
+    </div>
+
+
+    <div class="printbox">
+
+      <div class="print">
+     <span style="margin-left:10px; margin-top:5px;">PRINT</span>  
+      </div>
+      <div class="download">DOWNLOAD PDF</div>
+    </div>
+    </div>
+<app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary" [newSet]="newSet"></app-activity-display>
     
-<app-empty-activity-display></app-empty-activity-display>
+<app-empty-activity-display  (set)="add($event)"></app-empty-activity-display>
 
 
 

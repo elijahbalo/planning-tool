@@ -24,6 +24,41 @@
     cursor:pointer;
    
 }
+.side-title{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-size:1.5rem;
+    color:#4a4a4a;
+    margin-left:2%;
+    margin-bottom:6%;
+}
+
+.brief{
+    display:flex;
+    flex-direction:row;
+    margin-bottom:2%;
+    width:90%;
+ 
+}
+
+.brief1{
+
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+  font-size:1rem;
+  color:#8a8d8a;
+  margin-left:3%;
+}
+
+.brief2{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-size:1rem;
+    color:#4a4a4a;
+    max-width:90%;
+    margin-left:4%;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+}
 .back-title{
  float:left;
   margin-left:220px;
@@ -288,7 +323,7 @@ margin:auto;
  width:32%;
  height:1500px;
  border-color:#e5e5e5;
- border-width:1px;
+ border-right-width:1px;
  border-style:solid;
 }
 
@@ -297,13 +332,87 @@ width:65%;
 padding:0.9%;
 
 }
-
+.link{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    height:70px;
+    margin-bottom:5%;
+    background-color:#e5e5e5;
+}
 .activities{
     width:65%;
   
      
 }
 
+.urlbox{
+    display:flex;
+    flex-direction :row;
+    justify-content:space-around;
+    width:54%;
+    
+}
+.url{
+    background:#fff;
+    
+    width:73%;
+    margin-top:14px;
+    padding:3%;
+    height:45px;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-size:0.8rem;
+    color:#8a8d8a;
+    white-space: nowrap; 
+    overflow: hidden;
+   
+ 
+}
+
+.url-btn{
+    background:red;
+    width:20%;
+    margin-top:14px;
+    padding:3%;
+    height:45px;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-size:0.8rem;
+    color:#fff;
+    cursor:pointer;
+}
+
+.printbox{
+    display:flex;
+    flex-direction :row;
+    justify-content:space-around;
+    width:30%;
+
+}
+
+.print{
+    background:#4a4a4a;
+    width:30%;
+    margin-top:14px;
+    padding:3%;
+    height:45px;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-size:0.8rem;
+    color:#fff;
+    cursor:pointer;
+}
+
+
+.download{
+    background:#4a4a4a;
+    width:50%;
+    margin-top:14px;
+    padding:3%;
+    height:45px;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-size:0.8rem;
+    color:#fff;
+    cursor:pointer;
+}
 .filter{
 margin-left:0%; 
 margin-top:2%;  
