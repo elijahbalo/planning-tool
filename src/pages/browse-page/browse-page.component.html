@@ -266,7 +266,7 @@
       <div class="download">DOWNLOAD PDF</div>
     </div>
     </div>
-<app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary" [newSet]="newSet"></app-activity-display>
+<app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary" [newSet]="newSet" (item)="setItem($event)"></app-activity-display>
     
 <app-empty-activity-display  (set)="add($event)"></app-empty-activity-display>
 

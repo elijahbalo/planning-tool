@@ -21,6 +21,8 @@ import 'rxjs/add/observable/throw';
 export class BrowsePageComponent implements OnInit {
 
 
+c_time
+
 itineraries
 titles
 title
@@ -74,6 +76,7 @@ newSet= false
   
  console.log(this.items)
    
+
    
   }
 
@@ -89,7 +92,10 @@ this.titles = JSON.parse(localStorage.getItem("titles"))
 }
 
 add(event){
+
+
   this.itineraries.push(0)
+  localStorage.setItem('itinerary', JSON.stringify(this.itineraries))
   console.log(this.itineraries)
   this.newSet = event
 
@@ -101,11 +107,32 @@ back(){
   localStorage.removeItem('itinerary')
 }
 
+setItem(event){
+  let index = this.itineraries.indexOf(0);
+if (index > -1) {
+  this.itineraries.splice(index, 1);
+}
+  this.itineraries.push(event)
+  localStorage.setItem('itinerary', JSON.stringify(this.itineraries))
+}
+
   open(content) {
     this.modalService.open(content).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     });
   }
+
+
+
+
+
+
+
+
+
+
+
+
 
   resizeImage(){
     let value = false;

@@ -57,7 +57,8 @@
   <div *ngIf="isSet"> 
     <div class="flex">
       <div class="time">
-      <div class="first1" ><span class="value" >{{itinerary.time}}</span></div>
+      <div *ngIf="!newSet" class="first1" ><span class="value" >{{itinerary.time}}</span></div>
+      <div *ngIf="newSet" class="first1" ><span class="value" >{{newTime}}</span></div>
       <div class="second1"></div>
       
       </div>

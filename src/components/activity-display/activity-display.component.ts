@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
@@ -13,13 +13,19 @@ import * as $ from 'jquery';
   styleUrls: ['./activity-display.component.scss']
 })
 export class ActivityDisplayComponent implements OnInit {
+
+  @Output() item: EventEmitter<any> = new EventEmitter<any>();
+  @Output() time: EventEmitter<any> = new EventEmitter<any>();
+  newTime;
   det = false
-  @Input() newSet
+  @Input() newSet =false
  isSet = false
   swap = false;
   public items: Observable<any[]>;
   @Input() itinerary
   activity
+
+  activities
 
   constructor(private db: AngularFirestore, ) { }
 
@@ -32,11 +38,19 @@ export class ActivityDisplayComponent implements OnInit {
       });
     });
 
+  console.log(this.itinerary.time)
+    this.activities = JSON.parse(localStorage.getItem("itinerary"))
+   
+    if (this.itinerary.time){
+    localStorage.setItem('c_time', JSON.stringify(this.itinerary.time))
+    }
 
+    
 
     if(this.itinerary == 0){
       this.swap = true;
     }
+
   }
 
 
@@ -53,6 +67,9 @@ export class ActivityDisplayComponent implements OnInit {
     this.swap = false;
   this.isSet=true;
   this.activity = item
+  this.setTime(item)
+ this.item.emit(item)
+
   }
 
   toggleDet(){
@@ -61,4 +78,12 @@ export class ActivityDisplayComponent implements OnInit {
       this.det = false;
     }
   }
+
+
+  setTime(item){
+    this.newTime = 25
+    console.log(this.newTime)
+    console.log(this.newSet)
+  }
+
 }
