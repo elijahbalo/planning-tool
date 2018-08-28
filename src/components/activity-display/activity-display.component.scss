@@ -61,6 +61,10 @@ margin-top:2%;
   font-family: "futura-pt", "Helvetica Neue", Arial;
   font-weight:bold;
   margin-bottom:1%; 
+  width:100%;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .act-des{
   font-family:  Arial;
@@ -68,6 +72,7 @@ margin-top:2%;
 max-width:85%;
 height:90px;
 color:#8a8d8a;
+font-size:0.7rem;
 }
 
 

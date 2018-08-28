@@ -67,9 +67,9 @@ export class ActivityDisplayComponent implements OnInit {
     this.swap = false;
   this.isSet=true;
   this.activity = item
-  this.setTime(item)
+/*   this.setTime(item)
  this.item.emit(item)
-
+ */
   }
 
   toggleDet(){

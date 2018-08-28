@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { EllipsisModule } from 'ngx-ellipsis';
+import { MultilineEllipsisModule } from 'angular2-multiline-ellipsis';
 import {NgxPaginationModule} from 'ngx-pagination'; 
 import { CardComponent} from '../components/card/card.component';
 import { EmptyCardComponent} from '../components/empty-card/empty-card.component';
@@ -42,6 +43,7 @@ import { AngularFireModule } from 'angularfire2';
     BrowserModule,
     EllipsisModule,
     AppRoutingModule,
+    MultilineEllipsisModule,
     HttpClientModule,
     FormsModule, 
     ReactiveFormsModule,
