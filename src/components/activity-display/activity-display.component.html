@@ -1,21 +1,40 @@
+
 <div *ngIf="!isSet"> 
 <div class="flex">
   <div class="time">
-  <div class="first1" ><span class="value" >{{itinerary.time}}</span></div>
+  <div  class="first1" ><span class="value" >{{itinerary.time}}</span></div>
+
   <div class="second1"></div>
   
   </div>
   
   <div *ngIf="swap" class="big-box">
   <div *ngFor="let item of items | async" class="activities">
-  <div class="pic">
-
+  <div *ngIf="!check(item.order)" class="pic">
+   
       <img class="img-responsive pics" src="{{item.img}}" (click)="fixItem(item)">  
   </div>
-  <div class="des">
+  <div *ngIf="check(item.order)" class="pic2">
+    
+    <img class="img-responsive pics2" src="{{item.img}}" >  
+    <p style="position:absolute; top:0; left:0; margin:0; line-height:0">&#9989;</p>
+</div>
+ 
+  <div *ngIf="!check(item.order) && !innerSwap" class="des">
   <div class="act-title">{{item.name}}</div>
   <div  class="act-des" appEllipsis>{{item.description}} </div>
   </div>
+
+  <div *ngIf="!check(item.order) && innerSwap" class="des2">
+    <div class="des2-box1">Swap</div>
+    <div  class="des2-box2" appEllipsis>Details</div>
+    </div>
+  
+
+  <div *ngIf="check(item.order)" class="des">
+    <div class="act-title2">{{item.name}}</div>
+    <div  class="act-des2" appEllipsis>{{item.description}} </div>
+    </div>
   </div>
 
  
@@ -28,7 +47,7 @@
   
   <div class="textt">
   <div class="title1">{{itinerary.name}}</div> 
-  <div *ngIf="!det" class="bod" ellipsis>
+  <div *ngIf="!det" class="bod" appEllipsis>
 {{itinerary.description}}
   </div>
   <div *ngIf="det" class="bod1">
@@ -57,23 +76,32 @@
   <div *ngIf="isSet"> 
     <div class="flex">
       <div class="time">
-      <div *ngIf="!newSet" class="first1" ><span class="value" >{{itinerary.time}}</span></div>
-      <div *ngIf="newSet" class="first1" ><span class="value" >{{newTime}}</span></div>
+      <div  class="first1" ><span class="value" >{{itinerary.time}}</span></div>
+
       <div class="second1"></div>
       
       </div>
       
       <div *ngIf="swap" class="big-box">
-      <div *ngFor="let item of items | async" class="activities">
-      <div class="pic">
-    
-          <img class="img-responsive pics" src="{{item.img}}" (click)="fixItem(item)">  
-      </div>
-      <div class="des">
-      <div class="act-title">{{item.name}}</div>
-      <div class="act-des" appEllipsis>{{item.description}} </div>
-      </div>
-      </div>
+        <div *ngFor="let item of items | async" class="activities">
+          <div *ngIf="!check(item.order)" class="pic">
+        
+              <img class="img-responsive pics" src="{{item.img}}" (click)="fixItem(item)">  
+          </div>
+          <div *ngIf="check(item.order)" class="pic2">
+        
+            <img class="img-responsive pics2" src="{{item.img}}">  
+        </div>
+          <div *ngIf="!check(item.order)" class="des">
+          <div class="act-title">{{item.name}}</div>
+          <div  class="act-des" appEllipsis>{{item.description}} </div>
+          </div>
+          <div *ngIf="check(item.order)" class="des">
+            <div class="act-title2">{{item.name}}</div>
+            <div  class="act-des2" appEllipsis>{{item.description}} </div>
+            </div>
+          </div>
+        
     
      
       </div>
@@ -85,7 +113,7 @@
       
       <div class="textt">
       <div class="title1">{{activity.name}}</div>
-      <div *ngIf="!det" class="bod" ellipsis>
+      <div *ngIf="!det" class="bod" appEllipsis>
     {{activity.description}}
       </div>
       <div *ngIf="det" class="bod1">

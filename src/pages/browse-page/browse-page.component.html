@@ -151,9 +151,9 @@
 <div class="side-title">
  SCHEDULE
 </div>
-<div *ngFor="let title of titles" class="brief" > 
-  <span class="brief1">{{title.time}}</span>
-<span class="brief2">{{title.name}}</span>
+<div *ngFor="let itinerary of itineraries" class="brief" > 
+  <span class="brief1">{{itinerary.time}}</span>
+<span class="brief2">{{itinerary.name}}</span>
 </div>
 </div>
 <div *ngIf="!set" class="itineraries">
@@ -249,6 +249,7 @@
       <div class="btext2">{{title}}</div>
       <div class="btext3">{{year}}</div>
       </div>
+      <div *ngIf="modified" class="btext4"> This is a modified version of the <span style="font-weight:bold">{{title}}</span> itinerary</div>
     </div>
     <div class="link" >
 
@@ -266,7 +267,7 @@
       <div class="download">DOWNLOAD PDF</div>
     </div>
     </div>
-<app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary" [newSet]="newSet" (item)="setItem($event)"></app-activity-display>
+<app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary"  (item)="setItem($event)" (order)="emitOrder($event)" (notify)="notice($event)" (modify)="modify($event)"></app-activity-display>
     
 <app-empty-activity-display  (set)="add($event)"></app-empty-activity-display>
 

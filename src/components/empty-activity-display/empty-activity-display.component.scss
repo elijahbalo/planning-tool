@@ -1,117 +1,202 @@
 .flex{
-    display:flex;
-    flex-direction:row;
-    justify-content:space-between;
-    max-width:900px;
-    height:170px;
-    color:#4a4a4a;
-  }
-  
-  .time{
   display:flex;
   flex-direction:row;
-  width:7%;
-  font-family: "futura-pt", "Helvetica Neue", Arial;
-  
-  }
-  
-  .first1{
-    background-color:#fff;
-  width:50%;
-  height:25px;
-  font-size:0.85rem;
+  justify-content:space-between;
+  max-width:900px;
+  color:#4a4a4a;
 
-  
-  }
+}
 
-  .value{
-    font-family:Arial;
-      margin-left:5px;
-      
-  }
-  .second1{
-  width:50%;
-  background-color:#e5e5e5;
-  font-size:2rem;
-  height:50px;
-  cursor:pointer;
+.time{
+display:flex;
+flex-direction:row;
+width:10%;
+height:35px;
+font-family: "futura-pt", "Helvetica Neue", Arial;
 
-  }
-  
-  
-  
-  .img{
-    border-style:dashed;
-    border-width:1px;
-    border-color:#8a8d8a;
+}
 
-      position:relative;
-  height:150px;
-  width:200px;
+.big-box{
+ width:90%;
+ background:#e5e5e5;;
+ display:flex;
+ flex-wrap: wrap;
+ justify-content:space-between;
+ margin-bottom:3%;
 
-  }
+}
+.activities{
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+width:50%;
+margin-top:2%;
+}
+.pic{
+position:relative;
+height:100px;
+width:32%;
+margin-bottom:3%;
+border-style:solid;
+border-color:grey;
+border-width:thin;
 
-  .new{
-      margin:17%;
-      text-decoration:underline;
-      font-family: "futura-pt", "Helvetica Neue", Arial;
-      font-weight:bold;
-      color:#4a4a4a;
-      font-size:0.9rem;
-      cursor:pointer;
+}
 
-  }
-  .btext{
-      position:relative;
-      font-family: "futura-pt", "Helvetica Neue", Arial;
-  font-weight:bold;
-  margin-bottom:1%;
-  }
+.pics{
+height:100%;
+width:100%;
+object-fit:cover;
+cursor:pointer;
+}
 
-  .img-res{
-  width:100%
+.des{
+display:flex;
+flex-direction:column;
+width:57%;
+ height:100px;
+}
 
-  }
+.act-title{
+font-family: "futura-pt", "Helvetica Neue", Arial;
+font-weight:bold;
+margin-bottom:3%; 
+width:100%;
+white-space: nowrap; 
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.act-des{
+font-family:  Arial;
+font-weight:lighter;
+max-width:85%;
+height:74px;
+color:#8a8d8a;
+font-size:0.9rem;
+}
 
-  .textt{
-  width:55%;
+
+.type{
+margin-top:1%;
+font-family: "futura-pt", "Helvetica Neue", Arial;
+font-weight:bold;
+}
+
+.big-box2{
+  width:85%;
   display:flex;
-  flex-direction:column;
-  margin-right:10px;
-  }
-  
-  .title1{
-  font-family: "futura-pt", "Helvetica Neue", Arial;
-  font-weight:bold;
-  margin-bottom:1%;
-  }
-  .bod{
-    font-family:  Arial;
+  flex-direction:row;
+  justify-content:space-between;
+  margin-bottom:3%;
+
+ }
+.first1{
+  background-color:#fff;
+width:55%;
+
+font-size:0.85rem;
+
+
+}
+
+.value{
+    font-size:1.5rem;
     font-weight:lighter;
-  max-width:85%;
-  height:90px;
-  color:#8a8d8a;
+    font-family:Arial;
+    margin-left:11px;
+    
+}
+.second1{
+width:45%;
+background-color:#e5e5e5;
+}
 
-  }
-  
-  .icon{
-    font-family: "futura-pt", "Helvetica Neue", Arial;
-  display:flex;
-  flex-direction:column;
-  margin-top:2%;
-  visibility:hidden;
+.img{
+  border-style:dashed;
+  border-width:1px;
+  border-color:#8a8d8a;
 
-  }
-  
-  .img-res{
-    object-fit:cover;
-    height:20px;
-    width:20px;
-    margin-left:8px;
-  }
-.det{
-    font-size:0.9rem;
+    position:relative;
+height:150px;
+width:200px;
+
+}
+
+.new{
+    margin:17%;
     text-decoration:underline;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-weight:bold;
+    color:#4a4a4a;
+    font-size:0.9rem;
+    cursor:pointer;
+
+}
+.swap-text{
+  position:absolute;
+  bottom:5px;
+  right:5px;
+  font-family: "futura-pt", "Helvetica Neue", Arial;
+  font-weight:bold;
+  cursor:pointer;
+  color:#fff;
+}
+
+.btext{
+position:relative;
+margin-bottom:1%;
+}
+
+.img-res{
+width:100%
+}
+
+.textt{
+width:55%;
+display:flex;
+flex-direction:column;
+margin-right:10px;
+visibility:hidden;
+}
+
+.title1{
+font-family: "futura-pt", "Helvetica Neue", Arial;
+font-weight:bold;
+margin-bottom:1%;
+}
+
+.bod{
+  font-family:  Arial;
+  font-weight:lighter;
+max-width:85%;
+height:90px;
+color:#8a8d8a;
+
+}
+.bod1{
+  font-family:  Arial;
+  font-weight:lighter;
+max-width:85%;
+color:#8a8d8a;
+}
+.icon{
+  font-family: "futura-pt", "Helvetica Neue", Arial;
+display:flex;
+flex-direction:column;
+margin-top:2%;
+visibility:hidden;
+}
+
+.img-res{
+  object-fit:cover;
+  height:20px;
+  width:20px;
+  margin-left:8px;
+}
+.det{
+  font-size:0.9rem;
+  text-decoration:underline;
+  cursor:pointer;
 }
 
 

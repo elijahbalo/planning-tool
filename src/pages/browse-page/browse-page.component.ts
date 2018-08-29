@@ -21,6 +21,10 @@ import 'rxjs/add/observable/throw';
 export class BrowsePageComponent implements OnInit {
 
 
+modified= false;  
+
+n_set
+
 c_time
 
 itineraries
@@ -67,7 +71,7 @@ newSet= false
     
   }
   ngOnInit(){
-   
+   localStorage.clear();
   
    this.items = this.db.collection('/itineraries').valueChanges().subscribe(items => {
       this.items=items
@@ -97,7 +101,8 @@ add(event){
   this.itineraries.push(0)
   localStorage.setItem('itinerary', JSON.stringify(this.itineraries))
   console.log(this.itineraries)
-  this.newSet = event
+
+  localStorage.setItem('_set', JSON.stringify(event))
 
 }
 
@@ -108,12 +113,12 @@ back(){
 }
 
 setItem(event){
-  let index = this.itineraries.indexOf(0);
-if (index > -1) {
-  this.itineraries.splice(index, 1);
-}
+  console.log("set item method fgfdfdfgddgdfgdfg")
+this.itineraries.pop()
+console.log(this.itineraries)
   this.itineraries.push(event)
   localStorage.setItem('itinerary', JSON.stringify(this.itineraries))
+
 }
 
   open(content) {
@@ -122,11 +127,17 @@ if (index > -1) {
     });
   }
 
+  emitOrder(event){
+    localStorage.setItem('n_e_o', JSON.stringify(event))
+  }
 
+notice(event){
+  this.itineraries = JSON.parse(localStorage.getItem("itinerary"))
+}
 
-
-
-
+modify(event){
+  this.modified = event;
+}
 
 
 
@@ -140,12 +151,6 @@ if (index > -1) {
       value = true;
       return value
   }
-  }
-
-  logCheckbox(element: HTMLInputElement): void {
-    console.log(`Checkbox ${element.value} was ${element.checked ? '' : 'un'}checked\n`);
-    this.grades= element.value;
-    console.log(this.grades)
   }
 
 

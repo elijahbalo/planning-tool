@@ -10,18 +10,18 @@
   .time{
   display:flex;
   flex-direction:row;
-  width:7%;
+  width:10%;
   font-family: "futura-pt", "Helvetica Neue", Arial;
   
   }
   
   .big-box{
-   width:90%;
+   width:85%;
  
    background:#e5e5e5;;
    display:flex;
    flex-wrap: wrap;
-   justify-content:space-between;
+   justify-content:space-around;
    margin-bottom:3%;
 
   }
@@ -42,6 +42,18 @@ margin-top:2%;
   border-width:thin;
 
 }
+.pic2{
+  position:relative;
+  height:100px;
+  width:32%;
+  margin-bottom:3%;
+  border-style:solid;
+  border-color:#228B22;
+  border-width:2px;
+
+}
+
+
 
 .pics{
   height:100%;
@@ -49,7 +61,17 @@ margin-top:2%;
   object-fit:cover;
   cursor:pointer;
 }
+.pics2{
+  height:100%;
+  width:100%;
+  object-fit:cover;
+  border-style:solid;
+  border-color:#228B22;
+  border-width:2px;
+  opacity:0.8
+ 
 
+}
 .des{
   display:flex;
   flex-direction:column;
@@ -57,10 +79,23 @@ margin-top:2%;
    height:100px;
 }
 
+.des2{
+  display:flex;
+  flex-direction:row;
+  width:57%;
+   height:100px;
+}
+
+.des2-box1{
+  
+}
+.des2-box2{
+  
+}
 .act-title{
   font-family: "futura-pt", "Helvetica Neue", Arial;
   font-weight:bold;
-  margin-bottom:1%; 
+  margin-bottom:3%; 
   width:100%;
   white-space: nowrap; 
   overflow: hidden;
@@ -70,11 +105,28 @@ margin-top:2%;
   font-family:  Arial;
   font-weight:lighter;
 max-width:85%;
-height:90px;
+height:74px;
 color:#8a8d8a;
-font-size:0.7rem;
+font-size:0.9rem;
 }
-
+.act-title2{
+  font-family: "futura-pt", "Helvetica Neue", Arial;
+  font-weight:bold;
+  margin-bottom:3%; 
+  width:100%;
+  color:#BEBEBE;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.act-des2{
+  font-family:  Arial;
+  font-weight:lighter;
+max-width:85%;
+height:74px;
+color:#BEBEBE;
+font-size:0.9rem;
+}
 
 .type{
   margin-top:1%;
@@ -83,7 +135,7 @@ font-size:0.7rem;
 }
 
   .big-box2{
-    width:90%;
+    width:85%;
     display:flex;
     flex-direction:row;
     justify-content:space-between;

@@ -1,34 +1,45 @@
-<div class="flex">
-    <div class="time">
-    <div class="first1"></div>
-    <div class="second1"><span class="value">+</span></div>
+
+    <div class="flex">
+      <div class="time">
+      <div  class="first1" ></div>
     
-    </div>
-    
-    
-    
-    <div class="img">
-     <div class="new" (click)="change()"> Add Another Time</div>
-    
-    </div>
-    
-    <div class="textt">
-    <div class="title1">{{itinerary.name}}</div>
-    <div class="bod" ellipsis>
+      <div class="second1"><span class="value" >+</span></div>
+      
+      </div>
+      
+ 
+      <div class="big-box2" >
+      <div class="img">
+        <div class="new" (click)="change()">Add Another Time</div>
+      </div>
+      
+      <div class="textt">
+      <div class="title1">{{itinerary.name}}</div> 
+      <div *ngIf="!det" class="bod" appEllipsis>
     {{itinerary.description}}
-    </div>
-    </div>
+      </div>
+      <div *ngIf="det" class="bod1">
+        {{itinerary.description}}
+          </div>
+          
+          <div *ngIf="det" class="type">{{itinerary.type}}</div>
+    
+      </div>
+      
+      
+      <div class="icon">
+      <div class="info">
+        <img class="img-responsive img-res" src="../assets/images/info2.png">
+      </div>
+      <div class="det" (click)="toggleDet()">
+      Details
+      </div>    
+          </div>
+      </div>
+      
+      </div>
+
     
     
-    <div class="icon">
-    <div class="info">
-      <img class="img-responsive img-res" src="../assets/images/info2.png">
-    </div>
-    <div class="det">
-    Details
-    </div>    
-        </div>
     
-    
-    </div>
-    
+         

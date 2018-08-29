@@ -13,19 +13,23 @@ import * as $ from 'jquery';
   styleUrls: ['./activity-display.component.scss']
 })
 export class ActivityDisplayComponent implements OnInit {
-
+  @Output() order: EventEmitter<any> = new EventEmitter<any>();
   @Output() item: EventEmitter<any> = new EventEmitter<any>();
   @Output() time: EventEmitter<any> = new EventEmitter<any>();
+  @Output() notify: EventEmitter<any> = new EventEmitter<any>();
+  @Output() modify: EventEmitter<any> = new EventEmitter<any>();
+  ord
   newTime;
   det = false
-  @Input() newSet =false
- isSet = false
+  newSet
+  isSet = false
   swap = false;
+  innerSwap = false;
   public items: Observable<any[]>;
   @Input() itinerary
   activity
 
-  activities
+  @Input() activities
 
   constructor(private db: AngularFirestore, ) { }
 
@@ -40,13 +44,13 @@ export class ActivityDisplayComponent implements OnInit {
 
   console.log(this.itinerary.time)
     this.activities = JSON.parse(localStorage.getItem("itinerary"))
-   
+    console.log(this.activities)
     if (this.itinerary.time){
     localStorage.setItem('c_time', JSON.stringify(this.itinerary.time))
     }
 
     
-
+   this.newSet = JSON.parse(localStorage.getItem("_set"))
     if(this.itinerary == 0){
       this.swap = true;
     }
@@ -59,18 +63,70 @@ export class ActivityDisplayComponent implements OnInit {
     else{
       this.swap = false;
     }
+
+    if(this.isSet){
+      this.order.emit(this.activity.order)
+      this.ord = this.activity.order
+    }
+    else{
+      this.order.emit(this.itinerary.order)
+      this.ord = this.itinerary.order
+    }
   }
 
-
+  
+  toggleInnerSwap(){
+    if(this.innerSwap == false)this.innerSwap = true
+    else{
+      this.innerSwap = false;
+    }
+  }
 
   fixItem(item){
+    let act = JSON.parse(localStorage.getItem("itinerary"))
+    console.log(act)
+    if (this.newSet == true){
+      if(this.itinerary.time){
+        console.log("do nothing")
+      }
+     else{
+      
+       item.time = this.timeConvert(act[(act.length)-2].time, act[(act.length)-2].length).toString()
+     
+      
+     }
+     this.item.emit(item)
+     localStorage.setItem('_set', JSON.stringify(false))
+    }
     this.swap = false;
+   let order = JSON.parse(localStorage.getItem("n_e_o"))
+    console.log(order)
+     
+     let index = act.findIndex(i => i.order === order)
+   console.log(index)
+   if ( index >=0 ){
+    let index2 = index - 1;
+
+    
+    item.time = this.timeConvert(act[index2].time, act[index2].length).toString()
+    console.log(act)
+    act.splice(index, 1, item)
+    localStorage.setItem("itinerary",JSON.stringify(act))
+    this.notify.emit(true);
+   } 
   this.isSet=true;
   this.activity = item
-/*   this.setTime(item)
- this.item.emit(item)
- */
+  this.modify.emit(true)
   }
+
+
+check(order){
+  if (order == this.ord)
+  return true
+  else{
+    return false
+  }
+}
 
   toggleDet(){
     if(this.det == false)this.det = true
@@ -82,8 +138,53 @@ export class ActivityDisplayComponent implements OnInit {
 
   setTime(item){
     this.newTime = 25
-    console.log(this.newTime)
-    console.log(this.newSet)
+    item.time = 25
   }
 
+  
+
+
+  timeConvert(data, length) {
+    let index 
+    let h=""
+    let m=""
+    
+    for (var i = 0; i<data.length; i++){
+      var strChar = data.charAt(i);
+  
+      if ( strChar == ":") {
+       index = data.indexOf(strChar)
+          console.log(index)
+      }
+
+    }
+    for (var i = 0; i<index; i++){
+      let str = data.charAt(i)
+      h += str
+
+    }
+     
+
+    for (var j = index+1; j<data.length; j++){
+      let str = data.charAt(j)
+      m += str
+     
+    }
+ 
+    let time = (Number(h)*60) + Number(m) + length
+  let minutes = time % 60;
+   let hours =  (time - minutes)/60; 
+   if (minutes < 10){
+    let  min= '0' + minutes
+    return hours + ':' + min;
+   }
+   else{
+     return hours + ':' + minutes;
+   } 
+
+
+   }
+
 }
+
+
