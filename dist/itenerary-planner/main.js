@@ -1314,7 +1314,7 @@ var DetailsComponent = /** @class */ (function () {
         if (this.hide == false)
             this.hide = true;
         else {
-            this.hide = true;
+            this.hide = false;
         }
     };
     __decorate([
