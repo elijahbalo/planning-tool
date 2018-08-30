@@ -294,7 +294,7 @@ var ActivityCardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div *ngIf=\"!isSet\"> \n<div class=\"flex\">\n  <div class=\"time\">\n  <div  class=\"first1\" ><span class=\"value\" >{{itinerary.time}}</span></div>\n\n  <div class=\"second1\"></div>\n  \n  </div>\n  \n  <div *ngIf=\"swap\" class=\"big-box\">\n  <div *ngFor=\"let item of items | async\" class=\"activities\">\n  <div *ngIf=\"!check(item.order)\" class=\"pic\">\n   \n      <img class=\"img-responsive pics\" src=\"{{item.img}}\" (click)=\"fixItem(item)\">  \n  </div>\n  <div *ngIf=\"check(item.order)\" class=\"pic2\">\n    \n    <img class=\"img-responsive pics2\" src=\"{{item.img}}\" >  \n    <p style=\"position:absolute; top:0; left:0; margin:0; line-height:0\">&#9989;</p>\n</div>\n \n  <div *ngIf=\"!check(item.order) && !innerSwap\" class=\"des\">\n  <div class=\"act-title\">{{item.name}}</div>\n  <div  class=\"act-des\" appEllipsis>{{item.description}} </div>\n  </div>\n\n  <div *ngIf=\"!check(item.order) && innerSwap\" class=\"des2\">\n    <div class=\"des2-box1\">Swap</div>\n    <div  class=\"des2-box2\" appEllipsis>Details</div>\n    </div>\n  \n\n  <div *ngIf=\"check(item.order)\" class=\"des\">\n    <div class=\"act-title2\">{{item.name}}</div>\n    <div  class=\"act-des2\" appEllipsis>{{item.description}} </div>\n    </div>\n  </div>\n\n \n  </div>\n  <div *ngIf=\"!swap\" class=\"big-box2\" >\n  <div class=\"img\">\n    <img class=\"img-responsive img\" src=\"{{itinerary.img}}\">\n    <div class=\"swap-text\" (click)=\"setSwap()\">swap</div>\n  </div>\n  \n  <div class=\"textt\">\n  <div class=\"title1\">{{itinerary.name}}</div> \n  <div *ngIf=\"!det\" class=\"bod\" appEllipsis>\n{{itinerary.description}}\n  </div>\n  <div *ngIf=\"det\" class=\"bod1\">\n    {{itinerary.description}}\n      </div>\n      \n      <div *ngIf=\"det\" class=\"type\">{{itinerary.type}}</div>\n\n  </div>\n  \n  \n  <div class=\"icon\">\n  <div class=\"info\">\n    <img class=\"img-responsive img-res\" src=\"../assets/images/info2.png\">\n  </div>\n  <div class=\"det\" (click)=\"toggleDet()\">\n  Details\n  </div>    \n      </div>\n  </div>\n  \n  </div>\n  </div>\n\n\n  <div *ngIf=\"isSet\"> \n    <div class=\"flex\">\n      <div class=\"time\">\n      <div  class=\"first1\" ><span class=\"value\" >{{itinerary.time}}</span></div>\n\n      <div class=\"second1\"></div>\n      \n      </div>\n      \n      <div *ngIf=\"swap\" class=\"big-box\">\n        <div *ngFor=\"let item of items | async\" class=\"activities\">\n          <div *ngIf=\"!check(item.order)\" class=\"pic\">\n        \n              <img class=\"img-responsive pics\" src=\"{{item.img}}\" (click)=\"fixItem(item)\">  \n          </div>\n          <div *ngIf=\"check(item.order)\" class=\"pic2\">\n        \n            <img class=\"img-responsive pics2\" src=\"{{item.img}}\">  \n        </div>\n          <div *ngIf=\"!check(item.order)\" class=\"des\">\n          <div class=\"act-title\">{{item.name}}</div>\n          <div  class=\"act-des\" appEllipsis>{{item.description}} </div>\n          </div>\n          <div *ngIf=\"check(item.order)\" class=\"des\">\n            <div class=\"act-title2\">{{item.name}}</div>\n            <div  class=\"act-des2\" appEllipsis>{{item.description}} </div>\n            </div>\n          </div>\n        \n    \n     \n      </div>\n      <div *ngIf=\"!swap\" class=\"big-box2\" >\n      <div class=\"img\">\n        <img class=\"img-responsive img\" src=\"{{activity.img}}\">\n        <div class=\"swap-text\" (click)=\"setSwap()\">swap</div>\n      </div>\n      \n      <div class=\"textt\">\n      <div class=\"title1\">{{activity.name}}</div>\n      <div *ngIf=\"!det\" class=\"bod\" appEllipsis>\n    {{activity.description}}\n      </div>\n      <div *ngIf=\"det\" class=\"bod1\">\n        {{activity.description}}\n          </div>\n          \n          <div *ngIf=\"det\" class=\"type\">{{activity.type}}</div>\n    \n      </div>\n      \n      \n      <div class=\"icon\">\n      <div class=\"info\">\n        <img class=\"img-responsive img-res\" src=\"../assets/images/info2.png\">\n      </div>\n      <div class=\"det\" (click)=\"toggleDet()\">\n      Details\n      </div>    \n          </div>\n      </div>\n      \n      </div>\n      </div>\n\n\n\n     "
+module.exports = "\n<div *ngIf=\"!isSet\"> \n<div class=\"flex\">\n  <div class=\"time\">\n  <div  class=\"first1\" ><span class=\"value\" >{{itinerary.time}}</span></div>\n\n  <div class=\"second1\"></div>\n  \n  </div>\n  \n  <div *ngIf=\"swap\" class=\"big-box\">\n  \n  \n   <app-swap-box  *ngFor=\"let item of items | async\"  class=\"activities\" [item]=\"item\" [ord]=\"ord\" (swap)=\"fixItem($event)\"></app-swap-box>\n\n\n \n  </div>\n  <div *ngIf=\"!swap\" class=\"big-box2\" >\n  <div class=\"img\">\n    <img class=\"img-responsive img\" src=\"{{itinerary.img}}\">\n    <div class=\"swap-text\" (click)=\"setSwap()\">swap</div>\n  </div>\n  \n  <div class=\"textt\">\n  <div class=\"title1\">{{itinerary.name}}</div> \n  <div *ngIf=\"!det\" class=\"bod\" appEllipsis>\n{{itinerary.description}}\n  </div>\n  <div *ngIf=\"det\" class=\"bod1\">\n    {{itinerary.description}}\n      </div>\n      \n      <div *ngIf=\"det\" class=\"type\">{{itinerary.type}}</div>\n\n  </div>\n  \n  \n  <div class=\"icon\">\n  <div class=\"info\">\n    <img class=\"img-responsive img-res\" src=\"../assets/images/info2.png\">\n  </div>\n  <div class=\"det\" (click)=\"toggleDet()\">\n  Details\n  </div>    \n      </div>\n  </div>\n  \n  </div>\n  </div>\n\n\n  <div *ngIf=\"isSet\"> \n    <div class=\"flex\">\n      <div class=\"time\">\n      <div  class=\"first1\" ><span class=\"value\" >{{itinerary.time}}</span></div>\n\n      <div class=\"second1\"></div>\n      \n      </div>\n      \n      <div *ngIf=\"swap\" class=\"big-box\">\n  \n  \n          <app-swap-box  *ngFor=\"let item of items | async\"  class=\"activities\" [item]=\"item\" [ord]=\"ord\" (swap)=\"fixItem($event)\"></app-swap-box>\n       \n       \n        \n         </div>\n      <div *ngIf=\"!swap\" class=\"big-box2\" >\n      <div class=\"img\">\n        <img class=\"img-responsive img\" src=\"{{activity.img}}\">\n        <div class=\"swap-text\" (click)=\"setSwap()\">swap</div>\n      </div>\n      \n      <div class=\"textt\">\n      <div class=\"title1\">{{activity.name}}</div>\n      <div *ngIf=\"!det\" class=\"bod\" appEllipsis>\n    {{activity.description}}\n      </div>\n      <div *ngIf=\"det\" class=\"bod1\">\n        {{activity.description}}\n          </div>\n          \n          <div *ngIf=\"det\" class=\"type\">{{activity.type}}</div>\n    \n      </div>\n      \n      \n      <div class=\"icon\">\n      <div class=\"info\">\n        <img class=\"img-responsive img-res\" src=\"../assets/images/info2.png\">\n      </div>\n      <div class=\"det\" (click)=\"toggleDet()\">\n      Details\n      </div>    \n          </div>\n      </div>\n      \n      </div>\n      </div>\n\n\n\n     "
 
 /***/ }),
 
@@ -305,7 +305,7 @@ module.exports = "\n<div *ngIf=\"!isSet\"> \n<div class=\"flex\">\n  <div class=
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  max-width: 900px;\n  color: #4a4a4a; }\n\n.time {\n  display: flex;\n  flex-direction: row;\n  width: 10%;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.big-box {\n  width: 85%;\n  background: #e5e5e5;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n  margin-bottom: 3%; }\n\n.activities {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  width: 50%;\n  margin-top: 2%; }\n\n.pic {\n  position: relative;\n  height: 100px;\n  width: 32%;\n  margin-bottom: 3%;\n  border-style: solid;\n  border-color: grey;\n  border-width: thin; }\n\n.pic2 {\n  position: relative;\n  height: 100px;\n  width: 32%;\n  margin-bottom: 3%;\n  border-style: solid;\n  border-color: #228B22;\n  border-width: 2px; }\n\n.pics {\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  cursor: pointer; }\n\n.pics2 {\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-style: solid;\n  border-color: #228B22;\n  border-width: 2px;\n  opacity: 0.8; }\n\n.des {\n  display: flex;\n  flex-direction: column;\n  width: 57%;\n  height: 100px; }\n\n.des2 {\n  display: flex;\n  flex-direction: row;\n  width: 57%;\n  height: 100px; }\n\n.act-title {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-bottom: 3%;\n  width: 100%;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n\n.act-des {\n  font-family: Arial;\n  font-weight: lighter;\n  max-width: 85%;\n  height: 74px;\n  color: #8a8d8a;\n  font-size: 0.9rem; }\n\n.act-title2 {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-bottom: 3%;\n  width: 100%;\n  color: #BEBEBE;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n\n.act-des2 {\n  font-family: Arial;\n  font-weight: lighter;\n  max-width: 85%;\n  height: 74px;\n  color: #BEBEBE;\n  font-size: 0.9rem; }\n\n.type {\n  margin-top: 1%;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold; }\n\n.big-box2 {\n  width: 85%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-bottom: 3%; }\n\n.first1 {\n  background-color: #e5e5e5;\n  width: 95%;\n  height: 25px;\n  font-size: 0.85rem; }\n\n.value {\n  margin-left: 8px;\n  margin-top: 2px; }\n\n.second1 {\n  width: 5%;\n  background-color: #e5e5e5; }\n\n.img {\n  position: relative;\n  height: 150px;\n  width: 200px;\n  margin-bottom: 3%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\n.swap-text {\n  position: absolute;\n  bottom: 5px;\n  right: 5px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  cursor: pointer;\n  color: #fff; }\n\n.btext {\n  position: relative;\n  margin-bottom: 1%; }\n\n.img-res {\n  width: 100%; }\n\n.textt {\n  width: 55%;\n  display: flex;\n  flex-direction: column;\n  margin-right: 10px; }\n\n.title1 {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-bottom: 1%; }\n\n.bod {\n  font-family: Arial;\n  font-weight: lighter;\n  max-width: 85%;\n  height: 90px;\n  color: #8a8d8a; }\n\n.bod1 {\n  font-family: Arial;\n  font-weight: lighter;\n  max-width: 85%;\n  color: #8a8d8a; }\n\n.icon {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  display: flex;\n  flex-direction: column;\n  margin-top: 2%; }\n\n.img-res {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 20px;\n  width: 20px;\n  margin-left: 8px; }\n\n.det {\n  font-size: 0.9rem;\n  text-decoration: underline;\n  cursor: pointer; }\n"
+module.exports = ".flex {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  max-width: 900px;\n  color: #4a4a4a; }\n\n.time {\n  display: flex;\n  flex-direction: row;\n  width: 10%;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.big-box {\n  width: 85%;\n  background: #e5e5e5;\n  border-style: solid;\n  border-width: thin;\n  border-color: #e5e5e5;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n  margin-bottom: 3%; }\n\n.activities {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  width: 50%;\n  margin-top: 2%; }\n\n.type {\n  margin-top: 1%;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold; }\n\n.big-box2 {\n  width: 85%;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-bottom: 3%; }\n\n.first1 {\n  background-color: #e5e5e5;\n  width: 95%;\n  height: 25px;\n  font-size: 0.85rem; }\n\n.value {\n  margin-left: 8px;\n  margin-top: 2px; }\n\n.second1 {\n  width: 5%;\n  background-color: #e5e5e5; }\n\n.img {\n  position: relative;\n  height: 150px;\n  width: 200px;\n  margin-bottom: 3%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\n.swap-text {\n  position: absolute;\n  bottom: 5px;\n  right: 5px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  cursor: pointer;\n  color: #fff; }\n\n.btext {\n  position: relative;\n  margin-bottom: 1%; }\n\n.img-res {\n  width: 100%; }\n\n.textt {\n  width: 55%;\n  display: flex;\n  flex-direction: column;\n  margin-right: 10px; }\n\n.title1 {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-bottom: 1%; }\n\n.bod {\n  font-family: Arial;\n  font-weight: lighter;\n  max-width: 85%;\n  height: 90px;\n  color: #8a8d8a; }\n\n.bod1 {\n  font-family: Arial;\n  font-weight: lighter;\n  max-width: 85%;\n  color: #8a8d8a; }\n\n.icon {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  display: flex;\n  flex-direction: column;\n  margin-top: 2%; }\n\n.img-res {\n  -o-object-fit: cover;\n     object-fit: cover;\n  height: 20px;\n  width: 20px;\n  margin-left: 8px; }\n\n.det {\n  font-size: 0.9rem;\n  text-decoration: underline;\n  cursor: pointer; }\n"
 
 /***/ }),
 
@@ -1253,6 +1253,84 @@ var ConfirmComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/components/details/details.component.html":
+/*!*******************************************************!*\
+  !*** ./src/components/details/details.component.html ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"modal\" class=\"modal\">\n\n    <!-- Modal content -->\n\n \n        \n        <div class=\"hide\" (click)=\"toggleModal()\">Hide Details</div>\n \n\n\n\n    <div class=\"modal-content\">\n     <div class=\"banner\">\n        <img class=\"img-responsive pics\" src=\"{{item.img}}\">  \n        <div class=\"text\">\n          <div class=\"type\">{{item.type}}</div>\n          <div class=\"title\">{{item.name}}</div>\n        </div>\n      </div>\n     \n\n\n      <div class=\"description\">{{item.description}}</div>\n      <div class=\"show\">SHOW FULL INFORMATION</div>\n    </div>\n  \n  </div>\n  "
+
+/***/ }),
+
+/***/ "./src/components/details/details.component.scss":
+/*!*******************************************************!*\
+  !*** ./src/components/details/details.component.scss ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".modal {\n  display: block;\n  /* Hidden by default */\n  position: fixed;\n  /* Stay in place */\n  z-index: 1;\n  /* Sit on top */\n  padding-top: 100px;\n  /* Location of the box */\n  left: 0;\n  top: 0;\n  width: 100%;\n  /* Full width */\n  height: 100%;\n  /* Full height */\n  overflow: auto;\n  /* Enable scroll if needed */\n  background-color: black;\n  /* Fallback color */\n  background-color: rgba(0, 0, 0, 0.8);\n  /* Black w/ opacity */ }\n\n/* Modal Content */\n\n.modal-content {\n  background-color: #fefefe;\n  margin: auto;\n  background: #4a4a4a;\n  border: 1px solid #888;\n  width: 40%; }\n\n.hide {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.9rem;\n  font-weight: bold;\n  background-color: #4a4a4a;\n  margin: auto;\n  padding: 10px;\n  border: 1px solid #888;\n  cursor: pointer;\n  color: white;\n  width: 6%;\n  margin-bottom: 0.5%; }\n\n.banner {\n  position: relative;\n  width: 100%;\n  height: 500px; }\n\n.pics {\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  cursor: pointer; }\n\n.description {\n  padding: 20px;\n  font-weight: lighter;\n  color: white;\n  max-width: 60%; }\n\n.close {\n  color: #aaaaaa;\n  float: right;\n  font-size: 28px;\n  font-weight: bold; }\n\n.text {\n  position: absolute;\n  bottom: 5%;\n  left: 2%;\n  color: #fff; }\n\n.type {\n  font-family: Arial;\n  font-weight: lighter;\n  font-size: 1rem; }\n\n.title {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 2rem; }\n\n.close:hover,\n.close:focus {\n  color: #000;\n  text-decoration: none;\n  cursor: pointer; }\n\n.show {\n  margin-top: 1%;\n  margin-bottom: 1%;\n  margin-left: 20px;\n  background: red;\n  color: white;\n  padding: 2%;\n  cursor: pointer;\n  width: 25%;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.5rem; }\n"
+
+/***/ }),
+
+/***/ "./src/components/details/details.component.ts":
+/*!*****************************************************!*\
+  !*** ./src/components/details/details.component.ts ***!
+  \*****************************************************/
+/*! exports provided: DetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailsComponent", function() { return DetailsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DetailsComponent = /** @class */ (function () {
+    function DetailsComponent() {
+    }
+    DetailsComponent.prototype.ngOnInit = function () {
+    };
+    DetailsComponent.prototype.toggleModal = function () {
+        if (this.modal == false)
+            this.modal = true;
+        else {
+            this.modal = false;
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], DetailsComponent.prototype, "item", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], DetailsComponent.prototype, "modal", void 0);
+    DetailsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-details',
+            template: __webpack_require__(/*! ./details.component.html */ "./src/components/details/details.component.html"),
+            styles: [__webpack_require__(/*! ./details.component.scss */ "./src/components/details/details.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], DetailsComponent);
+    return DetailsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/components/empty-activity-display/empty-activity-display.component.html":
 /*!*************************************************************************************!*\
   !*** ./src/components/empty-activity-display/empty-activity-display.component.html ***!
@@ -1785,6 +1863,117 @@ var SubmitFormComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/components/swap-box/swap-box.component.html":
+/*!*********************************************************!*\
+  !*** ./src/components/swap-box/swap-box.component.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n<div *ngIf=\"!innerSwap\" class=\"activities\">\n<div *ngIf=\"!check(item.order)\" class=\"pic\">\n   \n  <img class=\"img-responsive pics\" src=\"{{item.img}}\" (click)=\"toggleInnerSwap()\">  \n</div>\n<div *ngIf=\"check(item.order)\" class=\"pic2\">\n\n<img class=\"img-responsive pics2\" src=\"{{item.img}}\" >  \n<p style=\"position:absolute; top:0; left:0; margin:0; line-height:0\">&#9989;</p>\n</div>\n\n<div *ngIf=\"!check(item.order) && !innerSwap\" class=\"des\">\n<div class=\"act-title\">{{item.name}}</div>\n<div  class=\"act-des\" appEllipsis>{{item.description}} </div>\n</div>\n\n<div *ngIf=\"check(item.order)\" class=\"des\">\n<div class=\"act-title2\">{{item.name}}</div>\n<div  class=\"act-des2\" appEllipsis>{{item.description}} </div>\n</div>\n</div>\n\n\n\n<div *ngIf=\"innerSwap\" class=\"activities2\">\n    <div *ngIf=\"!check(item.order)\" class=\"newpic\">\n       \n      <img class=\"img-responsive pics\" src=\"{{item.img}}\" (click)=\"toggleInnerSwap()\">  \n    </div>\n    <div *ngIf=\"check(item.order)\" class=\"pic2\">\n    \n    <img class=\"img-responsive pics2\" src=\"{{item.img}}\" >  \n    <p style=\"position:absolute; top:0; left:0; margin:0; line-height:0\">&#9989;</p>\n    </div>\n    \n    <div *ngIf=\"!check(item.order) && innerSwap\" class=\"des2\">\n        <div class=\"des2-box1\"><span class=\"swap-text\" (click)=\"fixItem(item)\">Swap</span></div>\n        <div  class=\"des2-box2\"><span class=\"detail-text\" (click)=\"toggleModal()\">Details</span></div>\n        </div>\n   </div>\n\n\n<app-details [modal]=\"modal\" [item]=\"item\"></app-details>"
+
+/***/ }),
+
+/***/ "./src/components/swap-box/swap-box.component.scss":
+/*!*********************************************************!*\
+  !*** ./src/components/swap-box/swap-box.component.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".activities {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  width: 100%;\n  margin-top: 2%; }\n\n.activities2 {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  width: 100%;\n  background: #fff;\n  padding: 3%; }\n\n.pic {\n  position: relative;\n  height: 100px;\n  width: 32%;\n  border-style: solid;\n  border-color: grey;\n  border-width: thin; }\n\n.newpic {\n  position: relative;\n  height: 100px;\n  width: 28%;\n  border-style: solid;\n  border-color: grey;\n  border-width: thin; }\n\n.pic2 {\n  position: relative;\n  height: 100px;\n  width: 32%;\n  border-style: solid;\n  border-color: #228B22;\n  border-width: 2px; }\n\n.pics {\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  cursor: pointer; }\n\n.pics2 {\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  border-style: solid;\n  border-color: #228B22;\n  border-width: 2px;\n  opacity: 0.8; }\n\n.des {\n  display: flex;\n  flex-direction: column;\n  width: 57%;\n  height: 100px; }\n\n.des2 {\n  display: flex;\n  flex-direction: row;\n  width: 67%;\n  height: 100px; }\n\n.des2-box1 {\n  position: relative;\n  width: 50%;\n  background: red;\n  color: #fff; }\n\n.des2-box2 {\n  position: relative;\n  width: 50%;\n  background: #4a4a4a;\n  color: #fff; }\n\n.swap-text {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  position: absolute;\n  text-decoration: underline;\n  font-size: 0.8rem;\n  top: 43%;\n  left: 33%;\n  cursor: pointer; }\n\n.detail-text {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  position: absolute;\n  font-size: 0.8rem;\n  text-decoration: underline;\n  top: 43%;\n  left: 30%;\n  cursor: pointer; }\n\n.act-title {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-bottom: 3%;\n  width: 80%;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n\n.act-des {\n  font-family: Arial;\n  font-weight: lighter;\n  max-width: 85%;\n  height: 74px;\n  color: #8a8d8a;\n  font-size: 0.9rem; }\n\n.act-title2 {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-bottom: 3%;\n  width: 100%;\n  color: #BEBEBE;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n\n.act-des2 {\n  font-family: Arial;\n  font-weight: lighter;\n  max-width: 85%;\n  height: 74px;\n  color: #BEBEBE;\n  font-size: 0.9rem; }\n"
+
+/***/ }),
+
+/***/ "./src/components/swap-box/swap-box.component.ts":
+/*!*******************************************************!*\
+  !*** ./src/components/swap-box/swap-box.component.ts ***!
+  \*******************************************************/
+/*! exports provided: SwapBoxComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SwapBoxComponent", function() { return SwapBoxComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SwapBoxComponent = /** @class */ (function () {
+    function SwapBoxComponent(modalService) {
+        this.modalService = modalService;
+        this.modal = false;
+        this.innerSwap = false;
+        this.swap = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+    }
+    SwapBoxComponent.prototype.ngOnInit = function () {
+    };
+    SwapBoxComponent.prototype.open = function (content) {
+        var _this = this;
+        this.modalService.open(content).result.then(function (result) {
+            _this.closeResult = "Closed with: " + result;
+        });
+    };
+    SwapBoxComponent.prototype.check = function (order) {
+        if (order == this.ord)
+            return true;
+        else {
+            return false;
+        }
+    };
+    SwapBoxComponent.prototype.fixItem = function (event) {
+        this.swap.emit(event);
+    };
+    SwapBoxComponent.prototype.toggleInnerSwap = function () {
+        if (this.innerSwap == false)
+            this.innerSwap = true;
+        else {
+            this.innerSwap = false;
+        }
+    };
+    SwapBoxComponent.prototype.toggleModal = function () {
+        if (this.modal == false)
+            this.modal = true;
+        else {
+            this.modal = false;
+        }
+    };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], SwapBoxComponent.prototype, "ord", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"])(),
+        __metadata("design:type", Object)
+    ], SwapBoxComponent.prototype, "item", void 0);
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Output"])(),
+        __metadata("design:type", _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"])
+    ], SwapBoxComponent.prototype, "swap", void 0);
+    SwapBoxComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-swap-box',
+            template: __webpack_require__(/*! ./swap-box.component.html */ "./src/components/swap-box/swap-box.component.html"),
+            styles: [__webpack_require__(/*! ./swap-box.component.scss */ "./src/components/swap-box/swap-box.component.scss")]
+        }),
+        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"]])
+    ], SwapBoxComponent);
+    return SwapBoxComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/components/warning/warning.component.html":
 /*!*******************************************************!*\
   !*** ./src/components/warning/warning.component.html ***!
@@ -1913,28 +2102,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/confirm-sticker/confirm-sticker.component */ "./src/components/confirm-sticker/confirm-sticker.component.ts");
 /* harmony import */ var _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/warning/warning.component */ "./src/components/warning/warning.component.ts");
 /* harmony import */ var _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/calendar/calendar.component */ "./src/components/calendar/calendar.component.ts");
-/* harmony import */ var _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/main-header/main-header.component */ "./src/components/main-header/main-header.component.ts");
-/* harmony import */ var _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../components/main-footer/main-footer.component */ "./src/components/main-footer/main-footer.component.ts");
-/* harmony import */ var _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../components/submit-form/submit-form.component */ "./src/components/submit-form/submit-form.component.ts");
-/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../pages/landing-page/landing-page.component */ "./src/pages/landing-page/landing-page.component.ts");
-/* harmony import */ var _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../pages/browse-page/browse-page.component */ "./src/pages/browse-page/browse-page.component.ts");
-/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../pages/confirm-page/confirm-page.component */ "./src/pages/confirm-page/confirm-page.component.ts");
-/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../pages/design-page/design-page.component */ "./src/pages/design-page/design-page.component.ts");
-/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../pages/submit-page/submit-page.component */ "./src/pages/submit-page/submit-page.component.ts");
-/* harmony import */ var _app_app_routing_module__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../app/app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_app_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../app/app.component */ "./src/app/app.component.ts");
-/* harmony import */ var ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ng-simple-slideshow */ "./node_modules/ng-simple-slideshow/ng-simple-slideshow.es5.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
-/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
+/* harmony import */ var _components_details_details_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../components/details/details.component */ "./src/components/details/details.component.ts");
+/* harmony import */ var _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../components/main-header/main-header.component */ "./src/components/main-header/main-header.component.ts");
+/* harmony import */ var _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../components/main-footer/main-footer.component */ "./src/components/main-footer/main-footer.component.ts");
+/* harmony import */ var _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../components/submit-form/submit-form.component */ "./src/components/submit-form/submit-form.component.ts");
+/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../pages/landing-page/landing-page.component */ "./src/pages/landing-page/landing-page.component.ts");
+/* harmony import */ var _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../pages/browse-page/browse-page.component */ "./src/pages/browse-page/browse-page.component.ts");
+/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../pages/confirm-page/confirm-page.component */ "./src/pages/confirm-page/confirm-page.component.ts");
+/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../pages/design-page/design-page.component */ "./src/pages/design-page/design-page.component.ts");
+/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../pages/submit-page/submit-page.component */ "./src/pages/submit-page/submit-page.component.ts");
+/* harmony import */ var _components_swap_box_swap_box_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../components/swap-box/swap-box.component */ "./src/components/swap-box/swap-box.component.ts");
+/* harmony import */ var _app_app_routing_module__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../app/app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_app_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ng-simple-slideshow */ "./node_modules/ng-simple-slideshow/ng-simple-slideshow.es5.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var angularfire2__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! angularfire2 */ "./node_modules/angularfire2/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -1978,22 +2171,24 @@ var LearningAgendaModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
                 _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
-                ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_30__["SlideshowModule"],
+                ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_32__["SlideshowModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbModule"].forRoot(),
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
                 ngx_ellipsis__WEBPACK_IMPORTED_MODULE_4__["EllipsisModule"],
-                _app_app_routing_module__WEBPACK_IMPORTED_MODULE_28__["AppRoutingModule"],
+                _app_app_routing_module__WEBPACK_IMPORTED_MODULE_30__["AppRoutingModule"],
                 angular2_multiline_ellipsis__WEBPACK_IMPORTED_MODULE_5__["MultilineEllipsisModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_32__["HttpClientModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_33__["FormsModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_33__["ReactiveFormsModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_34__["HttpClientModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_35__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_35__["ReactiveFormsModule"],
                 ngx_pagination__WEBPACK_IMPORTED_MODULE_6__["NgxPaginationModule"],
-                angularfire2__WEBPACK_IMPORTED_MODULE_35__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_31__["environment"].firebase),
-                angularfire2_firestore__WEBPACK_IMPORTED_MODULE_34__["AngularFirestoreModule"]
+                angularfire2__WEBPACK_IMPORTED_MODULE_37__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_33__["environment"].firebase),
+                angularfire2_firestore__WEBPACK_IMPORTED_MODULE_36__["AngularFirestoreModule"]
             ],
             declarations: [
-                _app_app_component__WEBPACK_IMPORTED_MODULE_29__["AppComponent"],
+                _app_app_component__WEBPACK_IMPORTED_MODULE_31__["AppComponent"],
+                _components_swap_box_swap_box_component__WEBPACK_IMPORTED_MODULE_29__["SwapBoxComponent"],
                 _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_8__["EmptyCardComponent"],
+                _components_details_details_component__WEBPACK_IMPORTED_MODULE_20__["DetailsComponent"],
                 _components_card_card_component__WEBPACK_IMPORTED_MODULE_7__["CardComponent"],
                 _components_build_build_component__WEBPACK_IMPORTED_MODULE_9__["BuildComponent"],
                 _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_10__["ActivityComponent"],
@@ -2005,17 +2200,17 @@ var LearningAgendaModule = /** @class */ (function () {
                 _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_16__["StickyFooterComponent"],
                 _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_17__["ConfirmStickerComponent"],
                 _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_18__["WarningComponent"],
-                _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_20__["MainHeaderComponent"],
+                _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_21__["MainHeaderComponent"],
                 _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_19__["CalendarComponent"],
-                _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_21__["MainFooterComponent"],
-                _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_22__["SubmitFormComponent"],
-                _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_23__["LandingPageComponent"],
-                _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_24__["BrowsePageComponent"],
-                _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_26__["DesignPageComponent"],
-                _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_25__["ConfirmPageComponent"],
-                _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_27__["SubmitPageComponent"]
+                _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_22__["MainFooterComponent"],
+                _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_23__["SubmitFormComponent"],
+                _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_24__["LandingPageComponent"],
+                _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_25__["BrowsePageComponent"],
+                _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_27__["DesignPageComponent"],
+                _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_26__["ConfirmPageComponent"],
+                _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_28__["SubmitPageComponent"]
             ],
-            providers: [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_34__["AngularFirestoreModule"]],
+            providers: [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_36__["AngularFirestoreModule"]],
         })
     ], LearningAgendaModule);
     return LearningAgendaModule;
@@ -2114,7 +2309,7 @@ var ActivityBrief = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n  <app-main-header></app-main-header>\n<span class=\"plan\">PLAN YOUR VISIT </span><span class=\"arrow-right\"></span>\n<div class=\"h1\"> PLAN A SCHOOL TRIP</div>\n  \n\n  <div class=\"h3\"> <div *ngIf=\"active\" class=\"my-btn1\">BROWSE</div>\n  <div *ngIf=\"!active\" class=\"my-btn\">BROWSE</div>\n  \n  <div *ngIf=\"active\" class=\"my-btn\">CREATE</div>\n  \n</div>\n\n\n<div class=\"my-container\">\n  <div class=\"my-bg\" >\n    <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-resize\"> \n\n\n  \n  \n  </div>\n\n\n\n  </div>\n\n<!-- <div class=\"text1\">\n<div class=\"text2\" >\n    PLAN YOUR DAY AT THE MUSEUM\n  </div>\n<div class=\"text3\">\n    Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, \n    , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an\n    <br><br>\n    Get started with our sample iteneraries below or <a class=\"build\" href=\"javascript:void(0)\" (click)=\"open(content)\"> build your own  </a>\n</div>\n</div>\n -->\n\n<!-- <div class=\"card-title\">VIEW OUR ITINERARIES</div> -->\n<div class=\"content\">\n<div *ngIf=\"!set\" class=\"side-bar\">\n<div class=\"first\">\n  <div style=\"float:left;margin:4%; font-size:1.5rem\">Filter By</div>\n <div style=\"float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer\" (click)=\"reset()\">Clear All</div>\n</div>\n\n<div>\n<div class=\"selection\">\n  \n  <div class=\"ftext\">\n    GRADE\n  </div>\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\">Kindergaten to Grade 2\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"KinderTo2\" style=\"float:right;\" (change)=\"filterBoolean('KinderTo2',KinderTo2)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  \n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 3 to 5\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr3To5\" style=\"float:right;\" (change)=\"filterBoolean1('Gr3To5',Gr3To5)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 6 to 8\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr6To8\" style=\"float:right;\" (change)=\"filterBoolean2('Gr6To8',Gr6To8)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n</form>\n</div>\n\n\n\n<div class=\"selection\">\n  <form>\n  <div class=\"ftext\">\n      TIME OF YEAR\n    </div>\n    <div class=\"boxes\">\n        <label class=\"lab\">October to April\n            <span class=\"checkmark\"></span>\n           \n          </label>\n          <input  [(ngModel)]=\"OctoberToApril\" style=\"float:right;\" (change)=\"filterBoolean3('OctoberToApril',OctoberToApril)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n  \n  \n    \n    <div class=\"boxes\">\n        <label class=\"lab\">May to June\n            <span class=\"checkmark\"></span>\n            \n          </label>\n          <input [(ngModel)]=\"MayToJune\" style=\"float:right;\" (change)=\"filterBoolean4('MayToJune',MayToJune)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    </form>\n  </div>\n\n\n\n\n  <div class=\"selection\">\n  \n    <div class=\"ftext\">\n        LENGTH\n      </div>\n      <form>\n          <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios1\">\n               Half Day\n              </label>\n              <input style=\"float:right\"[(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\" type=\"radio\" name=\"exampleRadios\"  value=\"Half-day\" class=\"rad\">\n            </div>\n            <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios2\">\n              Full Day\n              </label>\n              <input  style=\"float:right\" [(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\"  type=\"radio\" name=\"exampleRadios\" value=\"Full-day\" class=\"rad\">\n     </div>\n        </form>\n    </div>\n    \n \n    \n  \n</div>\n</div>\n\n\n<div *ngIf=\"set\" class=\"side-bar\" >\n<div class=\"side-title\">\n SCHEDULE\n</div>\n<div *ngFor=\"let itinerary of itineraries\" class=\"brief\" > \n  <span class=\"brief1\">{{itinerary.time}}</span>\n<span class=\"brief2\">{{itinerary.name}}</span>\n</div>\n</div>\n<div *ngIf=\"!set\" class=\"itineraries\">\n \n <div style=\"height:5%; position:relative;\">\n  <div class=\"ti\" >Itineraries</div>\n <!--  <div class=\"my-btn\" (click)=\"open(content)\">\n  Build Your Own\n  </div></div> -->\n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\" *ngFor=\"let item of filtered| paginate: { itemsPerPage: 4, currentPage: p } \" >\n          <app-card [item]=\"item\"  (set)=\"getSet($event)\"></app-card>\n          </div>\n</div>\n<pagination-controls class=\"pag\" (pageChange)=\"p = $event\"\n                                  directionLinks=\"false\"\n   \n></pagination-controls>\n</div>\n\n  <!-- <div class=\"filter\">\n    <div style=\"font-family:futura-pt, Helvetica Neue, Arial\">\n        <div class=\"row\"  style=\"margin-bottom:2%; margin-left:0.1%\">\n            <div class=\"filtertext\" >FILTER ITINERARIES:</div>\n          <div class=\"input-group\" class=\"grades\">\n                  <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"grades\" (change)=\"filterExact('grades', grades)\">\n                      <option [ngValue]=\"undefined\" disabled  selected> Select Your Grade</option>\n                    <option value=\"Kinder to Gr.2\">Kindergaten to Grade 2</option>\n                    <option value=\"Gr 3-5\">Grades 3&ndash;5</option>\n                    <option value=\"Gr 6-8\">Grades 6&ndash;8</option>\n                  </select>\n                </div>\n                <div class=\"input-group\" class=\"date\" >\n                      <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"timeOfYear\" (change)=\"filterExact('timeOfYear', timeOfYear)\">\n                          <option [ngValue]=\"undefined\" disabled  selected> Select Time of Year </option>\n                          <option value=\"October-April\">Oct&ndash;Apr</option>\n                          <option value=\"May-June\">May&ndash;Jun</option>\n                        </select>\n                    </div>\n                    <div class=\"input-group\" class=\"day\" >\n                        <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"day\" (change)=\"filterExact('day', day)\">\n                            <option [ngValue]=\"undefined\" disabled  selected> Half-Day or Full-Day</option>\n                            <option value=\"Half-day\">Half&ndash;Day</option>\n                            <option value=\"Full-day\">Full&ndash;Day</option>\n                          </select>\n                        </div>\n                        <div class=\"show\">\n                          <button type=\"button\" class=\"btn \" style=\"width:100%; background-color:#8a8d8a; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:#f7f7f7\" (click)=\"reset()\"> Clear All Filters</button>\n                        </div>\n                      </div>\n                      </div>\n           \n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\"*ngFor=\"let item of filtered \" >\n          <app-card [item]=\"item\"></app-card>\n          </div>\n\n          <div  class=\"empty-card\" >\n            <app-empty-card></app-empty-card>\n            </div>\n          \n</div>\n\n<nav style=\"margin-bottom:10%\">\n    <ul class=\"pagination pagination-lg\" style=\"margin-left:0\">\n      <li class=\"page-item\" >\n        <a class=\"page-link\" style=\"border-radius:0; color:#e5e5e5; background-color:#4a4a4a\" href=\"#\" tabindex=\"-1\">1</a>\n      </li>\n      <li class=\"page-item\" style=\"border-radius:0\"><a class=\"page-link\" style=\"color:#4a4a4a\" href=\"#\">2</a></li>\n      <li class=\"page-item\" style=\"border-radius:0\" ><a class=\"page-link\" style=\"border-radius:0; color:#4a4a4a\" href=\"#\">3</a></li>\n    </ul>\n  </nav>\n</div> -->\n</div>\n\n\n<div *ngIf=\"set\" class=\"activities\">\n<div class=\"row\">\n  <div class=\"left\" (click)=\"back()\">\n    <div class=\"arrow-left\"></div>\n  </div>\n\n <div class=\"back-title\">Itineraries</div>\n</div>\n  <div style=\"position:relative;\">\n      <img src=\"../../assets/images/photo3.jpeg\" alt=\"Random first slide\" class=\"img-responsive banner\">\n      <div class=\"btext\">\n      <div class=\"btext1\">{{grade}}</div>\n      <div class=\"btext2\">{{title}}</div>\n      <div class=\"btext3\">{{year}}</div>\n      </div>\n      <div *ngIf=\"modified\" class=\"btext4\"> This is a modified version of the <span style=\"font-weight:bold\">{{title}}</span> itinerary</div>\n    </div>\n    <div class=\"link\" >\n\n      <div class=\"urlbox\">\n        <div class=\"url\">http://planning-tool.herokuapp.com/BrowsePage</div>\n        <div class=\"url-btn\">COPY URL</div>\n    </div>\n\n\n    <div class=\"printbox\">\n\n      <div class=\"print\">\n     <span style=\"margin-left:10px; margin-top:5px;\">PRINT</span>  \n      </div>\n      <div class=\"download\">DOWNLOAD PDF</div>\n    </div>\n    </div>\n<app-activity-display *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\"  (item)=\"setItem($event)\" (order)=\"emitOrder($event)\" (notify)=\"notice($event)\" (modify)=\"modify($event)\"></app-activity-display>\n    \n<app-empty-activity-display  (set)=\"add($event)\"></app-empty-activity-display>\n\n\n\n        </div>\n</div>\n\n\n\n\n\n</div>\n<div>\n  <app-main-footer></app-main-footer>\n</div>\n\n<ng-template #content let-c=\"close\" let-d=\"dismiss\">\n    <div style=\"width:100%\">\n        <button type=\"button\"  (click)=\"d('Cross click')\" style=\"background-color:black; float:right; height:70px; width:70px; \">\n            <div style=\"color:white; \">\n              x\n            </div>\n            <div style=\"color:white; font-weight:bold; font-size:12px;\">\n              CLOSE\n            </div>\n          </button>\n    <app-build></app-build>\n\n    \n    <div id=footer>\n        <div style=\"margin-bottom:30px;\">\n        <div>\n        <button type=\"button\" class=\"btn btn-danger\" style=\"margin:3%\" (click)=\"d('Cross click')\"  (click)=\"navigateToDesignPage()\"> <div style=\"float:left;\">CONTINUE</div> <div style=\"width:0;height: 0; border-top: 5px solid transparent; border-left: 10px solid white; border-bottom: 5px solid transparent; float:left; margin-left:28px; margin-top:6px;\"></div></button>\n      </div>\n      \n  </div>\n  </div>\n    \n\n    \n  </div>\n  </ng-template>\n"
+module.exports = "\n<div>\n  <app-main-header></app-main-header>\n<span class=\"plan\">PLAN YOUR VISIT </span><span class=\"arrow-right\"></span>\n<div class=\"h1\"> PLAN A SCHOOL TRIP</div>\n  \n\n  <div class=\"h3\"> <div *ngIf=\"active\" class=\"my-btn1\">BROWSE</div>\n  <div *ngIf=\"!active\" class=\"my-btn\">BROWSE</div>\n  \n  <div *ngIf=\"active\" class=\"my-btn\">CREATE</div>\n  \n</div>\n\n\n<div class=\"my-container\">\n  <div class=\"my-bg\" >\n    <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-resize\"> \n\n\n  \n  \n  </div>\n\n\n\n  </div>\n\n<!-- <div class=\"text1\">\n<div class=\"text2\" >\n    PLAN YOUR DAY AT THE MUSEUM\n  </div>\n<div class=\"text3\">\n    Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, \n    , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an\n    <br><br>\n    Get started with our sample iteneraries below or <a class=\"build\" href=\"javascript:void(0)\" (click)=\"open(content)\"> build your own  </a>\n</div>\n</div>\n -->\n\n<!-- <div class=\"card-title\">VIEW OUR ITINERARIES</div> -->\n<div class=\"content\">\n<div *ngIf=\"!set\" class=\"side-bar\">\n<div class=\"first\">\n  <div style=\"float:left;margin:4%; font-size:1.5rem\">Filter By</div>\n <div style=\"float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer\" (click)=\"reset()\">Clear All</div>\n</div>\n\n<div>\n<div class=\"selection\">\n  \n  <div class=\"ftext\">\n    GRADE\n  </div>\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\">Kindergaten to Grade 2\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"KinderTo2\" style=\"float:right;\" (change)=\"filterBoolean('KinderTo2',KinderTo2)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  \n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 3 to 5\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr3To5\" style=\"float:right;\" (change)=\"filterBoolean1('Gr3To5',Gr3To5)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 6 to 8\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr6To8\" style=\"float:right;\" (change)=\"filterBoolean2('Gr6To8',Gr6To8)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n</form>\n</div>\n\n\n\n<div class=\"selection\">\n  <form>\n  <div class=\"ftext\">\n      TIME OF YEAR\n    </div>\n    <div class=\"boxes\">\n        <label class=\"lab\">October to April\n            <span class=\"checkmark\"></span>\n           \n          </label>\n          <input  [(ngModel)]=\"OctoberToApril\" style=\"float:right;\" (change)=\"filterBoolean3('OctoberToApril',OctoberToApril)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n  \n  \n    \n    <div class=\"boxes\">\n        <label class=\"lab\">May to June\n            <span class=\"checkmark\"></span>\n            \n          </label>\n          <input [(ngModel)]=\"MayToJune\" style=\"float:right;\" (change)=\"filterBoolean4('MayToJune',MayToJune)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    </form>\n  </div>\n\n\n\n\n  <div class=\"selection\">\n  \n    <div class=\"ftext\">\n        LENGTH\n      </div>\n      <form>\n          <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios1\">\n               Half Day\n              </label>\n              <input style=\"float:right\"[(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\" type=\"radio\" name=\"exampleRadios\"  value=\"Half-day\" class=\"rad\">\n            </div>\n            <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios2\">\n              Full Day\n              </label>\n              <input  style=\"float:right\" [(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\"  type=\"radio\" name=\"exampleRadios\" value=\"Full-day\" class=\"rad\">\n     </div>\n        </form>\n    </div>\n    \n \n    \n  \n</div>\n</div>\n\n\n<div *ngIf=\"set\" class=\"side-bar\" >\n<div class=\"side-title\">\n SCHEDULE\n</div>\n<div *ngFor=\"let itinerary of itineraries\" class=\"brief\" > \n  <span class=\"brief1\">{{itinerary.time}}</span>\n<span class=\"brief2\">{{itinerary.name}}</span>\n</div>\n</div>\n<div *ngIf=\"!set\" class=\"itineraries\">\n \n <div style=\"height:5%; position:relative;\">\n  <div class=\"ti\" >Itineraries</div>\n <!--  <div class=\"my-btn\" (click)=\"open(content)\">\n  Build Your Own\n  </div></div> -->\n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\" *ngFor=\"let item of filtered| paginate: { itemsPerPage: 4, currentPage: p } \" >\n          <app-card [item]=\"item\"  (set)=\"getSet($event)\"></app-card>\n          </div>\n</div>\n<pagination-controls class=\"pag\" (pageChange)=\"p = $event\"\n                                  directionLinks=\"false\"\n   \n></pagination-controls>\n</div>\n\n  <!-- <div class=\"filter\">\n    <div style=\"font-family:futura-pt, Helvetica Neue, Arial\">\n        <div class=\"row\"  style=\"margin-bottom:2%; margin-left:0.1%\">\n            <div class=\"filtertext\" >FILTER ITINERARIES:</div>\n          <div class=\"input-group\" class=\"grades\">\n                  <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"grades\" (change)=\"filterExact('grades', grades)\">\n                      <option [ngValue]=\"undefined\" disabled  selected> Select Your Grade</option>\n                    <option value=\"Kinder to Gr.2\">Kindergaten to Grade 2</option>\n                    <option value=\"Gr 3-5\">Grades 3&ndash;5</option>\n                    <option value=\"Gr 6-8\">Grades 6&ndash;8</option>\n                  </select>\n                </div>\n                <div class=\"input-group\" class=\"date\" >\n                      <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"timeOfYear\" (change)=\"filterExact('timeOfYear', timeOfYear)\">\n                          <option [ngValue]=\"undefined\" disabled  selected> Select Time of Year </option>\n                          <option value=\"October-April\">Oct&ndash;Apr</option>\n                          <option value=\"May-June\">May&ndash;Jun</option>\n                        </select>\n                    </div>\n                    <div class=\"input-group\" class=\"day\" >\n                        <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"day\" (change)=\"filterExact('day', day)\">\n                            <option [ngValue]=\"undefined\" disabled  selected> Half-Day or Full-Day</option>\n                            <option value=\"Half-day\">Half&ndash;Day</option>\n                            <option value=\"Full-day\">Full&ndash;Day</option>\n                          </select>\n                        </div>\n                        <div class=\"show\">\n                          <button type=\"button\" class=\"btn \" style=\"width:100%; background-color:#8a8d8a; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:#f7f7f7\" (click)=\"reset()\"> Clear All Filters</button>\n                        </div>\n                      </div>\n                      </div>\n           \n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\"*ngFor=\"let item of filtered \" >\n          <app-card [item]=\"item\"></app-card>\n          </div>\n\n          <div  class=\"empty-card\" >\n            <app-empty-card></app-empty-card>\n            </div>\n          \n</div>\n\n<nav style=\"margin-bottom:10%\">\n    <ul class=\"pagination pagination-lg\" style=\"margin-left:0\">\n      <li class=\"page-item\" >\n        <a class=\"page-link\" style=\"border-radius:0; color:#e5e5e5; background-color:#4a4a4a\" href=\"#\" tabindex=\"-1\">1</a>\n      </li>\n      <li class=\"page-item\" style=\"border-radius:0\"><a class=\"page-link\" style=\"color:#4a4a4a\" href=\"#\">2</a></li>\n      <li class=\"page-item\" style=\"border-radius:0\" ><a class=\"page-link\" style=\"border-radius:0; color:#4a4a4a\" href=\"#\">3</a></li>\n    </ul>\n  </nav>\n</div> -->\n</div>\n\n\n<div *ngIf=\"set\" class=\"activities\">\n<div class=\"row\">\n  <div class=\"left\" (click)=\"back()\">\n    <div class=\"arrow-left\"></div>\n  </div>\n\n <div class=\"back-title\">Itineraries</div>\n</div>\n  <div style=\"position:relative;\">\n      <img src=\"../../assets/images/photo3.jpeg\" alt=\"Random first slide\" class=\"img-responsive banner\">\n      <div class=\"btext\">\n      <div class=\"btext1\">{{grade}}</div>\n      <div class=\"btext2\">{{title}}</div>\n      <div class=\"btext3\">{{year}}</div>\n      </div>\n      <div *ngIf=\"modified\" class=\"btext4\"> This is a modified version of the <span style=\"font-weight:bold\">{{title}}</span> itinerary</div>\n    </div>\n    <div class=\"link\" >\n\n      <div class=\"urlbox\">\n        <div class=\"url\">http://planning-tool.herokuapp.com/BrowsePage</div>\n        <div class=\"url-btn\">COPY URL</div>\n    </div>\n\n\n    <div class=\"printbox\">\n\n      <div class=\"print\">\n     <span style=\"margin-left:10px; margin-top:5px;\">PRINT</span>  \n      </div>\n      <div class=\"download\">DOWNLOAD PDF</div>\n    </div>\n    </div>\n<app-activity-display *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\"  (item)=\"setItem($event)\" (order)=\"emitOrder($event)\" (notify)=\"notice($event)\" (modify)=\"modify($event)\"></app-activity-display>\n    \n<app-empty-activity-display  (set)=\"add($event)\"></app-empty-activity-display>\n\n\n\n        </div>\n</div>\n\n\n\n\n\n</div>\n<div>\n  <app-main-footer></app-main-footer>\n</div>\n\n"
 
 /***/ }),
 
@@ -2175,6 +2370,7 @@ var BrowsePageComponent = /** @class */ (function () {
         this.router = router;
         this.changeDetector = changeDetector;
         this.route = route;
+        this.modal = true;
         this.modified = false;
         this.set = false;
         this.first = false;
