@@ -6,8 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
+ hide = false
  @Input() item;
- @Input() modal
+ @Input() modal = false
   constructor() { }
 
   ngOnInit() {
@@ -16,6 +17,13 @@ export class DetailsComponent implements OnInit {
     if(this.modal == false)this.modal = true
     else{
       this.modal = false;
+    }
+  }
+
+  toggleHide(){
+    if(this.hide == false)this.hide = true
+    else{
+      this.hide = true;
     }
   }
 }

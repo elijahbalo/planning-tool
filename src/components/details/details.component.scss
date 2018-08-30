@@ -14,7 +14,6 @@
 
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
     margin: auto;
     background:#4a4a4a;
     border: 1px solid #888;
@@ -97,6 +96,14 @@
     cursor:pointer;
     width:25%;
     font-family: "futura-pt", "Helvetica Neue", Arial;
-    font-size:0.5rem
+    font-size:0.6rem
+}
+
+.hidden{
+    background-color: #fff;
+    margin: auto;
+    color:#8a8d8a;
+    width: 40%;
+    padding:20px;
 }
 
