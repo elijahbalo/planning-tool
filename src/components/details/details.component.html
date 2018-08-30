@@ -1,0 +1,28 @@
+<div *ngIf="modal" class="modal">
+
+    <!-- Modal content -->
+
+ 
+        
+        <div class="hide" (click)="toggleModal()">Hide Details</div>
+ 
+
+
+
+    <div class="modal-content">
+     <div class="banner">
+        <img class="img-responsive pics" src="{{item.img}}">  
+        <div class="text">
+          <div class="type">{{item.type}}</div>
+          <div class="title">{{item.name}}</div>
+        </div>
+      </div>
+     
+
+
+      <div class="description">{{item.description}}</div>
+      <div class="show">SHOW FULL INFORMATION</div>
+    </div>
+  
+  </div>
+  

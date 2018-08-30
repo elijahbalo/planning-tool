@@ -285,29 +285,3 @@
   <app-main-footer></app-main-footer>
 </div>
 
-<ng-template #content let-c="close" let-d="dismiss">
-    <div style="width:100%">
-        <button type="button"  (click)="d('Cross click')" style="background-color:black; float:right; height:70px; width:70px; ">
-            <div style="color:white; ">
-              x
-            </div>
-            <div style="color:white; font-weight:bold; font-size:12px;">
-              CLOSE
-            </div>
-          </button>
-    <app-build></app-build>
-
-    
-    <div id=footer>
-        <div style="margin-bottom:30px;">
-        <div>
-        <button type="button" class="btn btn-danger" style="margin:3%" (click)="d('Cross click')"  (click)="navigateToDesignPage()"> <div style="float:left;">CONTINUE</div> <div style="width:0;height: 0; border-top: 5px solid transparent; border-left: 10px solid white; border-bottom: 5px solid transparent; float:left; margin-left:28px; margin-top:6px;"></div></button>
-      </div>
-      
-  </div>
-  </div>
-    
-
-    
-  </div>
-  </ng-template>

@@ -1,0 +1,44 @@
+
+<div *ngIf="!innerSwap" class="activities">
+<div *ngIf="!check(item.order)" class="pic">
+   
+  <img class="img-responsive pics" src="{{item.img}}" (click)="toggleInnerSwap()">  
+</div>
+<div *ngIf="check(item.order)" class="pic2">
+
+<img class="img-responsive pics2" src="{{item.img}}" >  
+<p style="position:absolute; top:0; left:0; margin:0; line-height:0">&#9989;</p>
+</div>
+
+<div *ngIf="!check(item.order) && !innerSwap" class="des">
+<div class="act-title">{{item.name}}</div>
+<div  class="act-des" appEllipsis>{{item.description}} </div>
+</div>
+
+<div *ngIf="check(item.order)" class="des">
+<div class="act-title2">{{item.name}}</div>
+<div  class="act-des2" appEllipsis>{{item.description}} </div>
+</div>
+</div>
+
+
+
+<div *ngIf="innerSwap" class="activities2">
+    <div *ngIf="!check(item.order)" class="newpic">
+       
+      <img class="img-responsive pics" src="{{item.img}}" (click)="toggleInnerSwap()">  
+    </div>
+    <div *ngIf="check(item.order)" class="pic2">
+    
+    <img class="img-responsive pics2" src="{{item.img}}" >  
+    <p style="position:absolute; top:0; left:0; margin:0; line-height:0">&#9989;</p>
+    </div>
+    
+    <div *ngIf="!check(item.order) && innerSwap" class="des2">
+        <div class="des2-box1"><span class="swap-text" (click)="fixItem(item)">Swap</span></div>
+        <div  class="des2-box2"><span class="detail-text" (click)="toggleModal()">Details</span></div>
+        </div>
+   </div>
+
+
+<app-details [modal]="modal" [item]="item"></app-details>

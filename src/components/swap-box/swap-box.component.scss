@@ -1,0 +1,146 @@
+
+.activities{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    width:100%;
+    margin-top:2%;
+    }
+.activities2{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    width:100%;
+    background:#fff;
+   
+    padding:3%;
+}
+.pic{
+    position:relative;
+    height:100px;
+    width:32%;
+    border-style:solid;
+    border-color:grey;
+    border-width:thin;
+  }
+.newpic{
+    position:relative;
+    height:100px;
+    width:28%;
+    border-style:solid;
+    border-color:grey;
+    border-width:thin;
+}
+  .pic2{
+    position:relative;
+    height:100px;
+    width:32%;
+  
+    border-style:solid;
+    border-color:#228B22;
+    border-width:2px;
+  }
+
+  .pics{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    cursor:pointer;
+  }
+  .pics2{
+    height:100%;
+    width:100%;
+    object-fit:cover;
+    border-style:solid;
+    border-color:#228B22;
+    border-width:2px;
+    opacity:0.8
+   
+  
+  }
+
+  .des{
+    display:flex;
+    flex-direction:column;
+    width:57%;
+     height:100px;
+  }
+  
+  .des2{
+    display:flex;
+    flex-direction:row;
+    width:67%;
+     height:100px;
+  }
+  
+  .des2-box1{
+    position:relative;
+    width:50%;
+    background:red;
+    color:#fff
+  }
+  .des2-box2{
+    position:relative;
+    width:50%;
+    background:#4a4a4a;
+    color:#fff
+  }
+
+ .swap-text{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-weight:bold;
+  position:absolute;
+  text-decoration:underline;
+  font-size:0.8rem;
+  top:43%;
+  left:33%;
+  cursor:pointer;
+ }
+ .detail-text{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-weight:bold;
+    position:absolute;
+    font-size:0.8rem;
+    text-decoration:underline;
+    top:43%;
+    left:30%;
+    cursor:pointer;
+   
+ }
+
+  .act-title{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-weight:bold;
+    margin-bottom:3%; 
+    width:80%;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .act-des{
+    font-family:  Arial;
+    font-weight:lighter;
+  max-width:85%;
+  height:74px;
+  color:#8a8d8a;
+  font-size:0.9rem;
+  }
+  .act-title2{
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    font-weight:bold;
+    margin-bottom:3%; 
+    width:100%;
+    color:#BEBEBE;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .act-des2{
+    font-family:  Arial;
+    font-weight:lighter;
+  max-width:85%;
+  height:74px;
+  color:#BEBEBE;
+  font-size:0.9rem;
+  }
+  

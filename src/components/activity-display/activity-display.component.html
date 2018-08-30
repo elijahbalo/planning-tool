@@ -9,33 +9,10 @@
   </div>
   
   <div *ngIf="swap" class="big-box">
-  <div *ngFor="let item of items | async" class="activities">
-  <div *ngIf="!check(item.order)" class="pic">
-   
-      <img class="img-responsive pics" src="{{item.img}}" (click)="fixItem(item)">  
-  </div>
-  <div *ngIf="check(item.order)" class="pic2">
-    
-    <img class="img-responsive pics2" src="{{item.img}}" >  
-    <p style="position:absolute; top:0; left:0; margin:0; line-height:0">&#9989;</p>
-</div>
- 
-  <div *ngIf="!check(item.order) && !innerSwap" class="des">
-  <div class="act-title">{{item.name}}</div>
-  <div  class="act-des" appEllipsis>{{item.description}} </div>
-  </div>
-
-  <div *ngIf="!check(item.order) && innerSwap" class="des2">
-    <div class="des2-box1">Swap</div>
-    <div  class="des2-box2" appEllipsis>Details</div>
-    </div>
   
+  
+   <app-swap-box  *ngFor="let item of items | async"  class="activities" [item]="item" [ord]="ord" (swap)="fixItem($event)"></app-swap-box>
 
-  <div *ngIf="check(item.order)" class="des">
-    <div class="act-title2">{{item.name}}</div>
-    <div  class="act-des2" appEllipsis>{{item.description}} </div>
-    </div>
-  </div>
 
  
   </div>
@@ -83,28 +60,13 @@
       </div>
       
       <div *ngIf="swap" class="big-box">
-        <div *ngFor="let item of items | async" class="activities">
-          <div *ngIf="!check(item.order)" class="pic">
+  
+  
+          <app-swap-box  *ngFor="let item of items | async"  class="activities" [item]="item" [ord]="ord" (swap)="fixItem($event)"></app-swap-box>
+       
+       
         
-              <img class="img-responsive pics" src="{{item.img}}" (click)="fixItem(item)">  
-          </div>
-          <div *ngIf="check(item.order)" class="pic2">
-        
-            <img class="img-responsive pics2" src="{{item.img}}">  
-        </div>
-          <div *ngIf="!check(item.order)" class="des">
-          <div class="act-title">{{item.name}}</div>
-          <div  class="act-des" appEllipsis>{{item.description}} </div>
-          </div>
-          <div *ngIf="check(item.order)" class="des">
-            <div class="act-title2">{{item.name}}</div>
-            <div  class="act-des2" appEllipsis>{{item.description}} </div>
-            </div>
-          </div>
-        
-    
-     
-      </div>
+         </div>
       <div *ngIf="!swap" class="big-box2" >
       <div class="img">
         <img class="img-responsive img" src="{{activity.img}}">

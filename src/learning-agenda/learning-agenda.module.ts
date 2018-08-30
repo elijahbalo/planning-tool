@@ -18,6 +18,7 @@ import { StickyFooterComponent} from '../components/sticky-footer/sticky-footer.
 import { ConfirmStickerComponent} from '../components/confirm-sticker/confirm-sticker.component';
 import { WarningComponent} from '../components/warning/warning.component';
 import { CalendarComponent} from '../components/calendar/calendar.component';
+import { DetailsComponent} from '../components/details/details.component';
 import { MainHeaderComponent} from '../components/main-header/main-header.component';
 import { MainFooterComponent} from '../components/main-footer/main-footer.component';
 import { SubmitFormComponent} from '../components/submit-form/submit-form.component';
@@ -26,6 +27,7 @@ import { BrowsePageComponent} from '../pages/browse-page/browse-page.component';
 import { ConfirmPageComponent} from '../pages/confirm-page/confirm-page.component';
 import { DesignPageComponent} from '../pages/design-page/design-page.component';
 import { SubmitPageComponent} from '../pages/submit-page/submit-page.component';
+import { SwapBoxComponent} from '../components/swap-box/swap-box.component'
 import { AppRoutingModule } from '../app/app-routing.module';
 import { AppComponent } from '../app/app.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
@@ -53,8 +55,9 @@ import { AngularFireModule } from 'angularfire2';
   ],
   declarations: [
     AppComponent,
-   
+    SwapBoxComponent,
     EmptyCardComponent,
+    DetailsComponent,
     CardComponent,
     BuildComponent,
     ActivityComponent,

@@ -20,7 +20,7 @@ import 'rxjs/add/observable/throw';
 
 export class BrowsePageComponent implements OnInit {
 
-
+modal=true 
 modified= false;  
 
 n_set
@@ -84,7 +84,7 @@ newSet= false
    
   }
 
-
+ 
 
 getSet(event){
 this.set=event;
