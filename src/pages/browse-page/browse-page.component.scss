@@ -49,6 +49,7 @@
   font-size:1rem;
   color:#8a8d8a;
   margin-left:3%;
+  width:50px;
 }
 
 .brief2{
@@ -117,7 +118,13 @@
 .btext3{
     font-size:1rem;
 }
-
+.my-bg1{
+    position:relative;
+    bottom:120px;
+    
+ 
+    margin-bottom: -120px;
+    }
 .my-bg{
 position:relative;
 bottom:120px;
@@ -184,7 +191,7 @@ margin-bottom: -120px;
 .h3{
     position:absolute;
   font-family: "futura-pt", "Helvetica Neue", Arial;
-top:13.6%;
+top:300px;
   left:50%;
   text-align:center;
     color:#fff
@@ -488,8 +495,8 @@ color:#4a4a4a;
     font-weight:bold;
     padding-left:50px;
     padding-right:50px;
-    padding-top:25px;
-    padding-bottom:25px;
+    padding-top:20px;
+    padding-bottom:20px;
 
   
   }
@@ -503,8 +510,8 @@ color:#4a4a4a;
     font-weight:bold;
     padding-left:50px;
     padding-right:50px;
-    padding-top:25px;
-    padding-bottom:25px;
+    padding-top:20px;
+    padding-bottom:20px;
   
   }
      

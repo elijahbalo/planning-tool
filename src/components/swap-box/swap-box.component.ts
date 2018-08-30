@@ -53,4 +53,8 @@ export class SwapBoxComponent implements OnInit {
       this.modal = false;
     }
   }
+
+  setModalFromChild(event){
+    this.modal = event;
+  }
 }

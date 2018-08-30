@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-details',
@@ -9,6 +9,7 @@ export class DetailsComponent implements OnInit {
  hide = false
  @Input() item;
  @Input() modal = false
+ @Output() set: EventEmitter<any> = new EventEmitter<any>(); 
   constructor() { }
 
   ngOnInit() {
@@ -17,6 +18,7 @@ export class DetailsComponent implements OnInit {
     if(this.modal == false)this.modal = true
     else{
       this.modal = false;
+      this.set.emit(false)
     }
   }
 
@@ -24,6 +26,9 @@ export class DetailsComponent implements OnInit {
     if(this.hide == false)this.hide = true
     else{
       this.hide = false;
+   
     }
   }
+
+
 }
