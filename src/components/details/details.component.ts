@@ -23,7 +23,7 @@ export class DetailsComponent implements OnInit {
   toggleHide(){
     if(this.hide == false)this.hide = true
     else{
-      this.hide = true;
+      this.hide = false;
     }
   }
 }

@@ -1260,7 +1260,7 @@ var ConfirmComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"modal\" class=\"modal\">\n\n    <!-- Modal content -->\n\n \n        \n        <div class=\"hide\" (click)=\"toggleModal()\">Hide Details</div>\n \n\n\n\n    <div class=\"modal-content\">\n     <div class=\"banner\">\n        <img class=\"img-responsive pics\" src=\"{{item.img}}\">  \n        <div class=\"text\">\n          <div class=\"type\">{{item.type}}</div>\n          <div class=\"title\">{{item.name}}</div>\n        </div>\n      </div>\n     \n\n\n      <div class=\"description\">{{item.description}}</div>\n      <div class=\"show\">SHOW FULL INFORMATION</div>\n    </div>\n  \n  </div>\n  "
+module.exports = "<div *ngIf=\"modal\" class=\"modal\">\n\n    <!-- Modal content -->\n\n \n        \n        <div class=\"hide\" (click)=\"toggleModal()\">Hide Details</div>\n \n\n\n\n    <div class=\"modal-content\">\n     <div class=\"banner\">\n        <img class=\"img-responsive pics\" src=\"{{item.img}}\">  \n        <div class=\"text\">\n          <div class=\"type\">{{item.type}}</div>\n          <div class=\"title\">{{item.name}}</div>\n        </div>\n      </div>\n     \n\n\n      <div class=\"description\">{{item.description}}</div>\n      <div class=\"show\" (click)=\"toggleHide()\">SHOW FULL INFORMATION</div>\n      \n    </div>\n    <div *ngIf=\"hide\" class=\"hidden\">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n      Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,\n       nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. \n      Nulla consequat massa quis enim. Donec pede justo, fringilla vel,\n       aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,\n       Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. \n       Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, \n       eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. \n       Quisque rutrum.\n        Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. \n        Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget \n      \n      </div>\n  </div>\n  "
 
 /***/ }),
 
@@ -1271,7 +1271,7 @@ module.exports = "<div *ngIf=\"modal\" class=\"modal\">\n\n    <!-- Modal conten
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".modal {\n  display: block;\n  /* Hidden by default */\n  position: fixed;\n  /* Stay in place */\n  z-index: 1;\n  /* Sit on top */\n  padding-top: 100px;\n  /* Location of the box */\n  left: 0;\n  top: 0;\n  width: 100%;\n  /* Full width */\n  height: 100%;\n  /* Full height */\n  overflow: auto;\n  /* Enable scroll if needed */\n  background-color: black;\n  /* Fallback color */\n  background-color: rgba(0, 0, 0, 0.8);\n  /* Black w/ opacity */ }\n\n/* Modal Content */\n\n.modal-content {\n  background-color: #fefefe;\n  margin: auto;\n  background: #4a4a4a;\n  border: 1px solid #888;\n  width: 40%; }\n\n.hide {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.9rem;\n  font-weight: bold;\n  background-color: #4a4a4a;\n  margin: auto;\n  padding: 10px;\n  border: 1px solid #888;\n  cursor: pointer;\n  color: white;\n  width: 6%;\n  margin-bottom: 0.5%; }\n\n.banner {\n  position: relative;\n  width: 100%;\n  height: 500px; }\n\n.pics {\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  cursor: pointer; }\n\n.description {\n  padding: 20px;\n  font-weight: lighter;\n  color: white;\n  max-width: 60%; }\n\n.close {\n  color: #aaaaaa;\n  float: right;\n  font-size: 28px;\n  font-weight: bold; }\n\n.text {\n  position: absolute;\n  bottom: 5%;\n  left: 2%;\n  color: #fff; }\n\n.type {\n  font-family: Arial;\n  font-weight: lighter;\n  font-size: 1rem; }\n\n.title {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 2rem; }\n\n.close:hover,\n.close:focus {\n  color: #000;\n  text-decoration: none;\n  cursor: pointer; }\n\n.show {\n  margin-top: 1%;\n  margin-bottom: 1%;\n  margin-left: 20px;\n  background: red;\n  color: white;\n  padding: 2%;\n  cursor: pointer;\n  width: 25%;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.5rem; }\n"
+module.exports = ".modal {\n  display: block;\n  /* Hidden by default */\n  position: fixed;\n  /* Stay in place */\n  z-index: 1;\n  /* Sit on top */\n  padding-top: 100px;\n  /* Location of the box */\n  left: 0;\n  top: 0;\n  width: 100%;\n  /* Full width */\n  height: 100%;\n  /* Full height */\n  overflow: auto;\n  /* Enable scroll if needed */\n  background-color: black;\n  /* Fallback color */\n  background-color: rgba(0, 0, 0, 0.8);\n  /* Black w/ opacity */ }\n\n/* Modal Content */\n\n.modal-content {\n  margin: auto;\n  background: #4a4a4a;\n  border: 1px solid #888;\n  width: 40%; }\n\n.hide {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.9rem;\n  font-weight: bold;\n  background-color: #4a4a4a;\n  margin: auto;\n  padding: 10px;\n  border: 1px solid #888;\n  cursor: pointer;\n  color: white;\n  width: 6%;\n  margin-bottom: 0.5%; }\n\n.banner {\n  position: relative;\n  width: 100%;\n  height: 500px; }\n\n.pics {\n  height: 100%;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  cursor: pointer; }\n\n.description {\n  padding: 20px;\n  font-weight: lighter;\n  color: white;\n  max-width: 60%; }\n\n.close {\n  color: #aaaaaa;\n  float: right;\n  font-size: 28px;\n  font-weight: bold; }\n\n.text {\n  position: absolute;\n  bottom: 5%;\n  left: 2%;\n  color: #fff; }\n\n.type {\n  font-family: Arial;\n  font-weight: lighter;\n  font-size: 1rem; }\n\n.title {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 2rem; }\n\n.close:hover,\n.close:focus {\n  color: #000;\n  text-decoration: none;\n  cursor: pointer; }\n\n.show {\n  margin-top: 1%;\n  margin-bottom: 1%;\n  margin-left: 20px;\n  background: red;\n  color: white;\n  padding: 2%;\n  cursor: pointer;\n  width: 25%;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.6rem; }\n\n.hidden {\n  background-color: #fff;\n  margin: auto;\n  color: #8a8d8a;\n  width: 40%;\n  padding: 20px; }\n"
 
 /***/ }),
 
@@ -1298,6 +1298,8 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var DetailsComponent = /** @class */ (function () {
     function DetailsComponent() {
+        this.hide = false;
+        this.modal = false;
     }
     DetailsComponent.prototype.ngOnInit = function () {
     };
@@ -1306,6 +1308,13 @@ var DetailsComponent = /** @class */ (function () {
             this.modal = true;
         else {
             this.modal = false;
+        }
+    };
+    DetailsComponent.prototype.toggleHide = function () {
+        if (this.hide == false)
+            this.hide = true;
+        else {
+            this.hide = true;
         }
     };
     __decorate([
