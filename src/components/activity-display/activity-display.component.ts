@@ -28,7 +28,7 @@ export class ActivityDisplayComponent implements OnInit {
   public items: Observable<any[]>;
   @Input() itinerary
   activity
-
+ add
   @Input() activities
 
   constructor(private db: AngularFirestore, ) { }
@@ -53,6 +53,7 @@ export class ActivityDisplayComponent implements OnInit {
    this.newSet = JSON.parse(localStorage.getItem("_set"))
     if(this.itinerary == 0){
       this.swap = true;
+      this.add = true;
     }
 
   }
@@ -185,6 +186,55 @@ check(order){
 
    }
 
+
+   timeOfDay(data,length){
+   
+    let index 
+    let h=""
+    let m=""
+    
+    for (var i = 0; i<data.length; i++){
+      var strChar = data.charAt(i);
+  
+      if ( strChar == ":") {
+       index = data.indexOf(strChar)
+          console.log(index)
+      }
+
+    }
+    for (var i = 0; i<index; i++){
+      let str = data.charAt(i)
+      h += str
+
+    }
+     
+
+    for (var j = index+1; j<data.length; j++){
+      let str = data.charAt(j)
+      m += str
+     
+    }
+ 
+    let time = (Number(h)*60) + Number(m) + length
+
+
+
+
+    if (time >= 720){
+      return 'PM'
+    }
+    else{
+      if (!time){
+      return ''
+      }
+      else{
+       return 'AM'
+     }
+    }
+    
+   }
+  
+  
 }
 
 

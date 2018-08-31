@@ -1,24 +1,61 @@
 
-<div *ngIf="!innerSwap" class="activities">
-<div *ngIf="!check(item.order)" class="pic">
+<div *ngIf="!innerSwap && add" class="activities">
+  <div *ngIf="!check(item.order) && !checkOrder(item.name)" class="pic">
+     
+    <img class="img-responsive pics" src="{{item.img}}" (click)="fixItem(item)">  
+  </div>
+  <div *ngIf="check(item.order) && checkOrder(item.name)" class="pic2">
+  
+  <img class="img-responsive pics2" src="{{item.img}}" >  
+  <p style="position:absolute; top:0; left:0; margin:0; line-height:0">&#9989;</p>
+  </div>
+  
+  <div *ngIf="checkOrder(item.name) && !check(item.order)" class="pic">
+  
+    <img class="img-responsive pics3" src="{{item.img}}" >  
+    </div>
+    
+
+  <div *ngIf="!check(item.order) && !innerSwap && !checkOrder(item.name)" class="des">
+  <div class="act-title">{{item.name}}</div>
+  <div  class="act-des" appEllipsis>{{item.description}} </div>
+  </div>
+  
+  <div *ngIf="check(item.order) || checkOrder(item.name,item.order) " class="des">
+  <div class="act-title2">{{item.name}}</div>
+  <div  class="act-des2" appEllipsis>{{item.description}} </div>
+  </div>
+  
+  </div>
+
+<div *ngIf="!innerSwap && !add" class="activities">
+<div *ngIf="!check(item.order) && !checkOrder(item.name)" class="pic">
    
   <img class="img-responsive pics" src="{{item.img}}" (click)="toggleInnerSwap()">  
 </div>
-<div *ngIf="check(item.order)" class="pic2">
+<div *ngIf="check(item.order) && checkOrder(item.name)" class="pic2">
 
 <img class="img-responsive pics2" src="{{item.img}}" >  
 <p style="position:absolute; top:0; left:0; margin:0; line-height:0">&#9989;</p>
 </div>
 
-<div *ngIf="!check(item.order) && !innerSwap" class="des">
+<div *ngIf="checkOrder(item.name) && !check(item.order)" class="pic">
+
+  <img class="img-responsive pics3" src="{{item.img}}" >  
+  </div>
+  
+
+
+<div *ngIf="!check(item.order) && !innerSwap && !checkOrder(item.name)" class="des">
 <div class="act-title">{{item.name}}</div>
 <div  class="act-des" appEllipsis>{{item.description}} </div>
 </div>
 
-<div *ngIf="check(item.order)" class="des">
+<div *ngIf="check(item.order) || checkOrder(item.name,item.order) " class="des">
 <div class="act-title2">{{item.name}}</div>
 <div  class="act-des2" appEllipsis>{{item.description}} </div>
 </div>
+
 </div>
 
 

@@ -86,6 +86,9 @@ newSet= false
   }
 
  
+print(){
+  window.print();
+}
 
 getSet(event){
 this.set=event;
@@ -144,7 +147,23 @@ modify(event){
 
 
 
+printDiv() 
+{
 
+  var divToPrint=document.getElementById('print');
+
+  var newWin=window.open('','Print-Window');
+
+  newWin.document.open();
+  
+  
+  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+
+  newWin.document.close();
+
+  setTimeout(function(){newWin.close();},10);
+
+}
 
   resizeImage(){
     let value = false;

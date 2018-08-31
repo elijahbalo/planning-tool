@@ -11,7 +11,7 @@
   <div *ngIf="swap" class="big-box">
   
   
-   <app-swap-box  *ngFor="let item of items | async"  class="activities" [item]="item" [ord]="ord" (swap)="fixItem($event)"></app-swap-box>
+   <app-swap-box  *ngFor="let item of items | async"  class="activities" [item]="item" [ord]="ord" [add]="add" (swap)="fixItem($event)"></app-swap-box>
 
 
  

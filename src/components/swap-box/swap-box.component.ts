@@ -10,12 +10,14 @@ export class SwapBoxComponent implements OnInit {
   modal = false
  closeResult: string;
  innerSwap = false
+ @Input() add
  @Input() ord
  @Input() item
  @Output() swap: EventEmitter<any> = new EventEmitter<any>();
   constructor(private modalService: NgbModal) { }
 
   ngOnInit() {
+
   }
 
   open(content) {
@@ -24,7 +26,15 @@ export class SwapBoxComponent implements OnInit {
     });
   }
 
-
+  checkOrder(name,order){
+  let act = JSON.parse(localStorage.getItem("itinerary"))
+  for (var i=0; i<(act.length); i++){
+   if (name == act[i].name){
+     return true
+   }
+  }
+  return false
+ }
 
   check(order){
     if (order == this.ord)
@@ -34,12 +44,10 @@ export class SwapBoxComponent implements OnInit {
     }
   }
 
-
   fixItem(event){
     this.swap.emit(event)
   }
-
-
+  
   toggleInnerSwap(){
     if(this.innerSwap == false)this.innerSwap = true
     else{
