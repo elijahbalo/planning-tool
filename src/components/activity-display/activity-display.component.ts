@@ -19,6 +19,7 @@ export class ActivityDisplayComponent implements OnInit {
   @Output() notify: EventEmitter<any> = new EventEmitter<any>();
   @Output() modify: EventEmitter<any> = new EventEmitter<any>();
   ord
+  modal = false
   newTime;
   det = false
   newSet
@@ -27,6 +28,8 @@ export class ActivityDisplayComponent implements OnInit {
   innerSwap = false;
   public items: Observable<any[]>;
   @Input() itinerary
+  @Input() showSwap
+  my_time
   activity
  add
   @Input() activities
@@ -75,6 +78,16 @@ export class ActivityDisplayComponent implements OnInit {
     }
   }
 
+  toggleModal(){
+    if(this.modal == false)this.modal = true
+    else{
+      this.modal = false;
+    }
+  }
+
+  setModalFromChild(event){
+    this.modal = event;
+  }
   
   toggleInnerSwap(){
     if(this.innerSwap == false)this.innerSwap = true
@@ -173,6 +186,7 @@ check(order){
     }
  
     let time = (Number(h)*60) + Number(m) + length
+    this.my_time = time
   let minutes = time % 60;
    let hours =  (time - minutes)/60; 
    if (minutes < 10){
@@ -186,55 +200,17 @@ check(order){
 
    }
 
-
-   timeOfDay(data,length){
-   
-    let index 
-    let h=""
-    let m=""
-    
-    for (var i = 0; i<data.length; i++){
-      var strChar = data.charAt(i);
+   tConvert (time) {
+    // Check correct time format and split into components
+    time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
   
-      if ( strChar == ":") {
-       index = data.indexOf(strChar)
-          console.log(index)
-      }
-
+    if (time.length > 1) { // If time format correct
+      time = time.slice (1);  // Remove full string match value
+      time[5] = +time[0] < 12 ? ' AM' : ' PM'; // Set AM/PM
+      time[0] = +time[0] % 12 || 12; // Adjust hours
     }
-    for (var i = 0; i<index; i++){
-      let str = data.charAt(i)
-      h += str
-
-    }
-     
-
-    for (var j = index+1; j<data.length; j++){
-      let str = data.charAt(j)
-      m += str
-     
-    }
- 
-    let time = (Number(h)*60) + Number(m) + length
-
-
-
-
-    if (time >= 720){
-      return 'PM'
-    }
-    else{
-      if (!time){
-      return ''
-      }
-      else{
-       return 'AM'
-     }
-    }
-    
-   }
-  
+    return time.join (''); // return adjusted time or original string
+  }
   
 }
-
 

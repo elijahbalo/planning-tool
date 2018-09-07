@@ -1,0 +1,76 @@
+
+<div>
+  <app-main-header></app-main-header>
+ 
+<div class="my-container">
+  <div class="my-bg" >
+    <img src="http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg" class="img-resize"> 
+
+  </div>
+  </div>
+
+  <div *ngFor="let item of items | async">
+<div *ngIf="checkId(item.id)" class="content">
+
+<div id="print" class="side-bar" >
+<div class="side-title">
+ SCHEDULE
+</div>
+<div *ngFor="let activity of item.activities" class="brief" > 
+  <span class="brief1">{{activity.time}}</span>
+<span class="brief2">{{activity.name}}</span>
+</div>
+</div>
+
+
+<div class="activities">
+<div class="row">
+  <div class="left" style="visibility:hidden" (click)="back()">
+    <div class="arrow-left"></div>
+  </div>
+
+ <div class="back-title">View your Itinerary</div>
+</div>
+  <div style="position:relative;">
+      <img src="../../assets/images/photo3.jpeg" alt="Random first slide" class="img-responsive banner">
+      <div class="btext">
+      <div class="btext1">{{item.grade}}</div>
+      <div class="btext2">{{item.name}}</div>
+      <div class="btext3">{{item.year}}</div>
+      </div>
+      <div class="btext4"> This is a modified version of the <span style="font-weight:bold">{{item.name}}</span> itinerary</div>
+    </div>
+    <div class="link" >
+
+      <div class="urlbox">
+        <div class="url">{{url}}</div>
+        <div ><button class="url-btn" ngxClipboard [cbContent]="url">COPY URL</button></div>
+    </div>
+
+
+    <div class="printbox">
+
+        <div>
+            <button class="print" (click)="printDiv()">PRINT</button>  
+             </div>
+             <div style="margin-right:13%;margin-left:2%"><button class="download">DOWNLOAD PDF</button></div>
+    </div>
+    </div>
+<app-activity-display *ngFor="let activity of item.activities" [itinerary]="activity" [showSwap]="showSwap" ></app-activity-display>
+  
+        </div>
+
+        
+</div>
+</div>
+
+
+
+
+
+
+</div>
+<div>
+  <app-main-footer></app-main-footer>
+</div>
+

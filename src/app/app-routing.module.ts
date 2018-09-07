@@ -6,6 +6,7 @@ import { DesignPageComponent} from '../pages/design-page/design-page.component';
 import { ConfirmPageComponent} from '../pages/confirm-page/confirm-page.component';
 import { SubmitPageComponent} from '../pages/submit-page/submit-page.component';
 import { BrowsePageComponent} from '../pages/browse-page/browse-page.component';
+import { ItineraryPageComponent} from '../pages/itinerary-page/itinerary-page.component';
 
 const routes: Routes = [
 {path: '', redirectTo: 'LandingPage', pathMatch: 'full'}, 
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'DesignPage', component: DesignPageComponent },
   {path: 'ConfirmPage', component: ConfirmPageComponent},
   {path: 'SubmitPage', component: SubmitPageComponent},
-  {path: 'BrowsePage', component:BrowsePageComponent}  
+  {path: 'BrowsePage', component:BrowsePageComponent},
+  {path: 'ItineraryPage/:id', component: ItineraryPageComponent} 
 ];
 
 @NgModule({

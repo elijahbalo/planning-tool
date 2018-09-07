@@ -87,6 +87,9 @@
     background:red;
     color:#fff
   }
+
+
+
   .des2-box2{
     position:relative;
     width:50%;
@@ -100,10 +103,21 @@
   position:absolute;
   text-decoration:underline;
   font-size:0.8rem;
-  top:43%;
+  top:55%;
   left:33%;
   cursor:pointer;
  }
+
+ .swap-text1{
+  font-family: "futura-pt", "Helvetica Neue", Arial;
+  font-weight:bold;
+position:absolute;
+text-decoration:underline;
+font-size:0.8rem;
+top:30%;
+left:38%;
+cursor:pointer;
+}
  .detail-text{
     font-family: "futura-pt", "Helvetica Neue", Arial;
     font-weight:bold;

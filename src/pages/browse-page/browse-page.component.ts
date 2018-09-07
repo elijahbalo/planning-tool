@@ -19,8 +19,10 @@ import 'rxjs/add/observable/throw';
 })
 
 export class BrowsePageComponent implements OnInit {
-
-
+content: string;
+m_activities: any[];
+url
+rId: string;
 modified= false;  
 
 n_set
@@ -33,8 +35,10 @@ title
 grade
 year
 
+addedPost=false
   set = false;
-
+  create = false;
+  browse = false;
 first = false
 second = false
 third = false
@@ -42,11 +46,12 @@ fourth = false
 fifth = false
 sixth = false
 
-active=true
+bActive=false
+cActive=false
 prop
 
 newSet= false
-
+showSwap = true
  
   p: number = 1;
 
@@ -72,7 +77,7 @@ newSet= false
   }
   ngOnInit(){
    localStorage.clear();
-  
+    this.setBrowse()
    this.items = this.db.collection('/itineraries').valueChanges().subscribe(items => {
       this.items=items
       this.applyFilters()
@@ -85,7 +90,26 @@ newSet= false
    
   }
 
- 
+  public addPost(){
+    /* this.db.collection('/modified_itineraries').add({'name': this.title, 'description': this.content, 'length': this.length}); */
+    this.randomId()
+    this.addedPost = true
+    this.url="http://planning-tool.herokuapp.com/ItineraryPage/"+this.rId
+    this.db.collection('/modified_itineraries').doc(this.rId).set({'name': this.title, 
+                                                                   'grade':this.grade, 
+                                                                   'title':this.title, 
+                                                                   'year':this.year, 
+                                                                   'activities': this.itineraries});
+   } 
+
+   randomId () {
+    // Math.random should be unique because of its seeding algorithm.
+    // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+    // after the decimal.
+    this.rId = Math.random().toString(36).substr(2, 9);
+
+  };
+
 print(){
   window.print();
 }
@@ -108,6 +132,20 @@ add(event){
 
   localStorage.setItem('_set', JSON.stringify(event))
 
+}
+
+setBrowse(){
+  this.create = false;
+  this.browse = true;
+  this.bActive = true;
+  this.cActive = false;
+}
+
+setCreate(){
+  this.create = true;
+  this.browse = false;
+  this.cActive = true;
+  this.bActive = false;
 }
 
 back(){
@@ -141,6 +179,7 @@ notice(event){
 
 modify(event){
   this.modified = event;
+  this.addPost()
 }
 
 
