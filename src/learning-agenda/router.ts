@@ -1,12 +1,12 @@
-/* import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LandingPageComponent} from  '../pages/landing-page/landing-page.component';
-import { DesignPageComponent} from '../pages/design-page/design-page.component';
-import { ConfirmPageComponent} from '../pages/confirm-page/confirm-page.component';
-import { SubmitPageComponent} from '../pages/submit-page/submit-page.component';
-import { BrowsePageComponent} from '../pages/browse-page/browse-page.component';
-import { ItineraryPageComponent} from '../pages/itinerary-page/itinerary-page.component';
+import { LandingPageComponent} from  './pages/landing-page/landing-page.component';
+import { DesignPageComponent} from './pages/design-page/design-page.component';
+import { ConfirmPageComponent} from './pages/confirm-page/confirm-page.component';
+import { SubmitPageComponent} from './pages/submit-page/submit-page.component';
+import { BrowsePageComponent} from './pages/browse-page/browse-page.component';
+import { ItineraryPageComponent} from './pages/itinerary-page/itinerary-page.component';
 
 const routes: Routes = [
 {path: '', redirectTo: 'LandingPage', pathMatch: 'full'}, 
@@ -23,4 +23,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
- */
