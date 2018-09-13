@@ -23,63 +23,6 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "./src/app/app-routing.module.ts":
-/*!***************************************!*\
-  !*** ./src/app/app-routing.module.ts ***!
-  \***************************************/
-/*! exports provided: AppRoutingModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../pages/landing-page/landing-page.component */ "./src/pages/landing-page/landing-page.component.ts");
-/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../pages/design-page/design-page.component */ "./src/pages/design-page/design-page.component.ts");
-/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../pages/confirm-page/confirm-page.component */ "./src/pages/confirm-page/confirm-page.component.ts");
-/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../pages/submit-page/submit-page.component */ "./src/pages/submit-page/submit-page.component.ts");
-/* harmony import */ var _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../pages/browse-page/browse-page.component */ "./src/pages/browse-page/browse-page.component.ts");
-/* harmony import */ var _pages_itinerary_page_itinerary_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../pages/itinerary-page/itinerary-page.component */ "./src/pages/itinerary-page/itinerary-page.component.ts");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-
-var routes = [
-    { path: '', redirectTo: 'LandingPage', pathMatch: 'full' },
-    { path: 'LandingPage', component: _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_2__["LandingPageComponent"] },
-    { path: 'DesignPage', component: _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_3__["DesignPageComponent"] },
-    { path: 'ConfirmPage', component: _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_4__["ConfirmPageComponent"] },
-    { path: 'SubmitPage', component: _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_5__["SubmitPageComponent"] },
-    { path: 'BrowsePage', component: _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_6__["BrowsePageComponent"] },
-    { path: 'ItineraryPage/:id', component: _pages_itinerary_page_itinerary_page_component__WEBPACK_IMPORTED_MODULE_7__["ItineraryPageComponent"] }
-];
-var AppRoutingModule = /** @class */ (function () {
-    function AppRoutingModule() {
-    }
-    AppRoutingModule = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
-            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
-        })
-    ], AppRoutingModule);
-    return AppRoutingModule;
-}());
-
-
-
-/***/ }),
-
 /***/ "./src/app/app.component.html":
 /*!************************************!*\
   !*** ./src/app/app.component.html ***!
@@ -227,10 +170,45 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/activity-card/activity-card.component.html":
-/*!*******************************************************************!*\
-  !*** ./src/components/activity-card/activity-card.component.html ***!
-  \*******************************************************************/
+/***/ "./src/environments/environment.ts":
+/*!*****************************************!*\
+  !*** ./src/environments/environment.ts ***!
+  \*****************************************/
+/*! exports provided: environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
+// The list of file replacements can be found in `angular.json`.
+var environment = {
+    production: false,
+    firebase: {
+        apiKey: "AIzaSyAqb1AZM_xWPycGFuWByknU7WPsTQ0auxk",
+        authDomain: "planning-tool-532b0.firebaseapp.com",
+        databaseURL: "https://planning-tool-532b0.firebaseio.com",
+        projectId: "planning-tool-532b0",
+        storageBucket: "planning-tool-532b0.appspot.com",
+        messagingSenderId: "429282485430"
+    }
+};
+/*
+ * In development mode, to ignore zone related error stack frames such as
+ * `zone.run`, `zoneDelegate.invokeTask` for easier debugging, you can
+ * import the following file, but please comment it out in production mode
+ * because it will have performance impact when throw error
+ */
+// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
+/***/ }),
+
+/***/ "./src/learning-agenda/components/activity-card/activity-card.component.html":
+/*!***********************************************************************************!*\
+  !*** ./src/learning-agenda/components/activity-card/activity-card.component.html ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -238,10 +216,10 @@ module.exports = "<div class=\"container\">\n <div class=\"card-container\" (cli
 
 /***/ }),
 
-/***/ "./src/components/activity-card/activity-card.component.scss":
-/*!*******************************************************************!*\
-  !*** ./src/components/activity-card/activity-card.component.scss ***!
-  \*******************************************************************/
+/***/ "./src/learning-agenda/components/activity-card/activity-card.component.scss":
+/*!***********************************************************************************!*\
+  !*** ./src/learning-agenda/components/activity-card/activity-card.component.scss ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -249,10 +227,10 @@ module.exports = ".card-container {\n  height: 100%;\n  width: 100%;\n  position
 
 /***/ }),
 
-/***/ "./src/components/activity-card/activity-card.component.ts":
-/*!*****************************************************************!*\
-  !*** ./src/components/activity-card/activity-card.component.ts ***!
-  \*****************************************************************/
+/***/ "./src/learning-agenda/components/activity-card/activity-card.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/learning-agenda/components/activity-card/activity-card.component.ts ***!
+  \*********************************************************************************/
 /*! exports provided: ActivityCardComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -296,8 +274,8 @@ var ActivityCardComponent = /** @class */ (function () {
     ActivityCardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-activity-card',
-            template: __webpack_require__(/*! ./activity-card.component.html */ "./src/components/activity-card/activity-card.component.html"),
-            styles: [__webpack_require__(/*! ./activity-card.component.scss */ "./src/components/activity-card/activity-card.component.scss")]
+            template: __webpack_require__(/*! ./activity-card.component.html */ "./src/learning-agenda/components/activity-card/activity-card.component.html"),
+            styles: [__webpack_require__(/*! ./activity-card.component.scss */ "./src/learning-agenda/components/activity-card/activity-card.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], ActivityCardComponent);
@@ -308,10 +286,10 @@ var ActivityCardComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/activity-display/activity-display.component.html":
-/*!*************************************************************************!*\
-  !*** ./src/components/activity-display/activity-display.component.html ***!
-  \*************************************************************************/
+/***/ "./src/learning-agenda/components/activity-display/activity-display.component.html":
+/*!*****************************************************************************************!*\
+  !*** ./src/learning-agenda/components/activity-display/activity-display.component.html ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -319,10 +297,10 @@ module.exports = "\n<div *ngIf=\"!isSet\"> \n<div class=\"flex\">\n  <div class=
 
 /***/ }),
 
-/***/ "./src/components/activity-display/activity-display.component.scss":
-/*!*************************************************************************!*\
-  !*** ./src/components/activity-display/activity-display.component.scss ***!
-  \*************************************************************************/
+/***/ "./src/learning-agenda/components/activity-display/activity-display.component.scss":
+/*!*****************************************************************************************!*\
+  !*** ./src/learning-agenda/components/activity-display/activity-display.component.scss ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -330,10 +308,10 @@ module.exports = ".flex {\n  display: flex;\n  flex-direction: row;\n  justify-c
 
 /***/ }),
 
-/***/ "./src/components/activity-display/activity-display.component.ts":
-/*!***********************************************************************!*\
-  !*** ./src/components/activity-display/activity-display.component.ts ***!
-  \***********************************************************************/
+/***/ "./src/learning-agenda/components/activity-display/activity-display.component.ts":
+/*!***************************************************************************************!*\
+  !*** ./src/learning-agenda/components/activity-display/activity-display.component.ts ***!
+  \***************************************************************************************/
 /*! exports provided: ActivityDisplayComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -551,8 +529,8 @@ var ActivityDisplayComponent = /** @class */ (function () {
     ActivityDisplayComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-activity-display',
-            template: __webpack_require__(/*! ./activity-display.component.html */ "./src/components/activity-display/activity-display.component.html"),
-            styles: [__webpack_require__(/*! ./activity-display.component.scss */ "./src/components/activity-display/activity-display.component.scss")]
+            template: __webpack_require__(/*! ./activity-display.component.html */ "./src/learning-agenda/components/activity-display/activity-display.component.html"),
+            styles: [__webpack_require__(/*! ./activity-display.component.scss */ "./src/learning-agenda/components/activity-display/activity-display.component.scss")]
         }),
         __metadata("design:paramtypes", [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"]])
     ], ActivityDisplayComponent);
@@ -563,10 +541,10 @@ var ActivityDisplayComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/activity/activity.component.html":
-/*!*********************************************************!*\
-  !*** ./src/components/activity/activity.component.html ***!
-  \*********************************************************/
+/***/ "./src/learning-agenda/components/activity/activity.component.html":
+/*!*************************************************************************!*\
+  !*** ./src/learning-agenda/components/activity/activity.component.html ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -574,10 +552,10 @@ module.exports = "<div *ngIf=\"!set\">\n<div  class=\"outer-flex\">\n  \n<div *n
 
 /***/ }),
 
-/***/ "./src/components/activity/activity.component.scss":
-/*!*********************************************************!*\
-  !*** ./src/components/activity/activity.component.scss ***!
-  \*********************************************************/
+/***/ "./src/learning-agenda/components/activity/activity.component.scss":
+/*!*************************************************************************!*\
+  !*** ./src/learning-agenda/components/activity/activity.component.scss ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -585,10 +563,10 @@ module.exports = ".height {\n  border-style: solid;\n  display: inline-block;\n 
 
 /***/ }),
 
-/***/ "./src/components/activity/activity.component.ts":
-/*!*******************************************************!*\
-  !*** ./src/components/activity/activity.component.ts ***!
-  \*******************************************************/
+/***/ "./src/learning-agenda/components/activity/activity.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/learning-agenda/components/activity/activity.component.ts ***!
+  \***********************************************************************/
 /*! exports provided: ActivityComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -816,8 +794,8 @@ var ActivityComponent = /** @class */ (function () {
     ActivityComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-activity',
-            template: __webpack_require__(/*! ./activity.component.html */ "./src/components/activity/activity.component.html"),
-            styles: [__webpack_require__(/*! ./activity.component.scss */ "./src/components/activity/activity.component.scss")]
+            template: __webpack_require__(/*! ./activity.component.html */ "./src/learning-agenda/components/activity/activity.component.html"),
+            styles: [__webpack_require__(/*! ./activity.component.scss */ "./src/learning-agenda/components/activity/activity.component.scss")]
         }),
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], angularfire2_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"]])
     ], ActivityComponent);
@@ -828,10 +806,10 @@ var ActivityComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/build/build.component.html":
-/*!***************************************************!*\
-  !*** ./src/components/build/build.component.html ***!
-  \***************************************************/
+/***/ "./src/learning-agenda/components/build/build.component.html":
+/*!*******************************************************************!*\
+  !*** ./src/learning-agenda/components/build/build.component.html ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -839,10 +817,10 @@ module.exports = "<div class=\"container-fluid\" style=\"font-family: Arial\">\n
 
 /***/ }),
 
-/***/ "./src/components/build/build.component.scss":
-/*!***************************************************!*\
-  !*** ./src/components/build/build.component.scss ***!
-  \***************************************************/
+/***/ "./src/learning-agenda/components/build/build.component.scss":
+/*!*******************************************************************!*\
+  !*** ./src/learning-agenda/components/build/build.component.scss ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -850,10 +828,10 @@ module.exports = ".my-container {\n  height: 10%;\n  width: 100%;\n  border-widt
 
 /***/ }),
 
-/***/ "./src/components/build/build.component.ts":
-/*!*************************************************!*\
-  !*** ./src/components/build/build.component.ts ***!
-  \*************************************************/
+/***/ "./src/learning-agenda/components/build/build.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/learning-agenda/components/build/build.component.ts ***!
+  \*****************************************************************/
 /*! exports provided: BuildComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -921,8 +899,8 @@ var BuildComponent = /** @class */ (function () {
     BuildComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-build',
-            template: __webpack_require__(/*! ./build.component.html */ "./src/components/build/build.component.html"),
-            styles: [__webpack_require__(/*! ./build.component.scss */ "./src/components/build/build.component.scss")],
+            template: __webpack_require__(/*! ./build.component.html */ "./src/learning-agenda/components/build/build.component.html"),
+            styles: [__webpack_require__(/*! ./build.component.scss */ "./src/learning-agenda/components/build/build.component.scss")],
             providers: [{ provide: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbDateAdapter"], useClass: _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbDateNativeAdapter"] }]
         }),
         __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbCalendar"]])
@@ -934,10 +912,10 @@ var BuildComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/calendar/calendar.component.html":
-/*!*********************************************************!*\
-  !*** ./src/components/calendar/calendar.component.html ***!
-  \*********************************************************/
+/***/ "./src/learning-agenda/components/calendar/calendar.component.html":
+/*!*************************************************************************!*\
+  !*** ./src/learning-agenda/components/calendar/calendar.component.html ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -945,10 +923,10 @@ module.exports = "<div style=\"margin-top:2%; overflow:scroll\">\n  <ngb-datepic
 
 /***/ }),
 
-/***/ "./src/components/calendar/calendar.component.scss":
-/*!*********************************************************!*\
-  !*** ./src/components/calendar/calendar.component.scss ***!
-  \*********************************************************/
+/***/ "./src/learning-agenda/components/calendar/calendar.component.scss":
+/*!*************************************************************************!*\
+  !*** ./src/learning-agenda/components/calendar/calendar.component.scss ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -956,10 +934,10 @@ module.exports = ".my-container {\n  height: 10%;\n  width: 100%;\n  border-widt
 
 /***/ }),
 
-/***/ "./src/components/calendar/calendar.component.ts":
-/*!*******************************************************!*\
-  !*** ./src/components/calendar/calendar.component.ts ***!
-  \*******************************************************/
+/***/ "./src/learning-agenda/components/calendar/calendar.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/learning-agenda/components/calendar/calendar.component.ts ***!
+  \***********************************************************************/
 /*! exports provided: CalendarComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1017,8 +995,8 @@ var CalendarComponent = /** @class */ (function () {
     CalendarComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-calendar',
-            template: __webpack_require__(/*! ./calendar.component.html */ "./src/components/calendar/calendar.component.html"),
-            styles: [__webpack_require__(/*! ./calendar.component.scss */ "./src/components/calendar/calendar.component.scss")]
+            template: __webpack_require__(/*! ./calendar.component.html */ "./src/learning-agenda/components/calendar/calendar.component.html"),
+            styles: [__webpack_require__(/*! ./calendar.component.scss */ "./src/learning-agenda/components/calendar/calendar.component.scss")]
         }),
         __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbCalendar"]])
     ], CalendarComponent);
@@ -1029,10 +1007,10 @@ var CalendarComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/card/card.component.html":
-/*!*************************************************!*\
-  !*** ./src/components/card/card.component.html ***!
-  \*************************************************/
+/***/ "./src/learning-agenda/components/card/card.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/learning-agenda/components/card/card.component.html ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1040,10 +1018,10 @@ module.exports = "\n    <div class=\"card-container\" (click)=\"navigateToDesign
 
 /***/ }),
 
-/***/ "./src/components/card/card.component.scss":
-/*!*************************************************!*\
-  !*** ./src/components/card/card.component.scss ***!
-  \*************************************************/
+/***/ "./src/learning-agenda/components/card/card.component.scss":
+/*!*****************************************************************!*\
+  !*** ./src/learning-agenda/components/card/card.component.scss ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1051,10 +1029,10 @@ module.exports = ".card-container {\n  height: 100%;\n  width: 100%;\n  border-w
 
 /***/ }),
 
-/***/ "./src/components/card/card.component.ts":
-/*!***********************************************!*\
-  !*** ./src/components/card/card.component.ts ***!
-  \***********************************************/
+/***/ "./src/learning-agenda/components/card/card.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/learning-agenda/components/card/card.component.ts ***!
+  \***************************************************************/
 /*! exports provided: CardComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1065,8 +1043,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var _models_activity__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../models/activity */ "./src/models/activity.ts");
-/* harmony import */ var _models_activityBrief__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../models/activityBrief */ "./src/models/activityBrief.ts");
+/* harmony import */ var _models_activity__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../models/activity */ "./src/learning-agenda/models/activity.ts");
+/* harmony import */ var _models_activityBrief__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../models/activityBrief */ "./src/learning-agenda/models/activityBrief.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1132,8 +1110,8 @@ var CardComponent = /** @class */ (function () {
     CardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-card',
-            template: __webpack_require__(/*! ./card.component.html */ "./src/components/card/card.component.html"),
-            styles: [__webpack_require__(/*! ./card.component.scss */ "./src/components/card/card.component.scss")]
+            template: __webpack_require__(/*! ./card.component.html */ "./src/learning-agenda/components/card/card.component.html"),
+            styles: [__webpack_require__(/*! ./card.component.scss */ "./src/learning-agenda/components/card/card.component.scss")]
         }),
         __metadata("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
@@ -1145,10 +1123,10 @@ var CardComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/confirm-sticker/confirm-sticker.component.html":
-/*!***********************************************************************!*\
-  !*** ./src/components/confirm-sticker/confirm-sticker.component.html ***!
-  \***********************************************************************/
+/***/ "./src/learning-agenda/components/confirm-sticker/confirm-sticker.component.html":
+/*!***************************************************************************************!*\
+  !*** ./src/learning-agenda/components/confirm-sticker/confirm-sticker.component.html ***!
+  \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1156,10 +1134,10 @@ module.exports = "\n<div style=\"background-color:black; width:25%; height:80px;
 
 /***/ }),
 
-/***/ "./src/components/confirm-sticker/confirm-sticker.component.scss":
-/*!***********************************************************************!*\
-  !*** ./src/components/confirm-sticker/confirm-sticker.component.scss ***!
-  \***********************************************************************/
+/***/ "./src/learning-agenda/components/confirm-sticker/confirm-sticker.component.scss":
+/*!***************************************************************************************!*\
+  !*** ./src/learning-agenda/components/confirm-sticker/confirm-sticker.component.scss ***!
+  \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1167,10 +1145,10 @@ module.exports = ""
 
 /***/ }),
 
-/***/ "./src/components/confirm-sticker/confirm-sticker.component.ts":
-/*!*********************************************************************!*\
-  !*** ./src/components/confirm-sticker/confirm-sticker.component.ts ***!
-  \*********************************************************************/
+/***/ "./src/learning-agenda/components/confirm-sticker/confirm-sticker.component.ts":
+/*!*************************************************************************************!*\
+  !*** ./src/learning-agenda/components/confirm-sticker/confirm-sticker.component.ts ***!
+  \*************************************************************************************/
 /*! exports provided: ConfirmStickerComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1196,8 +1174,8 @@ var ConfirmStickerComponent = /** @class */ (function () {
     ConfirmStickerComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-confirm-sticker',
-            template: __webpack_require__(/*! ./confirm-sticker.component.html */ "./src/components/confirm-sticker/confirm-sticker.component.html"),
-            styles: [__webpack_require__(/*! ./confirm-sticker.component.scss */ "./src/components/confirm-sticker/confirm-sticker.component.scss")]
+            template: __webpack_require__(/*! ./confirm-sticker.component.html */ "./src/learning-agenda/components/confirm-sticker/confirm-sticker.component.html"),
+            styles: [__webpack_require__(/*! ./confirm-sticker.component.scss */ "./src/learning-agenda/components/confirm-sticker/confirm-sticker.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], ConfirmStickerComponent);
@@ -1208,10 +1186,10 @@ var ConfirmStickerComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/confirm/confirm.component.html":
-/*!*******************************************************!*\
-  !*** ./src/components/confirm/confirm.component.html ***!
-  \*******************************************************/
+/***/ "./src/learning-agenda/components/confirm/confirm.component.html":
+/*!***********************************************************************!*\
+  !*** ./src/learning-agenda/components/confirm/confirm.component.html ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1219,10 +1197,10 @@ module.exports = "<div class=\"jumbotron main\">\n <div class=\"outer-box\">\n<d
 
 /***/ }),
 
-/***/ "./src/components/confirm/confirm.component.scss":
-/*!*******************************************************!*\
-  !*** ./src/components/confirm/confirm.component.scss ***!
-  \*******************************************************/
+/***/ "./src/learning-agenda/components/confirm/confirm.component.scss":
+/*!***********************************************************************!*\
+  !*** ./src/learning-agenda/components/confirm/confirm.component.scss ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1230,10 +1208,10 @@ module.exports = ".main {\n  padding: 3%; }\n\n.outer-box {\n  background-color:
 
 /***/ }),
 
-/***/ "./src/components/confirm/confirm.component.ts":
-/*!*****************************************************!*\
-  !*** ./src/components/confirm/confirm.component.ts ***!
-  \*****************************************************/
+/***/ "./src/learning-agenda/components/confirm/confirm.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/learning-agenda/components/confirm/confirm.component.ts ***!
+  \*********************************************************************/
 /*! exports provided: ConfirmComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1288,8 +1266,8 @@ var ConfirmComponent = /** @class */ (function () {
     ConfirmComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-confirm',
-            template: __webpack_require__(/*! ./confirm.component.html */ "./src/components/confirm/confirm.component.html"),
-            styles: [__webpack_require__(/*! ./confirm.component.scss */ "./src/components/confirm/confirm.component.scss")]
+            template: __webpack_require__(/*! ./confirm.component.html */ "./src/learning-agenda/components/confirm/confirm.component.html"),
+            styles: [__webpack_require__(/*! ./confirm.component.scss */ "./src/learning-agenda/components/confirm/confirm.component.scss")]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]])
@@ -1301,10 +1279,10 @@ var ConfirmComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/details/details.component.html":
-/*!*******************************************************!*\
-  !*** ./src/components/details/details.component.html ***!
-  \*******************************************************/
+/***/ "./src/learning-agenda/components/details/details.component.html":
+/*!***********************************************************************!*\
+  !*** ./src/learning-agenda/components/details/details.component.html ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1312,10 +1290,10 @@ module.exports = "<div *ngIf=\"modal\" class=\"modal\">\n\n    <!-- Modal conten
 
 /***/ }),
 
-/***/ "./src/components/details/details.component.scss":
-/*!*******************************************************!*\
-  !*** ./src/components/details/details.component.scss ***!
-  \*******************************************************/
+/***/ "./src/learning-agenda/components/details/details.component.scss":
+/*!***********************************************************************!*\
+  !*** ./src/learning-agenda/components/details/details.component.scss ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1323,10 +1301,10 @@ module.exports = ".modal {\n  display: block;\n  /* Hidden by default */\n  posi
 
 /***/ }),
 
-/***/ "./src/components/details/details.component.ts":
-/*!*****************************************************!*\
-  !*** ./src/components/details/details.component.ts ***!
-  \*****************************************************/
+/***/ "./src/learning-agenda/components/details/details.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/learning-agenda/components/details/details.component.ts ***!
+  \*********************************************************************/
 /*! exports provided: DetailsComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1382,8 +1360,8 @@ var DetailsComponent = /** @class */ (function () {
     DetailsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-details',
-            template: __webpack_require__(/*! ./details.component.html */ "./src/components/details/details.component.html"),
-            styles: [__webpack_require__(/*! ./details.component.scss */ "./src/components/details/details.component.scss")]
+            template: __webpack_require__(/*! ./details.component.html */ "./src/learning-agenda/components/details/details.component.html"),
+            styles: [__webpack_require__(/*! ./details.component.scss */ "./src/learning-agenda/components/details/details.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], DetailsComponent);
@@ -1394,10 +1372,10 @@ var DetailsComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/empty-activity-display/empty-activity-display.component.html":
-/*!*************************************************************************************!*\
-  !*** ./src/components/empty-activity-display/empty-activity-display.component.html ***!
-  \*************************************************************************************/
+/***/ "./src/learning-agenda/components/empty-activity-display/empty-activity-display.component.html":
+/*!*****************************************************************************************************!*\
+  !*** ./src/learning-agenda/components/empty-activity-display/empty-activity-display.component.html ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1405,10 +1383,10 @@ module.exports = "\n    <div class=\"flex\">\n      <div class=\"time\">\n      
 
 /***/ }),
 
-/***/ "./src/components/empty-activity-display/empty-activity-display.component.scss":
-/*!*************************************************************************************!*\
-  !*** ./src/components/empty-activity-display/empty-activity-display.component.scss ***!
-  \*************************************************************************************/
+/***/ "./src/learning-agenda/components/empty-activity-display/empty-activity-display.component.scss":
+/*!*****************************************************************************************************!*\
+  !*** ./src/learning-agenda/components/empty-activity-display/empty-activity-display.component.scss ***!
+  \*****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1416,10 +1394,10 @@ module.exports = ".flex {\n  display: flex;\n  flex-direction: row;\n  justify-c
 
 /***/ }),
 
-/***/ "./src/components/empty-activity-display/empty-activity-display.component.ts":
-/*!***********************************************************************************!*\
-  !*** ./src/components/empty-activity-display/empty-activity-display.component.ts ***!
-  \***********************************************************************************/
+/***/ "./src/learning-agenda/components/empty-activity-display/empty-activity-display.component.ts":
+/*!***************************************************************************************************!*\
+  !*** ./src/learning-agenda/components/empty-activity-display/empty-activity-display.component.ts ***!
+  \***************************************************************************************************/
 /*! exports provided: EmptyActivityDisplayComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1453,8 +1431,8 @@ var EmptyActivityDisplayComponent = /** @class */ (function () {
     EmptyActivityDisplayComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-empty-activity-display',
-            template: __webpack_require__(/*! ./empty-activity-display.component.html */ "./src/components/empty-activity-display/empty-activity-display.component.html"),
-            styles: [__webpack_require__(/*! ./empty-activity-display.component.scss */ "./src/components/empty-activity-display/empty-activity-display.component.scss")]
+            template: __webpack_require__(/*! ./empty-activity-display.component.html */ "./src/learning-agenda/components/empty-activity-display/empty-activity-display.component.html"),
+            styles: [__webpack_require__(/*! ./empty-activity-display.component.scss */ "./src/learning-agenda/components/empty-activity-display/empty-activity-display.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], EmptyActivityDisplayComponent);
@@ -1465,10 +1443,10 @@ var EmptyActivityDisplayComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/empty-card/empty-card.component.html":
-/*!*************************************************************!*\
-  !*** ./src/components/empty-card/empty-card.component.html ***!
-  \*************************************************************/
+/***/ "./src/learning-agenda/components/empty-card/empty-card.component.html":
+/*!*****************************************************************************!*\
+  !*** ./src/learning-agenda/components/empty-card/empty-card.component.html ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1476,10 +1454,10 @@ module.exports = "<div class=\"jumbotron card-container\">\n  <div style=\"margi
 
 /***/ }),
 
-/***/ "./src/components/empty-card/empty-card.component.scss":
-/*!*************************************************************!*\
-  !*** ./src/components/empty-card/empty-card.component.scss ***!
-  \*************************************************************/
+/***/ "./src/learning-agenda/components/empty-card/empty-card.component.scss":
+/*!*****************************************************************************!*\
+  !*** ./src/learning-agenda/components/empty-card/empty-card.component.scss ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1487,10 +1465,10 @@ module.exports = ".card-container {\n  height: 100%;\n  width: 100%;\n  border-c
 
 /***/ }),
 
-/***/ "./src/components/empty-card/empty-card.component.ts":
-/*!***********************************************************!*\
-  !*** ./src/components/empty-card/empty-card.component.ts ***!
-  \***********************************************************/
+/***/ "./src/learning-agenda/components/empty-card/empty-card.component.ts":
+/*!***************************************************************************!*\
+  !*** ./src/learning-agenda/components/empty-card/empty-card.component.ts ***!
+  \***************************************************************************/
 /*! exports provided: EmptyCardComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1532,8 +1510,8 @@ var EmptyCardComponent = /** @class */ (function () {
     EmptyCardComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-empty-card',
-            template: __webpack_require__(/*! ./empty-card.component.html */ "./src/components/empty-card/empty-card.component.html"),
-            styles: [__webpack_require__(/*! ./empty-card.component.scss */ "./src/components/empty-card/empty-card.component.scss")]
+            template: __webpack_require__(/*! ./empty-card.component.html */ "./src/learning-agenda/components/empty-card/empty-card.component.html"),
+            styles: [__webpack_require__(/*! ./empty-card.component.scss */ "./src/learning-agenda/components/empty-card/empty-card.component.scss")]
         }),
         __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
@@ -1545,10 +1523,10 @@ var EmptyCardComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/header/header.component.html":
-/*!*****************************************************!*\
-  !*** ./src/components/header/header.component.html ***!
-  \*****************************************************/
+/***/ "./src/learning-agenda/components/header/header.component.html":
+/*!*********************************************************************!*\
+  !*** ./src/learning-agenda/components/header/header.component.html ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1556,10 +1534,10 @@ module.exports = "<div class=\"img-container\" >\n    <img class=\"logo\"  src=\
 
 /***/ }),
 
-/***/ "./src/components/header/header.component.scss":
-/*!*****************************************************!*\
-  !*** ./src/components/header/header.component.scss ***!
-  \*****************************************************/
+/***/ "./src/learning-agenda/components/header/header.component.scss":
+/*!*********************************************************************!*\
+  !*** ./src/learning-agenda/components/header/header.component.scss ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1567,10 +1545,10 @@ module.exports = ".progress-nav {\n  font-family: \"futura-pt\", \"Helvetica Neu
 
 /***/ }),
 
-/***/ "./src/components/header/header.component.ts":
-/*!***************************************************!*\
-  !*** ./src/components/header/header.component.ts ***!
-  \***************************************************/
+/***/ "./src/learning-agenda/components/header/header.component.ts":
+/*!*******************************************************************!*\
+  !*** ./src/learning-agenda/components/header/header.component.ts ***!
+  \*******************************************************************/
 /*! exports provided: HeaderComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1641,8 +1619,8 @@ var HeaderComponent = /** @class */ (function () {
     HeaderComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-header',
-            template: __webpack_require__(/*! ./header.component.html */ "./src/components/header/header.component.html"),
-            styles: [__webpack_require__(/*! ./header.component.scss */ "./src/components/header/header.component.scss")]
+            template: __webpack_require__(/*! ./header.component.html */ "./src/learning-agenda/components/header/header.component.html"),
+            styles: [__webpack_require__(/*! ./header.component.scss */ "./src/learning-agenda/components/header/header.component.scss")]
         }),
         __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]])
@@ -1654,10 +1632,10 @@ var HeaderComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/main-footer/main-footer.component.html":
-/*!***************************************************************!*\
-  !*** ./src/components/main-footer/main-footer.component.html ***!
-  \***************************************************************/
+/***/ "./src/learning-agenda/components/main-footer/main-footer.component.html":
+/*!*******************************************************************************!*\
+  !*** ./src/learning-agenda/components/main-footer/main-footer.component.html ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1665,10 +1643,10 @@ module.exports = "\n  \n  <footer id=\"main-footer\" class=\"en\">\n    <div cla
 
 /***/ }),
 
-/***/ "./src/components/main-footer/main-footer.component.scss":
-/*!***************************************************************!*\
-  !*** ./src/components/main-footer/main-footer.component.scss ***!
-  \***************************************************************/
+/***/ "./src/learning-agenda/components/main-footer/main-footer.component.scss":
+/*!*******************************************************************************!*\
+  !*** ./src/learning-agenda/components/main-footer/main-footer.component.scss ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1676,10 +1654,10 @@ module.exports = ""
 
 /***/ }),
 
-/***/ "./src/components/main-footer/main-footer.component.ts":
-/*!*************************************************************!*\
-  !*** ./src/components/main-footer/main-footer.component.ts ***!
-  \*************************************************************/
+/***/ "./src/learning-agenda/components/main-footer/main-footer.component.ts":
+/*!*****************************************************************************!*\
+  !*** ./src/learning-agenda/components/main-footer/main-footer.component.ts ***!
+  \*****************************************************************************/
 /*! exports provided: MainFooterComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1705,8 +1683,8 @@ var MainFooterComponent = /** @class */ (function () {
     MainFooterComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-main-footer',
-            template: __webpack_require__(/*! ./main-footer.component.html */ "./src/components/main-footer/main-footer.component.html"),
-            styles: [__webpack_require__(/*! ./main-footer.component.scss */ "./src/components/main-footer/main-footer.component.scss")]
+            template: __webpack_require__(/*! ./main-footer.component.html */ "./src/learning-agenda/components/main-footer/main-footer.component.html"),
+            styles: [__webpack_require__(/*! ./main-footer.component.scss */ "./src/learning-agenda/components/main-footer/main-footer.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], MainFooterComponent);
@@ -1717,21 +1695,21 @@ var MainFooterComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/main-header/main-header.component.html":
-/*!***************************************************************!*\
-  !*** ./src/components/main-header/main-header.component.html ***!
-  \***************************************************************/
+/***/ "./src/learning-agenda/components/main-header/main-header.component.html":
+/*!*******************************************************************************!*\
+  !*** ./src/learning-agenda/components/main-header/main-header.component.html ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<header id=\"main-header\"class=\"gault\">\n\t\n\t<div class=\"header\">\n\t\t<ul class=\"hwm-bypass\">\n\t<li><a id=\"bypass-main\" href=\"#main-content\">Skip to main content</a></li>\n\t<li><a id=\"bypass-footer\" href=\"#secondary-footer\">Skip to main navigation</a></li>\n</ul>\t\t\n<a href=\"https://alpha.historymuseum.ca\" class=\"main-logo main-logo-en\" title=\"Go to the Home page\">\n\t<img src=\"https://alpha.historymuseum.ca/wp-content/themes/hwm-2015/_images/chm-main-logo.svg\" width=\"300\" height=\"44\" alt=\"Logo of the Canadian Museum of History\" />\n</a><!--End .main-logo-->\n\t\t\n\t\t<a href=\"#menu-handle\" id=\"main-menu-handle\" title=\"Main Menu\">\n\t\t\t<span class=\"text-val\">Main Menu</span>\n\t\t\t<span class=\"handle-bars-icon\">\n\t\t\t\t<b class=\"bar\"></b>\n\t\t\t\t<b class=\"bar\"></b>\n\t\t\t\t<b class=\"bar\"></b>\n\t\t\t</span>\n\t\t</a><!--End #main-menu-handle-->\n\t</div><!--End .header-->\n\t\n\t<nav id=\"main-menu\">\n\t\t<div class=\"form-wrapper\">\n\t\t\t<form>\n\t\t\t\t<input placeholder=\"Search ...\" type=\"text\" />\n\t\t\t\t<div class=\"button-wrapper\">\n\t\t\t\t\t<button>Search</button>\n\t\t\t\t</div><!--End .button-wrapper-->\n\t\t\t</form>\n\t\t</div><!--End .form-wrapper-->\n\t\t\n\t\t<ul>\n\n<span class=\"search-display\">\n\t<form role=\"search\" method=\"get\" class=\"search-form\" action=\"/search/\">\n    \t<label for=\"s\">Search</label>\n\t\t<input class=\"search-input\" type=\"search\" value=\"\" \n\t\tname=\"q\" id=\"s\" placeholder=\"Search...\" autocomplete=\"off\" />\n    \t<div class=\"form-button-wrapper\">\n\t        <svg class=\"search-icon\"><use xlink:href=\"#magnifying-glass\" /></svg>\n\t        <button type=\"submit\">Search</button>\n        </div>\n    </form>\n</span>\n\t<li id=\"menu-item-210\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-210\"><a href=\"https://alpha.historymuseum.ca/visit/\">Visit</a></li>\n<li id=\"menu-item-193\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-193\"><a href=\"https://alpha.historymuseum.ca/exhibitions/\">Exhibitions</a></li>\n<li id=\"menu-item-194\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-194\"><a href=\"https://alpha.historymuseum.ca/learn/\">Learn</a></li>\n<li id=\"menu-item-196\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-196\"><a href=\"https://alpha.historymuseum.ca/shop/\">Shop</a></li>\n<li id=\"menu-item-197\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-197\"><a href=\"https://alpha.historymuseum.ca/support/\">Support</a></li>\n<li id=\"menu-item-195\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-195\"><a href=\"https://alpha.historymuseum.ca/about/\">About</a></li>\n\t<li>\n\t\t<a class=\"icon magnifying-glass\" href=\"#search\" title=\"Search\">\n\t\t\t<svg class=\"icon magnifying-glass\"><use xlink:href=\"#magnifying-glass\" /></svg>Search\n\t\t</a>\n\t</li>\n\t<li><a id=\"language-toggle\" href=\"\" title=\"Français\">Français</a></li>\n</ul>\t</nav><!--End #main-menu-->\n\n</header>"
+module.exports = "<header id=\"main-header\"class=\"gault\">\n\t\n\t<div class=\"header\">\n\t\t<ul class=\"hwm-bypass\">\n\t<li><a id=\"bypass-main\" href=\"#main-content\">Skip to main content</a></li>\n\t<li><a id=\"bypass-footer\" href=\"#secondary-footer\">Skip to main navigation</a></li>\n</ul>\t\t\n<a href=\"https://alpha.historymuseum.ca\" class=\"main-logo main-logo-en\" title=\"Go to the Home page\">\n\t<img src=\"https://alpha.historymuseum.ca/wp-content/themes/hwm-2015/_images/chm-main-logo.svg\" width=\"300\" height=\"44\" alt=\"Logo of the Canadian Museum of History\" />\n</a><!--End .main-logo-->\n\t\t\n\t\t<a href=\"#menu-handle\" id=\"main-menu-handle\" title=\"Main Menu\">\n\t\t\t<span class=\"text-val\">Main Menu</span>\n\t\t\t<span class=\"handle-bars-icon\">\n\t\t\t\t<b class=\"bar\"></b>\n\t\t\t\t<b class=\"bar\"></b>\n\t\t\t\t<b class=\"bar\"></b>\n\t\t\t</span>\n\t\t</a><!--End #main-menu-handle-->\n\t</div><!--End .header-->\n\t\n\t<nav id=\"main-menu\">\n\t\t<div class=\"form-wrapper\">\n\t\t\t<form>\n\t\t\t\t<input placeholder=\"Search ...\" type=\"text\" />\n\t\t\t\t<div class=\"button-wrapper\">\n\t\t\t\t\t<button>Search</button>\n\t\t\t\t</div><!--End .button-wrapper-->\n\t\t\t</form>\n\t\t</div><!--End .form-wrapper-->\n\t\t\n\t\t<ul>\n\n<span class=\"search-display\">\n\t<form role=\"search\" method=\"get\" class=\"search-form\" action=\"/search/\">\n    \t<label for=\"s\">Search</label>\n\t\t<input class=\"search-input\" type=\"search\" value=\"\" \n\t\tname=\"q\" id=\"s\" placeholder=\"Search...\" autocomplete=\"off\" />\n    \t<div class=\"form-button-wrapper\">\n\t        <svg class=\"search-icon\"><use xlink:href=\"#magnifying-glass\" /></svg>\n\t        <button type=\"submit\">Search</button>\n        </div>\n    </form>\n</span>\n\t<li id=\"menu-item-210\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-210\"><a href=\"https://alpha.historymuseum.ca/visit/\">Visit</a></li>\n<li id=\"menu-item-193\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-193\"><a href=\"https://alpha.historymuseum.ca/exhibitions/\">Exhibitions</a></li>\n<li id=\"menu-item-194\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-194\"><a href=\"https://alpha.historymuseum.ca/learn/\">Learn</a></li>\n<li id=\"menu-item-196\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-196\"><a href=\"https://alpha.historymuseum.ca/shop/\">Shop</a></li>\n<li id=\"menu-item-197\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-197\"><a href=\"https://alpha.historymuseum.ca/support/\">Support</a></li>\n<li id=\"menu-item-195\" class=\"menu-item menu-item-type-post_type menu-item-object-page menu-item-195\"><a href=\"https://alpha.historymuseum.ca/about/\">About</a></li>\n\t<li>\n\t\t<a class=\"icon magnifying-glass\" href=\"#search\" title=\"Search\">\n\t\t\t<svg class=\"icon magnifying-glass\"><use xlink:href=\"#magnifying-glass\" /></svg>Search\n\t\t</a>\n\t</li>\n\t<li><a id=\"language-toggle\" href=\"\" title=\"Français\">Français</a></li>\n</ul>\t</nav><!--End #main-menu-->\n\n</header><!--End #main-header-->"
 
 /***/ }),
 
-/***/ "./src/components/main-header/main-header.component.scss":
-/*!***************************************************************!*\
-  !*** ./src/components/main-header/main-header.component.scss ***!
-  \***************************************************************/
+/***/ "./src/learning-agenda/components/main-header/main-header.component.scss":
+/*!*******************************************************************************!*\
+  !*** ./src/learning-agenda/components/main-header/main-header.component.scss ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1739,10 +1717,10 @@ module.exports = "#main-header {\n  box-sizing: border-box;\n  background: none;
 
 /***/ }),
 
-/***/ "./src/components/main-header/main-header.component.ts":
-/*!*************************************************************!*\
-  !*** ./src/components/main-header/main-header.component.ts ***!
-  \*************************************************************/
+/***/ "./src/learning-agenda/components/main-header/main-header.component.ts":
+/*!*****************************************************************************!*\
+  !*** ./src/learning-agenda/components/main-header/main-header.component.ts ***!
+  \*****************************************************************************/
 /*! exports provided: MainHeaderComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1768,8 +1746,8 @@ var MainHeaderComponent = /** @class */ (function () {
     MainHeaderComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-main-header',
-            template: __webpack_require__(/*! ./main-header.component.html */ "./src/components/main-header/main-header.component.html"),
-            styles: [__webpack_require__(/*! ./main-header.component.scss */ "./src/components/main-header/main-header.component.scss")]
+            template: __webpack_require__(/*! ./main-header.component.html */ "./src/learning-agenda/components/main-header/main-header.component.html"),
+            styles: [__webpack_require__(/*! ./main-header.component.scss */ "./src/learning-agenda/components/main-header/main-header.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], MainHeaderComponent);
@@ -1780,10 +1758,10 @@ var MainHeaderComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/sticky-footer/sticky-footer.component.html":
-/*!*******************************************************************!*\
-  !*** ./src/components/sticky-footer/sticky-footer.component.html ***!
-  \*******************************************************************/
+/***/ "./src/learning-agenda/components/sticky-footer/sticky-footer.component.html":
+/*!***********************************************************************************!*\
+  !*** ./src/learning-agenda/components/sticky-footer/sticky-footer.component.html ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1791,10 +1769,10 @@ module.exports = "<div class=\"stick\">\n<div>\n<div style=\"background-color:bl
 
 /***/ }),
 
-/***/ "./src/components/sticky-footer/sticky-footer.component.scss":
-/*!*******************************************************************!*\
-  !*** ./src/components/sticky-footer/sticky-footer.component.scss ***!
-  \*******************************************************************/
+/***/ "./src/learning-agenda/components/sticky-footer/sticky-footer.component.scss":
+/*!***********************************************************************************!*\
+  !*** ./src/learning-agenda/components/sticky-footer/sticky-footer.component.scss ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1802,10 +1780,10 @@ module.exports = ".stick {\n  position: fixed;\n  bottom: 0;\n  width: 100%; }\n
 
 /***/ }),
 
-/***/ "./src/components/sticky-footer/sticky-footer.component.ts":
-/*!*****************************************************************!*\
-  !*** ./src/components/sticky-footer/sticky-footer.component.ts ***!
-  \*****************************************************************/
+/***/ "./src/learning-agenda/components/sticky-footer/sticky-footer.component.ts":
+/*!*********************************************************************************!*\
+  !*** ./src/learning-agenda/components/sticky-footer/sticky-footer.component.ts ***!
+  \*********************************************************************************/
 /*! exports provided: StickyFooterComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1850,8 +1828,8 @@ var StickyFooterComponent = /** @class */ (function () {
     StickyFooterComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-sticky-footer',
-            template: __webpack_require__(/*! ./sticky-footer.component.html */ "./src/components/sticky-footer/sticky-footer.component.html"),
-            styles: [__webpack_require__(/*! ./sticky-footer.component.scss */ "./src/components/sticky-footer/sticky-footer.component.scss")]
+            template: __webpack_require__(/*! ./sticky-footer.component.html */ "./src/learning-agenda/components/sticky-footer/sticky-footer.component.html"),
+            styles: [__webpack_require__(/*! ./sticky-footer.component.scss */ "./src/learning-agenda/components/sticky-footer/sticky-footer.component.scss")]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]])
@@ -1863,10 +1841,10 @@ var StickyFooterComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/submit-form/submit-form.component.html":
-/*!***************************************************************!*\
-  !*** ./src/components/submit-form/submit-form.component.html ***!
-  \***************************************************************/
+/***/ "./src/learning-agenda/components/submit-form/submit-form.component.html":
+/*!*******************************************************************************!*\
+  !*** ./src/learning-agenda/components/submit-form/submit-form.component.html ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1874,10 +1852,10 @@ module.exports = "<div class=\"jumbotron container-fluid\" style=\"padding:5%\">
 
 /***/ }),
 
-/***/ "./src/components/submit-form/submit-form.component.scss":
-/*!***************************************************************!*\
-  !*** ./src/components/submit-form/submit-form.component.scss ***!
-  \***************************************************************/
+/***/ "./src/learning-agenda/components/submit-form/submit-form.component.scss":
+/*!*******************************************************************************!*\
+  !*** ./src/learning-agenda/components/submit-form/submit-form.component.scss ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1885,10 +1863,10 @@ module.exports = "#footer {\n  border-top-color: #D3D3D3;\n  border-top-style: s
 
 /***/ }),
 
-/***/ "./src/components/submit-form/submit-form.component.ts":
-/*!*************************************************************!*\
-  !*** ./src/components/submit-form/submit-form.component.ts ***!
-  \*************************************************************/
+/***/ "./src/learning-agenda/components/submit-form/submit-form.component.ts":
+/*!*****************************************************************************!*\
+  !*** ./src/learning-agenda/components/submit-form/submit-form.component.ts ***!
+  \*****************************************************************************/
 /*! exports provided: SubmitFormComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1914,8 +1892,8 @@ var SubmitFormComponent = /** @class */ (function () {
     SubmitFormComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-submit-form',
-            template: __webpack_require__(/*! ./submit-form.component.html */ "./src/components/submit-form/submit-form.component.html"),
-            styles: [__webpack_require__(/*! ./submit-form.component.scss */ "./src/components/submit-form/submit-form.component.scss")]
+            template: __webpack_require__(/*! ./submit-form.component.html */ "./src/learning-agenda/components/submit-form/submit-form.component.html"),
+            styles: [__webpack_require__(/*! ./submit-form.component.scss */ "./src/learning-agenda/components/submit-form/submit-form.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], SubmitFormComponent);
@@ -1926,10 +1904,10 @@ var SubmitFormComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/swap-box/swap-box.component.html":
-/*!*********************************************************!*\
-  !*** ./src/components/swap-box/swap-box.component.html ***!
-  \*********************************************************/
+/***/ "./src/learning-agenda/components/swap-box/swap-box.component.html":
+/*!*************************************************************************!*\
+  !*** ./src/learning-agenda/components/swap-box/swap-box.component.html ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1937,10 +1915,10 @@ module.exports = "\n<div *ngIf=\"!innerSwap && add\" class=\"activities\">\n  <d
 
 /***/ }),
 
-/***/ "./src/components/swap-box/swap-box.component.scss":
-/*!*********************************************************!*\
-  !*** ./src/components/swap-box/swap-box.component.scss ***!
-  \*********************************************************/
+/***/ "./src/learning-agenda/components/swap-box/swap-box.component.scss":
+/*!*************************************************************************!*\
+  !*** ./src/learning-agenda/components/swap-box/swap-box.component.scss ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1948,10 +1926,10 @@ module.exports = ".activities {\n  display: flex;\n  flex-direction: row;\n  jus
 
 /***/ }),
 
-/***/ "./src/components/swap-box/swap-box.component.ts":
-/*!*******************************************************!*\
-  !*** ./src/components/swap-box/swap-box.component.ts ***!
-  \*******************************************************/
+/***/ "./src/learning-agenda/components/swap-box/swap-box.component.ts":
+/*!***********************************************************************!*\
+  !*** ./src/learning-agenda/components/swap-box/swap-box.component.ts ***!
+  \***********************************************************************/
 /*! exports provided: SwapBoxComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2041,8 +2019,8 @@ var SwapBoxComponent = /** @class */ (function () {
     SwapBoxComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-swap-box',
-            template: __webpack_require__(/*! ./swap-box.component.html */ "./src/components/swap-box/swap-box.component.html"),
-            styles: [__webpack_require__(/*! ./swap-box.component.scss */ "./src/components/swap-box/swap-box.component.scss")]
+            template: __webpack_require__(/*! ./swap-box.component.html */ "./src/learning-agenda/components/swap-box/swap-box.component.html"),
+            styles: [__webpack_require__(/*! ./swap-box.component.scss */ "./src/learning-agenda/components/swap-box/swap-box.component.scss")]
         }),
         __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"]])
     ], SwapBoxComponent);
@@ -2053,10 +2031,10 @@ var SwapBoxComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/components/warning/warning.component.html":
-/*!*******************************************************!*\
-  !*** ./src/components/warning/warning.component.html ***!
-  \*******************************************************/
+/***/ "./src/learning-agenda/components/warning/warning.component.html":
+/*!***********************************************************************!*\
+  !*** ./src/learning-agenda/components/warning/warning.component.html ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2064,10 +2042,10 @@ module.exports = "\n<div class=\"container-fluid \">\n    <div style=\"font-weig
 
 /***/ }),
 
-/***/ "./src/components/warning/warning.component.scss":
-/*!*******************************************************!*\
-  !*** ./src/components/warning/warning.component.scss ***!
-  \*******************************************************/
+/***/ "./src/learning-agenda/components/warning/warning.component.scss":
+/*!***********************************************************************!*\
+  !*** ./src/learning-agenda/components/warning/warning.component.scss ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2075,10 +2053,10 @@ module.exports = ""
 
 /***/ }),
 
-/***/ "./src/components/warning/warning.component.ts":
-/*!*****************************************************!*\
-  !*** ./src/components/warning/warning.component.ts ***!
-  \*****************************************************/
+/***/ "./src/learning-agenda/components/warning/warning.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/learning-agenda/components/warning/warning.component.ts ***!
+  \*********************************************************************/
 /*! exports provided: WarningComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2104,49 +2082,14 @@ var WarningComponent = /** @class */ (function () {
     WarningComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-warning',
-            template: __webpack_require__(/*! ./warning.component.html */ "./src/components/warning/warning.component.html"),
-            styles: [__webpack_require__(/*! ./warning.component.scss */ "./src/components/warning/warning.component.scss")]
+            template: __webpack_require__(/*! ./warning.component.html */ "./src/learning-agenda/components/warning/warning.component.html"),
+            styles: [__webpack_require__(/*! ./warning.component.scss */ "./src/learning-agenda/components/warning/warning.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], WarningComponent);
     return WarningComponent;
 }());
 
-
-
-/***/ }),
-
-/***/ "./src/environments/environment.ts":
-/*!*****************************************!*\
-  !*** ./src/environments/environment.ts ***!
-  \*****************************************/
-/*! exports provided: environment */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
-var environment = {
-    production: false,
-    firebase: {
-        apiKey: "AIzaSyAqb1AZM_xWPycGFuWByknU7WPsTQ0auxk",
-        authDomain: "planning-tool-532b0.firebaseapp.com",
-        databaseURL: "https://planning-tool-532b0.firebaseio.com",
-        projectId: "planning-tool-532b0",
-        storageBucket: "planning-tool-532b0.appspot.com",
-        messagingSenderId: "429282485430"
-    }
-};
-/*
- * In development mode, to ignore zone related error stack frames such as
- * `zone.run`, `zoneDelegate.invokeTask` for easier debugging, you can
- * import the following file, but please comment it out in production mode
- * because it will have performance impact when throw error
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
 
 
 /***/ }),
@@ -2168,32 +2111,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var ngx_ellipsis__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-ellipsis */ "./node_modules/ngx-ellipsis/fesm5/ngx-ellipsis.js");
 /* harmony import */ var angular2_multiline_ellipsis__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angular2-multiline-ellipsis */ "./node_modules/angular2-multiline-ellipsis/esm5/angular2-multiline-ellipsis.js");
 /* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
-/* harmony import */ var _components_card_card_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/card/card.component */ "./src/components/card/card.component.ts");
-/* harmony import */ var _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/empty-card/empty-card.component */ "./src/components/empty-card/empty-card.component.ts");
-/* harmony import */ var _components_build_build_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/build/build.component */ "./src/components/build/build.component.ts");
-/* harmony import */ var _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/activity/activity.component */ "./src/components/activity/activity.component.ts");
-/* harmony import */ var _components_activity_card_activity_card_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/activity-card/activity-card.component */ "./src/components/activity-card/activity-card.component.ts");
-/* harmony import */ var _components_activity_display_activity_display_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/activity-display/activity-display.component */ "./src/components/activity-display/activity-display.component.ts");
-/* harmony import */ var _components_empty_activity_display_empty_activity_display_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/empty-activity-display/empty-activity-display.component */ "./src/components/empty-activity-display/empty-activity-display.component.ts");
-/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/header/header.component */ "./src/components/header/header.component.ts");
-/* harmony import */ var _components_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../components/confirm/confirm.component */ "./src/components/confirm/confirm.component.ts");
-/* harmony import */ var _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../components/sticky-footer/sticky-footer.component */ "./src/components/sticky-footer/sticky-footer.component.ts");
-/* harmony import */ var _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../components/confirm-sticker/confirm-sticker.component */ "./src/components/confirm-sticker/confirm-sticker.component.ts");
-/* harmony import */ var _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../components/warning/warning.component */ "./src/components/warning/warning.component.ts");
-/* harmony import */ var _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../components/calendar/calendar.component */ "./src/components/calendar/calendar.component.ts");
+/* harmony import */ var _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/empty-card/empty-card.component */ "./src/learning-agenda/components/empty-card/empty-card.component.ts");
+/* harmony import */ var _components_card_card_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/card/card.component */ "./src/learning-agenda/components/card/card.component.ts");
+/* harmony import */ var _components_build_build_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/build/build.component */ "./src/learning-agenda/components/build/build.component.ts");
+/* harmony import */ var _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/activity/activity.component */ "./src/learning-agenda/components/activity/activity.component.ts");
+/* harmony import */ var _components_activity_card_activity_card_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/activity-card/activity-card.component */ "./src/learning-agenda/components/activity-card/activity-card.component.ts");
+/* harmony import */ var _components_activity_display_activity_display_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/activity-display/activity-display.component */ "./src/learning-agenda/components/activity-display/activity-display.component.ts");
+/* harmony import */ var _components_empty_activity_display_empty_activity_display_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/empty-activity-display/empty-activity-display.component */ "./src/learning-agenda/components/empty-activity-display/empty-activity-display.component.ts");
+/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/header/header.component */ "./src/learning-agenda/components/header/header.component.ts");
+/* harmony import */ var _components_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/confirm/confirm.component */ "./src/learning-agenda/components/confirm/confirm.component.ts");
+/* harmony import */ var _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/sticky-footer/sticky-footer.component */ "./src/learning-agenda/components/sticky-footer/sticky-footer.component.ts");
+/* harmony import */ var _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/confirm-sticker/confirm-sticker.component */ "./src/learning-agenda/components/confirm-sticker/confirm-sticker.component.ts");
+/* harmony import */ var _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/warning/warning.component */ "./src/learning-agenda/components/warning/warning.component.ts");
+/* harmony import */ var _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/calendar/calendar.component */ "./src/learning-agenda/components/calendar/calendar.component.ts");
 /* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/fesm5/ngx-clipboard.js");
-/* harmony import */ var _components_details_details_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../components/details/details.component */ "./src/components/details/details.component.ts");
-/* harmony import */ var _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../components/main-header/main-header.component */ "./src/components/main-header/main-header.component.ts");
-/* harmony import */ var _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../components/main-footer/main-footer.component */ "./src/components/main-footer/main-footer.component.ts");
-/* harmony import */ var _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../components/submit-form/submit-form.component */ "./src/components/submit-form/submit-form.component.ts");
-/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../pages/landing-page/landing-page.component */ "./src/pages/landing-page/landing-page.component.ts");
-/* harmony import */ var _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../pages/browse-page/browse-page.component */ "./src/pages/browse-page/browse-page.component.ts");
-/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../pages/confirm-page/confirm-page.component */ "./src/pages/confirm-page/confirm-page.component.ts");
-/* harmony import */ var _pages_itinerary_page_itinerary_page_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../pages/itinerary-page/itinerary-page.component */ "./src/pages/itinerary-page/itinerary-page.component.ts");
-/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../pages/design-page/design-page.component */ "./src/pages/design-page/design-page.component.ts");
-/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../pages/submit-page/submit-page.component */ "./src/pages/submit-page/submit-page.component.ts");
-/* harmony import */ var _components_swap_box_swap_box_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../components/swap-box/swap-box.component */ "./src/components/swap-box/swap-box.component.ts");
-/* harmony import */ var _app_app_routing_module__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../app/app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _components_details_details_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/details/details.component */ "./src/learning-agenda/components/details/details.component.ts");
+/* harmony import */ var _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/main-header/main-header.component */ "./src/learning-agenda/components/main-header/main-header.component.ts");
+/* harmony import */ var _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/main-footer/main-footer.component */ "./src/learning-agenda/components/main-footer/main-footer.component.ts");
+/* harmony import */ var _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/submit-form/submit-form.component */ "./src/learning-agenda/components/submit-form/submit-form.component.ts");
+/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./pages/landing-page/landing-page.component */ "./src/learning-agenda/pages/landing-page/landing-page.component.ts");
+/* harmony import */ var _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./pages/browse-page/browse-page.component */ "./src/learning-agenda/pages/browse-page/browse-page.component.ts");
+/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./pages/confirm-page/confirm-page.component */ "./src/learning-agenda/pages/confirm-page/confirm-page.component.ts");
+/* harmony import */ var _pages_itinerary_page_itinerary_page_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./pages/itinerary-page/itinerary-page.component */ "./src/learning-agenda/pages/itinerary-page/itinerary-page.component.ts");
+/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./pages/design-page/design-page.component */ "./src/learning-agenda/pages/design-page/design-page.component.ts");
+/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./pages/submit-page/submit-page.component */ "./src/learning-agenda/pages/submit-page/submit-page.component.ts");
+/* harmony import */ var _components_swap_box_swap_box_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/swap-box/swap-box.component */ "./src/learning-agenda/components/swap-box/swap-box.component.ts");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./router */ "./src/learning-agenda/router.ts");
 /* harmony import */ var _app_app_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../app/app.component */ "./src/app/app.component.ts");
 /* harmony import */ var ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ng-simple-slideshow */ "./node_modules/ng-simple-slideshow/ng-simple-slideshow.es5.js");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
@@ -2258,7 +2201,7 @@ var LearningAgendaModule = /** @class */ (function () {
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbModule"].forRoot(),
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
                 ngx_ellipsis__WEBPACK_IMPORTED_MODULE_4__["EllipsisModule"],
-                _app_app_routing_module__WEBPACK_IMPORTED_MODULE_32__["AppRoutingModule"],
+                _router__WEBPACK_IMPORTED_MODULE_32__["AppRoutingModule"],
                 ngx_clipboard__WEBPACK_IMPORTED_MODULE_20__["ClipboardModule"],
                 angular2_multiline_ellipsis__WEBPACK_IMPORTED_MODULE_5__["MultilineEllipsisModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_36__["HttpClientModule"],
@@ -2271,9 +2214,9 @@ var LearningAgendaModule = /** @class */ (function () {
             declarations: [
                 _app_app_component__WEBPACK_IMPORTED_MODULE_33__["AppComponent"],
                 _components_swap_box_swap_box_component__WEBPACK_IMPORTED_MODULE_31__["SwapBoxComponent"],
-                _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_8__["EmptyCardComponent"],
+                _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_7__["EmptyCardComponent"],
                 _components_details_details_component__WEBPACK_IMPORTED_MODULE_21__["DetailsComponent"],
-                _components_card_card_component__WEBPACK_IMPORTED_MODULE_7__["CardComponent"],
+                _components_card_card_component__WEBPACK_IMPORTED_MODULE_8__["CardComponent"],
                 _components_build_build_component__WEBPACK_IMPORTED_MODULE_9__["BuildComponent"],
                 _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_10__["ActivityComponent"],
                 _components_activity_display_activity_display_component__WEBPACK_IMPORTED_MODULE_12__["ActivityDisplayComponent"],
@@ -2305,36 +2248,10 @@ var LearningAgendaModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/main.ts":
-/*!*********************!*\
-  !*** ./src/main.ts ***!
-  \*********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
-/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
-
-
-
-
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
-}
-Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
-    .catch(function (err) { return console.log(err); });
-
-
-/***/ }),
-
-/***/ "./src/models/activity.ts":
-/*!********************************!*\
-  !*** ./src/models/activity.ts ***!
-  \********************************/
+/***/ "./src/learning-agenda/models/activity.ts":
+/*!************************************************!*\
+  !*** ./src/learning-agenda/models/activity.ts ***!
+  \************************************************/
 /*! exports provided: Activity */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2365,10 +2282,10 @@ var Activity = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/models/activityBrief.ts":
-/*!*************************************!*\
-  !*** ./src/models/activityBrief.ts ***!
-  \*************************************/
+/***/ "./src/learning-agenda/models/activityBrief.ts":
+/*!*****************************************************!*\
+  !*** ./src/learning-agenda/models/activityBrief.ts ***!
+  \*****************************************************/
 /*! exports provided: ActivityBrief */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2387,21 +2304,21 @@ var ActivityBrief = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/pages/browse-page/browse-page.component.html":
-/*!**********************************************************!*\
-  !*** ./src/pages/browse-page/browse-page.component.html ***!
-  \**********************************************************/
+/***/ "./src/learning-agenda/pages/browse-page/browse-page.component.html":
+/*!**************************************************************************!*\
+  !*** ./src/learning-agenda/pages/browse-page/browse-page.component.html ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n  <app-main-header></app-main-header>\n \n<span class=\"plan\">PLAN YOUR VISIT </span><span class=\"arrow-right\"></span>\n<div class=\"h1\"> PLAN A SCHOOL TRIP</div>\n  \n\n  <div class=\"h3\"> \n  <div *ngIf=\"bActive\" class=\"my-btn1\" (click)=\"setBrowse()\">BROWSE</div>\n  <div *ngIf=\"!bActive\" class=\"my-btn\" (click)=\"setBrowse()\">BROWSE</div>\n  <div *ngIf=\"cActive\" class=\"my-btn1\" (click)=\"setCreate()\">CREATE</div>\n  <div *ngIf=\"!cActive\" class=\"my-btn\" (click)=\"setCreate()\">CREATE</div>\n  \n</div>\n\n\n<div class=\"my-container\">\n  <div class=\"my-bg\" >\n    <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-resize\"> \n\n  </div>\n  </div>\n\n<!-- <div class=\"text1\">\n<div class=\"text2\" >\n    PLAN YOUR DAY AT THE MUSEUM\n  </div>\n<div class=\"text3\">\n    Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, \n    , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an\n    <br><br>\n    Get started with our sample iteneraries below or <a class=\"build\" href=\"javascript:void(0)\" (click)=\"open(content)\"> build your own  </a>\n</div>\n</div>\n -->\n\n<!-- <div class=\"card-title\">VIEW OUR ITINERARIES</div> -->\n<div class=\"content\">\n<div *ngIf=\"!set || create\" class=\"side-bar\">\n<div class=\"first\">\n  <div style=\"float:left;margin:4%; font-size:1.5rem\">Filter By</div>\n <div style=\"float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer\" (click)=\"reset()\">Clear All</div>\n</div>\n\n<div>\n<div class=\"selection\">\n  \n  <div class=\"ftext\">\n    GRADE\n  </div>\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\">Kindergaten to Grade 2\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"KinderTo2\" style=\"float:right;\" (change)=\"filterBoolean('KinderTo2',KinderTo2)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  \n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 3 to 5\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr3To5\" style=\"float:right;\" (change)=\"filterBoolean1('Gr3To5',Gr3To5)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 6 to 8\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr6To8\" style=\"float:right;\" (change)=\"filterBoolean2('Gr6To8',Gr6To8)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n</form>\n</div>\n\n\n\n<div class=\"selection\">\n  <form>\n  <div class=\"ftext\">\n      TIME OF YEAR\n    </div>\n    <div class=\"boxes\">\n        <label class=\"lab\">October to April\n            <span class=\"checkmark\"></span>\n           \n          </label>\n          <input  [(ngModel)]=\"OctoberToApril\" style=\"float:right;\" (change)=\"filterBoolean3('OctoberToApril',OctoberToApril)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n  \n  \n    \n    <div class=\"boxes\">\n        <label class=\"lab\">May to June\n            <span class=\"checkmark\"></span>\n            \n          </label>\n          <input [(ngModel)]=\"MayToJune\" style=\"float:right;\" (change)=\"filterBoolean4('MayToJune',MayToJune)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    </form>\n  </div>\n\n\n\n\n  <div class=\"selection\">\n  \n    <div class=\"ftext\">\n        LENGTH\n      </div>\n      <form>\n          <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios1\">\n               Half Day\n              </label>\n              <input style=\"float:right\"[(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\" type=\"radio\" name=\"exampleRadios\"  value=\"Half-day\" class=\"rad\">\n            </div>\n            <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios2\">\n              Full Day\n              </label>\n              <input  style=\"float:right\" [(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\"  type=\"radio\" name=\"exampleRadios\" value=\"Full-day\" class=\"rad\">\n     </div>\n        </form>\n    </div>\n    \n \n    \n  \n</div>\n</div>\n\n\n<div *ngIf=\"set && !create\" id=\"print\" class=\"side-bar\" >\n<div class=\"side-title\">\n SCHEDULE\n</div>\n<div *ngFor=\"let itinerary of itineraries\" class=\"brief\" > \n  <span class=\"brief1\">{{itinerary.time}}</span>\n<span class=\"brief2\">{{itinerary.name}}</span>\n</div>\n</div>\n<div *ngIf=\"!set && browse\" class=\"itineraries\">\n \n <div style=\"height:5%; position:relative;\">\n  <div class=\"ti\" >Itineraries</div>\n <!--  <div class=\"my-btn\" (click)=\"open(content)\">\n  Build Your Own\n  </div></div> -->\n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\" *ngFor=\"let item of filtered| paginate: { itemsPerPage: 4, currentPage: p } \" >\n          <app-card [item]=\"item\"  (set)=\"getSet($event)\"></app-card>\n          </div>\n</div>\n<pagination-controls class=\"pag\" (pageChange)=\"p = $event\"\n                                  directionLinks=\"false\"\n   \n></pagination-controls>\n</div>\n\n  <!-- <div class=\"filter\">\n    <div style=\"font-family:futura-pt, Helvetica Neue, Arial\">\n        <div class=\"row\"  style=\"margin-bottom:2%; margin-left:0.1%\">\n            <div class=\"filtertext\" >FILTER ITINERARIES:</div>\n          <div class=\"input-group\" class=\"grades\">\n                  <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"grades\" (change)=\"filterExact('grades', grades)\">\n                      <option [ngValue]=\"undefined\" disabled  selected> Select Your Grade</option>\n                    <option value=\"Kinder to Gr.2\">Kindergaten to Grade 2</option>\n                    <option value=\"Gr 3-5\">Grades 3&ndash;5</option>\n                    <option value=\"Gr 6-8\">Grades 6&ndash;8</option>\n                  </select>\n                </div>\n                <div class=\"input-group\" class=\"date\" >\n                      <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"timeOfYear\" (change)=\"filterExact('timeOfYear', timeOfYear)\">\n                          <option [ngValue]=\"undefined\" disabled  selected> Select Time of Year </option>\n                          <option value=\"October-April\">Oct&ndash;Apr</option>\n                          <option value=\"May-June\">May&ndash;Jun</option>\n                        </select>\n                    </div>\n                    <div class=\"input-group\" class=\"day\" >\n                        <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"day\" (change)=\"filterExact('day', day)\">\n                            <option [ngValue]=\"undefined\" disabled  selected> Half-Day or Full-Day</option>\n                            <option value=\"Half-day\">Half&ndash;Day</option>\n                            <option value=\"Full-day\">Full&ndash;Day</option>\n                          </select>\n                        </div>\n                        <div class=\"show\">\n                          <button type=\"button\" class=\"btn \" style=\"width:100%; background-color:#8a8d8a; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:#f7f7f7\" (click)=\"reset()\"> Clear All Filters</button>\n                        </div>\n                      </div>\n                      </div>\n           \n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\"*ngFor=\"let item of filtered \" >\n          <app-card [item]=\"item\"></app-card>\n          </div>\n\n          <div  class=\"empty-card\" >\n            <app-empty-card></app-empty-card>\n            </div>\n          \n</div>\n\n<nav style=\"margin-bottom:10%\">\n    <ul class=\"pagination pagination-lg\" style=\"margin-left:0\">\n      <li class=\"page-item\" >\n        <a class=\"page-link\" style=\"border-radius:0; color:#e5e5e5; background-color:#4a4a4a\" href=\"#\" tabindex=\"-1\">1</a>\n      </li>\n      <li class=\"page-item\" style=\"border-radius:0\"><a class=\"page-link\" style=\"color:#4a4a4a\" href=\"#\">2</a></li>\n      <li class=\"page-item\" style=\"border-radius:0\" ><a class=\"page-link\" style=\"border-radius:0; color:#4a4a4a\" href=\"#\">3</a></li>\n    </ul>\n  </nav>\n</div> -->\n</div>\n\n\n<div *ngIf=\"set && !create\" class=\"activities\">\n<div class=\"row\">\n  <div class=\"left\" (click)=\"back()\">\n    <div class=\"arrow-left\"></div>\n  </div>\n\n <div class=\"back-title\">Itineraries</div>\n</div>\n  <div style=\"position:relative;\">\n      <img src=\"../../assets/images/photo3.jpeg\" alt=\"Random first slide\" class=\"img-responsive banner\">\n      <div class=\"btext\">\n      <div class=\"btext1\">{{grade}}</div>\n      <div class=\"btext2\">{{title}}</div>\n      <div class=\"btext3\">{{year}}</div>\n      </div>\n      <div *ngIf=\"modified\" class=\"btext4\"> This is a modified version of the <span style=\"font-weight:bold\">{{title}}</span> itinerary</div>\n    </div>\n    <div class=\"link\" >\n\n      <div class=\"urlbox\">\n\n        <div class=\"url\"><span *ngIf=\"!addedPost\">link generated if this version is modfied</span><span *ngIf=\"addedPost\">{{url}}</span></div>\n        \n        <div ><button class=\"url-btn\" ngxClipboard [cbContent]=\"url\">COPY URL</button></div>\n    </div>\n\n\n    <div class=\"printbox\">\n\n      <div>\n     <button class=\"print\" (click)=\"printDiv()\">PRINT</button>  \n      </div>\n      <div style=\"margin-right:13%;margin-left:2%\"><button class=\"download\">DOWNLOAD PDF</button></div>\n    </div>\n    </div>\n<app-activity-display *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\"  (item)=\"setItem($event)\" (order)=\"emitOrder($event)\" (notify)=\"notice($event)\" (modify)=\"modify($event)\" [showSwap]=\"showSwap\"></app-activity-display>\n    \n<app-empty-activity-display  (set)=\"add($event)\"></app-empty-activity-display>\n\n\n\n        </div>\n\n        <div *ngIf=\"create\" class=\"itineraries2\">\n \n            <div style=\"height:5%; position:relative;\">\n             <div class=\"ti\" >Create Your Own Itinerary</div>\n        \n           </div>\n           </div>\n        \n</div>\n\n\n\n\n\n\n\n</div>\n<div>\n  <app-main-footer></app-main-footer>\n</div>\n\n"
+module.exports = "\n<div>\n<!--   <app-main-header></app-main-header> -->\n \n<span class=\"plan\">PLAN YOUR VISIT </span><span class=\"arrow-right\"></span>\n<div class=\"h1\"> PLAN A SCHOOL TRIP</div>\n  \n\n  <div class=\"h3\"> \n  <div *ngIf=\"bActive\" class=\"my-btn1\" (click)=\"setBrowse()\">BROWSE</div>\n  <div *ngIf=\"!bActive\" class=\"my-btn\" (click)=\"setBrowse()\">BROWSE</div>\n  <div *ngIf=\"cActive\" class=\"my-btn1\" (click)=\"setCreate()\">CREATE</div>\n  <div *ngIf=\"!cActive\" class=\"my-btn\" (click)=\"setCreate()\">CREATE</div>\n  \n</div>\n\n\n<div class=\"my-container\">\n  <div class=\"my-bg\" >\n    <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-resize\"> \n\n  </div>\n  </div>\n\n<!-- <div class=\"text1\">\n<div class=\"text2\" >\n    PLAN YOUR DAY AT THE MUSEUM\n  </div>\n<div class=\"text3\">\n    Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, \n    , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an\n    <br><br>\n    Get started with our sample iteneraries below or <a class=\"build\" href=\"javascript:void(0)\" (click)=\"open(content)\"> build your own  </a>\n</div>\n</div>\n -->\n\n<!-- <div class=\"card-title\">VIEW OUR ITINERARIES</div> -->\n<div class=\"content\">\n<div *ngIf=\"!set || create\" class=\"side-bar\">\n<div class=\"first\">\n  <div style=\"float:left;margin:4%; font-size:1.5rem\">Filter By</div>\n <div style=\"float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer\" (click)=\"reset()\">Clear All</div>\n</div>\n\n<div>\n<div class=\"selection\">\n  \n  <div class=\"ftext\">\n    GRADE\n  </div>\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\">Kindergaten to Grade 2\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"KinderTo2\" style=\"float:right;\" (change)=\"filterBoolean('KinderTo2',KinderTo2)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  \n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 3 to 5\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr3To5\" style=\"float:right;\" (change)=\"filterBoolean1('Gr3To5',Gr3To5)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 6 to 8\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr6To8\" style=\"float:right;\" (change)=\"filterBoolean2('Gr6To8',Gr6To8)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n</form>\n</div>\n\n\n\n<div class=\"selection\">\n  <form>\n  <div class=\"ftext\">\n      TIME OF YEAR\n    </div>\n    <div class=\"boxes\">\n        <label class=\"lab\">October to April\n            <span class=\"checkmark\"></span>\n           \n          </label>\n          <input  [(ngModel)]=\"OctoberToApril\" style=\"float:right;\" (change)=\"filterBoolean3('OctoberToApril',OctoberToApril)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n  \n  \n    \n    <div class=\"boxes\">\n        <label class=\"lab\">May to June\n            <span class=\"checkmark\"></span>\n            \n          </label>\n          <input [(ngModel)]=\"MayToJune\" style=\"float:right;\" (change)=\"filterBoolean4('MayToJune',MayToJune)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    </form>\n  </div>\n\n\n\n\n  <div class=\"selection\">\n  \n    <div class=\"ftext\">\n        LENGTH\n      </div>\n      <form>\n          <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios1\">\n               Half Day\n              </label>\n              <input style=\"float:right\"[(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\" type=\"radio\" name=\"exampleRadios\"  value=\"Half-day\" class=\"rad\">\n            </div>\n            <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios2\">\n              Full Day\n              </label>\n              <input  style=\"float:right\" [(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\"  type=\"radio\" name=\"exampleRadios\" value=\"Full-day\" class=\"rad\">\n     </div>\n        </form>\n    </div>\n    \n \n    \n  \n</div>\n</div>\n\n\n<div *ngIf=\"set && !create\" id=\"print\" class=\"side-bar\" >\n<div class=\"side-title\">\n SCHEDULE\n</div>\n<div *ngFor=\"let itinerary of itineraries\" class=\"brief\" > \n  <span class=\"brief1\">{{itinerary.time}}</span>\n<span class=\"brief2\">{{itinerary.name}}</span>\n</div>\n</div>\n<div *ngIf=\"!set && browse\" class=\"itineraries\">\n \n <div style=\"height:5%; position:relative;\">\n  <div class=\"ti\" >Itineraries</div>\n <!--  <div class=\"my-btn\" (click)=\"open(content)\">\n  Build Your Own\n  </div></div> -->\n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\" *ngFor=\"let item of filtered| paginate: { itemsPerPage: 4, currentPage: p } \" >\n          <app-card [item]=\"item\"  (set)=\"getSet($event)\"></app-card>\n          </div>\n</div>\n<pagination-controls class=\"pag\" (pageChange)=\"p = $event\"\n                                  directionLinks=\"false\"\n   \n></pagination-controls>\n</div>\n\n  <!-- <div class=\"filter\">\n    <div style=\"font-family:futura-pt, Helvetica Neue, Arial\">\n        <div class=\"row\"  style=\"margin-bottom:2%; margin-left:0.1%\">\n            <div class=\"filtertext\" >FILTER ITINERARIES:</div>\n          <div class=\"input-group\" class=\"grades\">\n                  <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"grades\" (change)=\"filterExact('grades', grades)\">\n                      <option [ngValue]=\"undefined\" disabled  selected> Select Your Grade</option>\n                    <option value=\"Kinder to Gr.2\">Kindergaten to Grade 2</option>\n                    <option value=\"Gr 3-5\">Grades 3&ndash;5</option>\n                    <option value=\"Gr 6-8\">Grades 6&ndash;8</option>\n                  </select>\n                </div>\n                <div class=\"input-group\" class=\"date\" >\n                      <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"timeOfYear\" (change)=\"filterExact('timeOfYear', timeOfYear)\">\n                          <option [ngValue]=\"undefined\" disabled  selected> Select Time of Year </option>\n                          <option value=\"October-April\">Oct&ndash;Apr</option>\n                          <option value=\"May-June\">May&ndash;Jun</option>\n                        </select>\n                    </div>\n                    <div class=\"input-group\" class=\"day\" >\n                        <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"day\" (change)=\"filterExact('day', day)\">\n                            <option [ngValue]=\"undefined\" disabled  selected> Half-Day or Full-Day</option>\n                            <option value=\"Half-day\">Half&ndash;Day</option>\n                            <option value=\"Full-day\">Full&ndash;Day</option>\n                          </select>\n                        </div>\n                        <div class=\"show\">\n                          <button type=\"button\" class=\"btn \" style=\"width:100%; background-color:#8a8d8a; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:#f7f7f7\" (click)=\"reset()\"> Clear All Filters</button>\n                        </div>\n                      </div>\n                      </div>\n           \n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\"*ngFor=\"let item of filtered \" >\n          <app-card [item]=\"item\"></app-card>\n          </div>\n\n          <div  class=\"empty-card\" >\n            <app-empty-card></app-empty-card>\n            </div>\n          \n</div>\n\n<nav style=\"margin-bottom:10%\">\n    <ul class=\"pagination pagination-lg\" style=\"margin-left:0\">\n      <li class=\"page-item\" >\n        <a class=\"page-link\" style=\"border-radius:0; color:#e5e5e5; background-color:#4a4a4a\" href=\"#\" tabindex=\"-1\">1</a>\n      </li>\n      <li class=\"page-item\" style=\"border-radius:0\"><a class=\"page-link\" style=\"color:#4a4a4a\" href=\"#\">2</a></li>\n      <li class=\"page-item\" style=\"border-radius:0\" ><a class=\"page-link\" style=\"border-radius:0; color:#4a4a4a\" href=\"#\">3</a></li>\n    </ul>\n  </nav>\n</div> -->\n</div>\n\n\n<div *ngIf=\"set && !create\" class=\"activities\">\n<div class=\"row\">\n  <div class=\"left\" (click)=\"back()\">\n    <div class=\"arrow-left\"></div>\n  </div>\n\n <div class=\"back-title\">Itineraries</div>\n</div>\n  <div style=\"position:relative;\">\n      <img src=\"../../assets/images/photo3.jpeg\" alt=\"Random first slide\" class=\"img-responsive banner\">\n      <div class=\"btext\">\n      <div class=\"btext1\">{{grade}}</div>\n      <div class=\"btext2\">{{title}}</div>\n      <div class=\"btext3\">{{year}}</div>\n      </div>\n      <div *ngIf=\"modified\" class=\"btext4\"> This is a modified version of the <span style=\"font-weight:bold\">{{title}}</span> itinerary</div>\n    </div>\n    <div class=\"link\" >\n\n      <div class=\"urlbox\">\n\n        <div class=\"url\"><span *ngIf=\"!addedPost\">link generated if this version is modfied</span><span *ngIf=\"addedPost\">{{url}}</span></div>\n        \n        <div ><button class=\"url-btn\" ngxClipboard [cbContent]=\"url\">COPY URL</button></div>\n    </div>\n\n\n    <div class=\"printbox\">\n\n      <div>\n     <button class=\"print\" (click)=\"printDiv()\">PRINT</button>  \n      </div>\n      <div style=\"margin-right:13%;margin-left:2%\"><button class=\"download\">DOWNLOAD PDF</button></div>\n    </div>\n    </div>\n<app-activity-display *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\"  (item)=\"setItem($event)\" (order)=\"emitOrder($event)\" (notify)=\"notice($event)\" (modify)=\"modify($event)\" [showSwap]=\"showSwap\"></app-activity-display>\n    \n<app-empty-activity-display  (set)=\"add($event)\"></app-empty-activity-display>\n\n\n\n        </div>\n\n        <div *ngIf=\"create\" class=\"itineraries2\">\n \n            <div style=\"height:5%; position:relative;\">\n             <div class=\"ti\" >Create Your Own Itinerary</div>\n        \n           </div>\n           </div>\n        \n</div>\n\n\n\n\n\n\n\n</div>\n<div>\n<!--   <app-main-footer></app-main-footer> -->\n</div>\n\n"
 
 /***/ }),
 
-/***/ "./src/pages/browse-page/browse-page.component.scss":
-/*!**********************************************************!*\
-  !*** ./src/pages/browse-page/browse-page.component.scss ***!
-  \**********************************************************/
+/***/ "./src/learning-agenda/pages/browse-page/browse-page.component.scss":
+/*!**************************************************************************!*\
+  !*** ./src/learning-agenda/pages/browse-page/browse-page.component.scss ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -2409,10 +2326,10 @@ module.exports = ".my-container {\n  margin: auto; }\n\n.img-resize {\n  height:
 
 /***/ }),
 
-/***/ "./src/pages/browse-page/browse-page.component.ts":
-/*!********************************************************!*\
-  !*** ./src/pages/browse-page/browse-page.component.ts ***!
-  \********************************************************/
+/***/ "./src/learning-agenda/pages/browse-page/browse-page.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/learning-agenda/pages/browse-page/browse-page.component.ts ***!
+  \************************************************************************/
 /*! exports provided: BrowsePageComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2474,6 +2391,7 @@ var BrowsePageComponent = /** @class */ (function () {
         this.log = '';
         this.filters = {};
         this.filters1 = {};
+        this.toggler = false;
     }
     BrowsePageComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -2597,239 +2515,303 @@ var BrowsePageComponent = /** @class */ (function () {
       } */
     };
     BrowsePageComponent.prototype.filterExact = function (property, rule) {
-        this.sixth = true;
         console.log(this.day);
-        if (this.day == "Half-day") {
+        if (this.day == "Half-day" && this.sixth == false) {
             console.log("callinghalf");
-            this.filtered = this.items.filter(function (elem) { return elem.day == "Half-day"; });
+            this.filtered = this.filtered.filter(function (elem) { return elem.day == "Half-day"; });
         }
         else {
-            console.log("callingfull");
-            this.filtered = this.items.filter(function (elem) { return elem.day == "Full-day"; });
+            if (this.day == "Half-day" && this.sixth == true) {
+                console.log("callinghalf");
+                if (this.first == true || this.second == true || this.third == true || this.fourth == true || this.fifth == true) {
+                    this.filtered = this.filtered.filter(function (elem) { return elem.day == "Half-day"; });
+                }
+                else {
+                    this.filtered = this.items.filter(function (elem) { return elem.day == "Half-day"; });
+                }
+            }
         }
+        if (this.day == "Full-day" && this.sixth == false) {
+            console.log("callingfull");
+            this.filtered = this.filtered.filter(function (elem) { return elem.day == "Full-day"; });
+        }
+        else {
+            if (this.day == "Full-day" && this.sixth == true) {
+                console.log("callinghalf");
+                if (this.first == true || this.second == true || this.third == true || this.fourth == true || this.fifth == true) {
+                    this.filtered = this.filtered.filter(function (elem) { return elem.day == "Full-day"; });
+                }
+                else {
+                    this.filtered = this.items.filter(function (elem) { return elem.day == "Full-day"; });
+                }
+            }
+        }
+        this.sixth = true;
     };
     BrowsePageComponent.prototype.filterBoolean = function (property, rule) {
         var _this = this;
         this.first = true;
+        var tempfilter = [];
         if (!rule)
             this.removeFilter(property);
         else {
             if (this.fourth == true || this.fifth == true || this.sixth == true) {
-                console.log("external checked");
-                // check if an internal checkbox has been selected
-                if (this.second == true || this.third == true) {
-                    console.log("intenal checked");
-                    //go through all the checked boxes and filter
-                    if (this.fourth == true) {
-                        console.log("logged fourth");
-                        if (this.second == true) {
-                            var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
-                            var sec = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
-                            var firstFilter = first.filter(function (elem) { return elem.KinderTo2; });
-                            var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
-                            if (this.day == "Half-day") {
-                                var fil = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                                var fils = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            }
-                            if (this.day == "Full-day") {
-                                var fil = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                                var fils = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            }
-                            fil.map(function (elem) { return _this.filtered.push(elem); });
-                            fils.map(function (elem) { return _this.filtered.push(elem); });
-                        }
-                        if (this.third == true) {
-                            var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
-                            var sec = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
-                            var firstFilter = first.filter(function (elem) { return elem.KinderTo2; });
-                            var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
-                            if (this.day == "Half-day") {
-                                var fil1 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                                var fils1 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            }
-                            if (this.day == "Full-day") {
-                                var fil1 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                                var fils1 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            }
-                            fil1.map(function (elem) { return _this.filtered.push(elem); });
-                            fils1.map(function (elem) { return _this.filtered.push(elem); });
-                        }
-                    }
-                    if (this.fifth == true) {
-                        console.log("logged fifth");
-                        if (this.second == true) {
-                            var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
-                            var sec = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
-                            var firstFilter = first.filter(function (elem) { return elem.KinderTo2; });
-                            var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
-                            if (this.day == "Half-day") {
-                                var fil2 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                                var fils2 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            }
-                            if (this.day == "Full-day") {
-                                var fil2 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                                var fils2 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            }
-                            fil2.map(function (elem) { return _this.filtered.push(elem); });
-                            fils2.map(function (elem) { return _this.filtered.push(elem); });
-                        }
-                        if (this.third == true) {
-                            var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
-                            var sec = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
-                            var firstFilter = first.filter(function (elem) { return elem.KinderTo2; });
-                            var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
-                            if (this.day == "Half-day") {
-                                var fil3 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                                var fils3 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            }
-                            if (this.day == "Full-day") {
-                                var fil3 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                                var fils3 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            }
-                            fil3.map(function (elem) { return _this.filtered.push(elem); });
-                            fils3.map(function (elem) { return _this.filtered.push(elem); });
-                        }
-                    }
-                    /*    if (this.sixth == true){
-                         console.log("logged sixth")
-                        if (this.second == true){
-                          let first = this.items.filter(elem => elem.day == this.day)
-                          let sec = this.items.filter(elem => elem.Gr3To5 == true)
-                          let firstFilter = first.filter(elem => elem.KinderTo2)
-                          let secFilter = sec.filter(elem => elem.KinderTo2)
-                       
-                          firstFilter.map(elem=>this.filtered.push(elem))
-                          secFilter.map(elem=>this.filtered.push(elem))
-                         }
-                
-                
-                         if (this.third == true){
-                          let first = this.items.filter(elem => elem.day == this.day)
-                          let sec = this.items.filter(elem => elem.Gr6To8 == true)
-                          let firstFilter = first.filter(elem => elem.KinderTo2)
-                          let secFilter = sec.filter(elem => elem.KinderTo2)
-                       
-                          firstFilter.map(elem=>this.filtered.push(elem))
-                          secFilter.map(elem=>this.filtered.push(elem))
-                         }
-                       }
-                       */
+                if (this.second == false && this.third == false) {
+                    this.filtered = this.filtered.filter(function (elem) { return elem.KinderTo2 == true; });
                 }
                 else {
-                    console.log("internal not checked");
-                    this.filtered = this.filtered.filter(function (elem) { return elem.KinderTo2 == true; });
+                    if (this.fourth == true && this.sixth == false) {
+                        var filter = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                        console.log(this.filtered);
+                        console.log(filter);
+                        filter.map(function (elem) {
+                            _this.filtered.map(function (element) {
+                                if (elem == element) {
+                                    _this.toggler = true;
+                                    console.log(elem);
+                                }
+                            });
+                            if (_this.toggler == false) {
+                                tempfilter.push(elem);
+                            }
+                        });
+                        this.toggler = false;
+                        var temp = tempfilter.filter(function (elem) { return elem.OctoberToApril == true; });
+                        temp.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    else {
+                        if (this.fourth == true && this.sixth == true) {
+                            var tem_1 = [];
+                            var filter = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                            console.log(this.filtered);
+                            console.log(filter);
+                            filter.map(function (elem) {
+                                _this.filtered.map(function (element) {
+                                    if (elem == element) {
+                                        _this.toggler = true;
+                                        console.log(elem);
+                                    }
+                                });
+                                if (_this.toggler == false) {
+                                    tem_1.push(elem);
+                                }
+                            });
+                            this.toggler = false;
+                            var temp = tem_1.filter(function (elem) { return elem.OctoberToApril == true; });
+                            if (this.day == "Half-day") {
+                                var temp2 = temp.filter(function (elem) { return elem.day = "Half-day"; });
+                                temp2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                            if (this.day == "Full-day") {
+                                var temp2 = temp.filter(function (elem) { return elem.day = "Full-day"; });
+                                temp2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                        }
+                    }
+                    if (this.fifth == true && this.sixth == false) {
+                        var filter = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                        console.log(this.filtered);
+                        console.log(filter);
+                        filter.map(function (elem) {
+                            _this.filtered.map(function (element) {
+                                if (elem == element) {
+                                    _this.toggler = true;
+                                    console.log(elem);
+                                }
+                            });
+                            if (_this.toggler == false) {
+                                tempfilter.push(elem);
+                            }
+                        });
+                        this.toggler = false;
+                        var temp = tempfilter.filter(function (elem) { return elem.MayToJune == true; });
+                        temp.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    else {
+                        if (this.fifth == true && this.sixth == true) {
+                            var tem_2 = [];
+                            var filter = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                            console.log(this.filtered);
+                            console.log(filter);
+                            filter.map(function (elem) {
+                                _this.filtered.map(function (element) {
+                                    if (elem == element) {
+                                        _this.toggler = true;
+                                        console.log(elem);
+                                    }
+                                });
+                                if (_this.toggler == false) {
+                                    tem_2.push(elem);
+                                }
+                            });
+                            this.toggler = false;
+                            var temp = tem_2.filter(function (elem) { return elem.MayToJune == true; });
+                            if (this.day == "Half-day") {
+                                var temp2 = temp.filter(function (elem) { return elem.day = "Half-day"; });
+                                temp2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                            if (this.day == "Full-day") {
+                                var temp2 = temp.filter(function (elem) { return elem.day = "Full-day"; });
+                                temp2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                        }
+                    }
                 }
             }
             else {
-                var result = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
-                if (this.second == true || this.third == true) {
-                    result.map(function (elem) { return _this.filtered.push(elem); });
+                if (this.second == false && this.third == false) {
+                    this.filtered = this.filtered.filter(function (elem) { return elem.KinderTo2 == true; });
                 }
                 else {
-                    this.filtered = result;
+                    var filter = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                    console.log(this.filtered);
+                    console.log(filter);
+                    filter.map(function (elem) {
+                        _this.filtered.map(function (element) {
+                            if (elem == element) {
+                                _this.toggler = true;
+                                console.log(elem);
+                            }
+                        });
+                        if (_this.toggler == false) {
+                            _this.filtered.push(elem);
+                        }
+                    });
                 }
+                this.toggler = false;
             }
         }
     };
     BrowsePageComponent.prototype.filterBoolean1 = function (property, rule) {
         var _this = this;
         this.second = true;
+        var tempfilter = [];
         if (!rule)
             this.removeFilter1(property);
         else {
             if (this.fourth == true || this.fifth == true || this.sixth == true) {
-                console.log("external checked");
-                // check if an internal checkbox has been selected
-                if (this.first == true || this.third == true) {
-                    console.log("intenal checked");
-                    //go through all the checked boxes and filter
-                    if (this.fourth == true) {
-                        if (this.first == true) {
-                            var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
-                            var sec = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
-                            var firstFilter = first.filter(function (elem) { return elem.Gr3To5; });
-                            var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
-                            if (this.day == "Half-day") {
-                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            }
-                            if (this.day == "Full-day") {
-                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            }
-                            fil4.map(function (elem) { return _this.filtered.push(elem); });
-                            fils4.map(function (elem) { return _this.filtered.push(elem); });
-                        }
-                        if (this.third == true) {
-                            var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
-                            var sec = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
-                            var firstFilter = first.filter(function (elem) { return elem.Gr3To5; });
-                            var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
-                            if (this.day == "Half-day") {
-                                var fil5 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                                var fils5 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            }
-                            if (this.day == "Full-day") {
-                                var fil5 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                                var fils5 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            }
-                            fil5.map(function (elem) { return _this.filtered.push(elem); });
-                            fils5.map(function (elem) { return _this.filtered.push(elem); });
-                        }
-                    }
-                    if (this.fifth == true) {
-                        if (this.first == true) {
-                            var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
-                            var sec = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
-                            var firstFilter = first.filter(function (elem) { return elem.Gr3To5; });
-                            var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
-                            if (this.day == "Half-day") {
-                                var fil6 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                                var fils6 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            }
-                            if (this.day == "Full-day") {
-                                var fil6 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                                var fils6 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            }
-                            fil6.map(function (elem) { return _this.filtered.push(elem); });
-                            fils6.map(function (elem) { return _this.filtered.push(elem); });
-                        }
-                        if (this.third == true) {
-                            var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
-                            var sec = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
-                            var firstFilter = first.filter(function (elem) { return elem.Gr3To5; });
-                            var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
-                            if (this.day == "Half-day") {
-                                var fil7 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                                var fils7 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            }
-                            if (this.day == "Full-day") {
-                                var fil7 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                                var fils7 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            }
-                            fil7.map(function (elem) { return _this.filtered.push(elem); });
-                            fils7.map(function (elem) { return _this.filtered.push(elem); });
-                        }
-                    }
-                    /* if (this.sixth == true){
-                     let third = this.items.filter(elem => elem.day == this.day)
-             
-                     let thirdFilter = third.filter(elem => elem.Gr3To5)
-                     thirdFilter.map(elem=>this.filtered.push(elem))
-                    } */
+                if (this.first == false && this.third == false) {
+                    this.filtered = this.filtered.filter(function (elem) { return elem.Gr3To5 == true; });
                 }
                 else {
-                    console.log("internal not checked");
-                    this.filtered = this.filtered.filter(function (elem) { return elem.Gr3To5 == true; });
+                    if (this.fourth == true && this.sixth == false) {
+                        var filter = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                        console.log(this.filtered);
+                        console.log(filter);
+                        filter.map(function (elem) {
+                            _this.filtered.map(function (element) {
+                                if (elem == element) {
+                                    _this.toggler = true;
+                                    console.log(elem);
+                                }
+                            });
+                            if (_this.toggler == false) {
+                                tempfilter.push(elem);
+                            }
+                        });
+                        this.toggler = false;
+                        var temp = tempfilter.filter(function (elem) { return elem.OctoberToApril == true; });
+                        temp.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    else {
+                        if (this.fourth == true && this.sixth == true) {
+                            var tem_3 = [];
+                            var filter = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                            console.log(this.filtered);
+                            console.log(filter);
+                            filter.map(function (elem) {
+                                _this.filtered.map(function (element) {
+                                    if (elem == element) {
+                                        _this.toggler = true;
+                                        console.log(elem);
+                                    }
+                                });
+                                if (_this.toggler == false) {
+                                    tem_3.push(elem);
+                                }
+                            });
+                            this.toggler = false;
+                            var temp = tem_3.filter(function (elem) { return elem.OctoberToApril == true; });
+                            if (this.day == "Half-day") {
+                                var temp2 = temp.filter(function (elem) { return elem.day = "Half-day"; });
+                                temp2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                            if (this.day == "Full-day") {
+                                var temp2 = temp.filter(function (elem) { return elem.day = "Full-day"; });
+                                temp2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                        }
+                    }
+                    if (this.fifth == true && this.sixth == false) {
+                        var filter = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                        console.log(this.filtered);
+                        console.log(filter);
+                        filter.map(function (elem) {
+                            _this.filtered.map(function (element) {
+                                if (elem == element) {
+                                    _this.toggler = true;
+                                    console.log(elem);
+                                }
+                            });
+                            if (_this.toggler == false) {
+                                tempfilter.push(elem);
+                            }
+                        });
+                        this.toggler = false;
+                        var temp = tempfilter.filter(function (elem) { return elem.MayToJune == true; });
+                        temp.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    else {
+                        if (this.fifth == true && this.sixth == true) {
+                            var tem_4 = [];
+                            var filter = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                            console.log(this.filtered);
+                            console.log(filter);
+                            filter.map(function (elem) {
+                                _this.filtered.map(function (element) {
+                                    if (elem == element) {
+                                        _this.toggler = true;
+                                        console.log(elem);
+                                    }
+                                });
+                                if (_this.toggler == false) {
+                                    tem_4.push(elem);
+                                }
+                            });
+                            this.toggler = false;
+                            var temp = tem_4.filter(function (elem) { return elem.MayToJune == true; });
+                            if (this.day == "Half-day") {
+                                var temp2 = temp.filter(function (elem) { return elem.day = "Half-day"; });
+                                temp2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                            if (this.day == "Full-day") {
+                                var temp2 = temp.filter(function (elem) { return elem.day = "Full-day"; });
+                                temp2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                        }
+                    }
                 }
             }
             else {
-                var result = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
-                if (this.first == true || this.third == true) {
-                    result.map(function (elem) { return _this.filtered.push(elem); });
+                if (this.first == false && this.third == false) {
+                    this.filtered = this.filtered.filter(function (elem) { return elem.Gr3To5 == true; });
                 }
                 else {
-                    this.filtered = result;
+                    var filter = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                    console.log(this.filtered);
+                    console.log(filter);
+                    filter.map(function (elem) {
+                        _this.filtered.map(function (element) {
+                            if (elem == element) {
+                                _this.toggler = true;
+                                console.log(elem);
+                            }
+                        });
+                        if (_this.toggler == false) {
+                            _this.filtered.push(elem);
+                        }
+                    });
+                    this.toggler = false;
                 }
             }
         }
@@ -2837,105 +2819,134 @@ var BrowsePageComponent = /** @class */ (function () {
     BrowsePageComponent.prototype.filterBoolean2 = function (property, rule) {
         var _this = this;
         this.third = true;
+        var tempfilter = [];
         if (!rule)
             this.removeFilter2(property);
         else {
             if (this.fourth == true || this.fifth == true || this.sixth == true) {
-                console.log("external checked");
-                // check if an internal checkbox has been selected
-                if (this.second == true || this.first == true) {
-                    console.log("intenal checked");
-                    //go through all the checked boxes and filter
-                    if (this.fourth == true) {
-                        if (this.first == true) {
-                            var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
-                            var sec = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
-                            var firstFilter = first.filter(function (elem) { return elem.Gr6To8; });
-                            var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
-                            if (this.day == "Half-day") {
-                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            }
-                            if (this.day == "Full-day") {
-                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            }
-                            fil4.map(function (elem) { return _this.filtered.push(elem); });
-                            fils4.map(function (elem) { return _this.filtered.push(elem); });
-                        }
-                        if (this.second == true) {
-                            var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
-                            var sec = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
-                            var firstFilter = first.filter(function (elem) { return elem.Gr6To8; });
-                            var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
-                            if (this.day == "Half-day") {
-                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            }
-                            if (this.day == "Full-day") {
-                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            }
-                            fil4.map(function (elem) { return _this.filtered.push(elem); });
-                            fils4.map(function (elem) { return _this.filtered.push(elem); });
-                        }
-                    }
-                    if (this.fifth == true) {
-                        if (this.first == true) {
-                            var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
-                            var sec = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
-                            var firstFilter = first.filter(function (elem) { return elem.Gr6To8; });
-                            var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
-                            if (this.day == "Half-day") {
-                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            }
-                            if (this.day == "Full-day") {
-                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            }
-                            fil4.map(function (elem) { return _this.filtered.push(elem); });
-                            fils4.map(function (elem) { return _this.filtered.push(elem); });
-                        }
-                        if (this.second == true) {
-                            var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
-                            var sec = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
-                            var firstFilter = first.filter(function (elem) { return elem.Gr6To8; });
-                            var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
-                            if (this.day == "Half-day") {
-                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            }
-                            if (this.day == "Full-day") {
-                                var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                                var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            }
-                            fil4.map(function (elem) { return _this.filtered.push(elem); });
-                            fils4.map(function (elem) { return _this.filtered.push(elem); });
-                        }
-                    }
-                    /*
-                           if (this.sixth == true){
-                            let third = this.items.filter(elem => elem.day == this.day)
-                    
-                            let thirdFilter = third.filter(elem => elem.Gr6To8)
-                            thirdFilter.map(elem=>this.filtered.push(elem))
-                           }
-                           */
+                if (this.first == false && this.second == false) {
+                    this.filtered = this.filtered.filter(function (elem) { return elem.Gr6To8 == true; });
                 }
                 else {
-                    console.log("internal not checked");
-                    this.filtered = this.filtered.filter(function (elem) { return elem.Gr6To8 == true; });
+                    if (this.fourth == true && this.sixth == false) {
+                        var filter = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                        console.log(this.filtered);
+                        console.log(filter);
+                        filter.map(function (elem) {
+                            _this.filtered.map(function (element) {
+                                if (elem == element) {
+                                    _this.toggler = true;
+                                    console.log(elem);
+                                }
+                            });
+                            if (_this.toggler == false) {
+                                tempfilter.push(elem);
+                            }
+                        });
+                        this.toggler = false;
+                        var temp = tempfilter.filter(function (elem) { return elem.OctoberToApril == true; });
+                        temp.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    else {
+                        if (this.fourth == true && this.sixth == true) {
+                            var tem_5 = [];
+                            var filter = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                            console.log(this.filtered);
+                            console.log(filter);
+                            filter.map(function (elem) {
+                                _this.filtered.map(function (element) {
+                                    if (elem == element) {
+                                        _this.toggler = true;
+                                        console.log(elem);
+                                    }
+                                });
+                                if (_this.toggler == false) {
+                                    tem_5.push(elem);
+                                }
+                            });
+                            this.toggler = false;
+                            var temp = tem_5.filter(function (elem) { return elem.OctoberToApril == true; });
+                            if (this.day == "Half-day") {
+                                var temp2 = temp.filter(function (elem) { return elem.day = "Half-day"; });
+                                temp2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                            if (this.day == "Full-day") {
+                                var temp2 = temp.filter(function (elem) { return elem.day = "Full-day"; });
+                                temp2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                        }
+                    }
+                    if (this.fifth == true && this.sixth == false) {
+                        var filter = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                        console.log(this.filtered);
+                        console.log(filter);
+                        filter.map(function (elem) {
+                            _this.filtered.map(function (element) {
+                                if (elem == element) {
+                                    _this.toggler = true;
+                                    console.log(elem);
+                                }
+                            });
+                            if (_this.toggler == false) {
+                                tempfilter.push(elem);
+                            }
+                        });
+                        this.toggler = false;
+                        var temp = tempfilter.filter(function (elem) { return elem.MayToJune == true; });
+                        temp.map(function (elem) { return _this.filtered.push(elem); });
+                    }
+                    else {
+                        if (this.fourth == true && this.sixth == true) {
+                            var tem_6 = [];
+                            var filter = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                            console.log(this.filtered);
+                            console.log(filter);
+                            filter.map(function (elem) {
+                                _this.filtered.map(function (element) {
+                                    if (elem == element) {
+                                        _this.toggler = true;
+                                        console.log(elem);
+                                    }
+                                });
+                                if (_this.toggler == false) {
+                                    tem_6.push(elem);
+                                }
+                            });
+                            this.toggler = false;
+                            var temp = tem_6.filter(function (elem) { return elem.MayToJune == true; });
+                            if (this.day == "Half-day") {
+                                var temp2 = temp.filter(function (elem) { return elem.day = "Half-day"; });
+                                temp2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                            if (this.day == "Full-day") {
+                                var temp2 = temp.filter(function (elem) { return elem.day = "Full-day"; });
+                                temp2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                        }
+                    }
                 }
             }
             else {
-                var result = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
-                if (this.first == true || this.second == true) {
-                    result.map(function (elem) { return _this.filtered.push(elem); });
+                if (this.first == false && this.second == false) {
+                    this.filtered = this.filtered.filter(function (elem) { return elem.Gr6To8 == true; });
                 }
                 else {
-                    this.filtered = result;
+                    var filter = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                    console.log(this.filtered);
+                    console.log(filter);
+                    filter.map(function (elem) {
+                        _this.filtered.map(function (element) {
+                            if (elem == element) {
+                                _this.toggler = true;
+                                console.log(elem);
+                            }
+                        });
+                        if (_this.toggler == false) {
+                            _this.filtered.push(elem);
+                        }
+                    });
                 }
+                this.toggler = false;
             }
         }
     };
@@ -2957,31 +2968,54 @@ var BrowsePageComponent = /** @class */ (function () {
                             console.log("fitering full days");
                             var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
                             console.log(fill1);
+                            fill1.map(function (elem) { return _this.filtered.push(elem); });
                         }
-                        if (this.day == "Full-day") {
-                            (console.log("filtering half days"));
-                            var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                        else {
+                            if (this.day == "Full-day") {
+                                (console.log("filtering half days"));
+                                var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                                fill1.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                            else {
+                                console.log("i should be here");
+                                var fill1 = first.filter(function (elem) { return elem.OctoberToApril == true; });
+                                fill1.map(function (elem) { return _this.filtered.push(elem); });
+                            }
                         }
                     }
                     if (this.second == true) {
                         var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
                         if (this.day == "Half-day") {
                             var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                            fill2.map(function (elem) { return _this.filtered.push(elem); });
                         }
-                        if (this.day == "Full-day") {
-                            var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                        else {
+                            if (this.day == "Full-day") {
+                                var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                                fill2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                            else {
+                                var fill2 = second.filter(function (elem) { return elem.OctoberToApril == true; });
+                                fill2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
                         }
-                        fill2.map(function (elem) { return _this.filtered.push(elem); });
                     }
                     if (this.third == true) {
                         var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
                         if (this.day == "Half-day") {
                             var fill3 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                            fill3.map(function (elem) { return _this.filtered.push(elem); });
                         }
-                        if (this.day == "Full-day") {
-                            var fill3 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                        else {
+                            if (this.day == "Full-day") {
+                                var fill3 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                                fill3.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                            else {
+                                var fill3 = third.filter(function (elem) { return elem.OctoberToApril == true; });
+                                fill3.map(function (elem) { return _this.filtered.push(elem); });
+                            }
                         }
-                        fill3.map(function (elem) { return _this.filtered.push(elem); });
                     }
                     /*  if (this.sixth == true){
                       let third = this.items.filter(elem => elem.day == this.day)
@@ -3024,31 +3058,53 @@ var BrowsePageComponent = /** @class */ (function () {
                             console.log("fitering full days");
                             var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
                             console.log(fill1);
+                            fill1.map(function (elem) { return _this.filtered.push(elem); });
                         }
-                        if (this.day == "Full-day") {
-                            (console.log("filtering half days"));
-                            var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                        else {
+                            if (this.day == "Full-day") {
+                                (console.log("filtering half days"));
+                                var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                                fill1.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                            else {
+                                var fill1 = first.filter(function (elem) { return elem.MayToJune == true; });
+                                fill1.map(function (elem) { return _this.filtered.push(elem); });
+                            }
                         }
                     }
                     if (this.second == true) {
                         var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
                         if (this.day == "Half-day") {
                             var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                            fill2.map(function (elem) { return _this.filtered.push(elem); });
                         }
-                        if (this.day == "Full-day") {
-                            var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                        else {
+                            if (this.day == "Full-day") {
+                                var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                                fill2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                            else {
+                                var fill2 = second.filter(function (elem) { return elem.MayToJune == true; });
+                                fill2.map(function (elem) { return _this.filtered.push(elem); });
+                            }
                         }
-                        fill2.map(function (elem) { return _this.filtered.push(elem); });
                     }
                     if (this.third == true) {
                         var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
                         if (this.day == "Half-day") {
                             var fill3 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                            fill3.map(function (elem) { return _this.filtered.push(elem); });
                         }
-                        if (this.day == "Full-day") {
-                            var fill3 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                        else {
+                            if (this.day == "Full-day") {
+                                var fill3 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                                fill3.map(function (elem) { return _this.filtered.push(elem); });
+                            }
+                            else {
+                                var fill3 = third.filter(function (elem) { return elem.MayToJune == true; });
+                                fill3.map(function (elem) { return _this.filtered.push(elem); });
+                            }
                         }
-                        fill3.map(function (elem) { return _this.filtered.push(elem); });
                     }
                     /*  if (this.sixth == true){
                       let third = this.items.filter(elem => elem.day == this.day)
@@ -3516,12 +3572,18 @@ var BrowsePageComponent = /** @class */ (function () {
                         console.log("fitering full days");
                         var fill5 = first.filter(function (elem) { return elem.day == "Half-day"; });
                         console.log(fill5);
+                        fill5.map(function (elem) { return _this.filtered.push(elem); });
                     }
-                    if (this.day == "Full-day") {
-                        (console.log("filtering half days"));
-                        var fill5 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    else {
+                        if (this.day == "Full-day") {
+                            (console.log("filtering half days"));
+                            var fill5 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                            fill5.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                        else {
+                            first.map(function (elem) { return _this.filtered.push(elem); });
+                        }
                     }
-                    fill5.map(function (elem) { return _this.filtered.push(elem); });
                 }
                 if (this.second == true) {
                     var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
@@ -3529,12 +3591,18 @@ var BrowsePageComponent = /** @class */ (function () {
                         console.log("fitering full days");
                         var fill6 = second.filter(function (elem) { return elem.day == "Half-day"; });
                         console.log(fill6);
+                        fill6.map(function (elem) { return _this.filtered.push(elem); });
                     }
-                    if (this.day == "Full-day") {
-                        (console.log("filtering half days"));
-                        var fill6 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    else {
+                        if (this.day == "Full-day") {
+                            (console.log("filtering half days"));
+                            var fill6 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                            fill6.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                        else {
+                            second.map(function (elem) { return _this.filtered.push(elem); });
+                        }
                     }
-                    fill6.map(function (elem) { return _this.filtered.push(elem); });
                 }
                 if (this.third == true) {
                     var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
@@ -3542,18 +3610,23 @@ var BrowsePageComponent = /** @class */ (function () {
                         console.log("fitering full days");
                         var fill7 = third.filter(function (elem) { return elem.day == "Half-day"; });
                         console.log(fill1);
+                        fill7.map(function (elem) { return _this.filtered.push(elem); });
                     }
-                    if (this.day == "Full-day") {
-                        (console.log("filtering half days"));
-                        var fill7 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                    else {
+                        if (this.day == "Full-day") {
+                            (console.log("filtering half days"));
+                            var fill7 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                            fill7.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                        else {
+                            third.map(function (elem) { return _this.filtered.push(elem); });
+                        }
                     }
-                    fill7.map(function (elem) { return _this.filtered.push(elem); });
                 }
-                /* if (this.sixth == true){
-                 let second = this.items.filter(elem => elem.day == this.day)
-                 second.map(elem=>this.filtered.push(elem))
+                if (this.sixth == true) {
+                    var second = this.items.filter(function (elem) { return elem.day == _this.day; });
+                    second.map(function (elem) { return _this.filtered.push(elem); });
                 }
-          */
             }
         }
         else {
@@ -3570,6 +3643,7 @@ var BrowsePageComponent = /** @class */ (function () {
     BrowsePageComponent.prototype.removeFilter4 = function (property) {
         var _this = this;
         this.fifth = false;
+        console.log("may to june deselected");
         if (this.first == true || this.second == true || this.third == true || this.sixth == true) {
             this.filtered = this.filtered.filter(function (elem) { return elem.MayToJune == false; });
             // check if an internal checkbox has been selected
@@ -3589,6 +3663,7 @@ var BrowsePageComponent = /** @class */ (function () {
                 }
                 if (this.second == true) {
                     var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                    console.log("second.." + second);
                     if (this.day == "Half-day") {
                         var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
                     }
@@ -3607,59 +3682,80 @@ var BrowsePageComponent = /** @class */ (function () {
                     }
                     fill3.map(function (elem) { return _this.filtered.push(elem); });
                 }
-                /*  if (this.sixth == true){
-                  let third = this.items.filter(elem => elem.day == this.day)
-          
-                  let thirdFilter = third.filter(elem => elem.OctoberToApril)
-                  thirdFilter.map(elem=>this.filtered.push(elem))
-                 }
-           */
+                if (this.sixth == true) {
+                    var third = this.items.filter(function (elem) { return elem.day == _this.day; });
+                    var thirdFilter = third.filter(function (elem) { return elem.OctoberToApril; });
+                    thirdFilter.map(function (elem) { return _this.filtered.push(elem); });
+                }
             }
             else {
                 console.log("internal not checked");
                 if (this.first == true) {
+                    console.log("first is true");
                     var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
                     if (this.day == "Half-day") {
                         console.log("fitering full days");
                         var fill5 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                        fill5.map(function (elem) { return _this.filtered.push(elem); });
                         console.log(fill5);
                     }
-                    if (this.day == "Full-day") {
-                        (console.log("filtering half days"));
-                        var fill5 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    else {
+                        if (this.day == "Full-day") {
+                            (console.log("filtering half days"));
+                            var fill5 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                            fill5.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                        else {
+                            first.map(function (elem) { return _this.filtered.push(elem); });
+                        }
                     }
-                    fill5.map(function (elem) { return _this.filtered.push(elem); });
                 }
                 if (this.second == true) {
+                    console.log("second is true");
                     var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
                     if (this.day == "Half-day") {
                         console.log("fitering full days");
-                        var fill6 = second.filter(function (elem) { return elem.day == "Half-day"; });
-                        console.log(fill6);
+                        var filt = second.filter(function (elem) { return elem.day == "Half-day"; });
+                        console.log(filt);
+                        filt.map(function (elem) { return _this.filtered.push(elem); });
                     }
-                    if (this.day == "Full-day") {
-                        (console.log("filtering half days"));
-                        var fill6 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    else {
+                        if (this.day == "Full-day") {
+                            (console.log("filtering half days"));
+                            var filt = second.filter(function (elem) { return elem.day == "Full-day"; });
+                            filt.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                        else {
+                            second.map(function (elem) { return _this.filtered.push(elem); });
+                        }
                     }
-                    fill6.map(function (elem) { return _this.filtered.push(elem); });
                 }
                 if (this.third == true) {
+                    console.log("third is true");
                     var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
                     if (this.day == "Half-day") {
                         console.log("fitering full days");
                         var fill7 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                        fill7.map(function (elem) { return _this.filtered.push(elem); });
                         console.log(fill1);
                     }
-                    if (this.day == "Full-day") {
-                        (console.log("filtering half days"));
-                        var fill7 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                    else {
+                        if (this.day == "Full-day") {
+                            (console.log("filtering half days"));
+                            var fill7 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                            fill7.map(function (elem) { return _this.filtered.push(elem); });
+                        }
+                        else {
+                            third.map(function (elem) { return _this.filtered.push(elem); });
+                        }
                     }
-                    fill7.map(function (elem) { return _this.filtered.push(elem); });
                 }
-                /*  if (this.sixth == true){
-                  let second = this.items.filter(elem => elem.day == this.day)
-                  second.map(elem=>this.filtered.push(elem))
-                 } */
+                if (this.sixth == true) {
+                    console.log("sixth is true");
+                    console.log(this.day);
+                    var sixth = this.items.filter(function (elem) { return elem.day == _this.day; });
+                    sixth.map(function (elem) { return _this.filtered.push(elem); });
+                }
             }
         }
         else {
@@ -3702,8 +3798,8 @@ var BrowsePageComponent = /** @class */ (function () {
     BrowsePageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-browse-page',
-            template: __webpack_require__(/*! ./browse-page.component.html */ "./src/pages/browse-page/browse-page.component.html"),
-            styles: [__webpack_require__(/*! ./browse-page.component.scss */ "./src/pages/browse-page/browse-page.component.scss")]
+            template: __webpack_require__(/*! ./browse-page.component.html */ "./src/learning-agenda/pages/browse-page/browse-page.component.html"),
+            styles: [__webpack_require__(/*! ./browse-page.component.scss */ "./src/learning-agenda/pages/browse-page/browse-page.component.scss")]
         }),
         __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"], angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"],
             _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"]])
@@ -3715,10 +3811,10 @@ var BrowsePageComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/pages/confirm-page/confirm-page.component.html":
-/*!************************************************************!*\
-  !*** ./src/pages/confirm-page/confirm-page.component.html ***!
-  \************************************************************/
+/***/ "./src/learning-agenda/pages/confirm-page/confirm-page.component.html":
+/*!****************************************************************************!*\
+  !*** ./src/learning-agenda/pages/confirm-page/confirm-page.component.html ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3726,10 +3822,10 @@ module.exports = "<div>\n  <app-header></app-header>\n</div>\n\n<div class=\"con
 
 /***/ }),
 
-/***/ "./src/pages/confirm-page/confirm-page.component.scss":
-/*!************************************************************!*\
-  !*** ./src/pages/confirm-page/confirm-page.component.scss ***!
-  \************************************************************/
+/***/ "./src/learning-agenda/pages/confirm-page/confirm-page.component.scss":
+/*!****************************************************************************!*\
+  !*** ./src/learning-agenda/pages/confirm-page/confirm-page.component.scss ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3737,10 +3833,10 @@ module.exports = ".outer {\n  margin-left: 2%;\n  margin-top: 2%; }\n\n.heading 
 
 /***/ }),
 
-/***/ "./src/pages/confirm-page/confirm-page.component.ts":
-/*!**********************************************************!*\
-  !*** ./src/pages/confirm-page/confirm-page.component.ts ***!
-  \**********************************************************/
+/***/ "./src/learning-agenda/pages/confirm-page/confirm-page.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/learning-agenda/pages/confirm-page/confirm-page.component.ts ***!
+  \**************************************************************************/
 /*! exports provided: ConfirmPageComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3783,8 +3879,8 @@ var ConfirmPageComponent = /** @class */ (function () {
     ConfirmPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-confirm-page',
-            template: __webpack_require__(/*! ./confirm-page.component.html */ "./src/pages/confirm-page/confirm-page.component.html"),
-            styles: [__webpack_require__(/*! ./confirm-page.component.scss */ "./src/pages/confirm-page/confirm-page.component.scss")]
+            template: __webpack_require__(/*! ./confirm-page.component.html */ "./src/learning-agenda/pages/confirm-page/confirm-page.component.html"),
+            styles: [__webpack_require__(/*! ./confirm-page.component.scss */ "./src/learning-agenda/pages/confirm-page/confirm-page.component.scss")]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
@@ -3796,10 +3892,10 @@ var ConfirmPageComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/pages/design-page/design-page.component.html":
-/*!**********************************************************!*\
-  !*** ./src/pages/design-page/design-page.component.html ***!
-  \**********************************************************/
+/***/ "./src/learning-agenda/pages/design-page/design-page.component.html":
+/*!**************************************************************************!*\
+  !*** ./src/learning-agenda/pages/design-page/design-page.component.html ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3807,10 +3903,10 @@ module.exports = "\n\n\n<div>\n  <app-header></app-header>\n</div>\n\n<div class
 
 /***/ }),
 
-/***/ "./src/pages/design-page/design-page.component.scss":
-/*!**********************************************************!*\
-  !*** ./src/pages/design-page/design-page.component.scss ***!
-  \**********************************************************/
+/***/ "./src/learning-agenda/pages/design-page/design-page.component.scss":
+/*!**************************************************************************!*\
+  !*** ./src/learning-agenda/pages/design-page/design-page.component.scss ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -3818,10 +3914,10 @@ module.exports = ".my-container {\n  max-width: 1455px;\n  margin: auto; }\n\n.m
 
 /***/ }),
 
-/***/ "./src/pages/design-page/design-page.component.ts":
-/*!********************************************************!*\
-  !*** ./src/pages/design-page/design-page.component.ts ***!
-  \********************************************************/
+/***/ "./src/learning-agenda/pages/design-page/design-page.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/learning-agenda/pages/design-page/design-page.component.ts ***!
+  \************************************************************************/
 /*! exports provided: DesignPageComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3830,7 +3926,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DesignPageComponent", function() { return DesignPageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
-/* harmony import */ var _models_activity__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../models/activity */ "./src/models/activity.ts");
+/* harmony import */ var _models_activity__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../models/activity */ "./src/learning-agenda/models/activity.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
@@ -3983,8 +4079,8 @@ var DesignPageComponent = /** @class */ (function () {
     DesignPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-design-page',
-            template: __webpack_require__(/*! ./design-page.component.html */ "./src/pages/design-page/design-page.component.html"),
-            styles: [__webpack_require__(/*! ./design-page.component.scss */ "./src/pages/design-page/design-page.component.scss")]
+            template: __webpack_require__(/*! ./design-page.component.html */ "./src/learning-agenda/pages/design-page/design-page.component.html"),
+            styles: [__webpack_require__(/*! ./design-page.component.scss */ "./src/learning-agenda/pages/design-page/design-page.component.scss")]
         }),
         __metadata("design:paramtypes", [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
@@ -3996,10 +4092,10 @@ var DesignPageComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/pages/itinerary-page/itinerary-page.component.html":
-/*!****************************************************************!*\
-  !*** ./src/pages/itinerary-page/itinerary-page.component.html ***!
-  \****************************************************************/
+/***/ "./src/learning-agenda/pages/itinerary-page/itinerary-page.component.html":
+/*!********************************************************************************!*\
+  !*** ./src/learning-agenda/pages/itinerary-page/itinerary-page.component.html ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -4007,10 +4103,10 @@ module.exports = "\n<div>\n  <app-main-header></app-main-header>\n \n<div class=
 
 /***/ }),
 
-/***/ "./src/pages/itinerary-page/itinerary-page.component.scss":
-/*!****************************************************************!*\
-  !*** ./src/pages/itinerary-page/itinerary-page.component.scss ***!
-  \****************************************************************/
+/***/ "./src/learning-agenda/pages/itinerary-page/itinerary-page.component.scss":
+/*!********************************************************************************!*\
+  !*** ./src/learning-agenda/pages/itinerary-page/itinerary-page.component.scss ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -4018,10 +4114,10 @@ module.exports = ".my-container {\n  margin: auto; }\n\n.img-resize {\n  height:
 
 /***/ }),
 
-/***/ "./src/pages/itinerary-page/itinerary-page.component.ts":
-/*!**************************************************************!*\
-  !*** ./src/pages/itinerary-page/itinerary-page.component.ts ***!
-  \**************************************************************/
+/***/ "./src/learning-agenda/pages/itinerary-page/itinerary-page.component.ts":
+/*!******************************************************************************!*\
+  !*** ./src/learning-agenda/pages/itinerary-page/itinerary-page.component.ts ***!
+  \******************************************************************************/
 /*! exports provided: ItineraryPageComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4080,8 +4176,8 @@ var ItineraryPageComponent = /** @class */ (function () {
     ItineraryPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-itinerary-page',
-            template: __webpack_require__(/*! ./itinerary-page.component.html */ "./src/pages/itinerary-page/itinerary-page.component.html"),
-            styles: [__webpack_require__(/*! ./itinerary-page.component.scss */ "./src/pages/itinerary-page/itinerary-page.component.scss")]
+            template: __webpack_require__(/*! ./itinerary-page.component.html */ "./src/learning-agenda/pages/itinerary-page/itinerary-page.component.html"),
+            styles: [__webpack_require__(/*! ./itinerary-page.component.scss */ "./src/learning-agenda/pages/itinerary-page/itinerary-page.component.scss")]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
@@ -4093,21 +4189,21 @@ var ItineraryPageComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/pages/landing-page/landing-page.component.html":
-/*!************************************************************!*\
-  !*** ./src/pages/landing-page/landing-page.component.html ***!
-  \************************************************************/
+/***/ "./src/learning-agenda/pages/landing-page/landing-page.component.html":
+/*!****************************************************************************!*\
+  !*** ./src/learning-agenda/pages/landing-page/landing-page.component.html ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n  <app-main-header></app-main-header>\n  <div class=\"my-header\"><div class=\"h1\"> PLAN A SCHOOL TRIP</div>\n  \n  <div class=\"h2\"> PLAN YOUR DAY AT THE MUSEUM</div>\n  <div class=\"h3\"> <div class=\"my-btn\" (click)=\"navigateToBrowsePage()\">BROWSE ITINERARIES</div><div class=\"my-btn\">CREATE YOUR OWN</div></div>\n\n</div>\n\n<div class=\"my-container\">\n  <div class=\"my-bg\" >\n    <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-resize\"> \n\n\n  \n  \n  </div>\n\n\n\n  </div>\n  \n</div>\n<div>\n  <app-main-footer></app-main-footer>\n</div>\n\n\n \n\n"
+module.exports = "\n<div>\n<!--   <app-main-header></app-main-header> -->\n  <div class=\"my-header\"><div class=\"h1\"> PLAN A SCHOOL TRIP</div>\n  \n  <div class=\"h2\"> PLAN YOUR DAY AT THE MUSEUM</div>\n  <div class=\"h3\"> <div class=\"my-btn\" (click)=\"navigateToBrowsePage()\">BROWSE ITINERARIES</div><div class=\"my-btn\">CREATE YOUR OWN</div></div>\n\n</div>\n\n<div class=\"my-container\">\n  <div class=\"my-bg\" >\n    <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-resize\"> \n\n\n  \n  \n  </div>\n\n\n\n  </div>\n  \n</div>\n<div>\n<!--   <app-main-footer></app-main-footer> -->\n</div>\n\n\n \n\n"
 
 /***/ }),
 
-/***/ "./src/pages/landing-page/landing-page.component.scss":
-/*!************************************************************!*\
-  !*** ./src/pages/landing-page/landing-page.component.scss ***!
-  \************************************************************/
+/***/ "./src/learning-agenda/pages/landing-page/landing-page.component.scss":
+/*!****************************************************************************!*\
+  !*** ./src/learning-agenda/pages/landing-page/landing-page.component.scss ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -4115,10 +4211,10 @@ module.exports = ".my-container {\n  margin: auto; }\n\n.img-resize {\n  height:
 
 /***/ }),
 
-/***/ "./src/pages/landing-page/landing-page.component.ts":
-/*!**********************************************************!*\
-  !*** ./src/pages/landing-page/landing-page.component.ts ***!
-  \**********************************************************/
+/***/ "./src/learning-agenda/pages/landing-page/landing-page.component.ts":
+/*!**************************************************************************!*\
+  !*** ./src/learning-agenda/pages/landing-page/landing-page.component.ts ***!
+  \**************************************************************************/
 /*! exports provided: LandingPageComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4163,8 +4259,8 @@ var LandingPageComponent = /** @class */ (function () {
     LandingPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-landing-page',
-            template: __webpack_require__(/*! ./landing-page.component.html */ "./src/pages/landing-page/landing-page.component.html"),
-            styles: [__webpack_require__(/*! ./landing-page.component.scss */ "./src/pages/landing-page/landing-page.component.scss")]
+            template: __webpack_require__(/*! ./landing-page.component.html */ "./src/learning-agenda/pages/landing-page/landing-page.component.html"),
+            styles: [__webpack_require__(/*! ./landing-page.component.scss */ "./src/learning-agenda/pages/landing-page/landing-page.component.scss")]
         }),
         __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"], angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
@@ -4176,10 +4272,10 @@ var LandingPageComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/pages/submit-page/submit-page.component.html":
-/*!**********************************************************!*\
-  !*** ./src/pages/submit-page/submit-page.component.html ***!
-  \**********************************************************/
+/***/ "./src/learning-agenda/pages/submit-page/submit-page.component.html":
+/*!**************************************************************************!*\
+  !*** ./src/learning-agenda/pages/submit-page/submit-page.component.html ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -4187,10 +4283,10 @@ module.exports = "<div>\n  <app-header></app-header>\n</div>\n\n<div class=\"con
 
 /***/ }),
 
-/***/ "./src/pages/submit-page/submit-page.component.scss":
-/*!**********************************************************!*\
-  !*** ./src/pages/submit-page/submit-page.component.scss ***!
-  \**********************************************************/
+/***/ "./src/learning-agenda/pages/submit-page/submit-page.component.scss":
+/*!**************************************************************************!*\
+  !*** ./src/learning-agenda/pages/submit-page/submit-page.component.scss ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -4198,10 +4294,10 @@ module.exports = ""
 
 /***/ }),
 
-/***/ "./src/pages/submit-page/submit-page.component.ts":
-/*!********************************************************!*\
-  !*** ./src/pages/submit-page/submit-page.component.ts ***!
-  \********************************************************/
+/***/ "./src/learning-agenda/pages/submit-page/submit-page.component.ts":
+/*!************************************************************************!*\
+  !*** ./src/learning-agenda/pages/submit-page/submit-page.component.ts ***!
+  \************************************************************************/
 /*! exports provided: SubmitPageComponent */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4231,14 +4327,97 @@ var SubmitPageComponent = /** @class */ (function () {
     SubmitPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-submit-page',
-            template: __webpack_require__(/*! ./submit-page.component.html */ "./src/pages/submit-page/submit-page.component.html"),
-            styles: [__webpack_require__(/*! ./submit-page.component.scss */ "./src/pages/submit-page/submit-page.component.scss")]
+            template: __webpack_require__(/*! ./submit-page.component.html */ "./src/learning-agenda/pages/submit-page/submit-page.component.html"),
+            styles: [__webpack_require__(/*! ./submit-page.component.scss */ "./src/learning-agenda/pages/submit-page/submit-page.component.scss")]
         }),
         __metadata("design:paramtypes", [])
     ], SubmitPageComponent);
     return SubmitPageComponent;
 }());
 
+
+
+/***/ }),
+
+/***/ "./src/learning-agenda/router.ts":
+/*!***************************************!*\
+  !*** ./src/learning-agenda/router.ts ***!
+  \***************************************/
+/*! exports provided: AppRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/landing-page/landing-page.component */ "./src/learning-agenda/pages/landing-page/landing-page.component.ts");
+/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/design-page/design-page.component */ "./src/learning-agenda/pages/design-page/design-page.component.ts");
+/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/confirm-page/confirm-page.component */ "./src/learning-agenda/pages/confirm-page/confirm-page.component.ts");
+/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/submit-page/submit-page.component */ "./src/learning-agenda/pages/submit-page/submit-page.component.ts");
+/* harmony import */ var _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/browse-page/browse-page.component */ "./src/learning-agenda/pages/browse-page/browse-page.component.ts");
+/* harmony import */ var _pages_itinerary_page_itinerary_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/itinerary-page/itinerary-page.component */ "./src/learning-agenda/pages/itinerary-page/itinerary-page.component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+var routes = [
+    { path: '', redirectTo: 'LandingPage', pathMatch: 'full' },
+    { path: 'LandingPage', component: _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_2__["LandingPageComponent"] },
+    { path: 'DesignPage', component: _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_3__["DesignPageComponent"] },
+    { path: 'ConfirmPage', component: _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_4__["ConfirmPageComponent"] },
+    { path: 'SubmitPage', component: _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_5__["SubmitPageComponent"] },
+    { path: 'BrowsePage', component: _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_6__["BrowsePageComponent"] },
+    { path: 'ItineraryPage/:id', component: _pages_itinerary_page_itinerary_page_component__WEBPACK_IMPORTED_MODULE_7__["ItineraryPageComponent"] }
+];
+var AppRoutingModule = /** @class */ (function () {
+    function AppRoutingModule() {
+    }
+    AppRoutingModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"].forRoot(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterModule"]]
+        })
+    ], AppRoutingModule);
+    return AppRoutingModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/main.ts":
+/*!*********************!*\
+  !*** ./src/main.ts ***!
+  \*********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
+}
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
+    .catch(function (err) { return console.log(err); });
 
 
 /***/ }),
