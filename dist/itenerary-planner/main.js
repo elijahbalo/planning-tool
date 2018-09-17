@@ -170,41 +170,6 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/environments/environment.ts":
-/*!*****************************************!*\
-  !*** ./src/environments/environment.ts ***!
-  \*****************************************/
-/*! exports provided: environment */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
-var environment = {
-    production: false,
-    firebase: {
-        apiKey: "AIzaSyAqb1AZM_xWPycGFuWByknU7WPsTQ0auxk",
-        authDomain: "planning-tool-532b0.firebaseapp.com",
-        databaseURL: "https://planning-tool-532b0.firebaseio.com",
-        projectId: "planning-tool-532b0",
-        storageBucket: "planning-tool-532b0.appspot.com",
-        messagingSenderId: "429282485430"
-    }
-};
-/*
- * In development mode, to ignore zone related error stack frames such as
- * `zone.run`, `zoneDelegate.invokeTask` for easier debugging, you can
- * import the following file, but please comment it out in production mode
- * because it will have performance impact when throw error
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
-
-
-/***/ }),
-
 /***/ "./src/learning-agenda/components/activity-card/activity-card.component.html":
 /*!***********************************************************************************!*\
   !*** ./src/learning-agenda/components/activity-card/activity-card.component.html ***!
@@ -293,7 +258,7 @@ var ActivityCardComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div *ngIf=\"!isSet\"> \n<div class=\"flex\">\n  <div class=\"time\">\n  <div  class=\"first1\" ><span class=\"value\" >{{tConvert(itinerary.time)}}</span></div>\n\n  <div class=\"second1\"></div>\n  \n  </div>\n  \n  <div *ngIf=\"swap\" class=\"big-box\">\n  \n  \n   <app-swap-box  *ngFor=\"let item of items | async\"  class=\"activities\" [item]=\"item\" [ord]=\"ord\" [add]=\"add\" (swap)=\"fixItem($event)\"></app-swap-box>\n\n\n \n  </div>\n  <div *ngIf=\"!swap\" class=\"big-box2\" >\n  <div class=\"img\">\n    <img class=\"img-responsive img\" src=\"{{itinerary.img}}\">\n    <div style=\"cursor:pointer;\" (click)=\"setSwap()\">\n    <div *ngIf=\"showSwap\" class=\"swap-text1\">\n      <svg width=\"20\" height=\"22\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"#fff\" fill-rule=\"evenodd\"><path d=\"M12.626 4.511a1.005 1.005 0 0 0 .037 2.01l3.647-.135c.553-.021.985-.484.968-1.036-.002-.036-.002-.036-.004-.046a.488.488 0 0 1 .003.055v-.052l-.134-3.573a1.006 1.006 0 0 0-2.009.075l.049 1.293C11.649.79 6.9 1.092 3.68 4.004A9.443 9.443 0 0 0 .84 13.238a1.005 1.005 0 1 0 1.953-.473 7.433 7.433 0 0 1 2.237-7.27 7.45 7.45 0 0 1 8.537-1.019l-.941.035zm3.652.834v-.024.024zm-.005.041l-3.61.135a.005.005 0 0 1-.005-.005c0-.003.002-.005.005-.005l2.459-.092 1.156-.043c-.001.009-.003.01-.005.01zm-.85-.85a8.444 8.444 0 0 0-11.064.217A8.433 8.433 0 0 0 1.82 13a8.413 8.413 0 0 1 2.531-8.255 8.456 8.456 0 0 1 11.05-.24l.861.714-.13-3.447c.008-.006.141 3.476.141 3.476l-.85-.712zm.858.882l-.003-.042a.34.34 0 0 0 .003.042zM7.542 17.573a1.005 1.005 0 0 0-.179-2.002l-3.598.323c-.553.05-.961.538-.912 1.09l.323 3.598c.046.52.482.916 1 .916.045-.001.045-.001.089-.004.554-.05.962-.538.913-1.091L5.07 19.21A9.45 9.45 0 0 0 10.17 20.7a9.406 9.406 0 0 0 6.33-2.436 9.443 9.443 0 0 0 2.842-9.234 1.005 1.005 0 1 0-1.953.473 7.434 7.434 0 0 1-2.237 7.27 7.399 7.399 0 0 1-4.983 1.918 7.446 7.446 0 0 1-3.759-1.015l1.132-.102zm-3.693-.678c0-.003.002-.005.005-.005l3.598-.323c.003 0 .005.002.005.005a.005.005 0 0 1-.005.005l-2.477.222-1.125.101v-.005zm.846.783a8.424 8.424 0 0 0 5.474 2.012 8.398 8.398 0 0 0 5.654-2.176 8.434 8.434 0 0 0 2.538-8.247 8.414 8.414 0 0 1-2.531 8.254 8.407 8.407 0 0 1-5.66 2.178 8.433 8.433 0 0 1-5.377-1.926l-.923-.763.312 3.482c-.008.006-.327-3.531-.327-3.531l.84.717zM3.85 16.9l-.06.005.065.056-.005-.06z\"/></g></svg>\n    </div>\n    <div *ngIf=\"showSwap\" class=\"swap-text\">Swap</div>\n    </div>\n  </div>\n  \n  <div class=\"textt\">\n  <div class=\"title1\">{{itinerary.name}}</div> \n  <div *ngIf=\"!det\" class=\"bod\" appEllipsis>\n{{itinerary.description}}\n  </div>\n  <div *ngIf=\"det\" class=\"bod1\">\n    {{itinerary.description}}\n      </div>\n      \n      <div *ngIf=\"det\" class=\"type\">{{itinerary.type}}</div>\n\n  </div>\n  \n  \n  <div class=\"icon\">\n  <div class=\"info\">\n    <img class=\"img-responsive img-res\" src=\"../assets/images/info2.png\">\n  </div>\n  <div class=\"det\" (click)=\"toggleModal()\">\n  Details\n  </div>    \n      </div>\n  </div>\n  \n  </div>\n  </div>\n\n\n  <div *ngIf=\"isSet\"> \n    <div class=\"flex\">\n      <div class=\"time\">\n      <div  class=\"first1\" ><span class=\"value\" >{{tConvert(itinerary.time)}}</span></div>\n\n      <div class=\"second1\"></div>\n      \n      </div>\n      \n      <div *ngIf=\"swap\" class=\"big-box\">\n  \n  \n          <app-swap-box  *ngFor=\"let item of items | async\"  class=\"activities\" [item]=\"item\" [ord]=\"ord\" (swap)=\"fixItem($event)\"></app-swap-box>\n       \n       \n        \n         </div>\n      <div *ngIf=\"!swap\" class=\"big-box2\" >\n      <div class=\"img\">\n        <img class=\"img-responsive img\" src=\"{{activity.img}}\">\n        <div *ngIf=\"showSwap\" class=\"swap-text\" (click)=\"setSwap()\">swap</div>\n      </div>\n      \n      <div class=\"textt\">\n      <div class=\"title1\">{{activity.name}}</div>\n      <div *ngIf=\"!det\" class=\"bod\" appEllipsis>\n    {{activity.description}}\n      </div>\n      <div *ngIf=\"det\" class=\"bod1\">\n        {{activity.description}}\n          </div>\n          \n          <div *ngIf=\"det\" class=\"type\">{{activity.type}}</div>\n    \n      </div>\n      \n      \n      <div class=\"icon\">\n      <div class=\"info\">\n        <img class=\"img-responsive img-res\" src=\"../assets/images/info2.png\">\n      </div>\n      <div class=\"det\" (click)=\"toggleModal()\">\n      Details\n      </div>    \n          </div>\n      </div>\n      \n      </div>\n      </div>\n\n\n      <app-details [modal]=\"modal\" [item]=\"itinerary\" (set)=\"setModalFromChild($event)\"></app-details>\n     "
+module.exports = "<div *ngIf=\"!isSet\">\n  <div class=\"flex\">\n    <div class=\"time\">\n      <div class=\"first1\">\n        <span class=\"value\">{{tConvert(itinerary.time)}}</span>\n      </div>\n\n      <div class=\"second1\"></div>\n\n    </div>\n\n    <div *ngIf=\"swap\" class=\"big-box\">\n\n\n      <app-swap-box *ngFor=\"let item of items | async\" class=\"activities\" [item]=\"item\" [ord]=\"ord\" [add]=\"add\" (swap)=\"fixItem($event)\"></app-swap-box>\n\n\n\n    </div>\n    <div *ngIf=\"!swap\" class=\"big-box2\">\n      <div class=\"img\">\n        <img class=\"img-responsive img\" src=\"{{itinerary.img}}\">\n        <div style=\"cursor:pointer;\" (click)=\"setSwap()\">\n          <div *ngIf=\"showSwap\" class=\"swap-text1\">\n            <svg width=\"20\" height=\"22\" xmlns=\"http://www.w3.org/2000/svg\">\n              <g fill=\"#fff\" fill-rule=\"evenodd\">\n                <path d=\"M12.626 4.511a1.005 1.005 0 0 0 .037 2.01l3.647-.135c.553-.021.985-.484.968-1.036-.002-.036-.002-.036-.004-.046a.488.488 0 0 1 .003.055v-.052l-.134-3.573a1.006 1.006 0 0 0-2.009.075l.049 1.293C11.649.79 6.9 1.092 3.68 4.004A9.443 9.443 0 0 0 .84 13.238a1.005 1.005 0 1 0 1.953-.473 7.433 7.433 0 0 1 2.237-7.27 7.45 7.45 0 0 1 8.537-1.019l-.941.035zm3.652.834v-.024.024zm-.005.041l-3.61.135a.005.005 0 0 1-.005-.005c0-.003.002-.005.005-.005l2.459-.092 1.156-.043c-.001.009-.003.01-.005.01zm-.85-.85a8.444 8.444 0 0 0-11.064.217A8.433 8.433 0 0 0 1.82 13a8.413 8.413 0 0 1 2.531-8.255 8.456 8.456 0 0 1 11.05-.24l.861.714-.13-3.447c.008-.006.141 3.476.141 3.476l-.85-.712zm.858.882l-.003-.042a.34.34 0 0 0 .003.042zM7.542 17.573a1.005 1.005 0 0 0-.179-2.002l-3.598.323c-.553.05-.961.538-.912 1.09l.323 3.598c.046.52.482.916 1 .916.045-.001.045-.001.089-.004.554-.05.962-.538.913-1.091L5.07 19.21A9.45 9.45 0 0 0 10.17 20.7a9.406 9.406 0 0 0 6.33-2.436 9.443 9.443 0 0 0 2.842-9.234 1.005 1.005 0 1 0-1.953.473 7.434 7.434 0 0 1-2.237 7.27 7.399 7.399 0 0 1-4.983 1.918 7.446 7.446 0 0 1-3.759-1.015l1.132-.102zm-3.693-.678c0-.003.002-.005.005-.005l3.598-.323c.003 0 .005.002.005.005a.005.005 0 0 1-.005.005l-2.477.222-1.125.101v-.005zm.846.783a8.424 8.424 0 0 0 5.474 2.012 8.398 8.398 0 0 0 5.654-2.176 8.434 8.434 0 0 0 2.538-8.247 8.414 8.414 0 0 1-2.531 8.254 8.407 8.407 0 0 1-5.66 2.178 8.433 8.433 0 0 1-5.377-1.926l-.923-.763.312 3.482c-.008.006-.327-3.531-.327-3.531l.84.717zM3.85 16.9l-.06.005.065.056-.005-.06z\"\n                />\n              </g>\n            </svg>\n          </div>\n          <div *ngIf=\"showSwap\" class=\"swap-text\">Swap</div>\n        </div>\n      </div>\n\n      <div class=\"textt\">\n        <div class=\"title1\">{{itinerary.name}}</div>\n        <div *ngIf=\"!det\" class=\"bod\" appEllipsis>\n          {{itinerary.description}}\n        </div>\n        <div *ngIf=\"det\" class=\"bod1\">\n          {{itinerary.description}}\n        </div>\n\n        <div *ngIf=\"det\" class=\"type\">{{itinerary.type}}</div>\n\n      </div>\n\n\n      <div class=\"icon\">\n        <div class=\"info\">\n\n        </div>\n        <div class=\"det\" (click)=\"toggleModal()\">\n          Details\n        </div>\n      </div>\n    </div>\n\n  </div>\n</div>\n\n\n<div *ngIf=\"isSet\">\n  <div class=\"flex\">\n    <div class=\"time\">\n      <div class=\"first1\">\n        <span class=\"value\">{{tConvert(itinerary.time)}}</span>\n      </div>\n\n      <div class=\"second1\"></div>\n\n    </div>\n\n    <div *ngIf=\"swap\" class=\"big-box\">\n\n\n      <app-swap-box *ngFor=\"let item of items | async\" class=\"activities\" [item]=\"item\" [ord]=\"ord\" (swap)=\"fixItem($event)\"></app-swap-box>\n\n\n\n    </div>\n    <div *ngIf=\"!swap\" class=\"big-box2\">\n      <div class=\"img\">\n        <img class=\"img-responsive img\" src=\"{{activity.img}}\">\n        <div *ngIf=\"showSwap\" class=\"swap-text\" (click)=\"setSwap()\">swap</div>\n      </div>\n\n      <div class=\"textt\">\n        <div class=\"title1\">{{activity.name}}</div>\n        <div *ngIf=\"!det\" class=\"bod\" appEllipsis>\n          {{activity.description}}\n        </div>\n        <div *ngIf=\"det\" class=\"bod1\">\n          {{activity.description}}\n        </div>\n\n        <div *ngIf=\"det\" class=\"type\">{{activity.type}}</div>\n\n      </div>\n\n\n      <div class=\"icon\">\n        <div class=\"info\">\n\n        </div>\n        <div class=\"det\" (click)=\"toggleModal()\">\n          Details\n        </div>\n      </div>\n    </div>\n\n  </div>\n</div>\n\n\n<app-details [modal]=\"modal\" [item]=\"itinerary\" (set)=\"setModalFromChild($event)\"></app-details>"
 
 /***/ }),
 
@@ -320,6 +285,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActivityDisplayComponent", function() { return ActivityDisplayComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -339,6 +305,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 };
 
 
+
 var ActivityDisplayComponent = /** @class */ (function () {
     function ActivityDisplayComponent(db) {
         this.db = db;
@@ -354,20 +321,23 @@ var ActivityDisplayComponent = /** @class */ (function () {
         this.innerSwap = false;
     }
     ActivityDisplayComponent.prototype.ngOnInit = function () {
-        this.items = this.db.collection('/activities').snapshotChanges().map(function (actions) {
+        this.items = this.db
+            .collection('/activities')
+            .snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (actions) {
             return actions.map(function (a) {
                 var data = a.payload.doc.data();
                 var id = a.payload.doc.id;
                 return __assign({ id: id }, data);
             });
-        });
+        }));
         console.log(this.itinerary.time);
-        this.activities = JSON.parse(localStorage.getItem("itinerary"));
+        this.activities = JSON.parse(localStorage.getItem('itinerary'));
         console.log(this.activities);
         if (this.itinerary.time) {
             localStorage.setItem('c_time', JSON.stringify(this.itinerary.time));
         }
-        this.newSet = JSON.parse(localStorage.getItem("_set"));
+        this.newSet = JSON.parse(localStorage.getItem('_set'));
         if (this.itinerary == 0) {
             this.swap = true;
             this.add = true;
@@ -406,20 +376,20 @@ var ActivityDisplayComponent = /** @class */ (function () {
         }
     };
     ActivityDisplayComponent.prototype.fixItem = function (item) {
-        var act = JSON.parse(localStorage.getItem("itinerary"));
+        var act = JSON.parse(localStorage.getItem('itinerary'));
         console.log(act);
         if (this.newSet == true) {
             if (this.itinerary.time) {
-                console.log("do nothing");
+                console.log('do nothing');
             }
             else {
-                item.time = this.timeConvert(act[(act.length) - 2].time, act[(act.length) - 2].length).toString();
+                item.time = this.timeConvert(act[act.length - 2].time, act[act.length - 2].length).toString();
             }
             this.item.emit(item);
             localStorage.setItem('_set', JSON.stringify(false));
         }
         this.swap = false;
-        var order = JSON.parse(localStorage.getItem("n_e_o"));
+        var order = JSON.parse(localStorage.getItem('n_e_o'));
         console.log(order);
         var index = act.findIndex(function (i) { return i.order === order; });
         console.log(index);
@@ -428,7 +398,7 @@ var ActivityDisplayComponent = /** @class */ (function () {
             item.time = this.timeConvert(act[index2].time, act[index2].length).toString();
             console.log(act);
             act.splice(index, 1, item);
-            localStorage.setItem("itinerary", JSON.stringify(act));
+            localStorage.setItem('itinerary', JSON.stringify(act));
             this.notify.emit(true);
         }
         this.isSet = true;
@@ -455,11 +425,11 @@ var ActivityDisplayComponent = /** @class */ (function () {
     };
     ActivityDisplayComponent.prototype.timeConvert = function (data, length) {
         var index;
-        var h = "";
-        var m = "";
+        var h = '';
+        var m = '';
         for (var i = 0; i < data.length; i++) {
             var strChar = data.charAt(i);
-            if (strChar == ":") {
+            if (strChar == ':') {
                 index = data.indexOf(strChar);
                 console.log(index);
             }
@@ -472,7 +442,7 @@ var ActivityDisplayComponent = /** @class */ (function () {
             var str = data.charAt(j);
             m += str;
         }
-        var time = (Number(h) * 60) + Number(m) + length;
+        var time = Number(h) * 60 + Number(m) + length;
         this.my_time = time;
         var minutes = time % 60;
         var hours = (time - minutes) / 60;
@@ -486,8 +456,11 @@ var ActivityDisplayComponent = /** @class */ (function () {
     };
     ActivityDisplayComponent.prototype.tConvert = function (time) {
         // Check correct time format and split into components
-        time = time.toString().match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+        time = time
+            .toString()
+            .match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
         if (time.length > 1) {
+            // If time format correct
             time = time.slice(1); // Remove full string match value
             time[5] = +time[0] < 12 ? ' AM' : ' PM'; // Set AM/PM
             time[0] = +time[0] % 12 || 12; // Adjust hours
@@ -622,17 +595,21 @@ var ActivityComponent = /** @class */ (function () {
     }
     ActivityComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.items = this.db.collection('/activities').snapshotChanges().map(function (actions) {
+        this.items = this.db
+            .collection('/activities')
+            .snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (actions) {
             return actions.map(function (a) {
                 var data = a.payload.doc.data();
                 var id = a.payload.doc.id;
                 return __assign({ id: id }, data);
             });
-        });
+        }));
         this.date = JSON.parse(localStorage.getItem('dates'));
-        this._http.get('https://picsum.photos/list')
+        this._http
+            .get('https://picsum.photos/list')
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function (images) { return _this._randomImageUrls(images); }))
-            .subscribe(function (images) { return _this.images = images; });
+            .subscribe(function (images) { return (_this.images = images); });
     };
     ActivityComponent.prototype.itemChange = function (event) {
         this.selectedItem = event;
@@ -666,7 +643,7 @@ var ActivityComponent = /** @class */ (function () {
         //this.remove.emit(event);
     };
     ActivityComponent.prototype.toggleSwap2 = function () {
-        this.swap = !(this.swap);
+        this.swap = !this.swap;
     };
     ActivityComponent.prototype._randomImageUrls = function (images) {
         return [1, 2, 3].map(function () {
@@ -1014,7 +991,7 @@ var CalendarComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n    <div class=\"card-container\" (click)=\"navigateToDesign()\">\n       <div style=\"position:relative\">\n         <img src=\"{{item.img}}\" alt=\"Random first slide\" class=\"img-responsive img-resize\">\n      <div class=\"text\">\n        <div class=\"text1\">{{item.grades}}, {{item.day}}</div>\n          <div class=text2>{{item.title}}</div>\n          <div class=\"text3\">{{item.timeOfYear}}</div>\n          \n          </div>\n          <div class=\"d-icon\">i</div>\n          <div class=\"details\">Details</div>\n      </div>\n      <div>\n        \n<!--     <div *ngIf=\"view\" class=\"layers\" >\n        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n        natoque penatibus et magnis dis parturient montes, nascetur \n        ridiculus mus. Donec quam felis, ultricies nec.\n    </div>\n    <div *ngIf=\"!view\" class=\"layers\" >\n        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n        natoque penatibus et magnis dis parturient montes, nascetur \n        ridiculus mus. Donec quam felis, ultricies nec.\n    </div> -->\n    </div>\n    <!-- <div *ngIf=\"view\" class=\"layers link\" >\n      <a href=\"javascript:void(0)\" (click)=\"navigateToDesign()\">VIEW THIS ITINERARY</a>\n     <svg><img src=\"../../assets/images/right-arrow.png\"></svg>\n    </div> -->\n    </div>\n  "
+module.exports = "<div class=\"shadow\">\n    <div class=\"card-container\" (click)=\"navigateToDesign()\">\n        <div>\n            <div class=\"my-bg\">\n                <img src=\"{{item.img}}\" alt=\"Random first slide\" class=\"img-responsive img-resize\">\n            </div>\n            <div class=\"text\">\n                <div class=\"text1\">{{item.grades}}, {{item.day}}</div>\n                <div class=text2>{{item.title}}</div>\n                <div class=\"text3\">{{item.timeOfYear}}</div>\n\n            </div>\n            <div class=\"d-icon\">i</div>\n            <div class=\"details\">Details</div>\n        </div>\n        <div>\n\n            <!--     <div *ngIf=\"view\" class=\"layers\" >\n        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n        natoque penatibus et magnis dis parturient montes, nascetur \n        ridiculus mus. Donec quam felis, ultricies nec.\n    </div>\n    <div *ngIf=\"!view\" class=\"layers\" >\n        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. \n        Aenean commodo ligula eget dolor. Aenean massa. Cum sociis \n        natoque penatibus et magnis dis parturient montes, nascetur \n        ridiculus mus. Donec quam felis, ultricies nec.\n    </div> -->\n        </div>\n        <!-- <div *ngIf=\"view\" class=\"layers link\" >\n      <a href=\"javascript:void(0)\" (click)=\"navigateToDesign()\">VIEW THIS ITINERARY</a>\n     <svg><img src=\"../../assets/images/right-arrow.png\"></svg>\n    </div> -->\n    </div>\n</div>"
 
 /***/ }),
 
@@ -1025,7 +1002,7 @@ module.exports = "\n    <div class=\"card-container\" (click)=\"navigateToDesign
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".card-container {\n  height: 100%;\n  width: 100%;\n  border-width: 1px;\n  cursor: pointer;\n  border-style: solid;\n  border-color: #E0E0E0;\n  background: transparent;\n  background-image: initial;\n  background-position-x: initial;\n  background-position-y: initial;\n  background-size: initial;\n  background-attachment: initial;\n  background-origin: initial;\n  background-clip: initial;\n  background-color: transparent; }\n\n#slideshow {\n  width: 100%; }\n\n.text {\n  position: absolute;\n  margin-left: 2.5%;\n  bottom: 20px;\n  left: 20px;\n  line-height: 100%;\n  max-width: 80%;\n  z-index: 2;\n  color: #fff;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1.5rem;\n  background-color: rgba(0, 0, 0, 0.1); }\n\n.text1 {\n  font-family: Arial;\n  font-size: 0.8rem; }\n\n.text2 {\n  font-weight: bold; }\n\n.text3 {\n  font-weight: lighter;\n  font-size: 1rem; }\n\n.des {\n  padding-left: 20px;\n  padding-top: 5px;\n  font-family: Arial;\n  font-size: 8; }\n\n.layers {\n  font-family: Arial;\n  text-align: justify;\n  padding-left: 20px;\n  padding-right: 20px;\n  padding-top: 5px;\n  padding-bottom: 20px;\n  font-size: 14;\n  margin-top: 2%;\n  color: #4a4a4a;\n  cursor: pointer; }\n\n.link {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-top: 4%;\n  margin-bottom: 2%; }\n\n.img-resize {\n  height: 230px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\na:link {\n  text-decoration: none;\n  color: #4a4a4a; }\n\n.details {\n  position: absolute;\n  bottom: 13px;\n  right: 17px;\n  line-height: 100%;\n  text-decoration: underline;\n  max-width: 80%;\n  color: #fff;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.7rem;\n  background-color: rgba(0, 0, 0, 0.2); }\n\n.d-icon {\n  position: absolute;\n  bottom: 33px;\n  right: 25px;\n  color: #fff;\n  border-color: #fff;\n  border-style: solid;\n  font-size: 0.7em;\n  border-width: 2px;\n  padding-top: 0.5%;\n  padding-bottom: 0.5%;\n  padding-left: 2%;\n  padding-right: 2%;\n  border-radius: 50%;\n  background-color: rgba(0, 0, 0, 0.2); }\n"
+module.exports = ".shadow {\n  position: relative;\n  height: 230px;\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.5); }\n\n.card-container {\n  height: 100%;\n  width: 100%;\n  border-width: 1px;\n  cursor: pointer;\n  border-style: solid;\n  border-color: #E0E0E0;\n  background: transparent;\n  background-image: initial;\n  background-position-x: initial;\n  background-position-y: initial;\n  background-size: initial;\n  background-attachment: initial;\n  background-origin: initial;\n  background-clip: initial;\n  background-color: transparent; }\n\n#slideshow {\n  width: 100%; }\n\n.text {\n  position: absolute;\n  margin-left: 2.5%;\n  bottom: 20px;\n  left: 20px;\n  line-height: 100%;\n  max-width: 80%;\n  z-index: 2;\n  color: #fff;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1.5rem; }\n\n.text1 {\n  font-family: Arial;\n  font-size: 0.8rem; }\n\n.text2 {\n  font-weight: bold; }\n\n.text3 {\n  font-weight: lighter;\n  font-size: 1rem; }\n\n.des {\n  padding-left: 20px;\n  padding-top: 5px;\n  font-family: Arial;\n  font-size: 8; }\n\n.layers {\n  font-family: Arial;\n  text-align: justify;\n  padding-left: 20px;\n  padding-right: 20px;\n  padding-top: 5px;\n  padding-bottom: 20px;\n  font-size: 14;\n  margin-top: 2%;\n  color: #4a4a4a;\n  cursor: pointer; }\n\n.link {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-weight: bold;\n  margin-top: 4%;\n  margin-bottom: 2%; }\n\n.img-resize {\n  height: 230px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\n.my-bg {\n  position: absolute;\n  z-index: -5; }\n\na:link {\n  text-decoration: none;\n  color: #4a4a4a; }\n\n.details {\n  position: absolute;\n  bottom: 13px;\n  right: 17px;\n  line-height: 100%;\n  text-decoration: underline;\n  max-width: 80%;\n  color: #fff;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.7rem;\n  background-color: rgba(0, 0, 0, 0.2); }\n\n.d-icon {\n  position: absolute;\n  bottom: 33px;\n  right: 25px;\n  color: #fff;\n  border-color: #fff;\n  border-style: solid;\n  font-size: 0.7em;\n  border-width: 2px;\n  padding-top: 0.5%;\n  padding-bottom: 0.5%;\n  padding-left: 2%;\n  padding-right: 2%;\n  border-radius: 50%;\n  background-color: rgba(0, 0, 0, 0.2); }\n"
 
 /***/ }),
 
@@ -1087,6 +1064,7 @@ var CardComponent = /** @class */ (function () {
         localStorage.setItem("grade", JSON.stringify(this.item.grades));
         localStorage.setItem("title", JSON.stringify(this.item.title));
         localStorage.setItem("year", JSON.stringify(this.item.timeOfYear));
+        localStorage.setItem("img", JSON.stringify(this.item.img));
         this.item.activities.map(function (activity) {
             _this.titles.push(new _models_activityBrief__WEBPACK_IMPORTED_MODULE_5__["ActivityBrief"](activity.time, activity.name));
             _this.activities.push(new _models_activity__WEBPACK_IMPORTED_MODULE_4__["Activity"](activity.time, 0, activity.name, activity.type, activity.length, activity.description, activity.on, activity.qc, activity.fees, activity.img, activity.ageRange, activity.timeOfYear, activity.timeSlots, activity.order));
@@ -2094,6 +2072,41 @@ var WarningComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/learning-agenda/environments/environment.ts":
+/*!*********************************************************!*\
+  !*** ./src/learning-agenda/environments/environment.ts ***!
+  \*********************************************************/
+/*! exports provided: environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+// This file can be replaced during build by using the `fileReplacements` array.
+// `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
+// The list of file replacements can be found in `angular.json`.
+var environment = {
+    production: false,
+    firebase: {
+        apiKey: "AIzaSyAqb1AZM_xWPycGFuWByknU7WPsTQ0auxk",
+        authDomain: "planning-tool-532b0.firebaseapp.com",
+        databaseURL: "https://planning-tool-532b0.firebaseio.com",
+        projectId: "planning-tool-532b0",
+        storageBucket: "planning-tool-532b0.appspot.com",
+        messagingSenderId: "429282485430"
+    }
+};
+/*
+ * In development mode, to ignore zone related error stack frames such as
+ * `zone.run`, `zoneDelegate.invokeTask` for easier debugging, you can
+ * import the following file, but please comment it out in production mode
+ * because it will have performance impact when throw error
+ */
+// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
+
+
+/***/ }),
+
 /***/ "./src/learning-agenda/learning-agenda.module.ts":
 /*!*******************************************************!*\
   !*** ./src/learning-agenda/learning-agenda.module.ts ***!
@@ -2105,41 +2118,41 @@ var WarningComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LearningAgendaModule", function() { return LearningAgendaModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
-/* harmony import */ var ngx_ellipsis__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-ellipsis */ "./node_modules/ngx-ellipsis/fesm5/ngx-ellipsis.js");
-/* harmony import */ var angular2_multiline_ellipsis__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! angular2-multiline-ellipsis */ "./node_modules/angular2-multiline-ellipsis/esm5/angular2-multiline-ellipsis.js");
-/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
-/* harmony import */ var _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/empty-card/empty-card.component */ "./src/learning-agenda/components/empty-card/empty-card.component.ts");
-/* harmony import */ var _components_card_card_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/card/card.component */ "./src/learning-agenda/components/card/card.component.ts");
-/* harmony import */ var _components_build_build_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/build/build.component */ "./src/learning-agenda/components/build/build.component.ts");
-/* harmony import */ var _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/activity/activity.component */ "./src/learning-agenda/components/activity/activity.component.ts");
-/* harmony import */ var _components_activity_card_activity_card_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/activity-card/activity-card.component */ "./src/learning-agenda/components/activity-card/activity-card.component.ts");
-/* harmony import */ var _components_activity_display_activity_display_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/activity-display/activity-display.component */ "./src/learning-agenda/components/activity-display/activity-display.component.ts");
-/* harmony import */ var _components_empty_activity_display_empty_activity_display_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/empty-activity-display/empty-activity-display.component */ "./src/learning-agenda/components/empty-activity-display/empty-activity-display.component.ts");
-/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/header/header.component */ "./src/learning-agenda/components/header/header.component.ts");
-/* harmony import */ var _components_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/confirm/confirm.component */ "./src/learning-agenda/components/confirm/confirm.component.ts");
-/* harmony import */ var _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/sticky-footer/sticky-footer.component */ "./src/learning-agenda/components/sticky-footer/sticky-footer.component.ts");
-/* harmony import */ var _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/confirm-sticker/confirm-sticker.component */ "./src/learning-agenda/components/confirm-sticker/confirm-sticker.component.ts");
-/* harmony import */ var _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/warning/warning.component */ "./src/learning-agenda/components/warning/warning.component.ts");
-/* harmony import */ var _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/calendar/calendar.component */ "./src/learning-agenda/components/calendar/calendar.component.ts");
-/* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/fesm5/ngx-clipboard.js");
-/* harmony import */ var _components_details_details_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/details/details.component */ "./src/learning-agenda/components/details/details.component.ts");
-/* harmony import */ var _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/main-header/main-header.component */ "./src/learning-agenda/components/main-header/main-header.component.ts");
-/* harmony import */ var _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/main-footer/main-footer.component */ "./src/learning-agenda/components/main-footer/main-footer.component.ts");
-/* harmony import */ var _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/submit-form/submit-form.component */ "./src/learning-agenda/components/submit-form/submit-form.component.ts");
-/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./pages/landing-page/landing-page.component */ "./src/learning-agenda/pages/landing-page/landing-page.component.ts");
-/* harmony import */ var _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./pages/browse-page/browse-page.component */ "./src/learning-agenda/pages/browse-page/browse-page.component.ts");
-/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./pages/confirm-page/confirm-page.component */ "./src/learning-agenda/pages/confirm-page/confirm-page.component.ts");
-/* harmony import */ var _pages_itinerary_page_itinerary_page_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./pages/itinerary-page/itinerary-page.component */ "./src/learning-agenda/pages/itinerary-page/itinerary-page.component.ts");
-/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./pages/design-page/design-page.component */ "./src/learning-agenda/pages/design-page/design-page.component.ts");
-/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./pages/submit-page/submit-page.component */ "./src/learning-agenda/pages/submit-page/submit-page.component.ts");
-/* harmony import */ var _components_swap_box_swap_box_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./components/swap-box/swap-box.component */ "./src/learning-agenda/components/swap-box/swap-box.component.ts");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./router */ "./src/learning-agenda/router.ts");
-/* harmony import */ var _app_app_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_app_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../app/app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
+/* harmony import */ var ngx_ellipsis__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-ellipsis */ "./node_modules/ngx-ellipsis/fesm5/ngx-ellipsis.js");
+/* harmony import */ var angular2_multiline_ellipsis__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! angular2-multiline-ellipsis */ "./node_modules/angular2-multiline-ellipsis/esm5/angular2-multiline-ellipsis.js");
+/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/empty-card/empty-card.component */ "./src/learning-agenda/components/empty-card/empty-card.component.ts");
+/* harmony import */ var _components_card_card_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/card/card.component */ "./src/learning-agenda/components/card/card.component.ts");
+/* harmony import */ var _components_build_build_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/build/build.component */ "./src/learning-agenda/components/build/build.component.ts");
+/* harmony import */ var _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/activity/activity.component */ "./src/learning-agenda/components/activity/activity.component.ts");
+/* harmony import */ var _components_activity_card_activity_card_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/activity-card/activity-card.component */ "./src/learning-agenda/components/activity-card/activity-card.component.ts");
+/* harmony import */ var _components_activity_display_activity_display_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/activity-display/activity-display.component */ "./src/learning-agenda/components/activity-display/activity-display.component.ts");
+/* harmony import */ var _components_empty_activity_display_empty_activity_display_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/empty-activity-display/empty-activity-display.component */ "./src/learning-agenda/components/empty-activity-display/empty-activity-display.component.ts");
+/* harmony import */ var _components_header_header_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/header/header.component */ "./src/learning-agenda/components/header/header.component.ts");
+/* harmony import */ var _components_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/confirm/confirm.component */ "./src/learning-agenda/components/confirm/confirm.component.ts");
+/* harmony import */ var _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/sticky-footer/sticky-footer.component */ "./src/learning-agenda/components/sticky-footer/sticky-footer.component.ts");
+/* harmony import */ var _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/confirm-sticker/confirm-sticker.component */ "./src/learning-agenda/components/confirm-sticker/confirm-sticker.component.ts");
+/* harmony import */ var _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/warning/warning.component */ "./src/learning-agenda/components/warning/warning.component.ts");
+/* harmony import */ var _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/calendar/calendar.component */ "./src/learning-agenda/components/calendar/calendar.component.ts");
+/* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/fesm5/ngx-clipboard.js");
+/* harmony import */ var _components_details_details_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/details/details.component */ "./src/learning-agenda/components/details/details.component.ts");
+/* harmony import */ var _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/main-header/main-header.component */ "./src/learning-agenda/components/main-header/main-header.component.ts");
+/* harmony import */ var _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./components/main-footer/main-footer.component */ "./src/learning-agenda/components/main-footer/main-footer.component.ts");
+/* harmony import */ var _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/submit-form/submit-form.component */ "./src/learning-agenda/components/submit-form/submit-form.component.ts");
+/* harmony import */ var _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./pages/landing-page/landing-page.component */ "./src/learning-agenda/pages/landing-page/landing-page.component.ts");
+/* harmony import */ var _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./pages/browse-page/browse-page.component */ "./src/learning-agenda/pages/browse-page/browse-page.component.ts");
+/* harmony import */ var _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./pages/confirm-page/confirm-page.component */ "./src/learning-agenda/pages/confirm-page/confirm-page.component.ts");
+/* harmony import */ var _pages_itinerary_page_itinerary_page_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./pages/itinerary-page/itinerary-page.component */ "./src/learning-agenda/pages/itinerary-page/itinerary-page.component.ts");
+/* harmony import */ var _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./pages/design-page/design-page.component */ "./src/learning-agenda/pages/design-page/design-page.component.ts");
+/* harmony import */ var _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./pages/submit-page/submit-page.component */ "./src/learning-agenda/pages/submit-page/submit-page.component.ts");
+/* harmony import */ var _components_swap_box_swap_box_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/swap-box/swap-box.component */ "./src/learning-agenda/components/swap-box/swap-box.component.ts");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./router */ "./src/learning-agenda/router.ts");
 /* harmony import */ var ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ng-simple-slideshow */ "./node_modules/ng-simple-slideshow/ng-simple-slideshow.es5.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./environments/environment */ "./src/learning-agenda/environments/environment.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
 /* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
@@ -2196,49 +2209,49 @@ var LearningAgendaModule = /** @class */ (function () {
     LearningAgendaModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             imports: [
-                _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
                 ng_simple_slideshow__WEBPACK_IMPORTED_MODULE_34__["SlideshowModule"],
-                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbModule"].forRoot(),
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
-                ngx_ellipsis__WEBPACK_IMPORTED_MODULE_4__["EllipsisModule"],
-                _router__WEBPACK_IMPORTED_MODULE_32__["AppRoutingModule"],
-                ngx_clipboard__WEBPACK_IMPORTED_MODULE_20__["ClipboardModule"],
-                angular2_multiline_ellipsis__WEBPACK_IMPORTED_MODULE_5__["MultilineEllipsisModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModule"].forRoot(),
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["BrowserModule"],
+                ngx_ellipsis__WEBPACK_IMPORTED_MODULE_5__["EllipsisModule"],
+                _router__WEBPACK_IMPORTED_MODULE_33__["AppRoutingModule"],
+                ngx_clipboard__WEBPACK_IMPORTED_MODULE_21__["ClipboardModule"],
+                angular2_multiline_ellipsis__WEBPACK_IMPORTED_MODULE_6__["MultilineEllipsisModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_36__["HttpClientModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_37__["FormsModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_37__["ReactiveFormsModule"],
-                ngx_pagination__WEBPACK_IMPORTED_MODULE_6__["NgxPaginationModule"],
+                ngx_pagination__WEBPACK_IMPORTED_MODULE_7__["NgxPaginationModule"],
                 angularfire2__WEBPACK_IMPORTED_MODULE_39__["AngularFireModule"].initializeApp(_environments_environment__WEBPACK_IMPORTED_MODULE_35__["environment"].firebase),
                 angularfire2_firestore__WEBPACK_IMPORTED_MODULE_38__["AngularFirestoreModule"]
             ],
             declarations: [
-                _app_app_component__WEBPACK_IMPORTED_MODULE_33__["AppComponent"],
-                _components_swap_box_swap_box_component__WEBPACK_IMPORTED_MODULE_31__["SwapBoxComponent"],
-                _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_7__["EmptyCardComponent"],
-                _components_details_details_component__WEBPACK_IMPORTED_MODULE_21__["DetailsComponent"],
-                _components_card_card_component__WEBPACK_IMPORTED_MODULE_8__["CardComponent"],
-                _components_build_build_component__WEBPACK_IMPORTED_MODULE_9__["BuildComponent"],
-                _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_10__["ActivityComponent"],
-                _components_activity_display_activity_display_component__WEBPACK_IMPORTED_MODULE_12__["ActivityDisplayComponent"],
-                _components_empty_activity_display_empty_activity_display_component__WEBPACK_IMPORTED_MODULE_13__["EmptyActivityDisplayComponent"],
-                _components_activity_card_activity_card_component__WEBPACK_IMPORTED_MODULE_11__["ActivityCardComponent"],
-                _components_header_header_component__WEBPACK_IMPORTED_MODULE_14__["HeaderComponent"],
-                _components_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_15__["ConfirmComponent"],
-                _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_16__["StickyFooterComponent"],
-                _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_17__["ConfirmStickerComponent"],
-                _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_18__["WarningComponent"],
-                _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_22__["MainHeaderComponent"],
-                _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_19__["CalendarComponent"],
-                _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_23__["MainFooterComponent"],
-                _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_24__["SubmitFormComponent"],
-                _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_25__["LandingPageComponent"],
-                _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_26__["BrowsePageComponent"],
-                _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_29__["DesignPageComponent"],
-                _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_27__["ConfirmPageComponent"],
-                _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_30__["SubmitPageComponent"],
-                _pages_itinerary_page_itinerary_page_component__WEBPACK_IMPORTED_MODULE_28__["ItineraryPageComponent"]
+                _app_app_component__WEBPACK_IMPORTED_MODULE_1__["AppComponent"],
+                _components_swap_box_swap_box_component__WEBPACK_IMPORTED_MODULE_32__["SwapBoxComponent"],
+                _components_empty_card_empty_card_component__WEBPACK_IMPORTED_MODULE_8__["EmptyCardComponent"],
+                _components_details_details_component__WEBPACK_IMPORTED_MODULE_22__["DetailsComponent"],
+                _components_card_card_component__WEBPACK_IMPORTED_MODULE_9__["CardComponent"],
+                _components_build_build_component__WEBPACK_IMPORTED_MODULE_10__["BuildComponent"],
+                _components_activity_activity_component__WEBPACK_IMPORTED_MODULE_11__["ActivityComponent"],
+                _components_activity_display_activity_display_component__WEBPACK_IMPORTED_MODULE_13__["ActivityDisplayComponent"],
+                _components_empty_activity_display_empty_activity_display_component__WEBPACK_IMPORTED_MODULE_14__["EmptyActivityDisplayComponent"],
+                _components_activity_card_activity_card_component__WEBPACK_IMPORTED_MODULE_12__["ActivityCardComponent"],
+                _components_header_header_component__WEBPACK_IMPORTED_MODULE_15__["HeaderComponent"],
+                _components_confirm_confirm_component__WEBPACK_IMPORTED_MODULE_16__["ConfirmComponent"],
+                _components_sticky_footer_sticky_footer_component__WEBPACK_IMPORTED_MODULE_17__["StickyFooterComponent"],
+                _components_confirm_sticker_confirm_sticker_component__WEBPACK_IMPORTED_MODULE_18__["ConfirmStickerComponent"],
+                _components_warning_warning_component__WEBPACK_IMPORTED_MODULE_19__["WarningComponent"],
+                _components_main_header_main_header_component__WEBPACK_IMPORTED_MODULE_23__["MainHeaderComponent"],
+                _components_calendar_calendar_component__WEBPACK_IMPORTED_MODULE_20__["CalendarComponent"],
+                _components_main_footer_main_footer_component__WEBPACK_IMPORTED_MODULE_24__["MainFooterComponent"],
+                _components_submit_form_submit_form_component__WEBPACK_IMPORTED_MODULE_25__["SubmitFormComponent"],
+                _pages_landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_26__["LandingPageComponent"],
+                _pages_browse_page_browse_page_component__WEBPACK_IMPORTED_MODULE_27__["BrowsePageComponent"],
+                _pages_design_page_design_page_component__WEBPACK_IMPORTED_MODULE_30__["DesignPageComponent"],
+                _pages_confirm_page_confirm_page_component__WEBPACK_IMPORTED_MODULE_28__["ConfirmPageComponent"],
+                _pages_submit_page_submit_page_component__WEBPACK_IMPORTED_MODULE_31__["SubmitPageComponent"],
+                _pages_itinerary_page_itinerary_page_component__WEBPACK_IMPORTED_MODULE_29__["ItineraryPageComponent"]
             ],
-            providers: [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_38__["AngularFirestoreModule"]],
+            providers: [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_38__["AngularFirestoreModule"]]
         })
     ], LearningAgendaModule);
     return LearningAgendaModule;
@@ -2311,7 +2324,7 @@ var ActivityBrief = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n<!--   <app-main-header></app-main-header> -->\n \n<span class=\"plan\">PLAN YOUR VISIT </span><span class=\"arrow-right\"></span>\n<div class=\"h1\"> PLAN A SCHOOL TRIP</div>\n  \n\n  <div class=\"h3\"> \n  <div *ngIf=\"bActive\" class=\"my-btn1\" (click)=\"setBrowse()\">BROWSE</div>\n  <div *ngIf=\"!bActive\" class=\"my-btn\" (click)=\"setBrowse()\">BROWSE</div>\n  <div *ngIf=\"cActive\" class=\"my-btn1\" (click)=\"setCreate()\">CREATE</div>\n  <div *ngIf=\"!cActive\" class=\"my-btn\" (click)=\"setCreate()\">CREATE</div>\n  \n</div>\n\n\n<div class=\"my-container\">\n  <div class=\"my-bg\" >\n    <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-resize\"> \n\n  </div>\n  </div>\n\n<!-- <div class=\"text1\">\n<div class=\"text2\" >\n    PLAN YOUR DAY AT THE MUSEUM\n  </div>\n<div class=\"text3\">\n    Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, \n    , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an\n    <br><br>\n    Get started with our sample iteneraries below or <a class=\"build\" href=\"javascript:void(0)\" (click)=\"open(content)\"> build your own  </a>\n</div>\n</div>\n -->\n\n<!-- <div class=\"card-title\">VIEW OUR ITINERARIES</div> -->\n<div class=\"content\">\n<div *ngIf=\"!set || create\" class=\"side-bar\">\n<div class=\"first\">\n  <div style=\"float:left;margin:4%; font-size:1.5rem\">Filter By</div>\n <div style=\"float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer\" (click)=\"reset()\">Clear All</div>\n</div>\n\n<div>\n<div class=\"selection\">\n  \n  <div class=\"ftext\">\n    GRADE\n  </div>\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\">Kindergaten to Grade 2\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"KinderTo2\" style=\"float:right;\" (change)=\"filterBoolean('KinderTo2',KinderTo2)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  \n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 3 to 5\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr3To5\" style=\"float:right;\" (change)=\"filterBoolean1('Gr3To5',Gr3To5)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n  </form>\n\n  <form>\n  <div class=\"boxes\">\n      <label class=\"lab\"> Grades 6 to 8\n          <span class=\"checkmark\"></span>\n          \n        </label>\n        <input [(ngModel)]=\"Gr6To8\" style=\"float:right;\" (change)=\"filterBoolean2('Gr6To8',Gr6To8)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n  </div>\n</form>\n</div>\n\n\n\n<div class=\"selection\">\n  <form>\n  <div class=\"ftext\">\n      TIME OF YEAR\n    </div>\n    <div class=\"boxes\">\n        <label class=\"lab\">October to April\n            <span class=\"checkmark\"></span>\n           \n          </label>\n          <input  [(ngModel)]=\"OctoberToApril\" style=\"float:right;\" (change)=\"filterBoolean3('OctoberToApril',OctoberToApril)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n  \n  \n    \n    <div class=\"boxes\">\n        <label class=\"lab\">May to June\n            <span class=\"checkmark\"></span>\n            \n          </label>\n          <input [(ngModel)]=\"MayToJune\" style=\"float:right;\" (change)=\"filterBoolean4('MayToJune',MayToJune)\" type=\"checkbox\" class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n    </div>\n    </form>\n  </div>\n\n\n\n\n  <div class=\"selection\">\n  \n    <div class=\"ftext\">\n        LENGTH\n      </div>\n      <form>\n          <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios1\">\n               Half Day\n              </label>\n              <input style=\"float:right\"[(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\" type=\"radio\" name=\"exampleRadios\"  value=\"Half-day\" class=\"rad\">\n            </div>\n            <div class=\"boxes\">\n              \n              <label class=\"form-check-label\" for=\"exampleRadios2\">\n              Full Day\n              </label>\n              <input  style=\"float:right\" [(ngModel)]=\"day\"\n              (change)=\"filterExact('day', day)\"  type=\"radio\" name=\"exampleRadios\" value=\"Full-day\" class=\"rad\">\n     </div>\n        </form>\n    </div>\n    \n \n    \n  \n</div>\n</div>\n\n\n<div *ngIf=\"set && !create\" id=\"print\" class=\"side-bar\" >\n<div class=\"side-title\">\n SCHEDULE\n</div>\n<div *ngFor=\"let itinerary of itineraries\" class=\"brief\" > \n  <span class=\"brief1\">{{itinerary.time}}</span>\n<span class=\"brief2\">{{itinerary.name}}</span>\n</div>\n</div>\n<div *ngIf=\"!set && browse\" class=\"itineraries\">\n \n <div style=\"height:5%; position:relative;\">\n  <div class=\"ti\" >Itineraries</div>\n <!--  <div class=\"my-btn\" (click)=\"open(content)\">\n  Build Your Own\n  </div></div> -->\n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\" *ngFor=\"let item of filtered| paginate: { itemsPerPage: 4, currentPage: p } \" >\n          <app-card [item]=\"item\"  (set)=\"getSet($event)\"></app-card>\n          </div>\n</div>\n<pagination-controls class=\"pag\" (pageChange)=\"p = $event\"\n                                  directionLinks=\"false\"\n   \n></pagination-controls>\n</div>\n\n  <!-- <div class=\"filter\">\n    <div style=\"font-family:futura-pt, Helvetica Neue, Arial\">\n        <div class=\"row\"  style=\"margin-bottom:2%; margin-left:0.1%\">\n            <div class=\"filtertext\" >FILTER ITINERARIES:</div>\n          <div class=\"input-group\" class=\"grades\">\n                  <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"grades\" (change)=\"filterExact('grades', grades)\">\n                      <option [ngValue]=\"undefined\" disabled  selected> Select Your Grade</option>\n                    <option value=\"Kinder to Gr.2\">Kindergaten to Grade 2</option>\n                    <option value=\"Gr 3-5\">Grades 3&ndash;5</option>\n                    <option value=\"Gr 6-8\">Grades 6&ndash;8</option>\n                  </select>\n                </div>\n                <div class=\"input-group\" class=\"date\" >\n                      <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"timeOfYear\" (change)=\"filterExact('timeOfYear', timeOfYear)\">\n                          <option [ngValue]=\"undefined\" disabled  selected> Select Time of Year </option>\n                          <option value=\"October-April\">Oct&ndash;Apr</option>\n                          <option value=\"May-June\">May&ndash;Jun</option>\n                        </select>\n                    </div>\n                    <div class=\"input-group\" class=\"day\" >\n                        <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"day\" (change)=\"filterExact('day', day)\">\n                            <option [ngValue]=\"undefined\" disabled  selected> Half-Day or Full-Day</option>\n                            <option value=\"Half-day\">Half&ndash;Day</option>\n                            <option value=\"Full-day\">Full&ndash;Day</option>\n                          </select>\n                        </div>\n                        <div class=\"show\">\n                          <button type=\"button\" class=\"btn \" style=\"width:100%; background-color:#8a8d8a; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:#f7f7f7\" (click)=\"reset()\"> Clear All Filters</button>\n                        </div>\n                      </div>\n                      </div>\n           \n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\"*ngFor=\"let item of filtered \" >\n          <app-card [item]=\"item\"></app-card>\n          </div>\n\n          <div  class=\"empty-card\" >\n            <app-empty-card></app-empty-card>\n            </div>\n          \n</div>\n\n<nav style=\"margin-bottom:10%\">\n    <ul class=\"pagination pagination-lg\" style=\"margin-left:0\">\n      <li class=\"page-item\" >\n        <a class=\"page-link\" style=\"border-radius:0; color:#e5e5e5; background-color:#4a4a4a\" href=\"#\" tabindex=\"-1\">1</a>\n      </li>\n      <li class=\"page-item\" style=\"border-radius:0\"><a class=\"page-link\" style=\"color:#4a4a4a\" href=\"#\">2</a></li>\n      <li class=\"page-item\" style=\"border-radius:0\" ><a class=\"page-link\" style=\"border-radius:0; color:#4a4a4a\" href=\"#\">3</a></li>\n    </ul>\n  </nav>\n</div> -->\n</div>\n\n\n<div *ngIf=\"set && !create\" class=\"activities\">\n<div class=\"row\">\n  <div class=\"left\" (click)=\"back()\">\n    <div class=\"arrow-left\"></div>\n  </div>\n\n <div class=\"back-title\">Itineraries</div>\n</div>\n  <div style=\"position:relative;\">\n      <img src=\"../../assets/images/photo3.jpeg\" alt=\"Random first slide\" class=\"img-responsive banner\">\n      <div class=\"btext\">\n      <div class=\"btext1\">{{grade}}</div>\n      <div class=\"btext2\">{{title}}</div>\n      <div class=\"btext3\">{{year}}</div>\n      </div>\n      <div *ngIf=\"modified\" class=\"btext4\"> This is a modified version of the <span style=\"font-weight:bold\">{{title}}</span> itinerary</div>\n    </div>\n    <div class=\"link\" >\n\n      <div class=\"urlbox\">\n\n        <div class=\"url\"><span *ngIf=\"!addedPost\">link generated if this version is modfied</span><span *ngIf=\"addedPost\">{{url}}</span></div>\n        \n        <div ><button class=\"url-btn\" ngxClipboard [cbContent]=\"url\">COPY URL</button></div>\n    </div>\n\n\n    <div class=\"printbox\">\n\n      <div>\n     <button class=\"print\" (click)=\"printDiv()\">PRINT</button>  \n      </div>\n      <div style=\"margin-right:13%;margin-left:2%\"><button class=\"download\">DOWNLOAD PDF</button></div>\n    </div>\n    </div>\n<app-activity-display *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\"  (item)=\"setItem($event)\" (order)=\"emitOrder($event)\" (notify)=\"notice($event)\" (modify)=\"modify($event)\" [showSwap]=\"showSwap\"></app-activity-display>\n    \n<app-empty-activity-display  (set)=\"add($event)\"></app-empty-activity-display>\n\n\n\n        </div>\n\n        <div *ngIf=\"create\" class=\"itineraries2\">\n \n            <div style=\"height:5%; position:relative;\">\n             <div class=\"ti\" >Create Your Own Itinerary</div>\n        \n           </div>\n           </div>\n        \n</div>\n\n\n\n\n\n\n\n</div>\n<div>\n<!--   <app-main-footer></app-main-footer> -->\n</div>\n\n"
+module.exports = "<div>\n  <app-main-header></app-main-header>\n  <div class=\"shadow\">\n    <span class=\"plan\">PLAN YOUR VISIT </span>\n    <span class=\"arrow-right\"></span>\n    <div class=\"h1\"> PLAN A SCHOOL TRIP</div>\n\n\n    <div class=\"h3\">\n      <div *ngIf=\"bActive\" class=\"my-btn1\" (click)=\"setBrowse()\">BROWSE</div>\n      <div *ngIf=\"!bActive\" class=\"my-btn\" (click)=\"setBrowse()\">BROWSE</div>\n      <div *ngIf=\"cActive\" class=\"my-btn1\" (click)=\"setCreate()\">CREATE</div>\n      <div *ngIf=\"!cActive\" class=\"my-btn\" (click)=\"setCreate()\">CREATE</div>\n\n    </div>\n\n\n    <div class=\"my-container\">\n      <div class=\"my-bg\">\n        <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-resize\">\n\n      </div>\n    </div>\n  </div>\n  <!-- <div class=\"text1\">\n<div class=\"text2\" >\n    PLAN YOUR DAY AT THE MUSEUM\n  </div>\n<div class=\"text3\">\n    Lorem ipsum dolor sit amet, mel wisi justo salutandi ut, in blandit tacimates adipiscing mel. Cum et bonorum noluisse. Vel id quem laoreet insolens, \n    , erant dissentiet ea usu, eam in liber alterum. Mel debitis appetere honestatis eu, vel facete discere an. Cum ex unum atqui, habeo eligendi his an\n    <br><br>\n    Get started with our sample iteneraries below or <a class=\"build\" href=\"javascript:void(0)\" (click)=\"open(content)\"> build your own  </a>\n</div>\n</div>\n -->\n\n  <!-- <div class=\"card-title\">VIEW OUR ITINERARIES</div> -->\n  <div class=\"content\">\n    <div *ngIf=\"!set || create\" class=\"side-bar\">\n      <div class=\"first\">\n        <div style=\"float:left;margin:4%; font-size:1.5rem\">Filter By</div>\n        <div style=\"float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer\"\n          (click)=\"reset()\">Clear All</div>\n      </div>\n\n      <div>\n        <div class=\"selection\">\n\n          <div class=\"ftext\">\n            GRADE\n          </div>\n          <form>\n            <div class=\"boxes\">\n              <label class=\"lab\">Kindergaten to Grade 2\n                <span class=\"checkmark\"></span>\n\n              </label>\n              <input [(ngModel)]=\"KinderTo2\" style=\"float:right;\" (change)=\"filterBoolean('KinderTo2',KinderTo2)\" type=\"checkbox\" class=\"cbox\"\n                [ngModelOptions]=\"{standalone: true}\">\n\n            </div>\n          </form>\n\n          <form>\n            <div class=\"boxes\">\n              <label class=\"lab\"> Grades 3 to 5\n                <span class=\"checkmark\"></span>\n\n              </label>\n              <input [(ngModel)]=\"Gr3To5\" style=\"float:right;\" (change)=\"filterBoolean1('Gr3To5',Gr3To5)\" type=\"checkbox\" class=\"cbox\"\n                [ngModelOptions]=\"{standalone: true}\">\n            </div>\n          </form>\n\n          <form>\n            <div class=\"boxes\">\n              <label class=\"lab\"> Grades 6 to 8\n                <span class=\"checkmark\"></span>\n\n              </label>\n              <input [(ngModel)]=\"Gr6To8\" style=\"float:right;\" (change)=\"filterBoolean2('Gr6To8',Gr6To8)\" type=\"checkbox\" class=\"cbox\"\n                [ngModelOptions]=\"{standalone: true}\">\n            </div>\n          </form>\n        </div>\n\n\n\n        <div class=\"selection\">\n          <form>\n            <div class=\"ftext\">\n              TIME OF YEAR\n            </div>\n            <div class=\"boxes\">\n              <label class=\"lab\">October to April\n                <span class=\"checkmark\"></span>\n\n              </label>\n              <input [(ngModel)]=\"OctoberToApril\" style=\"float:right;\" (change)=\"filterBoolean3('OctoberToApril',OctoberToApril)\" type=\"checkbox\"\n                class=\"cbox\" [ngModelOptions]=\"{standalone: true}\">\n            </div>\n\n\n\n            <div class=\"boxes\">\n              <label class=\"lab\">May to June\n                <span class=\"checkmark\"></span>\n\n              </label>\n              <input [(ngModel)]=\"MayToJune\" style=\"float:right;\" (change)=\"filterBoolean4('MayToJune',MayToJune)\" type=\"checkbox\" class=\"cbox\"\n                [ngModelOptions]=\"{standalone: true}\">\n            </div>\n          </form>\n        </div>\n\n\n\n\n        <div class=\"selection\">\n\n          <div class=\"ftext\">\n            LENGTH\n          </div>\n          <form>\n            <div class=\"boxes\">\n\n              <label class=\"form-check-label\" for=\"exampleRadios1\">\n                Half Day\n              </label>\n              <input style=\"float:right\" [(ngModel)]=\"day\" (change)=\"filterExact('day', day)\" type=\"radio\" name=\"exampleRadios\" value=\"Half-day\"\n                class=\"rad\">\n            </div>\n            <div class=\"boxes\">\n\n              <label class=\"form-check-label\" for=\"exampleRadios2\">\n                Full Day\n              </label>\n              <input style=\"float:right\" [(ngModel)]=\"day\" (change)=\"filterExact('day', day)\" type=\"radio\" name=\"exampleRadios\" value=\"Full-day\"\n                class=\"rad\">\n            </div>\n          </form>\n        </div>\n\n\n\n\n      </div>\n    </div>\n\n\n    <div *ngIf=\"set && !create\" id=\"print\" class=\"side-bar\">\n      <div class=\"side-title\">\n        SCHEDULE\n      </div>\n      <div *ngFor=\"let itinerary of itineraries\" class=\"brief\">\n        <span class=\"brief1\">{{itinerary.time}}</span>\n        <span class=\"brief2\">{{itinerary.name}}</span>\n      </div>\n    </div>\n    <div *ngIf=\"!set && browse\" class=\"itineraries\">\n\n      <div style=\"height:5%; position:relative;\">\n        <div class=\"ti\">Itineraries</div>\n        <!--  <div class=\"my-btn\" (click)=\"open(content)\">\n  Build Your Own\n  </div></div> -->\n        <div class=\"row\" style=\"margin-left:0%;\">\n\n\n          <div class=\"margin\" *ngFor=\"let item of filtered| paginate: { itemsPerPage: 4, currentPage: p } \">\n            <app-card [item]=\"item\" (set)=\"getSet($event)\"></app-card>\n          </div>\n        </div>\n        <pagination-controls class=\"pag\" (pageChange)=\"p = $event\" directionLinks=\"false\"></pagination-controls>\n      </div>\n\n      <!-- <div class=\"filter\">\n    <div style=\"font-family:futura-pt, Helvetica Neue, Arial\">\n        <div class=\"row\"  style=\"margin-bottom:2%; margin-left:0.1%\">\n            <div class=\"filtertext\" >FILTER ITINERARIES:</div>\n          <div class=\"input-group\" class=\"grades\">\n                  <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"grades\" (change)=\"filterExact('grades', grades)\">\n                      <option [ngValue]=\"undefined\" disabled  selected> Select Your Grade</option>\n                    <option value=\"Kinder to Gr.2\">Kindergaten to Grade 2</option>\n                    <option value=\"Gr 3-5\">Grades 3&ndash;5</option>\n                    <option value=\"Gr 6-8\">Grades 6&ndash;8</option>\n                  </select>\n                </div>\n                <div class=\"input-group\" class=\"date\" >\n                      <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"timeOfYear\" (change)=\"filterExact('timeOfYear', timeOfYear)\">\n                          <option [ngValue]=\"undefined\" disabled  selected> Select Time of Year </option>\n                          <option value=\"October-April\">Oct&ndash;Apr</option>\n                          <option value=\"May-June\">May&ndash;Jun</option>\n                        </select>\n                    </div>\n                    <div class=\"input-group\" class=\"day\" >\n                        <select  class=\"custom-select\" id=\"inputGroupSelect04\" style=\"font-weight:bold; height:35px; font-size:13px; background-color:#f7f7f7;\" [(ngModel)]=\"day\" (change)=\"filterExact('day', day)\">\n                            <option [ngValue]=\"undefined\" disabled  selected> Half-Day or Full-Day</option>\n                            <option value=\"Half-day\">Half&ndash;Day</option>\n                            <option value=\"Full-day\">Full&ndash;Day</option>\n                          </select>\n                        </div>\n                        <div class=\"show\">\n                          <button type=\"button\" class=\"btn \" style=\"width:100%; background-color:#8a8d8a; font-size:13px; font-weight:bold; border-color:#D8D8D8; border-width:thin; color:#f7f7f7\" (click)=\"reset()\"> Clear All Filters</button>\n                        </div>\n                      </div>\n                      </div>\n           \n  <div class=\"row\" style=\"margin-left:0%;\">\n          \n  \n  <div class=\"margin\"*ngFor=\"let item of filtered \" >\n          <app-card [item]=\"item\"></app-card>\n          </div>\n\n          <div  class=\"empty-card\" >\n            <app-empty-card></app-empty-card>\n            </div>\n          \n</div>\n\n<nav style=\"margin-bottom:10%\">\n    <ul class=\"pagination pagination-lg\" style=\"margin-left:0\">\n      <li class=\"page-item\" >\n        <a class=\"page-link\" style=\"border-radius:0; color:#e5e5e5; background-color:#4a4a4a\" href=\"#\" tabindex=\"-1\">1</a>\n      </li>\n      <li class=\"page-item\" style=\"border-radius:0\"><a class=\"page-link\" style=\"color:#4a4a4a\" href=\"#\">2</a></li>\n      <li class=\"page-item\" style=\"border-radius:0\" ><a class=\"page-link\" style=\"border-radius:0; color:#4a4a4a\" href=\"#\">3</a></li>\n    </ul>\n  </nav>\n</div> -->\n    </div>\n\n\n    <div *ngIf=\"set && !create\" class=\"activities\">\n      <div class=\"row\">\n        <div class=\"left\" (click)=\"back()\">\n          <div class=\"arrow-left\"></div>\n        </div>\n\n        <div class=\"back-title\">Itineraries</div>\n      </div>\n      <div class=\"shadow2\">\n        <div class=\"my-bg2\">\n          <img src=\"https://res.cloudinary.com/dqhtbev7t/image/upload/v1530215797/samples/people/bicycle.jpg\" alt=\"Random first slide\"\n            class=\"img-responsive banner\">\n        </div>\n        <div class=\"btext\">\n          <div class=\"btext1\">{{grade}}</div>\n          <div class=\"btext2\">{{title}}</div>\n          <div class=\"btext3\">{{year}}</div>\n        </div>\n        <div *ngIf=\"modified\" class=\"btext4\"> This is a modified version of the\n          <span style=\"font-weight:bold\">{{title}}</span> itinerary</div>\n      </div>\n      <div class=\"link\">\n\n        <div class=\"urlbox\">\n\n          <div class=\"url\">\n            <span *ngIf=\"!addedPost\">link generated if this version is modfied</span>\n            <span *ngIf=\"addedPost\">{{url}}</span>\n          </div>\n\n          <div>\n            <button class=\"url-btn\" ngxClipboard [cbContent]=\"url\">COPY URL</button>\n          </div>\n        </div>\n\n\n        <div class=\"printbox\">\n\n          <div>\n            <button class=\"print\" (click)=\"printDiv()\">PRINT</button>\n          </div>\n          <div style=\"margin-right:13%;margin-left:2%\">\n            <button class=\"download\">DOWNLOAD PDF</button>\n          </div>\n        </div>\n      </div>\n      <app-activity-display *ngFor=\"let itinerary of itineraries\" [itinerary]=\"itinerary\" (item)=\"setItem($event)\" (order)=\"emitOrder($event)\"\n        (notify)=\"notice($event)\" (modify)=\"modify($event)\" [showSwap]=\"showSwap\"></app-activity-display>\n\n      <app-empty-activity-display (set)=\"add($event)\"></app-empty-activity-display>\n\n\n\n    </div>\n\n    <div *ngIf=\"create\" class=\"itineraries2\">\n\n      <div style=\"height:5%; position:relative;\">\n        <div class=\"ti\">Create Your Own Itinerary</div>\n\n      </div>\n    </div>\n\n  </div>\n\n\n\n\n\n\n\n</div>\n<div>\n  <app-main-footer></app-main-footer>\n</div>"
 
 /***/ }),
 
@@ -2322,7 +2335,7 @@ module.exports = "\n<div>\n<!--   <app-main-header></app-main-header> -->\n \n<s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".my-container {\n  margin: auto; }\n\n.img-resize {\n  height: 350px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\n.left {\n  padding-top: 1.5%;\n  padding-bottom: 1.5%;\n  padding-left: 1.5%;\n  padding-right: 1.5%;\n  background-color: #8a8d8a;\n  margin-bottom: 2%;\n  width: 4.5%;\n  border-radius: 50%;\n  cursor: pointer; }\n\n.side-title {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1.5rem;\n  color: #4a4a4a;\n  margin-left: 2%;\n  margin-bottom: 6%; }\n\n.brief {\n  display: flex;\n  flex-direction: row;\n  margin-bottom: 2%;\n  width: 90%; }\n\n.brief1 {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1rem;\n  color: #8a8d8a;\n  margin-left: 3%;\n  width: 50px; }\n\n.brief2 {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1rem;\n  color: #4a4a4a;\n  width: 90%;\n  margin-left: 7%;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n\n.back-title {\n  float: left;\n  margin-left: 220px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1.5rem;\n  color: #4a4a4a; }\n\n.arrow-left {\n  width: 0;\n  height: 0;\n  border-top: 5px solid transparent;\n  border-bottom: 5px solid transparent;\n  border-right: 5px solid #fff;\n  margin: auto; }\n\n.banner {\n  width: 100%;\n  height: 300px;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\n.btext {\n  position: absolute;\n  color: #fff;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  bottom: 23%;\n  left: 3%;\n  font-size: 2rem;\n  background-color: rgba(0, 0, 0, 0.2); }\n\n.btext4 {\n  position: absolute;\n  color: #fff;\n  background: #0099FF;\n  opacity: 0.9;\n  font-style: italic;\n  font-weight: lighter;\n  font-size: 0.8rem;\n  width: 100%;\n  padding: 2%;\n  bottom: 0; }\n\n.btext5 {\n  position: absolute;\n  color: #fff;\n  background: #00ff22;\n  opacity: 0.9;\n  font-style: italic;\n  font-weight: lighter;\n  font-size: 0.8rem;\n  width: 18%;\n  padding: 1%;\n  right: 0;\n  bottom: 53px;\n  cursor: pointer; }\n\n.btext1 {\n  font-family: Arial;\n  font-size: 1rem; }\n\n.btext3 {\n  font-size: 1rem; }\n\n.my-bg1 {\n  position: relative;\n  bottom: 120px;\n  margin-bottom: -120px; }\n\n.my-bg {\n  position: relative;\n  bottom: 120px;\n  z-index: -5;\n  margin-bottom: -120px; }\n\n.h {\n  position: absolute;\n  top: 250px;\n  left: 25%;\n  font-size: 12px;\n  color: #fff;\n  max-width: 80%; }\n\n.plan {\n  position: absolute;\n  top: 250px;\n  left: 25%;\n  font-size: 12px;\n  color: #fff;\n  max-width: 80%;\n  display: inline-block; }\n\n.arrow-right {\n  position: absolute;\n  top: 253px;\n  left: 28%;\n  display: inline-block;\n  width: 10%;\n  height: 0;\n  margin-left: 4%;\n  border-top: 5px solid transparent;\n  border-bottom: 5px solid transparent;\n  border-left: 5px solid white; }\n\n.my-header {\n  position: absolute;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  top: 250px;\n  left: 35%;\n  text-align: center;\n  color: #fff; }\n\n.h1 {\n  position: absolute;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  top: 295px;\n  left: 25%;\n  text-align: center;\n  color: #fff; }\n\n.h2 {\n  margin-bottom: 35%;\n  font-family: Arial;\n  font-weight: normal;\n  font-size: 1.5rem; }\n\n.h3 {\n  position: absolute;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  top: 300px;\n  left: 50%;\n  text-align: center;\n  color: #fff; }\n\n.card-title {\n  color: #4a4a4a;\n  font-weight: bold;\n  font-size: 1.5rem;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.pag /deep/ .ngx-pagination .current {\n  background: #4a4a4a; }\n\n.pag /deep/ .ngx-pagination li {\n  border-style: solid;\n  border-width: 1px;\n  border-color: #e5e5e5;\n  margin-right: 0px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.margin {\n  margin-right: 3%;\n  margin-bottom: 3%;\n  height: 230px;\n  width: 47%;\n  font-size: 13px; }\n\n.pagination-lg {\n  border: none; }\n\n/* .empty-card{\n    height:360px; \n    width:32%;\n    font-size:13px;\n} */\n\n.boxes {\n  width: 90%;\n  margin-bottom: 2px;\n  margin-left: 3%; }\n\n.first {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.selection {\n  margin-top: 10%; }\n\n.ftext {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1rem;\n  margin-bottom: 1%;\n  margin-left: 3%;\n  color: #8a8d8a; }\n\n.my-content {\n  padding-bottom: 15px;\n  margin-bottom: 20px; }\n\n.pointer {\n  width: 0;\n  height: 0;\n  border-top: 8px solid transparent;\n  border-left: 12px solid white;\n  border-bottom: 8px solid transparent;\n  float: left;\n  margin-left: 20px;\n  margin-top: 12px; }\n\n.plan1 {\n  float: left;\n  font-size: 12px;\n  font-weight: bold;\n  text-transform: uppercase;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.plan2 {\n  float: left;\n  font-weight: bold;\n  font-size: 3rem;\n  color: #4a4a4a;\n  text-transform: uppercase;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.plan3 {\n  font-size: 0.8rem;\n  margin-bottom: 2%;\n  font-weight: bold;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.text {\n  color: #fff; }\n\ninput[type=checkbox]:checked {\n  background: green; }\n\n.selection {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.text1 {\n  font-size: 3rem;\n  margin-bottom: 8%;\n  font-weight: bold;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.text2 {\n  font-size: 1.7rem;\n  margin-bottom: 1%; }\n\n.text3 {\n  position: absolute;\n  top: 20%;\n  left: 22%;\n  max-width: 55%;\n  padding: 15px;\n  text-align: center;\n  margin-bottom: 20px;\n  font-size: 1rem;\n  font-weight: lighter;\n  clear: both;\n  font-family: Arial; }\n\n.content {\n  max-width: 1300px;\n  padding-top: 2%;\n  margin: auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.side-bar {\n  display: flex;\n  flex-direction: column;\n  width: 28%;\n  height: 1500px;\n  border-color: #e5e5e5;\n  border-right-width: 1px;\n  border-style: solid; }\n\n.itineraries {\n  width: 70%;\n  padding: 0.9%; }\n\n.itineraries2 {\n  width: 70%;\n  padding: 0.9%; }\n\n.link {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  height: 70px;\n  margin-bottom: 5%;\n  background-color: #e5e5e5; }\n\n.activities {\n  width: 65%; }\n\n.urlbox {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  width: 54%; }\n\n.url {\n  background: #fff;\n  width: 73%;\n  margin-top: 14px;\n  padding: 3%;\n  height: 45px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.8rem;\n  color: #8a8d8a;\n  white-space: nowrap;\n  overflow: hidden; }\n\n.url-btn {\n  background: red;\n  width: 150%;\n  margin-top: 14px;\n  padding: 3%;\n  height: 45px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.8rem;\n  color: #fff;\n  cursor: pointer; }\n\n.printbox {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  width: 30%; }\n\n.print {\n  background: #4a4a4a;\n  width: 170%;\n  margin-top: 14px;\n  padding: 3%;\n  height: 45px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.8rem;\n  color: #fff;\n  cursor: pointer;\n  margin-right: 2%; }\n\n.download {\n  background: #4a4a4a;\n  width: 130%;\n  margin-top: 14px;\n  padding: 3%;\n  height: 45px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.8rem;\n  color: #fff;\n  cursor: pointer; }\n\n.filter {\n  margin-left: 0%;\n  margin-top: 2%; }\n\n.filtertext {\n  font-weight: bold;\n  margin-top: 8px; }\n\n.filter2 {\n  margin-bottom: 2%;\n  margin-left: 0.1%; }\n\n.grade {\n  font-weight: bold;\n  margin-top: 8px; }\n\n.grades {\n  width: 15%;\n  margin-left: 1%;\n  height: 10px; }\n\n.select {\n  font-weight: bold;\n  font-size: 13px; }\n\n.date {\n  width: 15%;\n  margin-left: 1%; }\n\n.day {\n  width: 15%;\n  margin-left: 1%;\n  height: 10px; }\n\n.show {\n  width: 15%;\n  margin-left: 1%; }\n\n.build {\n  color: red; }\n\n.point {\n  color: #fff; }\n\n.ti {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 2rem;\n  position: relative;\n  color: #4a4a4a; }\n\n.my-btn {\n  background: #4a4a4a;\n  cursor: pointer;\n  display: inline;\n  width: 200px;\n  font-size: 0.8rem;\n  font-weight: bold;\n  padding-left: 50px;\n  padding-right: 50px;\n  padding-top: 20px;\n  padding-bottom: 20px; }\n\n.my-btn1 {\n  background: #fff;\n  width: 200px;\n  cursor: pointer;\n  display: inline;\n  color: #8a8d8a;\n  font-size: 0.8rem;\n  font-weight: bold;\n  padding-left: 50px;\n  padding-right: 50px;\n  padding-top: 20px;\n  padding-bottom: 20px; }\n\n@media only screen and (max-width: 1470px) {\n  .my-container {\n    max-width: 100%;\n    margin: auto; }\n  .card-title {\n    padding: 15px;\n    color: #4a4a4a;\n    font-weight: bold;\n    font-size: 1.5rem;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n  .my-content {\n    padding: 15px;\n    margin-bottom: 20px; }\n  /* .pointer{\n    width:0;\n    height:0; \n    border-top:8px solid transparent; \n    border-left: 12px solid #808080; \n    border-bottom: 8px solid transparent; \n    float:left; \n    margin-left:20px; \n    margin-top:12px;\n    }\n    .plan1{\n    float:left; \n    font-size:12px; \n    font-weight:bold;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n    }\n    .plan2{\n    float:left; \n    font-weight:bold;\n    font-size:3rem;\n    color:#4a4a4a;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n    }\n    .plan3{\n    float:left; \n    font-size:25px; \n    font-weight:bold;\n    color:#8a8d8a;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n    }\n    .text1{\n    color:#4a4a4a; \n    margin-top:2%;\n    padding:15px;\n    }\n    .text2{\n    \n    padding-bottom:0;\n    margin-bottom: 20px;\n    font-size:3rem;\n    font-weight:bold;\n    clear: both;\n    color:#4a4a4a;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n    }\n    .text3{\n    \n    padding-bottom:0;\n    margin-bottom: 20px;\n    font-size:1rem;\n    font-weight:lighter;\n    clear: both;\n    color:#4a4a4a;\n    font-family: Arial;\n    }\n    .filter{\n        margin-left:1.5%; \n        margin-top:2%;  \n        } */ }\n\n@media only screen and (max-width: 1300px) {\n  /*   \n.grades{\n    width:26%;\n     margin-left:1%;\n }\n .date{\n width:26%; margin-left:1%;\n }\n .day{\n width:26%;margin-left:1%;\n }  \n \n .show{\n    width:12%; \n    margin-left:46%;\n    margin-top:1%;\n    } */ }\n\n@media only screen and (max-width: 1220px) {\n  /*  .margin{\n        margin-bottom:5%;\n        height:380px;\n        width:49%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n       \n    } */ }\n\n@media only screen and (max-width: 1024px) {\n  /* .plan1{\n        float:left; \n        font-size:12px; \n        font-weight:bold;\n     \n        }\n        .plan2{\n        float:left; \n        font-weight:bold;\n        font-size:1.5rem;\n        color:#4a4a4a;\n    \n        }\n        .plan3{\n        float:left; \n        font-size:1rem; \n        font-weight:bold;\n        color:#8a8d8a;\n      \n        }\n        .pointer{\n            width:0;\n            height:0; \n            border-top:8px solid transparent; \n            border-left: 8px solid #808080; \n            border-bottom: 5px solid transparent; \n            float:left; \n            margin-left:10px; \n            margin-top:6px;\n            }\n       \n        .text2{\n        padding-bottom:0;\n        margin-bottom: 10px;\n        font-size:1.5rem;\n        clear: both;\n        color:#4a4a4a;\n\n        }\n        .text3{\n        padding-bottom:0;\n        margin-bottom: 20px;\n        font-size:1rem;\n        font-weight:lighter;\n        clear: both;\n        color:#4a4a4a;\n     \n        } */ }\n\n@media only screen and (max-width: 1006px) {\n  /* .img-resize{\n        height:250px;\n        width:100%;\n        object-fit:cover;\n      }\n      \n\n    .filtertext{\n        font-weight:bold; \n        margin-top:8px;\n        margin-left:37%;\n        }\n    .grades{\n        width:95%;\n         margin-left:1%;\n         \n     }\n     .date{\n     width:95%; \n     margin-left:1%;\n     margin-top:4%;\n    \n     }\n     .day{\n     width:95%;\n     margin-left:1%;\n     margin-top:1.5%;\n  \n     }  \n     \n     .show{\n        width:95%; \n        margin-left:1%;\n        margin-top:4%;\n  \n        } */ }\n\n@media only screen and (max-width: 1000px) {\n  /*  .margin{\n        margin-bottom:3%;\n        height:380px;\n        width:49%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n    }\n */ }\n\n@media only screen and (max-width: 850px) {\n  /* .margin{\n        margin-bottom:5%;\n        height:380px;\n        width:49%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n       \n    }\n    .grades{\n        width:95%;\n         margin-left:1%;\n         \n     }\n     .date{\n     width:95%; \n     margin-left:1%;\n     margin-top:4.2%;\n    \n     }\n     .day{\n     width:95%;\n     margin-left:1%;\n     margin-top:1.5%;\n  \n     }  \n     \n     .show{\n        width:95%; \n        margin-left:1%;\n        margin-top:4%;\n  \n        } */ }\n\n@media only screen and (max-width: 750px) {\n  /*   .margin{\n        margin-bottom:8%;\n        height:380px;\n        width:49%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n       \n    }\n    .grades{\n        width:95%;\n         margin-left:1%;\n         \n     }\n     .date{\n     width:95%; \n     margin-left:1%;\n     margin-top:5%;\n    \n     }\n     .day{\n     width:95%;\n     margin-left:1%;\n     margin-top:1.5%;\n  \n     }  \n     \n     .show{\n        width:95%; \n        margin-left:1%;\n        margin-top:5%;\n  \n        }\n      */ }\n\n@media only screen and (max-width: 650px) {\n  /*    .margin{\n        margin-bottom:10%;\n        height:380px;\n        width:50%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n       \n    }\n\n    .grades{\n        width:95%;\n         margin-left:1%;\n         \n     }\n     .date{\n     width:95%; \n     margin-left:1%;\n     margin-top:5.5%;\n    \n     }\n     .day{\n     width:95%;\n     margin-left:1%;\n     margin-top:1.5%;\n  \n     }  \n     \n     .show{\n        width:95%; \n        margin-left:1%;\n        margin-top:5.5%;\n  \n        } */ }\n\n@media only screen and (max-width: 600px) {\n  /* .img-resize{\n        height:200px;\n        width:100%;\n        object-fit:cover;\n      }\n      \n\n    .margin{\n        margin-bottom:8%;\n        height:380px;\n        width:95%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:95%;\n        font-size:13px;\n        margin-bottom:3%;\n       \n    }\n\n    .filtertext{\n        font-weight:bold; \n        margin-top:8px;\n        margin-left:1%;\n        }\n\n        .grades{\n            width:95%;\n             margin-left:1%;\n             \n         }\n         .date{\n         width:95%; \n         margin-left:1%;\n         margin-top:6%;\n        \n         }\n         .day{\n         width:95%;\n         margin-left:1%;\n         margin-top:1.5%;\n      \n         }  \n         \n         .show{\n            width:95%; \n            margin-left:1%;\n            margin-top:6%;\n      \n            }\n       */ }\n\n/* @media only screen and (max-width: 480px) {\n    .margin{\n        margin-bottom:8%;\n        height:380px;\n        width:98%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:98%;\n        font-size:13px;\n        margin-bottom:3%;\n       \n    }\n\n    .filtertext{\n        font-weight:bold; \n        margin-top:8px;\n        margin-left:0%;\n        }\n\n        .grades{\n            width:92%;\n             margin-left:1%;\n             \n         }\n         .date{\n         width:92%; \n         margin-left:1%;\n         margin-top:7%;\n        \n         }\n         .day{\n         width:92%;\n         margin-left:1%;\n         margin-top:1.5%;\n      \n         }  \n         \n         .show{\n            width:92%; \n            margin-left:1%;\n            margin-top:7%;\n      \n            }\n      \n    \n  } */\n\n@media only screen and (max-width: 414px) {\n  /* .margin{\n        margin-bottom:12%;\n        height:380px;\n        width:95%;\n        font-size:13px;\n       \n    }\n\n    .plan1{\n        float:left; \n        font-size:12px; \n        font-weight:bold;\n        }\n        .plan2{\n        float:left; \n        margin-left:10px;\n        font-weight:bold; font-size:28px;\n        }\n        .plan3{\n        float:left; \n        font-size:0px; \n        font-weight:bold; \n        color:\"#808080\";\n        }\n\n    .empty-card{\n        height:380px; \n        width:92%;\n        font-size:8px;\n        margin-bottom:8%;\n       \n    }\n\n\n    .text1{\n\n        margin-left:1%; \n        margin-top:2%;\n        }\n        .text2{\n        font-weight:bold; \n        font-size:25px;\n        margin-left:1%; \n        }\n        .text3{\n        font-size:12px; \n        margin-left:1%;\n        width:80%; \n        margin-top:0.8%;\n        \n        }\n\n        .grades{\n            width:92%;\n             margin-left:1%;\n             \n         }\n         .date{\n         width:92%; \n         margin-left:1%;\n         margin-top:9%;\n         \n        \n         }\n         .day{\n         width:92%;\n         margin-left:1%;\n         margin-top:2.7%;\n      \n         }  \n         \n         .show{\n            width:92%; \n            margin-left:1%;\n            margin-top:9%;\n      \n            }\n          \n */ }\n\n@media only screen and (max-width: 375px) {\n  /* .margin{\n        margin-bottom:12%;\n        height:380px;\n        width:95%;\n        font-size:13px;\n       \n    }\n\n    .plan1{\n        float:left; \n        font-size:12px; \n        font-weight:bold;\n        }\n        .plan2{\n        float:left; \n        font-weight:bold; font-size:25px;\n        }\n        .plan3{\n        float:left; \n        font-size:0px; \n        font-weight:bold; \n        color:\"#808080\";\n        }\n\n    .empty-card{\n        height:380px; \n        width:92%;\n        font-size:8px;\n        margin-bottom:8%;\n       \n    }\n\n\n    .text1{\n\n        margin-left:1%;\n        margin-top:2%;\n        }\n        .text2{\n         margin-left:1%; \n        font-weight:bold; \n        font-size:25px;\n        }\n        .text3{\n        margin-left:1%; \n        font-size:12px; \n        width:80%; \n        margin-top:0.8%;\n        \n        }\n\n        .grades{\n            width:92%;\n             margin-left:1%;\n             \n         }\n         .date{\n         width:92%; \n         margin-left:1%;\n         margin-top:9%;\n         \n        \n         }\n         .day{\n         width:92%;\n         margin-left:1%;\n         margin-top:2.2%;\n      \n         }  \n         \n         .show{\n            width:92%; \n            margin-left:1%;\n            margin-top:9%;\n      \n            } */ }\n\n@media only screen and (max-width: 320px) {\n  /* .margin{\n        margin-bottom:12%;\n        height:380px;\n        width:95%;\n        font-size:13px;\n       \n    }\n\n    .plan1{\n        float:left; \n        font-size:12px; \n        font-weight:bold;\n        }\n        .plan2{\n        float:left; \n        font-weight:bold; font-size:25px;\n        }\n        .plan3{\n        float:left; \n        font-size:0px; \n        font-weight:bold; \n        color:\"#808080\";\n        }\n\n    .empty-card{\n        height:380px; \n        width:92%;\n        font-size:8px;\n        margin-bottom:8%;\n       \n    }\n\n\n    .text1{\n\n        margin-left:1%;\n        margin-top:2%;\n        }\n        .text2{\n        font-weight:bold; \n        font-size:25px;\n        margin-left:1%;\n        }\n        .text3{\n        font-size:12px; \n        width:80%; \n        margin-top:0.8%;\n        margin-left:1%;\n        \n        }\n\n        .grades{\n            width:92%;\n            \n             \n         }\n         .date{\n         width:92%; \n         margin-top:9%;\n         \n        \n         }\n         .day{\n         width:92%;\n         margin-top:1.5%;\n      \n         }  \n         \n         .show{\n            width:92%; \n\n            margin-top:9%;\n      \n            } */ }\n"
+module.exports = ".my-container {\n  margin: auto; }\n\n.img-resize {\n  height: 350px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\n.left {\n  padding-top: 1.5%;\n  padding-bottom: 1.5%;\n  padding-left: 1.5%;\n  padding-right: 1.5%;\n  background-color: #8a8d8a;\n  margin-bottom: 2%;\n  width: 4.5%;\n  border-radius: 50%;\n  cursor: pointer; }\n\n.side-title {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1.5rem;\n  color: #4a4a4a;\n  margin-left: 2%;\n  margin-bottom: 6%; }\n\n.brief {\n  display: flex;\n  flex-direction: row;\n  margin-bottom: 2%;\n  width: 90%; }\n\n.brief1 {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1rem;\n  color: #8a8d8a;\n  margin-left: 3%;\n  width: 50px; }\n\n.brief2 {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1rem;\n  color: #4a4a4a;\n  width: 90%;\n  margin-left: 7%;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n\n.back-title {\n  float: left;\n  margin-left: 220px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1.5rem;\n  color: #4a4a4a; }\n\n.arrow-left {\n  width: 0;\n  height: 0;\n  border-top: 5px solid transparent;\n  border-bottom: 5px solid transparent;\n  border-right: 5px solid #fff;\n  margin: auto; }\n\n.btext {\n  position: absolute;\n  color: #fff;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  bottom: 23%;\n  left: 3%;\n  font-size: 2rem; }\n\n.btext4 {\n  position: absolute;\n  color: #fff;\n  background: #0099FF;\n  opacity: 0.9;\n  font-style: italic;\n  font-weight: lighter;\n  font-size: 0.8rem;\n  width: 100%;\n  padding: 2%;\n  bottom: 0; }\n\n.btext5 {\n  position: absolute;\n  color: #fff;\n  background: #00ff22;\n  opacity: 0.9;\n  font-style: italic;\n  font-weight: lighter;\n  font-size: 0.8rem;\n  width: 18%;\n  padding: 1%;\n  right: 0;\n  bottom: 53px;\n  cursor: pointer; }\n\n.btext1 {\n  font-family: Arial;\n  font-size: 1rem; }\n\n.btext3 {\n  font-size: 1rem; }\n\n.shadow {\n  position: relative;\n  height: 350px;\n  bottom: 120px;\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.3);\n  margin-bottom: -100px; }\n\n.shadow2 {\n  position: relative;\n  height: 330px;\n  bottom: 0px;\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.6); }\n\n.banner {\n  width: 100%;\n  height: 330px;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\n.my-bg {\n  position: absolute;\n  z-index: -5; }\n\n.my-bg2 {\n  position: absolute;\n  z-index: -5; }\n\n.h {\n  position: absolute;\n  top: 250px;\n  left: 25%;\n  font-size: 12px;\n  color: #fff;\n  max-width: 80%; }\n\n.plan {\n  position: absolute;\n  top: 250px;\n  left: 25%;\n  font-size: 12px;\n  color: #fff;\n  max-width: 80%;\n  display: inline-block; }\n\n.arrow-right {\n  position: absolute;\n  top: 253px;\n  left: 28%;\n  display: inline-block;\n  width: 10%;\n  height: 0;\n  margin-left: 4%;\n  border-top: 5px solid transparent;\n  border-bottom: 5px solid transparent;\n  border-left: 5px solid white; }\n\n.my-header {\n  position: absolute;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  top: 250px;\n  left: 35%;\n  text-align: center;\n  color: #fff; }\n\n.h1 {\n  position: absolute;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  top: 295px;\n  left: 25%;\n  text-align: center;\n  color: #fff; }\n\n.h2 {\n  margin-bottom: 35%;\n  font-family: Arial;\n  font-weight: normal;\n  font-size: 1.5rem; }\n\n.h3 {\n  position: absolute;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  top: 300px;\n  left: 50%;\n  text-align: center;\n  color: #fff; }\n\n.card-title {\n  color: #4a4a4a;\n  font-weight: bold;\n  font-size: 1.5rem;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.pag /deep/ .ngx-pagination .current {\n  background: #4a4a4a; }\n\n.pag /deep/ .ngx-pagination li {\n  border-style: solid;\n  border-width: 1px;\n  border-color: #e5e5e5;\n  margin-right: 0px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.margin {\n  margin-right: 3%;\n  margin-bottom: 3%;\n  height: 230px;\n  width: 47%;\n  font-size: 13px; }\n\n.pagination-lg {\n  border: none; }\n\n/* .empty-card{\n    height:360px; \n    width:32%;\n    font-size:13px;\n} */\n\n.boxes {\n  width: 90%;\n  margin-bottom: 2px;\n  margin-left: 3%; }\n\n.first {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.selection {\n  margin-top: 10%; }\n\n.ftext {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 1rem;\n  margin-bottom: 1%;\n  margin-left: 3%;\n  color: #8a8d8a; }\n\n.my-content {\n  padding-bottom: 15px;\n  margin-bottom: 20px; }\n\n.pointer {\n  width: 0;\n  height: 0;\n  border-top: 8px solid transparent;\n  border-left: 12px solid white;\n  border-bottom: 8px solid transparent;\n  float: left;\n  margin-left: 20px;\n  margin-top: 12px; }\n\n.plan1 {\n  float: left;\n  font-size: 12px;\n  font-weight: bold;\n  text-transform: uppercase;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.plan2 {\n  float: left;\n  font-weight: bold;\n  font-size: 3rem;\n  color: #4a4a4a;\n  text-transform: uppercase;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.plan3 {\n  font-size: 0.8rem;\n  margin-bottom: 2%;\n  font-weight: bold;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.text {\n  color: #fff; }\n\ninput[type=checkbox]:checked {\n  background: green; }\n\n.selection {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.text1 {\n  font-size: 3rem;\n  margin-bottom: 8%;\n  font-weight: bold;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n\n.text2 {\n  font-size: 1.7rem;\n  margin-bottom: 1%; }\n\n.text3 {\n  position: absolute;\n  top: 20%;\n  left: 22%;\n  max-width: 55%;\n  padding: 15px;\n  text-align: center;\n  margin-bottom: 20px;\n  font-size: 1rem;\n  font-weight: lighter;\n  clear: both;\n  font-family: Arial; }\n\n.content {\n  max-width: 1300px;\n  padding-top: 2%;\n  margin: auto;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between; }\n\n.side-bar {\n  display: flex;\n  flex-direction: column;\n  width: 28%;\n  height: 1500px;\n  border-color: #e5e5e5;\n  border-right-width: 1px;\n  border-style: solid; }\n\n.itineraries {\n  width: 70%;\n  padding: 0.9%; }\n\n.itineraries2 {\n  width: 70%;\n  padding: 0.9%; }\n\n.link {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  height: 70px;\n  margin-bottom: 5%;\n  background-color: #e5e5e5; }\n\n.activities {\n  width: 65%; }\n\n.urlbox {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  width: 54%; }\n\n.url {\n  background: #fff;\n  width: 73%;\n  margin-top: 14px;\n  padding: 3%;\n  height: 45px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.8rem;\n  color: #8a8d8a;\n  white-space: nowrap;\n  overflow: hidden; }\n\n.url-btn {\n  background: red;\n  width: 150%;\n  margin-top: 14px;\n  padding: 3%;\n  height: 45px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.8rem;\n  color: #fff;\n  cursor: pointer; }\n\n.printbox {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  width: 30%; }\n\n.print {\n  background: #4a4a4a;\n  width: 170%;\n  margin-top: 14px;\n  padding: 3%;\n  height: 45px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.8rem;\n  color: #fff;\n  cursor: pointer;\n  margin-right: 2%; }\n\n.download {\n  background: #4a4a4a;\n  width: 130%;\n  margin-top: 14px;\n  padding: 3%;\n  height: 45px;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 0.8rem;\n  color: #fff;\n  cursor: pointer; }\n\n.filter {\n  margin-left: 0%;\n  margin-top: 2%; }\n\n.filtertext {\n  font-weight: bold;\n  margin-top: 8px; }\n\n.filter2 {\n  margin-bottom: 2%;\n  margin-left: 0.1%; }\n\n.grade {\n  font-weight: bold;\n  margin-top: 8px; }\n\n.grades {\n  width: 15%;\n  margin-left: 1%;\n  height: 10px; }\n\n.select {\n  font-weight: bold;\n  font-size: 13px; }\n\n.date {\n  width: 15%;\n  margin-left: 1%; }\n\n.day {\n  width: 15%;\n  margin-left: 1%;\n  height: 10px; }\n\n.show {\n  width: 15%;\n  margin-left: 1%; }\n\n.build {\n  color: red; }\n\n.point {\n  color: #fff; }\n\n.ti {\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  font-size: 2rem;\n  position: relative;\n  color: #4a4a4a; }\n\n.my-btn {\n  background: #4a4a4a;\n  cursor: pointer;\n  display: inline;\n  width: 200px;\n  font-size: 0.8rem;\n  font-weight: bold;\n  padding-left: 50px;\n  padding-right: 50px;\n  padding-top: 20px;\n  padding-bottom: 20px; }\n\n.my-btn1 {\n  background: #fff;\n  width: 200px;\n  cursor: pointer;\n  display: inline;\n  color: #8a8d8a;\n  font-size: 0.8rem;\n  font-weight: bold;\n  padding-left: 50px;\n  padding-right: 50px;\n  padding-top: 20px;\n  padding-bottom: 20px; }\n\n@media only screen and (max-width: 1470px) {\n  .my-container {\n    max-width: 100%;\n    margin: auto; }\n  .card-title {\n    padding: 15px;\n    color: #4a4a4a;\n    font-weight: bold;\n    font-size: 1.5rem;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial; }\n  .my-content {\n    padding: 15px;\n    margin-bottom: 20px; }\n  /* .pointer{\n    width:0;\n    height:0; \n    border-top:8px solid transparent; \n    border-left: 12px solid #808080; \n    border-bottom: 8px solid transparent; \n    float:left; \n    margin-left:20px; \n    margin-top:12px;\n    }\n    .plan1{\n    float:left; \n    font-size:12px; \n    font-weight:bold;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n    }\n    .plan2{\n    float:left; \n    font-weight:bold;\n    font-size:3rem;\n    color:#4a4a4a;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n    }\n    .plan3{\n    float:left; \n    font-size:25px; \n    font-weight:bold;\n    color:#8a8d8a;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n    }\n    .text1{\n    color:#4a4a4a; \n    margin-top:2%;\n    padding:15px;\n    }\n    .text2{\n    \n    padding-bottom:0;\n    margin-bottom: 20px;\n    font-size:3rem;\n    font-weight:bold;\n    clear: both;\n    color:#4a4a4a;\n    font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n    }\n    .text3{\n    \n    padding-bottom:0;\n    margin-bottom: 20px;\n    font-size:1rem;\n    font-weight:lighter;\n    clear: both;\n    color:#4a4a4a;\n    font-family: Arial;\n    }\n    .filter{\n        margin-left:1.5%; \n        margin-top:2%;  \n        } */ }\n\n@media only screen and (max-width: 1300px) {\n  /*   \n.grades{\n    width:26%;\n     margin-left:1%;\n }\n .date{\n width:26%; margin-left:1%;\n }\n .day{\n width:26%;margin-left:1%;\n }  \n \n .show{\n    width:12%; \n    margin-left:46%;\n    margin-top:1%;\n    } */ }\n\n@media only screen and (max-width: 1220px) {\n  /*  .margin{\n        margin-bottom:5%;\n        height:380px;\n        width:49%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n       \n    } */ }\n\n@media only screen and (max-width: 1024px) {\n  /* .plan1{\n        float:left; \n        font-size:12px; \n        font-weight:bold;\n     \n        }\n        .plan2{\n        float:left; \n        font-weight:bold;\n        font-size:1.5rem;\n        color:#4a4a4a;\n    \n        }\n        .plan3{\n        float:left; \n        font-size:1rem; \n        font-weight:bold;\n        color:#8a8d8a;\n      \n        }\n        .pointer{\n            width:0;\n            height:0; \n            border-top:8px solid transparent; \n            border-left: 8px solid #808080; \n            border-bottom: 5px solid transparent; \n            float:left; \n            margin-left:10px; \n            margin-top:6px;\n            }\n       \n        .text2{\n        padding-bottom:0;\n        margin-bottom: 10px;\n        font-size:1.5rem;\n        clear: both;\n        color:#4a4a4a;\n\n        }\n        .text3{\n        padding-bottom:0;\n        margin-bottom: 20px;\n        font-size:1rem;\n        font-weight:lighter;\n        clear: both;\n        color:#4a4a4a;\n     \n        } */ }\n\n@media only screen and (max-width: 1006px) {\n  /* .img-resize{\n        height:250px;\n        width:100%;\n        object-fit:cover;\n      }\n      \n\n    .filtertext{\n        font-weight:bold; \n        margin-top:8px;\n        margin-left:37%;\n        }\n    .grades{\n        width:95%;\n         margin-left:1%;\n         \n     }\n     .date{\n     width:95%; \n     margin-left:1%;\n     margin-top:4%;\n    \n     }\n     .day{\n     width:95%;\n     margin-left:1%;\n     margin-top:1.5%;\n  \n     }  \n     \n     .show{\n        width:95%; \n        margin-left:1%;\n        margin-top:4%;\n  \n        } */ }\n\n@media only screen and (max-width: 1000px) {\n  /*  .margin{\n        margin-bottom:3%;\n        height:380px;\n        width:49%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n    }\n */ }\n\n@media only screen and (max-width: 850px) {\n  /* .margin{\n        margin-bottom:5%;\n        height:380px;\n        width:49%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n       \n    }\n    .grades{\n        width:95%;\n         margin-left:1%;\n         \n     }\n     .date{\n     width:95%; \n     margin-left:1%;\n     margin-top:4.2%;\n    \n     }\n     .day{\n     width:95%;\n     margin-left:1%;\n     margin-top:1.5%;\n  \n     }  \n     \n     .show{\n        width:95%; \n        margin-left:1%;\n        margin-top:4%;\n  \n        } */ }\n\n@media only screen and (max-width: 750px) {\n  /*   .margin{\n        margin-bottom:8%;\n        height:380px;\n        width:49%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n       \n    }\n    .grades{\n        width:95%;\n         margin-left:1%;\n         \n     }\n     .date{\n     width:95%; \n     margin-left:1%;\n     margin-top:5%;\n    \n     }\n     .day{\n     width:95%;\n     margin-left:1%;\n     margin-top:1.5%;\n  \n     }  \n     \n     .show{\n        width:95%; \n        margin-left:1%;\n        margin-top:5%;\n  \n        }\n      */ }\n\n@media only screen and (max-width: 650px) {\n  /*    .margin{\n        margin-bottom:10%;\n        height:380px;\n        width:50%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:49%;\n        font-size:13px;\n    \n       \n    }\n\n    .grades{\n        width:95%;\n         margin-left:1%;\n         \n     }\n     .date{\n     width:95%; \n     margin-left:1%;\n     margin-top:5.5%;\n    \n     }\n     .day{\n     width:95%;\n     margin-left:1%;\n     margin-top:1.5%;\n  \n     }  \n     \n     .show{\n        width:95%; \n        margin-left:1%;\n        margin-top:5.5%;\n  \n        } */ }\n\n@media only screen and (max-width: 600px) {\n  /* .img-resize{\n        height:200px;\n        width:100%;\n        object-fit:cover;\n      }\n      \n\n    .margin{\n        margin-bottom:8%;\n        height:380px;\n        width:95%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:95%;\n        font-size:13px;\n        margin-bottom:3%;\n       \n    }\n\n    .filtertext{\n        font-weight:bold; \n        margin-top:8px;\n        margin-left:1%;\n        }\n\n        .grades{\n            width:95%;\n             margin-left:1%;\n             \n         }\n         .date{\n         width:95%; \n         margin-left:1%;\n         margin-top:6%;\n        \n         }\n         .day{\n         width:95%;\n         margin-left:1%;\n         margin-top:1.5%;\n      \n         }  \n         \n         .show{\n            width:95%; \n            margin-left:1%;\n            margin-top:6%;\n      \n            }\n       */ }\n\n/* @media only screen and (max-width: 480px) {\n    .margin{\n        margin-bottom:8%;\n        height:380px;\n        width:98%;\n        font-size:13px;\n       \n    }\n\n    .empty-card{\n        height:380px; \n        width:98%;\n        font-size:13px;\n        margin-bottom:3%;\n       \n    }\n\n    .filtertext{\n        font-weight:bold; \n        margin-top:8px;\n        margin-left:0%;\n        }\n\n        .grades{\n            width:92%;\n             margin-left:1%;\n             \n         }\n         .date{\n         width:92%; \n         margin-left:1%;\n         margin-top:7%;\n        \n         }\n         .day{\n         width:92%;\n         margin-left:1%;\n         margin-top:1.5%;\n      \n         }  \n         \n         .show{\n            width:92%; \n            margin-left:1%;\n            margin-top:7%;\n      \n            }\n      \n    \n  } */\n\n@media only screen and (max-width: 414px) {\n  /* .margin{\n        margin-bottom:12%;\n        height:380px;\n        width:95%;\n        font-size:13px;\n       \n    }\n\n    .plan1{\n        float:left; \n        font-size:12px; \n        font-weight:bold;\n        }\n        .plan2{\n        float:left; \n        margin-left:10px;\n        font-weight:bold; font-size:28px;\n        }\n        .plan3{\n        float:left; \n        font-size:0px; \n        font-weight:bold; \n        color:\"#808080\";\n        }\n\n    .empty-card{\n        height:380px; \n        width:92%;\n        font-size:8px;\n        margin-bottom:8%;\n       \n    }\n\n\n    .text1{\n\n        margin-left:1%; \n        margin-top:2%;\n        }\n        .text2{\n        font-weight:bold; \n        font-size:25px;\n        margin-left:1%; \n        }\n        .text3{\n        font-size:12px; \n        margin-left:1%;\n        width:80%; \n        margin-top:0.8%;\n        \n        }\n\n        .grades{\n            width:92%;\n             margin-left:1%;\n             \n         }\n         .date{\n         width:92%; \n         margin-left:1%;\n         margin-top:9%;\n         \n        \n         }\n         .day{\n         width:92%;\n         margin-left:1%;\n         margin-top:2.7%;\n      \n         }  \n         \n         .show{\n            width:92%; \n            margin-left:1%;\n            margin-top:9%;\n      \n            }\n          \n */ }\n\n@media only screen and (max-width: 375px) {\n  /* .margin{\n        margin-bottom:12%;\n        height:380px;\n        width:95%;\n        font-size:13px;\n       \n    }\n\n    .plan1{\n        float:left; \n        font-size:12px; \n        font-weight:bold;\n        }\n        .plan2{\n        float:left; \n        font-weight:bold; font-size:25px;\n        }\n        .plan3{\n        float:left; \n        font-size:0px; \n        font-weight:bold; \n        color:\"#808080\";\n        }\n\n    .empty-card{\n        height:380px; \n        width:92%;\n        font-size:8px;\n        margin-bottom:8%;\n       \n    }\n\n\n    .text1{\n\n        margin-left:1%;\n        margin-top:2%;\n        }\n        .text2{\n         margin-left:1%; \n        font-weight:bold; \n        font-size:25px;\n        }\n        .text3{\n        margin-left:1%; \n        font-size:12px; \n        width:80%; \n        margin-top:0.8%;\n        \n        }\n\n        .grades{\n            width:92%;\n             margin-left:1%;\n             \n         }\n         .date{\n         width:92%; \n         margin-left:1%;\n         margin-top:9%;\n         \n        \n         }\n         .day{\n         width:92%;\n         margin-left:1%;\n         margin-top:2.2%;\n      \n         }  \n         \n         .show{\n            width:92%; \n            margin-left:1%;\n            margin-top:9%;\n      \n            } */ }\n\n@media only screen and (max-width: 320px) {\n  /* .margin{\n        margin-bottom:12%;\n        height:380px;\n        width:95%;\n        font-size:13px;\n       \n    }\n\n    .plan1{\n        float:left; \n        font-size:12px; \n        font-weight:bold;\n        }\n        .plan2{\n        float:left; \n        font-weight:bold; font-size:25px;\n        }\n        .plan3{\n        float:left; \n        font-size:0px; \n        font-weight:bold; \n        color:\"#808080\";\n        }\n\n    .empty-card{\n        height:380px; \n        width:92%;\n        font-size:8px;\n        margin-bottom:8%;\n       \n    }\n\n\n    .text1{\n\n        margin-left:1%;\n        margin-top:2%;\n        }\n        .text2{\n        font-weight:bold; \n        font-size:25px;\n        margin-left:1%;\n        }\n        .text3{\n        font-size:12px; \n        width:80%; \n        margin-top:0.8%;\n        margin-left:1%;\n        \n        }\n\n        .grades{\n            width:92%;\n            \n             \n         }\n         .date{\n         width:92%; \n         margin-top:9%;\n         \n        \n         }\n         .day{\n         width:92%;\n         margin-top:1.5%;\n      \n         }  \n         \n         .show{\n            width:92%; \n\n            margin-top:9%;\n      \n            } */ }\n"
 
 /***/ }),
 
@@ -2344,9 +2357,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
-/* harmony import */ var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/add/operator/catch */ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js");
-/* harmony import */ var rxjs_add_observable_throw__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/add/observable/throw */ "./node_modules/rxjs-compat/_esm5/add/observable/throw.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2356,9 +2366,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
-
 
 
 
@@ -2397,7 +2404,10 @@ var BrowsePageComponent = /** @class */ (function () {
         var _this = this;
         localStorage.clear();
         this.setBrowse();
-        this.items = this.db.collection('/itineraries').valueChanges().subscribe(function (items) {
+        this.items = this.db
+            .collection('/itineraries')
+            .valueChanges()
+            .subscribe(function (items) {
             _this.items = items;
             _this.applyFilters();
         });
@@ -2409,30 +2419,37 @@ var BrowsePageComponent = /** @class */ (function () {
         /* this.db.collection('/modified_itineraries').add({'name': this.title, 'description': this.content, 'length': this.length}); */
         this.randomId();
         this.addedPost = true;
-        this.url = "http://planning-tool.herokuapp.com/ItineraryPage/" + this.rId;
-        this.db.collection('/modified_itineraries').doc(this.rId).set({ 'name': this.title,
-            'grade': this.grade,
-            'title': this.title,
-            'year': this.year,
-            'activities': this.itineraries });
+        this.url = 'http://planning-tool.herokuapp.com/ItineraryPage/' + this.rId;
+        this.db
+            .collection('/modified_itineraries')
+            .doc(this.rId)
+            .set({
+            name: this.title,
+            grade: this.grade,
+            title: this.title,
+            year: this.year,
+            activities: this.itineraries
+        });
     };
     BrowsePageComponent.prototype.randomId = function () {
         // Math.random should be unique because of its seeding algorithm.
         // Convert it to base 36 (numbers + letters), and grab the first 9 characters
         // after the decimal.
-        this.rId = Math.random().toString(36).substr(2, 9);
+        this.rId = Math.random()
+            .toString(36)
+            .substr(2, 9);
     };
-    ;
     BrowsePageComponent.prototype.print = function () {
         window.print();
     };
     BrowsePageComponent.prototype.getSet = function (event) {
         this.set = event;
-        this.itineraries = JSON.parse(localStorage.getItem("itinerary"));
-        this.grade = JSON.parse(localStorage.getItem("grade"));
-        this.title = JSON.parse(localStorage.getItem("title"));
-        this.year = JSON.parse(localStorage.getItem("year"));
-        this.titles = JSON.parse(localStorage.getItem("titles"));
+        this.itineraries = JSON.parse(localStorage.getItem('itinerary'));
+        this.img = JSON.parse(localStorage.getItem('img'));
+        this.grade = JSON.parse(localStorage.getItem('grade'));
+        this.title = JSON.parse(localStorage.getItem('title'));
+        this.year = JSON.parse(localStorage.getItem('year'));
+        this.titles = JSON.parse(localStorage.getItem('titles'));
     };
     BrowsePageComponent.prototype.add = function (event) {
         this.itineraries.push(0);
@@ -2458,7 +2475,7 @@ var BrowsePageComponent = /** @class */ (function () {
         localStorage.removeItem('itinerary');
     };
     BrowsePageComponent.prototype.setItem = function (event) {
-        console.log("set item method fgfdfdfgddgdfgdfg");
+        console.log('set item method fgfdfdfgddgdfgdfg');
         this.itineraries.pop();
         console.log(this.itineraries);
         this.itineraries.push(event);
@@ -2474,7 +2491,7 @@ var BrowsePageComponent = /** @class */ (function () {
         localStorage.setItem('n_e_o', JSON.stringify(event));
     };
     BrowsePageComponent.prototype.notice = function (event) {
-        this.itineraries = JSON.parse(localStorage.getItem("itinerary"));
+        this.itineraries = JSON.parse(localStorage.getItem('itinerary'));
     };
     BrowsePageComponent.prototype.modify = function (event) {
         this.modified = event;
@@ -2484,9 +2501,13 @@ var BrowsePageComponent = /** @class */ (function () {
         var divToPrint = document.getElementById('print');
         var newWin = window.open('', 'Print-Window');
         newWin.document.open();
-        newWin.document.write('<html><body onload="window.print()">' + divToPrint.innerHTML + '</body></html>');
+        newWin.document.write('<html><body onload="window.print()">' +
+            divToPrint.innerHTML +
+            '</body></html>');
         newWin.document.close();
-        setTimeout(function () { newWin.close(); }, 10);
+        setTimeout(function () {
+            newWin.close();
+        }, 10);
     };
     BrowsePageComponent.prototype.resizeImage = function () {
         var value = false;
@@ -2515,35 +2536,141 @@ var BrowsePageComponent = /** @class */ (function () {
       } */
     };
     BrowsePageComponent.prototype.filterExact = function (property, rule) {
+        var _this = this;
+        var toggler = false;
+        var myFilter = [];
+        var filter;
         console.log(this.day);
-        if (this.day == "Half-day" && this.sixth == false) {
-            console.log("callinghalf");
-            this.filtered = this.filtered.filter(function (elem) { return elem.day == "Half-day"; });
-        }
-        else {
-            if (this.day == "Half-day" && this.sixth == true) {
-                console.log("callinghalf");
-                if (this.first == true || this.second == true || this.third == true || this.fourth == true || this.fifth == true) {
-                    this.filtered = this.filtered.filter(function (elem) { return elem.day == "Half-day"; });
+        console.log(this.fourth);
+        console.log(this.fifth);
+        if (this.day == 'Half-day') {
+            console.log('callinghalf');
+            if (this.first == true ||
+                this.second == true ||
+                this.third == true ||
+                this.fourth == true ||
+                this.fifth == true) {
+                if (this.first == true) {
+                    var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                    var firstFilter = first.filter(function (elem) { return elem.day == 'Half-day'; });
+                    firstFilter.map(function (elem) { return myFilter.push(elem); });
                 }
-                else {
-                    this.filtered = this.items.filter(function (elem) { return elem.day == "Half-day"; });
+                if (this.second == true) {
+                    var first = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                    var firstFilter = first.filter(function (elem) { return elem.day == 'Half-day'; });
+                    firstFilter.map(function (elem) { return myFilter.push(elem); });
                 }
+                if (this.third == true) {
+                    var first = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                    var firstFilter = first.filter(function (elem) { return elem.day == 'Half-day'; });
+                    firstFilter.map(function (elem) { return myFilter.push(elem); });
+                }
+                if (this.fourth == true) {
+                    var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                    var firstFilter = first.filter(function (elem) { return elem.day == 'Half-day'; });
+                    console.log(firstFilter);
+                    console.log(myFilter);
+                    firstFilter.map(function (elem) {
+                        myFilter.map(function (element) {
+                            if (elem == element) {
+                                _this.toggler = true;
+                                console.log(elem);
+                            }
+                        });
+                        if (_this.toggler == false) {
+                            myFilter.push(elem);
+                        }
+                    });
+                    this.toggler = false;
+                }
+                if (this.fifth == true) {
+                    var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                    var firstFilter = first.filter(function (elem) { return elem.day == 'Half-day'; });
+                    console.log(firstFilter);
+                    console.log(myFilter);
+                    firstFilter.map(function (elem) {
+                        myFilter.map(function (element) {
+                            if (elem == element) {
+                                _this.toggler = true;
+                                console.log(elem);
+                            }
+                        });
+                        if (_this.toggler == false) {
+                            myFilter.push(elem);
+                        }
+                    });
+                    this.toggler = false;
+                }
+                this.filtered = myFilter;
+                console.log(this.filtered);
+            }
+            else {
+                this.filtered = this.items.filter(function (elem) { return elem.day == 'Half-day'; });
             }
         }
-        if (this.day == "Full-day" && this.sixth == false) {
-            console.log("callingfull");
-            this.filtered = this.filtered.filter(function (elem) { return elem.day == "Full-day"; });
-        }
-        else {
-            if (this.day == "Full-day" && this.sixth == true) {
-                console.log("callinghalf");
-                if (this.first == true || this.second == true || this.third == true || this.fourth == true || this.fifth == true) {
-                    this.filtered = this.filtered.filter(function (elem) { return elem.day == "Full-day"; });
+        if (this.day == 'Full-day' && this.sixth == true) {
+            console.log('callinghalf');
+            if (this.first == true ||
+                this.second == true ||
+                this.third == true ||
+                this.fourth == true ||
+                this.fifth == true) {
+                if (this.first == true) {
+                    var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
+                    var firstFilter = first.filter(function (elem) { return elem.day == 'Full-day'; });
+                    firstFilter.map(function (elem) { return myFilter.push(elem); });
                 }
-                else {
-                    this.filtered = this.items.filter(function (elem) { return elem.day == "Full-day"; });
+                if (this.second == true) {
+                    var first = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
+                    var firstFilter = first.filter(function (elem) { return elem.day == 'Full-day'; });
+                    firstFilter.map(function (elem) { return myFilter.push(elem); });
                 }
+                if (this.third == true) {
+                    var first = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
+                    var firstFilter = first.filter(function (elem) { return elem.day == 'Full-day'; });
+                    firstFilter.map(function (elem) { return myFilter.push(elem); });
+                }
+                if (this.fourth == true) {
+                    var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
+                    var firstFilter = first.filter(function (elem) { return elem.day == 'Full-day'; });
+                    console.log(firstFilter);
+                    console.log(myFilter);
+                    firstFilter.map(function (elem) {
+                        myFilter.map(function (element) {
+                            if (elem == element) {
+                                _this.toggler = true;
+                                console.log(elem);
+                            }
+                        });
+                        if (_this.toggler == false) {
+                            myFilter.push(elem);
+                        }
+                    });
+                    this.toggler = false;
+                }
+                if (this.fifth == true) {
+                    var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
+                    var firstFilter = first.filter(function (elem) { return elem.day == 'Full-day'; });
+                    console.log(firstFilter);
+                    console.log(myFilter);
+                    firstFilter.map(function (elem) {
+                        myFilter.map(function (element) {
+                            if (elem == element) {
+                                _this.toggler = true;
+                                console.log(elem);
+                            }
+                        });
+                        if (_this.toggler == false) {
+                            myFilter.push(elem);
+                        }
+                    });
+                    this.toggler = false;
+                }
+                this.filtered = myFilter;
+                console.log(this.filtered);
+            }
+            else {
+                this.filtered = this.items.filter(function (elem) { return elem.day == 'Full-day'; });
             }
         }
         this.sixth = true;
@@ -2598,12 +2725,12 @@ var BrowsePageComponent = /** @class */ (function () {
                             });
                             this.toggler = false;
                             var temp = tem_1.filter(function (elem) { return elem.OctoberToApril == true; });
-                            if (this.day == "Half-day") {
-                                var temp2 = temp.filter(function (elem) { return elem.day = "Half-day"; });
+                            if (this.day == 'Half-day') {
+                                var temp2 = temp.filter(function (elem) { return (elem.day = 'Half-day'); });
                                 temp2.map(function (elem) { return _this.filtered.push(elem); });
                             }
-                            if (this.day == "Full-day") {
-                                var temp2 = temp.filter(function (elem) { return elem.day = "Full-day"; });
+                            if (this.day == 'Full-day') {
+                                var temp2 = temp.filter(function (elem) { return (elem.day = 'Full-day'); });
                                 temp2.map(function (elem) { return _this.filtered.push(elem); });
                             }
                         }
@@ -2646,12 +2773,12 @@ var BrowsePageComponent = /** @class */ (function () {
                             });
                             this.toggler = false;
                             var temp = tem_2.filter(function (elem) { return elem.MayToJune == true; });
-                            if (this.day == "Half-day") {
-                                var temp2 = temp.filter(function (elem) { return elem.day = "Half-day"; });
+                            if (this.day == 'Half-day') {
+                                var temp2 = temp.filter(function (elem) { return (elem.day = 'Half-day'); });
                                 temp2.map(function (elem) { return _this.filtered.push(elem); });
                             }
-                            if (this.day == "Full-day") {
-                                var temp2 = temp.filter(function (elem) { return elem.day = "Full-day"; });
+                            if (this.day == 'Full-day') {
+                                var temp2 = temp.filter(function (elem) { return (elem.day = 'Full-day'); });
                                 temp2.map(function (elem) { return _this.filtered.push(elem); });
                             }
                         }
@@ -2732,12 +2859,12 @@ var BrowsePageComponent = /** @class */ (function () {
                             });
                             this.toggler = false;
                             var temp = tem_3.filter(function (elem) { return elem.OctoberToApril == true; });
-                            if (this.day == "Half-day") {
-                                var temp2 = temp.filter(function (elem) { return elem.day = "Half-day"; });
+                            if (this.day == 'Half-day') {
+                                var temp2 = temp.filter(function (elem) { return (elem.day = 'Half-day'); });
                                 temp2.map(function (elem) { return _this.filtered.push(elem); });
                             }
-                            if (this.day == "Full-day") {
-                                var temp2 = temp.filter(function (elem) { return elem.day = "Full-day"; });
+                            if (this.day == 'Full-day') {
+                                var temp2 = temp.filter(function (elem) { return (elem.day = 'Full-day'); });
                                 temp2.map(function (elem) { return _this.filtered.push(elem); });
                             }
                         }
@@ -2780,12 +2907,12 @@ var BrowsePageComponent = /** @class */ (function () {
                             });
                             this.toggler = false;
                             var temp = tem_4.filter(function (elem) { return elem.MayToJune == true; });
-                            if (this.day == "Half-day") {
-                                var temp2 = temp.filter(function (elem) { return elem.day = "Half-day"; });
+                            if (this.day == 'Half-day') {
+                                var temp2 = temp.filter(function (elem) { return (elem.day = 'Half-day'); });
                                 temp2.map(function (elem) { return _this.filtered.push(elem); });
                             }
-                            if (this.day == "Full-day") {
-                                var temp2 = temp.filter(function (elem) { return elem.day = "Full-day"; });
+                            if (this.day == 'Full-day') {
+                                var temp2 = temp.filter(function (elem) { return (elem.day = 'Full-day'); });
                                 temp2.map(function (elem) { return _this.filtered.push(elem); });
                             }
                         }
@@ -2866,12 +2993,12 @@ var BrowsePageComponent = /** @class */ (function () {
                             });
                             this.toggler = false;
                             var temp = tem_5.filter(function (elem) { return elem.OctoberToApril == true; });
-                            if (this.day == "Half-day") {
-                                var temp2 = temp.filter(function (elem) { return elem.day = "Half-day"; });
+                            if (this.day == 'Half-day') {
+                                var temp2 = temp.filter(function (elem) { return (elem.day = 'Half-day'); });
                                 temp2.map(function (elem) { return _this.filtered.push(elem); });
                             }
-                            if (this.day == "Full-day") {
-                                var temp2 = temp.filter(function (elem) { return elem.day = "Full-day"; });
+                            if (this.day == 'Full-day') {
+                                var temp2 = temp.filter(function (elem) { return (elem.day = 'Full-day'); });
                                 temp2.map(function (elem) { return _this.filtered.push(elem); });
                             }
                         }
@@ -2914,12 +3041,12 @@ var BrowsePageComponent = /** @class */ (function () {
                             });
                             this.toggler = false;
                             var temp = tem_6.filter(function (elem) { return elem.MayToJune == true; });
-                            if (this.day == "Half-day") {
-                                var temp2 = temp.filter(function (elem) { return elem.day = "Half-day"; });
+                            if (this.day == 'Half-day') {
+                                var temp2 = temp.filter(function (elem) { return (elem.day = 'Half-day'); });
                                 temp2.map(function (elem) { return _this.filtered.push(elem); });
                             }
-                            if (this.day == "Full-day") {
-                                var temp2 = temp.filter(function (elem) { return elem.day = "Full-day"; });
+                            if (this.day == 'Full-day') {
+                                var temp2 = temp.filter(function (elem) { return (elem.day = 'Full-day'); });
                                 temp2.map(function (elem) { return _this.filtered.push(elem); });
                             }
                         }
@@ -2957,27 +3084,30 @@ var BrowsePageComponent = /** @class */ (function () {
             this.removeFilter3(property);
         else {
             //check if external has been checked
-            if (this.first == true || this.second == true || this.third == true || this.sixth == true) {
+            if (this.first == true ||
+                this.second == true ||
+                this.third == true ||
+                this.sixth == true) {
                 // check if an internal checkbox has been selected
                 if (this.fifth == true) {
-                    console.log("intenal checked");
+                    console.log('intenal checked');
                     //go through all the checked boxes and filter
                     if (this.first == true) {
                         var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
-                        if (this.day == "Half-day") {
-                            console.log("fitering full days");
-                            var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            console.log('fitering full days');
+                            var fill1 = first.filter(function (elem) { return elem.day == 'Half-day'; });
                             console.log(fill1);
                             fill1.map(function (elem) { return _this.filtered.push(elem); });
                         }
                         else {
-                            if (this.day == "Full-day") {
-                                (console.log("filtering half days"));
-                                var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                            if (this.day == 'Full-day') {
+                                console.log('filtering half days');
+                                var fill1 = first.filter(function (elem) { return elem.day == 'Full-day'; });
                                 fill1.map(function (elem) { return _this.filtered.push(elem); });
                             }
                             else {
-                                console.log("i should be here");
+                                console.log('i should be here');
                                 var fill1 = first.filter(function (elem) { return elem.OctoberToApril == true; });
                                 fill1.map(function (elem) { return _this.filtered.push(elem); });
                             }
@@ -2985,13 +3115,13 @@ var BrowsePageComponent = /** @class */ (function () {
                     }
                     if (this.second == true) {
                         var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
-                        if (this.day == "Half-day") {
-                            var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fill2 = second.filter(function (elem) { return elem.day == 'Half-day'; });
                             fill2.map(function (elem) { return _this.filtered.push(elem); });
                         }
                         else {
-                            if (this.day == "Full-day") {
-                                var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                            if (this.day == 'Full-day') {
+                                var fill2 = second.filter(function (elem) { return elem.day == 'Full-day'; });
                                 fill2.map(function (elem) { return _this.filtered.push(elem); });
                             }
                             else {
@@ -3002,13 +3132,13 @@ var BrowsePageComponent = /** @class */ (function () {
                     }
                     if (this.third == true) {
                         var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
-                        if (this.day == "Half-day") {
-                            var fill3 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fill3 = third.filter(function (elem) { return elem.day == 'Half-day'; });
                             fill3.map(function (elem) { return _this.filtered.push(elem); });
                         }
                         else {
-                            if (this.day == "Full-day") {
-                                var fill3 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                            if (this.day == 'Full-day') {
+                                var fill3 = third.filter(function (elem) { return elem.day == 'Full-day'; });
                                 fill3.map(function (elem) { return _this.filtered.push(elem); });
                             }
                             else {
@@ -3018,12 +3148,12 @@ var BrowsePageComponent = /** @class */ (function () {
                         }
                     }
                     /*  if (this.sixth == true){
-                      let third = this.items.filter(elem => elem.day == this.day)
-                
-                      let thirdFilter = third.filter(elem => elem.MayToJune)
-                      thirdFilter.map(elem=>this.filtered.push(elem))
-                     }
-                 */
+                  let third = this.items.filter(elem => elem.day == this.day)
+            
+                  let thirdFilter = third.filter(elem => elem.MayToJune)
+                  thirdFilter.map(elem=>this.filtered.push(elem))
+                 }
+             */
                 }
                 else {
                     this.filtered = this.filtered.filter(function (elem) { return elem.OctoberToApril == true; });
@@ -3047,23 +3177,26 @@ var BrowsePageComponent = /** @class */ (function () {
             this.removeFilter4(property);
         else {
             //check if external has been checked
-            if (this.first == true || this.second == true || this.third == true || this.sixth == true) {
-                console.log("external checked");
+            if (this.first == true ||
+                this.second == true ||
+                this.third == true ||
+                this.sixth == true) {
+                console.log('external checked');
                 // check if an internal checkbox has been selected
                 if (this.fourth == true) {
                     //go through all the checked boxes and filter
                     if (this.first == true) {
                         var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
-                        if (this.day == "Half-day") {
-                            console.log("fitering full days");
-                            var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            console.log('fitering full days');
+                            var fill1 = first.filter(function (elem) { return elem.day == 'Half-day'; });
                             console.log(fill1);
                             fill1.map(function (elem) { return _this.filtered.push(elem); });
                         }
                         else {
-                            if (this.day == "Full-day") {
-                                (console.log("filtering half days"));
-                                var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                            if (this.day == 'Full-day') {
+                                console.log('filtering half days');
+                                var fill1 = first.filter(function (elem) { return elem.day == 'Full-day'; });
                                 fill1.map(function (elem) { return _this.filtered.push(elem); });
                             }
                             else {
@@ -3074,13 +3207,13 @@ var BrowsePageComponent = /** @class */ (function () {
                     }
                     if (this.second == true) {
                         var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
-                        if (this.day == "Half-day") {
-                            var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fill2 = second.filter(function (elem) { return elem.day == 'Half-day'; });
                             fill2.map(function (elem) { return _this.filtered.push(elem); });
                         }
                         else {
-                            if (this.day == "Full-day") {
-                                var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                            if (this.day == 'Full-day') {
+                                var fill2 = second.filter(function (elem) { return elem.day == 'Full-day'; });
                                 fill2.map(function (elem) { return _this.filtered.push(elem); });
                             }
                             else {
@@ -3091,13 +3224,13 @@ var BrowsePageComponent = /** @class */ (function () {
                     }
                     if (this.third == true) {
                         var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
-                        if (this.day == "Half-day") {
-                            var fill3 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fill3 = third.filter(function (elem) { return elem.day == 'Half-day'; });
                             fill3.map(function (elem) { return _this.filtered.push(elem); });
                         }
                         else {
-                            if (this.day == "Full-day") {
-                                var fill3 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                            if (this.day == 'Full-day') {
+                                var fill3 = third.filter(function (elem) { return elem.day == 'Full-day'; });
                                 fill3.map(function (elem) { return _this.filtered.push(elem); });
                             }
                             else {
@@ -3107,15 +3240,15 @@ var BrowsePageComponent = /** @class */ (function () {
                         }
                     }
                     /*  if (this.sixth == true){
-                      let third = this.items.filter(elem => elem.day == this.day)
-              
-                      let thirdFilter = third.filter(elem => elem.OctoberToApril)
-                      thirdFilter.map(elem=>this.filtered.push(elem))
-                     }
-               */
+                    let third = this.items.filter(elem => elem.day == this.day)
+            
+                    let thirdFilter = third.filter(elem => elem.OctoberToApril)
+                    thirdFilter.map(elem=>this.filtered.push(elem))
+                   }
+             */
                 }
                 else {
-                    console.log("internal not checked");
+                    console.log('internal not checked');
                     this.filtered = this.filtered.filter(function (elem) { return elem.MayToJune == true; });
                 }
             }
@@ -3135,25 +3268,25 @@ var BrowsePageComponent = /** @class */ (function () {
         this.first = false;
         if (this.fourth == true || this.fifth == true || this.sixth == true) {
             this.filtered = this.filtered.filter(function (elem) { return elem.KinderTo2 == false; });
-            console.log("external checked");
+            console.log('external checked');
             // check if an internal checkbox has been selected
             if (this.second == true || this.third == true) {
-                console.log("intenal checked");
+                console.log('intenal checked');
                 //go through all the checked boxes and filter
                 if (this.fourth == true) {
-                    console.log("logged fourth");
+                    console.log('logged fourth');
                     if (this.second == true) {
                         var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
                         var sec = first.filter(function (elem) { return elem.Gr3To5 == true; });
                         var firstFilter = sec.filter(function (elem) { return elem.KinderTo2; });
                         var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
-                        if (this.day == "Half-day") {
-                            var fil = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            var fils = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fil = firstFilter.filter(function (elem) { return elem.day == 'Half-day'; });
+                            var fils = secFilter.filter(function (elem) { return elem.day == 'Half-day'; });
                         }
-                        if (this.day == "Full-day") {
-                            var fil = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            var fils = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            var fil = firstFilter.filter(function (elem) { return elem.day == 'Full-day'; });
+                            var fils = secFilter.filter(function (elem) { return elem.day == 'Full-day'; });
                         }
                         fil.map(function (elem) { return _this.filtered.push(elem); });
                     }
@@ -3162,29 +3295,29 @@ var BrowsePageComponent = /** @class */ (function () {
                         var sec = first.filter(function (elem) { return elem.Gr6To8 == true; });
                         var firstFilter = sec.filter(function (elem) { return elem.KinderTo2; });
                         var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
-                        if (this.day == "Half-day") {
-                            var fil1 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            var fils1 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fil1 = firstFilter.filter(function (elem) { return elem.day == 'Half-day'; });
+                            var fils1 = secFilter.filter(function (elem) { return elem.day == 'Half-day'; });
                         }
-                        if (this.day == "Full-day") {
-                            var fil1 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            var fils1 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            var fil1 = firstFilter.filter(function (elem) { return elem.day == 'Full-day'; });
+                            var fils1 = secFilter.filter(function (elem) { return elem.day == 'Full-day'; });
                         }
                         fil1.map(function (elem) { return _this.filtered.push(elem); });
                     }
                 }
                 if (this.fifth == true) {
-                    console.log("logged fifth");
+                    console.log('logged fifth');
                     if (this.second == true) {
                         var first = this.items.filter(function (elem) { return elem.MayToJune == true; });
                         var sec = first.filter(function (elem) { return elem.Gr3To5 == true; });
                         var firstFilter = sec.filter(function (elem) { return elem.KinderTo2; });
                         var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
-                        if (this.day == "Half-day") {
-                            var fil2 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fil2 = firstFilter.filter(function (elem) { return elem.day == 'Half-day'; });
                         }
-                        if (this.day == "Full-day") {
-                            var fil2 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            var fil2 = firstFilter.filter(function (elem) { return elem.day == 'Full-day'; });
                         }
                         fil2.map(function (elem) { return _this.filtered.push(elem); });
                     }
@@ -3193,63 +3326,63 @@ var BrowsePageComponent = /** @class */ (function () {
                         var sec = first.filter(function (elem) { return elem.Gr6To8 == true; });
                         var firstFilter = sec.filter(function (elem) { return elem.KinderTo2; });
                         var secFilter = sec.filter(function (elem) { return elem.KinderTo2; });
-                        if (this.day == "Half-day") {
-                            var fil3 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fil3 = firstFilter.filter(function (elem) { return elem.day == 'Half-day'; });
                         }
-                        if (this.day == "Full-day") {
-                            var fil3 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            var fil3 = firstFilter.filter(function (elem) { return elem.day == 'Full-day'; });
                         }
                         fil3.map(function (elem) { return _this.filtered.push(elem); });
                     }
                 }
                 /*    if (this.sixth == true){
-                     console.log("logged sixth")
-                    if (this.second == true){
-                      let first = this.items.filter(elem => elem.day == this.day)
-                      let sec = this.items.filter(elem => elem.Gr3To5 == true)
-                      let firstFilter = first.filter(elem => elem.KinderTo2)
-                      let secFilter = sec.filter(elem => elem.KinderTo2)
-                   
-                      firstFilter.map(elem=>this.filtered.push(elem))
-                      secFilter.map(elem=>this.filtered.push(elem))
-                     }
-            
-            
-                     if (this.third == true){
-                      let first = this.items.filter(elem => elem.day == this.day)
-                      let sec = this.items.filter(elem => elem.Gr6To8 == true)
-                      let firstFilter = first.filter(elem => elem.KinderTo2)
-                      let secFilter = sec.filter(elem => elem.KinderTo2)
-                   
-                      firstFilter.map(elem=>this.filtered.push(elem))
-                      secFilter.map(elem=>this.filtered.push(elem))
-                     }
-                   }
-                   */
+                 console.log("logged sixth")
+                if (this.second == true){
+                  let first = this.items.filter(elem => elem.day == this.day)
+                  let sec = this.items.filter(elem => elem.Gr3To5 == true)
+                  let firstFilter = first.filter(elem => elem.KinderTo2)
+                  let secFilter = sec.filter(elem => elem.KinderTo2)
+               
+                  firstFilter.map(elem=>this.filtered.push(elem))
+                  secFilter.map(elem=>this.filtered.push(elem))
+                 }
+        
+        
+                 if (this.third == true){
+                  let first = this.items.filter(elem => elem.day == this.day)
+                  let sec = this.items.filter(elem => elem.Gr6To8 == true)
+                  let firstFilter = first.filter(elem => elem.KinderTo2)
+                  let secFilter = sec.filter(elem => elem.KinderTo2)
+               
+                  firstFilter.map(elem=>this.filtered.push(elem))
+                  secFilter.map(elem=>this.filtered.push(elem))
+                 }
+               }
+               */
             }
             else {
-                console.log("internal not checked");
+                console.log('internal not checked');
                 console.log(this.day);
                 if (this.fourth == true) {
                     var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
-                    if (this.day == "Half-day") {
-                        console.log("fitering full days");
-                        var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        console.log('fitering full days');
+                        var fill1 = first.filter(function (elem) { return elem.day == 'Half-day'; });
                         console.log(fill1);
                     }
-                    if (this.day == "Full-day") {
-                        (console.log("filtering half days"));
-                        var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    if (this.day == 'Full-day') {
+                        console.log('filtering half days');
+                        var fill1 = first.filter(function (elem) { return elem.day == 'Full-day'; });
                     }
                     fill1.map(function (elem) { return _this.filtered.push(elem); });
                 }
                 if (this.fifth == true) {
                     var second = this.items.filter(function (elem) { return elem.MayToJune == true; });
-                    if (this.day == "Half-day") {
-                        var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        var fill2 = second.filter(function (elem) { return elem.day == 'Half-day'; });
                     }
-                    if (this.day == "Full-day") {
-                        var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    if (this.day == 'Full-day') {
+                        var fill2 = second.filter(function (elem) { return elem.day == 'Full-day'; });
                     }
                     fill2.map(function (elem) { return _this.filtered.push(elem); });
                 }
@@ -3264,7 +3397,7 @@ var BrowsePageComponent = /** @class */ (function () {
                 this.applyFilters();
             }
             else {
-                console.log("removetrue");
+                console.log('removetrue');
                 console.log(this.filtered);
                 this.filtered = this.filtered.filter(function (elem) { return elem.KinderTo2 == false; });
             }
@@ -3275,24 +3408,24 @@ var BrowsePageComponent = /** @class */ (function () {
         this.second = false;
         if (this.fourth == true || this.fifth == true || this.sixth == true) {
             this.filtered = this.filtered.filter(function (elem) { return elem.Gr3To5 == false; });
-            console.log("external checked");
+            console.log('external checked');
             // check if an internal checkbox has been selected
             if (this.first == true || this.third == true) {
-                console.log("intenal checked");
+                console.log('intenal checked');
                 //go through all the checked boxes and filter
                 if (this.fourth == true) {
                     if (this.first == true) {
-                        console.log("first is checked");
+                        console.log('first is checked');
                         var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
                         var sec = first.filter(function (elem) { return elem.KinderTo2 == true; });
                         console.log(sec);
                         var firstFilter = sec.filter(function (elem) { return elem.Gr3To5; });
                         var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
-                        if (this.day == "Half-day") {
-                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == 'Half-day'; });
                         }
-                        if (this.day == "Full-day") {
-                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == 'Full-day'; });
                         }
                         fil4.map(function (elem) { return _this.filtered.push(elem); });
                     }
@@ -3301,11 +3434,11 @@ var BrowsePageComponent = /** @class */ (function () {
                         var sec = first.filter(function (elem) { return elem.Gr6To8 == true; });
                         var firstFilter = sec.filter(function (elem) { return elem.Gr3To5; });
                         var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
-                        if (this.day == "Half-day") {
-                            var fil5 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fil5 = firstFilter.filter(function (elem) { return elem.day == 'Half-day'; });
                         }
-                        if (this.day == "Full-day") {
-                            var fil5 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            var fil5 = firstFilter.filter(function (elem) { return elem.day == 'Full-day'; });
                         }
                         fil5.map(function (elem) { return _this.filtered.push(elem); });
                     }
@@ -3316,11 +3449,11 @@ var BrowsePageComponent = /** @class */ (function () {
                         var sec = first.filter(function (elem) { return elem.KinderTo2 == true; });
                         var firstFilter = sec.filter(function (elem) { return elem.Gr3To5; });
                         var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
-                        if (this.day == "Half-day") {
-                            var fil6 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fil6 = firstFilter.filter(function (elem) { return elem.day == 'Half-day'; });
                         }
-                        if (this.day == "Full-day") {
-                            var fil6 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            var fil6 = firstFilter.filter(function (elem) { return elem.day == 'Full-day'; });
                         }
                         fil6.map(function (elem) { return _this.filtered.push(elem); });
                     }
@@ -3329,51 +3462,51 @@ var BrowsePageComponent = /** @class */ (function () {
                         var sec = first.filter(function (elem) { return elem.Gr6To8 == true; });
                         var firstFilter = sec.filter(function (elem) { return elem.Gr3To5; });
                         var secFilter = sec.filter(function (elem) { return elem.Gr3To5; });
-                        if (this.day == "Half-day") {
-                            var fil7 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fil7 = firstFilter.filter(function (elem) { return elem.day == 'Half-day'; });
                         }
-                        if (this.day == "Full-day") {
-                            var fil7 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            var fil7 = firstFilter.filter(function (elem) { return elem.day == 'Full-day'; });
                         }
                         fil7.map(function (elem) { return _this.filtered.push(elem); });
                     }
                 }
                 /* if (this.sixth == true){
-                 let third = this.items.filter(elem => elem.day == this.day)
-         
-                 let thirdFilter = third.filter(elem => elem.Gr3To5)
-                 thirdFilter.map(elem=>this.filtered.push(elem))
-                } */
+                let third = this.items.filter(elem => elem.day == this.day)
+        
+                let thirdFilter = third.filter(elem => elem.Gr3To5)
+                thirdFilter.map(elem=>this.filtered.push(elem))
+               } */
             }
             else {
                 if (this.fourth == true) {
                     var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
-                    if (this.day == "Half-day") {
-                        console.log("fitering full days");
-                        var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        console.log('fitering full days');
+                        var fill1 = first.filter(function (elem) { return elem.day == 'Half-day'; });
                         console.log(fill1);
                     }
-                    if (this.day == "Full-day") {
-                        (console.log("filtering half days"));
-                        var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    if (this.day == 'Full-day') {
+                        console.log('filtering half days');
+                        var fill1 = first.filter(function (elem) { return elem.day == 'Full-day'; });
                     }
                     fill1.map(function (elem) { return _this.filtered.push(elem); });
                 }
                 if (this.fifth == true) {
                     var second = this.items.filter(function (elem) { return elem.MayToJune == true; });
-                    if (this.day == "Half-day") {
-                        var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        var fill2 = second.filter(function (elem) { return elem.day == 'Half-day'; });
                     }
-                    if (this.day == "Full-day") {
-                        var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    if (this.day == 'Full-day') {
+                        var fill2 = second.filter(function (elem) { return elem.day == 'Full-day'; });
                     }
                     fill2.map(function (elem) { return _this.filtered.push(elem); });
                 }
                 /*
-                         if (this.sixth == true){
-                          let second = this.items.filter(elem => elem.day == this.day)
-                          second.map(elem=>this.filtered.push(elem))
-                         } */
+                 if (this.sixth == true){
+                  let second = this.items.filter(elem => elem.day == this.day)
+                  second.map(elem=>this.filtered.push(elem))
+                 } */
             }
         }
         else {
@@ -3381,7 +3514,7 @@ var BrowsePageComponent = /** @class */ (function () {
                 this.applyFilters();
             }
             else {
-                console.log("removetrue");
+                console.log('removetrue');
                 console.log(this.filtered);
                 this.filtered = this.filtered.filter(function (elem) { return elem.Gr3To5 == false; });
             }
@@ -3392,10 +3525,10 @@ var BrowsePageComponent = /** @class */ (function () {
         this.third = false;
         if (this.fourth == true || this.fifth == true || this.sixth == true) {
             this.filtered = this.filtered.filter(function (elem) { return elem.Gr6To8 == false; });
-            console.log("external checked");
+            console.log('external checked');
             // check if an internal checkbox has been selected
             if (this.second == true || this.first == true) {
-                console.log("intenal checked");
+                console.log('intenal checked');
                 //go through all the checked boxes and filter
                 if (this.fourth == true) {
                     if (this.first == true) {
@@ -3403,13 +3536,13 @@ var BrowsePageComponent = /** @class */ (function () {
                         var sec = first.filter(function (elem) { return elem.KinderTo2 == true; });
                         var firstFilter = sec.filter(function (elem) { return elem.Gr6To8; });
                         var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
-                        if (this.day == "Half-day") {
-                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == 'Half-day'; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == 'Half-day'; });
                         }
-                        if (this.day == "Full-day") {
-                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == 'Full-day'; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == 'Full-day'; });
                         }
                         fil4.map(function (elem) { return _this.filtered.push(elem); });
                     }
@@ -3418,13 +3551,13 @@ var BrowsePageComponent = /** @class */ (function () {
                         var sec = first.filter(function (elem) { return elem.Gr3To5 == true; });
                         var firstFilter = sec.filter(function (elem) { return elem.Gr6To8; });
                         var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
-                        if (this.day == "Half-day") {
-                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == 'Half-day'; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == 'Half-day'; });
                         }
-                        if (this.day == "Full-day") {
-                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == 'Full-day'; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == 'Full-day'; });
                         }
                         fil4.map(function (elem) { return _this.filtered.push(elem); });
                     }
@@ -3435,13 +3568,13 @@ var BrowsePageComponent = /** @class */ (function () {
                         var sec = first.filter(function (elem) { return elem.KinderTo2 == true; });
                         var firstFilter = sec.filter(function (elem) { return elem.Gr6To8; });
                         var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
-                        if (this.day == "Half-day") {
-                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == 'Half-day'; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == 'Half-day'; });
                         }
-                        if (this.day == "Full-day") {
-                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == 'Full-day'; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == 'Full-day'; });
                         }
                         fil4.map(function (elem) { return _this.filtered.push(elem); });
                     }
@@ -3450,56 +3583,56 @@ var BrowsePageComponent = /** @class */ (function () {
                         var sec = first.filter(function (elem) { return elem.Gr3To5 == true; });
                         var firstFilter = sec.filter(function (elem) { return elem.Gr6To8; });
                         var secFilter = sec.filter(function (elem) { return elem.Gr6To8; });
-                        if (this.day == "Half-day") {
-                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Half-day"; });
-                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Half-day"; });
+                        if (this.day == 'Half-day') {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == 'Half-day'; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == 'Half-day'; });
                         }
-                        if (this.day == "Full-day") {
-                            var fil4 = firstFilter.filter(function (elem) { return elem.day == "Full-day"; });
-                            var fils4 = secFilter.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            var fil4 = firstFilter.filter(function (elem) { return elem.day == 'Full-day'; });
+                            var fils4 = secFilter.filter(function (elem) { return elem.day == 'Full-day'; });
                         }
                         fil4.map(function (elem) { return _this.filtered.push(elem); });
                     }
                 }
                 /*
-                       if (this.sixth == true){
-                        let third = this.items.filter(elem => elem.day == this.day)
-                
-                        let thirdFilter = third.filter(elem => elem.Gr6To8)
-                        thirdFilter.map(elem=>this.filtered.push(elem))
-                       }
-                       */
+               if (this.sixth == true){
+                let third = this.items.filter(elem => elem.day == this.day)
+        
+                let thirdFilter = third.filter(elem => elem.Gr6To8)
+                thirdFilter.map(elem=>this.filtered.push(elem))
+               }
+               */
             }
             else {
-                console.log("internal not checked");
+                console.log('internal not checked');
                 if (this.fourth == true) {
                     var first = this.items.filter(function (elem) { return elem.OctoberToApril == true; });
-                    if (this.day == "Half-day") {
-                        console.log("fitering full days");
-                        var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        console.log('fitering full days');
+                        var fill1 = first.filter(function (elem) { return elem.day == 'Half-day'; });
                         console.log(fill1);
                     }
-                    if (this.day == "Full-day") {
-                        (console.log("filtering half days"));
-                        var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    if (this.day == 'Full-day') {
+                        console.log('filtering half days');
+                        var fill1 = first.filter(function (elem) { return elem.day == 'Full-day'; });
                     }
                     fill1.map(function (elem) { return _this.filtered.push(elem); });
                 }
                 if (this.fifth == true) {
                     var second = this.items.filter(function (elem) { return elem.MayToJune == true; });
-                    if (this.day == "Half-day") {
-                        var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        var fill2 = second.filter(function (elem) { return elem.day == 'Half-day'; });
                     }
-                    if (this.day == "Full-day") {
-                        var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    if (this.day == 'Full-day') {
+                        var fill2 = second.filter(function (elem) { return elem.day == 'Full-day'; });
                     }
                     fill2.map(function (elem) { return _this.filtered.push(elem); });
                 }
                 /*
-                         if (this.sixth == true){
-                          let second = this.items.filter(elem => elem.day == this.day)
-                          second.map(elem=>this.filtered.push(elem))
-                         } */
+                 if (this.sixth == true){
+                  let second = this.items.filter(elem => elem.day == this.day)
+                  second.map(elem=>this.filtered.push(elem))
+                 } */
             }
         }
         else {
@@ -3507,7 +3640,7 @@ var BrowsePageComponent = /** @class */ (function () {
                 this.applyFilters();
             }
             else {
-                console.log("removetrue");
+                console.log('removetrue');
                 console.log(this.filtered);
                 this.filtered = this.filtered.filter(function (elem) { return elem.Gr6To8 == false; });
             }
@@ -3516,68 +3649,71 @@ var BrowsePageComponent = /** @class */ (function () {
     BrowsePageComponent.prototype.removeFilter3 = function (property) {
         var _this = this;
         this.fourth = false;
-        // check if external was selected 
-        if (this.first == true || this.second == true || this.third == true || this.sixth == true) {
+        // check if external was selected
+        if (this.first == true ||
+            this.second == true ||
+            this.third == true ||
+            this.sixth == true) {
             this.filtered = this.filtered.filter(function (elem) { return elem.OctoberToApril == false; });
-            console.log("external checked");
+            console.log('external checked');
             // check if an internal checkbox has been selected
             if (this.fifth == true) {
-                console.log("intenal checked");
+                console.log('intenal checked');
                 //go through all the checked boxes and filter
                 if (this.first == true) {
                     var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
-                    if (this.day == "Half-day") {
-                        console.log("fitering full days");
-                        var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        console.log('fitering full days');
+                        var fill1 = first.filter(function (elem) { return elem.day == 'Half-day'; });
                         console.log(fill1);
                     }
-                    if (this.day == "Full-day") {
-                        (console.log("filtering half days"));
-                        var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    if (this.day == 'Full-day') {
+                        console.log('filtering half days');
+                        var fill1 = first.filter(function (elem) { return elem.day == 'Full-day'; });
                     }
                 }
                 if (this.second == true) {
                     var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
-                    if (this.day == "Half-day") {
-                        var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        var fill2 = second.filter(function (elem) { return elem.day == 'Half-day'; });
                     }
-                    if (this.day == "Full-day") {
-                        var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    if (this.day == 'Full-day') {
+                        var fill2 = second.filter(function (elem) { return elem.day == 'Full-day'; });
                     }
                     fill2.map(function (elem) { return _this.filtered.push(elem); });
                 }
                 if (this.third == true) {
                     var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
-                    if (this.day == "Half-day") {
-                        var fill3 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        var fill3 = third.filter(function (elem) { return elem.day == 'Half-day'; });
                     }
-                    if (this.day == "Full-day") {
-                        var fill3 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                    if (this.day == 'Full-day') {
+                        var fill3 = third.filter(function (elem) { return elem.day == 'Full-day'; });
                     }
                     fill3.map(function (elem) { return _this.filtered.push(elem); });
                 }
                 /*  if (this.sixth == true){
-                  let third = this.items.filter(elem => elem.day == this.day)
-            
-                  let thirdFilter = third.filter(elem => elem.MayToJune)
-                  thirdFilter.map(elem=>this.filtered.push(elem))
-                 }
-             */
+              let third = this.items.filter(elem => elem.day == this.day)
+        
+              let thirdFilter = third.filter(elem => elem.MayToJune)
+              thirdFilter.map(elem=>this.filtered.push(elem))
+             }
+         */
             }
             else {
-                console.log("internal not checked");
+                console.log('internal not checked');
                 if (this.first == true) {
                     var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
-                    if (this.day == "Half-day") {
-                        console.log("fitering full days");
-                        var fill5 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        console.log('fitering full days');
+                        var fill5 = first.filter(function (elem) { return elem.day == 'Half-day'; });
                         console.log(fill5);
                         fill5.map(function (elem) { return _this.filtered.push(elem); });
                     }
                     else {
-                        if (this.day == "Full-day") {
-                            (console.log("filtering half days"));
-                            var fill5 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            console.log('filtering half days');
+                            var fill5 = first.filter(function (elem) { return elem.day == 'Full-day'; });
                             fill5.map(function (elem) { return _this.filtered.push(elem); });
                         }
                         else {
@@ -3587,16 +3723,16 @@ var BrowsePageComponent = /** @class */ (function () {
                 }
                 if (this.second == true) {
                     var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
-                    if (this.day == "Half-day") {
-                        console.log("fitering full days");
-                        var fill6 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        console.log('fitering full days');
+                        var fill6 = second.filter(function (elem) { return elem.day == 'Half-day'; });
                         console.log(fill6);
                         fill6.map(function (elem) { return _this.filtered.push(elem); });
                     }
                     else {
-                        if (this.day == "Full-day") {
-                            (console.log("filtering half days"));
-                            var fill6 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            console.log('filtering half days');
+                            var fill6 = second.filter(function (elem) { return elem.day == 'Full-day'; });
                             fill6.map(function (elem) { return _this.filtered.push(elem); });
                         }
                         else {
@@ -3606,16 +3742,16 @@ var BrowsePageComponent = /** @class */ (function () {
                 }
                 if (this.third == true) {
                     var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
-                    if (this.day == "Half-day") {
-                        console.log("fitering full days");
-                        var fill7 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        console.log('fitering full days');
+                        var fill7 = third.filter(function (elem) { return elem.day == 'Half-day'; });
                         console.log(fill1);
                         fill7.map(function (elem) { return _this.filtered.push(elem); });
                     }
                     else {
-                        if (this.day == "Full-day") {
-                            (console.log("filtering half days"));
-                            var fill7 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            console.log('filtering half days');
+                            var fill7 = third.filter(function (elem) { return elem.day == 'Full-day'; });
                             fill7.map(function (elem) { return _this.filtered.push(elem); });
                         }
                         else {
@@ -3634,7 +3770,7 @@ var BrowsePageComponent = /** @class */ (function () {
                 this.applyFilters();
             }
             else {
-                console.log("removetrue");
+                console.log('removetrue');
                 console.log(this.filtered);
                 this.filtered = this.filtered.filter(function (elem) { return elem.OctoberToApril == false; });
             }
@@ -3643,42 +3779,45 @@ var BrowsePageComponent = /** @class */ (function () {
     BrowsePageComponent.prototype.removeFilter4 = function (property) {
         var _this = this;
         this.fifth = false;
-        console.log("may to june deselected");
-        if (this.first == true || this.second == true || this.third == true || this.sixth == true) {
+        console.log('may to june deselected');
+        if (this.first == true ||
+            this.second == true ||
+            this.third == true ||
+            this.sixth == true) {
             this.filtered = this.filtered.filter(function (elem) { return elem.MayToJune == false; });
             // check if an internal checkbox has been selected
             if (this.fourth == true) {
                 //go through all the checked boxes and filter
                 if (this.first == true) {
                     var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
-                    if (this.day == "Half-day") {
-                        console.log("fitering full days");
-                        var fill1 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        console.log('fitering full days');
+                        var fill1 = first.filter(function (elem) { return elem.day == 'Half-day'; });
                         console.log(fill1);
                     }
-                    if (this.day == "Full-day") {
-                        (console.log("filtering half days"));
-                        var fill1 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                    if (this.day == 'Full-day') {
+                        console.log('filtering half days');
+                        var fill1 = first.filter(function (elem) { return elem.day == 'Full-day'; });
                     }
                 }
                 if (this.second == true) {
                     var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
-                    console.log("second.." + second);
-                    if (this.day == "Half-day") {
-                        var fill2 = second.filter(function (elem) { return elem.day == "Half-day"; });
+                    console.log('second..' + second);
+                    if (this.day == 'Half-day') {
+                        var fill2 = second.filter(function (elem) { return elem.day == 'Half-day'; });
                     }
-                    if (this.day == "Full-day") {
-                        var fill2 = second.filter(function (elem) { return elem.day == "Full-day"; });
+                    if (this.day == 'Full-day') {
+                        var fill2 = second.filter(function (elem) { return elem.day == 'Full-day'; });
                     }
                     fill2.map(function (elem) { return _this.filtered.push(elem); });
                 }
                 if (this.third == true) {
                     var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
-                    if (this.day == "Half-day") {
-                        var fill3 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        var fill3 = third.filter(function (elem) { return elem.day == 'Half-day'; });
                     }
-                    if (this.day == "Full-day") {
-                        var fill3 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                    if (this.day == 'Full-day') {
+                        var fill3 = third.filter(function (elem) { return elem.day == 'Full-day'; });
                     }
                     fill3.map(function (elem) { return _this.filtered.push(elem); });
                 }
@@ -3689,20 +3828,20 @@ var BrowsePageComponent = /** @class */ (function () {
                 }
             }
             else {
-                console.log("internal not checked");
+                console.log('internal not checked');
                 if (this.first == true) {
-                    console.log("first is true");
+                    console.log('first is true');
                     var first = this.items.filter(function (elem) { return elem.KinderTo2 == true; });
-                    if (this.day == "Half-day") {
-                        console.log("fitering full days");
-                        var fill5 = first.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        console.log('fitering full days');
+                        var fill5 = first.filter(function (elem) { return elem.day == 'Half-day'; });
                         fill5.map(function (elem) { return _this.filtered.push(elem); });
                         console.log(fill5);
                     }
                     else {
-                        if (this.day == "Full-day") {
-                            (console.log("filtering half days"));
-                            var fill5 = first.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            console.log('filtering half days');
+                            var fill5 = first.filter(function (elem) { return elem.day == 'Full-day'; });
                             fill5.map(function (elem) { return _this.filtered.push(elem); });
                         }
                         else {
@@ -3711,18 +3850,18 @@ var BrowsePageComponent = /** @class */ (function () {
                     }
                 }
                 if (this.second == true) {
-                    console.log("second is true");
+                    console.log('second is true');
                     var second = this.items.filter(function (elem) { return elem.Gr3To5 == true; });
-                    if (this.day == "Half-day") {
-                        console.log("fitering full days");
-                        var filt = second.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        console.log('fitering full days');
+                        var filt = second.filter(function (elem) { return elem.day == 'Half-day'; });
                         console.log(filt);
                         filt.map(function (elem) { return _this.filtered.push(elem); });
                     }
                     else {
-                        if (this.day == "Full-day") {
-                            (console.log("filtering half days"));
-                            var filt = second.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            console.log('filtering half days');
+                            var filt = second.filter(function (elem) { return elem.day == 'Full-day'; });
                             filt.map(function (elem) { return _this.filtered.push(elem); });
                         }
                         else {
@@ -3731,18 +3870,18 @@ var BrowsePageComponent = /** @class */ (function () {
                     }
                 }
                 if (this.third == true) {
-                    console.log("third is true");
+                    console.log('third is true');
                     var third = this.items.filter(function (elem) { return elem.Gr6To8 == true; });
-                    if (this.day == "Half-day") {
-                        console.log("fitering full days");
-                        var fill7 = third.filter(function (elem) { return elem.day == "Half-day"; });
+                    if (this.day == 'Half-day') {
+                        console.log('fitering full days');
+                        var fill7 = third.filter(function (elem) { return elem.day == 'Half-day'; });
                         fill7.map(function (elem) { return _this.filtered.push(elem); });
                         console.log(fill1);
                     }
                     else {
-                        if (this.day == "Full-day") {
-                            (console.log("filtering half days"));
-                            var fill7 = third.filter(function (elem) { return elem.day == "Full-day"; });
+                        if (this.day == 'Full-day') {
+                            console.log('filtering half days');
+                            var fill7 = third.filter(function (elem) { return elem.day == 'Full-day'; });
                             fill7.map(function (elem) { return _this.filtered.push(elem); });
                         }
                         else {
@@ -3751,7 +3890,7 @@ var BrowsePageComponent = /** @class */ (function () {
                     }
                 }
                 if (this.sixth == true) {
-                    console.log("sixth is true");
+                    console.log('sixth is true');
                     console.log(this.day);
                     var sixth = this.items.filter(function (elem) { return elem.day == _this.day; });
                     sixth.map(function (elem) { return _this.filtered.push(elem); });
@@ -3763,28 +3902,28 @@ var BrowsePageComponent = /** @class */ (function () {
                 this.applyFilters();
             }
             else {
-                console.log("removetrue");
+                console.log('removetrue');
                 console.log(this.filtered);
                 this.filtered = this.filtered.filter(function (elem) { return elem.MayToJune == false; });
             }
         }
     };
     /*  filterExact1(property: string, rule: any) {
-       this.filters[property] = val => val == rule
-       this.applyFilters1()
-     }
-   
-     filterExact2(property: string, rule: any) {
-       this.filters[property] = val => val == rule
-       this.applyFilters2()
-     } */
+      this.filters[property] = val => val == rule
+      this.applyFilters1()
+    }
+  
+    filterExact2(property: string, rule: any) {
+      this.filters[property] = val => val == rule
+      this.applyFilters2()
+    } */
     BrowsePageComponent.prototype.reset = function () {
         jquery__WEBPACK_IMPORTED_MODULE_4__('.cbox').prop('checked', false);
         jquery__WEBPACK_IMPORTED_MODULE_4__('.rad').prop('checked', false);
-        this.removeFilter("day");
-        this.removeFilter("KinderTo2");
-        this.removeFilter("Gr3To5");
-        this.removeFilter("Gr6To8");
+        this.removeFilter('day');
+        this.removeFilter('KinderTo2');
+        this.removeFilter('Gr3To5');
+        this.removeFilter('Gr6To8');
         this.first = false;
         this.second = false;
         this.third = false;
@@ -3793,7 +3932,7 @@ var BrowsePageComponent = /** @class */ (function () {
         this.filtered = this.items;
     };
     BrowsePageComponent.prototype.navigateToDesignPage = function () {
-        this.router.navigate(["/DesignPage"]);
+        this.router.navigate(['/DesignPage']);
     };
     BrowsePageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -3801,7 +3940,10 @@ var BrowsePageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./browse-page.component.html */ "./src/learning-agenda/pages/browse-page/browse-page.component.html"),
             styles: [__webpack_require__(/*! ./browse-page.component.scss */ "./src/learning-agenda/pages/browse-page/browse-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"], angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"],
+        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"],
+            angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"],
             _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"]])
     ], BrowsePageComponent);
     return BrowsePageComponent;
@@ -3930,9 +4072,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
-/* harmony import */ var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/add/operator/catch */ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js");
-/* harmony import */ var rxjs_add_observable_throw__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/add/observable/throw */ "./node_modules/rxjs-compat/_esm5/add/observable/throw.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -3956,14 +4096,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-
 var DesignPageComponent = /** @class */ (function () {
     function DesignPageComponent(db, router, route) {
         this.db = db;
         this.router = router;
         this.route = route;
-        this.page = "/ConfirmPage";
+        this.page = '/ConfirmPage';
         this.activities = [];
         this.selection = new Array(7);
         this.dates = new Array(12);
@@ -3982,20 +4120,23 @@ var DesignPageComponent = /** @class */ (function () {
         localStorage.setItem('landing', JSON.stringify(false));
         localStorage.setItem('confirm', JSON.stringify(false));
         // retreive the set variable from local storage
-        this.set = JSON.parse(localStorage.getItem("set"));
+        this.set = JSON.parse(localStorage.getItem('set'));
         this.dates[0] = 570;
         // set date number in localstorage
         localStorage.setItem('dates', JSON.stringify(this.dates));
         this.edit = JSON.parse(localStorage.getItem('edit'));
         this.checkEdit();
-        this.filterExact('grades', JSON.parse(localStorage.getItem("filter")));
+        this.filterExact('grades', JSON.parse(localStorage.getItem('filter')));
         // load the itinerary from local storage if using pre-defined itinerary
-        this.itineraries = JSON.parse(localStorage.getItem("itinerary"));
+        this.itineraries = JSON.parse(localStorage.getItem('itinerary'));
     };
     DesignPageComponent.prototype.checkEdit = function () {
         var _this = this;
         if (!this.edit) {
-            this.items = this.db.collection('/activities', function (ref) { return ref.orderBy('order'); }).snapshotChanges().map(function (actions) {
+            this.items = this.db
+                .collection('/activities', function (ref) { return ref.orderBy('order'); })
+                .snapshotChanges()
+                .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (actions) {
                 return actions.map(function (a) {
                     var data = a.payload.doc.data();
                     var id = a.payload.doc.id;
@@ -4003,7 +4144,7 @@ var DesignPageComponent = /** @class */ (function () {
                     _this.applyFilters();
                     return __assign({ id: id }, data);
                 });
-            });
+            }));
             this.isEdit = false;
         }
         else {
@@ -4012,14 +4153,17 @@ var DesignPageComponent = /** @class */ (function () {
         }
     };
     DesignPageComponent.prototype.reset = function () {
-        this.items = this.db.collection('/activities', function (ref) { return ref.orderBy('order'); }).snapshotChanges().map(function (actions) {
+        this.items = this.db
+            .collection('/activities', function (ref) { return ref.orderBy('order'); })
+            .snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["map"])(function (actions) {
             return actions.map(function (a) {
                 var data = a.payload.doc.data();
                 var id = a.payload.doc.id;
                 console.log(id);
                 return __assign({ id: id }, data);
             });
-        });
+        }));
         this.isEdit = false;
         localStorage.setItem('edit', JSON.stringify(false));
         this.activities = [];
@@ -4042,12 +4186,13 @@ var DesignPageComponent = /** @class */ (function () {
             this.dates[event.order] = this.dates[event.order - 1] + this.duration;
             var next = this.dates[event.order + 1];
             while (next != null) {
-                this.dates[event.order + 1] = this.dates[event.order] + this.activities[event.oder + 1].length;
+                this.dates[event.order + 1] =
+                    this.dates[event.order] + this.activities[event.oder + 1].length;
                 next = next + 1;
             }
         }
         localStorage.setItem('dates', JSON.stringify(this.dates));
-        if ((!this.selection.some(function (item) { return item === event.id; }))) {
+        if (!this.selection.some(function (item) { return item === event.id; })) {
             this.count++;
         }
         localStorage.setItem('count', JSON.stringify(this.count));
@@ -4055,12 +4200,11 @@ var DesignPageComponent = /** @class */ (function () {
         this.selection[event.order] = event.id;
         console.log(this.selection);
     };
-    DesignPageComponent.prototype.placeEdit = function () {
-    };
+    DesignPageComponent.prototype.placeEdit = function () { };
     DesignPageComponent.prototype.getActivity = function (event) {
         this.duration = event.length;
         this.time = this.time + event.length;
-        if (!(this.activities.some(function (item) { return item.name === event.name; }))) {
+        if (!this.activities.some(function (item) { return item.name === event.name; })) {
             this.activities.push(new _models_activity__WEBPACK_IMPORTED_MODULE_2__["Activity"](this.dates[this.select.order], this.select.order, event.name, event.type, event.length, event.description, event.on, event.qc, event.fees, event.img, event.ageRange, event.timeOfYear, event.timeSlots, event.order));
         }
         localStorage.setItem('activities', JSON.stringify(this.activities));
@@ -4082,7 +4226,8 @@ var DesignPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./design-page.component.html */ "./src/learning-agenda/pages/design-page/design-page.component.html"),
             styles: [__webpack_require__(/*! ./design-page.component.scss */ "./src/learning-agenda/pages/design-page/design-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        __metadata("design:paramtypes", [angularfire2_firestore__WEBPACK_IMPORTED_MODULE_1__["AngularFirestore"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
     ], DesignPageComponent);
     return DesignPageComponent;
@@ -4127,6 +4272,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 var __assign = (undefined && undefined.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -4147,6 +4293,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var ItineraryPageComponent = /** @class */ (function () {
     function ItineraryPageComponent(router, route, db) {
         this.router = router;
@@ -4156,14 +4303,17 @@ var ItineraryPageComponent = /** @class */ (function () {
     ItineraryPageComponent.prototype.ngOnInit = function () {
         this.rId = this.route.snapshot.params['id'];
         console.log(this.rId);
-        this.items = this.db.collection('/modified_itineraries').snapshotChanges().map(function (actions) {
+        this.items = this.db
+            .collection('/modified_itineraries')
+            .snapshotChanges()
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (actions) {
             return actions.map(function (a) {
                 var data = a.payload.doc.data();
                 var id = a.payload.doc.id;
                 return __assign({ id: id }, data);
             });
-        });
-        this.url = "http://planning-tool.herokuapp.com/ItineraryPage/" + this.rId;
+        }));
+        this.url = 'http://planning-tool.herokuapp.com/ItineraryPage/' + this.rId;
     };
     ItineraryPageComponent.prototype.checkId = function (id) {
         if (id == this.rId) {
@@ -4180,7 +4330,8 @@ var ItineraryPageComponent = /** @class */ (function () {
             styles: [__webpack_require__(/*! ./itinerary-page.component.scss */ "./src/learning-agenda/pages/itinerary-page/itinerary-page.component.scss")]
         }),
         __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"],
-            _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
+            _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"],
+            angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"]])
     ], ItineraryPageComponent);
     return ItineraryPageComponent;
 }());
@@ -4196,7 +4347,7 @@ var ItineraryPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div>\n<!--   <app-main-header></app-main-header> -->\n  <div class=\"my-header\"><div class=\"h1\"> PLAN A SCHOOL TRIP</div>\n  \n  <div class=\"h2\"> PLAN YOUR DAY AT THE MUSEUM</div>\n  <div class=\"h3\"> <div class=\"my-btn\" (click)=\"navigateToBrowsePage()\">BROWSE ITINERARIES</div><div class=\"my-btn\">CREATE YOUR OWN</div></div>\n\n</div>\n\n<div class=\"my-container\">\n  <div class=\"my-bg\" >\n    <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-resize\"> \n\n\n  \n  \n  </div>\n\n\n\n  </div>\n  \n</div>\n<div>\n<!--   <app-main-footer></app-main-footer> -->\n</div>\n\n\n \n\n"
+module.exports = "<div>\n  <app-main-header></app-main-header>\n  <div class=\"shadow\">\n    <div class=\"my-header\">\n      <h1 class=\"h1\"> plan a school trip</h1>\n\n      <p class=\"h2\"> Plan Your Day at the Museum </p>\n      <div class=\"h3\">\n        <button class=\"my-btn\" (click)=\"navigateToBrowsePage()\">browse itineraries</button>\n        <button class=\"my-btn\">create your own</button>\n      </div>\n\n    </div>\n    <div class=\"my-container\">\n      <div class=\"my-bg\">\n        <img src=\"http://res.cloudinary.com/dqhtbev7t/image/upload/v1530731962/IMG2018-0032-0215-Dm.jpg\" class=\"img-resize\">\n\n      </div>\n    </div>\n  </div>\n\n\n</div>\n<div class>\n  <app-main-footer></app-main-footer>\n</div>"
 
 /***/ }),
 
@@ -4207,7 +4358,7 @@ module.exports = "\n<div>\n<!--   <app-main-header></app-main-header> -->\n  <di
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".my-container {\n  margin: auto; }\n\n.img-resize {\n  height: 850px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\n.my-bg {\n  position: relative;\n  bottom: 120px;\n  z-index: -5;\n  margin-bottom: -120px; }\n\n.my-header {\n  position: absolute;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  top: 250px;\n  left: 35%;\n  text-align: center;\n  color: #fff; }\n\n.h1 {\n  margin-bottom: 10%;\n  font-size: 3rem;\n  cursor: pointer; }\n\n.h2 {\n  margin-bottom: 35%;\n  font-family: Arial;\n  font-weight: normal;\n  font-size: 1.5rem; }\n\n.my-btn {\n  background: red;\n  cursor: pointer;\n  display: inline;\n  margin: 5px;\n  font-size: 0.7rem;\n  font-weight: bold;\n  padding: 2.5%; }\n"
+module.exports = "html {\n  font-size: 16px; }\n\n.my-container {\n  margin: auto; }\n\n.img-resize {\n  height: 950px;\n  width: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n\n.my-bg {\n  position: absolute;\n  bottom: 120px;\n  z-index: -5; }\n\n.shadow {\n  position: relative;\n  height: 950px;\n  bottom: 120px;\n  width: 100%;\n  background-color: rgba(0, 0, 0, 0.6);\n  margin-bottom: -240px; }\n\n.my-header {\n  position: absolute;\n  font-family: \"futura-pt\", \"Helvetica Neue\", Arial;\n  top: 250px;\n  left: 35%;\n  color: #fff; }\n\n.h1 {\n  margin-bottom: 1rem;\n  font-size: 3.25rem;\n  text-transform: uppercase; }\n\n.h2 {\n  margin-bottom: 3rem;\n  font-weight: normal;\n  font-size: 2rem; }\n\n.my-btn {\n  background: #E1261C;\n  padding: 1.3888889rem 1.6666667rem;\n  text-transform: uppercase;\n  display: inline;\n  margin: 5px;\n  font-size: 1.125rem;\n  font-weight: bold; }\n"
 
 /***/ }),
 
@@ -4225,9 +4376,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony import */ var angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angularfire2/firestore */ "./node_modules/angularfire2/firestore/index.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
-/* harmony import */ var rxjs_add_operator_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/add/operator/map */ "./node_modules/rxjs-compat/_esm5/add/operator/map.js");
-/* harmony import */ var rxjs_add_operator_catch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/add/operator/catch */ "./node_modules/rxjs-compat/_esm5/add/operator/catch.js");
-/* harmony import */ var rxjs_add_observable_throw__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/add/observable/throw */ "./node_modules/rxjs-compat/_esm5/add/observable/throw.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4241,9 +4389,6 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
-
-
-
 var LandingPageComponent = /** @class */ (function () {
     function LandingPageComponent(modalService, db, router, route) {
         this.modalService = modalService;
@@ -4251,10 +4396,9 @@ var LandingPageComponent = /** @class */ (function () {
         this.router = router;
         this.route = route;
     }
-    LandingPageComponent.prototype.ngOnInit = function () {
-    };
+    LandingPageComponent.prototype.ngOnInit = function () { };
     LandingPageComponent.prototype.navigateToBrowsePage = function () {
-        this.router.navigate(["/BrowsePage"]);
+        this.router.navigate(['/BrowsePage']);
     };
     LandingPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -4262,7 +4406,9 @@ var LandingPageComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./landing-page.component.html */ "./src/learning-agenda/pages/landing-page/landing-page.component.html"),
             styles: [__webpack_require__(/*! ./landing-page.component.scss */ "./src/learning-agenda/pages/landing-page/landing-page.component.scss")]
         }),
-        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"], angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        __metadata("design:paramtypes", [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbModal"],
+            angularfire2_firestore__WEBPACK_IMPORTED_MODULE_2__["AngularFirestore"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
             _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
     ], LandingPageComponent);
     return LandingPageComponent;
@@ -4408,12 +4554,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
 /* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _learning_agenda_environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./learning-agenda/environments/environment */ "./src/learning-agenda/environments/environment.ts");
 
 
 
 
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
+if (_learning_agenda_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
 }
 Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
