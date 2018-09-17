@@ -45,6 +45,7 @@ export class CardComponent implements OnInit {
       localStorage.setItem("grade", JSON.stringify(this.item.grades))
       localStorage.setItem("title", JSON.stringify(this.item.title))
       localStorage.setItem("year", JSON.stringify(this.item.timeOfYear))
+      localStorage.setItem("img", JSON.stringify(this.item.img))
       this.item.activities.map(activity =>{
 
         this.titles.push(new ActivityBrief(activity.time,activity.name))

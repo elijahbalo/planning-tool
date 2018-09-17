@@ -1,4 +1,15 @@
+.shadow{
+  position:relative;
+ height:230px;
+ 
+  width:100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+
+}
+
 .card-container{
+
   height:100%;
   width:100%;
   border-width:1px;
@@ -6,23 +17,20 @@
   border-style:solid;
   border-color:#E0E0E0;
   background: transparent;
-    background-image: initial;
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-  
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    background-color: transparent;
-
+  background-image: initial;
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: transparent;
 }
 
 #slideshow{
  width:100%;
 
 }
-
 
 .text{
   
@@ -36,7 +44,7 @@
   color:#fff;
   font-family: "futura-pt", "Helvetica Neue", Arial;
   font-size:1.5rem;
-  background-color: rgba(0, 0, 0, 0.1);
+
 }
 .text1{
   font-family: Arial;
@@ -83,7 +91,10 @@ margin-bottom:2%;
   object-fit: cover;
   
 }
-
+.my-bg{
+  position:absolute;
+  z-index:-5;
+  }
 a:link {
   text-decoration: none;
   color:#4a4a4a;

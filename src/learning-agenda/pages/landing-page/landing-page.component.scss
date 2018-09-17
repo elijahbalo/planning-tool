@@ -1,3 +1,5 @@
+html{font-size: 16px;}
+
 .my-container{
 
 
@@ -6,46 +8,50 @@
 }
 
 .img-resize{
-    height:850px;
+    height:950px;
     width:100%;
     object-fit:cover;
+  
 }
 
 .my-bg{
-position:relative;
+position:absolute;
 bottom:120px;
-
 z-index:-5;
-margin-bottom: -120px;
 }
+.shadow{
+    position:relative;
+    height:950px;
+    bottom:120px;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-bottom: -240px;
 
+}
 .my-header{
   position:absolute;
   font-family: "futura-pt", "Helvetica Neue", Arial;
   top:250px;
   left:35%;
-  text-align:center;
   color:#fff
 }
 .h1{
-    margin-bottom:10%;
-    font-size:3rem;
-    cursor:pointer;
+    margin-bottom:1rem;
+    font-size:3.25rem;
+    text-transform: uppercase
 }
 .h2{
-    margin-bottom:35%;
-    font-family: Arial;
+    margin-bottom:3rem;
     font-weight:normal;
-    font-size:1.5rem
+    font-size:2rem;
 }
 .my-btn{
-  background:red;
-
-  cursor: pointer;
+  background:#E1261C;
+  padding:1.3888889rem 1.6666667rem;
+  text-transform: uppercase;
   display:inline;
   margin:5px;
-  font-size:0.7rem;
+  font-size:1.125rem;
   font-weight:bold;
-  padding:2.5%;
 
 }

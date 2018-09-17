@@ -1,19 +1,21 @@
-
+<div class="shadow">
     <div class="card-container" (click)="navigateToDesign()">
-       <div style="position:relative">
-         <img src="{{item.img}}" alt="Random first slide" class="img-responsive img-resize">
-      <div class="text">
-        <div class="text1">{{item.grades}}, {{item.day}}</div>
-          <div class=text2>{{item.title}}</div>
-          <div class="text3">{{item.timeOfYear}}</div>
-          
-          </div>
-          <div class="d-icon">i</div>
-          <div class="details">Details</div>
-      </div>
-      <div>
-        
-<!--     <div *ngIf="view" class="layers" >
+        <div>
+            <div class="my-bg">
+                <img src="{{item.img}}" alt="Random first slide" class="img-responsive img-resize">
+            </div>
+            <div class="text">
+                <div class="text1">{{item.grades}}, {{item.day}}</div>
+                <div class=text2>{{item.title}}</div>
+                <div class="text3">{{item.timeOfYear}}</div>
+
+            </div>
+            <div class="d-icon">i</div>
+            <div class="details">Details</div>
+        </div>
+        <div>
+
+            <!--     <div *ngIf="view" class="layers" >
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
         Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
         natoque penatibus et magnis dis parturient montes, nascetur 
@@ -25,10 +27,10 @@
         natoque penatibus et magnis dis parturient montes, nascetur 
         ridiculus mus. Donec quam felis, ultricies nec.
     </div> -->
-    </div>
-    <!-- <div *ngIf="view" class="layers link" >
+        </div>
+        <!-- <div *ngIf="view" class="layers link" >
       <a href="javascript:void(0)" (click)="navigateToDesign()">VIEW THIS ITINERARY</a>
      <svg><img src="../../assets/images/right-arrow.png"></svg>
     </div> -->
     </div>
-  
+</div>

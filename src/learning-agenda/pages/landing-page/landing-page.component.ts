@@ -1,16 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import { Observable } from 'rxjs/Observable';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFirestore } from 'angularfire2/firestore';
 import * as Lodash from 'lodash';
 import * as $ from 'jquery';
 
-
-
-import { Router,ActivatedRoute } from '@angular/router';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-landing-page',
@@ -18,20 +12,15 @@ import 'rxjs/add/observable/throw';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
+  constructor(
+    private modalService: NgbModal,
+    private db: AngularFirestore,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
+  ngOnInit() {}
 
-
-  constructor(private modalService: NgbModal,private db: AngularFirestore,private router: Router,
-    private route:ActivatedRoute) {
-    
+  navigateToBrowsePage() {
+    this.router.navigate(['/BrowsePage']);
   }
-  ngOnInit(){
- 
-  }
-
-  navigateToBrowsePage(){
-    this.router.navigate(["/BrowsePage"]); 
-  }
-
-
-
 }

@@ -1,39 +1,39 @@
 import { NgModule } from '@angular/core';
+import { AppComponent } from '../app/app.component';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EllipsisModule } from 'ngx-ellipsis';
 import { MultilineEllipsisModule } from 'angular2-multiline-ellipsis';
-import {NgxPaginationModule} from 'ngx-pagination'; 
-import { EmptyCardComponent} from './components/empty-card/empty-card.component';
-import { CardComponent} from './components/card/card.component';
-import { BuildComponent} from './components/build/build.component';
-import { ActivityComponent} from './components/activity/activity.component';
-import { ActivityCardComponent} from './components/activity-card/activity-card.component';
-import { ActivityDisplayComponent} from './components/activity-display/activity-display.component';
-import {EmptyActivityDisplayComponent} from './components/empty-activity-display/empty-activity-display.component'
-import { HeaderComponent} from './components/header/header.component';
-import { ConfirmComponent} from './components/confirm/confirm.component';
-import { StickyFooterComponent} from './components/sticky-footer/sticky-footer.component';
-import { ConfirmStickerComponent} from './components/confirm-sticker/confirm-sticker.component';
-import { WarningComponent} from './components/warning/warning.component';
-import { CalendarComponent} from './components/calendar/calendar.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { EmptyCardComponent } from './components/empty-card/empty-card.component';
+import { CardComponent } from './components/card/card.component';
+import { BuildComponent } from './components/build/build.component';
+import { ActivityComponent } from './components/activity/activity.component';
+import { ActivityCardComponent } from './components/activity-card/activity-card.component';
+import { ActivityDisplayComponent } from './components/activity-display/activity-display.component';
+import { EmptyActivityDisplayComponent } from './components/empty-activity-display/empty-activity-display.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ConfirmComponent } from './components/confirm/confirm.component';
+import { StickyFooterComponent } from './components/sticky-footer/sticky-footer.component';
+import { ConfirmStickerComponent } from './components/confirm-sticker/confirm-sticker.component';
+import { WarningComponent } from './components/warning/warning.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
 import { ClipboardModule } from 'ngx-clipboard';
-import { DetailsComponent} from './components/details/details.component';
-import { MainHeaderComponent} from './components/main-header/main-header.component';
-import { MainFooterComponent} from './components/main-footer/main-footer.component';
-import { SubmitFormComponent} from './components/submit-form/submit-form.component';
-import { LandingPageComponent} from './pages/landing-page/landing-page.component';
-import { BrowsePageComponent} from './pages/browse-page/browse-page.component';
-import { ConfirmPageComponent} from './pages/confirm-page/confirm-page.component';
-import { ItineraryPageComponent} from './pages/itinerary-page/itinerary-page.component';
-import { DesignPageComponent} from './pages/design-page/design-page.component';
-import { SubmitPageComponent} from './pages/submit-page/submit-page.component';
-import { SwapBoxComponent} from './components/swap-box/swap-box.component'
+import { DetailsComponent } from './components/details/details.component';
+import { MainHeaderComponent } from './components/main-header/main-header.component';
+import { MainFooterComponent } from './components/main-footer/main-footer.component';
+import { SubmitFormComponent } from './components/submit-form/submit-form.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { BrowsePageComponent } from './pages/browse-page/browse-page.component';
+import { ConfirmPageComponent } from './pages/confirm-page/confirm-page.component';
+import { ItineraryPageComponent } from './pages/itinerary-page/itinerary-page.component';
+import { DesignPageComponent } from './pages/design-page/design-page.component';
+import { SubmitPageComponent } from './pages/submit-page/submit-page.component';
+import { SwapBoxComponent } from './components/swap-box/swap-box.component';
 import { AppRoutingModule } from './router';
-import { AppComponent } from '../app/app.component';
-import {SlideshowModule} from 'ng-simple-slideshow';
-import { environment } from '../environments/environment';
+import { SlideshowModule } from 'ng-simple-slideshow';
+import { environment } from './environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -50,7 +50,7 @@ import { AngularFireModule } from 'angularfire2';
     ClipboardModule,
     MultilineEllipsisModule,
     HttpClientModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     NgxPaginationModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -82,11 +82,7 @@ import { AngularFireModule } from 'angularfire2';
     ConfirmPageComponent,
     SubmitPageComponent,
     ItineraryPageComponent
-
-
-
   ],
-  providers: [AngularFirestoreModule],
-  
+  providers: [AngularFirestoreModule]
 })
 export class LearningAgendaModule { }

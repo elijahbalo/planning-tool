@@ -6,7 +6,8 @@ import { LearningAgendaModule } from '../learning-agenda/learning-agenda.module'
 
 @NgModule({
   declarations: [
-    
+
+
   ],
   imports: [
     LearningAgendaModule
