@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import * as $ from 'jquery';
-
+var act = require('../../test.json');
 @Component({
   selector: 'app-activity-display',
   templateUrl: './activity-display.component.html',
@@ -29,7 +29,7 @@ export class ActivityDisplayComponent implements OnInit {
   isSet = false;
   swap = false;
   innerSwap = false;
-  public items: Observable<any[]>;
+  items = [];
   @Input()
   itinerary;
   @Input()
@@ -43,7 +43,7 @@ export class ActivityDisplayComponent implements OnInit {
   constructor(private db: AngularFirestore) {}
 
   ngOnInit() {
-    this.items = this.db
+    /*    this.items = this.db
       .collection('/activities')
       .snapshotChanges()
       .pipe(
@@ -54,7 +54,9 @@ export class ActivityDisplayComponent implements OnInit {
             return { id, ...data };
           });
         })
-      );
+      ); */
+    this.items = act.activities;
+    console.log(this.items);
 
     console.log(this.itinerary.time);
     this.activities = JSON.parse(localStorage.getItem('itinerary'));

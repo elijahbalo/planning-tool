@@ -12,6 +12,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
+  activities;
   constructor(
     private modalService: NgbModal,
     private db: AngularFirestore,

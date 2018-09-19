@@ -4,7 +4,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import * as Lodash from 'lodash';
 import * as $ from 'jquery';
 import { map } from 'rxjs/operators';
-
+var itn = require('../../test.json');
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -51,13 +51,13 @@ export class BrowsePageComponent implements OnInit {
 
   log = '';
   KinderTo2: boolean;
-  Gr3To5: boolean; 
+  Gr3To5: boolean;
   Gr6To8: boolean;
   OctoberToApril: boolean;
   MayToJune: boolean;
   checkboxValue: boolean;
   closeResult: string;
-  items: any;
+  items = [];
   filtered: any;
   filters = {};
   filters1 = {};
@@ -73,16 +73,18 @@ export class BrowsePageComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
   ngOnInit() {
+    console.log(itn.itineraries);
     localStorage.clear();
     this.setBrowse();
-    this.items = this.db
+    /* this.items = this.db
       .collection('/itineraries')
       .valueChanges()
       .subscribe(items => {
         this.items = items;
         this.applyFilters();
-      });
-
+      }); */
+    this.items = itn.itineraries;
+    this.applyFilters();
     console.log(this.items);
 
     $('.cbox').prop('checked', false);
@@ -233,155 +235,152 @@ export class BrowsePageComponent implements OnInit {
   }
 
   filterExact(property: string, rule: any) {
-    let toggler = false
-    let myFilter = []
-    let filter
+    let toggler = false;
+    let myFilter = [];
+    let filter;
     console.log(this.day);
     console.log(this.fourth);
     console.log(this.fifth);
-  
-      if (this.day == 'Half-day') {
-        console.log('callinghalf');
-        if (
-          this.first == true ||
-          this.second == true ||
-          this.third == true ||
-          this.fourth == true ||
-          this.fifth == true
-        ) {
-          if (this.first == true) {
-            let first = this.items.filter(elem => elem.KinderTo2 == true);
-            let firstFilter = first.filter(elem => elem.day == 'Half-day');
-            firstFilter.map(elem => myFilter.push(elem));
-          }
-          if (this.second == true) {
-            let first = this.items.filter(elem => elem.Gr3To5 == true);
-            let firstFilter = first.filter(elem => elem.day == 'Half-day');
-            firstFilter.map(elem => myFilter.push(elem));
-          }
-          if (this.third == true) {
-            let first = this.items.filter(elem => elem.Gr6To8 == true);
-            let firstFilter = first.filter(elem => elem.day == 'Half-day');
-            firstFilter.map(elem => myFilter.push(elem));
-          }
-          if (this.fourth == true) {
-            let first = this.items.filter(elem => elem.OctoberToApril == true);
-            let firstFilter = first.filter(elem => elem.day == 'Half-day');
-            console.log(firstFilter)
-            console.log(myFilter)
-            firstFilter.map(elem => {
-              myFilter.map(element => {
-                if (elem == element) {
-                 this.toggler = true;
-                  console.log(elem);
-                }
-              });
-              if (this.toggler == false) {
-                myFilter.push(elem);
-              }
-            });
-            this.toggler=false
-            
-          }
-          if (this.fifth == true) {
-            let first = this.items.filter(elem => elem.MayToJune == true);
-            let firstFilter = first.filter(elem => elem.day == 'Half-day');
-            console.log(firstFilter)
-            console.log(myFilter)
-            firstFilter.map(elem => {
-              myFilter.map(element => {
-                if (elem == element) {
-                this.toggler = true;
-                  console.log(elem);
-                }
-              });
-              if (this.toggler == false) {
-                myFilter.push(elem);
-              }
-            });
-            this.toggler=false
-          }
 
-          this.filtered = myFilter;
-          console.log(this.filtered)
-        } else {
-          this.filtered = this.items.filter(elem => elem.day == 'Half-day');
+    if (this.day == 'Half-day') {
+      console.log('callinghalf');
+      if (
+        this.first == true ||
+        this.second == true ||
+        this.third == true ||
+        this.fourth == true ||
+        this.fifth == true
+      ) {
+        if (this.first == true) {
+          let first = this.items.filter(elem => elem.KinderTo2 == true);
+          let firstFilter = first.filter(elem => elem.day == 'Half-day');
+          firstFilter.map(elem => myFilter.push(elem));
         }
-      }
+        if (this.second == true) {
+          let first = this.items.filter(elem => elem.Gr3To5 == true);
+          let firstFilter = first.filter(elem => elem.day == 'Half-day');
+          firstFilter.map(elem => myFilter.push(elem));
+        }
+        if (this.third == true) {
+          let first = this.items.filter(elem => elem.Gr6To8 == true);
+          let firstFilter = first.filter(elem => elem.day == 'Half-day');
+          firstFilter.map(elem => myFilter.push(elem));
+        }
+        if (this.fourth == true) {
+          let first = this.items.filter(elem => elem.OctoberToApril == true);
+          let firstFilter = first.filter(elem => elem.day == 'Half-day');
+          console.log(firstFilter);
+          console.log(myFilter);
+          firstFilter.map(elem => {
+            myFilter.map(element => {
+              if (elem == element) {
+                this.toggler = true;
+                console.log(elem);
+              }
+            });
+            if (this.toggler == false) {
+              myFilter.push(elem);
+            }
+          });
+          this.toggler = false;
+        }
+        if (this.fifth == true) {
+          let first = this.items.filter(elem => elem.MayToJune == true);
+          let firstFilter = first.filter(elem => elem.day == 'Half-day');
+          console.log(firstFilter);
+          console.log(myFilter);
+          firstFilter.map(elem => {
+            myFilter.map(element => {
+              if (elem == element) {
+                this.toggler = true;
+                console.log(elem);
+              }
+            });
+            if (this.toggler == false) {
+              myFilter.push(elem);
+            }
+          });
+          this.toggler = false;
+        }
 
-  
-      if (this.day == 'Full-day' && this.sixth == true) {
-        console.log('callinghalf');
-        if (
-          this.first == true ||
-          this.second == true ||
-          this.third == true ||
-          this.fourth == true ||
-          this.fifth == true
-        ) {
-          if (this.first == true) {
-            let first = this.items.filter(elem => elem.KinderTo2 == true);
-            let firstFilter = first.filter(elem => elem.day == 'Full-day');
-            firstFilter.map(elem => myFilter.push(elem));
-          }
-          if (this.second == true) {
-            let first = this.items.filter(elem => elem.Gr3To5 == true);
-            let firstFilter = first.filter(elem => elem.day == 'Full-day');
-            firstFilter.map(elem => myFilter.push(elem));
-          }
-          if (this.third == true) {
-            let first = this.items.filter(elem => elem.Gr6To8 == true);
-            let firstFilter = first.filter(elem => elem.day == 'Full-day');
-            firstFilter.map(elem => myFilter.push(elem));
-          }
-          if (this.fourth == true) {
-            let first = this.items.filter(elem => elem.OctoberToApril == true);
-            let firstFilter = first.filter(elem => elem.day == 'Full-day');
-            console.log(firstFilter)
-            console.log(myFilter)
-            firstFilter.map(elem => {
-              myFilter.map(element => {
-                if (elem == element) {
-                this.toggler = true;
-                  console.log(elem);
-                }
-              });
-              if (this.toggler == false) {
-                myFilter.push(elem);
-              }
-            });
-            this.toggler=false
-          }
-          if (this.fifth == true) {
-            let first = this.items.filter(elem => elem.MayToJune == true);
-            let firstFilter = first.filter(elem => elem.day == 'Full-day');
-            console.log(firstFilter)
-            console.log(myFilter)
-            firstFilter.map(elem => {
-              myFilter.map(element => {
-                if (elem == element) {
-                this.toggler = true;
-                  console.log(elem);
-                }
-              });
-              if (this.toggler == false) {
-                myFilter.push(elem);
-              }
-            });
-            this.toggler=false
-          }
-          this.filtered = myFilter;
-          console.log(this.filtered)
-        } else {
-          this.filtered = this.items.filter(elem => elem.day == 'Full-day');
-        }
+        this.filtered = myFilter;
+        console.log(this.filtered);
+      } else {
+        this.filtered = this.items.filter(elem => elem.day == 'Half-day');
       }
-  
+    }
+
+    if (this.day == 'Full-day' && this.sixth == true) {
+      console.log('callinghalf');
+      if (
+        this.first == true ||
+        this.second == true ||
+        this.third == true ||
+        this.fourth == true ||
+        this.fifth == true
+      ) {
+        if (this.first == true) {
+          let first = this.items.filter(elem => elem.KinderTo2 == true);
+          let firstFilter = first.filter(elem => elem.day == 'Full-day');
+          firstFilter.map(elem => myFilter.push(elem));
+        }
+        if (this.second == true) {
+          let first = this.items.filter(elem => elem.Gr3To5 == true);
+          let firstFilter = first.filter(elem => elem.day == 'Full-day');
+          firstFilter.map(elem => myFilter.push(elem));
+        }
+        if (this.third == true) {
+          let first = this.items.filter(elem => elem.Gr6To8 == true);
+          let firstFilter = first.filter(elem => elem.day == 'Full-day');
+          firstFilter.map(elem => myFilter.push(elem));
+        }
+        if (this.fourth == true) {
+          let first = this.items.filter(elem => elem.OctoberToApril == true);
+          let firstFilter = first.filter(elem => elem.day == 'Full-day');
+          console.log(firstFilter);
+          console.log(myFilter);
+          firstFilter.map(elem => {
+            myFilter.map(element => {
+              if (elem == element) {
+                this.toggler = true;
+                console.log(elem);
+              }
+            });
+            if (this.toggler == false) {
+              myFilter.push(elem);
+            }
+          });
+          this.toggler = false;
+        }
+        if (this.fifth == true) {
+          let first = this.items.filter(elem => elem.MayToJune == true);
+          let firstFilter = first.filter(elem => elem.day == 'Full-day');
+          console.log(firstFilter);
+          console.log(myFilter);
+          firstFilter.map(elem => {
+            myFilter.map(element => {
+              if (elem == element) {
+                this.toggler = true;
+                console.log(elem);
+              }
+            });
+            if (this.toggler == false) {
+              myFilter.push(elem);
+            }
+          });
+          this.toggler = false;
+        }
+        this.filtered = myFilter;
+        console.log(this.filtered);
+      } else {
+        this.filtered = this.items.filter(elem => elem.day == 'Full-day');
+      }
+    }
+
     this.sixth = true;
   }
 
   filterBoolean(property: string, rule: boolean) {
-
     this.first = true;
     let tempfilter = [];
     if (!rule) this.removeFilter(property);
