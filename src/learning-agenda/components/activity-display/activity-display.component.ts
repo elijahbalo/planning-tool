@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import * as $ from 'jquery';
+declare function require(name: string);
 var act = require('../../test.json');
 @Component({
   selector: 'app-activity-display',

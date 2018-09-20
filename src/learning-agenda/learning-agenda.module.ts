@@ -31,6 +31,8 @@ import { ItineraryPageComponent } from './pages/itinerary-page/itinerary-page.co
 import { DesignPageComponent } from './pages/design-page/design-page.component';
 import { SubmitPageComponent } from './pages/submit-page/submit-page.component';
 import { SwapBoxComponent } from './components/swap-box/swap-box.component';
+import { SelectGradeComponent } from './components/select-grade/select-grade.component';
+import { SelectDurationComponent } from './components/select-duration/select-duration.component';
 import { AppRoutingModule } from './router';
 import { SlideshowModule } from 'ng-simple-slideshow';
 import { environment } from './environments/environment';
@@ -85,4 +87,4 @@ import { AngularFireModule } from 'angularfire2';
   ],
   providers: [AngularFirestoreModule]
 })
-export class LearningAgendaModule { }
+export class LearningAgendaModule {}

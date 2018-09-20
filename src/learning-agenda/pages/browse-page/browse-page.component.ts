@@ -4,6 +4,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import * as Lodash from 'lodash';
 import * as $ from 'jquery';
 import { map } from 'rxjs/operators';
+declare function require(name:string);
 var itn = require('../../test.json');
 import { Router, ActivatedRoute } from '@angular/router';
 
