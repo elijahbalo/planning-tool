@@ -1,26 +1,14 @@
-<div>
-  <app-main-header></app-main-header>
-  <div class="shadow">
-    <div class="my-header">
-      <h1 class="h1"> plan a school trip</h1>
-
-      <p class="h2"> Plan Your Day at the Museum </p>
-      <div class="h3">
-        <button class="my-btn" (click)="navigateToBrowsePage()">browse itineraries</button>
-        <button class="my-btn">create your own</button>
-      </div>
-
+<!--<app-main-header></app-main-header>-->
+<div class="main-header-tmp"></div>
+<main>
+    <div class="content-body">
+        <h1 class="heading">Plan a School Trip</h1>
+        <p class="subheading">Plan Your Day at the Museum</p>
+        <div class="buttons">
+            <a class="track-button" href="#browse" (click)="navigateToBrowsePage($event)">Browse Itineraries</a>
+            <a class="track-button" href="#create">Create Your Own</a>
+        </div>
     </div>
-    <div class="my-container">
-      <div class="my-bg">
-        <img src="../../../assets/images/IMG2018-0032-0215-Dm.jpg" class="img-resize">
-
-      </div>
-    </div>
-  </div>
-
-
-</div>
-<div class>
-  <app-main-footer></app-main-footer>
-</div>
+</main>
+<div style="clear:both;background:green;height:300px;"></div>
+<!--<app-main-footer></app-main-footer>-->

@@ -1,53 +1,93 @@
-html {
-  font-size: 16px;
+@import 'variables.scss';
+@import 'mixins.scss';
+
+// Declare only local "page" variables here.
+$subheading_font_size: 28;
+
+/////////////////////////////////////////////////////////////////////////
+
+main {
+    clear:both;
+    height:100vh;
+    display:block; // inline by default.. (annoying)
+    background-color:$chwm_grey_70;
+    background-image:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)),
+    url('/assets/images/IMG2018-0032-0215-Dm.jpg');
+    background-position:50% 100%;
+    background-size:cover;
+}
+.content-body {
+    font-family:$primary_font_family;
+    @include vertical_align;
+    display:table;
+    margin:0 auto;
+    color:#fff;
+}
+.main-header-tmp { // We'll revisit this later.
+    background:fuchsia;
+    height:120px;
+    position:absolute;
+    opacity:0.7;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+}
+.heading {
+    text-transform:uppercase;
+    font-size:(44/16)+em;
+}
+.subheading {
+    font-size:($subheading_font_size/16)+em;
+    margin-top:(15/$subheading_font_size)+em;
+}
+.buttons {
+    margin-top:(30/16)+em;
+}
+.track-button {
+    float:left;
+    display:block;
+    color:inherit;
+    cursor:pointer;
+    padding:(20/16)+em;
+    text-decoration:none;
+    margin:0 (20/16)+em 0 0;
+    background:$primary_clr;
+    text-transform:uppercase;
+    &:last-child {margin:0;}
+    // Pseudo... Chop!
+    &:hover, &:focus {background:$chwm_grey_50;}
 }
 
-.my-container {
-  margin: auto;
+/////////////////////////////////////////////////////////////////////////
+
+// Media queries (breaking points) -- >
+@media (max-width:#{$breaking_point_sml}px) {
+    /**
+    * The magic of em units means contextual, we can 
+    * scale down everything relatively with one property.
+    */
+    main {background:blue;}
+    main {font-size:12px;}
+}
+@media (max-width:#{$breaking_point_xx_sml}px) {
+    /**
+    * The magic of em units means contextual, we can 
+    * scale down everything relatively with one property.
+    */
+    main {background:lime;}
+    main {font-size:11px;}
+}
+@media (max-width:#{$breaking_point_xxx_sml}px) {
+    /**
+    * The magic of em units means contextual, we can 
+    * scale down everything relatively with one property.
+    */
+    main {background:gold;}
+    main {font-size:10px;}
 }
 
-.img-resize {
-  height: 950px;
-  width: 100%;
-  object-fit: cover;
-}
 
-.my-bg {
-  position: absolute;
-  bottom: 120px;
-  z-index: -5;
-}
-.shadow {
-  position: relative;
-  height: 950px;
-  bottom: 120px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  margin-bottom: -240px;
-}
-.my-header {
-  position: absolute;
-  font-family: 'futura-pt', 'Helvetica Neue', Arial;
-  top: 250px;
-  left: 35%;
-  color: #fff;
-}
-.h1 {
-  margin-bottom: 1rem;
-  font-size: 3.25rem;
-  text-transform: uppercase;
-}
-.h2 {
-  margin-bottom: 3rem;
-  font-weight: normal;
-  font-size: 2rem;
-}
-.my-btn {
-  background: #e1261c;
-  padding: 1.3888889rem 1.6666667rem;
-  text-transform: uppercase;
-  display: inline;
-  margin: 5px;
-  font-size: 1.125rem;
-  font-weight: bold;
-}
+
+
+

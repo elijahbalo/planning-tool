@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFirestore } from 'angularfire2/firestore';
 import * as Lodash from 'lodash';
@@ -10,6 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
+  // ,encapsulation: ViewEncapsulation.None
 })
 export class LandingPageComponent implements OnInit {
   activities;
@@ -21,7 +22,8 @@ export class LandingPageComponent implements OnInit {
   ) {}
   ngOnInit() {}
 
-  navigateToBrowsePage() {
+  navigateToBrowsePage(event) {
+    event.preventDefault();
     this.router.navigate(['/BrowsePage']);
   }
 }

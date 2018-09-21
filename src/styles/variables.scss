@@ -1,0 +1,27 @@
+$cmh_primary_clr: #e6192b;
+$cwm_primary_clr: #038834;
+$chh_primary_clr: #E1261C;
+$primary_clr: $cmh_primary_clr;
+$chwm_grey_30: #e5e5e5; // Light
+$chwm_grey_20: lighten($chwm_grey_30, 7%);
+$chwm_grey_50: #8a8d8a; // Medium
+$chwm_grey_70: #4a4a4a; // Dark
+$base_font_size: 16;
+$fallback_font: Arial;
+$base_font_family: 'Helvetica Neue', #{$fallback_font};
+$primary_font_family: 'futura-pt', #{$fallback_font};
+
+// Breaking points
+$breaking_point_giant: 1920;
+$breaking_point_jumbo: 1680;
+$breaking_point_base_context: 1440;
+$breaking_point_xxx_lrg: 1366;
+$breaking_point_xx_lrg: 1280;
+$breaking_point_x_lrg: 1152;
+$breaking_point_lrg: 1024; // tablet landscape (ipad)
+$breaking_point_med: 900;
+$breaking_point_sml: 768; // tablet portrait (ipad)
+$breaking_point_x_sml: 640;
+$breaking_point_xx_sml: 480;
+$breaking_point_xxx_sml: 360; // mobile (base)
+$breaking_point_micro: 250;

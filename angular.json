@@ -27,7 +27,15 @@
               "src/assets",
               "src/learning-agenda/test.json"
             ],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "src/styles/reset.scss",
+              "src/styles.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
