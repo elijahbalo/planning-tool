@@ -10,6 +10,11 @@
     -moz-box-sizing:border-box;
     box-sizing:border-box;
 }
+@mixin clearfix {
+    clear:both;
+    content:"";
+    display:table;
+}
 @mixin animation($str) {
     -webkit-animation:#{$str};
     -moz-animation:#{$str};
