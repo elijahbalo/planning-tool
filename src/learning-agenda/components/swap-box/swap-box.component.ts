@@ -28,11 +28,13 @@ export class SwapBoxComponent implements OnInit {
 
   checkOrder(name,order){
   let act = JSON.parse(localStorage.getItem("itinerary"))
+  if (act){
   for (var i=0; i<(act.length); i++){
    if (name == act[i].name){
      return true
    }
   }
+}
   return false
  }
 

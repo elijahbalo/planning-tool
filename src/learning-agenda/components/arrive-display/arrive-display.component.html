@@ -1,0 +1,39 @@
+<div>
+  <div class="flex">
+    <div class="time">
+      <div class="first1">
+        <span class="value">{{tConvert(itinerary.time)}}</span>
+      </div>
+
+      <div class="second1"></div>
+
+    </div>
+    <div class="big-box2">
+      <div class="img">
+        <img class="img-responsive img" src="{{itinerary.img}}">
+
+      </div>
+
+      <div class="textt">
+        <div class="title1">{{itinerary.name}}</div>
+        <div class="bod" appEllipsis>
+          {{itinerary.description}}
+        </div>
+
+
+
+      </div>
+
+
+      <!--     <div class="icon">
+        <div class="info">
+
+        </div>
+        <div class="det" (click)="toggleModal()">
+          Details
+        </div>
+      </div> -->
+    </div>
+
+  </div>
+</div>

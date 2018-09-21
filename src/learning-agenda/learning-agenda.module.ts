@@ -33,6 +33,10 @@ import { SubmitPageComponent } from './pages/submit-page/submit-page.component';
 import { SwapBoxComponent } from './components/swap-box/swap-box.component';
 import { SelectGradeComponent } from './components/select-grade/select-grade.component';
 import { SelectDurationComponent } from './components/select-duration/select-duration.component';
+import { ArriveDisplayComponent } from './components/arrive-display/arrive-display.component';
+import { ContactInfoComponent } from './components/contact-info/contact-info.component';
+import { NewActivityComponent } from './components/new-activity/new-activity.component';
+import { ReviewComponent } from './components/review/review.component';
 import { AppRoutingModule } from './router';
 import { SlideshowModule } from 'ng-simple-slideshow';
 import { environment } from './environments/environment';
@@ -60,6 +64,12 @@ import { AngularFireModule } from 'angularfire2';
   ],
   declarations: [
     AppComponent,
+    SelectGradeComponent,
+    SelectDurationComponent,
+    ArriveDisplayComponent,
+    ContactInfoComponent,
+    NewActivityComponent,
+    ReviewComponent,
     SwapBoxComponent,
     EmptyCardComponent,
     DetailsComponent,

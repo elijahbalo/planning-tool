@@ -1,6 +1,14 @@
 {
   "activities": [
     {
+      "name": "Arrive",
+      "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
+      "time": "09:30",
+      "length": "30",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "order": "10"
+    },
+    {
       "name": "Baker, “Knead” a Hand",
       "ageRange": "Prek-2",
       "description": "Children will discover the fascinating secrets behind that most universal of foods, bread! As they make and bake a loaf of their own, they will learn about the variety of flours and breads enjoyed throughout the world, finally delivering their creations to the houses of the International Village. This program gives students an opportunity to learn and practice their measuring and early literacy skills.",
@@ -8,7 +16,8 @@
       "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
       "length": "45",
       "type": "Guided Workshop",
-      "order": "0"
+      "order": "0",
+      "time": ""
     },
     {
       "name": "Music Works!",
@@ -18,7 +27,8 @@
       "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
       "length": "45",
       "type": "Guided Workshop",
-      "order": "1"
+      "order": "1",
+      "time": ""
     },
     {
       "name": "Globe Trekkers at the Canadian Children’s Museum",
@@ -28,7 +38,8 @@
       "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
       "length": "45",
       "type": "Self-Guided",
-      "order": "2"
+      "order": "2",
+      "time": ""
     },
     {
       "name": "Grand Tour",
@@ -38,7 +49,8 @@
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0219-Dm.jpg",
       "length": "45",
       "type": "Tour",
-      "order": "3"
+      "order": "3",
+      "time": ""
     },
     {
       "name": "Artifact Hunt in the First Peoples’ Hall",
@@ -48,7 +60,8 @@
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0093-Dm.jpg",
       "length": "45",
       "type": "Self-Guided",
-      "order": "4"
+      "order": "4",
+      "time": ""
     },
     {
       "name": "The People of New France: Forging Relationships, Changing Landscapes",
@@ -58,7 +71,8 @@
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0165-Dm.jpg",
       "length": "45",
       "type": "Self-Guided",
-      "order": "5"
+      "order": "5",
+      "time": ""
     },
     {
       "name": "Mark Your History!",
@@ -68,7 +82,8 @@
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0057-Dm.jpg",
       "length": "45",
       "type": "Self-Guided",
-      "order": "6"
+      "order": "6",
+      "time": ""
     },
     {
       "name": "It's Your History",
@@ -78,7 +93,8 @@
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0197-Dm.jpg",
       "length": "45",
       "type": "Self-Guided",
-      "order": "7"
+      "order": "7",
+      "time": ""
     },
     {
       "name": "Traditions of the Anishinabe (Algonquin)",
@@ -88,7 +104,8 @@
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0151-Dm.jpg",
       "length": "45",
       "type": "Guided Workshop",
-      "order": "8"
+      "order": "8",
+      "time": ""
     },
     {
       "name": "Ciné+",
@@ -98,7 +115,8 @@
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0145-Dm.jpg",
       "length": "45",
       "type": "Ciné +",
-      "order": "9"
+      "order": "9",
+      "time": ""
     },
     {
       "name": "Explore the Museum",
@@ -108,7 +126,8 @@
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0186-Dm.jpg",
       "length": "45",
       "type": "Self-Guided",
-      "order": "10"
+      "order": "11",
+      "time": ""
     },
     {
       "name": "Men and Women of the Fur Trade",
@@ -118,7 +137,8 @@
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0215-Dm.jpg",
       "length": "45",
       "type": "Guided Workshop",
-      "order": "11"
+      "order": "11",
+      "time": ""
     }
   ],
   "itineraries": [
@@ -138,7 +158,9 @@
           "name": "Arrive",
           "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
           "time": "09:30",
-          "length": "30"
+          "length": "30",
+          "order": "10",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         },
         {
           "name": "Music Works!",
@@ -160,7 +182,7 @@
           "length": "45",
           "type": "Ciné +",
           "order": "9",
-          "time": "11:15"
+          "time": "13:00"
         }
       ]
     },
@@ -181,7 +203,9 @@
           "name": "Arrive",
           "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
           "time": "09:30",
-          "length": "30"
+          "length": "30",
+          "order": "10",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         },
         {
           "name": "Globe Trekkers at the Canadian Children’s Museum",
@@ -234,7 +258,9 @@
           "name": "Arrive",
           "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
           "time": "09:30",
-          "length": "30"
+          "length": "30",
+          "order": "10",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         },
         {
           "name": "Grand Tour",
@@ -297,5 +323,14 @@
       "Gr6To8": false,
       "Gr3To5": false
     }
-  ]
+  ],
+  "arrive": {
+    "name": "Arrive",
+    "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
+    "time": "09:30",
+    "length": "30",
+    "order": "10",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  "c_activities": []
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-select-duration',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select-duration.component.scss']
 })
 export class SelectDurationComponent implements OnInit {
+  @Output()
+  nxt: EventEmitter<any> = new EventEmitter<any>();
+  @Output()
+  prev: EventEmitter<any> = new EventEmitter<any>();
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  next() {
+    this.nxt.emit(true);
+    this.prev.emit('step2');
   }
-
 }

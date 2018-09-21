@@ -1,16 +1,16 @@
-<div style="margin-top:2%; overflow:scroll">
-  <ngb-datepicker #dp (select)="onDateSelection($event)" [displayMonths]="2" [dayTemplate]="t" >
-    
-    </ngb-datepicker>
-    
-    <ng-template #t let-date="date" let-focused="focused">
-      <span class="custom-day"
-            [class.focused]="focused"
-            [class.range]="isFrom(date) || isTo(date) || isInside(date) || isHovered(date)"
-            [class.faded]="isHovered(date) || isInside(date)"
-            (mouseenter)="hoveredDate = date"
-            (mouseleave)="hoveredDate = null">
-        {{ date.day }}
-      </span>
-    </ng-template>
-  </div>
+<div>
+  <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next">
+
+  </ngb-datepicker>
+  <div>
+    <button class="my-btn2" (click)="next()">NEXT</button>
+
+
+    <!-- <button class="btn btn-sm btn-outline-primary mr-2" (click)="selectToday()">Select Today</button>
+<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo()">To current month</button>
+
+ -->
+
+    <!-- 
+<pre>Month: {{ date.month }}.{{ date.day }}</pre>
+<pre>Model: {{ model | json }}</pre> -->

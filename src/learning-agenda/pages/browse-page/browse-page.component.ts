@@ -19,7 +19,17 @@ export class BrowsePageComponent implements OnInit {
   url;
   rId: string;
   modified = false;
-
+  arrive
+  c_activities = []
+  prev:string
+  step1 = false;
+  step2 = false;
+  step3 = false;
+  step4 = false;
+  step5 = false;
+  step6 = false;
+  showDet = false;
+  createTitle = "1. Select a Grade"
   n_set;
 
   c_time;
@@ -85,6 +95,8 @@ export class BrowsePageComponent implements OnInit {
         this.applyFilters();
       }); */
     this.items = itn.itineraries;
+    this.arrive = itn.arrive;
+    this.c_activities = itn.c_activities;
     this.applyFilters();
     console.log(this.items);
 
@@ -139,6 +151,8 @@ export class BrowsePageComponent implements OnInit {
 
     localStorage.setItem('_set', JSON.stringify(event));
   }
+ 
+
 
   setBrowse() {
     this.create = false;
@@ -152,12 +166,64 @@ export class BrowsePageComponent implements OnInit {
     this.browse = false;
     this.cActive = true;
     this.bActive = false;
+    this.set = false;
+    this.step1 = true;
+    this.step2 = false;
+    this.step3 = false;
+    this.step4 = false;
+    this.step5 = false;
+    this.step6 = false;
+    this.createTitle="1. Select a Grade"
+  }
+  
+  setStep2(event){
+    this.step1=false;
+    this.step2 = event
+    this.createTitle = "2. Select a Duration"
   }
 
+  setStep3(event){
+    this.step2=false
+    this.step3 = event
+    this.createTitle = "3. Select a Date"
+  }
+  
+  setStep4(event){
+    this.step3=false
+    this.step4 = event
+    this.createTitle = "4. Select your Activities"
+    this.itineraries = itn.c_activities
+    localStorage.setItem('itinerary', JSON.stringify(this.itineraries));
+  }
+  
+  setStep5(event){
+    this.step4=false
+    this.step5 = event
+    this.createTitle = "5. Contact Information"
+  }
+  
+  setStep6(event){
+    this.step5=false
+    this.step6 = event
+    this.createTitle ="6. Review and Submit"
+  }
+  
   back() {
     this.set = false;
     this.changeDetector.detectChanges();
     localStorage.removeItem('itinerary');
+  }
+
+  create_Back(){
+   if (this.prev == "step1") {this.step2=false; this.step1 = true; this.createTitle="1. Select a Grade"}
+   if (this.prev == "step2") {this.step3=false; this.step2 = true; this.createTitle="2. Select a Duration"; this.prev="step1"} 
+   if (this.prev == "step3") {this.step4=false; this.step3 = true; this.createTitle="3. Select a Date"; this.prev="step2"}
+   if (this.prev == "step4") {this.step5=false; this.step4 = true; this.createTitle="4. Select your Activities"; this.prev="step3"}
+   if (this.prev == "step5") {this.step6=false; this.step5 = true; this.createTitle="5. Contact Information"; this.prev="step4"}
+  }
+
+  setPrev(event){
+   this.prev = event
   }
 
   setItem(event) {

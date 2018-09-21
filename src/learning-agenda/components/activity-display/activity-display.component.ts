@@ -35,6 +35,8 @@ export class ActivityDisplayComponent implements OnInit {
   itinerary;
   @Input()
   showSwap;
+  @Input()
+  showDet = true;
   my_time;
   activity;
   add;
@@ -113,10 +115,14 @@ export class ActivityDisplayComponent implements OnInit {
       if (this.itinerary.time) {
         console.log('do nothing');
       } else {
-        item.time = this.timeConvert(
-          act[act.length - 2].time,
-          act[act.length - 2].length
-        ).toString();
+        if (act.length >= 2) {
+          item.time = this.timeConvert(
+            act[act.length - 2].time,
+            act[act.length - 2].length
+          ).toString();
+        } else {
+          item.time = '10:00 AM';
+        }
       }
       this.item.emit(item);
       localStorage.setItem('_set', JSON.stringify(false));
@@ -127,7 +133,7 @@ export class ActivityDisplayComponent implements OnInit {
 
     let index = act.findIndex(i => i.order === order);
     console.log(index);
-    if (index >= 0) {
+    if (index > 0) {
       let index2 = index - 1;
 
       item.time = this.timeConvert(
@@ -135,6 +141,12 @@ export class ActivityDisplayComponent implements OnInit {
         act[index2].length
       ).toString();
       console.log(act);
+      act.splice(index, 1, item);
+      localStorage.setItem('itinerary', JSON.stringify(act));
+      this.notify.emit(true);
+    }
+    if (index == 0) {
+      item.time = act[index].time;
       act.splice(index, 1, item);
       localStorage.setItem('itinerary', JSON.stringify(act));
       this.notify.emit(true);
@@ -200,16 +212,18 @@ export class ActivityDisplayComponent implements OnInit {
 
   tConvert(time) {
     // Check correct time format and split into components
-    time = time
-      .toString()
-      .match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
+    if (!(time == null)) {
+      time = time
+        .toString()
+        .match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
 
-    if (time.length > 1) {
-      // If time format correct
-      time = time.slice(1); // Remove full string match value
-      time[5] = +time[0] < 12 ? ' AM' : ' PM'; // Set AM/PM
-      time[0] = +time[0] % 12 || 12; // Adjust hours
+      if (time.length > 1) {
+        // If time format correct
+        time = time.slice(1); // Remove full string match value
+        time[5] = +time[0] < 12 ? ' AM' : ' PM'; // Set AM/PM
+        time[0] = +time[0] % 12 || 12; // Adjust hours
+      }
+      return time.join(''); // return adjusted time or original string
     }
-    return time.join(''); // return adjusted time or original string
   }
 }
