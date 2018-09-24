@@ -1,13 +1,27 @@
-<div class="select">
-  <input class="radio" type="radio" name="gender" id="male" value="male">
+<!-- <div class="select">
+  <input class="radio" [(ngModel)]="model.options" type="radio" value="KinderTo2" id="KinderTo2">
   <label class="label" for="male">Kindergarten to Grade 2</label>
 </div>
 <div class="select">
-  <input class="radio" type="radio" name="gender" id="female" value="female">
+  <input class="radio" [(ngModel)]="model.options" type="radio" value="Gr3To5" id="Gr3To5">
   <label class="label" for="female">Grades 3 to 5</label>
 </div>
 <div class="select">
-  <input class="radio" type="radio" name="gender" id="other" value="other">
+  <input class="radio" [(ngModel)]="model.options" type="radio" value="Gr6To8" id="Gr6To8">
+  <label class="label" for="other">Grades 6 to 8</label>
+</div> -->
+
+<div class="select">
+  <input class="radio" [(ngModel)]="model.options" type="checkbox" (change)="populateFilter('kinderTo2', check1)" value="kinderTo2"
+    id="KinderTo2">
+  <label class="label" for="male">Kindergarten to Grade 2</label>
+</div>
+<div class="select">
+  <input class="radio" [(ngModel)]="check2" type="checkbox" (change)="populateFilter('Gr3To5', check2)" value="Gr3To5" id="Gr3To5">
+  <label class="label" for="female">Grades 3 to 5</label>
+</div>
+<div class="select">
+  <input class="radio" [(ngModel)]="check3" type="checkbox" (change)="populateFilter('Gr6To8', check3)" value="Gr6To8" id="Gr6To8">
   <label class="label" for="other">Grades 6 to 8</label>
 </div>
 <button class="my-btn2" (click)="next()">NEXT</button>

@@ -20,7 +20,10 @@
     <div *ngIf="!swap" class="big-box2">
       <div class="img">
         <img class="img-responsive img" src="{{itinerary.img}}">
-        <div style="cursor:pointer;" (click)="setSwap()">
+        <p *ngIf="enableDelete" style="position:absolute; top:0; left:0; background:#fff; cursor:pointer;" (click)="deleteItem(itinerary.order)">
+          <img src="../../../assets/images/delete.png" style="height:20px; width:20px">
+        </p>
+        <div *ngIf="enableSwap" style="cursor:pointer;" (click)="setSwap()">
           <div *ngIf="showSwap" class="swap-text1">
             <svg width="20" height="22" xmlns="http://www.w3.org/2000/svg">
               <g fill="#fff" fill-rule="evenodd">
@@ -35,12 +38,10 @@
 
       <div class="textt">
         <div class="title1">{{itinerary.name}}</div>
-        <div *ngIf="!det" class="bod" appEllipsis>
+        <span class="bod" appEllipsis>
           {{itinerary.description}}
-        </div>
-        <div *ngIf="det" class="bod1">
-          {{itinerary.description}}
-        </div>
+        </span>
+        <span *ngIf="description" style="text-decoration:underline" (click)=toggleModal()>FULL DESCRIPTION</span>
 
         <div *ngIf="det" class="type">{{itinerary.type}}</div>
 
@@ -88,13 +89,12 @@
 
       <div class="textt">
         <div class="title1">{{activity.name}}</div>
-        <div *ngIf="!det" class="bod" appEllipsis>
-          {{activity.description}}
+        <div class="bod">
+          <span appEllipsis>
+            {{activity.description}}
+          </span>
+          <span>Full Description</span>
         </div>
-        <div *ngIf="det" class="bod1">
-          {{activity.description}}
-        </div>
-
         <div *ngIf="det" class="type">{{activity.type}}</div>
 
       </div>

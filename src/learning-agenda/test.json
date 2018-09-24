@@ -1,20 +1,15 @@
 {
   "activities": [
     {
-      "name": "Arrive",
-      "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
-      "time": "09:30",
-      "length": "30",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "order": "10"
-    },
-    {
       "name": "Baker, “Knead” a Hand",
       "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": false,
+      "Gr6To8": false,
       "description": "Children will discover the fascinating secrets behind that most universal of foods, bread! As they make and bake a loaf of their own, they will learn about the variety of flours and breads enjoyed throughout the world, finally delivering their creations to the houses of the International Village. This program gives students an opportunity to learn and practice their measuring and early literacy skills.",
       "fees": "Group admission fee + $1 per student",
       "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
-      "length": "45",
+      "length": 45,
       "type": "Guided Workshop",
       "order": "0",
       "time": ""
@@ -22,10 +17,13 @@
     {
       "name": "Music Works!",
       "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": false,
+      "Gr6To8": false,
       "description": "Take your students on a musical odyssey to far-off places! Children play the roles of musicians from Indonesia and Nigeria, learning and practicing some useful techniques and musical beats while preparing for their performances. Music Works! promotes intercultural understanding as children explore the role of music in communities around the world.",
       "fees": "Group admission fee + $1 per student",
       "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
-      "length": "45",
+      "length": 45,
       "type": "Guided Workshop",
       "order": "1",
       "time": ""
@@ -33,10 +31,13 @@
     {
       "name": "Globe Trekkers at the Canadian Children’s Museum",
       "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": true,
+      "Gr6To8": false,
       "description": "Based on the concept of learning through play, these multisensory, interactive programs promote students’ awareness of themselves and others. In the exciting and colourful international environment of the Canadian Children’s Museum, children explore how people live, work and interact in communities around the world.",
       "fees": "Group admission fee + $1 per student",
       "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
-      "length": "45",
+      "length": 45,
       "type": "Self-Guided",
       "order": "2",
       "time": ""
@@ -44,10 +45,13 @@
     {
       "name": "Grand Tour",
       "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": true,
+      "Gr6To8": true,
       "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
       "fees": "Group admission fee + $1 per student",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0219-Dm.jpg",
-      "length": "45",
+      "length": 45,
       "type": "Tour",
       "order": "3",
       "time": ""
@@ -55,10 +59,13 @@
     {
       "name": "Artifact Hunt in the First Peoples’ Hall",
       "ageRange": "Prek-2",
+      "kinderTo2": false,
+      "Gr3To5": true,
+      "Gr6To8": true,
       "description": "This self-guided activity sheet helps students to discover fascinating objects and stories reflecting the history, individuals, beliefs and cultural traditions of Canada’s First Peoples. Students will explore the First Peoples Hall as they look for 12 key artifacts among the many historical and contemporary objects on view. Students will come away with greater appreciation of the diversity, richness and vitality of Canada’s First Nations, Métis and Inuit.",
       "fees": "Group admission fee + $1 per student",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0093-Dm.jpg",
-      "length": "45",
+      "length": 45,
       "type": "Self-Guided",
       "order": "4",
       "time": ""
@@ -66,10 +73,13 @@
     {
       "name": "The People of New France: Forging Relationships, Changing Landscapes",
       "ageRange": "Prek-2",
+      "kinderTo2": false,
+      "Gr3To5": true,
+      "Gr6To8": true,
       "description": "For settlers in New France, adapting to a new land required a different way of life, as well as new interactions and exchanges. Working with replica artifacts from the Museum’s collections, students will explore some of the ways in which the people of New France adapted to their surroundings, and will learn about some of the interactions between European settlers and First Peoples and how they influenced one another.",
       "fees": "Group admission fee + $1 per student",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0165-Dm.jpg",
-      "length": "45",
+      "length": 45,
       "type": "Self-Guided",
       "order": "5",
       "time": ""
@@ -77,10 +87,13 @@
     {
       "name": "Mark Your History!",
       "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": true,
+      "Gr6To8": true,
       "description": "Student groups can enhance their visit with this new self-guided itinerary which offers an activity throughout the Museum. Program Interpreters will be stationed at key locations to provide animations and encourage students to explore objects and events that tell important stories that have shaped Canada. Students will discover First Peoples’ interwoven history with the natural world and the adaptations made and relationships forged with French colonists and British settlers. This fun-filled and engaging program will help students connect historically with the perspectives of other Canadians and consider what it means to be Canadian today!",
       "fees": "Group admission fee + $1 per student",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0057-Dm.jpg",
-      "length": "45",
+      "length": 45,
       "type": "Self-Guided",
       "order": "6",
       "time": ""
@@ -88,10 +101,13 @@
     {
       "name": "It's Your History",
       "ageRange": "Prek-2",
+      "kinderTo2": false,
+      "Gr3To5": true,
+      "Gr6To8": true,
       "description": "This activity sheet is intended for students who visit the Canadian Museum of History. It offers them an engaging and thought-provoking self-guided exploration of four permanent exhibitions located on Level 1 of the Museum: the Grand Hall, From Time Immemorial: Tsimshian Prehistory, the First Peoples Hall and the Canadian Stamp Collection. Students will make their way through the exhibitions by answering questions that require observation, comparison, reflection and exploration.",
       "fees": "Group admission fee + $1 per student",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0197-Dm.jpg",
-      "length": "45",
+      "length": 45,
       "type": "Self-Guided",
       "order": "7",
       "time": ""
@@ -99,10 +115,13 @@
     {
       "name": "Traditions of the Anishinabe (Algonquin)",
       "ageRange": "Prek-2",
+      "kinderTo2": false,
+      "Gr3To5": true,
+      "Gr6To8": false,
       "description": "Explore the continuity of Anishinabe (Algonquin) culture through their traditions, oral histories, the objects they created, and the knowledge that community members have shared with the Museum. Students will explore objects related to six different traditions in Anishinabe (Algonquin) culture, and use the knowledge they acquire to compare Anishinabe (Algonquin) culture with their own.",
       "fees": "Group admission fee + $1 per student",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0151-Dm.jpg",
-      "length": "45",
+      "length": 45,
       "type": "Guided Workshop",
       "order": "8",
       "time": ""
@@ -110,10 +129,13 @@
     {
       "name": "Ciné+",
       "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": true,
+      "Gr6To8": true,
       "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
       "fees": "Group admission fee + $1 per student",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0145-Dm.jpg",
-      "length": "45",
+      "length": 45,
       "type": "Ciné +",
       "order": "9",
       "time": ""
@@ -121,21 +143,27 @@
     {
       "name": "Explore the Museum",
       "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": true,
+      "Gr6To8": true,
       "description": "Take some time to explore all the museum has to offer. Enjoy our temporary exhibitions, wander through the boutique, or take in the beautiful scenery of the museum grounds",
       "fees": "Group admission fee + $1 per student",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0186-Dm.jpg",
-      "length": "45",
+      "length": 45,
       "type": "Self-Guided",
-      "order": "11",
+      "order": "10",
       "time": ""
     },
     {
       "name": "Men and Women of the Fur Trade",
       "ageRange": "Prek-2",
+      "kinderTo2": false,
+      "Gr3To5": false,
+      "Gr6To8": true,
       "description": "During the fur trade, Europeans relied heavily on the knowledge of Indigenous women and men. This program highlights multiple perspectives on the fur trade following the Seven Years’ War (1756–1763), and examines the relationships that made trade networks possible. Students will use primary text sources and artifacts to explore the perspectives of Indigenous women, Indigenous men, and Europeans.",
       "fees": "Group admission fee + $1 per student",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0215-Dm.jpg",
-      "length": "45",
+      "length": 45,
       "type": "Guided Workshop",
       "order": "11",
       "time": ""
@@ -158,8 +186,8 @@
           "name": "Arrive",
           "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
           "time": "09:30",
-          "length": "30",
-          "order": "10",
+          "length": 30,
+          "order": "12",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         },
         {
@@ -168,10 +196,10 @@
           "description": "Take your students on a musical odyssey to far-off places! Children play the roles of musicians from Indonesia and Nigeria, learning and practicing some useful techniques and musical beats while preparing for their performances. Music Works! promotes intercultural understanding as children explore the role of music in communities around the world.",
           "fees": "Group admission fee + $1 per student",
           "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
-          "length": "45",
+          "length": 45,
           "type": "Guided Workshop",
           "order": "1",
-          "time": "11:15"
+          "time": "10:00"
         },
         {
           "name": "Ciné+",
@@ -179,10 +207,10 @@
           "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
           "fees": "Group admission fee + $1 per student",
           "img": "http://localhost:4200/assets/images/IMG2018-0032-0145-Dm.jpg",
-          "length": "45",
+          "length": 45,
           "type": "Ciné +",
           "order": "9",
-          "time": "13:00"
+          "time": "10:45"
         }
       ]
     },
@@ -203,8 +231,8 @@
           "name": "Arrive",
           "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
           "time": "09:30",
-          "length": "30",
-          "order": "10",
+          "length": 30,
+          "order": "12",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         },
         {
@@ -213,10 +241,10 @@
           "description": "Based on the concept of learning through play, these multisensory, interactive programs promote students’ awareness of themselves and others. In the exciting and colourful international environment of the Canadian Children’s Museum, children explore how people live, work and interact in communities around the world.",
           "fees": "Group admission fee + $1 per student",
           "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
-          "length": "45",
+          "length": 45,
           "type": "Self-Guided",
           "order": "2",
-          "time": "11:15"
+          "time": "10:00"
         },
         {
           "name": "The People of New France: Forging Relationships, Changing Landscapes",
@@ -224,10 +252,10 @@
           "description": "For settlers in New France, adapting to a new land required a different way of life, as well as new interactions and exchanges. Working with replica artifacts from the Museum’s collections, students will explore some of the ways in which the people of New France adapted to their surroundings, and will learn about some of the interactions between European settlers and First Peoples and how they influenced one another.",
           "fees": "Group admission fee + $1 per student",
           "img": "http://localhost:4200/assets/images/IMG2018-0032-0165-Dm.jpg",
-          "length": "45",
+          "length": 45,
           "type": "Self-Guided",
           "order": "5",
-          "time": "13:00"
+          "time": "10:45"
         },
         {
           "name": "Ciné+",
@@ -235,10 +263,10 @@
           "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
           "fees": "Group admission fee + $1 per student",
           "img": "http://localhost:4200/assets/images/IMG2018-0032-0145-Dm.jpg",
-          "length": "45",
+          "length": 45,
           "type": "Ciné +",
           "order": "9",
-          "time": "13:45"
+          "time": "11:30"
         }
       ]
     },
@@ -258,8 +286,8 @@
           "name": "Arrive",
           "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
           "time": "09:30",
-          "length": "30",
-          "order": "10",
+          "length": 30,
+          "order": "12",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
         },
         {
@@ -268,7 +296,7 @@
           "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
           "fees": "Group admission fee + $1 per student",
           "img": "http://localhost:4200/assets/images/IMG2018-0032-0219-Dm.jpg",
-          "length": "45",
+          "length": 45,
           "type": "Tour",
           "order": "3",
           "time": "10:00"
@@ -328,7 +356,7 @@
     "name": "Arrive",
     "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
     "time": "09:30",
-    "length": "30",
+    "length": 30,
     "order": "10",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
   },

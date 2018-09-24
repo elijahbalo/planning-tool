@@ -1,9 +1,9 @@
 <div class="select">
-  <input class="radio" type="radio" name="gender" id="male" value="male">
+  <input class="radio" type="radio" [(ngModel)]="model.options" value="Half-day">
   <label class="label" for="male">Half&ndash;Day</label>
 </div>
 <div class="select">
-  <input class="radio" type="radio" name="gender" id="female" value="female">
+  <input class="radio" type="radio" [(ngModel)]="model.options" value="Full-day">
   <label class="label" for="female">Full&ndash;Day</label>
 </div>
 <button class="my-btn2" (click)="next()">NEXT</button>

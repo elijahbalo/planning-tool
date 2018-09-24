@@ -14,7 +14,7 @@ export class CalendarComponent implements OnInit {
   hoveredDate: NgbDateStruct;
 
   model: NgbDateStruct;
-  date: { year: number; month: number; day: number };
+  date: Date;
   constructor(private calendar: NgbCalendar) {}
   ngOnInit() {}
   selectToday() {

@@ -176,15 +176,69 @@
   <div *ngIf="!set && create" id="print" class="side-bar">
     <div class="first">
       <div style="float:left;margin:4%; font-size:1.5rem">INSTRUCTIONS</div>
-      <div style="float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer">RESTART</div>
+      <div style="float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer"
+        (click)="restart()">RESTART</div>
     </div>
-    <ol type="1">
-      <li>Select a Grade</li>
-      <li>Select a Duration</li>
-      <li>Select a Date</li>
-      <li>Select your Activities</li>
-      <li>Contact Information</li>
-      <li>Review and Submit</li>
+    <ol>
+      <li>
+        <span *ngIf="step1">
+          <label style="background:#BEBEBE">Select a Grade</label>
+        </span>
+        <span *ngIf="!step1">
+          <label>Select a Grade</label>
+        </span>
+        <input type="checkbox" id="step1">
+      </li>
+      <li>
+        <span *ngIf="step2">
+          <label style="background:#BEBEBE">Select a Duration</label>
+        </span>
+        <span *ngIf="!step2">
+          <label>Select a Duration</label>
+        </span>
+        <input type="checkbox" id="step2">
+      </li>
+      <li>
+        <span *ngIf="step3">
+          <label style="background:#BEBEBE">Select a Date</label>
+        </span>
+        <span *ngIf="!step3">
+          <label>Select a Date</label>
+        </span>
+        <input type="checkbox" id="step3">
+      </li>
+      <li>
+        <span *ngIf="step4">
+          <label style="background:#BEBEBE">Select your Activities</label>
+        </span>
+        <span *ngIf="!step4">
+          <label>Select your Activities</label>
+        </span>
+
+        <input type="checkbox" id="step4">
+      </li>
+      <li>
+        <span *ngIf="step5">
+          <label style="background:#BEBEBE">Contact Information</label>
+        </span>
+        <span *ngIf="!step5">
+          <label>Contact Information</label>
+        </span>
+        <input type="checkbox" id="step5">
+      </li>
+      <li>
+        <span *ngIf="!step6">
+          <label>Review and Submit</label>
+        </span>
+        <div *ngIf="step6" style="width:95%; background:#BEBEBE; margin:auto;">
+          <div style="width:90%; margin:auto;">
+            <h3 style="padding:2%">6. Review and Submit</h3>
+            <p style="padding:2%">Review your Itinerary plan and make sure everything looks good. Otherwise, go back and make changes where neccessary.
+              When you're ready, submit your plan and we'll get in touch with next steps!</p>
+            <button style="width:100%; background:red; color:#fff; padding:3%; margin-bottom:2%;">SUBMIT</button>
+          </div>
+        </div>
+      </li>
     </ol>
   </div>
   <div *ngIf="!set && browse" class="itineraries">
@@ -206,7 +260,7 @@
   </div>
 
 
-  <div *ngIf="set && !create" class="activities">
+  <div *ngIf="set && !create" class="activities" id="printx">
     <div class="row">
       <div class="left" (click)="back()">
         <div class="arrow-left"></div>
@@ -247,7 +301,7 @@
           <button class="print" (click)="printDiv()">PRINT</button>
         </div>
         <div style="margin-right:13%;margin-left:2%">
-          <button class="download">DOWNLOAD PDF</button>
+          <button class="download" (click)="pdf()">DOWNLOAD PDF</button>
         </div>
       </div>
     </div>
@@ -256,7 +310,7 @@
 
     <app-empty-activity-display (set)="add($event)"></app-empty-activity-display>
 
-
+    <div id="editor"></div>
 
   </div>
 
@@ -277,16 +331,51 @@
       <div *ngIf="step4">
         <app-arrive-display [itinerary]="arrive"></app-arrive-display>
         <app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary" (item)="setItem($event)" (order)="emitOrder($event)"
-          (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap" [showDet]="showDet"></app-activity-display>
+          (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap" [showDet]="showDet" [description]="description"></app-activity-display>
         <app-new-activity (set)="add($event)" (nxt)="setStep5($event)" (prev)="setPrev($event)"></app-new-activity>
 
       </div>
-      <app-contact-info *ngIf="step5" (nxt)="setStep6($event)" (prev)="setPrev($event)"></app-contact-info>
-      <div *ngIf="step6">
-        <app-review></app-review>
-        <app-arrive-display [itinerary]="arrive"></app-arrive-display>
-        <app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary" (item)="setItem($event)" (order)="emitOrder($event)"
-          (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap" [showDet]="showDet"></app-activity-display>
+      <div *ngIf="step5">
+        <app-submit-form></app-submit-form>
+        <app-contact-info (nxt)="setStep6($event)" (prev)="setPrev($event)"></app-contact-info>
+      </div>
+      <div *ngIf="step6" id="printx">
+        <app-review [id]="rId" [url]="url"></app-review>
+
+
+        <div class="link">
+
+          <div class="urlbox">
+
+            <div class="url">
+              <span>{{url}}</span>
+            </div>
+
+            <div>
+              <button class="url-btn" ngxClipboard [cbContent]="url">COPY URL</button>
+            </div>
+          </div>
+
+
+          <div class="printbox">
+
+            <div>
+              <button class="print" (click)="printDiv()">PRINT</button>
+            </div>
+            <div style="margin-right:13%;margin-left:2%">
+              <button class="download" (click)="pdf()">DOWNLOAD PDF</button>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div style="margin-top:25px;">
+          <app-arrive-display [itinerary]="arrive"></app-arrive-display>
+          <app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary" (item)="setItem($event)" (order)="emitOrder($event)"
+            (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap" [showDet]="showDet" [enableSwap]="enableSwap"
+            [description]="description" [enableDelete]="enableDelete"></app-activity-display>
+        </div>
       </div>
     </div>
 

@@ -43,6 +43,15 @@ export class ActivityDisplayComponent implements OnInit {
   @Input()
   activities;
 
+  @Input()
+  enableSwap = true;
+
+  @Input()
+  enableDelete = true;
+
+  @Input()
+  description = false;
+  toggler = false;
   constructor(private db: AngularFirestore) {}
 
   ngOnInit() {
@@ -58,12 +67,12 @@ export class ActivityDisplayComponent implements OnInit {
           });
         })
       ); */
-    this.items = act.activities;
-    console.log(this.items);
 
-    console.log(this.itinerary.time);
+    this.getFilter(act.activities);
+    //  this.items = act.activities;
+    console.log(this.items);
     this.activities = JSON.parse(localStorage.getItem('itinerary'));
-    console.log(this.activities);
+    console.log(JSON.parse(localStorage.getItem('itinerary')));
     if (this.itinerary.time) {
       localStorage.setItem('c_time', JSON.stringify(this.itinerary.time));
     }
@@ -73,8 +82,89 @@ export class ActivityDisplayComponent implements OnInit {
       this.swap = true;
       this.add = true;
     }
+    if (this.itinerary.name == 'Arrive') {
+      this.enableSwap = false;
+      this.enableDelete = false;
+    }
   }
+  getFilter(activities) {
+    let g_filter = JSON.parse(localStorage.getItem('g_filter'));
+    let length = JSON.parse(localStorage.getItem('f_length'));
+    let f_items = [];
+    console.log(g_filter);
+    if (g_filter == null) {
+      this.items = activities;
+    } else {
+      g_filter.map(elem => {
+        if (elem == 'kinderTo2') {
+          let my_items = activities;
+          my_items = my_items.filter(elem => elem.kinderTo2 == true);
+          console.log('first');
+          my_items.map(elem => {
+            f_items.map(element => {
+              if (elem == element) {
+                this.toggler = true;
+              }
+            });
+            if (this.toggler == false) {
+              f_items.push(elem);
+            }
+            this.toggler = false;
+          });
+        }
+        if (elem == 'Gr3To5') {
+          let my_items = activities;
+          my_items = my_items.filter(elem => elem.Gr3To5 == true);
+          console.log('second');
+          my_items.map(elem => {
+            f_items.map(element => {
+              if (elem == element) {
+                this.toggler = true;
+              }
+            });
+            if (this.toggler == false) {
+              f_items.push(elem);
+            }
+            this.toggler = false;
+          });
+        }
+        if (elem == 'Gr6To8') {
+          let my_items = activities;
+          my_items = my_items.filter(elem => elem.Gr6To8 == true);
+          console.log('third');
+          console.log(my_items);
+          console.log(f_items);
+          my_items.map(elem => {
+            f_items.map(element => {
+              if (elem == element) {
+                this.toggler = true;
+                console.log('elem found');
+              }
+            });
+            if (this.toggler == false) {
+              console.log('elem not found');
+              console.log(elem);
+              f_items.push(elem);
+            }
+            this.toggler = false;
+          });
+        }
 
+        /*    my_items.map(elem => {
+          console.log(f_items);
+          f_items.map(element => {
+            if (elem == element) {
+              this.toggler = true;
+            }
+          });
+          if (this.toggler == false) {
+            f_items.push(elem);
+          }
+        }); */
+      });
+      this.items = f_items;
+    }
+  }
   setSwap() {
     if (this.swap == false) this.swap = true;
     else {
@@ -112,16 +202,20 @@ export class ActivityDisplayComponent implements OnInit {
     let act = JSON.parse(localStorage.getItem('itinerary'));
     console.log(act);
     if (this.newSet == true) {
+      console.log(this.itinerary);
       if (this.itinerary.time) {
         console.log('do nothing');
       } else {
+        console.log(act.length);
         if (act.length >= 2) {
           item.time = this.timeConvert(
             act[act.length - 2].time,
             act[act.length - 2].length
           ).toString();
+          console.log(act[act.length - 2].time);
+          console.log(act[act.length - 2].length);
         } else {
-          item.time = '10:00 AM';
+          item.time = '10:00';
         }
       }
       this.item.emit(item);
@@ -155,7 +249,13 @@ export class ActivityDisplayComponent implements OnInit {
     this.activity = item;
     this.modify.emit(true);
   }
-
+  deleteItem(order) {
+    let act = JSON.parse(localStorage.getItem('itinerary'));
+    let index = act.findIndex(i => i.order === order);
+    act.splice(index, 1);
+    localStorage.setItem('itinerary', JSON.stringify(act));
+    this.modify.emit(true);
+  }
   check(order) {
     if (order == this.ord) return true;
     else {
@@ -176,6 +276,8 @@ export class ActivityDisplayComponent implements OnInit {
   }
 
   timeConvert(data, length) {
+    console.log('time is here');
+    console.log(data);
     let index;
     let h = '';
     let m = '';
@@ -199,6 +301,8 @@ export class ActivityDisplayComponent implements OnInit {
     }
 
     let time = Number(h) * 60 + Number(m) + length;
+    console.log('time is here');
+    console.log(time);
     this.my_time = time;
     let minutes = time % 60;
     let hours = (time - minutes) / 60;

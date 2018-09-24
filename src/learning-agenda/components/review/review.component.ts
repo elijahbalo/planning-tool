@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-review',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./review.component.scss']
 })
 export class ReviewComponent implements OnInit {
-
-  constructor() { }
+  @Input()
+  id;
+  @Input()
+  url;
+  date;
+  constructor() {}
 
   ngOnInit() {
+    this.date = new Date();
   }
-
 }

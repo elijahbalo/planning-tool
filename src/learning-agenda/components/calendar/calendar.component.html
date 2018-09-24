@@ -1,5 +1,5 @@
 <div>
-  <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next">
+  <ngb-datepicker #dp [(ngModel)]="date" (navigate)="date = $event.next">
 
   </ngb-datepicker>
   <div>
@@ -11,6 +11,5 @@
 
  -->
 
-    <!-- 
-<pre>Month: {{ date.month }}.{{ date.day }}</pre>
-<pre>Model: {{ model | json }}</pre> -->
+
+    <pre>Month: {{ date.month  }}.{{ date.day }}.{{ date.year}}</pre>
