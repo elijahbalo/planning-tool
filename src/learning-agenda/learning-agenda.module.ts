@@ -26,6 +26,7 @@ import { MainFooterComponent } from './components/main-footer/main-footer.compon
 import { SubmitFormComponent } from './components/submit-form/submit-form.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { BrowsePageComponent } from './pages/browse-page/browse-page.component';
+import { CreatePageComponent } from './pages/create-page/create-page.component';
 import { ConfirmPageComponent } from './pages/confirm-page/confirm-page.component';
 import { ItineraryPageComponent } from './pages/itinerary-page/itinerary-page.component';
 import { DesignPageComponent } from './pages/design-page/design-page.component';
@@ -90,6 +91,7 @@ import { AngularFireModule } from 'angularfire2';
     SubmitFormComponent,
     LandingPageComponent,
     BrowsePageComponent,
+    CreatePageComponent,
     DesignPageComponent,
     ConfirmPageComponent,
     SubmitPageComponent,

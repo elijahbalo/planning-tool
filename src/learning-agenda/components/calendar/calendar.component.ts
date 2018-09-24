@@ -11,17 +11,33 @@ export class CalendarComponent implements OnInit {
   nxt: EventEmitter<any> = new EventEmitter<any>();
   @Output()
   prev: EventEmitter<any> = new EventEmitter<any>();
+  @Output()
+  newDate: EventEmitter<any> = new EventEmitter<any>();
   hoveredDate: NgbDateStruct;
-
-  model: NgbDateStruct;
+  set = false;
   date: Date;
+  js_date: Date;
   constructor(private calendar: NgbCalendar) {}
   ngOnInit() {}
-  selectToday() {
-    this.model = this.calendar.getToday();
+  get today() {
+    return new Date();
+  }
+
+  setDate(year, month, day) {
+    if (day === undefined) {
+      return;
+    }
+
+    this.js_date = new Date(year, month, day);
+    if (this.js_date) {
+      return this.js_date;
+    } else {
+      return 'no date selected';
+    }
   }
 
   next() {
+    this.newDate.emit(this.js_date);
     this.nxt.emit(true);
     this.prev.emit('step3');
   }

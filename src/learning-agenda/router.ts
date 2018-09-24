@@ -1,25 +1,27 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { LandingPageComponent} from  './pages/landing-page/landing-page.component';
-import { DesignPageComponent} from './pages/design-page/design-page.component';
-import { ConfirmPageComponent} from './pages/confirm-page/confirm-page.component';
-import { SubmitPageComponent} from './pages/submit-page/submit-page.component';
-import { BrowsePageComponent} from './pages/browse-page/browse-page.component';
-import { ItineraryPageComponent} from './pages/itinerary-page/itinerary-page.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { DesignPageComponent } from './pages/design-page/design-page.component';
+import { ConfirmPageComponent } from './pages/confirm-page/confirm-page.component';
+import { SubmitPageComponent } from './pages/submit-page/submit-page.component';
+import { BrowsePageComponent } from './pages/browse-page/browse-page.component';
+import { CreatePageComponent } from './pages/create-page/create-page.component';
+import { ItineraryPageComponent } from './pages/itinerary-page/itinerary-page.component';
 
 const routes: Routes = [
-{path: '', redirectTo: 'LandingPage', pathMatch: 'full'}, 
-  {path: 'LandingPage', component: LandingPageComponent},
-  {path: 'DesignPage', component: DesignPageComponent },
-  {path: 'ConfirmPage', component: ConfirmPageComponent},
-  {path: 'SubmitPage', component: SubmitPageComponent},
-  {path: 'BrowsePage', component:BrowsePageComponent},
-  {path: 'ItineraryPage/:id', component: ItineraryPageComponent} 
+  { path: '', redirectTo: 'LandingPage', pathMatch: 'full' },
+  { path: 'LandingPage', component: LandingPageComponent },
+  { path: 'DesignPage', component: DesignPageComponent },
+  { path: 'ConfirmPage', component: ConfirmPageComponent },
+  { path: 'SubmitPage', component: SubmitPageComponent },
+  { path: 'BrowsePage', component: BrowsePageComponent },
+  { path: 'CreatePage', component: CreatePageComponent },
+  { path: 'ItineraryPage/:id', component: ItineraryPageComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

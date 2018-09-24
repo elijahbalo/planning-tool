@@ -11,17 +11,27 @@ export class SelectGradeComponent implements OnInit {
   @Output()
   prev: EventEmitter<any> = new EventEmitter<any>();
   model = { options: '' };
+  check1;
+  check2;
+  check3;
   g_filter = [];
   constructor() {}
 
   ngOnInit() {
-    if (JSON.parse(localStorage.getItem('f_grade'))) {
-      this.model.options = JSON.parse(localStorage.getItem('f_grade'));
+    if (JSON.parse(localStorage.getItem('g_filter'))) {
+      let filters = JSON.parse(localStorage.getItem('g_filter'));
+      filters.map(elem => {
+        if (elem == 'kinderTo2') {
+          this.check1 = true;
+        }
+        if (elem == 'Gr3To5') {
+          this.check2 = true;
+        }
+        if (elem == 'Gr6To8') {
+          this.check3 = true;
+        }
+      });
     }
-  }
-
-  ngAfterViewInit() {
-    $('#Grade6To8').prop('checked', true);
   }
 
   populateFilter(field, event) {
@@ -32,7 +42,12 @@ export class SelectGradeComponent implements OnInit {
       this.g_filter = filter;
       localStorage.setItem('g_filter', JSON.stringify(this.g_filter));
     } else {
+      if (JSON.parse(localStorage.getItem('g_filter'))) {
+        this.g_filter = JSON.parse(localStorage.getItem('g_filter'));
+      }
+      console.log(this.g_filter);
       this.g_filter.push(field);
+      console.log(this.g_filter);
       localStorage.setItem('g_filter', JSON.stringify(this.g_filter));
     }
   }

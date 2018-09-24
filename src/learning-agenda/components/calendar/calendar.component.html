@@ -3,6 +3,8 @@
 
   </ngb-datepicker>
   <div>
+
+    <pre>Selected Date:{{setDate(date.year,date.month-1,date.day) | date}}</pre>
     <button class="my-btn2" (click)="next()">NEXT</button>
 
 
@@ -10,6 +12,3 @@
 <button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo()">To current month</button>
 
  -->
-
-
-    <pre>Month: {{ date.month  }}.{{ date.day }}.{{ date.year}}</pre>

@@ -10,10 +10,15 @@ export class ReviewComponent implements OnInit {
   id;
   @Input()
   url;
+  @Input()
   date;
+  @Input()
+  month;
+  @Input()
+  day;
+  @Input()
+  year;
   constructor() {}
 
-  ngOnInit() {
-    this.date = new Date();
-  }
+  ngOnInit() {}
 }
