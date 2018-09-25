@@ -80,7 +80,7 @@
         <a class="msm__back-link" href="#landing" (click)="$event.preventDefault()">Back to Landing Page</a>
         <h2 class="msm__heading">Itineraries</h2>
       </header>
-      <ul class="card-list">
+      <ul class="card-list" style="display:none;">
         <li class="card-wrapper">
           <a class="la-card" href="#1" (click)="$event.preventDefault()">
             <main class="la-card__main">
@@ -109,390 +109,70 @@
           </a>
         </li>
       </ul><!--/.card-list-->
-      <div class="la-banner" style="display:none;">
+
+      <div class="la-banner" style="background-image:url('/assets/images/IMG2018-0032-0165-Dm.jpg');">
         <main class="la-banner__main">
           <span class="la-banner__subtitle">Grade 3 to 5</span>
           <h3 class="la-banner__title">Medieval Times</h3>
           <span class="la-banner__toy">May &ndash; Jun</span>
         </main>
         <div class="utils-bar">
-          <div>
-            <input type="text" />
-            <button>Copy URL</button>
+          <div class="url-copier">
+            <label for="url">Url</label>
+            <input id="url" value="http://localhost:4200/BrowsePage" name="url" type="text" />
+            <button class="la-button la-button--utils-bar la-button--clr-primary">Copy URL</button>
           </div>
-          <button>Print</button>
-          <button>Download PDF</button>
+          <aside class="utils-bar__aside">
+            <button class="la-button la-button--utils-bar">Print</button>
+            <button class="la-button la-button--utils-bar">Download PDF</button>
+          </aside>
         </div>
+        <span class="la-banner__image-cover"></span>
       </div><!--/.la-banner-->
+
+      <div class="la-activities">
+        <ul>
+          <li class="activity-list-item">
+            <span class="activity-list-item__time">9:30 AM</span>
+            <figure class="activity-list-item__figure">
+              <a class="activity-list-item__image-link" href="#figure">
+                <img class="activity-list-item__image" src="/assets/images/IMG2018-0032-0151-Dm.jpg" width="227" height="161" alt="" />
+              </a>
+            </figure>
+            <div class="activity-list-item__body">
+              <span class="activity-list-item__title">Arrive</span>
+              <span class="activity-list-item__desc">Aenean eu leo quam. Pellentesque 
+              ornare sem lacinia quam venenatis vestibulum. Praesent 
+              commodo cursus magna, vel scelerisque nisl consectetur 
+              vel augue laoreet rutrum faucibus dolor auctor ... <a href="#desc">Full Description</a></span>
+            </div>
+          </li>
+          <li class="activity-list-item activity-list-item--last-no-add">
+            <span class="activity-list-item__time">10:00 AM</span>
+            <figure class="activity-list-item__figure">
+              <a class="activity-list-item__image-link" href="#figure">
+                <img class="activity-list-item__image" src="/assets/images/IMG2018-0032-0151-Dm.jpg" width="227" height="161" alt="" />
+              </a>
+              <button class="activity-list-item__rem-button">Remove Activity</button>
+              <button class="activity-list-item__swap-button">Swap Activity</button>
+            </figure>
+            <div class="activity-list-item__body">
+              <span class="activity-list-item__title">Traditions of the Anishinabe (Algonquin)</span>
+              <span class="activity-list-item__desc">Duis mollis, est non commodo luctus, 
+              nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
+              Cras mattis consectetur purus sit amet fermentum.</span>
+            </div>
+          </li>
+          <li class="activity-list-item activity-list-item--add">
+            <span class="activity-list-item__time"></span>
+            <div class="activity-list-item__body">
+              <button class="la-button la-button--add">Add Another Activity</button>
+              <button class="la-button la-button--clr-primary">Next</button>
+            </div>
+          </li>
+        </ul>
+      </div><!--/.la-activities-->
     </main><!--/.main-section__main-->
 
   </div><!--/.main-section__wrapper-->
 </section><!--/.main-section-->
-
-
-<!--
-<div class="shadow">
-  <span class="plan">PLAN YOUR VISIT </span>
-  <span class="arrow-right"></span>
-  <div class="h1"> PLAN A SCHOOL TRIP</div>
-
-
-  <div class="h3">
-    <div *ngIf="bActive" class="my-btn1" (click)="setBrowse()">BROWSE</div>
-    <div *ngIf="!bActive" class="my-btn" (click)="setBrowse()">BROWSE</div>
-    <div *ngIf="cActive" class="my-btn1" (click)="setCreate()">CREATE</div>
-    <div *ngIf="!cActive" class="my-btn" (click)="setCreate()">CREATE</div>
-
-  </div>
-
-
-  <div class="my-container">
-    <div class="my-bg">
-      <img src="../../../assets/images/IMG2018-0032-0215-Dm.jpg" class="img-resize">
-
-    </div>
-  </div>
-</div>
-
-
-<div class="content">
-  <div *ngIf="!set && !create" class="side-bar">
-    <div class="first">
-      <div style="float:left;margin:4%; font-size:1.5rem">Filter By</div>
-      <div style="float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer"
-        (click)="reset()">Clear All</div>
-    </div>
-
-    <div>
-      <div class="selection">
-
-        <div class="ftext">
-          GRADE
-        </div>
-        <form>
-          <div class="boxes">
-            <label class="lab">Kindergaten to Grade 2
-              <span class="checkmark"></span>
-
-            </label>
-            <input [(ngModel)]="KinderTo2" style="float:right;" (change)="filterBoolean('KinderTo2',KinderTo2)" type="checkbox" class="cbox"
-              [ngModelOptions]="{standalone: true}">
-
-          </div>
-        </form>
-
-        <form>
-          <div class="boxes">
-            <label class="lab"> Grades 3 to 5
-              <span class="checkmark"></span>
-
-            </label>
-            <input [(ngModel)]="Gr3To5" style="float:right;" (change)="filterBoolean1('Gr3To5',Gr3To5)" type="checkbox" class="cbox"
-              [ngModelOptions]="{standalone: true}">
-          </div>
-        </form>
-
-        <form>
-          <div class="boxes">
-            <label class="lab"> Grades 6 to 8
-              <span class="checkmark"></span>
-
-            </label>
-            <input [(ngModel)]="Gr6To8" style="float:right;" (change)="filterBoolean2('Gr6To8',Gr6To8)" type="checkbox" class="cbox"
-              [ngModelOptions]="{standalone: true}">
-          </div>
-        </form>
-      </div>
-
-
-
-      <div class="selection">
-        <form>
-          <div class="ftext">
-            TIME OF YEAR
-          </div>
-          <div class="boxes">
-            <label class="lab">October to April
-              <span class="checkmark"></span>
-
-            </label>
-            <input [(ngModel)]="OctoberToApril" style="float:right;" (change)="filterBoolean3('OctoberToApril',OctoberToApril)" type="checkbox"
-              class="cbox" [ngModelOptions]="{standalone: true}">
-          </div>
-
-
-
-          <div class="boxes">
-            <label class="lab">May to June
-              <span class="checkmark"></span>
-
-            </label>
-            <input [(ngModel)]="MayToJune" style="float:right;" (change)="filterBoolean4('MayToJune',MayToJune)" type="checkbox" class="cbox"
-              [ngModelOptions]="{standalone: true}">
-          </div>
-        </form>
-      </div>
-
-
-
-
-      <div class="selection">
-
-        <div class="ftext">
-          LENGTH
-        </div>
-        <form>
-          <div class="boxes">
-
-            <label class="form-check-label" for="exampleRadios1">
-              Half Day
-            </label>
-            <input style="float:right" [(ngModel)]="day" (change)="filterExact('day', day)" type="radio" name="exampleRadios" value="Half-day"
-              class="rad">
-          </div>
-          <div class="boxes">
-
-            <label class="form-check-label" for="exampleRadios2">
-              Full Day
-            </label>
-            <input style="float:right" [(ngModel)]="day" (change)="filterExact('day', day)" type="radio" name="exampleRadios" value="Full-day"
-              class="rad">
-          </div>
-        </form>
-      </div>
-
-
-
-
-    </div>
-  </div>
-
-
-  <div *ngIf="set && !create" id="print" class="side-bar">
-    <div class="side-title">
-      SCHEDULE
-    </div>
-    <div *ngFor="let itinerary of itineraries" class="brief">
-      <span class="brief1">{{itinerary.time}}</span>
-      <span class="brief2">{{itinerary.name}}</span>
-    </div>
-  </div>
-
-  <div *ngIf="!set && create" id="print" class="side-bar">
-    <div class="first">
-      <div style="float:left;margin:4%; font-size:1.5rem">INSTRUCTIONS</div>
-      <div style="float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer"
-        (click)="restart()">RESTART</div>
-    </div>
-    <ol>
-      <li>
-        <span *ngIf="step1">
-          <label style="background:#BEBEBE">Select a Grade</label>
-        </span>
-        <span *ngIf="!step1">
-          <label>Select a Grade</label>
-        </span>
-        <input type="checkbox" id="step1">
-      </li>
-      <li>
-        <span *ngIf="step2">
-          <label style="background:#BEBEBE">Select a Duration</label>
-        </span>
-        <span *ngIf="!step2">
-          <label>Select a Duration</label>
-        </span>
-        <input type="checkbox" id="step2">
-      </li>
-      <li>
-        <span *ngIf="step3">
-          <label style="background:#BEBEBE">Select a Date</label>
-        </span>
-        <span *ngIf="!step3">
-          <label>Select a Date</label>
-        </span>
-        <input type="checkbox" id="step3">
-      </li>
-      <li>
-        <span *ngIf="step4">
-          <label style="background:#BEBEBE">Select your Activities</label>
-        </span>
-        <span *ngIf="!step4">
-          <label>Select your Activities</label>
-        </span>
-
-        <input type="checkbox" id="step4">
-      </li>
-      <li>
-        <span *ngIf="step5">
-          <label style="background:#BEBEBE">Contact Information</label>
-        </span>
-        <span *ngIf="!step5">
-          <label>Contact Information</label>
-        </span>
-        <input type="checkbox" id="step5">
-      </li>
-      <li>
-        <span *ngIf="!step6">
-          <label>Review and Submit</label>
-        </span>
-        <div *ngIf="step6" style="width:95%; background:#BEBEBE; margin:auto;">
-          <div style="width:90%; margin:auto;">
-            <h3 style="padding:2%">6. Review and Submit</h3>
-            <p style="padding:2%">Review your Itinerary plan and make sure everything looks good. Otherwise, go back and make changes where neccessary.
-              When you're ready, submit your plan and we'll get in touch with next steps!</p>
-            <button style="width:100%; background:red; color:#fff; padding:3%; margin-bottom:2%;">SUBMIT</button>
-          </div>
-        </div>
-      </li>
-    </ol>
-  </div>
-  <div *ngIf="!set && browse" class="itineraries">
-
-    <div style="height:5%; position:relative;">
-      <div class="ti">Itineraries</div>
-
-      <div class="row" style="margin-left:0%;">
-
-
-        <div class="margin" *ngFor="let item of filtered| paginate: { itemsPerPage: 4, currentPage: p } ">
-          <app-card [item]="item" (set)="getSet($event)"></app-card>
-        </div>
-      </div>
-      <pagination-controls class="pag" (pageChange)="p = $event" directionLinks="false"></pagination-controls>
-    </div>
-
-
-  </div>
-
-
-  <div *ngIf="set && !create" class="activities" id="printx">
-    <div class="row">
-      <div class="left" (click)="back()">
-        <div class="arrow-left"></div>
-      </div>
-
-      <div class="back-title">Itineraries</div>
-    </div>
-    <div class="shadow2">
-      <div class="my-bg2">
-        <img src="../../../assets/images/photo2.jpeg" alt="Random first slide" class="img-responsive banner">
-      </div>
-      <div class="btext">
-        <div class="btext1">{{grade}}</div>
-        <div class="btext2">{{title}}</div>
-        <div class="btext3">{{year}}</div>
-      </div>
-      <div *ngIf="modified" class="btext4"> This is a modified version of the
-        <span style="font-weight:bold">{{title}}</span> itinerary</div>
-    </div>
-    <div class="link">
-
-      <div class="urlbox">
-
-        <div class="url">
-          <span *ngIf="!addedPost">link generated if this version is modfied</span>
-          <span *ngIf="addedPost">{{url}}</span>
-        </div>
-
-        <div>
-          <button class="url-btn" ngxClipboard [cbContent]="url">COPY URL</button>
-        </div>
-      </div>
-
-
-      <div class="printbox">
-
-        <div>
-          <button class="print" (click)="printDiv()">PRINT</button>
-        </div>
-        <div style="margin-right:13%;margin-left:2%">
-          <button class="download" (click)="pdf()">DOWNLOAD PDF</button>
-        </div>
-      </div>
-    </div>
-    <app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary" (item)="setItem($event)" (order)="emitOrder($event)"
-      (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap"></app-activity-display>
-
-    <app-empty-activity-display (set)="add($event)"></app-empty-activity-display>
-
-    <div id="editor"></div>
-
-  </div>
-
-  <div *ngIf="create" class="itineraries2">
-
-    <div style="height:5%; position:relative;">
-      <div class="row2">
-        <div class="left" (click)="create_Back()">
-          <div class="arrow-left"></div>
-        </div>
-
-        <div class="back-title2">{{createTitle}}</div>
-
-      </div>
-      <app-select-grade *ngIf="step1" (nxt)="setStep2($event)" (prev)="setPrev($event)"></app-select-grade>
-      <app-select-duration *ngIf="step2" (nxt)="setStep3($event)" (prev)="setPrev($event)"></app-select-duration>
-      <app-calendar *ngIf="step3" (nxt)="setStep4($event)" (prev)="setPrev($event)"></app-calendar>
-      <div *ngIf="step4">
-        <app-arrive-display [itinerary]="arrive"></app-arrive-display>
-        <app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary" (item)="setItem($event)" (order)="emitOrder($event)"
-          (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap" [showDet]="showDet" [description]="description"></app-activity-display>
-        <app-new-activity (set)="add($event)" (nxt)="setStep5($event)" (prev)="setPrev($event)"></app-new-activity>
-
-      </div>
-      <div *ngIf="step5">
-        <app-submit-form></app-submit-form>
-        <app-contact-info (nxt)="setStep6($event)" (prev)="setPrev($event)"></app-contact-info>
-      </div>
-      <div *ngIf="step6" id="printx">
-        <app-review [id]="rId" [url]="url"></app-review>
-
-
-        <div class="link">
-
-          <div class="urlbox">
-
-            <div class="url">
-              <span>{{url}}</span>
-            </div>
-
-            <div>
-              <button class="url-btn" ngxClipboard [cbContent]="url">COPY URL</button>
-            </div>
-          </div>
-
-
-          <div class="printbox">
-
-            <div>
-              <button class="print" (click)="printDiv()">PRINT</button>
-            </div>
-            <div style="margin-right:13%;margin-left:2%">
-              <button class="download" (click)="pdf()">DOWNLOAD PDF</button>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div style="margin-top:25px;">
-          <app-arrive-display [itinerary]="arrive"></app-arrive-display>
-          <app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary" (item)="setItem($event)" (order)="emitOrder($event)"
-            (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap" [showDet]="showDet" [enableSwap]="enableSwap"
-            [description]="description" [enableDelete]="enableDelete"></app-activity-display>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
-
-
-
-
-
-</div>
-<div>
-</div>
--->
