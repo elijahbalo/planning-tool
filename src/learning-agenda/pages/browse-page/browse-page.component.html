@@ -4,19 +4,13 @@
 <header class="app-header">
   <div class="app-header__wrapper">
     <main class="app-header__main">
-      <a class="app-header__breadcrumb-link" href="#" (click)="$event.preventDefault()">Plan Your Visit
-        <i class="icon"></i>
-      </a>
+      <a class="app-header__breadcrumb-link" href="#" (click)="$event.preventDefault()">Plan Your Visit<i class="icon"></i></a>
       <h1 class="app-header__heading">Plan a School Trip</h1>
     </main>
     <nav class="app-header__nav">
       <ul>
-        <li>
-          <a class="app-header__nav-button on" href="#browse" (click)="$event.preventDefault()">Browse</a>
-        </li>
-        <li>
-          <a class="app-header__nav-button" href="#create">Create</a>
-        </li>
+        <li><a class="app-header__nav-button on" href="#browse" (click)="$event.preventDefault()">Browse</a></li>
+        <li><a class="app-header__nav-button" href="#create">Create</a></li>
       </ul>
     </nav>
   </div>
@@ -24,6 +18,8 @@
 
 <section class="main-section">
   <div class="main-section__wrapper">
+
+    <!-- Move to seperate component (main section aside). -->
     <aside class="main-section__aside">
       <header class="main-section__aside-header">
         <span class="main-section__aside-heading">Filter By</span>
@@ -61,8 +57,10 @@
             <span class="faux-checkbox unchecked"></span>
           </label>
         </fieldset>
+        <!-- Move to seperate component (aside group). -->
         <fieldset class="ms__aside-group">
           <span class="ms__aside-group-heading">Length</span>
+          <!-- Move to seperate component (aside label). -->
           <label class="ms__aside-label" for="length-half">
             <span class="text">Half-Day</span>
             <input id="length-half" name="length-half" type="checkbox" />
@@ -76,13 +74,63 @@
         </fieldset>
       </div>
     </aside>
-    <main class="main-section__main"></main>
-  </div>
-</section>
+
+    <main class="main-section__main">
+      <header>
+        <a class="msm__back-link" href="#landing" (click)="$event.preventDefault()">Back to Landing Page</a>
+        <h2 class="msm__heading">Itineraries</h2>
+      </header>
+      <ul class="card-list">
+        <li class="card-wrapper">
+          <a class="la-card" href="#1" (click)="$event.preventDefault()">
+            <main class="la-card__main">
+              <span class="la-card__subtitle">Kindergarden to Grade 2</span><br />
+              <span class="la-card__title">Explore the Arctic</span><br />
+              <span class="la-card__toy">Oct &ndash; Apr</span>
+            </main>
+          </a>
+        </li>
+        <li class="card-wrapper">
+          <a class="la-card" href="#2" (click)="$event.preventDefault()">
+            <main class="la-card__main">
+              <span class="la-card__subtitle">Grade 6 to 8</span><br />
+              <span class="la-card__title">A Journey Through Prehistory</span><br />
+              <span class="la-card__toy">Oct &ndash; Apr</span>
+            </main>
+          </a>
+        </li>
+        <li class="card-wrapper">
+          <a class="la-card" href="#3" (click)="$event.preventDefault()">
+            <main class="la-card__main">
+              <span class="la-card__subtitle">Grade 3 to 5</span><br />
+              <span class="la-card__title">Medieval Times</span><br />
+              <span class="la-card__toy">May &ndash; June</span>
+            </main>
+          </a>
+        </li>
+      </ul><!--/.card-list-->
+      <div class="la-banner" style="display:none;">
+        <main class="la-banner__main">
+          <span class="la-banner__subtitle">Grade 3 to 5</span>
+          <h3 class="la-banner__title">Medieval Times</h3>
+          <span class="la-banner__toy">May &ndash; Jun</span>
+        </main>
+        <div class="utils-bar">
+          <div>
+            <input type="text" />
+            <button>Copy URL</button>
+          </div>
+          <button>Print</button>
+          <button>Download PDF</button>
+        </div>
+      </div><!--/.la-banner-->
+    </main><!--/.main-section__main-->
+
+  </div><!--/.main-section__wrapper-->
+</section><!--/.main-section-->
 
 
-
-
+<!--
 <div class="shadow">
   <span class="plan">PLAN YOUR VISIT </span>
   <span class="arrow-right"></span>
@@ -447,3 +495,4 @@
 </div>
 <div>
 </div>
+-->
