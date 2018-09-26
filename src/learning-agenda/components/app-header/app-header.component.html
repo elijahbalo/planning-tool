@@ -10,6 +10,13 @@
     <nav class="app-header__nav">
       <ul>
         <!-- @ Elijah: Need a control structure for "on" class dependent of route perhaps? -->
+        <!--
+        <div *ngIf="bActive" class="my-btn1">{{'$b_text_browse' | translate}}</div>
+        <div *ngIf="!bActive" class="my-btn">{{'$b_text_browse' | translate}}</div>
+        <div *ngIf="cActive" class="my-btn1">{{'$b_text_create' | translate}}</div>
+        <div *ngIf="!cActive" class="my-btn">{{'$b_text_create' | translate}}</div>
+        Use this.. [ngClass]="{on: bActive}"
+        -->
         <li><a class="app-header__nav-button on" href="#browse" (click)="$event.preventDefault()">{{'app_header.btn_browse' | translate}}</a></li>
         <li><a class="app-header__nav-button" href="#create">{{'app_header.btn_create' | translate}}</a></li>
       </ul>
