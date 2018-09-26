@@ -2,87 +2,10 @@
 @import 'mixins.scss';
 
 // Declare only local "page" variables here.
-$nav_button_onclr: #f6f6f6;
-$breadcrumb_link_font_size: 14;
 $faux_input_on_colour: #44bb69;
 
 /////////////////////////////////////////////////////////////////////////
 
-a {
-  color: inherit;
-}
-.app-header {
-  padding-top: (200/16) + em;
-  padding-left: (40/16) + em;
-  padding-right: (40/16) + em;
-  background-color: $chwm_grey_70;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)),
-    url('/assets/images/IMG2018-0032-0215-Dm.jpg');
-  background-position: 50% 40%;
-  background-size: cover;
-}
-.app-header__wrapper {
-  margin: 0 auto;
-  position: relative;
-  max-width: (1024/16) + em;
-  &:after {
-    @include clearfix;
-  }
-}
-.app-header__main {
-  color: #fff;
-  float: left;
-  padding-bottom: (30/16) + em;
-}
-.app-header__nav {
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  font-family: $primary_font_family;
-  li {
-    float: left;
-  }
-}
-.app-header__nav-button {
-  display: block;
-  color: #24292e;
-  background: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: (20/16) + em (40/16) + em;
-  $btn_roundness: (10/16) + em;
-  li:first-child & {
-    @include border-radius($btn_roundness 0 0 0);
-  }
-  li:last-child & {
-    @include border-radius(0 $btn_roundness 0 0);
-  }
-  &.on {
-    cursor: text;
-    background: $nav_button_onclr;
-    color: rgba(88, 96, 105, 0.5);
-    @include box-shadow(inset -2px -2px 4px rgba(0, 0, 0, 0.03));
-  }
-}
-.app-header__breadcrumb-link {
-  display: table;
-  font-size: ($breadcrumb_link_font_size/16) + em;
-  margin-bottom: (20 / $breadcrumb_link_font_size) + em;
-  &:after {
-    // Will come back to this later.
-    content: '';
-    width: 7px;
-    height: 10px;
-    background: grey;
-    display: inline-block;
-    margin-left: (12 / $breadcrumb_link_font_size) + em;
-  }
-}
-.app-header__heading {
-  text-transform: uppercase;
-  font-family: $primary_font_family;
-  font-size: (36/16) + em;
-}
 .main-section {
   padding: 50px 40px 100px;
 }

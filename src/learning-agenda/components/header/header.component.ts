@@ -3,7 +3,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { HostListener } from "@angular/core";
 import { Router,ActivatedRoute } from '@angular/router';
 @Component({
-  selector: 'app-header',
+  selector: 'app-header-old',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
