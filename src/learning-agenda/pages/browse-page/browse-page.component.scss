@@ -115,7 +115,6 @@ a {
     background:$chwm_grey_50;
     padding:6px 8px;
     color:#fff;
-    cursor:pointer;
 }
 .ms__aside-group {
     margin-bottom:30px;
@@ -291,7 +290,6 @@ $main_back_link_button_size: 32px;
 $utils_els_height: 48px;
 
 .la-button {
-    cursor:pointer;
     float:left;
     display:block;
     text-transform:uppercase;
@@ -414,11 +412,17 @@ $activity_list_item_time_bg_clr: #d8d8d8;
 }
 .activity-list-item__rem-button {
     display:block;
-    background:#fff;
     position:absolute;
+    width:34px;
+    height:34px;
     top:0;
     left:0;
-    padding:10px;
+    background-color:#fff;
+    background-image:url('/assets/images/icon-remove.svg');
+    background-repeat:no-repeat;
+    background-size:16px 16px;
+    background-position:50%;
+    .text {position:absolute;left:-999em;top:0;}
 }
 .activity-list-item__swap-button {
     display:block;
@@ -462,7 +466,6 @@ $activity_list_item_time_bg_clr: #d8d8d8;
     display:block;
     line-height:1.6;
     a {background:rgba(0,0,0,0.075);font-style:italic;padding:0 3px;}
-    // a {font-weight:bold;}
 }
 .activity-list-item__body {
     overflow:hidden;
@@ -473,6 +476,14 @@ $activity_list_item_time_bg_clr: #d8d8d8;
     display:block;
     float:left;
 }
+
+/////////////////////////////////////////////////////////////////////////
+
+#itinerary-browse,
+#itinerary-single {display:none;}
+
+#itinerary-browse:target,
+#itinerary-single:target {display:block;}
 
 /////////////////////////////////////////////////////////////////////////
 
