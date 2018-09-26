@@ -3,16 +3,16 @@
 
 
 <div class="shadow">
-  <span class="plan">PLAN YOUR VISIT </span>
+  <span class="plan">{{'plan your visit' | translate}} </span>
   <span class="arrow-right"></span>
-  <div class="h1"> PLAN A SCHOOL TRIP</div>
+  <div class="h1">{{'h2' | translate}}</div>
 
 
   <div class="h3">
-    <div *ngIf="bActive" class="my-btn1">BROWSE</div>
-    <div *ngIf="!bActive" class="my-btn">BROWSE</div>
-    <div *ngIf="cActive" class="my-btn1">CREATE</div>
-    <div *ngIf="!cActive" class="my-btn">CREATE</div>
+    <div *ngIf="bActive" class="my-btn1">{{'$b_text_browse' | translate}}</div>
+    <div *ngIf="!bActive" class="my-btn">{{'$b_text_browse' | translate}}</div>
+    <div *ngIf="cActive" class="my-btn1">{{'$b_text_create' | translate}}</div>
+    <div *ngIf="!cActive" class="my-btn">{{'$b_text_create' | translate}}</div>
 
   </div>
 
@@ -26,67 +26,71 @@
 </div>
 
 
+<button (click)="switchLanguage('en')">en</button>
+
+<button (click)="switchLanguage('fr')">fr</button>
+
 <div class="content">
   <div id="print" class="side-bar">
     <div class="first">
-      <div style="float:left;margin:4%; font-size:1.5rem">INSTRUCTIONS</div>
+      <div style="float:left;margin:4%; font-size:1.5rem">{{'sidebar_head' | translate}}</div>
       <div style="float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer"
-        (click)="restart()">RESTART</div>
+        (click)="restart()">{{'sidebar_rst' | translate}}</div>
     </div>
     <ol>
       <li>
         <span *ngIf="step1">
-          <label style="background:#BEBEBE">Select a Grade</label>
+          <label style="background:#BEBEBE">{{'sidebar_option1' | translate}}</label>
         </span>
         <span *ngIf="!step1">
-          <label>Select a Grade</label>
+          <label>{{'sidebar_option1' | translate}}</label>
         </span>
         <input type="checkbox" id="step1">
       </li>
       <li>
         <span *ngIf="step2">
-          <label style="background:#BEBEBE">Select a Duration</label>
+          <label style="background:#BEBEBE">{{'sidebar_option2' | translate}}</label>
         </span>
         <span *ngIf="!step2">
-          <label>Select a Duration</label>
+          <label>{{'sidebar_option2' | translate}}</label>
         </span>
         <input type="checkbox" id="step2">
       </li>
       <li>
         <span *ngIf="step3">
-          <label style="background:#BEBEBE">Select a Date</label>
+          <label style="background:#BEBEBE">{{'sidebar_option3' | translate}}</label>
         </span>
         <span *ngIf="!step3">
-          <label>Select a Date</label>
+          <label>{{'sidebar_option3' | translate}}</label>
         </span>
         <input type="checkbox" id="step3">
       </li>
       <li>
         <span *ngIf="step4">
-          <label style="background:#BEBEBE">Select your Activities</label>
+          <label style="background:#BEBEBE">{{'sidebar_option4' | translate}}</label>
         </span>
         <span *ngIf="!step4">
-          <label>Select your Activities</label>
+          <label>{{'sidebar_option4' | translate}}</label>
         </span>
 
         <input type="checkbox" id="step4">
       </li>
       <li>
         <span *ngIf="step5">
-          <label style="background:#BEBEBE">Contact Information</label>
+          <label style="background:#BEBEBE">{{'sidebar_option5' | translate}}</label>
         </span>
         <span *ngIf="!step5">
-          <label>Contact Information</label>
+          <label>{{'sidebar_option5' | translate}}</label>
         </span>
         <input type="checkbox" id="step5">
       </li>
       <li>
         <span *ngIf="!step6">
-          <label>Review and Submit</label>
+          <label>{{'sidebar_option6' | translate}}</label>
         </span>
         <div *ngIf="step6" style="width:95%; background:#BEBEBE; margin:auto;">
           <div style="width:90%; margin:auto;">
-            <h3 style="padding:2%">6. Review and Submit</h3>
+            <h3 style="padding:2%">{{'sidebar_option6' | translate}}</h3>
             <p style="padding:2%">Review your Itinerary plan and make sure everything looks good. Otherwise, go back and make changes where neccessary.
               When you're ready, submit your plan and we'll get in touch with next steps!</p>
             <button style="width:100%; background:red; color:#fff; padding:3%; margin-bottom:2%;">SUBMIT</button>
@@ -95,8 +99,6 @@
       </li>
     </ol>
   </div>
-
-
 
   <div class="itineraries2">
 
@@ -113,9 +115,18 @@
       <app-select-duration *ngIf="step2" (nxt)="setStep3($event)" (prev)="setPrev($event)"></app-select-duration>
       <app-calendar *ngIf="step3" (nxt)="setStep4($event)" (prev)="setPrev($event)" (newDate)="setDate($event)"></app-calendar>
       <div *ngIf="step4">
-        <app-arrive-display [itinerary]="arrive"></app-arrive-display>
-        <app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary" (item)="setItem($event)" (order)="emitOrder($event)"
-          (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap" [showDet]="showDet" [description]="description"></app-activity-display>
+        <app-arrive-display [itinerary]="fetchTranslation('arrive')"></app-arrive-display>
+        <div *ngIf="en">
+          <app-activity-display *ngFor="let itinerary of itn_E" [itinerary]="itinerary" [langItems]="fetchTranslation('activities')"
+            (item)="setItem($event)" (order)="emitOrder($event)" (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap"
+            [showDet]="showDet" [description]="description"></app-activity-display>
+        </div>
+        <div *ngIf="fr">
+          <app-activity-display *ngFor="let itinerary of itn_F" [itinerary]="itinerary" [langItems]="fetchTranslation('activities')"
+            (item)="setItem($event)" (order)="emitOrder($event)" (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap"
+            [showDet]="showDet" [description]="description"></app-activity-display>
+        </div>
+
         <app-new-activity (set)="add($event)" (nxt)="setStep5($event)" (prev)="setPrev($event)"></app-new-activity>
 
       </div>
@@ -156,9 +167,17 @@
 
         <div style="margin-top:25px;">
           <app-arrive-display [itinerary]="arrive"></app-arrive-display>
-          <app-activity-display *ngFor="let itinerary of itineraries" [itinerary]="itinerary" (item)="setItem($event)" (order)="emitOrder($event)"
-            (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap" [showDet]="showDet" [enableSwap]="enableSwap"
-            [description]="description" [enableDelete]="enableDelete"></app-activity-display>
+          <div *ngIf="en">
+            <app-activity-display *ngFor="let itinerary of itn_E" [itinerary]="itinerary" (item)="setItem($event)" (order)="emitOrder($event)"
+              (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap" [showDet]="showDet" [enableSwap]="enableSwap"
+              [description]="description" [enableDelete]="enableDelete"></app-activity-display>
+          </div>
+
+          <div *ngIf="fr">
+            <app-activity-display *ngFor="let itinerary of itn_F" [itinerary]="itinerary" (item)="setItem($event)" (order)="emitOrder($event)"
+              (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap" [showDet]="showDet" [enableSwap]="enableSwap"
+              [description]="description" [enableDelete]="enableDelete"></app-activity-display>
+          </div>
         </div>
       </div>
     </div>

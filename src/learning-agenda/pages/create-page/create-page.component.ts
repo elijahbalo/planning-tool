@@ -8,7 +8,11 @@ import * as html2canvas from 'html2canvas';
 import { map } from 'rxjs/operators';
 declare function require(name: string);
 var itn = require('../../test.json');
+var itn_E = require('../../../assets/i18n/en.json');
+var itn_F = require('../../../assets/i18n/fr.json');
 import { Router, ActivatedRoute } from '@angular/router';
+import { TranslationService } from '../../../services/translation.service';
+import { Activity } from '../../models/activity';
 
 @Component({
   selector: 'app-create-page',
@@ -37,7 +41,8 @@ export class CreatePageComponent implements OnInit {
   c_time;
   enableSwap = false;
   enableDelete = false;
-  itineraries = [];
+  itn_E = [];
+  itn_F = [];
   titles;
   title;
   grade;
@@ -53,7 +58,8 @@ export class CreatePageComponent implements OnInit {
   fourth = false;
   fifth = false;
   sixth = false;
-
+  en = true;
+  fr = false;
   bActive = false;
   cActive = false;
   prop;
@@ -62,7 +68,7 @@ export class CreatePageComponent implements OnInit {
   showSwap = true;
 
   p: number = 1;
-
+  plan;
   log = '';
   KinderTo2: boolean;
   Gr3To5: boolean;
@@ -86,6 +92,7 @@ export class CreatePageComponent implements OnInit {
   //timeOfYear: string;
   day: string;
   constructor(
+    private translateService: TranslationService,
     private modalService: NgbModal,
     private db: AngularFirestore,
     private router: Router,
@@ -108,7 +115,8 @@ export class CreatePageComponent implements OnInit {
     this.c_activities = itn.c_activities;
 
     console.log(this.items);
-
+    console.log(this.translateService.get('h2'));
+    this.plan = this.translateService.get('h2');
     $('.cbox').prop('checked', false);
     $('.rad').prop('checked', false);
   }
@@ -126,8 +134,25 @@ export class CreatePageComponent implements OnInit {
         grade: this.grade,
         title: this.title,
         year: this.year,
-        activities: this.itineraries
+        activities: this.itn_E
       });
+  }
+
+  fetchTranslation(key) {
+    return this.translateService.fetchTranslation(key);
+  }
+  switchLanguage(language: string) {
+    if (language == 'en') {
+      localStorage.setItem('lang', 'en');
+      this.fr = false;
+      this.en = true;
+    }
+    if (language == 'fr') {
+      localStorage.setItem('lang', 'fr');
+      this.en = false;
+      this.fr = true;
+    }
+    this.translateService.switchLanguage(language);
   }
 
   randomId() {
@@ -149,7 +174,8 @@ export class CreatePageComponent implements OnInit {
 
   getSet(event) {
     this.set = event;
-    this.itineraries = JSON.parse(localStorage.getItem('itinerary'));
+    this.itn_E = JSON.parse(localStorage.getItem('itinerary'));
+    this.itn_F = JSON.parse(localStorage.getItem('french'));
     this.img = JSON.parse(localStorage.getItem('img'));
     this.grade = JSON.parse(localStorage.getItem('grade'));
     this.title = JSON.parse(localStorage.getItem('title'));
@@ -158,9 +184,11 @@ export class CreatePageComponent implements OnInit {
   }
 
   add(event) {
-    this.itineraries.push(0);
-    localStorage.setItem('itinerary', JSON.stringify(this.itineraries));
-    console.log(this.itineraries);
+    this.itn_E.push(0);
+    this.itn_F.push(0);
+    localStorage.setItem('itinerary', JSON.stringify(this.itn_E));
+    localStorage.setItem('french', JSON.stringify(this.itn_F));
+    console.log(this.itn_E);
 
     localStorage.setItem('_set', JSON.stringify(event));
   }
@@ -195,7 +223,9 @@ export class CreatePageComponent implements OnInit {
     this.createTitle = '1. Select a Grade';
     let item = [];
     localStorage.setItem('itinerary', JSON.stringify(item));
-    this.itineraries = JSON.parse(localStorage.getItem('itinerary'));
+    localStorage.setItem('french', JSON.stringify(item));
+    this.itn_E = JSON.parse(localStorage.getItem('itinerary'));
+    this.itn_F = JSON.parse(localStorage.getItem('french'));
     $('#step1').prop('checked', false);
     $('#step2').prop('checked', false);
     $('#step3').prop('checked', false);
@@ -238,7 +268,8 @@ export class CreatePageComponent implements OnInit {
   setStep6(event) {
     this.step5 = false;
     this.step6 = event;
-    localStorage.setItem('itinerary', JSON.stringify(this.itineraries));
+    localStorage.setItem('itinerary', JSON.stringify(this.itn_E));
+    localStorage.setItem('french', JSON.stringify(this.itn_F));
     this.createTitle = '6. Review and Submit';
     $('#step5').prop('checked', false);
     $('#step5').prop('checked', true);
@@ -248,6 +279,7 @@ export class CreatePageComponent implements OnInit {
     this.set = false;
     this.changeDetector.detectChanges();
     localStorage.removeItem('itinerary');
+    localStorage.removeItem('french');
   }
   restart() {
     localStorage.clear();
@@ -265,7 +297,9 @@ export class CreatePageComponent implements OnInit {
     this.createTitle = '1. Select a Grade';
     let item = [];
     localStorage.setItem('itinerary', JSON.stringify(item));
-    this.itineraries = JSON.parse(localStorage.getItem('itinerary'));
+    localStorage.setItem('french', JSON.stringify(item));
+    this.itn_E = JSON.parse(localStorage.getItem('itinerary'));
+    this.itn_F = JSON.parse(localStorage.getItem('french'));
     $('#step1').prop('checked', false);
     $('#step2').prop('checked', false);
     $('#step3').prop('checked', false);
@@ -315,10 +349,13 @@ export class CreatePageComponent implements OnInit {
 
   setItem(event) {
     console.log('set item method fgfdfdfgddgdfgdfg');
-    this.itineraries.pop();
-    console.log(this.itineraries);
-    this.itineraries.push(event);
-    localStorage.setItem('itinerary', JSON.stringify(this.itineraries));
+    this.itn_E.pop();
+    this.itn_F.pop();
+    console.log(this.itn_E);
+    this.itn_E.push(this.saveEnglish_v(event.order, event.time));
+    this.itn_F.push(this.saveFrench_v(event.order, event.time));
+    localStorage.setItem('itinerary', JSON.stringify(this.itn_E));
+    localStorage.setItem('french', JSON.stringify(this.itn_F));
   }
 
   open(content) {
@@ -332,12 +369,14 @@ export class CreatePageComponent implements OnInit {
   }
 
   notice(event) {
-    this.itineraries = JSON.parse(localStorage.getItem('itinerary'));
+    this.itn_E = JSON.parse(localStorage.getItem('itinerary'));
+    this.itn_F = JSON.parse(localStorage.getItem('french'));
   }
 
   modify(event) {
     this.modified = event;
-    this.itineraries = JSON.parse(localStorage.getItem('itinerary'));
+    this.itn_E = JSON.parse(localStorage.getItem('itinerary'));
+    this.itn_F = JSON.parse(localStorage.getItem('french'));
     this.addPost();
   }
 
@@ -370,11 +409,43 @@ export class CreatePageComponent implements OnInit {
     });
   }
 
-  resizeImage() {
-    let value = false;
-    if (screen.width < 1024) {
-      value = true;
-      return value;
-    }
+  saveFrench_v(order, time) {
+    let index = itn_F.activities.findIndex(elem => elem.order == order);
+    // localStorage.setItem('itinerary', JSON.stringify(itn_F.activities[index]));
+    let activity = new Activity(
+      time,
+      itn_F.activities[index].name,
+      itn_F.activities[index].type,
+      itn_F.activities[index].length,
+      itn_F.activities[index].description,
+      itn_F.activities[index].fees,
+      itn_F.activities[index].img,
+      itn_F.activities[index].ageRange,
+      itn_F.activities[index].order,
+      itn_F.activities[index].kinderTo2,
+      itn_F.activities[index].Gr3To5,
+      itn_F.activities[index].Gr6To8
+    );
+    return activity;
+  }
+
+  saveEnglish_v(order, time) {
+    let index = itn_E.activities.findIndex(elem => elem.order == order);
+    //  localStorage.setItem('itinerary', JSON.stringify(itn_F.activities[index]));
+    let activity = new Activity(
+      time,
+      itn_E.activities[index].name,
+      itn_E.activities[index].type,
+      itn_E.activities[index].length,
+      itn_E.activities[index].description,
+      itn_E.activities[index].fees,
+      itn_E.activities[index].img,
+      itn_E.activities[index].ageRange,
+      itn_E.activities[index].order,
+      itn_E.activities[index].kinderTo2,
+      itn_E.activities[index].Gr3To5,
+      itn_E.activities[index].Gr6To8
+    );
+    return activity;
   }
 }

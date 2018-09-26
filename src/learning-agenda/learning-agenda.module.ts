@@ -2,8 +2,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from '../app/app.component';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EllipsisModule } from 'ngx-ellipsis';
+import { TranslationService } from '../services/translation.service';
 import { MultilineEllipsisModule } from 'angular2-multiline-ellipsis';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { EmptyCardComponent } from './components/empty-card/empty-card.component';
@@ -41,7 +44,7 @@ import { ReviewComponent } from './components/review/review.component';
 import { AppRoutingModule } from './router';
 import { SlideshowModule } from 'ng-simple-slideshow';
 import { environment } from './environments/environment';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
@@ -52,6 +55,13 @@ import { AngularFireModule } from 'angularfire2';
     SlideshowModule,
     NgbModule.forRoot(),
     BrowserModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     EllipsisModule,
     AppRoutingModule,
     ClipboardModule,
@@ -97,6 +107,10 @@ import { AngularFireModule } from 'angularfire2';
     SubmitPageComponent,
     ItineraryPageComponent
   ],
-  providers: [AngularFirestoreModule]
+  providers: [AngularFirestoreModule, TranslationService]
 })
 export class LearningAgendaModule {}
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

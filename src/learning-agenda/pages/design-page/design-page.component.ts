@@ -5,7 +5,6 @@ import { Activity } from '../../models/activity';
 import { Router, ActivatedRoute } from '@angular/router';
 import * as Lodash from 'lodash';
 import { map } from 'rxjs/operators';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-design-page',
@@ -147,7 +146,7 @@ export class DesignPageComponent implements OnInit {
   placeEdit() {}
 
   getActivity(event) {
-    this.duration = event.length;
+    /* this.duration = event.length;
     this.time = this.time + event.length;
     if (!this.activities.some(item => item.name === event.name)) {
       this.activities.push(
@@ -167,10 +166,10 @@ export class DesignPageComponent implements OnInit {
           event.timeSlots,
           event.order
         )
-      );
-    }
+      ); */
+    /* }
     localStorage.setItem('activities', JSON.stringify(this.activities));
-    console.log(this.activities);
+    console.log(this.activities); */
   }
 
   remove(event) {

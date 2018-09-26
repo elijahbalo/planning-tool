@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
 import * as $ from 'jquery';
 declare function require(name: string);
 var act = require('../../test.json');
+var itn_E = require('../../../assets/i18n/en.json');
+var itn_F = require('../../../assets/i18n/fr.json');
+import { TranslationService } from '../../../services/translation.service';
 @Component({
   selector: 'app-activity-display',
   templateUrl: './activity-display.component.html',
@@ -51,8 +54,14 @@ export class ActivityDisplayComponent implements OnInit {
 
   @Input()
   description = false;
+
+  @Input()
+  langItems;
   toggler = false;
-  constructor(private db: AngularFirestore) {}
+  constructor(
+    private db: AngularFirestore,
+    private translationService: TranslationService
+  ) {}
 
   ngOnInit() {
     /*    this.items = this.db
@@ -68,7 +77,7 @@ export class ActivityDisplayComponent implements OnInit {
         })
       ); */
 
-    this.getFilter(act.activities);
+    this.getFilter(this.langItems);
     //  this.items = act.activities;
     console.log(this.items);
     this.activities = JSON.parse(localStorage.getItem('itinerary'));
@@ -200,7 +209,9 @@ export class ActivityDisplayComponent implements OnInit {
 
   fixItem(item) {
     let act = JSON.parse(localStorage.getItem('itinerary'));
+    let act2 = JSON.parse(localStorage.getItem('french'));
     console.log(act);
+
     if (this.newSet == true) {
       console.log(this.itinerary);
       if (this.itinerary.time) {
@@ -216,9 +227,10 @@ export class ActivityDisplayComponent implements OnInit {
           console.log(act[act.length - 2].length);
         } else {
           item.time = '10:00';
+          console.log(item);
         }
       }
-      this.item.emit(item);
+
       localStorage.setItem('_set', JSON.stringify(false));
     }
     this.swap = false;
@@ -247,13 +259,18 @@ export class ActivityDisplayComponent implements OnInit {
     }
     this.isSet = true;
     this.activity = item;
+    this.item.emit(item);
     this.modify.emit(true);
   }
   deleteItem(order) {
     let act = JSON.parse(localStorage.getItem('itinerary'));
+    let act2 = JSON.parse(localStorage.getItem('french'));
     let index = act.findIndex(i => i.order === order);
+    let index2 = act2.findIndex(i => i.order === order);
     act.splice(index, 1);
+    act2.splice(index, 1);
     localStorage.setItem('itinerary', JSON.stringify(act));
+    localStorage.setItem('french', JSON.stringify(act2));
     this.modify.emit(true);
   }
   check(order) {

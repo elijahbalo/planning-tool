@@ -26,6 +26,8 @@
     "@angular/router": "^6.0.3",
     "@ng-bootstrap/ng-bootstrap": "^2.1.0",
     "@ngrx/store": "^6.0.1",
+    "@ngx-translate/core": "^10.0.2",
+    "@ngx-translate/http-loader": "^3.0.1",
     "@types/html2canvas": "0.0.34",
     "@types/jquery": "^3.3.5",
     "@types/nodemailer": "^4.6.2",

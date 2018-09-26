@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-swap-box',
@@ -7,64 +7,66 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./swap-box.component.scss']
 })
 export class SwapBoxComponent implements OnInit {
-  modal = false
- closeResult: string;
- innerSwap = false
- @Input() add
- @Input() ord
- @Input() item
- @Output() swap: EventEmitter<any> = new EventEmitter<any>();
-  constructor(private modalService: NgbModal) { }
+  modal = false;
+  closeResult: string;
+  innerSwap = false;
+  @Input()
+  add;
+  @Input()
+  ord;
+  @Input()
+  item;
+  @Output()
+  swap: EventEmitter<any> = new EventEmitter<any>();
+  constructor(private modalService: NgbModal) {}
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   open(content) {
-    this.modalService.open(content).result.then((result) => {
+    this.modalService.open(content).result.then(result => {
       this.closeResult = `Closed with: ${result}`;
     });
   }
 
-  checkOrder(name,order){
-  let act = JSON.parse(localStorage.getItem("itinerary"))
-  if (act){
-  for (var i=0; i<(act.length); i++){
-   if (name == act[i].name){
-     return true
-   }
+  checkOrder(name, order) {
+    let act = JSON.parse(localStorage.getItem('itinerary'));
+    let act2 = JSON.parse(localStorage.getItem('french'));
+    if (act) {
+      for (var i = 0; i < act.length; i++) {
+        if (name == act[i].name) {
+          return true;
+        }
+      }
+    }
+    return false;
   }
-}
-  return false
- }
 
-  check(order){
-    if (order == this.ord)
-    return true
-    else{
-      return false
+  check(order) {
+    if (order == this.ord) return true;
+    else {
+      return false;
     }
   }
 
-  fixItem(event){
-    this.swap.emit(event)
+  fixItem(event) {
+    this.swap.emit(event);
   }
-  
-  toggleInnerSwap(){
-    if(this.innerSwap == false)this.innerSwap = true
-    else{
+
+  toggleInnerSwap() {
+    if (this.innerSwap == false) this.innerSwap = true;
+    else {
       this.innerSwap = false;
     }
   }
 
-  toggleModal(){
-    if(this.modal == false)this.modal = true
-    else{
+  toggleModal() {
+    if (this.modal == false) this.modal = true;
+    else {
       this.modal = false;
     }
   }
 
-  setModalFromChild(event){
+  setModalFromChild(event) {
     this.modal = event;
   }
 }

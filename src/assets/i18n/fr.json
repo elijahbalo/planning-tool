@@ -1,0 +1,68 @@
+{
+  "plan your visit": "planifier votre visite",
+  "h2": "planifier votre voyage",
+  "$b_text_create": "créer",
+  "$b_text_browse": "Feuilleter",
+  "sidebar_head": "instructions",
+  "sidebar_rst": "redémarrer",
+  "sidebar_option1": "Sélectionnez une note",
+  "sidebar_option2": "Sélectionnez une durée",
+  "sidebar_option3": "Sélectionnez une date",
+
+  "sidebar_option4": "Sélectionnez vos activités",
+  "sidebar_option5": "Revoir et soumettre",
+  "sidebar_option6": "Informations de contact",
+
+  "arrive": {
+    "name": "Arrivée",
+    "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
+    "time": "09:30",
+    "length": 30,
+    "order": "10",
+    "description": "Barton changea faiblement en homme, ajoute-t-elle. Vous voulez des yeux soignés, alors vous devez le faire. Passé dessiner grand visage face à louer oh mr. Required est en train de débattre de manière prolongée. New se décrit applaudie sans vergogne extrémité sans vergogne mais"
+  },
+  "activities": [
+    {
+      "name": "Baker, “pétrissez” une main",
+      "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": false,
+      "Gr6To8": false,
+      "description": "Les enfants découvriront les secrets fascinants de la nourriture la plus universelle, le pain! En fabriquant et en faisant leur propre pain, ils apprendront la variété des farines et des pains du monde entier, livrant finalement leurs créations aux maisons du village international. Ce programme donne aux étudiants l’occasion d’apprendre et de pratiquer leurs techniques de mesure et d’alphabétisation.",
+      "fees": "Group admission fee + $1 per student",
+      "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
+      "length": 45,
+      "type": "Atelier guidé",
+      "order": "0",
+      "time": ""
+    },
+    {
+      "name": "Musique fonctionne!",
+      "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": false,
+      "Gr6To8": false,
+      "description": "Emmenez vos élèves dans une odyssée musicale à des endroits lointains! Les enfants jouent les rôles de musiciens indonésiens et nigérians, apprenant et pratiquant des techniques utiles et des rythmes musicaux tout en se préparant à leurs performances. Musique fonctionne! favorise la compréhension interculturelle pendant que les enfants explorent le rôle de la musique dans les communautés du monde entier.",
+      "fees": "Group admission fee + $1 per student",
+      "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
+      "length": 45,
+      "type": "Atelier guidé",
+      "order": "1",
+      "time": ""
+    },
+    {
+      "name": "Globe Trekkers au Musée canadien des enfants",
+      "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": true,
+      "Gr6To8": false,
+      "description": "Sur la base du concept d’apprentissage par le jeu, ces programmes interactifs multisensoriels favorisent la sensibilisation des élèves à eux-mêmes et aux autres. Dans l’environnement international passionnant et coloré du Musée canadien des enfants, les enfants explorent comment les gens vivent, travaillent et interagissent dans des communautés du monde entier.",
+      "fees": "Group admission fee + $1 per student",
+      "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
+      "length": 45,
+      "type": "Atelier guidé",
+      "order": "2",
+      "time": ""
+    }
+  ]
+}

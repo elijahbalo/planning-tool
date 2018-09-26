@@ -1,0 +1,68 @@
+{
+  "plan your visit": "plan your visit",
+  "h2": "plan your trip",
+  "$b_text_create": "create",
+  "$b_text_browse": "browse",
+  "sidebar_head": "instructions",
+  "sidebar_rst": "restart",
+  "sidebar_option1": "Select a Grade",
+  "sidebar_option2": "Select a Duration",
+  "sidebar_option3": "select a Date",
+
+  "sidebar_option4": "Select your Activties",
+  "sidebar_option5": "Review and Submit",
+  "sidebar_option6": "Contact Information",
+
+  "arrive": {
+    "name": "Arrive",
+    "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
+    "time": "09:30",
+    "length": 30,
+    "order": "10",
+    "description": "Barton did feebly change man she afford square add. Want eyes by neat so just must. Past draw tall up face show rent oh mr. Required is debating extended wondered as do. New get described applauded incommode shameless out extremity but"
+  },
+  "activities": [
+    {
+      "name": "Baker, “Knead” a Hand",
+      "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": false,
+      "Gr6To8": false,
+      "description": "Children will discover the fascinating secrets behind that most universal of foods, bread! As they make and bake a loaf of their own, they will learn about the variety of flours and breads enjoyed throughout the world, finally delivering their creations to the houses of the International Village. This program gives students an opportunity to learn and practice their measuring and early literacy skills.",
+      "fees": "Group admission fee + $1 per student",
+      "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
+      "length": 45,
+      "type": "Guided Workshop",
+      "order": "0",
+      "time": ""
+    },
+    {
+      "name": "Music Works!",
+      "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": false,
+      "Gr6To8": false,
+      "description": "Take your students on a musical odyssey to far-off places! Children play the roles of musicians from Indonesia and Nigeria, learning and practicing some useful techniques and musical beats while preparing for their performances. Music Works! promotes intercultural understanding as children explore the role of music in communities around the world.",
+      "fees": "Group admission fee + $1 per student",
+      "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
+      "length": 45,
+      "type": "Guided Workshop",
+      "order": "1",
+      "time": ""
+    },
+    {
+      "name": "Globe Trekkers at the Canadian Children’s Museum",
+      "ageRange": "Prek-2",
+      "kinderTo2": true,
+      "Gr3To5": true,
+      "Gr6To8": false,
+      "description": "Based on the concept of learning through play, these multisensory, interactive programs promote students’ awareness of themselves and others. In the exciting and colourful international environment of the Canadian Children’s Museum, children explore how people live, work and interact in communities around the world.",
+      "fees": "Group admission fee + $1 per student",
+      "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
+      "length": 45,
+      "type": "Self-Guided",
+      "order": "2",
+      "time": ""
+    }
+  ]
+}
