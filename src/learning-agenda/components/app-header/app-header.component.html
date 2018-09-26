@@ -1,16 +1,17 @@
 <header class="app-header">
   <div class="app-header__wrapper">
     <main class="app-header__main">
-      <a class="app-header__breadcrumb-link" href="#" (click)="$event.preventDefault()">Plan Your Visit
+      <a class="app-header__breadcrumb-link" href="#" (click)="$event.preventDefault()">
+        {{'app_header.breadcrumb_link' | translate}}
         <i class="icon"></i>
       </a>
-      <h1 class="app-header__heading">Plan a School Trip</h1>
+      <h1 class="app-header__heading">{{'app_header.heading' | translate}}</h1>
     </main>
     <nav class="app-header__nav">
       <ul>
         <!-- @ Elijah: Need a control structure for "on" class dependent of route perhaps? -->
-        <li><a class="app-header__nav-button on" href="#browse" (click)="$event.preventDefault()">Browse</a></li>
-        <li><a class="app-header__nav-button" href="#create">Create</a></li>
+        <li><a class="app-header__nav-button on" href="#browse" (click)="$event.preventDefault()">{{'app_header.btn_browse' | translate}}</a></li>
+        <li><a class="app-header__nav-button" href="#create">{{'app_header.btn_create' | translate}}</a></li>
       </ul>
     </nav>
   </div>
