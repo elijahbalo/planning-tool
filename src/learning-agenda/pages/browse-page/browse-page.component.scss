@@ -170,7 +170,7 @@ $main_back_link_button_size: 32px;
 }
 .card-wrapper {
   float: left;
-  background: yellow;
+  background:#000;
   width: calc(50% - 40px);
   margin-bottom: 40px;
   position: relative;
@@ -222,7 +222,6 @@ $main_back_link_button_size: 32px;
   top: 0;
   left: 0;
   display: block;
-  background: brown;
   // !! Image needs to be compressed.
   //background-image:linear-gradient(rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.5)),
   //url('/assets/images/IMG2018-0032-0165-Dm.jpg');
