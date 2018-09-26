@@ -27,7 +27,6 @@ export class LandingPageComponent implements OnInit {
     this.router.navigate(['/BrowsePage']);
   }
 
-
   navigateToCreatePage(event) {
     event.preventDefault();
     this.router.navigate(['/CreatePage']);

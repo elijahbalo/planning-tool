@@ -5,6 +5,7 @@ import * as Lodash from 'lodash';
 import * as $ from 'jquery';
 import * as jsPDF from 'jspdf';
 import * as html2canvas from 'html2canvas';
+import { Activity } from '../../models/activity';
 import { map } from 'rxjs/operators';
 declare function require(name: string);
 var itn = require('../../test.json');
@@ -16,6 +17,9 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./browse-page.component.scss']
 })
 export class BrowsePageComponent implements OnInit {
+  itn__act //var that holds the activities for the currently selected itinerary
+  itn // selected itinerary variable
+  dis = false;
   content: string;
   m_activities: any[];
   url;
@@ -142,6 +146,24 @@ export class BrowsePageComponent implements OnInit {
 
   print() {
     window.print();
+  }
+  navigateToLanding() {
+    this.router.navigate(['/LandingPage']);
+  }
+  toggleDis(){
+    console.log("dis is clicked")
+    if (this.dis == true){this.dis = false;}
+    else{
+      this.dis = true
+    }
+
+  }
+  displayItem(item){
+    this.dis = true
+    this.itn = item
+    let activities = []
+    item.activities.map(act => activities.push(act))
+    this.itn__act = activities
   }
 
   getSet(event) {

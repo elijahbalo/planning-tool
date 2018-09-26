@@ -3,13 +3,19 @@
 <header class="app-header">
   <div class="app-header__wrapper">
     <main class="app-header__main">
-      <a class="app-header__breadcrumb-link" href="#" (click)="$event.preventDefault()">Plan Your Visit<i class="icon"></i></a>
+      <a class="app-header__breadcrumb-link" href="#" (click)="$event.preventDefault()">Plan Your Visit
+        <i class="icon"></i>
+      </a>
       <h1 class="app-header__heading">Plan a School Trip</h1>
     </main>
     <nav class="app-header__nav">
       <ul>
-        <li><a class="app-header__nav-button on" href="#browse" (click)="$event.preventDefault()">Browse</a></li>
-        <li><a class="app-header__nav-button" href="#create">Create</a></li>
+        <li>
+          <a class="app-header__nav-button on" href="#browse" (click)="$event.preventDefault()">Browse</a>
+        </li>
+        <li>
+          <a class="app-header__nav-button" href="#create">Create</a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -72,21 +78,24 @@
     </aside>
 
     <main class="main-section__main">
-      <header>
-        <a class="msm__back-link" href="#landing" (click)="$event.preventDefault()">Back to Landing Page</a>
-        <h2 class="msm__heading">Itineraries</h2>
-      </header>
-      <ul class="card-list" id="itinerary-browse">
-        <li class="card-wrapper">
-          <a class="la-card" href="#1" (click)="$event.preventDefault()">
-            <main class="la-card__main">
-              <span class="la-card__subtitle">Kindergarden to Grade 2</span><br />
-              <span class="la-card__title">Explore the Arctic</span><br />
-              <span class="la-card__toy">Oct &ndash; Apr</span>
-            </main>
-          </a>
-        </li>
-        <li class="card-wrapper">
+      <div *ngIf="!dis">
+        <header>
+          <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToLanding()">Back to Landing Page</a>
+          <h2 class="msm__heading">Itineraries</h2>
+        </header>
+        <ul class="card-list" id="itinerary-browse">
+          <li *ngFor="let item of items" class="card-wrapper">
+            <a class="la-card" href="javascript:void(0)" (click)="displayItem(item) " [ngStyle]="{ 'background-image': 'url(' + item.img + ')'}">
+              <main class="la-card__main">
+                <span class="la-card__subtitle">{{item.grades}}</span>
+                <br />
+                <span class="la-card__title">{{item.title}}</span>
+                <br />
+                <span class="la-card__toy">{{item.timeOfYear}}</span>
+              </main>
+            </a>
+          </li>
+          <!-- <li class="card-wrapper">
           <a class="la-card" href="#2" (click)="$event.preventDefault()">
             <main class="la-card__main">
               <span class="la-card__subtitle">Grade 6 to 8</span><br />
@@ -103,15 +112,21 @@
               <span class="la-card__toy">May &ndash; June</span>
             </main>
           </a>
-        </li>
-      </ul>
+        </li> -->
+        </ul>
+      </div>
 
-      <div id="itinerary-single">
-        <div class="la-banner" style="background-image:url('/assets/images/IMG2018-0032-0165-Dm.jpg');">
+
+      <div *ngIf="dis" id="itinerary-single" style="clear:both">
+        <header>
+          <a class="msm__back-link" href="javascript:void(0)" (click)="toggleDis()">Back to Landing Page</a>
+          <h2 class="msm__heading">Itineraries</h2>
+        </header>
+        <div class="la-banner" [ngStyle]="{ 'background-image': 'url(' + itn.img + ')'}">
           <main class="la-banner__main">
-            <span class="la-banner__subtitle">Grade 3 to 5</span>
-            <h3 class="la-banner__title">Medieval Times</h3>
-            <span class="la-banner__toy">May &ndash; Jun</span>
+            <span class="la-banner__subtitle">{{itn.grades}}</span>
+            <h3 class="la-banner__title">{{itn.title}}</h3>
+            <span class="la-banner__toy">{{itn.timeOfYear}}</span>
           </main>
           <div class="utils-bar">
             <div class="url-copier">
@@ -125,41 +140,42 @@
             </aside>
           </div>
           <span class="la-banner__image-cover"></span>
-        </div><!--/.la-banner-->
+        </div>
+        <!--/.la-banner-->
 
         <div class="la-activities">
           <ul>
-            <li class="activity-list-item">
-              <span class="activity-list-item__time">9:30 AM</span>
+            <li *ngFor="let act of itn__act" class="activity-list-item">
+              <span class="activity-list-item__time">{{act.time}}</span>
               <figure class="activity-list-item__figure">
                 <a class="activity-list-item__image-link" href="#figure">
                   <img class="activity-list-item__image" src="/assets/images/IMG2018-0032-0151-Dm.jpg" width="227" height="161" alt="" />
                 </a>
               </figure>
               <div class="activity-list-item__body">
-                <span class="activity-list-item__title">Arrive</span>
-                <span class="activity-list-item__desc">Aenean eu leo quam. Pellentesque 
-                ornare sem lacinia quam venenatis vestibulum. Praesent 
-                commodo cursus magna, vel scelerisque nisl consectetur 
-                vel augue laoreet rutrum faucibus dolor auctor ... <a href="#desc">Full Description</a></span>
+                <span class="activity-list-item__title">{{act.name}}</span>
+                <span class="activity-list-item__desc" appEllipsis>{{act.description}}
+                  <a href="#desc">Full Description</a>
+                </span>
               </div>
             </li>
-            <li class="activity-list-item">
+            <!--  <li class="activity-list-item">
               <span class="activity-list-item__time">10:00 AM</span>
               <figure class="activity-list-item__figure">
                 <a class="activity-list-item__image-link" href="#figure">
                   <img class="activity-list-item__image" src="/assets/images/IMG2018-0032-0151-Dm.jpg" width="227" height="161" alt="" />
                 </a>
-                <button class="activity-list-item__rem-button"><span class="text">Remove Activity</span></button>
+                <button class="activity-list-item__rem-button">
+                  <span class="text">Remove Activity</span>
+                </button>
                 <button class="activity-list-item__swap-button">Swap Activity</button>
               </figure>
               <div class="activity-list-item__body">
                 <span class="activity-list-item__title">Traditions of the Anishinabe (Algonquin)</span>
-                <span class="activity-list-item__desc">Duis mollis, est non commodo luctus, 
-                nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
-                Cras mattis consectetur purus sit amet fermentum.</span>
+                <span class="activity-list-item__desc">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
+                  consectetur purus sit amet fermentum.</span>
               </div>
-            </li>
+            </li> -->
             <li class="activity-list-item activity-list-item--add">
               <span class="activity-list-item__time"></span>
               <div class="activity-list-item__body">
@@ -168,9 +184,14 @@
               </div>
             </li>
           </ul>
-        </div><!--/.la-activities-->
-      </div><!--/#itinerary-single-->
-    </main><!--/.main-section__main-->
+        </div>
+        <!--/.la-activities-->
+      </div>
+      <!--/#itinerary-single-->
+    </main>
+    <!--/.main-section__main-->
 
-  </div><!--/.main-section__wrapper-->
-</section><!--/.main-section-->
+  </div>
+  <!--/.main-section__wrapper-->
+</section>
+<!--/.main-section-->

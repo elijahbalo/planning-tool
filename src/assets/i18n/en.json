@@ -64,5 +64,188 @@
       "order": "2",
       "time": ""
     }
+  ],
+  "itineraries": [
+    {
+      "title": "EXPLORE THE ARCTIC",
+      "timeOfYear": "October-April",
+      "grades": "Kinder to Gr.2",
+      "day": "Half-day",
+      "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
+      "OctoberToApril": true,
+      "MayToJune": false,
+      "KinderTo2": true,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Arrive",
+          "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
+          "time": "09:30",
+          "length": 30,
+          "order": "12",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+          "name": "Music Works!",
+          "ageRange": "Prek-2",
+          "description": "Take your students on a musical odyssey to far-off places! Children play the roles of musicians from Indonesia and Nigeria, learning and practicing some useful techniques and musical beats while preparing for their performances. Music Works! promotes intercultural understanding as children explore the role of music in communities around the world.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "1",
+          "time": "10:00"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "http://localhost:4200/assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné +",
+          "order": "9",
+          "time": "10:45"
+        }
+      ]
+    },
+
+    {
+      "title": "MEDIEVAL TIMES",
+      "timeOfYear": "May-June",
+      "grades": "Gr 3-5",
+      "day": "Full-day",
+      "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
+      "OctoberToApril": false,
+      "MayToJune": true,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": true,
+      "activities": [
+        {
+          "name": "Arrive",
+          "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
+          "time": "09:30",
+          "length": 30,
+          "order": "12",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+          "name": "Globe Trekkers at the Canadian Children’s Museum",
+          "ageRange": "Prek-2",
+          "description": "Based on the concept of learning through play, these multisensory, interactive programs promote students’ awareness of themselves and others. In the exciting and colourful international environment of the Canadian Children’s Museum, children explore how people live, work and interact in communities around the world.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "2",
+          "time": "10:00"
+        },
+        {
+          "name": "The People of New France: Forging Relationships, Changing Landscapes",
+          "ageRange": "Prek-2",
+          "description": "For settlers in New France, adapting to a new land required a different way of life, as well as new interactions and exchanges. Working with replica artifacts from the Museum’s collections, students will explore some of the ways in which the people of New France adapted to their surroundings, and will learn about some of the interactions between European settlers and First Peoples and how they influenced one another.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "http://localhost:4200/assets/images/IMG2018-0032-0165-Dm.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "5",
+          "time": "10:45"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "http://localhost:4200/assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné +",
+          "order": "9",
+          "time": "11:30"
+        }
+      ]
+    },
+    {
+      "title": "FIRST PEOPLES OF CANADA",
+      "timeOfYear": "October-April",
+      "grades": "Gr 6-8",
+      "day": "Full-day",
+      "img": "http://localhost:4200/assets/images/IMG2018-0032-0093-Dm.jpg",
+      "OctoberToApril": true,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": true,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Arrive",
+          "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
+          "time": "09:30",
+          "length": 30,
+          "order": "12",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+          "name": "Grand Tour",
+          "ageRange": "Prek-2",
+          "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "http://localhost:4200/assets/images/IMG2018-0032-0219-Dm.jpg",
+          "length": 45,
+          "type": "Tour",
+          "order": "3",
+          "time": "10:00"
+        }
+      ]
+    },
+    {
+      "title": "A JOURNEY THROUGH PREHISTORY",
+      "timeOfYear": "October-April",
+      "grades": "Gr 6-8",
+      "day": "Full-day",
+      "img": "http://localhost:4200/assets/images/IMG2018-0032-0165-Dm.jpg",
+      "OctoberToApril": true,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": true,
+      "Gr3To5": false
+    },
+    {
+      "title": "EXPLORE THE ARCTIC",
+      "timeOfYear": "May-June",
+      "grades": "Gr 3-5",
+      "day": "Half-day",
+      "img": "http://localhost:4200/assets/images/IMG2018-0032-0145-Dm.jpg",
+      "OctoberToApril": false,
+      "MayToJune": true,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": true
+    },
+    {
+      "title": "MEDIEVAL TIMES",
+      "timeOfYear": "October-April",
+      "grades": "Gr 3-5",
+      "day": "Half-day",
+      "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
+      "OctoberToApril": true,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": true
+    },
+    {
+      "title": "FIRST PEOPLES OF CANADA",
+      "timeOfYear": "October-April",
+      "grades": "Gr 6-8",
+      "day": "Full-day",
+      "img": "http://localhost:4200/assets/images/IMG2018-0032-0215-Dm.jpg",
+      "OctoberToApril": true,
+      "MayToJune": false,
+      "KinderTo2": true,
+      "Gr6To8": false,
+      "Gr3To5": false
+    }
   ]
 }
