@@ -349,7 +349,28 @@
       "MayToJune": false,
       "KinderTo2": true,
       "Gr6To8": false,
-      "Gr3To5": false
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Arrive",
+          "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
+          "time": "09:30",
+          "length": 30,
+          "order": "12",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+        },
+        {
+          "name": "Music Works!",
+          "ageRange": "Prek-2",
+          "description": "Take your students on a musical odyssey to far-off places! Children play the roles of musicians from Indonesia and Nigeria, learning and practicing some useful techniques and musical beats while preparing for their performances. Music Works! promotes intercultural understanding as children explore the role of music in communities around the world.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "1",
+          "time": "10:00"
+        }
+      ]
     }
   ],
   "arrive": {

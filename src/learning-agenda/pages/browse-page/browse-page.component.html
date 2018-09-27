@@ -5,6 +5,10 @@
 <section class="main-section">
   <div class="main-section__wrapper">
 
+    <button (click)="switchLanguage('en')">en</button>
+
+    <button (click)="switchLanguage('fr')">fr</button>
+
     <aside class="main-section__aside">
       <header class="main-section__aside-header">
         <span class="main-section__aside-heading">Filter By</span>
@@ -126,13 +130,27 @@
 
         <div class="la-activities">
           <ul>
+            <li class="activity-list-item">
+              <span class="activity-list-item__time">{{arrive.time}}</span>
+              <figure class="activity-list-item__figure">
+                <a class="activity-list-item__image-link" href="#figure">
+                  <img class="activity-list-item__image" src="/assets/images/IMG2018-0032-0151-Dm.jpg" width="227" height="161" alt="" />
+                </a>
+              </figure>
+              <div class="activity-list-item__body">
+                <span class="activity-list-item__title">{{arrive.name}}</span>
+                <span class="activity-list-item__desc" appEllipsis>{{arrive.description}}
+                  <a href="#desc">Full Description</a>
+                </span>
+              </div>
+            </li>
             <li *ngFor="let act of itn__act" class="activity-list-item">
               <span class="activity-list-item__time">{{act.time}}</span>
               <figure class="activity-list-item__figure">
                 <a class="activity-list-item__image-link" href="#figure">
                   <img class="activity-list-item__image" src="/assets/images/IMG2018-0032-0151-Dm.jpg" width="227" height="161" alt="" />
                 </a>
-                <button class="activity-list-item__rem-button">
+                <button class="activity-list-item__rem-button" (click)="removeActivity(act.order)">
                   <span class="text">Remove Activity</span>
                 </button>
                 <button class="activity-list-item__swap-button">Swap Activity</button>

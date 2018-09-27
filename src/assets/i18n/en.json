@@ -1,6 +1,6 @@
 {
   "app_header": {
-    "breadcrumb_link": "Plan your Visit", 
+    "breadcrumb_link": "Plan your Visit",
     "heading": "Plan a School Trip",
     "btn_browse": "Browse",
     "btn_create": "Create"
@@ -69,6 +69,7 @@
   ],
   "itineraries": [
     {
+      "id": 1,
       "title": "EXPLORE THE ARCTIC",
       "timeOfYear": "October-April",
       "grades": "Kinder to Gr.2",
@@ -81,39 +82,38 @@
       "Gr3To5": false,
       "activities": [
         {
-          "name": "Arrive",
+          "name": "Baker, “Knead” a Hand",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": false,
+          "Gr6To8": false,
+          "description": "Children will discover the fascinating secrets behind that most universal of foods, bread! As they make and bake a loaf of their own, they will learn about the variety of flours and breads enjoyed throughout the world, finally delivering their creations to the houses of the International Village. This program gives students an opportunity to learn and practice their measuring and early literacy skills.",
+          "fees": "Group admission fee + $1 per student",
           "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
-          "time": "09:30",
-          "length": 30,
-          "order": "12",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "0",
+          "time": "10:00"
         },
         {
           "name": "Music Works!",
           "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": false,
+          "Gr6To8": false,
           "description": "Take your students on a musical odyssey to far-off places! Children play the roles of musicians from Indonesia and Nigeria, learning and practicing some useful techniques and musical beats while preparing for their performances. Music Works! promotes intercultural understanding as children explore the role of music in communities around the world.",
           "fees": "Group admission fee + $1 per student",
           "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
           "length": 45,
           "type": "Guided Workshop",
           "order": "1",
-          "time": "10:00"
-        },
-        {
-          "name": "Ciné+",
-          "ageRange": "Prek-2",
-          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
-          "fees": "Group admission fee + $1 per student",
-          "img": "http://localhost:4200/assets/images/IMG2018-0032-0145-Dm.jpg",
-          "length": 45,
-          "type": "Ciné +",
-          "order": "9",
           "time": "10:45"
         }
       ]
     },
 
     {
+      "id": 2,
       "title": "MEDIEVAL TIMES",
       "timeOfYear": "May-June",
       "grades": "Gr 3-5",
@@ -125,14 +125,6 @@
       "Gr6To8": false,
       "Gr3To5": true,
       "activities": [
-        {
-          "name": "Arrive",
-          "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
-          "time": "09:30",
-          "length": 30,
-          "order": "12",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        },
         {
           "name": "Globe Trekkers at the Canadian Children’s Museum",
           "ageRange": "Prek-2",
@@ -169,6 +161,7 @@
       ]
     },
     {
+      "id": 3,
       "title": "FIRST PEOPLES OF CANADA",
       "timeOfYear": "October-April",
       "grades": "Gr 6-8",
@@ -180,14 +173,6 @@
       "Gr6To8": true,
       "Gr3To5": false,
       "activities": [
-        {
-          "name": "Arrive",
-          "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
-          "time": "09:30",
-          "length": 30,
-          "order": "12",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-        },
         {
           "name": "Grand Tour",
           "ageRange": "Prek-2",
@@ -202,6 +187,7 @@
       ]
     },
     {
+      "id": 4,
       "title": "A JOURNEY THROUGH PREHISTORY",
       "timeOfYear": "October-April",
       "grades": "Gr 6-8",
@@ -214,6 +200,7 @@
       "Gr3To5": false
     },
     {
+      "id": 5,
       "title": "EXPLORE THE ARCTIC",
       "timeOfYear": "May-June",
       "grades": "Gr 3-5",
@@ -226,6 +213,7 @@
       "Gr3To5": true
     },
     {
+      "id": 6,
       "title": "MEDIEVAL TIMES",
       "timeOfYear": "October-April",
       "grades": "Gr 3-5",
@@ -238,6 +226,7 @@
       "Gr3To5": true
     },
     {
+      "id": 7,
       "title": "FIRST PEOPLES OF CANADA",
       "timeOfYear": "October-April",
       "grades": "Gr 6-8",
