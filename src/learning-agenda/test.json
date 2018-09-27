@@ -171,9 +171,9 @@
   ],
   "itineraries": [
     {
-      "title": "EXPLORE THE ARCTIC",
+      "title": "Explore the Arctic",
       "timeOfYear": "Oct – Apr",
-      "grades": "Kinder to Gr.2",
+      "grades": "Kindergarden to Grade 2",
       "day": "Half-day",
       "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
       "OctoberToApril": true,
@@ -216,9 +216,9 @@
     },
 
     {
-      "title": "MEDIEVAL TIMES",
-      "timeOfYear": "May-June",
-      "grades": "Gr 3-5",
+      "title": "Medieval Times",
+      "timeOfYear": "May – Jun",
+      "grades": "Grade 3 to 5",
       "day": "Full-day",
       "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
       "OctoberToApril": false,
@@ -271,9 +271,9 @@
       ]
     },
     {
-      "title": "FIRST PEOPLES OF CANADA",
-      "timeOfYear": "October-April",
-      "grades": "Gr 6-8",
+      "title": "First Peoples of Canada",
+      "timeOfYear": "Oct – Apr",
+      "grades": "Grade 6 to 8",
       "day": "Full-day",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0093-Dm.jpg",
       "OctoberToApril": true,
@@ -304,9 +304,9 @@
       ]
     },
     {
-      "title": "A JOURNEY THROUGH PREHISTORY",
-      "timeOfYear": "October-April",
-      "grades": "Gr 6-8",
+      "title": "A Journey Through Prehistory",
+      "timeOfYear": "Oct – Apr",
+      "grades": "Grade 6 to 8",
       "day": "Full-day",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0165-Dm.jpg",
       "OctoberToApril": true,
@@ -316,9 +316,9 @@
       "Gr3To5": false
     },
     {
-      "title": "EXPLORE THE ARCTIC",
-      "timeOfYear": "May-June",
-      "grades": "Gr 3-5",
+      "title": "Explore the Arctic",
+      "timeOfYear": "May – Jun",
+      "grades": "Grade 3 to 5",
       "day": "Half-day",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0145-Dm.jpg",
       "OctoberToApril": false,
@@ -328,9 +328,9 @@
       "Gr3To5": true
     },
     {
-      "title": "MEDIEVAL TIMES",
-      "timeOfYear": "October-April",
-      "grades": "Gr 3-5",
+      "title": "Medieval Times",
+      "timeOfYear": "Oct – Apr",
+      "grades": "Grade 3 to 5",
       "day": "Half-day",
       "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
       "OctoberToApril": true,
@@ -340,9 +340,9 @@
       "Gr3To5": true
     },
     {
-      "title": "FIRST PEOPLES OF CANADA",
-      "timeOfYear": "October-April",
-      "grades": "Gr 6-8",
+      "title": "First Peoples of Canada",
+      "timeOfYear": "Oct – Apr",
+      "grades": "Grade 6 to 8",
       "day": "Full-day",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0215-Dm.jpg",
       "OctoberToApril": true,

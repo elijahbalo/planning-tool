@@ -48,6 +48,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
+import { AppHeaderComponent } from './components/app-header/app-header.component';
 
 @NgModule({
   imports: [
@@ -105,7 +106,8 @@ import { AngularFireModule } from 'angularfire2';
     DesignPageComponent,
     ConfirmPageComponent,
     SubmitPageComponent,
-    ItineraryPageComponent
+    ItineraryPageComponent,
+    AppHeaderComponent
   ],
   providers: [AngularFirestoreModule, TranslationService]
 })

@@ -59,3 +59,24 @@
     background-image:-ms-linear-gradient(top, $from 0%, $to 100%); // IE 10+
     background-image:linear-gradient($from, $to);
 }
+@mixin faux_checkbox($checked: false) {
+    display: block;
+    width: 21px;
+    height: 21px;
+    @include borderbox;
+    background: #fff;
+    @include vertical_align;
+    position: absolute;
+    right: 0;
+    &.unchecked {
+      border: 3px solid #c1c1c1;
+    }
+    @if $checked == "true" {
+        background-color: $faux_input_on_colour;
+        background-image: url('/assets/images/icon-checkmark.svg');
+        background-position: 50% 52%;
+        background-size: 10px 9px;
+        background-repeat: no-repeat;
+        border: 0;
+    }
+}

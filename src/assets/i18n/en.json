@@ -1,8 +1,10 @@
 {
-  "plan your visit": "plan your visit",
-  "h2": "plan your trip",
-  "$b_text_create": "create",
-  "$b_text_browse": "browse",
+  "app_header": {
+    "breadcrumb_link": "Plan your Visit", 
+    "heading": "Plan a School Trip",
+    "btn_browse": "Browse",
+    "btn_create": "Create"
+  },
   "sidebar_head": "instructions",
   "sidebar_rst": "restart",
   "sidebar_option1": "Select a Grade",

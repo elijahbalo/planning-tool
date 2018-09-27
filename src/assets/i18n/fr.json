@@ -1,8 +1,10 @@
 {
-  "plan your visit": "planifier votre visite",
-  "h2": "planifier votre voyage",
-  "$b_text_create": "créer",
-  "$b_text_browse": "Feuilleter",
+  "app_header": {
+    "breadcrumb_link": "Planifiez votre visite",
+    "heading": "Planifier un voyage scolaire",
+    "btn_browse": "Feuilleter",
+    "btn_create": "Créer"
+  },
   "sidebar_head": "instructions",
   "sidebar_rst": "redémarrer",
   "sidebar_option1": "Sélectionnez une note",
