@@ -34,7 +34,7 @@
                 <h2 class="msm__heading">1. Select a Grade</h2>
             </header>
 
-            <div class="msm__sub-section">
+            <div class="msm__sub-section" style="display:none;">
                 <div class="msm__label-input-grp">
                     <div class="la__label-input">
                         <input id="kindergarden-grade_2" name="grade" value="Kindergarden to Grade 2" type="radio" />
@@ -60,6 +60,78 @@
                 </div><!--/.msm__label-input-grp-->
                 <button class="la-button la-button--clr-primary">Next</button>
             </div><!--/.msm__sub-section-->
+
+            <div class="la-activities">
+                <ul>
+                    <li class="activity-list-item">
+                        <span class="activity-list-item__time">10:00 AM</span>
+                        <ul class="la-activities__micro-list">
+                           <li class="la-micro-list__item selected">
+                                <figure class="la-micro-list__figure">
+                                    <span class="la-micro-list__figure-icon"></span>
+                                    <!-- To do: We'll need to eventually optimize our images. -->
+                                    <img class="la-micro-list__image" src="/assets/images/IMG2018-0032-0197-Dm-thumbnail.jpg" width="100" height="100" alt="" />
+                                </figure>
+                                <span class="la-micro-list__title">It's Your History</span>
+                                <span class="la-micro-list__desc">This activity sheet is intended for students who visit the Canadian Museum of Hist... <span class="linklusion">Full Description</span></span>
+                           </li>
+                           <li class="la-micro-list__item swap">
+                                <figure class="la-micro-list__figure">
+                                    <span class="la-micro-list__figure-icon"></span>
+                                    <img class="la-micro-list__image" src="/assets/images/IMG2018-0032-0197-Dm-thumbnail.jpg" width="100" height="100" alt="" />
+                                </figure>
+                                <span class="la-micro-list__title">The People of New France: Forging ...</span>
+                                <span class="la-micro-list__desc">For settlers in New France, adapting to a new land ... <span class="linklusion">Full Description</span></span>
+                           </li>
+                           <li class="la-micro-list__item">
+                                <figure class="la-micro-list__figure">
+                                    <span class="la-micro-list__figure-icon"></span>
+                                    <img class="la-micro-list__image" src="/assets/images/IMG2018-0032-0197-Dm-thumbnail.jpg" width="100" height="100" alt="" />
+                                </figure>
+                                <span class="la-micro-list__title">Artifact Hunt in the First Peoples’ Hall</span>
+                                <span class="la-micro-list__desc">Lorem ipsum dolor sit amet, consectetur adipiscing. <span class="linklusion">Full Description</span></span>
+                           </li>
+                           <li class="la-micro-list__item">
+                                <figure class="la-micro-list__figure">
+                                    <span class="la-micro-list__figure-icon"></span>
+                                    <img class="la-micro-list__image" src="/assets/images/IMG2018-0032-0197-Dm-thumbnail.jpg" width="100" height="100" alt="" />
+                                </figure>
+                                <span class="la-micro-list__title">Baker, “Knead” a Hand</span>
+                                <span class="la-micro-list__desc">Children will discover the fascinating secrets behind that most universal of foods, bread! As they make an... <span class="linklusion">Full Description</span></span>
+                           </li>
+                        </ul><!--/.la-activities__micro-list-->
+                        <!--  @Elijah: Hide <main /> when showing micro list. -->
+                        <!--
+                        <main class="activity-list-item__main">
+                            <figure class="activity-list-item__figure">
+                                <a class="activity-list-item__image-link" href="#figure">
+                                    <img class="activity-list-item__image" src="/assets/images/IMG2018-0032-0151-Dm.jpg" width="227" height="161" alt="" />
+                                </a>
+                                <button class="activity-list-item__rem-button"><span class="text">Remove Activity</span></button>
+                                <button class="activity-list-item__swap-button">Swap Activity</button>
+                            </figure>
+                            <div class="activity-list-item__body">
+                                <span class="activity-list-item__title">Traditions of the 
+                                Anishinabe (Algonquin)</span>
+                                <span class="activity-list-item__desc">Duis mollis, est non 
+                                commodo luctus, nisi erat porttitor ligula, eget lacinia odio 
+                                sem nec elit. Cras mattis consectetur purus sit amet fermentum.
+                                <a href="#desc">Full Description</a>
+                                </span>
+                            </div>
+                        </main>
+                        -->
+                    </li>
+                    <li class="activity-list-item activity-list-item--add">
+                        <span class="activity-list-item__time"></span>
+                        <div class="activity-list-item__body">
+                            <button class="la-button la-button--add">Add Another Activity</button>
+                            <button class="la-button la-button--clr-primary">Next</button>
+                        </div>
+                    </li>
+                </ul>
+            </div><!--/.la-activities-->
+
         </main>
     </div>
 </section>
