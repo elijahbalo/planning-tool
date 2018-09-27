@@ -7,6 +7,10 @@ html {
     font-size:16px;
     font-family:$base_font_family;
 }
+.linklusion { // Link illusion (span, styled to look like a link).
+    text-decoration:underline;
+    cursor:pointer;
+}
 
 /////////////////////////////////////////////////////////////////////////
 
@@ -191,4 +195,243 @@ $main_back_link_button_size: 32px;
 .la-button--add {
   width: 227px;
   margin-right: 30px;
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+.la-activities__micro-list {
+    padding:20px;
+    padding-bottom:0;
+    background:#e5e5e5;
+    /*
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:10;
+    width:100%;
+    @include transition(transform 500ms ease);
+    @include transform(translateX(100vw));
+    &.on {@include transform(translateX(0));}
+    */
+    &:after {@include clearfix;}
+}
+.la-micro-list__item {
+    float:left;
+    width:50%;
+    @include borderbox;
+    display:block;
+    font-size:13px;
+    margin-bottom:20px;
+    &:nth-child(odd) {padding-right:30px;clear:left;}
+    // &:nth-child(even) {background:yellow;}
+    // Breaking point... Single file.
+    width:100%;
+    clear:both;
+    &:nth-child(odd) {padding:0;}
+}
+
+$la_micro_list_figure_border_size: 3px;
+$la_micro_list_figure_border_clr: #979797;
+
+.la-micro-list__figure {
+    float:left;
+    margin-right:10px;
+    cursor:pointer;
+    @include borderbox;
+    border-style:solid;
+    border-color:$la_micro_list_figure_border_clr;
+    border-width:$la_micro_list_figure_border_size;
+    position:relative;
+    background:#000;
+    // States.
+    &:hover {
+        opacity:0.7;
+    }
+    .selected & {
+        border-color:$faux_input_on_colour;
+        &:hover {opacity:1;cursor:default;}
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+// Default state is "unselected".
+.la-micro-list__figure-icon {
+    background-color:#fff;
+    border-style:solid;
+    border-color:$la_micro_list_figure_border_clr;
+    border-width:$la_micro_list_figure_border_size;
+    width:22px;
+    @include borderbox;
+    height:22px;
+    display:block;
+    position:absolute;
+    top:-$la_micro_list_figure_border_size;
+    left:-$la_micro_list_figure_border_size;
+    // The actual icon, (not including it's bounding box).
+    &:after {
+        display:table;
+        content:'';
+        width:10px;
+        height:9px;
+        @include vertical_align;
+        margin:0 auto;
+        background-repeat:no-repeat;
+        background-position:50%;
+        background-size:100%;
+    }
+    // Sub classes for figure icon.
+    // 1. Selected
+    // 2. Swap
+    .selected & {background-color:$faux_input_on_colour;border-color:$faux_input_on_colour;}
+    .selected &:after {background-image:url('/assets/images/icon-checkmark.svg');}
+    .swap & {background-color:$la_micro_list_figure_border_clr;}
+    .swap &:after {
+        width:11px;
+        height:13px;
+        background-image:url('/assets/images/icon-swap_white.svg');
+        top:calc(50% + 1px);
+    }
+}
+.la-micro-list__image {
+    display:block;
+    width:70px;
+    height:70px;
+}
+.la-micro-list__title {
+    font-weight:bold;
+    display:block;
+    margin-bottom:7px;
+    font-family:$primary_font_family;
+    line-height:1.25;
+}
+.la-micro-list__desc {
+    line-height:1.5;
+    overflow:hidden;
+    display:block;
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+$activity_list_item_time_bg_clr: #d8d8d8;
+
+.la-activities {
+    overflow:hidden;
+    padding-left:100px;
+    margin-top:40px;
+}
+.activity-list-item {
+    display:block;
+    position:relative;
+    border-left:3px solid $activity_list_item_time_bg_clr;
+    padding-left:30px;
+    padding-bottom:30px;
+    &:after {@include clearfix;}
+}
+.activity-list-item--add {
+  border: 0;
+  padding-bottom: 0;
+  padding-left: 33px; // Re-aligns layout after removing border.
+  .activity-list-item__body {
+    overflow: visible;
+  }
+  .activity-list-item__time {
+    right: calc(100% - 3px); // border offset. todo: Create var.
+    width: 28px;
+    height: 28px;
+    &:before,
+    &:after {
+      @include transform(translateY(-50%) translateX(-50%));
+      position: absolute;
+      background: #000;
+      display: block;
+      content: '';
+      top: 50%;
+      left: 50%;
+    }
+    &:before {
+      width: 12px;
+      height: 2px;
+    }
+    &:after {
+      width: 2px;
+      height: 12px;
+    }
+  }
+}
+.activity-list-item__rem-button {
+  display: block;
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  background-image: url('/assets/images/icon-remove.svg');
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: 50%;
+  .text {
+    position: absolute;
+    left: -999em;
+    top: 0;
+  }
+}
+.activity-list-item__swap-button {
+  display: block;
+  background: #000;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  color: #fff;
+}
+.activity-list-item__image-link {
+  display: block;
+  background: purple;
+  &:hover img {
+    opacity: 0.5;
+  }
+}
+.activity-list-item__image {
+  display: block;
+}
+.activity-list-item__time {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  margin-left: -100%;
+  display: block;
+  float: left;
+  padding: 7px 10px;
+  @include borderbox;
+  font-size: 13px;
+  background: $activity_list_item_time_bg_clr;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-family: $primary_font_family;
+}
+.activity-list-item__title {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+.activity-list-item__desc {
+  display: block;
+  line-height: 1.6;
+  a {
+    background: rgba(0, 0, 0, 0.075);
+    font-style: italic;
+    padding: 0 3px;
+  }
+}
+.activity-list-item__body {
+  overflow: hidden;
+}
+.activity-list-item__figure {
+  position: relative;
+  margin-right: 30px;
+  display: block;
+  float: left;
 }
