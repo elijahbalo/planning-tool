@@ -1,0 +1,1223 @@
+
+.my-container {
+  margin: auto;
+}
+.img-resize {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+.left {
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  background-color: #8a8d8a;
+  margin-bottom: 2%;
+  width: 4.5%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.side-title {
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  font-size: 1.5rem;
+  color: #4a4a4a;
+  margin-left: 2%;
+  margin-bottom: 6%;
+}
+
+.brief {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2%;
+  width: 90%;
+}
+
+.brief1 {
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  font-size: 1rem;
+  color: #8a8d8a;
+  margin-left: 3%;
+  width: 50px;
+}
+
+.brief2 {
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  font-size: 1rem;
+  color: #4a4a4a;
+  width: 90%;
+  margin-left: 7%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.row2 {
+  display: inline-block;
+}
+.back-title {
+  float: left;
+  margin-left: 220px;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  font-size: 1.5rem;
+  color: #4a4a4a;
+}
+.back-title2 {
+  float: left;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  font-size: 1.5rem;
+  color: #4a4a4a;
+}
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+
+  border-right: 5px solid #fff;
+  margin: auto;
+}
+
+.btext {
+  position: absolute;
+  color: #fff;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  bottom: 23%;
+  left: 3%;
+  font-size: 2rem;
+}
+
+.btext4 {
+  position: absolute;
+  color: #fff;
+  background: #0099ff;
+  opacity: 0.9;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  width: 100%;
+  padding: 2%;
+  bottom: 0;
+}
+
+.btext5 {
+  position: absolute;
+  color: #fff;
+  background: rgb(0, 255, 34);
+  opacity: 0.9;
+  font-style: italic;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  width: 18%;
+  padding: 1%;
+  right: 0;
+  bottom: 53px;
+  cursor: pointer;
+}
+.btext1 {
+  font-family: Arial;
+  font-size: 1rem;
+}
+
+.btext3 {
+  font-size: 1rem;
+}
+
+.shadow {
+  position: relative;
+  height: 350px;
+  bottom: 120px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: -100px;
+}
+.shadow2 {
+  position: relative;
+  height: 330px;
+  bottom: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.banner {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.my-bg {
+  position: absolute;
+  z-index: -5;
+}
+.my-bg2 {
+  position: absolute;
+  z-index: -5;
+}
+.h {
+  position: absolute;
+  top: 250px;
+  left: 25%;
+  font-size: 12px;
+  color: #fff;
+  max-width: 80%;
+}
+.plan {
+  position: absolute;
+  top: 250px;
+  left: 25%;
+  font-size: 12px;
+  color: #fff;
+  max-width: 80%;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.arrow-right {
+  position: absolute;
+  top: 253px;
+  left: 28%;
+  display: inline-block;
+  width: 10%;
+  height: 0;
+  margin-left: 4%;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+
+  border-left: 5px solid white;
+}
+.my-header {
+  position: absolute;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  top: 250px;
+  left: 35%;
+  text-align: center;
+  color: #fff;
+}
+.h1 {
+  position: absolute;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  top: 295px;
+  left: 25%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.h2 {
+  margin-bottom: 35%;
+  font-family: Arial;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+.h3 {
+  position: absolute;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  top: 300px;
+  left: 50%;
+  text-align: center;
+  color: #fff;
+}
+.card-title {
+  color: #4a4a4a;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+}
+.pag /deep/ .ngx-pagination .current {
+  background: #4a4a4a;
+}
+
+.pag /deep/ .ngx-pagination li {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e5e5e5;
+  margin-right: 0px;
+
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+}
+.margin {
+  margin-right: 3%;
+  margin-bottom: 3%;
+  height: 230px;
+  width: 47%;
+  font-size: 13px;
+}
+.pagination-lg {
+  border: none;
+}
+/* .empty-card{
+    height:360px; 
+    width:32%;
+    font-size:13px;
+} */
+.boxes {
+  width: 90%;
+
+  margin-bottom: 2px;
+  margin-left: 3%;
+}
+
+.first {
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+}
+.selection {
+  margin-top: 10%;
+}
+.checkmark {
+}
+.ftext {
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  font-size: 1rem;
+  margin-bottom: 1%;
+  margin-left: 3%;
+  color: #8a8d8a;
+}
+
+.my-content {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+.pointer {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 12px solid white;
+  border-bottom: 8px solid transparent;
+  float: left;
+  margin-left: 20px;
+  margin-top: 12px;
+}
+.plan1 {
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+}
+.plan2 {
+  float: left;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #4a4a4a;
+  text-transform: uppercase;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+}
+.plan3 {
+  font-size: 0.8rem;
+  margin-bottom: 2%;
+  font-weight: bold;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+}
+.text {
+  color: #fff;
+}
+
+input[type='checkbox']:checked {
+  background: green;
+}
+.selection {
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+}
+.text1 {
+  font-size: 3rem;
+  margin-bottom: 8%;
+  font-weight: bold;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+}
+.text2 {
+  font-size: 1.7rem;
+  margin-bottom: 1%;
+}
+.text3 {
+  position: absolute;
+  top: 20%;
+  left: 22%;
+  max-width: 55%;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  font-weight: lighter;
+  clear: both;
+  font-family: Arial;
+}
+.content {
+  max-width: 1300px;
+  padding-top: 2%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+  height: 1500px;
+  border-color: #e5e5e5;
+  border-right-width: 1px;
+  border-style: solid;
+}
+
+.itineraries {
+  width: 70%;
+  padding: 0.9%;
+}
+
+.itineraries2 {
+  width: 70%;
+  padding: 0.9%;
+}
+.link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 70px;
+  margin-bottom: 5%;
+  background-color: #e5e5e5;
+}
+.activities {
+  width: 65%;
+}
+
+.urlbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 54%;
+}
+.url {
+  background: #fff;
+
+  width: 73%;
+  margin-top: 14px;
+  padding: 3%;
+  height: 45px;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  font-size: 0.8rem;
+  color: #8a8d8a;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.url-btn {
+  background: red;
+  width: 150%;
+  margin-top: 14px;
+  padding: 3%;
+  height: 45px;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  font-size: 0.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.printbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.print {
+  background: #4a4a4a;
+  width: 170%;
+  margin-top: 14px;
+  padding: 3%;
+  height: 45px;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  font-size: 0.8rem;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 2%;
+}
+
+.download {
+  background: #4a4a4a;
+  width: 130%;
+  margin-top: 14px;
+  padding: 3%;
+  height: 45px;
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  font-size: 0.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+.filter {
+  margin-left: 0%;
+  margin-top: 2%;
+}
+.filtertext {
+  font-weight: bold;
+  margin-top: 8px;
+}
+.filter2 {
+  margin-bottom: 2%;
+  margin-left: 0.1%;
+}
+.grade {
+  font-weight: bold;
+  margin-top: 8px;
+}
+.grades {
+  width: 15%;
+  margin-left: 1%;
+  height: 10px;
+}
+.select {
+  font-weight: bold;
+  font-size: 13px;
+}
+.date {
+  width: 15%;
+  margin-left: 1%;
+}
+.day {
+  width: 15%;
+  margin-left: 1%;
+  height: 10px;
+}
+.show {
+  width: 15%;
+  margin-left: 1%;
+}
+.build {
+  color: red;
+}
+.point {
+  color: #fff;
+}
+.ti {
+  font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  font-size: 2rem;
+  position: relative;
+  color: #4a4a4a;
+}
+.my-btn {
+  background: #4a4a4a;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: inline;
+  width: 200px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.my-btn1 {
+  text-transform: uppercase;
+  background: #fff;
+  width: 200px;
+  cursor: pointer;
+  display: inline;
+  color: #8a8d8a;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.my-btn2 {
+  color: #fff;
+  padding: 1rem;
+  width: 170px;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 1470px) {
+  .my-container {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .card-title {
+    padding: 15px;
+    color: #4a4a4a;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'futura-pt', 'Helvetica Neue', Arial;
+  }
+
+  .my-content {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  /* .pointer{
+    width:0;
+    height:0; 
+    border-top:8px solid transparent; 
+    border-left: 12px solid #808080; 
+    border-bottom: 8px solid transparent; 
+    float:left; 
+    margin-left:20px; 
+    margin-top:12px;
+    }
+    .plan1{
+    float:left; 
+    font-size:12px; 
+    font-weight:bold;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    }
+    .plan2{
+    float:left; 
+    font-weight:bold;
+    font-size:3rem;
+    color:#4a4a4a;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    }
+    .plan3{
+    float:left; 
+    font-size:25px; 
+    font-weight:bold;
+    color:#8a8d8a;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    }
+    .text1{
+    color:#4a4a4a; 
+    margin-top:2%;
+    padding:15px;
+    }
+    .text2{
+    
+    padding-bottom:0;
+    margin-bottom: 20px;
+    font-size:3rem;
+    font-weight:bold;
+    clear: both;
+    color:#4a4a4a;
+    font-family: "futura-pt", "Helvetica Neue", Arial;
+    }
+    .text3{
+    
+    padding-bottom:0;
+    margin-bottom: 20px;
+    font-size:1rem;
+    font-weight:lighter;
+    clear: both;
+    color:#4a4a4a;
+    font-family: Arial;
+    }
+    .filter{
+        margin-left:1.5%; 
+        margin-top:2%;  
+        } */
+}
+@media only screen and (max-width: 1300px) {
+  /*   
+.grades{
+    width:26%;
+     margin-left:1%;
+ }
+ .date{
+ width:26%; margin-left:1%;
+ }
+ .day{
+ width:26%;margin-left:1%;
+ }  
+ 
+ .show{
+    width:12%; 
+    margin-left:46%;
+    margin-top:1%;
+    } */
+}
+
+@media only screen and (max-width: 1220px) {
+  /*  .margin{
+        margin-bottom:5%;
+        height:380px;
+        width:49%;
+        font-size:13px;
+       
+    }
+
+    .empty-card{
+        height:380px; 
+        width:49%;
+        font-size:13px;
+    
+       
+    } */
+}
+
+@media only screen and (max-width: 1024px) {
+  /* .plan1{
+        float:left; 
+        font-size:12px; 
+        font-weight:bold;
+     
+        }
+        .plan2{
+        float:left; 
+        font-weight:bold;
+        font-size:1.5rem;
+        color:#4a4a4a;
+    
+        }
+        .plan3{
+        float:left; 
+        font-size:1rem; 
+        font-weight:bold;
+        color:#8a8d8a;
+      
+        }
+        .pointer{
+            width:0;
+            height:0; 
+            border-top:8px solid transparent; 
+            border-left: 8px solid #808080; 
+            border-bottom: 5px solid transparent; 
+            float:left; 
+            margin-left:10px; 
+            margin-top:6px;
+            }
+       
+        .text2{
+        padding-bottom:0;
+        margin-bottom: 10px;
+        font-size:1.5rem;
+        clear: both;
+        color:#4a4a4a;
+
+        }
+        .text3{
+        padding-bottom:0;
+        margin-bottom: 20px;
+        font-size:1rem;
+        font-weight:lighter;
+        clear: both;
+        color:#4a4a4a;
+     
+        } */
+}
+
+@media only screen and (max-width: 1006px) {
+  /* .img-resize{
+        height:250px;
+        width:100%;
+        object-fit:cover;
+      }
+      
+
+    .filtertext{
+        font-weight:bold; 
+        margin-top:8px;
+        margin-left:37%;
+        }
+    .grades{
+        width:95%;
+         margin-left:1%;
+         
+     }
+     .date{
+     width:95%; 
+     margin-left:1%;
+     margin-top:4%;
+    
+     }
+     .day{
+     width:95%;
+     margin-left:1%;
+     margin-top:1.5%;
+  
+     }  
+     
+     .show{
+        width:95%; 
+        margin-left:1%;
+        margin-top:4%;
+  
+        } */
+}
+
+@media only screen and (max-width: 1000px) {
+  /*  .margin{
+        margin-bottom:3%;
+        height:380px;
+        width:49%;
+        font-size:13px;
+       
+    }
+
+    .empty-card{
+        height:380px; 
+        width:49%;
+        font-size:13px;
+    
+    }
+ */
+}
+
+@media only screen and (max-width: 850px) {
+  /* .margin{
+        margin-bottom:5%;
+        height:380px;
+        width:49%;
+        font-size:13px;
+       
+    }
+
+    .empty-card{
+        height:380px; 
+        width:49%;
+        font-size:13px;
+    
+       
+    }
+    .grades{
+        width:95%;
+         margin-left:1%;
+         
+     }
+     .date{
+     width:95%; 
+     margin-left:1%;
+     margin-top:4.2%;
+    
+     }
+     .day{
+     width:95%;
+     margin-left:1%;
+     margin-top:1.5%;
+  
+     }  
+     
+     .show{
+        width:95%; 
+        margin-left:1%;
+        margin-top:4%;
+  
+        } */
+}
+
+@media only screen and (max-width: 750px) {
+  /*   .margin{
+        margin-bottom:8%;
+        height:380px;
+        width:49%;
+        font-size:13px;
+       
+    }
+
+    .empty-card{
+        height:380px; 
+        width:49%;
+        font-size:13px;
+    
+       
+    }
+    .grades{
+        width:95%;
+         margin-left:1%;
+         
+     }
+     .date{
+     width:95%; 
+     margin-left:1%;
+     margin-top:5%;
+    
+     }
+     .day{
+     width:95%;
+     margin-left:1%;
+     margin-top:1.5%;
+  
+     }  
+     
+     .show{
+        width:95%; 
+        margin-left:1%;
+        margin-top:5%;
+  
+        }
+      */
+}
+
+@media only screen and (max-width: 650px) {
+  /*    .margin{
+        margin-bottom:10%;
+        height:380px;
+        width:50%;
+        font-size:13px;
+       
+    }
+
+    .empty-card{
+        height:380px; 
+        width:49%;
+        font-size:13px;
+    
+       
+    }
+
+    .grades{
+        width:95%;
+         margin-left:1%;
+         
+     }
+     .date{
+     width:95%; 
+     margin-left:1%;
+     margin-top:5.5%;
+    
+     }
+     .day{
+     width:95%;
+     margin-left:1%;
+     margin-top:1.5%;
+  
+     }  
+     
+     .show{
+        width:95%; 
+        margin-left:1%;
+        margin-top:5.5%;
+  
+        } */
+}
+
+@media only screen and (max-width: 600px) {
+  /* .img-resize{
+        height:200px;
+        width:100%;
+        object-fit:cover;
+      }
+      
+
+    .margin{
+        margin-bottom:8%;
+        height:380px;
+        width:95%;
+        font-size:13px;
+       
+    }
+
+    .empty-card{
+        height:380px; 
+        width:95%;
+        font-size:13px;
+        margin-bottom:3%;
+       
+    }
+
+    .filtertext{
+        font-weight:bold; 
+        margin-top:8px;
+        margin-left:1%;
+        }
+
+        .grades{
+            width:95%;
+             margin-left:1%;
+             
+         }
+         .date{
+         width:95%; 
+         margin-left:1%;
+         margin-top:6%;
+        
+         }
+         .day{
+         width:95%;
+         margin-left:1%;
+         margin-top:1.5%;
+      
+         }  
+         
+         .show{
+            width:95%; 
+            margin-left:1%;
+            margin-top:6%;
+      
+            }
+       */
+}
+
+/* @media only screen and (max-width: 480px) {
+    .margin{
+        margin-bottom:8%;
+        height:380px;
+        width:98%;
+        font-size:13px;
+       
+    }
+
+    .empty-card{
+        height:380px; 
+        width:98%;
+        font-size:13px;
+        margin-bottom:3%;
+       
+    }
+
+    .filtertext{
+        font-weight:bold; 
+        margin-top:8px;
+        margin-left:0%;
+        }
+
+        .grades{
+            width:92%;
+             margin-left:1%;
+             
+         }
+         .date{
+         width:92%; 
+         margin-left:1%;
+         margin-top:7%;
+        
+         }
+         .day{
+         width:92%;
+         margin-left:1%;
+         margin-top:1.5%;
+      
+         }  
+         
+         .show{
+            width:92%; 
+            margin-left:1%;
+            margin-top:7%;
+      
+            }
+      
+    
+  } */
+@media only screen and (max-width: 414px) {
+  /* .margin{
+        margin-bottom:12%;
+        height:380px;
+        width:95%;
+        font-size:13px;
+       
+    }
+
+    .plan1{
+        float:left; 
+        font-size:12px; 
+        font-weight:bold;
+        }
+        .plan2{
+        float:left; 
+        margin-left:10px;
+        font-weight:bold; font-size:28px;
+        }
+        .plan3{
+        float:left; 
+        font-size:0px; 
+        font-weight:bold; 
+        color:"#808080";
+        }
+
+    .empty-card{
+        height:380px; 
+        width:92%;
+        font-size:8px;
+        margin-bottom:8%;
+       
+    }
+
+
+    .text1{
+
+        margin-left:1%; 
+        margin-top:2%;
+        }
+        .text2{
+        font-weight:bold; 
+        font-size:25px;
+        margin-left:1%; 
+        }
+        .text3{
+        font-size:12px; 
+        margin-left:1%;
+        width:80%; 
+        margin-top:0.8%;
+        
+        }
+
+        .grades{
+            width:92%;
+             margin-left:1%;
+             
+         }
+         .date{
+         width:92%; 
+         margin-left:1%;
+         margin-top:9%;
+         
+        
+         }
+         .day{
+         width:92%;
+         margin-left:1%;
+         margin-top:2.7%;
+      
+         }  
+         
+         .show{
+            width:92%; 
+            margin-left:1%;
+            margin-top:9%;
+      
+            }
+          
+ */
+}
+@media only screen and (max-width: 375px) {
+  /* .margin{
+        margin-bottom:12%;
+        height:380px;
+        width:95%;
+        font-size:13px;
+       
+    }
+
+    .plan1{
+        float:left; 
+        font-size:12px; 
+        font-weight:bold;
+        }
+        .plan2{
+        float:left; 
+        font-weight:bold; font-size:25px;
+        }
+        .plan3{
+        float:left; 
+        font-size:0px; 
+        font-weight:bold; 
+        color:"#808080";
+        }
+
+    .empty-card{
+        height:380px; 
+        width:92%;
+        font-size:8px;
+        margin-bottom:8%;
+       
+    }
+
+
+    .text1{
+
+        margin-left:1%;
+        margin-top:2%;
+        }
+        .text2{
+         margin-left:1%; 
+        font-weight:bold; 
+        font-size:25px;
+        }
+        .text3{
+        margin-left:1%; 
+        font-size:12px; 
+        width:80%; 
+        margin-top:0.8%;
+        
+        }
+
+        .grades{
+            width:92%;
+             margin-left:1%;
+             
+         }
+         .date{
+         width:92%; 
+         margin-left:1%;
+         margin-top:9%;
+         
+        
+         }
+         .day{
+         width:92%;
+         margin-left:1%;
+         margin-top:2.2%;
+      
+         }  
+         
+         .show{
+            width:92%; 
+            margin-left:1%;
+            margin-top:9%;
+      
+            } */
+}
+
+@media only screen and (max-width: 320px) {
+  /* .margin{
+        margin-bottom:12%;
+        height:380px;
+        width:95%;
+        font-size:13px;
+       
+    }
+
+    .plan1{
+        float:left; 
+        font-size:12px; 
+        font-weight:bold;
+        }
+        .plan2{
+        float:left; 
+        font-weight:bold; font-size:25px;
+        }
+        .plan3{
+        float:left; 
+        font-size:0px; 
+        font-weight:bold; 
+        color:"#808080";
+        }
+
+    .empty-card{
+        height:380px; 
+        width:92%;
+        font-size:8px;
+        margin-bottom:8%;
+       
+    }
+
+
+    .text1{
+
+        margin-left:1%;
+        margin-top:2%;
+        }
+        .text2{
+        font-weight:bold; 
+        font-size:25px;
+        margin-left:1%;
+        }
+        .text3{
+        font-size:12px; 
+        width:80%; 
+        margin-top:0.8%;
+        margin-left:1%;
+        
+        }
+
+        .grades{
+            width:92%;
+            
+             
+         }
+         .date{
+         width:92%; 
+         margin-top:9%;
+         
+        
+         }
+         .day{
+         width:92%;
+         margin-top:1.5%;
+      
+         }  
+         
+         .show{
+            width:92%; 
+
+            margin-top:9%;
+      
+            } */
+}

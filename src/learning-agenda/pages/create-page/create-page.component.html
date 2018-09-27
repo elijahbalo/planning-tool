@@ -1,32 +1,70 @@
 <app-header></app-header>
 
-<!--<div class="shadow">
-  <span class="plan">{{'plan your visit' | translate}} </span>
-  <span class="arrow-right"></span>
-  <div class="h1">{{'h2' | translate}}</div>
+<div style="position:absolute;top:0;right:0;background:green;padding:10px;z-index:999;">
+    <button (click)="switchLanguage('en')" style="margin-right:10px;">en</button>
+    <button (click)="switchLanguage('fr')">fr</button>
+</div>
 
+<section class="main-section">
+    <div class="main-section__wrapper">
+        <aside class="main-section__aside">
+            <header class="main-section__aside-header">
+                <span class="main-section__aside-heading">Instructions</span>
+                <button class="ms__aside-header-btn">Restart</button>
+            </header>
+            <ul class="ms__aside-checklist">
+                <!-- @ Elijah: We need conditional classes here. -->
+                <!-- 1. If user has made "acceptable" selection, assign sub class "checklist-item--done" -->
+                <!-- 2. Move "on" subclass (checklist-item--on) according to where user is -->
+                <li class="checklist-item checklist-item--done"><span tabindex="0">1. Select a Grade</span></li>
+                <li class="checklist-item checklist-item--done"><span tabindex="0">2. Select a Duration</span></li>
+                <li class="checklist-item checklist-item--on"><span>3. Select a Date</span></li>
+                <li class="checklist-item"><span>4. Select your Activities</span></li>
+                <li class="checklist-item"><span>5. Contact Information</span></li>
+                <li class="checklist-item"><span>6. Review and Submit</span></li>
+            </ul>
+        </aside>
+        <main class="main-section__main">
+            <!-- This (<header />) is a shared component, .. we need to decouple and somehow pass data to component,
+            1. Back link destination / route,
+            2. msm__heading (main section main heading) text value.
+            -->
+            <header>
+                <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToLanding()">Back to Landing Page</a>
+                <h2 class="msm__heading">1. Select a Grade</h2>
+            </header>
 
-  <div class="h3">
-    <div *ngIf="bActive" class="my-btn1">{{'$b_text_browse' | translate}}</div>
-    <div *ngIf="!bActive" class="my-btn">{{'$b_text_browse' | translate}}</div>
-    <div *ngIf="cActive" class="my-btn1">{{'$b_text_create' | translate}}</div>
-    <div *ngIf="!cActive" class="my-btn">{{'$b_text_create' | translate}}</div>
-
-  </div>
-
-
-  <div class="my-container">
-    <div class="my-bg">
-      <img src="../../../assets/images/IMG2018-0032-0215-Dm.jpg" class="img-resize">
-
+            <div class="msm__sub-section">
+                <div class="msm__label-input-grp">
+                    <div class="la__label-input">
+                        <input id="kindergarden-grade_2" name="grade" value="Kindergarden to Grade 2" type="radio" />
+                        <label class="msm__label" for="kindergarden-grade_2">
+                            <span class="text">Kindergarden to Grade 2</span>
+                            <span class="faux-radio unselected"></span>
+                        </label>
+                    </div>
+                    <div class="la__label-input">
+                        <input id="grades_3-6" name="grade" value="Grades 3 to 6" type="radio" />
+                        <label class="msm__label" for="grades_3-6">
+                            <span class="text">Grades 3 to 6</span>
+                            <span class="faux-radio unselected"></span>
+                        </label>
+                    </div>
+                    <div class="la__label-input">
+                        <input id="grades_6-8" name="grade" value="Grades 6 to 8" type="radio" />
+                        <label class="msm__label" for="grades_6-8">
+                            <span class="text">Grades 6 to 8</span>
+                            <span class="faux-radio unselected"></span>
+                        </label>
+                    </div>
+                </div><!--/.msm__label-input-grp-->
+                <button class="la-button la-button--clr-primary">Next</button>
+            </div><!--/.msm__sub-section-->
+        </main>
     </div>
-  </div>
-</div>-->
+</section>
 
-<button (click)="switchLanguage('en')">en</button>
-
-<button (click)="switchLanguage('fr')">fr</button>
-
+<!--
 <div class="content">
   <div id="print" class="side-bar">
     <div class="first">
@@ -190,3 +228,4 @@
 </div>
 <div>
 </div>
+-->
