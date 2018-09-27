@@ -67,7 +67,7 @@ main {
     * The magic of em units means contextual, we can 
     * scale down everything relatively with one property.
     */
-    main {background:blue;}
+    // main {background:blue;}
     main {font-size:12px;}
 }
 @media (max-width:#{$breaking_point_xx_sml}px) {
@@ -75,7 +75,7 @@ main {
     * The magic of em units means contextual, we can 
     * scale down everything relatively with one property.
     */
-    main {background:lime;}
+    // main {background:lime;}
     main {font-size:11px;}
 }
 @media (max-width:#{$breaking_point_xxx_sml}px) {
@@ -83,7 +83,7 @@ main {
     * The magic of em units means contextual, we can 
     * scale down everything relatively with one property.
     */
-    main {background:gold;}
+    // main {background:gold;}
     main {font-size:10px;}
 }
 
