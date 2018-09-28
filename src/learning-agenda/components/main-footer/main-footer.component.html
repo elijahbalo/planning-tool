@@ -19,10 +19,6 @@
 	</symbol>
 </svg>
 
-<!--
-
--->
-
 <footer id="main-footer" class="en">
     <div class="hwm-section-wrapper">
     <p [innerHTML]="'main_footer.slogan' | translate" class="slogan h2"></p>
@@ -32,14 +28,15 @@
         <li><a class="instagram" href="{{'instagram_link' | translate}}"><svg class="icon instagram"><use xlink:href="#instagram" /></svg>Twitter</a></li>
     </ul>
     <footer>
-        <img class="canada-wordmark" src="https://www.historymuseum.ca/wp-content/themes/hwm-2015/_images/canada-wordmark.svg" width="100" height="24" alt="Symbol of the Government of Canada" />
+        <img class="canada-wordmark" src="https://www.historymuseum.ca/wp-content/themes/hwm-2015/_images/canada-wordmark.svg" 
+        width="100" height="24" alt="{{'canada_wordmark_alt' | translate}}" />
         <div class="outro">
-        <p class="copyright-text">&copy; Canadian Museum of History</p>
-        <ul class="disclaimer-list">
-        <li><a href="https://www.historymuseum.ca/about/privacy-statement/">Privacy Statement</a></li>
-        <li><a href="https://www.historymuseum.ca/about/copyright-and-permissions/">Copyright</a></li>
-        </ul>
-        </div><!--End .outro-->
+            <p class="copyright-text" [innerHTML]="'main_footer.copyright_text' | translate"></p>
+            <ul class="disclaimer-list">
+                <li><a href="{{'main_footer.privacy_link.0' | translate}}">{{'main_footer.privacy_link.1' | translate}}</a></li>
+                <li><a href="{{'main_footer.copyright_link.0' | translate}}">{{'main_footer.copyright_link.1' | translate}}</a></li>
+            </ul>
+        </div>
     </footer>
     </div><!--End .hwm-section-wrapper-->
 </footer><!--End #main-footer-->
