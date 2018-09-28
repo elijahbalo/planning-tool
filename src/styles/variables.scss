@@ -13,6 +13,7 @@ $base_font_family: 'Helvetica Neue', #{$fallback_font};
 $primary_font_family: 'futura-pt', #{$fallback_font};
 $faux_input_on_colour: #44bb69;
 $utils_els_height: 48px;
+$main_header_height: 120px;
 
 // Breaking points
 $breaking_point_giant: 1920;
@@ -28,3 +29,16 @@ $breaking_point_x_sml: 640;
 $breaking_point_xx_sml: 480;
 $breaking_point_xxx_sml: 360; // mobile (base)
 $breaking_point_micro: 250;
+
+$main_header_breaking_points: (
+	$breaking_point_base_context,
+	$breaking_point_base_context,
+	$breaking_point_xxx_lrg,
+	$breaking_point_xx_lrg,
+	$breaking_point_x_lrg,
+	$breaking_point_lrg,
+	850,
+	$breaking_point_x_sml,
+	$breaking_point_xxx_sml,
+	$breaking_point_micro
+);

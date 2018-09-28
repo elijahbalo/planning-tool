@@ -11,10 +11,14 @@ main {
     height:100vh;
     display:block; // inline by default.. (annoying)
     background-color:$chwm_grey_70;
-    background-image:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)),
+    background-image:linear-gradient(rgba(0,0,0,0.75), transparent 50%),
+    linear-gradient(transparent, rgba(0,0,0,0.3)),
     url('/assets/images/IMG2018-0032-0215-Dm.jpg');
-    background-position:50% 100%;
+    background-position:50% 80%;
     background-size:cover;
+    float:left;
+    width:100%;
+    margin-top:-#{$main_header_height};
 }
 .content-body {
     font-family:$primary_font_family;
@@ -22,16 +26,6 @@ main {
     display:table;
     margin:0 auto;
     color:#fff;
-}
-.main-header-tmp { // We'll revisit this later.
-    background:fuchsia;
-    height:120px;
-    position:absolute;
-    opacity:0.7;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:10;
 }
 .heading {
     text-transform:uppercase;
@@ -67,26 +61,20 @@ main {
     * The magic of em units means contextual, we can 
     * scale down everything relatively with one property.
     */
-    main {background:blue;}
+    // main {background:blue;}
     main {font-size:12px;}
 }
 @media (max-width:#{$breaking_point_xx_sml}px) {
-    /**
-    * The magic of em units means contextual, we can 
-    * scale down everything relatively with one property.
-    */
-    main {background:lime;}
+    // main {background:lime;}
     main {font-size:11px;}
 }
 @media (max-width:#{$breaking_point_xxx_sml}px) {
-    /**
-    * The magic of em units means contextual, we can 
-    * scale down everything relatively with one property.
-    */
-    main {background:gold;}
+    // main {background:gold;}
     main {font-size:10px;}
 }
-
+@media (max-width:#{nth($main_header_breaking_points, 7)}px), (max-height:650px) {
+    main {margin-top:0;min-height:400px;height:50vh;}
+}
 
 
 

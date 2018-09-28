@@ -50,6 +50,13 @@
     -ms-transform:translateY(-50%);
     transform:translateY(-50%);
 }
+@mixin vertical_align_normalize {
+	position:static;
+	-webkit-transform:translateY(0);
+	-moz-transform:translateY(0);
+	-ms-transform:translateY(0);
+	transform:translateY(0);
+}
 @mixin verticalGradient($from, $to) {
     background-color:$from; // fallback / image non-cover color
     background-image:-moz-linear-gradient($from, $to); // Firefox 3.6+
