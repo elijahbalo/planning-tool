@@ -56,6 +56,9 @@ main {
 /////////////////////////////////////////////////////////////////////////
 
 // Media queries (breaking points) -- >
+@media (min-width:#{$breaking_point_base_context}px) {
+    main {font-size:21px;}
+}
 @media (max-width:#{$breaking_point_sml}px) {
     /**
     * The magic of em units means contextual, we can 
