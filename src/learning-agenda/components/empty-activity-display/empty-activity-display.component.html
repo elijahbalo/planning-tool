@@ -1,45 +1,6 @@
-
-    <div class="flex">
-      <div class="time">
-      <div  class="first1" ></div>
-    
-      <div class="second1"><span class="value" >+</span></div>
-      
-      </div>
-      
- 
-      <div class="big-box2" >
-      <div class="img">
-        <div class="new" (click)="change()">Add Another Time</div>
-      </div>
-      
-      <div class="textt">
-      <div class="title1"></div> 
-      <div class="bod" appEllipsis>
-  
-      </div>
-      <div  class="bod1">
-
-          </div>
-          
-          <div  class="type"></div>
-    
-      </div>
-      
-      
-      <div class="icon">
-      <div class="info">
-        <img class="img-responsive img-res" src="../assets/images/info2.png">
-      </div>
-      <div class="det" (click)="toggleDet()">
-      Details
-      </div>    
-          </div>
-      </div>
-      
-      </div>
-
-    
-    
-    
-         
+<span class="activity-list-item__time">
+</span>
+<div class="activity-list-item__body">
+  <button class="la-button la-button--add" (click)="addActivity()">Add Another Activity</button>
+  <button *ngIf="showNext" class="la-button la-button--clr-primary">Next</button>
+</div>

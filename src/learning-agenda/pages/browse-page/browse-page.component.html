@@ -62,7 +62,7 @@
       </div>
     </aside>
 
-    <main class="main-section__main">
+    <main class="main-section__main" id="main-sect">
       <div *ngIf="!dis">
         <header>
           <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToLanding()">Back to Landing Page</a>
@@ -120,8 +120,8 @@
               <button class="la-button la-button--utils-bar la-button--clr-primary">Copy URL</button>
             </div>
             <aside class="utils-bar__aside">
-              <button class="la-button la-button--utils-bar">Print</button>
-              <button class="la-button la-button--utils-bar">Download PDF</button>
+              <button class="la-button la-button--utils-bar" (click)="printDiv()">Print</button>
+              <button class="la-button la-button--utils-bar" (click)="pdf()">Download PDF</button>
             </aside>
           </div>
           <span class="la-banner__image-cover"></span>
@@ -132,6 +132,7 @@
           <ul>
             <li class="activity-list-item">
               <span class="activity-list-item__time">{{arrive.time}}</span>
+
               <figure class="activity-list-item__figure">
                 <a class="activity-list-item__image-link" href="#figure">
                   <img class="activity-list-item__image" src="/assets/images/IMG2018-0032-0151-Dm.jpg" width="227" height="161" alt="" />
@@ -145,22 +146,7 @@
               </div>
             </li>
             <li *ngFor="let act of itn__act" class="activity-list-item">
-              <span class="activity-list-item__time">{{act.time}}</span>
-              <figure class="activity-list-item__figure">
-                <a class="activity-list-item__image-link" href="#figure">
-                  <img class="activity-list-item__image" src="/assets/images/IMG2018-0032-0151-Dm.jpg" width="227" height="161" alt="" />
-                </a>
-                <button class="activity-list-item__rem-button" (click)="removeActivity(act.order)">
-                  <span class="text">Remove Activity</span>
-                </button>
-                <button class="activity-list-item__swap-button">Swap Activity</button>
-              </figure>
-              <div class="activity-list-item__body">
-                <span class="activity-list-item__title">{{act.name}}</span>
-                <span class="activity-list-item__desc" appEllipsis>{{act.description}}
-                  <a href="#desc">Full Description</a>
-                </span>
-              </div>
+              <app-activity-display [act]="act" [activities]="activities" (itmDel)="update($event)" (itmRpl)="update($event)" [itn]="itn__act"></app-activity-display>
             </li>
             <!--  <li class="activity-list-item">
               <span class="activity-list-item__time">10:00 AM</span>
@@ -180,11 +166,8 @@
               </div>
             </li> -->
             <li class="activity-list-item activity-list-item--add">
-              <span class="activity-list-item__time"></span>
-              <div class="activity-list-item__body">
-                <button class="la-button la-button--add">Add Another Activity</button>
-                <button class="la-button la-button--clr-primary">Next</button>
-              </div>
+              <app-empty-activity-display (addItem)="addItem($event)" [showNext]="showNext"></app-empty-activity-display>
+
             </li>
           </ul>
         </div>

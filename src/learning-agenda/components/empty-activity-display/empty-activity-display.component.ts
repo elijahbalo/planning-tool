@@ -1,4 +1,4 @@
-import { Component, OnInit ,Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-empty-activity-display',
@@ -6,17 +6,17 @@ import { Component, OnInit ,Output, EventEmitter} from '@angular/core';
   styleUrls: ['./empty-activity-display.component.scss']
 })
 export class EmptyActivityDisplayComponent implements OnInit {
+  @Input()
+  showNext = false;
+  @Output()
+  addItem: EventEmitter<any> = new EventEmitter<any>();
 
-  @Output() set: EventEmitter<any> = new EventEmitter<any>();
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  addActivity() {
+    localStorage.setItem('add', JSON.stringify(true));
+    this.addItem.emit(true);
   }
-
-change(){
-  this.set.emit(true)
-}
-
-
 }

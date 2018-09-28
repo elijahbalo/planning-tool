@@ -9,94 +9,129 @@ var act = require('../../test.json');
 var itn_E = require('../../../assets/i18n/en.json');
 var itn_F = require('../../../assets/i18n/fr.json');
 import { TranslationService } from '../../../services/translation.service';
+import { enableDebugTools } from '@angular/platform-browser';
+import { DEFAULT_STYLES } from 'ngx-pagination/dist/template';
 @Component({
   selector: 'app-activity-display',
   templateUrl: './activity-display.component.html',
   styleUrls: ['./activity-display.component.scss']
 })
 export class ActivityDisplayComponent implements OnInit {
-  @Output()
-  order: EventEmitter<any> = new EventEmitter<any>();
-  @Output()
-  item: EventEmitter<any> = new EventEmitter<any>();
-  @Output()
-  time: EventEmitter<any> = new EventEmitter<any>();
-  @Output()
-  notify: EventEmitter<any> = new EventEmitter<any>();
-  @Output()
-  modify: EventEmitter<any> = new EventEmitter<any>();
-  ord;
-  modal = false;
-  newTime;
-  det = false;
-  newSet;
-  isSet = false;
-  swap = false;
-  innerSwap = false;
-  items = [];
+  showSwapBox = false; // set to true if swap box is to be reavealed
   @Input()
-  itinerary;
+  itn;
   @Input()
-  showSwap;
+  activities; // holds all activity items from the backend
   @Input()
-  showDet = true;
-  my_time;
-  activity;
-  add;
-  @Input()
-  activities;
+  act;
+  newSelection;
+  @Output()
+  itmDel: EventEmitter<any> = new EventEmitter<any>();
+  @Output()
+  itmRpl: EventEmitter<any> = new EventEmitter<any>();
 
-  @Input()
-  enableSwap = true;
-
-  @Input()
-  enableDelete = true;
-
-  @Input()
-  description = false;
-
-  @Input()
-  langItems;
-  toggler = false;
+  previousItem;
+  order;
   constructor(
     private db: AngularFirestore,
     private translationService: TranslationService
   ) {}
 
   ngOnInit() {
-    /*    this.items = this.db
-      .collection('/activities')
-      .snapshotChanges()
-      .pipe(
-        map(actions => {
-          return actions.map(a => {
-            const data = a.payload.doc.data();
-            const id = a.payload.doc.id;
-            return { id, ...data };
-          });
-        })
-      ); */
-
-    this.getFilter(this.langItems);
-    //  this.items = act.activities;
-    console.log(this.items);
-    this.activities = JSON.parse(localStorage.getItem('itinerary'));
-    console.log(JSON.parse(localStorage.getItem('itinerary')));
-    if (this.itinerary.time) {
-      localStorage.setItem('c_time', JSON.stringify(this.itinerary.time));
+    if (JSON.parse(localStorage.getItem('swap_id'))) {
+      if (this.act.order == JSON.parse(localStorage.getItem('swap_id'))) {
+        this.showSwapBox = true;
+      }
+    }
+    if (JSON.stringify(this.act) === JSON.stringify({})) {
+      this.showSwapBox = true;
+      this.newSelection = true;
     }
 
-    this.newSet = JSON.parse(localStorage.getItem('_set'));
-    if (this.itinerary == 0) {
-      this.swap = true;
-      this.add = true;
-    }
-    if (this.itinerary.name == 'Arrive') {
-      this.enableSwap = false;
-      this.enableDelete = false;
-    }
+    this.order = this.act.order;
   }
-  getFilter(activities) {
+
+  toggleSwapBox(order) {
+    this.showSwapBox = true;
+    localStorage.setItem('swap_id', JSON.stringify(order));
+  }
+  replaceItem(event) {
+    let previousItem = this.act;
+    let act_E = JSON.parse(localStorage.getItem('itn_En'));
+    let act_F = JSON.parse(localStorage.getItem('itn_Fr'));
+    let index = act_E.findIndex(elem => elem.order == previousItem.order);
+    let index1 = act_F.findIndex(elem => elem.order == previousItem.order);
+    let en = this.getEnglish_v(event);
+
+    if (JSON.stringify(previousItem) === JSON.stringify({})) {
+      en.time = this.timeConvert(act_E[act_E.length - 2].time, 45);
+    } else {
+      en.time = previousItem.time;
+    }
+
+    let fr = this.getFrench_v(event);
+    if (JSON.stringify(previousItem) === JSON.stringify({})) {
+      fr.time = this.timeConvert(act_F[act_E.length - 2].time, 45);
+    } else {
+      fr.time = previousItem.time;
+    }
+    act_E.splice(index, 1, en);
+    act_F.splice(index1, 1, fr);
+    localStorage.setItem('itn_En', JSON.stringify(act_E));
+    localStorage.setItem('itn_Fr', JSON.stringify(act_F));
+    this.act = event;
+    this.showSwapBox = false;
+    localStorage.removeItem('swap_id');
+    this.itmRpl.emit(true);
+  }
+
+  removeActivity(order) {
+    let lastItemEn = false;
+    let lastItemFr = false;
+    let act_E = JSON.parse(localStorage.getItem('itn_En'));
+    let act_F = JSON.parse(localStorage.getItem('itn_Fr'));
+    let index = act_E.findIndex(elem => elem.order == order);
+    let index1 = act_F.findIndex(elem => elem.order == order);
+
+    if (index == act_E.length - 1) {
+      lastItemEn = true;
+    }
+    if (index == act_E.length - 1) {
+      lastItemFr = true;
+    }
+    act_E.splice(index, 1);
+    act_F.splice(index1, 1);
+    if (!lastItemEn) {
+      for (var i = index; i < act_E.length; i++) {
+        act_E[i].time = this.timeConvert(act_E[i].time, -45);
+      }
+    }
+    if (!lastItemFr) {
+      for (var i = index; i < act_F.length; i++) {
+        act_F[i].time = this.timeConvert(act_F[i].time, -45);
+      }
+    }
+
+    localStorage.setItem('itn_En', JSON.stringify(act_E));
+    localStorage.setItem('itn_Fr', JSON.stringify(act_F));
+    this.itmDel.emit(true);
+  }
+
+  getFrench_v(item) {
+    let index = itn_F.activities.findIndex(elem => elem.order == item.order);
+    return itn_F.activities[index];
+  }
+  getEnglish_v(item) {
+    let index = itn_E.activities.findIndex(elem => elem.order == item.order);
+    return itn_E.activities[index];
+  }
+
+  newTime() {
+    let act_E = JSON.parse(localStorage.getItem('itn_En'));
+    let act_F = JSON.parse(localStorage.getItem('itn_Fr'));
+    act_E[act_E.length - 1].time;
+  }
+  /* getFilter(activities) {
     let g_filter = JSON.parse(localStorage.getItem('g_filter'));
     let length = JSON.parse(localStorage.getItem('f_length'));
     let f_items = [];
@@ -158,8 +193,8 @@ export class ActivityDisplayComponent implements OnInit {
             this.toggler = false;
           });
         }
-
-        /*    my_items.map(elem => {
+ */
+  /*   my_items.map(elem => {
           console.log(f_items);
           f_items.map(element => {
             if (elem == element) {
@@ -169,131 +204,15 @@ export class ActivityDisplayComponent implements OnInit {
           if (this.toggler == false) {
             f_items.push(elem);
           }
-        }); */
+        }); 
       });
       this.items = f_items;
     }
   }
-  setSwap() {
-    if (this.swap == false) this.swap = true;
-    else {
-      this.swap = false;
-    }
-
-    if (this.isSet) {
-      this.order.emit(this.activity.order);
-      this.ord = this.activity.order;
-    } else {
-      this.order.emit(this.itinerary.order);
-      this.ord = this.itinerary.order;
-    }
-  }
-
-  toggleModal() {
-    if (this.modal == false) this.modal = true;
-    else {
-      this.modal = false;
-    }
-  }
-
-  setModalFromChild(event) {
-    this.modal = event;
-  }
-
-  toggleInnerSwap() {
-    if (this.innerSwap == false) this.innerSwap = true;
-    else {
-      this.innerSwap = false;
-    }
-  }
-
-  fixItem(item) {
-    let act = JSON.parse(localStorage.getItem('itinerary'));
-    let act2 = JSON.parse(localStorage.getItem('french'));
-    console.log(act);
-
-    if (this.newSet == true) {
-      console.log(this.itinerary);
-      if (this.itinerary.time) {
-        console.log('do nothing');
-      } else {
-        console.log(act.length);
-        if (act.length >= 2) {
-          item.time = this.timeConvert(
-            act[act.length - 2].time,
-            act[act.length - 2].length
-          ).toString();
-          console.log(act[act.length - 2].time);
-          console.log(act[act.length - 2].length);
-        } else {
-          item.time = '10:00';
-          console.log(item);
-        }
-      }
-
-      localStorage.setItem('_set', JSON.stringify(false));
-    }
-    this.swap = false;
-    let order = JSON.parse(localStorage.getItem('n_e_o'));
-    console.log(order);
-
-    let index = act.findIndex(i => i.order === order);
-    console.log(index);
-    if (index > 0) {
-      let index2 = index - 1;
-
-      item.time = this.timeConvert(
-        act[index2].time,
-        act[index2].length
-      ).toString();
-      console.log(act);
-      act.splice(index, 1, item);
-      localStorage.setItem('itinerary', JSON.stringify(act));
-      this.notify.emit(true);
-    }
-    if (index == 0) {
-      item.time = act[index].time;
-      act.splice(index, 1, item);
-      localStorage.setItem('itinerary', JSON.stringify(act));
-      this.notify.emit(true);
-    }
-    this.isSet = true;
-    this.activity = item;
-    this.item.emit(item);
-    this.modify.emit(true);
-  }
-  deleteItem(order) {
-    let act = JSON.parse(localStorage.getItem('itinerary'));
-    let act2 = JSON.parse(localStorage.getItem('french'));
-    let index = act.findIndex(i => i.order === order);
-    let index2 = act2.findIndex(i => i.order === order);
-    act.splice(index, 1);
-    act2.splice(index, 1);
-    localStorage.setItem('itinerary', JSON.stringify(act));
-    localStorage.setItem('french', JSON.stringify(act2));
-    this.modify.emit(true);
-  }
-  check(order) {
-    if (order == this.ord) return true;
-    else {
-      return false;
-    }
-  }
-
-  toggleDet() {
-    if (this.det == false) this.det = true;
-    else {
-      this.det = false;
-    }
-  }
-
-  setTime(item) {
-    this.newTime = 25;
-    item.time = 25;
-  }
+  
+ */
 
   timeConvert(data, length) {
-    console.log('time is here');
     console.log(data);
     let index;
     let h = '';
@@ -304,7 +223,6 @@ export class ActivityDisplayComponent implements OnInit {
 
       if (strChar == ':') {
         index = data.indexOf(strChar);
-        console.log(index);
       }
     }
     for (var i = 0; i < index; i++) {
@@ -318,9 +236,6 @@ export class ActivityDisplayComponent implements OnInit {
     }
 
     let time = Number(h) * 60 + Number(m) + length;
-    console.log('time is here');
-    console.log(time);
-    this.my_time = time;
     let minutes = time % 60;
     let hours = (time - minutes) / 60;
     if (minutes < 10) {
@@ -332,19 +247,17 @@ export class ActivityDisplayComponent implements OnInit {
   }
 
   tConvert(time) {
-    // Check correct time format and split into components
     if (!(time == null)) {
       time = time
         .toString()
         .match(/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
 
       if (time.length > 1) {
-        // If time format correct
-        time = time.slice(1); // Remove full string match value
-        time[5] = +time[0] < 12 ? ' AM' : ' PM'; // Set AM/PM
-        time[0] = +time[0] % 12 || 12; // Adjust hours
+        time = time.slice(1);
+        time[5] = +time[0] < 12 ? ' AM' : ' PM';
+        time[0] = +time[0] % 12 || 12;
       }
-      return time.join(''); // return adjusted time or original string
+      return time.join('');
     }
   }
 }

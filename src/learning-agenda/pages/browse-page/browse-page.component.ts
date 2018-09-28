@@ -26,12 +26,12 @@ export class BrowsePageComponent implements OnInit {
   fr = false; // global variable for lang toggle (french)
   dis = false; // var for back button toggle
   arrive; // var that holds first activity of every itinerary
-  showSwapBox = false; // set to true if swap box is to be reavealed
-  activities; // holds all activity items from the backend
+  activities;
   content: string;
   m_activities: any[];
   url;
   rId: string;
+  showNext;
 
   margins = {
     top: 70,
@@ -61,6 +61,7 @@ export class BrowsePageComponent implements OnInit {
         this.applyFilters();
       }); */
     this.items = itn_E.itineraries;
+    this.activities = itn_E.activities;
     /*     this.arrive = itn.arrive;
     this.c_activities = itn.c_activities; */
   }
@@ -133,6 +134,21 @@ export class BrowsePageComponent implements OnInit {
       this.activities = itn_F.activities;
     }
   }
+
+  update(event) {
+    this.ngOnChanges();
+  }
+  addItem(event) {
+    let emptyItem = {};
+    let act_E = JSON.parse(localStorage.getItem('itn_En'));
+    let act_F = JSON.parse(localStorage.getItem('itn_Fr'));
+    act_E.push(emptyItem);
+    act_F.push(emptyItem);
+    localStorage.setItem('itn_En', JSON.stringify(act_E));
+    localStorage.setItem('itn_Fr', JSON.stringify(act_F));
+    this.ngOnChanges();
+  }
+
   displayItem(item) {
     this.dis = true;
     this.itn = item;
@@ -149,7 +165,14 @@ export class BrowsePageComponent implements OnInit {
       this.itn__act = JSON.parse(localStorage.getItem('itn_Fr'));
     }
   }
-
+  displayActivity() {
+    let lang = JSON.parse(localStorage.getItem('lang'));
+    if (lang == 'en') {
+      this.activities = itn_E.activities;
+    } else {
+      this.activities = itn_F.activities;
+    }
+  }
   saveFrench_v(item) {
     let index = itn_F.itineraries.findIndex(elem => elem.id == item.id);
 
@@ -175,31 +198,46 @@ export class BrowsePageComponent implements OnInit {
     );
     return activity;
   }
+  pdf() {
+    html2canvas(document.getElementById('main-sect')).then(canvas => {
+      var imgData = canvas.toDataURL('image/png');
+      var imgWidth = 200;
+      var pageHeight = 295;
+      var imgHeight = (canvas.height * imgWidth) / canvas.width;
+      var heightLeft = imgHeight;
 
-  toggleSwapBox() {
-    this.showSwapBox = true;
+      var doc = new jsPDF('p', 'mm');
+      var position = 0;
+
+      doc.addImage(imgData, 'PNG', 5, position, imgWidth, 0);
+      heightLeft -= pageHeight;
+
+      while (heightLeft >= 0) {
+        position = heightLeft - imgHeight;
+        doc.addPage();
+        doc.addImage(imgData, 'PNG', 5, position, imgWidth, 0);
+        heightLeft -= pageHeight;
+      }
+      doc.save('itinerary.pdf');
+    });
   }
+  printDiv() {
+    var divToPrint = document.getElementById('main-sect');
 
-  checkSelectedActivities() {}
+    var newWin = window.open('', 'Print-Window');
 
-  displayActivity(order) {
-    let lang = JSON.parse(localStorage.getItem('lang'));
-    if (lang == 'en') {
-      this.activities = itn_E.activities;
-    } else {
-      this.activities = itn_F.activities;
-    }
-  }
+    newWin.document.open();
 
-  removeActivity(order) {
-    let act_E = JSON.parse(localStorage.getItem('itn_En'));
-    let act_F = JSON.parse(localStorage.getItem('itn_Fr'));
-    let index = act_E.findIndex(elem => elem.order == order);
-    let index1 = act_F.findIndex(elem => elem.order == order);
-    act_E.splice(index, 1);
-    act_F.splice(index1, 1);
-    localStorage.setItem('itn_En', JSON.stringify(act_E));
-    localStorage.setItem('itn_Fr', JSON.stringify(act_F));
-    this.ngOnChanges();
+    newWin.document.write(
+      '<html><body onload="window.print()">' +
+        divToPrint.innerHTML +
+        '</body></html>'
+    );
+
+    newWin.document.close();
+
+    setTimeout(function() {
+      newWin.close();
+    }, 10);
   }
 }

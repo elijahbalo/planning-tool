@@ -11,16 +11,26 @@ export class SwapBoxComponent implements OnInit {
   closeResult: string;
   innerSwap = false;
   @Input()
-  add;
+  newSelection = false;
   @Input()
-  ord;
+  activity;
   @Input()
-  item;
+  activities;
+  @Input()
+  presentItem;
+  @Input()
+  itn;
   @Output()
-  swap: EventEmitter<any> = new EventEmitter<any>();
+  selectedItm: EventEmitter<any> = new EventEmitter<any>();
+  @Output()
+  presentItm: EventEmitter<any> = new EventEmitter<any>();
+  contains = false;
+
   constructor(private modalService: NgbModal) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.containedInActivities();
+  }
 
   open(content) {
     this.modalService.open(content).result.then(result => {
@@ -28,37 +38,22 @@ export class SwapBoxComponent implements OnInit {
     });
   }
 
-  checkOrder(name, order) {
-    let act = JSON.parse(localStorage.getItem('itinerary'));
-    let act2 = JSON.parse(localStorage.getItem('french'));
-    if (act) {
-      for (var i = 0; i < act.length; i++) {
-        if (name == act[i].name) {
-          return true;
-        }
-      }
+  selected() {
+    if (this.activity.order == this.presentItem.order) {
+      return true;
     }
     return false;
   }
-
-  check(order) {
-    if (order == this.ord) return true;
-    else {
-      return false;
-    }
+  containedInActivities() {
+    this.itn.map(elem => {
+      if (elem.order == this.activity.order) {
+        this.contains = true;
+      }
+    });
   }
-
-  fixItem(event) {
-    this.swap.emit(event);
+  selectItem(newItem) {
+    this.selectedItm.emit(newItem);
   }
-
-  toggleInnerSwap() {
-    if (this.innerSwap == false) this.innerSwap = true;
-    else {
-      this.innerSwap = false;
-    }
-  }
-
   toggleModal() {
     if (this.modal == false) this.modal = true;
     else {
