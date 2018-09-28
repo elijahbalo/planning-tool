@@ -32,7 +32,7 @@ export class BrowsePageComponent implements OnInit {
   url;
   rId: string;
   showNext;
-
+  g_filter = [];
   margins = {
     top: 70,
     bottom: 40,
@@ -111,7 +111,7 @@ export class BrowsePageComponent implements OnInit {
       .substr(2, 9);
   }
   navigateToLanding() {
-    this.router.navigate(['/LandingPage']);
+    this.router.navigate(['online-visit-planning-tool/LandingPage']);
   }
   toggleDis() {
     console.log('dis is clicked');
@@ -240,4 +240,18 @@ export class BrowsePageComponent implements OnInit {
       newWin.close();
     }, 10);
   }
+
+  filterItems(field, event) {
+    if (event == false) {
+      let index = this.g_filter.findIndex(elem => elem == field);
+      this.g_filter.splice(index, 1);
+      console.log(this.g_filter);
+    } else {
+      this.g_filter.push(field);
+      console.log(this.g_filter);
+    }
+  }
+  /* filter(){
+    for (var i=0; i<this.g_filter.length)
+  } */
 }

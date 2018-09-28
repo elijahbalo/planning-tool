@@ -164,55 +164,14 @@ export class CreatePageComponent implements OnInit {
       .substr(2, 9);
   }
 
-  print() {
-    window.print();
-  }
-
   setDate(event) {
     this.date = event;
-  }
-
-  getSet(event) {
-    this.set = event;
-    this.itn_E = JSON.parse(localStorage.getItem('itinerary'));
-    this.itn_F = JSON.parse(localStorage.getItem('french'));
-    this.img = JSON.parse(localStorage.getItem('img'));
-    this.grade = JSON.parse(localStorage.getItem('grade'));
-    this.title = JSON.parse(localStorage.getItem('title'));
-    this.year = JSON.parse(localStorage.getItem('year'));
-    this.titles = JSON.parse(localStorage.getItem('titles'));
-  }
-
-  add(event) {
-    this.itn_E.push(0);
-    this.itn_F.push(0);
-    localStorage.setItem('itinerary', JSON.stringify(this.itn_E));
-    localStorage.setItem('french', JSON.stringify(this.itn_F));
-    console.log(this.itn_E);
-
-    localStorage.setItem('_set', JSON.stringify(event));
-  }
-
-  setBrowse() {
-    this.create = false;
-    this.browse = true;
-    this.bActive = true;
-    this.cActive = false;
-    this.step1 = false;
-    this.step2 = false;
-    this.step3 = false;
-    this.step4 = false;
-    this.step5 = false;
-    this.step6 = false;
   }
 
   setCreate() {
     localStorage.clear();
     console.log(JSON.parse(localStorage.getItem('itinerary')));
     this.create = true;
-    this.browse = false;
-    this.cActive = true;
-    this.bActive = false;
     this.set = false;
     this.step1 = true;
     this.step2 = false;
@@ -233,12 +192,10 @@ export class CreatePageComponent implements OnInit {
     $('#step5').prop('checked', false);
   }
 
-  setStep2(event) {
+  setStep2() {
     this.step1 = false;
-    this.step2 = event;
+    this.step2 = true;
     this.createTitle = '2. Select a Duration';
-    $('#step1').prop('checked', false);
-    $('#step1').prop('checked', true);
   }
 
   setStep3(event) {
@@ -311,141 +268,38 @@ export class CreatePageComponent implements OnInit {
       this.step2 = false;
       this.step1 = true;
       this.createTitle = '1. Select a Grade';
-      $('#step1').prop('checked', false);
     }
     if (this.prev == 'step2') {
       this.step3 = false;
       this.step2 = true;
       this.createTitle = '2. Select a Duration';
       this.prev = 'step1';
-      $('#step2').prop('checked', false);
     }
     if (this.prev == 'step3') {
       this.step4 = false;
       this.step3 = true;
       this.createTitle = '3. Select a Date';
       this.prev = 'step2';
-      $('#step3').prop('checked', false);
     }
     if (this.prev == 'step4') {
       this.step5 = false;
       this.step4 = true;
       this.createTitle = '4. Select your Activities';
       this.prev = 'step3';
-      $('#step4').prop('checked', false);
     }
     if (this.prev == 'step5') {
       this.step6 = false;
       this.step5 = true;
       this.createTitle = '5. Contact Information';
       this.prev = 'step4';
-      $('#step5').prop('checked', false);
     }
-  }
-
-  setPrev(event) {
-    this.prev = event;
-  }
-
-  setItem(event) {
-    console.log('set item method fgfdfdfgddgdfgdfg');
-    this.itn_E.pop();
-    this.itn_F.pop();
-    console.log(this.itn_E);
-    this.itn_E.push(this.saveEnglish_v(event.order, event.time));
-    this.itn_F.push(this.saveFrench_v(event.order, event.time));
-    localStorage.setItem('itinerary', JSON.stringify(this.itn_E));
-    localStorage.setItem('french', JSON.stringify(this.itn_F));
+    console.log(this.createTitle);
+    console.log(this.prev);
   }
 
   open(content) {
     this.modalService.open(content).result.then(result => {
       this.closeResult = `Closed with: ${result}`;
     });
-  }
-
-  emitOrder(event) {
-    localStorage.setItem('n_e_o', JSON.stringify(event));
-  }
-
-  notice(event) {
-    this.itn_E = JSON.parse(localStorage.getItem('itinerary'));
-    this.itn_F = JSON.parse(localStorage.getItem('french'));
-  }
-
-  modify(event) {
-    this.modified = event;
-    this.itn_E = JSON.parse(localStorage.getItem('itinerary'));
-    this.itn_F = JSON.parse(localStorage.getItem('french'));
-    this.addPost();
-  }
-
-  printDiv() {
-    var divToPrint = document.getElementById('printx');
-
-    var newWin = window.open('', 'Print-Window');
-
-    newWin.document.open();
-
-    newWin.document.write(
-      '<html><body onload="window.print()">' +
-        divToPrint.innerHTML +
-        '</body></html>'
-    );
-
-    newWin.document.close();
-
-    setTimeout(function() {
-      newWin.close();
-    }, 10);
-  }
-
-  pdf() {
-    html2canvas(document.getElementById('printx')).then(canvas => {
-      var img = canvas.toDataURL('image/png');
-      var doc = new jsPDF();
-      doc.addImage(img, 'JPEG', 10, 10, 190, 0);
-      doc.save('itinerary.pdf');
-    });
-  }
-
-  saveFrench_v(order, time) {
-    let index = itn_F.activities.findIndex(elem => elem.order == order);
-    // localStorage.setItem('itinerary', JSON.stringify(itn_F.activities[index]));
-    let activity = new Activity(
-      time,
-      itn_F.activities[index].name,
-      itn_F.activities[index].type,
-      itn_F.activities[index].length,
-      itn_F.activities[index].description,
-      itn_F.activities[index].fees,
-      itn_F.activities[index].img,
-      itn_F.activities[index].ageRange,
-      itn_F.activities[index].order,
-      itn_F.activities[index].kinderTo2,
-      itn_F.activities[index].Gr3To5,
-      itn_F.activities[index].Gr6To8
-    );
-    return activity;
-  }
-
-  saveEnglish_v(order, time) {
-    let index = itn_E.activities.findIndex(elem => elem.order == order);
-    //  localStorage.setItem('itinerary', JSON.stringify(itn_F.activities[index]));
-    let activity = new Activity(
-      time,
-      itn_E.activities[index].name,
-      itn_E.activities[index].type,
-      itn_E.activities[index].length,
-      itn_E.activities[index].description,
-      itn_E.activities[index].fees,
-      itn_E.activities[index].img,
-      itn_E.activities[index].ageRange,
-      itn_E.activities[index].order,
-      itn_E.activities[index].kinderTo2,
-      itn_E.activities[index].Gr3To5,
-      itn_E.activities[index].Gr6To8
-    );
-    return activity;
   }
 }

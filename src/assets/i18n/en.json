@@ -6,10 +6,16 @@
     "btn_create": "Create"
   },
   "main_footer": {
-      "slogan": "Your Country.<br /> Your History.<br /> Your Museum.",
-      "copyright_text": "&copy; Canadian Museum of History",
-      "privacy_link": ["https://www.historymuseum.ca/about/privacy-statement/", "Privacy Statement"],
-      "copyright_link": ["https://www.historymuseum.ca/about/copyright-and-permissions/", "Copyright"]
+    "slogan": "Your Country.<br /> Your History.<br /> Your Museum.",
+    "copyright_text": "&copy; Canadian Museum of History",
+    "privacy_link": [
+      "https://www.historymuseum.ca/about/privacy-statement/",
+      "Privacy Statement"
+    ],
+    "copyright_link": [
+      "https://www.historymuseum.ca/about/copyright-and-permissions/",
+      "Copyright"
+    ]
   },
   "facebook_link": "https://www.facebook.com/CanMusHistory/",
   "twitter_link": "https://twitter.com/CanMusHistory",
@@ -85,6 +91,8 @@
       "day": "Half-day",
       "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
       "OctoberToApril": true,
+      "Half-Day": true,
+      "Full-Day": false,
       "MayToJune": false,
       "KinderTo2": true,
       "Gr6To8": false,
@@ -129,6 +137,8 @@
       "day": "Full-day",
       "img": "http://localhost:4200/assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
       "OctoberToApril": false,
+      "Half-Day": false,
+      "Full-Day": true,
       "MayToJune": true,
       "KinderTo2": false,
       "Gr6To8": false,
@@ -177,6 +187,8 @@
       "day": "Full-day",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0093-Dm.jpg",
       "OctoberToApril": true,
+      "Half-Day": false,
+      "Full-Day": true,
       "MayToJune": false,
       "KinderTo2": false,
       "Gr6To8": true,
@@ -203,6 +215,8 @@
       "day": "Full-day",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0165-Dm.jpg",
       "OctoberToApril": true,
+      "Half-Day": false,
+      "Full-Day": true,
       "MayToJune": false,
       "KinderTo2": false,
       "Gr6To8": true,
@@ -216,6 +230,8 @@
       "day": "Half-day",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0145-Dm.jpg",
       "OctoberToApril": false,
+      "Half-Day": true,
+      "Full-Day": false,
       "MayToJune": true,
       "KinderTo2": false,
       "Gr6To8": false,
@@ -229,6 +245,8 @@
       "day": "Half-day",
       "img": "http://localhost:4200/assets/images/Nordik_Massana_12.20.16_0786.jpg",
       "OctoberToApril": true,
+      "Half-Day": true,
+      "Full-Day": false,
       "MayToJune": false,
       "KinderTo2": false,
       "Gr6To8": false,
@@ -242,6 +260,8 @@
       "day": "Full-day",
       "img": "http://localhost:4200/assets/images/IMG2018-0032-0215-Dm.jpg",
       "OctoberToApril": true,
+      "Half-Day": false,
+      "Full-Day": true,
       "MayToJune": false,
       "KinderTo2": true,
       "Gr6To8": false,

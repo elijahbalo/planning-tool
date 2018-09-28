@@ -19,17 +19,18 @@
           <span class="ms__aside-group-heading">Grade</span>
           <label class="ms__aside-label" for="grade-kindergarden_2">
             <span class="text">Kindergarden to Grade 2</span>
-            <input id="grade-kindergarden_2" name="grade-kindergarden_grade_2" type="checkbox" />
+            <input id="grade-kindergarden_2" [(ngModel)]="check1" name="grade-kindergarden_grade_2" type="checkbox" (change)="filterItems('KinderTo2', check1)"
+            />
             <span class="faux-checkbox unchecked"></span>
           </label>
           <label class="ms__aside-label" for="grade-3_6">
             <span class="text">Grades 3 to 6</span>
-            <input id="grade-3_6" name="grade-3_6" type="checkbox" />
+            <input id="grade-3_6" [(ngModel)]="check2" name="grade-3_6" type="checkbox" (change)="filterItems('Gr3To5', check2)" />
             <span class="faux-checkbox unchecked"></span>
           </label>
           <label class="ms__aside-label" for="grade-6_8">
             <span class="text">Grades 6 to 8</span>
-            <input id="grade-6_8" name="grade-6_8" type="checkbox" />
+            <input id="grade-6_8" [(ngModel)]="check3" name="grade-6_8" type="checkbox" (change)="filterItems('Gr6To8', check3)" />
             <span class="faux-checkbox unchecked"></span>
           </label>
         </fieldset>
@@ -37,12 +38,14 @@
           <span class="ms__aside-group-heading">Time of Year</span>
           <label class="ms__aside-label" for="toy-oct_apr">
             <span class="text">October to April</span>
-            <input id="toy-oct_apr" name="toy-oct_apr" type="checkbox" />
+            <input id="toy-oct_apr" [(ngModel)]="check4" name="toy-oct_apr" type="checkbox" (change)="filterItems('OctoberToApril', check4)"
+            />
             <span class="faux-checkbox unchecked"></span>
           </label>
           <label class="ms__aside-label" for="toy-may_jun">
             <span class="text">May to June</span>
-            <input id="toy-may_jun" name="toy-may_jun" type="checkbox" />
+            <input id="toy-may_jun" [(ngModel)]="check5" name="toy-may_jun" type="checkbox" (change)="filterItems('MayToJune', check5)"
+            />
             <span class="faux-checkbox unchecked"></span>
           </label>
         </fieldset>
@@ -50,12 +53,14 @@
           <span class="ms__aside-group-heading">Length</span>
           <label class="ms__aside-label" for="length-half">
             <span class="text">Half-Day</span>
-            <input id="length-half" name="length-half" type="checkbox" />
+            <input id="length-half" [(ngModel)]="check6" name="length-half" type="checkbox" (change)="filterItems('Half-Day', check6)"
+            />
             <span class="faux-checkbox unchecked"></span>
           </label>
           <label class="ms__aside-label" for="length-full">
             <span class="text">Full Day</span>
-            <input id="length-full" name="length-full" type="checkbox" />
+            <input id="length-full" [(ngModel)]="check7" name="length-full" type="checkbox" (change)="filterItems('Full-Day', check7)"
+            />
             <span class="faux-checkbox unchecked"></span>
           </label>
         </fieldset>
