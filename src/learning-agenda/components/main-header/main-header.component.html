@@ -1,7 +1,8 @@
 <div hidden>
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
         <symbol id="magnifying-glass" viewBox="0 0 25 25">
-            <path d="M15.67 18.005c-1.62 1.156-3.606 1.836-5.75 1.836C4.44 19.84 0 15.4 0 9.92 0 4.44 4.44 0 9.92 0c5.48 0 9.92 4.44 9.92 9.92 0 2.144-.68 4.13-1.835 5.75l6.518 6.52c.642.64.637 1.668 0 2.305l-.028.028c-.635.635-1.67.637-2.306 0l-6.52-6.518zm-5.75-.498c4.19 0 7.586-3.397 7.586-7.587 0-4.19-3.396-7.586-7.586-7.586S2.334 5.73 2.334 9.92c0 4.19 3.397 7.587 7.586 7.587z" />
+            <path d="M15.67 18.005c-1.62 1.156-3.606 1.836-5.75 1.836C4.44 19.84 0 15.4 0 9.92 0 4.44 4.44 0 9.92 0c5.48 0 9.92 4.44 9.92 9.92 0 2.144-.68 4.13-1.835 5.75l6.518 6.52c.642.64.637 1.668 0 2.305l-.028.028c-.635.635-1.67.637-2.306 0l-6.52-6.518zm-5.75-.498c4.19 0 7.586-3.397 7.586-7.587 0-4.19-3.396-7.586-7.586-7.586S2.334 5.73 2.334 9.92c0 4.19 3.397 7.587 7.586 7.587z"
+            />
         </symbol>
     </svg>
 </div>
@@ -9,8 +10,12 @@
 <header id="main-header" class="hismus gault">
     <div class="header">
         <ul class="hwm-bypass">
-            <li><a id="bypass-main" href="#main-content">{{'bypass_link.main' | translate}}</a></li>
-            <li><a id="bypass-footer" href="#secondary-footer">{{'bypass_link.footer' | translate}}</a></li>
+            <li>
+                <a id="bypass-main" href="#main-content">{{'bypass_link.main' | translate}}</a>
+            </li>
+            <li>
+                <a id="bypass-footer" href="#secondary-footer">{{'bypass_link.footer' | translate}}</a>
+            </li>
         </ul>
         <!--
         !! @Elijah: We need a locale class here (e.g. main-logo-fr), 
@@ -30,19 +35,39 @@
     </div>
     <nav id="main-menu" class="hismus">
         <ul>
-            <li class="menu-item"><a href="{{'main_header.visit_link.0' | translate}}">{{'main_header.visit_link.1' | translate}}</a></li>
-            <li class="menu-item"><a href="{{'main_header.exhibitions_link.0' | translate}}">{{'main_header.exhibitions_link.1' | translate}}</a></li>
-            <li class="menu-item"><a href="{{'main_header.learn_link.0' | translate}}">{{'main_header.learn_link.1' | translate}}</a></li>
-            <li class="menu-item"><a href="{{'main_header.shop_link.0' | translate}}">{{'main_header.shop_link.1' | translate}}</a></li>
-            <li class="menu-item"><a href="{{'main_header.support_link.0' | translate}}">{{'main_header.support_link.1' | translate}}</a></li>
-            <li class="menu-item"><a href="{{'main_header.about_link.0' | translate}}">{{'main_header.about_link.1' | translate}}</a></li>
+            <li class="menu-item">
+                <a href="{{'main_header.visit_link.0' | translate}}">{{'main_header.visit_link.1' | translate}}</a>
+            </li>
+            <li class="menu-item">
+                <a href="{{'main_header.exhibitions_link.0' | translate}}">{{'main_header.exhibitions_link.1' | translate}}</a>
+            </li>
+            <li class="menu-item">
+                <a href="{{'main_header.learn_link.0' | translate}}">{{'main_header.learn_link.1' | translate}}</a>
+            </li>
+            <li class="menu-item">
+                <a href="{{'main_header.shop_link.0' | translate}}">{{'main_header.shop_link.1' | translate}}</a>
+            </li>
+            <li class="menu-item">
+                <a href="{{'main_header.support_link.0' | translate}}">{{'main_header.support_link.1' | translate}}</a>
+            </li>
+            <li class="menu-item">
+                <a href="{{'main_header.about_link.0' | translate}}">{{'main_header.about_link.1' | translate}}</a>
+            </li>
             <li>
                 <a class="icon magnifying-glass" href="#search" (click)="$event.preventDefault()">
-                    <svg class="icon magnifying-glass"><use xlink:href="#magnifying-glass"></use></svg>{{'search_button' | translate}}
+                    <svg class="icon magnifying-glass">
+                        <use xlink:href="#magnifying-glass"></use>
+                    </svg>{{'search_button' | translate}}
                 </a>
             </li>
             <!--@ Elijah: Need to move language business logic to main header component. -->
-            <li><a id="language-toggle" href="#1" (click)="$event.preventDefault()">{{'language_toggle_button' | translate}}</a></li>
+            <li *ngIf="en">
+                <a id="language-toggle" href="javascript:void(0)" (click)="switchLanguage('fr')">FRANÇAIS</a>
+            </li>
+            <li *ngIf="fr">
+                <a id="language-toggle" href="javascript:void(0)" (click)="switchLanguage('en')">ENGLISH</a>
+            </li>
         </ul>
     </nav>
-</header><!--/#main-header-->
+</header>
+<!--/#main-header-->

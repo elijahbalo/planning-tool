@@ -5,6 +5,18 @@
     "btn_browse": "Feuilleter",
     "btn_create": "Créer"
   },
+  "main_header": {
+    "menu_button": "Main Menu",
+    "visit_link": ["https://www.historymuseum.ca/visit/", "Visite"],
+    "exhibitions_link": [
+      "https://www.historymuseum.ca/exhibitions/",
+      "Des expositions"
+    ],
+    "learn_link": ["https://www.historymuseum.ca/learn/", "Apprendre"],
+    "shop_link": ["https://www.historymuseum.ca/shop/", "Boutique"],
+    "support_link": ["https://www.historymuseum.ca/support/", "Soutien"],
+    "about_link": ["https://www.historymuseum.ca/about/", "Sur"]
+  },
   "main_footer": {
     "slogan": "Votre pays.<br /> Votre histoire.<br /> Votre musée.",
     "copyright_text": "&copy; Musée canadien de l'histoire",

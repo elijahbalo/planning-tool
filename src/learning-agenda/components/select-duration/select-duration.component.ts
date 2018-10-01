@@ -12,6 +12,8 @@ export class SelectDurationComponent implements OnInit {
   prev: EventEmitter<any> = new EventEmitter<any>();
   @Input()
   model;
+  @Input()
+  enabled;
   constructor() {}
 
   ngOnInit() {
@@ -19,13 +21,14 @@ export class SelectDurationComponent implements OnInit {
       this.model.options = JSON.parse(localStorage.getItem('f_length'));
     } */
   }
+  enable() {
+    this.enabled = true;
+  }
 
   next() {
     localStorage.setItem('day', JSON.stringify(this.model));
-    if (JSON.parse(localStorage.getItem('day')) == '') {
-    } else {
-      this.nxt.emit(true);
-      this.prev.emit('step2');
-    }
+
+    this.nxt.emit(true);
+    this.prev.emit('step2');
   }
 }

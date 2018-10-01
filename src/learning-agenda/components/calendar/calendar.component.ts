@@ -17,9 +17,16 @@ export class CalendarComponent implements OnInit {
   set = false;
   date: Date;
   js_date: Date;
+  @Input()
+  enabled = false;
+
+  click = false;
   constructor(private calendar: NgbCalendar) {}
   ngOnInit() {
     this.js_date = null;
+  }
+  ngOnChanges() {
+    this.click = true;
   }
   get today() {
     return new Date();
@@ -32,18 +39,23 @@ export class CalendarComponent implements OnInit {
 
     this.js_date = new Date(year, month, day);
     if (this.js_date) {
+      this.click = true;
+      console.log(this.click);
+      this.ngOnChanges();
       return this.js_date;
     } else {
       return 'no date selected';
     }
   }
 
+  enable() {
+    this.enabled = true;
+  }
+
   next() {
     this.newDate.emit(this.js_date);
-    if (this.js_date == null) {
-    } else {
-      this.nxt.emit(true);
-      this.prev.emit('step3');
-    }
+
+    this.nxt.emit(true);
+    this.prev.emit('step3');
   }
 }

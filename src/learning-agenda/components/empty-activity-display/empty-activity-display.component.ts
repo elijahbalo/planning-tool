@@ -18,6 +18,8 @@ export class EmptyActivityDisplayComponent implements OnInit {
   disable;
   @Input()
   isClickable;
+  @Input()
+  enabled;
   constructor() {}
 
   ngOnInit() {}
@@ -28,7 +30,9 @@ export class EmptyActivityDisplayComponent implements OnInit {
     this.addItem.emit(false);
     localStorage.setItem('num', JSON.stringify(num + 1));
   }
-
+  enable() {
+    this.enabled = true;
+  }
   next() {
     // localStorage.setItem('f_grade1', JSON.stringify(this.model.options));
     if (

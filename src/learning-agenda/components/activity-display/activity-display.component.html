@@ -1,16 +1,16 @@
 <span class="activity-list-item__time">{{tConvert(act.time)}}</span>
 
 <div *ngIf="showSwapBox">
-    <ul class="la-activities__micro-list">
-        <li *ngFor="let activity of activities">
-            <app-swap-box [presentItem]="act" [activity]="activity" [newSelection]="newSelection" [itn]="itn" (selectedItm)="replaceItem($event)"></app-swap-box>
-        </li>
-    </ul>
+  <ul class="la-activities__micro-list">
+    <li *ngFor="let activity of activities">
+      <app-swap-box [presentItem]="act" [activity]="activity" [newSelection]="newSelection" [itn]="itn" (selectedItm)="replaceItem($event)"></app-swap-box>
+    </li>
+  </ul>
 </div>
 
 <main *ngIf="!showSwapBox" class="activity-list-item__main">
   <figure class="activity-list-item__figure">
-    <a class="activity-list-item__image-link" href="#figure">
+    <a class="activity-list-item__image-link" href="javascript:void(0)" (click)="toggleModal()">
       <img class="activity-list-item__image" src="{{act.img}}" width="227" height="161" alt="" />
     </a>
     <button *ngIf="showDelete" class="activity-list-item__rem-button" (click)="removeActivity(act.order)">
@@ -21,7 +21,9 @@
   <div class="activity-list-item__body">
     <span class="activity-list-item__title">{{act.name}}</span>
     <span class="activity-list-item__desc" appEllipsis>{{act.description}}
-      <a href="#desc">Full Description</a>
+      <a href="javascript:void(0)" style="cursor:pointer">Full Description</a>
     </span>
   </div>
 </main>
+
+<app-details [modal]="modal" [item]="act" (set)="setModalFromChild($event)"></app-details>

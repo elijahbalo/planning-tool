@@ -1,41 +1,46 @@
-<div *ngIf="modal" class="modal">
+<div *ngIf="modal">
 
-    <!-- Modal content -->
-
- 
-        
-        <div class="hide" (click)="toggleModal()">Hide Details</div>
- 
+  <!-- Modal content -->
 
 
+  <div class="la-modal on">
+    <div class="la-modal__container">
+      <main class="la-modal__main">
+        <div class="la-modal__main-wrapper">
+          <button class="la-button la-modal__close-button" (click)="toggleModal()">Hide Details</button>
+          <header class="la-modal__header" [ngStyle]="{ 'background-image': 'url(' + item.img + ')'}">
+            <div class="la-modal__header-main">
+              <span class="la-modal__sub-heading">{{item.type}}</span>
+              <span class="la-modal__heading">{{item.name}}</span>
+            </div>
+            <span class="la-modal__image-cover"></span>
+          </header>
+          <div class="la-modal__summary">
+            <p>T{{item.description}}</p>
+            <button class="la-button la-button--clr-primary" (click)="toggleHide()">Show Full Information</button>
+          </div>
+          <!--/.la-modal__summary-->
+          <div *ngIf="hide" class="la-modal__body">
+            <p>This course builds students' capacity to conduct quantitative research in education at the doctoral level. It
+              covers all topics related to experimental and quasi-experimental design and the application of univariate statistics
+              to educational research problems.</p>
 
-    <div class="modal-content">
-     <div class="banner">
-        <img class="img-responsive pics" src="{{item.img}}">  
-        <div class="text">
-          <div class="type">{{item.type}}</div>
-          <div class="title">{{item.name}}</div>
+            <p>In doing so, the course addresses the basic theory underlying quantitative approaches, selection of an initial
+              research question, the types of questions best suited to quantitative methods, managing and analyzing quantitative
+              data, external and internal validity, reliability and objectivity. This course also provides opportunities
+              to analyze quantitative data.</p>
+
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id
+              ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+              odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+              justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla
+              non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          </div>
         </div>
-      </div>
-     
-
-
-      <div class="description">{{item.description}}</div>
-      <div class="show" (click)="toggleHide()">SHOW FULL INFORMATION</div>
-      
+        <!--/.la-modal__main-->
+      </main>
     </div>
-    <div *ngIf="hide" class="hidden">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-      Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-       nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. 
-      Nulla consequat massa quis enim. Donec pede justo, fringilla vel,
-       aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-       Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. 
-       Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, 
-       eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
-       Quisque rutrum.
-        Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
-        Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget 
-      
-      </div>
   </div>
-  
+</div>

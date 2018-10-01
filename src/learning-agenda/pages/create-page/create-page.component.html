@@ -78,10 +78,10 @@
             -->
       <app-header-old [title]="createTitle" (back)="create_Back($event)"></app-header-old>
 
-      <app-select-grade *ngIf="step1" (nxt)="setStep2($event)" (prev)="setPrev($event)" [model]="grade_select.options"></app-select-grade>
+      <app-select-grade *ngIf="step1" (nxt)="setStep2($event)" (prev)="setPrev($event)" [model]="grade_select.options" [enabled]="enabled"></app-select-grade>
       <!--/.msm__sub-section-->
-      <app-select-duration *ngIf="step2" (nxt)="setStep3($event)" (prev)="setPrev($event)" [model]="day_select.options"></app-select-duration>
-      <app-calendar *ngIf="step3" (nxt)="setStep4($event)" (prev)="setPrev($event)" (newDate)="setDate($event)"></app-calendar>
+      <app-select-duration *ngIf="step2" (nxt)="setStep3($event)" (prev)="setPrev($event)" [model]="day_select.options" [enabled]="e_grade"></app-select-duration>
+      <app-calendar *ngIf="step3" (nxt)="setStep4($event)" (prev)="setPrev($event)" (newDate)="setDate($event)" [enabled]="e_calendar"></app-calendar>
 
 
       <!--/.msm__sub-section-->
@@ -126,7 +126,7 @@
           </li> -->
           <li class="activity-list-item activity-list-item--add">
             <app-empty-activity-display (addItem)="addItem($event)" (nxt)="setStep5($event)" (prev)="setPrev($event)" [showNext]="showNext"
-              [disable]="max" [isClickable]="clickable"></app-empty-activity-display>
+              [disable]="max" [isClickable]="clickable" [enabled]="e_activities"></app-empty-activity-display>
 
           </li>
         </ul>

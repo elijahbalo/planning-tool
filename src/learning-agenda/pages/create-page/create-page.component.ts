@@ -25,6 +25,7 @@ export class CreatePageComponent implements OnInit {
   itn__act;
   content: string;
   m_activities: any[];
+  g_filter = [];
   url;
   rId: string;
   modified = false;
@@ -50,6 +51,12 @@ export class CreatePageComponent implements OnInit {
   c_time;
   enableSwap = false;
   enableDelete = false;
+
+  enabled;
+  e_grade;
+  e_calendar;
+  e_activities;
+
   itn_E = [];
   itn_F = [];
   titles;
@@ -105,7 +112,10 @@ export class CreatePageComponent implements OnInit {
   ) {}
   ngOnInit() {
     localStorage.clear();
-
+    this.enabled = false;
+    this.e_grade = false;
+    this.e_calendar = false;
+    this.e_activities = false;
     this.setCreate();
     localStorage.setItem('lang', JSON.stringify('en'));
     this.displayItem();
@@ -147,15 +157,18 @@ export class CreatePageComponent implements OnInit {
     }
     if (JSON.parse(localStorage.getItem('f_grade'))) {
       this.grade_select.options = JSON.parse(localStorage.getItem('f_grade'));
+      this.enabled = true;
     } else {
       this.grade_select.options = '';
     }
 
     if (JSON.parse(localStorage.getItem('day'))) {
       this.day_select.options = JSON.parse(localStorage.getItem('day'));
+      this.e_grade = true;
     } else {
       this.day_select.options = '';
     }
+    this.filterActivities();
   }
 
   navigateToBrowsePage() {
@@ -208,6 +221,7 @@ export class CreatePageComponent implements OnInit {
       .substr(2, 9);
   }
   update(event) {
+    this.e_activities = true;
     this.ngOnChanges();
   }
   updateTog(event) {
@@ -267,7 +281,94 @@ export class CreatePageComponent implements OnInit {
     $('#step4').prop('checked', false);
     $('#step5').prop('checked', false);
   }
+  jumpStep1(event) {
+    this.step1 = event;
+    this.step1Done = false;
+    if (!this.step2Done) {
+      this.step2 = false;
+    }
+    if (!this.step3Done) {
+      this.step3 = false;
+    }
+    if (!this.step4Done) {
+      this.step4 = false;
+    }
+    if (!this.step5Done) {
+      this.step5 = false;
+    }
+    this.ngOnChanges();
+  }
+  jumpStep2(event) {
+    this.step2 = event;
+    this.step2Done = false;
+    if (!this.step1Done) {
+      this.step1 = false;
+    }
+    if (!this.step3Done) {
+      this.step3 = false;
+    }
+    if (!this.step4Done) {
+      this.step4 = false;
+    }
+    if (!this.step5Done) {
+      this.step5 = false;
+    }
+    this.ngOnChanges();
+  }
+  jumpStep3(event) {
+    this.step3 = event;
+    this.step3Done = false;
 
+    if (!this.step2Done) {
+      this.step2 = false;
+    }
+    if (!this.step1Done) {
+      this.step1 = false;
+    }
+    if (!this.step4Done) {
+      this.step4 = false;
+    }
+    if (!this.step5Done) {
+      this.step5 = false;
+    }
+    this.ngOnChanges();
+  }
+  jumpStep4(event) {
+    this.step4 = event;
+    this.step4Done = false;
+
+    if (!this.step2Done) {
+      this.step2 = false;
+    }
+    if (!this.step3Done) {
+      this.step3 = false;
+    }
+    if (!this.step1Done) {
+      this.step1 = false;
+    }
+    if (!this.step5Done) {
+      this.step5 = false;
+    }
+    this.ngOnChanges();
+  }
+  jumpStep5(event) {
+    this.step5 = event;
+    this.step5Done = false;
+
+    if (!this.step2Done) {
+      this.step2 = false;
+    }
+    if (!this.step3Done) {
+      this.step3 = false;
+    }
+    if (!this.step4Done) {
+      this.step4 = false;
+    }
+    if (!this.step1Done) {
+      this.step1 = false;
+    }
+    this.ngOnChanges();
+  }
   setStep2(event) {
     this.step1 = false;
     this.step2 = event;
@@ -398,5 +499,25 @@ export class CreatePageComponent implements OnInit {
     let index = itn_E.itineraries.findIndex(elem => elem.id == item.id);
 
     return itn_E.itineraries[index].activities;
+  }
+
+  filterActivities() {
+    if (JSON.parse(localStorage.getItem('f_grade'))) {
+      let grade = JSON.parse(localStorage.getItem('f_grade'));
+
+      if (grade == 'KinderTo2') {
+        this.activities = this.activities.filter(
+          elem => elem.kinderTo2 == true
+        );
+      }
+
+      if (grade == 'Gr3To5') {
+        this.activities = this.activities.filter(elem => elem.Gr3To5 == true);
+      }
+
+      if (grade == 'Gr6To8') {
+        this.activities = this.activities.filter(elem => elem.Gr6To8 == true);
+      }
+    }
   }
 }

@@ -16,6 +16,8 @@ export class SelectGradeComponent implements OnInit {
   check2;
   check3;
   g_filter = [];
+  @Input()
+  enabled = false;
   constructor() {}
 
   ngOnInit() {
@@ -56,12 +58,14 @@ export class SelectGradeComponent implements OnInit {
     }
   }
 
+  enable() {
+    this.enabled = true;
+  }
+
   next() {
     localStorage.setItem('f_grade', JSON.stringify(this.model));
-    if (JSON.parse(localStorage.getItem('f_grade')) == '') {
-    } else {
-      this.nxt.emit(true);
-      this.prev.emit('step1');
-    }
+
+    this.nxt.emit(true);
+    this.prev.emit('step1');
   }
 }

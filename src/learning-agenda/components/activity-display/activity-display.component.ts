@@ -19,6 +19,8 @@ import { DEFAULT_STYLES } from 'ngx-pagination/dist/template';
 export class ActivityDisplayComponent implements OnInit {
   showSwapBox = false; // set to true if swap box is to be reavealed
   @Input()
+  enabled = false;
+  @Input()
   itn;
   @Input()
   showSwap;
@@ -36,6 +38,7 @@ export class ActivityDisplayComponent implements OnInit {
   @Output()
   toggle: EventEmitter<any> = new EventEmitter<any>();
   previousItem;
+  modal = false;
   order;
   constructor(
     private db: AngularFirestore,
@@ -62,6 +65,19 @@ export class ActivityDisplayComponent implements OnInit {
       if (act_E.length >= 2)
         this.act.time = this.timeConvert(act_E[act_E.length - 2].time, 45);
     }
+  }
+  enable() {
+    this.enabled = true;
+  }
+
+  toggleModal() {
+    if (this.modal == false) this.modal = true;
+    else {
+      this.modal = false;
+    }
+  }
+  setModalFromChild(event) {
+    this.modal = event;
   }
 
   toggleSwapBox(order) {
