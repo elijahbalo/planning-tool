@@ -5,11 +5,14 @@
 <section class="main-section">
   <div class="main-section__wrapper">
 
+    <!--
     <button (click)="switchLanguage('en')">en</button>
-
     <button (click)="switchLanguage('fr')">fr</button>
+    -->
 
-    <aside class="main-section__aside">
+    <button (click)="onFilterBtnSelect()" class="la-button la-button--filter">Filters</button>
+
+    <aside class="main-section__aside" [ngClass]="{on: showFilterAside}">
       <header class="main-section__aside-header">
         <span class="main-section__aside-heading">Filter By</span>
         <button class="ms__aside-header-btn" (click)="clearAll()">Clear All</button>

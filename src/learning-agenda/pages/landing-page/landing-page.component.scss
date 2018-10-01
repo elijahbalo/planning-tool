@@ -93,6 +93,8 @@ $subheading_font_size: 28;
     height:100%;
     overflow-y:auto;
     background:rgba(0,0,0,0.8);
+    display:none;
+    &.on {display:block;}
 }
 .la-modal__container {
     padding:30px 30px 100px 30px;

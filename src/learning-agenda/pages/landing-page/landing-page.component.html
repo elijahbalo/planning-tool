@@ -2,16 +2,16 @@
 
 <main class="main">
     <div class="content-body">
-        <h1 class="heading">Plan a School Trip</h1>
-        <p class="subheading">Plan Your Day at the Museum</p>
+        <h1 class="heading">{{'landing_page.heading' | translate}}</h1>
+        <p class="subheading">{{'landing_page.subheading' | translate}}</p>
         <div class="buttons">
-            <a class="track-button" href="#browse" (click)="navigateToBrowsePage($event)">Browse Itineraries</a>
-            <a class="track-button" href="#create" (click)="navigateToCreatePage($event)">Create Your Own</a>
+            <a class="track-button" href="#browse" (click)="navigateToBrowsePage($event)">{{'landing_page.button_browse' | translate}}</a>
+            <a class="track-button" href="#create" (click)="navigateToCreatePage($event)">{{'landing_page.button_create' | translate}}</a>
         </div>
     </div>
 </main>
 
-<div class="la-modal">
+<div class="la-modal on" style="display:none;">
     <div class="la-modal__container">
         <main class="la-modal__main">
             <div class="la-modal__main-wrapper">
