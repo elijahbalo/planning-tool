@@ -6,7 +6,7 @@ $subheading_font_size: 28;
 
 /////////////////////////////////////////////////////////////////////////
 
-main {
+.main {
     clear:both;
     height:100vh;
     display:block; // inline by default.. (annoying)
@@ -57,7 +57,7 @@ main {
 
 // Media queries (breaking points) -- >
 @media (min-width:#{$breaking_point_base_context}px) {
-    main {font-size:21px;}
+    .main {font-size:21px;}
 }
 @media (max-width:#{$breaking_point_sml}px) {
     /**
@@ -65,20 +65,106 @@ main {
     * scale down everything relatively with one property.
     */
     // main {background:blue;}
-    main {font-size:12px;}
+    .main {font-size:12px;}
 }
 @media (max-width:#{$breaking_point_xx_sml}px) {
     // main {background:lime;}
-    main {font-size:11px;}
+    .main {font-size:11px;}
 }
 @media (max-width:#{$breaking_point_xxx_sml}px) {
     // main {background:gold;}
-    main {font-size:10px;}
+    .main {font-size:10px;}
 }
 @media (max-width:#{nth($main_header_breaking_points, 7)}px), (max-height:650px) {
-    main {margin-top:0;min-height:400px;height:50vh;}
+    .main {margin-top:0;min-height:400px;height:50vh;}
 }
 
+/////////////////////////////////////////////////////////////////////////
+
+// Modal stuff, will componentize after.
+// When modal on, we need to assign the "scroll-none" class to the body element.
+
+.la-modal {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:9999;
+    width:100%;
+    height:100%;
+    overflow-y:auto;
+    background:rgba(0,0,0,0.8);
+}
+.la-modal__container {
+    padding:30px 30px 100px 30px;
+    @include borderbox;
+    display:table;
+    width:100%;
+    height:100%;
+}
+.la-modal__main {
+    display:table-cell;
+    vertical-align:middle;
+    p {margin-bottom:30px;line-height:1.7;}
+    p:last-child {margin:0;}
+}
+.la-modal__main-wrapper {
+    max-width:860px;
+    margin:0 auto;
+}
+.la-modal__header {
+    position:relative;
+    padding:300px 0 40px 40px;
+    background-color:$chwm_grey_50;
+    background-repeat:no-repeat;
+    background-position:50%;
+    background-size:cover;
+    font-family:$primary_font_family;
+    text-transform:uppercase;
+    color:#fff;
+    clear:both;
+}
+.la-modal__image-cover {
+    z-index:0;
+    display:block;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    @include verticalGradient(rgba(0,0,0,0) 30%, rgba(0,0,0,0.8));
+}
+.la-modal__header-main {
+    position:relative;
+    z-index:1;
+}
+.la-modal__sub-heading {
+    display:block;
+    margin-bottom:7px;
+}
+.la-modal__heading {
+    font-size:21px;
+    display:block;
+}
+.la-modal__close-button {
+    margin:0 auto 30px auto;
+    float:none;
+}
+.la-modal__summary {
+    padding:40px;
+    background:#232425;
+    color:#fff;
+    font-size:21px;
+    p {max-width:640px;}
+}
+.la-modal__summary .la-button {
+    float:none;
+    margin-bottom:40px;
+}
+.la-modal__body {
+    padding:40px;
+    padding-bottom:60px;
+    background:#fff;
+}
 
 
 
