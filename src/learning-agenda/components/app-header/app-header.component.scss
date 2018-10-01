@@ -59,14 +59,11 @@ a {
     font-size:($breadcrumb_link_font_size/16)+em;
     margin-bottom:(20/$breadcrumb_link_font_size)+em;
     &:after {
-        // Will come back to this later.
-        content:'';
-        width:7px;
-        height:10px;
-        background:grey;
-        display:inline-block;
+        @include css_arrow("right", "6px", "5px");
         margin-left:(12/$breadcrumb_link_font_size)+em;
+        display:inline-block;
     }
+    &:active {opacity:0.5;}
 }
 .app-header__heading {
     text-transform:uppercase;
