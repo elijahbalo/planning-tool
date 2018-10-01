@@ -3,8 +3,7 @@
     <figure class="la-micro-list__figure">
       <span class="la-micro-list__figure-icon"></span>
       <!-- To do: We'll need to eventually optimize our images. -->
-      <img class="la-micro-list__image" src="/assets/images/IMG2018-0032-0197-Dm-thumbnail.jpg" width="100" height="100" alt=""
-      />
+      <img class="la-micro-list__image" src="{{activity.img}}" width="100" height="100" alt="" />
     </figure>
     <span class="la-micro-list__title">{{activity.name}}</span>
     <span class="la-micro-list__desc">{{activity.description}}
@@ -15,8 +14,7 @@
     <li *ngIf="!selected()" class="la-micro-list__item swap">
       <figure class="la-micro-list__figure">
         <span class="la-micro-list__figure-icon"></span>
-        <img class="la-micro-list__image" src="/assets/images/IMG2018-0032-0197-Dm-thumbnail.jpg" width="100" height="100" alt=""
-          (click)="selectItem(activity)" />
+        <img class="la-micro-list__image" src="{{activity.img}}" width="100" height="100" alt="" (click)="selectItem(activity)" />
       </figure>
       <span class="la-micro-list__title">{{activity.name}}</span>
       <span class="la-micro-list__desc">{{activity.description}}
@@ -30,8 +28,7 @@
     <li class="la-micro-list__item">
       <figure class="la-micro-list__figure">
         <span class="la-micro-list__figure-icon"></span>
-        <img class="la-micro-list__image" src="/assets/images/IMG2018-0032-0197-Dm-thumbnail.jpg" width="100" height="100" alt=""
-          (click)="selectItem(activity)" />
+        <img class="la-micro-list__image" src="{{activity.img}}" width="100" height="100" alt="" (click)="selectItem(activity)" />
       </figure>
       <span class="la-micro-list__title">{{activity.name}}</span>
       <span class="la-micro-list__desc">{{activity.description}}

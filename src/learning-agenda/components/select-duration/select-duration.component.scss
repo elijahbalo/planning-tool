@@ -1,23 +1,139 @@
-.my-btn2 {
-  color: #fff;
-  padding: 1rem;
-  width: 170px;
-  margin-top: 2rem;
-  background: red;
+@import 'variables.scss';
+@import 'mixins.scss';
+
+/////////////////////////////////////////////////////////////////////////
+
+// Sidebar
+
+$checklist_bottom_mar: 26px;
+$msm_label_faux_radio_size: 22px;
+$msm_label_hor_padding: 20px;
+
+.ms__aside-checklist {
+  color: #9b9b9b;
+  font-family: $primary_font_family;
+}
+
+$checklist_item_base_name: '.checklist-item';
+
+// Base selector styles.
+#{$checklist_item_base_name} {
+  margin-bottom: $checklist_bottom_mar;
+  position: relative;
+}
+// Sub class styles for ".checklist-item" component.
+// E.g. checklist-item--done
+#{$checklist_item_base_name + '--done'} {
+  color: $chwm_grey_70;
+  &:after {
+    @include faux_checkbox('true');
+    display: block;
+    content: '';
+  }
+  span {
+    // Link "mirage".
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: lighten($chwm_grey_70, 20%);
+    }
+  }
+}
+#{$checklist_item_base_name + '--on'} {
+  $hor_padding: 20px;
+  margin-top: -$checklist_bottom_mar/4;
+  margin-bottom: $checklist_bottom_mar * 0.75;
+  // width:calc(100% + #{$hor_padding});
+  padding: 15px $hor_padding;
+  margin-left: -$hor_padding;
+  background: #e5e5e5;
+  color: $chwm_grey_70;
+  &:first-child {
+    margin-top: 0;
+  }
+  &:after {
+    display: none;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////
+
+.msm__label-input-grp {
+  margin-bottom: 30px;
+  max-width: 650px;
+}
+.la__label-input {
+  border: 1px solid #e5e5e5;
+  position: relative;
+  margin-top: -1px;
+  &:first-child {
+    margin-top: 0;
+  }
+  input {
+    z-index: 5;
+    position: absolute;
+    left: -999em;
+    top: 0;
+  }
+  input:checked + .msm__label {
+    .faux-radio {
+      border-color: $faux_input_on_colour;
+    }
+    .faux-radio:after {
+      display: block;
+      background: $faux_input_on_colour;
+    }
+  }
+  input:focus + .msm__label {
+    z-index: 20;
+    background: $chwm_grey_50;
+    outline: 1px solid $chwm_grey_50;
+    .faux-radio {
+      border-color: #fff;
+    }
+    .faux-radio:after {
+      display: block;
+      background: #fff;
+    }
+    .text {
+      color: #fff;
+    }
+  }
+}
+.faux-radio {
+  display: block;
+  float: left;
+  @include border-radius(50%);
+  width: $msm_label_faux_radio_size;
+  height: $msm_label_faux_radio_size;
+  border: 3px solid #c1c1c1;
+  @include borderbox;
+  &:after {
+    display: none; // used for on (selected) state.
+    content: '';
+    width: 56%;
+    height: 56%;
+    background: #fff;
+    @include border-radius(50%);
+    position: absolute;
+    @include transform(translateY(-50%) translateX(-50%));
+    top: 50%;
+    left: 50%;
+  }
+  // Below...
+  // specific to layout, decouple (later).
+  @include vertical_align;
+  position: absolute;
+  left: $msm_label_hor_padding;
+}
+.msm__label {
+  border: 3px solid transparent;
+  padding: 20px $msm_label_hor_padding;
+  padding-left: $msm_label_faux_radio_size + ($msm_label_hor_padding * 2);
+  background: #fff;
+  display: block;
+  @include borderbox;
+  position: relative;
   cursor: pointer;
-}
-
-.select {
-  padding: 2%;
-  border-color: grey;
-  border-width: thin;
-  border-style: solid;
-}
-
-.radio {
-  margin-left: 1%;
-}
-
-.label {
-  margin-left: 2%;
 }

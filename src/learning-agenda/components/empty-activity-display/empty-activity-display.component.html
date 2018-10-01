@@ -1,6 +1,12 @@
 <span class="activity-list-item__time">
 </span>
 <div class="activity-list-item__body">
-  <button class="la-button la-button--add" (click)="addActivity()">Add Another Activity</button>
-  <button *ngIf="showNext" class="la-button la-button--clr-primary">Next</button>
+  <div *ngIf="isClickable">
+    <button *ngIf="!disable" class="la-button la-button--add" (click)="addActivity()">Add Another Activity</button>
+  </div>
+  <div *ngIf="!isClickable">
+    <button *ngIf="!disable" class="la-button la-button--add">Add Another Activity</button>
+  </div>
+  <button *ngIf="disable" class="la-button la-button--add">Maximum Activities</button>
+  <button *ngIf="showNext" class="la-button la-button--clr-primary" (click)="next()">Next</button>
 </div>

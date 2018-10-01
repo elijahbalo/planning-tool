@@ -12,7 +12,7 @@
     <aside class="main-section__aside">
       <header class="main-section__aside-header">
         <span class="main-section__aside-heading">Filter By</span>
-        <button class="ms__aside-header-btn">Clear All</button>
+        <button class="ms__aside-header-btn" (click)="clearAll()">Clear All</button>
       </header>
       <div class="ms__aside-groups">
         <fieldset class="ms__aside-group">
@@ -24,7 +24,7 @@
             <span class="faux-checkbox unchecked"></span>
           </label>
           <label class="ms__aside-label" for="grade-3_6">
-            <span class="text">Grades 3 to 6</span>
+            <span class="text">Grades 3 to 5</span>
             <input id="grade-3_6" [(ngModel)]="check2" name="grade-3_6" type="checkbox" (change)="filterItems('Gr3To5', check2)" />
             <span class="faux-checkbox unchecked"></span>
           </label>
@@ -151,7 +151,8 @@
               </div>
             </li>
             <li *ngFor="let act of itn__act" class="activity-list-item">
-              <app-activity-display [act]="act" [activities]="activities" (itmDel)="update($event)" (itmRpl)="update($event)" [itn]="itn__act"></app-activity-display>
+              <app-activity-display [act]="act" [activities]="activities" (itmDel)="update($event)" (itmRpl)="update($event)" [itn]="itn__act"
+                (toggle)="updateTog($event)"></app-activity-display>
             </li>
             <!--  <li class="activity-list-item">
               <span class="activity-list-item__time">10:00 AM</span>
@@ -171,7 +172,7 @@
               </div>
             </li> -->
             <li class="activity-list-item activity-list-item--add">
-              <app-empty-activity-display (addItem)="addItem($event)" [showNext]="showNext"></app-empty-activity-display>
+              <app-empty-activity-display (addItem)="addItem($event)" [showNext]="showNext" [disable]="max" [isClickable]="clickable"></app-empty-activity-display>
 
             </li>
           </ul>

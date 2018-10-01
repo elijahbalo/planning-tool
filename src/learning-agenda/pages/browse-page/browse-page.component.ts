@@ -11,6 +11,7 @@ declare function require(name: string);
 import { TranslationService } from '../../../services/translation.service';
 var itn_E = require('../../../assets/i18n/en.json');
 var itn_F = require('../../../assets/i18n/fr.json');
+
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -27,12 +28,15 @@ export class BrowsePageComponent implements OnInit {
   dis = false; // var for back button toggle
   arrive; // var that holds first activity of every itinerary
   activities;
+  max;
   content: string;
+  clickable;
   m_activities: any[];
   url;
   rId: string;
   showNext;
   g_filter = [];
+  filters = [];
   margins = {
     top: 70,
     bottom: 40,
@@ -124,21 +128,48 @@ export class BrowsePageComponent implements OnInit {
 
   ngOnChanges() {
     let lang = JSON.parse(localStorage.getItem('lang'));
+    let num = JSON.parse(localStorage.getItem('num'));
+    let day = JSON.parse(localStorage.getItem('day'));
+    if (day == 'Half-day') {
+      if (num == 4) {
+        this.max = true;
+      } else {
+        this.max = false;
+      }
+    }
+    if (day == 'Full-day') {
+      if (num == 7) {
+        this.max = true;
+      } else {
+        this.max = false;
+      }
+    }
     if (lang == 'en') {
+      this.items = itn_E.itineraries;
       this.arrive = itn_E.arrive;
       this.itn__act = JSON.parse(localStorage.getItem('itn_En'));
       this.activities = itn_E.activities;
     } else {
+      this.items = itn_F.itineraries;
       this.arrive = itn_F.arrive;
       this.itn__act = JSON.parse(localStorage.getItem('itn_Fr'));
       this.activities = itn_F.activities;
     }
   }
 
+  navigateToCreatePage(event) {
+    event.preventDefault();
+    this.router.navigate(['online-visit-planning-tool/CreatePage']);
+  }
+
   update(event) {
     this.ngOnChanges();
   }
+  updateTog(event) {
+    this.clickable = event;
+  }
   addItem(event) {
+    this.clickable = event;
     let emptyItem = {};
     let act_E = JSON.parse(localStorage.getItem('itn_En'));
     let act_F = JSON.parse(localStorage.getItem('itn_Fr'));
@@ -150,10 +181,17 @@ export class BrowsePageComponent implements OnInit {
   }
 
   displayItem(item) {
+    this.clickable = true;
+    let num = 0;
     this.dis = true;
     this.itn = item;
+    localStorage.setItem('day', JSON.stringify(item.day));
     let activities = [];
-    item.activities.map(act => activities.push(act));
+    item.activities.map(act => {
+      activities.push(act);
+      num = num + 1;
+    });
+    localStorage.setItem('num', JSON.stringify(num));
     localStorage.setItem('itn_En', JSON.stringify(activities));
     localStorage.setItem('itn_Fr', JSON.stringify(this.saveFrench_v(item)));
     let lang = JSON.parse(localStorage.getItem('lang'));
@@ -250,8 +288,195 @@ export class BrowsePageComponent implements OnInit {
       this.g_filter.push(field);
       console.log(this.g_filter);
     }
+    this.filter();
   }
-  /* filter(){
-    for (var i=0; i<this.g_filter.length)
-  } */
+
+  clearAll() {
+    for (var i = 0; i < this.g_filter.length; i++) {
+      if (this.g_filter[i] == 'KinderTo2') {
+        $('#grade-kindergarden_2').prop('checked', false);
+        this.filterItems('KinderTo2', false);
+      }
+      if (this.g_filter[i] == 'Gr3To5') {
+        $('#grade-3_6').prop('checked', false);
+        this.filterItems('Gr3To5', false);
+      }
+      if (this.g_filter[i] == 'Gr6To8') {
+        $('#grade-6_8').prop('checked', false);
+        this.filterItems('Gr6To8', false);
+      }
+      if (this.g_filter[i] == 'OctoberToApril') {
+        $('#toy-oct_apr').prop('checked', false);
+        this.filterItems('OctoberToApril', false);
+      }
+      if (this.g_filter[i] == 'MayToJune') {
+        $('#toy-may_jun').prop('checked', false);
+        this.filterItems('MayToJune', false);
+      }
+      if (this.g_filter[i] == 'Half-Day') {
+        $('#length-half').prop('checked', false);
+        this.filterItems('Half-Day', false);
+      }
+      if (this.g_filter[i] == 'Full-Day') {
+        $('#length-full').prop('checked', false);
+        this.filterItems('Full-Day', false);
+      }
+    }
+  }
+
+  filter() {
+    let lang = JSON.parse(localStorage.getItem('lang'));
+    if (lang == 'en') {
+      var items = itn_E.itineraries;
+    } else {
+      var items = itn_F.itineraries;
+    }
+    if (this.g_filter.length == 0) {
+      /* should set items to the two langs, using en for now....*/
+      this.filters = itn_E.itineraries;
+    } else {
+      for (var i = 0; i < this.g_filter.length; i++) {
+        if (this.g_filter[i] == 'KinderTo2') {
+          let newItems = items.filter(elem => elem.KinderTo2 == true);
+          if (i == 0) {
+            this.filters = newItems;
+          }
+          if (i > 0) {
+            let toggler = false;
+            newItems.map(elem => {
+              this.filters.map(element => {
+                if (elem.id == element.id) {
+                  toggler = true;
+                }
+              });
+              if (toggler == false) {
+                this.filters.push(elem);
+              }
+            });
+          }
+        }
+
+        if (this.g_filter[i] == 'Gr3To5') {
+          let newItems = items.filter(elem => elem.Gr3To5 == true);
+          if (i == 0) {
+            this.filters = newItems;
+          }
+          if (i > 0) {
+            let toggler = false;
+            newItems.map(elem => {
+              this.filters.map(element => {
+                if (elem.id == element.id) {
+                  toggler = true;
+                }
+              });
+              if (toggler == false) {
+                this.filters.push(elem);
+              }
+            });
+          }
+        }
+
+        if (this.g_filter[i] == 'Gr6To8') {
+          let newItems = items.filter(elem => elem.Gr6To8 == true);
+          if (i == 0) {
+            this.filters = newItems;
+          }
+          if (i > 0) {
+            let toggler = false;
+            newItems.map(elem => {
+              this.filters.map(element => {
+                if (elem.id == element.id) {
+                  toggler = true;
+                }
+              });
+              if (toggler == false) {
+                this.filters.push(elem);
+              }
+            });
+          }
+        }
+
+        if (this.g_filter[i] == 'OctoberToApril') {
+          let newItems = items.filter(elem => elem.OctoberToApril == true);
+          if (i == 0) {
+            this.filters = newItems;
+          }
+          if (i > 0) {
+            let toggler = false;
+            newItems.map(elem => {
+              this.filters.map(element => {
+                if (elem.id == element.id) {
+                  toggler = true;
+                }
+              });
+              if (toggler == false) {
+                this.filters.push(elem);
+              }
+            });
+          }
+        }
+
+        if (this.g_filter[i] == 'MayToJune') {
+          let newItems = items.filter(elem => elem.MayToJune == true);
+          if (i == 0) {
+            this.filters = newItems;
+          }
+          if (i > 0) {
+            let toggler = false;
+            newItems.map(elem => {
+              this.filters.map(element => {
+                if (elem.id == element.id) {
+                  toggler = true;
+                }
+              });
+              if (toggler == false) {
+                this.filters.push(elem);
+              }
+            });
+          }
+        }
+
+        if (this.g_filter[i] == 'Half-Day') {
+          let newItems = items.filter(elem => elem.HalfDay == true);
+          if (i == 0) {
+            this.filters = newItems;
+          }
+          if (i > 0) {
+            let toggler = false;
+            newItems.map(elem => {
+              this.filters.map(element => {
+                if (elem.id == element.id) {
+                  toggler = true;
+                }
+              });
+              if (toggler == false) {
+                this.filters.push(elem);
+              }
+            });
+          }
+        }
+
+        if (this.g_filter[i] == 'Full-Day') {
+          let newItems = items.filter(elem => elem.FullDay == true);
+          if (i == 0) {
+            this.filters = newItems;
+          }
+          if (i > 0) {
+            let toggler = false;
+            newItems.map(elem => {
+              this.filters.map(element => {
+                if (elem.id == element.id) {
+                  toggler = true;
+                }
+              });
+              if (toggler == false) {
+                this.filters.push(elem);
+              }
+            });
+          }
+        }
+      }
+    }
+    this.items = this.filters;
+  }
 }

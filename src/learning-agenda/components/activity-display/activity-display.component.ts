@@ -21,6 +21,10 @@ export class ActivityDisplayComponent implements OnInit {
   @Input()
   itn;
   @Input()
+  showSwap;
+  @Input()
+  showDelete;
+  @Input()
   activities; // holds all activity items from the backend
   @Input()
   act;
@@ -29,7 +33,8 @@ export class ActivityDisplayComponent implements OnInit {
   itmDel: EventEmitter<any> = new EventEmitter<any>();
   @Output()
   itmRpl: EventEmitter<any> = new EventEmitter<any>();
-
+  @Output()
+  toggle: EventEmitter<any> = new EventEmitter<any>();
   previousItem;
   order;
   constructor(
@@ -49,11 +54,20 @@ export class ActivityDisplayComponent implements OnInit {
     }
 
     this.order = this.act.order;
+    let act_E = JSON.parse(localStorage.getItem('itn_En'));
+    if (JSON.stringify(act_E[0]) === JSON.stringify({})) {
+      this.act.time = '10:00';
+    }
+    if (JSON.stringify(this.act) === JSON.stringify({})) {
+      if (act_E.length >= 2)
+        this.act.time = this.timeConvert(act_E[act_E.length - 2].time, 45);
+    }
   }
 
   toggleSwapBox(order) {
     this.showSwapBox = true;
     localStorage.setItem('swap_id', JSON.stringify(order));
+    this.toggle.emit(false);
   }
   replaceItem(event) {
     let previousItem = this.act;
@@ -62,7 +76,9 @@ export class ActivityDisplayComponent implements OnInit {
     let index = act_E.findIndex(elem => elem.order == previousItem.order);
     let index1 = act_F.findIndex(elem => elem.order == previousItem.order);
     let en = this.getEnglish_v(event);
-
+    if (JSON.stringify(act_E[0]) === JSON.stringify({})) {
+      en.time = '10:00';
+    }
     if (JSON.stringify(previousItem) === JSON.stringify({})) {
       en.time = this.timeConvert(act_E[act_E.length - 2].time, 45);
     } else {
@@ -70,6 +86,9 @@ export class ActivityDisplayComponent implements OnInit {
     }
 
     let fr = this.getFrench_v(event);
+    if (JSON.stringify(act_E[0]) === JSON.stringify({})) {
+      fr.time = '10:00';
+    }
     if (JSON.stringify(previousItem) === JSON.stringify({})) {
       fr.time = this.timeConvert(act_F[act_E.length - 2].time, 45);
     } else {
@@ -83,6 +102,7 @@ export class ActivityDisplayComponent implements OnInit {
     this.showSwapBox = false;
     localStorage.removeItem('swap_id');
     this.itmRpl.emit(true);
+    this.toggle.emit(true);
   }
 
   removeActivity(order) {
@@ -111,9 +131,10 @@ export class ActivityDisplayComponent implements OnInit {
         act_F[i].time = this.timeConvert(act_F[i].time, -45);
       }
     }
-
+    let num = JSON.parse(localStorage.getItem('num'));
     localStorage.setItem('itn_En', JSON.stringify(act_E));
     localStorage.setItem('itn_Fr', JSON.stringify(act_F));
+    localStorage.setItem('num', JSON.stringify(num - 1));
     this.itmDel.emit(true);
   }
 

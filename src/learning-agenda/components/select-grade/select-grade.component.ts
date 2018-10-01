@@ -18,7 +18,7 @@ export class SelectGradeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    if (JSON.parse(localStorage.getItem('g_filter'))) {
+ /*    if (JSON.parse(localStorage.getItem('g_filter'))) {
       let filters = JSON.parse(localStorage.getItem('g_filter'));
       filters.map(elem => {
         if (elem == 'kinderTo2') {
@@ -31,7 +31,7 @@ export class SelectGradeComponent implements OnInit {
           this.check3 = true;
         }
       });
-    }
+    } */
   }
 
   populateFilter(field, event) {
@@ -53,7 +53,7 @@ export class SelectGradeComponent implements OnInit {
   }
 
   next() {
-    localStorage.setItem('f_grade1', JSON.stringify(this.model.options));
+   // localStorage.setItem('f_grade1', JSON.stringify(this.model.options));
     this.nxt.emit(true);
     this.prev.emit('step1');
   }
