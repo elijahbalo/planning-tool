@@ -87,3 +87,17 @@
         border: 0;
     }
 }
+@mixin css_arrow($direction: "left", $width: 5px, $height: 4px) {
+    display:block;
+    content:'';
+    width:0;
+    height:0;
+    @if $direction == "left" {
+        border-right:#{$width} solid #fff;
+    }
+    @if $direction == "right" {
+        border-left:#{$width} solid #fff;
+    }
+    border-top:#{$height} solid transparent;
+    border-bottom:#{$height} solid transparent;
+}
