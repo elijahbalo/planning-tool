@@ -21,10 +21,10 @@
     ]
   },
   "landing_page": {
-      "heading": "Plan a School Trip",
-      "subheading": "Plan Your Day at the Museum",
-      "button_browse": "Browse Itineraries",
-      "button_create": "Create Your Own" 
+    "heading": "Plan a School Trip",
+    "subheading": "Plan Your Day at the Museum",
+    "button_browse": "Browse Itineraries",
+    "button_create": "Create Your Own"
   },
   "canada_wordmark_alt": "Symbol of the Government of Canada",
   "facebook_link": "https://www.facebook.com/CanMusHistory/",
@@ -322,7 +322,7 @@
       "id": 7,
       "title": "First Peoples of Canada",
       "timeOfYear": "Oct — Apr",
-      "grades": "Grade 6 to 8",
+      "grades": "Kindergarden to Grade 2",
       "day": "Full-day",
       "img": "assets/images/IMG2018-0032-0215-Dm.jpg",
       "OctoberToApril": true,

@@ -29,6 +29,8 @@ export class BrowsePageComponent implements OnInit {
   arrive; // var that holds first activity of every itinerary
   activities;
   max;
+  showSwap = true;
+  showDelete = true;
   route = 'browse';
   content: string;
   clickable;
@@ -91,7 +93,7 @@ export class BrowsePageComponent implements OnInit {
   }
   showFilterAside: boolean = false; // Hide filter aside menu by default.
   onFilterBtnSelect() {
-      this.showFilterAside = !this.showFilterAside ? true : false;
+    this.showFilterAside = !this.showFilterAside ? true : false;
   }
   switchLanguage(language: string) {
     if (language == 'en') {
@@ -290,43 +292,32 @@ export class BrowsePageComponent implements OnInit {
       console.log(this.g_filter);
     } else {
       this.g_filter.push(field);
-      console.log(this.g_filter);
     }
     this.filter();
-    console.log(this.g_filter);
   }
 
   clearAll() {
-    for (var i = 0; i < this.g_filter.length; i++) {
-      if (this.g_filter[i] == 'KinderTo2') {
-        $('#grade-kindergarden_2').prop('checked', false);
-        this.filterItems('KinderTo2', false);
-      }
-      if (this.g_filter[i] == 'Gr3To5') {
-        $('#grade-3_6').prop('checked', false);
-        this.filterItems('Gr3To5', false);
-      }
-      if (this.g_filter[i] == 'Gr6To8') {
-        $('#grade-6_8').prop('checked', false);
-        this.filterItems('Gr6To8', false);
-      }
-      if (this.g_filter[i] == 'OctoberToApril') {
-        $('#toy-oct_apr').prop('checked', false);
-        this.filterItems('OctoberToApril', false);
-      }
-      if (this.g_filter[i] == 'MayToJune') {
-        $('#toy-may_jun').prop('checked', false);
-        this.filterItems('MayToJune', false);
-      }
-      if (this.g_filter[i] == 'Half-Day') {
-        $('#length-half').prop('checked', false);
-        this.filterItems('Half-Day', false);
-      }
-      if (this.g_filter[i] == 'Full-Day') {
-        $('#length-full').prop('checked', false);
-        this.filterItems('Full-Day', false);
-      }
-    }
+    console.log(this.g_filter);
+    console.log(this.g_filter.length);
+    this.g_filter = [];
+
+    $('#grade-kindergarden_2').prop('checked', false);
+
+    $('#grade-3_6').prop('checked', false);
+
+    $('#grade-6_8').prop('checked', false);
+
+    $('#toy-oct_apr').prop('checked', false);
+
+    $('#toy-may_jun').prop('checked', false);
+
+    $('#length-half').prop('checked', false);
+
+    $('#length-full').prop('checked', false);
+
+    console.log(this.g_filter);
+    console.log(this.g_filter.length);
+    this.filter();
   }
 
   filter() {
