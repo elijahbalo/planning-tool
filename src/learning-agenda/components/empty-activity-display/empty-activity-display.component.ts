@@ -33,7 +33,13 @@ export class EmptyActivityDisplayComponent implements OnInit {
 
   next() {
     // localStorage.setItem('f_grade1', JSON.stringify(this.model.options));
-    this.nxt.emit(true);
-    this.prev.emit('step4');
+    if (
+      JSON.parse(localStorage.getItem('itn_En')).length == 0 &&
+      JSON.parse(localStorage.getItem('itn_Fr')).length == 0
+    ) {
+    } else {
+      this.nxt.emit(true);
+      this.prev.emit('step4');
+    }
   }
 }

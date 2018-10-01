@@ -30,6 +30,7 @@ export class CreatePageComponent implements OnInit {
   modified = false;
   arrive;
   c_activities = [];
+  route = 'create';
   showNext = true;
   showSwap;
   showDelete;
@@ -100,12 +101,9 @@ export class CreatePageComponent implements OnInit {
     private modalService: NgbModal,
     private db: AngularFirestore,
     private router: Router,
-    private changeDetector: ChangeDetectorRef,
-    private route: ActivatedRoute
+    private changeDetector: ChangeDetectorRef
   ) {}
   ngOnInit() {
-    console.log(itn.itineraries);
-
     localStorage.clear();
 
     this.setCreate();
@@ -149,11 +147,19 @@ export class CreatePageComponent implements OnInit {
     }
     if (JSON.parse(localStorage.getItem('f_grade'))) {
       this.grade_select.options = JSON.parse(localStorage.getItem('f_grade'));
+    } else {
+      this.grade_select.options = '';
     }
 
     if (JSON.parse(localStorage.getItem('day'))) {
       this.day_select.options = JSON.parse(localStorage.getItem('day'));
+    } else {
+      this.day_select.options = '';
     }
+  }
+
+  navigateToBrowsePage() {
+    this.router.navigate(['BrowsePage']);
   }
 
   public addPost() {
@@ -329,12 +335,13 @@ export class CreatePageComponent implements OnInit {
     this.step4 = false;
     this.step5 = false;
     this.step6 = false;
+    this.step1Done = false;
+    this.step2Done = false;
+    this.step3Done = false;
+    this.step4Done = false;
+    this.step5Done = false;
     this.createTitle = '1. Select a Grade';
-    $('#step1').prop('checked', false);
-    $('#step2').prop('checked', false);
-    $('#step3').prop('checked', false);
-    $('#step4').prop('checked', false);
-    $('#step5').prop('checked', false);
+    this.ngOnChanges();
   }
   create_Back() {
     if (this.prev == 'step1') {

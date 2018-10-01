@@ -22,7 +22,10 @@ export class SelectDurationComponent implements OnInit {
 
   next() {
     localStorage.setItem('day', JSON.stringify(this.model));
-    this.nxt.emit(true);
-    this.prev.emit('step2');
+    if (JSON.parse(localStorage.getItem('day')) == '') {
+    } else {
+      this.nxt.emit(true);
+      this.prev.emit('step2');
+    }
   }
 }

@@ -17,8 +17,12 @@
         <div *ngIf="!cActive" class="my-btn">{{'$b_text_create' | translate}}</div>
         Use this.. [ngClass]="{on: bActive}"
         -->
-        <li><a class="app-header__nav-button on" href="#browse" (click)="$event.preventDefault()">{{'app_header.btn_browse' | translate}}</a></li>
-        <li><a class="app-header__nav-button" href="#create">{{'app_header.btn_create' | translate}}</a></li>
+        <li>
+          <a class="app-header__nav-button on" href="javascript:void(0)" (click)="navigateToBrowsePage()">{{'app_header.btn_browse' | translate}}</a>
+        </li>
+        <li>
+          <a class="app-header__nav-button" href="javascript:void(0)" (click)="navigateToCreatePage()">{{'app_header.btn_create' | translate}}</a>
+        </li>
       </ul>
     </nav>
   </div>

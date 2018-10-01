@@ -58,7 +58,10 @@ export class SelectGradeComponent implements OnInit {
 
   next() {
     localStorage.setItem('f_grade', JSON.stringify(this.model));
-    this.nxt.emit(true);
-    this.prev.emit('step1');
+    if (JSON.parse(localStorage.getItem('f_grade')) == '') {
+    } else {
+      this.nxt.emit(true);
+      this.prev.emit('step1');
+    }
   }
 }

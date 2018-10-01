@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header [route]="route"></app-header>
 
 <div style="position:absolute;top:0;right:0;background:green;padding:10px;z-index:999;">
   <button (click)="switchLanguage('en')" style="margin-right:10px;">en</button>
@@ -10,7 +10,7 @@
     <aside class="main-section__aside">
       <header class="main-section__aside-header">
         <span class="main-section__aside-heading">Instructions</span>
-        <button class="ms__aside-header-btn">Restart</button>
+        <button class="ms__aside-header-btn" (click)="restart()">Restart</button>
       </header>
       <ul class="ms__aside-checklist">
         <!-- @ Elijah: We need conditional classes here. -->

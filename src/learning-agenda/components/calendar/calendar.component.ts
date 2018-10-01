@@ -18,7 +18,9 @@ export class CalendarComponent implements OnInit {
   date: Date;
   js_date: Date;
   constructor(private calendar: NgbCalendar) {}
-  ngOnInit() {}
+  ngOnInit() {
+    this.js_date = null;
+  }
   get today() {
     return new Date();
   }
@@ -38,7 +40,10 @@ export class CalendarComponent implements OnInit {
 
   next() {
     this.newDate.emit(this.js_date);
-    this.nxt.emit(true);
-    this.prev.emit('step3');
+    if (this.js_date == null) {
+    } else {
+      this.nxt.emit(true);
+      this.prev.emit('step3');
+    }
   }
 }

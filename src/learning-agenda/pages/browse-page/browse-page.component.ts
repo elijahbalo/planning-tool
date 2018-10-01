@@ -29,6 +29,7 @@ export class BrowsePageComponent implements OnInit {
   arrive; // var that holds first activity of every itinerary
   activities;
   max;
+  route = 'browse';
   content: string;
   clickable;
   m_activities: any[];
@@ -51,8 +52,7 @@ export class BrowsePageComponent implements OnInit {
     private modalService: NgbModal,
     private db: AngularFirestore,
     private router: Router,
-    private changeDetector: ChangeDetectorRef,
-    private route: ActivatedRoute
+    private changeDetector: ChangeDetectorRef
   ) {}
   ngOnInit() {
     localStorage.clear();
@@ -115,7 +115,7 @@ export class BrowsePageComponent implements OnInit {
       .substr(2, 9);
   }
   navigateToLanding() {
-    this.router.navigate(['online-visit-planning-tool/LandingPage']);
+    this.router.navigate(['LandingPage']);
   }
   toggleDis() {
     console.log('dis is clicked');
@@ -159,7 +159,7 @@ export class BrowsePageComponent implements OnInit {
 
   navigateToCreatePage(event) {
     event.preventDefault();
-    this.router.navigate(['online-visit-planning-tool/CreatePage']);
+    this.router.navigate(['CreatePage']);
   }
 
   update(event) {
@@ -289,6 +289,7 @@ export class BrowsePageComponent implements OnInit {
       console.log(this.g_filter);
     }
     this.filter();
+    console.log(this.g_filter);
   }
 
   clearAll() {

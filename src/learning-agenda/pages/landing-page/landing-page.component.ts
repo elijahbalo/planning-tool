@@ -24,11 +24,11 @@ export class LandingPageComponent implements OnInit {
 
   navigateToBrowsePage(event) {
     event.preventDefault();
-    this.router.navigate(['online-visit-planning-tool/BrowsePage']);
+    this.router.navigate(['BrowsePage']);
   }
 
   navigateToCreatePage(event) {
     event.preventDefault();
-    this.router.navigate(['online-visit-planning-tool/CreatePage']);
+    this.router.navigate(['CreatePage']);
   }
 }
