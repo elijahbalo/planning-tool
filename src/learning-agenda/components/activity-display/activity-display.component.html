@@ -1,12 +1,12 @@
 <span class="activity-list-item__time">{{tConvert(act.time)}}</span>
 
 <div *ngIf="showSwapBox">
-  <ul *ngFor="let activity of activities" class="la-activities__micro-list">
-    <app-swap-box [presentItem]="act" [activity]="activity" [newSelection]="newSelection" [itn]="itn" (selectedItm)="replaceItem($event)"></app-swap-box>
-
-  </ul>
+    <ul class="la-activities__micro-list">
+        <li *ngFor="let activity of activities">
+            <app-swap-box [presentItem]="act" [activity]="activity" [newSelection]="newSelection" [itn]="itn" (selectedItm)="replaceItem($event)"></app-swap-box>
+        </li>
+    </ul>
 </div>
-
 
 <main *ngIf="!showSwapBox" class="activity-list-item__main">
   <figure class="activity-list-item__figure">
