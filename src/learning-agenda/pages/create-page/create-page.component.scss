@@ -90,8 +90,8 @@ $checklist_item_base_name: ".checklist-item";
     &:after {
         display:none; // used for on (selected) state.
         content:'';
-        width:56%;
-        height:56%;
+        width:8px;
+        height:8px;
         background:#fff;
         @include border-radius(50%);
         position:absolute;

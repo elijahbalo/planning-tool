@@ -32,6 +32,7 @@
   left: 20px;
   color: #fff;
   font-family: $primary_font_family;
+  z-index:1;
   span + br {
     display: none;
   }
@@ -53,33 +54,31 @@
   display: block;
 }
 .la-card {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  // !! Image needs to be compressed.
-  //background-image:linear-gradient(rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.5)),
-  //url('/assets/images/IMG2018-0032-0165-Dm.jpg');
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  width: 100%;
-  height: 100%;
-  &:before {
-    @include transition(background 150ms ease);
-    background: 0;
-    content: '';
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 0;
-  }
-  &:hover:before {
-    background: rgba(0, 0, 0, 0.5);
-  }
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+    background-position:50%;
+    width:100%;
+    height:100%;
+    // Transparent layers to make light coloured text legible.
+    &:before,
+    &:after {
+        @include transition(background 150ms ease);
+        position:absolute;
+        display:block;
+        background:0;
+        width:100%;
+        height:100%;
+        z-index:0;
+        content:'';
+        left:0;
+        top:0;
+    }
+    &:after {@include verticalGradient(transparent 30%, rgba(0,0,0,0.5) 75%);}
+    &:hover:before {background:rgba(0,0,0,0.5);}
 }
 
 /////////////////////////////////////////////////////////////////////////

@@ -31,7 +31,10 @@
             "stylePreprocessorOptions": {
               "includePaths": ["src/styles"]
             },
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-1.12.2.min.js",
+              "src/assets/js/main-menu.js"
+            ]
           },
           "configurations": {
             "production": {
