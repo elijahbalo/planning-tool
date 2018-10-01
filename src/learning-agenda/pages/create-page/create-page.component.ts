@@ -20,6 +20,8 @@ import { Activity } from '../../models/activity';
   styleUrls: ['./create-page.component.scss']
 })
 export class CreatePageComponent implements OnInit {
+  grade_select = { options: '' };
+  day_select = { options: '' };
   itn__act;
   content: string;
   m_activities: any[];
@@ -145,6 +147,13 @@ export class CreatePageComponent implements OnInit {
       this.showSwap = true;
       this.showDelete = true;
     }
+    if (JSON.parse(localStorage.getItem('f_grade'))) {
+      this.grade_select.options = JSON.parse(localStorage.getItem('f_grade'));
+    }
+
+    if (JSON.parse(localStorage.getItem('day'))) {
+      this.day_select.options = JSON.parse(localStorage.getItem('day'));
+    }
   }
 
   public addPost() {
@@ -256,14 +265,14 @@ export class CreatePageComponent implements OnInit {
   setStep2(event) {
     this.step1 = false;
     this.step2 = event;
-    this.step2Done = true;
+    this.step1Done = true;
     this.createTitle = '2. Select a Duration';
   }
 
   setStep3(event) {
     this.step2 = false;
     this.step3 = event;
-    this.step3Done = true;
+    this.step2Done = true;
     this.createTitle = '3. Select a Date';
     $('#step2').prop('checked', false);
     $('#step2').prop('checked', true);
@@ -272,7 +281,7 @@ export class CreatePageComponent implements OnInit {
   setStep4(event) {
     this.step3 = false;
     this.step4 = event;
-    this.step4Done = true;
+    this.step3Done = true;
     this.showSwap = true;
     this.showDelete = true;
     this.createTitle = '4. Select your Activities';
@@ -283,7 +292,7 @@ export class CreatePageComponent implements OnInit {
   setStep5(event) {
     this.step4 = false;
     this.step5 = event;
-    this.step5Done = true;
+    this.step4Done = true;
     this.createTitle = '5. Contact Information';
     $('#step4').prop('checked', false);
     $('#step4').prop('checked', true);
@@ -296,6 +305,7 @@ export class CreatePageComponent implements OnInit {
   setStep6(event) {
     this.step5 = false;
     this.step6 = event;
+    this.step5Done = true;
     this.showSwap = false;
     this.showDelete = false;
     localStorage.setItem('itinerary', JSON.stringify(this.itn_E));
@@ -337,28 +347,28 @@ export class CreatePageComponent implements OnInit {
     if (this.prev == 'step2') {
       this.step3 = false;
       this.step2 = true;
-      this.step3Done = false;
+      this.step2Done = false;
       this.createTitle = '2. Select a Duration';
       this.prev = 'step1';
     }
     if (this.prev == 'step3') {
       this.step4 = false;
       this.step3 = true;
-      this.step4Done = false;
+      this.step3Done = false;
       this.createTitle = '3. Select a Date';
       this.prev = 'step2';
     }
     if (this.prev == 'step4') {
       this.step5 = false;
       this.step4 = true;
-      this.step5Done = false;
+      this.step4Done = false;
       this.createTitle = '4. Select your Activities';
       this.prev = 'step3';
     }
     if (this.prev == 'step5') {
       this.step6 = false;
       this.step5 = true;
-
+      this.step5Done = false;
       this.createTitle = '5. Contact Information';
       this.prev = 'step4';
     }
