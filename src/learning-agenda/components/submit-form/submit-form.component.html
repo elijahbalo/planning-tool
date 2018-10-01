@@ -1,92 +1,50 @@
-<div class="form">
-
-  <div style="background-color:white;  padding:3%">
-
-
-    <form>
-      <div class="form-group" style="margin-top:1%">
-        <label for="exampleInputEmail1" style="font-weight:bold;border-style:solid; ">FIRST NAME:</label>
-        <input type="email" class="form-control" id="exampleInputEmail1 border-style:solid; border-color:grey; border-width:thin"
-          aria-describedby="emailHelp">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1" style="font-weight:bold;">LAST NAME:</label>
-        <input type="password" class="form-control" id="exampleInputPassword1 border-style:solid; border-color:grey; border-width:thin">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1" style="font-weight:bold;">SCHOOL/INSTITUTION:</label>
-        <input type="email" class="form-control" id="exampleInputEmail1 border-style:solid; border-color:grey; border-width:thin"
-          aria-describedby="emailHelp">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1" style="font-weight:bold;">NUMBER OF ATTENDEES:</label>
-        <br>
-        <select class="custom-select" id="inputGroupSelect04" style="font-weight:bold; width:50%; font-size:13px">
-          <option selected>1 </option>
-          <option value="1">2</option>
-          <option value="2">3</option>
-          <option value="3">4</option>
+<div class="contact-info">
+    <div class="fieldset fieldset--text-input">
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="first_name" />
+    </div>
+    <div class="fieldset fieldset--text-input">
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name" />
+    </div>
+    <div class="fieldset fieldset--text-input">
+        <label for="school_institution">School / Institution</label>
+        <input type="text" id="school_institution" name="school_institution" />
+    </div>
+    <div class="fieldset fieldset--text-input">
+        <label for="num_attendees">Number of Attendees</label>
+        <input type="text" id="num_attendees" name="num_attendees" />
+    </div>
+    <div class="fieldset fieldset--text-input">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone" />
+    </div>
+    <div class="fieldset fieldset--text-input">
+        <label for="email">Email Address</label>
+        <input type="text" id="email" name="email" />
+    </div>
+    <div class="fieldset">
+        <h3>Preferred Method of Contact</h3>
+        <label for="contact_method-phone"><input type="radio" name="contact_method" id="contact_method-phone" value="Phone" /> Phone</label>
+        <label for="contact_method-email"><input type="radio" name="contact_method" id="contact_method-email" value="Email" /> Email</label>
+    </div>
+    <div class="fieldset">
+        <h3>Preferred Time of Contact</h3>
+        <label for="pref_time-from">From</label>
+        <select name="pref_time-from" id="pref_time-from">
+            <option value="9:30 AM">9:30 AM</option>
+            <option value="10:30 AM">10:30 AM</option>
         </select>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1" style="font-weight:bold;">PHONE:</label>
-        <input type="password" class="form-control" id="exampleInputPassword1 border-style:solid; border-color:grey; border-width:thin">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1" style="font-weight:bold;">EMAIL ADDRESS:</label>
-        <input type="password" class="form-control" id="exampleInputPassword1 border-style:solid; border-color:grey; border-width:thin">
-      </div>
-
-      <div class="form-group" style="margin-top:6%">
-        <div>
-          <label for="exampleInputEmail1" style="font-weight:bold;">PREFERRED METHOD OF CONTACT:</label>
-        </div>
-        <div style=" float:left; margin-left:5.8%; margin-right:10%;">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-          <label class="form-check-label" for="exampleRadios1">
-            Phone
-          </label>
-        </div>
-        <div style="float:left; margin-right:9%;">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-          <label class="form-check-label" for="exampleRadios1">
-            Email
-          </label>
-        </div>
-      </div>
-      <div class="form-group" style="margin-top:6%">
-        <div>
-          <label for="exampleInputEmail1" style="font-weight:bold;">PREFERRED TIME OF CONTACT:</label>
-        </div>
-        <div style="float:left; margin-right:2%; margin-top:3%; "> From</div>
-        <div style="width:36%; margin-right:3%; float:left">
-          <select class="custom-select" id="inputGroupSelect04" style="font-weight:bold; font-size:13px">
-            <option selected>9:30 AM </option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-            <option value="3">4</option>
-          </select>
-        </div>
-        <div style="float:left; margin-right:2%; margin-top:3%; "> To</div>
-        <div style="width:36%; float:left">
-          <select class="custom-select" id="inputGroupSelect04" style="font-weight:bold; font-size:13px">
-            <option selected>9:30 AM </option>
-            <option value="1">2</option>
-            <option value="2">3</option>
-            <option value="3">4</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-group" style="margin-top:6%">
-        <label for="exampleInputEmail1" style="font-weight:bold;">COMMENTS:</label>
-        <div style=" font-size:9.5px">Let us know about about any special instructions for contacting you or special needs for your group</div>
-        <div>
-          <textarea style="height:100px; width:98%;"></textarea>
-        </div>
-      </div>
-
-
-    </form>
-  </div>
-</div>
+        <label for="pref_time-to">To</label>
+        <select name="pref_time-to" id="pref_time-to">
+            <option value="4:00 PM">4:00 PM</option>
+            <option value="7:00 PM">7:00 PM</option>
+        </select>
+    </div>
+    <div class="fieldset">
+        <label for="comments">Comments</label>
+        <p>Let us know about about any special instructions 
+        for contacting you or special needs for your group.</p>
+        <textarea id="comments" name="comments"></textarea>
+    </div>
+</div><!--/.contact-info-->
