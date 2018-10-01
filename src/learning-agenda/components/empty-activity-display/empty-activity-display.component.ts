@@ -20,9 +20,7 @@ export class EmptyActivityDisplayComponent implements OnInit {
   isClickable;
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.isClickable);
-  }
+  ngOnInit() {}
 
   addActivity() {
     let num = JSON.parse(localStorage.getItem('num'));

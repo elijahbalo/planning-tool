@@ -143,7 +143,7 @@
 
               <figure class="activity-list-item__figure">
                 <a class="activity-list-item__image-link" href="#figure">
-                  <img class="activity-list-item__image" src="/assets/images/IMG2018-0032-0151-Dm.jpg" width="227" height="161" alt="" />
+                  <img class="activity-list-item__image" src="{{arrive.img}}" width="227" height="161" alt="" />
                 </a>
               </figure>
               <div class="activity-list-item__body">
@@ -155,7 +155,7 @@
             </li>
             <li *ngFor="let act of itn__act" class="activity-list-item">
               <app-activity-display [act]="act" [activities]="activities" (itmDel)="update($event)" (itmRpl)="update($event)" [itn]="itn__act"
-                (toggle)="updateTog($event)"></app-activity-display>
+                (toggle)="updateTog($event)" [showSwap]="showSwap" [showDelete]="showDelete"></app-activity-display>
             </li>
             <!--  <li class="activity-list-item">
               <span class="activity-list-item__time">10:00 AM</span>

@@ -328,7 +328,7 @@ export class CreatePageComponent implements OnInit {
     localStorage.removeItem('french');
   }
   restart() {
-    localStorage.clear();
+    this.ngOnInit();
     this.step1 = true;
     this.step2 = false;
     this.step3 = false;

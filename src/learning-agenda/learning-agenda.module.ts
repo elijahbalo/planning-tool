@@ -59,7 +59,7 @@ import { AppHeaderComponent } from './components/app-header/app-header.component
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
+        useFactory: createTranslateLoader,
         deps: [HttpClient]
       }
     }),
@@ -113,6 +113,6 @@ import { AppHeaderComponent } from './components/app-header/app-header.component
 })
 export class LearningAgendaModule {}
 
-export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
