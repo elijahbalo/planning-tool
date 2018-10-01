@@ -223,7 +223,7 @@ $main_back_link_button_size: 32px;
     width:50%;
     @include borderbox;
     display:block;
-    font-size:13px;
+    font-size:14px;
     margin-bottom:20px;
     &:nth-child(odd) {padding-right:30px;clear:left;}
     // &:nth-child(even) {background:yellow;}
@@ -390,11 +390,9 @@ $activity_list_item_time_bg_clr: #d8d8d8;
   color: #fff;
 }
 .activity-list-item__image-link {
-  display: block;
-  background: purple;
-  &:hover img {
-    opacity: 0.5;
-  }
+    display:block;
+    background:#000;
+    &:hover img {opacity:0.5;}
 }
 .activity-list-item__image {
   display: block;
