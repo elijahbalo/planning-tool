@@ -390,11 +390,9 @@ $activity_list_item_time_bg_clr: #d8d8d8;
   color: #fff;
 }
 .activity-list-item__image-link {
-  display: block;
-  background: purple;
-  &:hover img {
-    opacity: 0.5;
-  }
+    display:block;
+    background:#000;
+    &:hover img {opacity:0.5;}
 }
 .activity-list-item__image {
   display: block;

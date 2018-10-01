@@ -10,14 +10,16 @@ a {
   color:inherit;
 }
 .app-header {
-  padding-top:(200/16)+em;
-  padding-left:(40/16)+em;
-  padding-right:(40/16)+em;
-  background-color:$chwm_grey_70;
-  background-image:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)),
-  url('/assets/images/IMG2018-0032-0215-Dm.jpg');
-  background-position:50% 40%;
-  background-size:cover;
+    margin-top:-#{$main_header_height};
+    padding-top:(200/16)+em;
+    padding-top:25vh;
+    padding-left:(40/16)+em;
+    padding-right:(40/16)+em;
+    background-color:$chwm_grey_70;
+    background-image:linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)),
+    url('/assets/images/IMG2018-0032-0215-Dm.jpg');
+    background-position:50% 45%;
+    background-size:cover;
 }
 .app-header__wrapper {
     margin:0 auto;
