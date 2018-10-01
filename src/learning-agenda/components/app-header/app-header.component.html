@@ -9,8 +9,8 @@
         </main>
         <nav class="app-header__nav">
             <ul>
-                <li><a class="app-header__nav-button" [ngClass]="{on: route == 'create'}" href="javascript:void(0)" (click)="navigateToBrowsePage()">{{'app_header.btn_browse' | translate}}</a></li>
-                <li><a class="app-header__nav-button" [ngClass]="{on: route == 'browse'}" href="javascript:void(0)" (click)="navigateToCreatePage()">{{'app_header.btn_create' | translate}}</a></li>
+                <li><a class="app-header__nav-button" [ngClass]="{off: route == 'create'}" href="javascript:void(0)" (click)="navigateToBrowsePage()">{{'app_header.btn_browse' | translate}}</a></li>
+                <li><a class="app-header__nav-button" [ngClass]="{off: route == 'browse'}" href="javascript:void(0)" (click)="navigateToCreatePage()">{{'app_header.btn_create' | translate}}</a></li>
             </ul>
         </nav>
     </div>

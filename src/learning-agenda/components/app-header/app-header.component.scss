@@ -40,6 +40,7 @@ a {
     li {float:left;}
 }
 .app-header__nav-button {
+    cursor:text;
     display:block;
     color:#24292e;
     background:#fff;
@@ -49,8 +50,8 @@ a {
     $btn_roundness:(10/16)+em;
     li:first-child & {@include border-radius($btn_roundness 0 0 0);}
     li:last-child & {@include border-radius(0 $btn_roundness 0 0);}
-    &.on {
-        cursor:text;
+    &.off {
+        cursor:pointer;
         color:rgba(88,96,105,0.5);
         background:$nav_button_onclr;
         @include box-shadow(inset -2px -2px 4px rgba(0,0,0,0.03));
