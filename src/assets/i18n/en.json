@@ -1,6 +1,9 @@
 {
   "app_header": {
-    "breadcrumb_link": "Plan your Visit",
+    "breadcrumb_link": [
+        "https://www.historymuseum.ca/visit/",
+        "Plan your Visit"
+    ],
     "heading": "Plan a School Trip",
     "btn_browse": "Browse",
     "btn_create": "Create"
