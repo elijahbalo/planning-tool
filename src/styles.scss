@@ -199,6 +199,10 @@ $main_back_link_button_size: 32px;
     position:relative;
     &:after {@include clearfix;}
 }
+.la-button[disabled] {
+    cursor:not-allowed;
+    opacity:0.3;
+}
 
 /////////////////////////////////////////////////////////////////////////
 
