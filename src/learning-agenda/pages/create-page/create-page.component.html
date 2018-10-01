@@ -20,48 +20,48 @@
         <li *ngIf="step1" class="checklist-item checklist-item--on">
           <span>1. Select a Grade</span>
         </li>
-        <li *ngIf="!step1" class="checklist-item checklist-item--done">
+        <li *ngIf="step1Done" class="checklist-item checklist-item--done">
           <span tabindex="0">1. Select a Grade</span>
         </li>
 
-        <li *ngIf="!step2Done" class="checklist-item">
+        <li *ngIf=" !step2Done && !step2" class="checklist-item">
           <span>2. Select a Duration</span>
         </li>
         <li *ngIf="step2" class="checklist-item checklist-item--on">
           <span>2. Select a Duration</span>
         </li>
-        <li *ngIf="step2Done && !step2" class="checklist-item checklist-item--done">
+        <li *ngIf="step2Done" class="checklist-item checklist-item--done">
           <span tabindex="0">2. Select a Duration</span>
         </li>
 
-        <li *ngIf="!step3Done" class="checklist-item">
+        <li *ngIf="!step3Done && !step3" class="checklist-item">
           <span>3. Select a Date</span>
         </li>
         <li *ngIf="step3" class="checklist-item checklist-item--on">
           <span>3. Select a Date</span>
         </li>
-        <li *ngIf="step3Done && !step3" class="checklist-item checklist-item--done">
+        <li *ngIf="step3Done" class="checklist-item checklist-item--done">
           <span>3. Select a Date</span>
         </li>
 
 
-        <li *ngIf="!step4Done" class="checklist-item">
+        <li *ngIf=" !step4Done && !step4" class="checklist-item">
           <span>4. Select your Activities</span>
         </li>
         <li *ngIf="step4" class="checklist-item checklist-item--on">
           <span>4. Select your Activities</span>
         </li>
-        <li *ngIf="step4Done  && !step4" class="checklist-item checklist-item--done">
+        <li *ngIf="step4Done" class="checklist-item checklist-item--done">
           <span>4. Select your Activities</span>
         </li>
 
-        <li *ngIf="!step5Done" class="checklist-item">
+        <li *ngIf="!step5Done && !step5" class="checklist-item">
           <span>5. Contact Information</span>
         </li>
         <li *ngIf="step5" class="checklist-item checklist-item--on">
           <span>5. Contact Information</span>
         </li>
-        <li *ngIf="step5Done  && !step5" class="checklist-item checklist-item--done">
+        <li *ngIf="step5Done" class="checklist-item checklist-item--done">
           <span>5. Contact Information</span>
         </li>
 
@@ -78,9 +78,9 @@
             -->
       <app-header-old [title]="createTitle" (back)="create_Back($event)"></app-header-old>
 
-      <app-select-grade *ngIf="step1" (nxt)="setStep2($event)" (prev)="setPrev($event)"></app-select-grade>
+      <app-select-grade *ngIf="step1" (nxt)="setStep2($event)" (prev)="setPrev($event)" [model]="grade_select.options"></app-select-grade>
       <!--/.msm__sub-section-->
-      <app-select-duration *ngIf="step2" (nxt)="setStep3($event)" (prev)="setPrev($event)"></app-select-duration>
+      <app-select-duration *ngIf="step2" (nxt)="setStep3($event)" (prev)="setPrev($event)" [model]="day_select.options"></app-select-duration>
       <app-calendar *ngIf="step3" (nxt)="setStep4($event)" (prev)="setPrev($event)" (newDate)="setDate($event)"></app-calendar>
 
 

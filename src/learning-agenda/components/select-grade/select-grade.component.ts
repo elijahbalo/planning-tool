@@ -10,7 +10,8 @@ export class SelectGradeComponent implements OnInit {
   nxt: EventEmitter<any> = new EventEmitter<any>();
   @Output()
   prev: EventEmitter<any> = new EventEmitter<any>();
-  model = { options: '' };
+  @Input()
+  model;
   check1;
   check2;
   check3;
@@ -18,7 +19,10 @@ export class SelectGradeComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
- /*    if (JSON.parse(localStorage.getItem('g_filter'))) {
+    /* if (JSON.parse(localStorage.getItem('f_grade'))) {
+      this.model.options = JSON.parse(localStorage.getItem('f_length'));
+    } */
+    /*    if (JSON.parse(localStorage.getItem('g_filter'))) {
       let filters = JSON.parse(localStorage.getItem('g_filter'));
       filters.map(elem => {
         if (elem == 'kinderTo2') {
@@ -53,7 +57,7 @@ export class SelectGradeComponent implements OnInit {
   }
 
   next() {
-   // localStorage.setItem('f_grade1', JSON.stringify(this.model.options));
+    localStorage.setItem('f_grade', JSON.stringify(this.model));
     this.nxt.emit(true);
     this.prev.emit('step1');
   }
