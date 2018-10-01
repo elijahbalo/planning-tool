@@ -8,6 +8,26 @@
     "btn_browse": "Browse",
     "btn_create": "Create"
   },
+  "bypass_link": {
+      "main": "Skip to main content",
+      "footer": "Skip to main navigation"
+  },
+  "main_logo": {
+      "url": "https://www.historymuseum.ca",
+      "src": "/assets/images/cmh-main-logo.svg",
+      "alt": "Canadian Museum of History"
+  },
+  "main_header": {
+      "menu_button": "Main Menu",
+      "visit_link": ["https://www.historymuseum.ca/visit/", "Visit"],
+      "exhibitions_link": ["https://www.historymuseum.ca/exhibitions/", "Exhibitions"],
+      "learn_link": ["https://www.historymuseum.ca/learn/", "Learn"],
+      "shop_link": ["https://www.historymuseum.ca/shop/", "Shop"],
+      "support_link": ["https://www.historymuseum.ca/support/", "Support"],
+      "about_link": ["https://www.historymuseum.ca/about/", "About"]
+  },
+  "search_button": "Search",
+  "language_toggle_button": "Français",
   "main_footer": {
     "slogan": "Your Country.<br /> Your History.<br /> Your Museum.",
     "copyright_text": "&copy; Canadian Museum of History",
