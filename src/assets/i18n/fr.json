@@ -8,19 +8,19 @@
   "main_footer": {
     "slogan": "Votre pays.<br /> Votre histoire.<br /> Votre musée.",
     "copyright_text": "&copy; Musée canadien de l'histoire",
-    "privacy_link": [
-      "https://www.museedelhistoire.ca/a-propos/protection-des-renseignements-personnels/",
-      "Protection des renseignements personnels"
-    ],
-    "copyright_link": [
-      "https://www.museedelhistoire.ca/a-propos/droits-dauteur-et-permissions/",
-      "Droits d’auteur"
-    ]
-  },
-  "canada_wordmark_alt": "Symbole du gouvernement du Canada",
-  "facebook_link": "https://www.facebook.com/MusCanHistoire/",
-  "twitter_link": "https://twitter.com/CanMusHistory",
-  "instagram_link": "https://www.instagram.com/muscanhistoire/",
+    "privacy_link": ["https://www.museedelhistoire.ca/a-propos/protection-des-renseignements-personnels/", "Protection des renseignements personnels"],
+    "copyright_link": ["https://www.museedelhistoire.ca/a-propos/droits-dauteur-et-permissions/", "Droits d’auteur"]
+},
+"landing_page": {
+    "heading": "Planifiez un voyage scolaire",
+    "subheading": "Planifiez votre journée au Musée",
+    "button_browse": "Parcourir les itinéraires",
+    "button_create": "Créer votre propre"
+},
+"canada_wordmark_alt": "Symbole du gouvernement du Canada",
+"facebook_link": "https://www.facebook.com/MusCanHistoire/",
+"twitter_link": "https://twitter.com/CanMusHistory",
+"instagram_link": "https://www.instagram.com/muscanhistoire/",
   "sidebar_head": "instructions",
   "sidebar_rst": "redémarrer",
   "sidebar_option1": "Sélectionnez une note",

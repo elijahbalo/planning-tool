@@ -89,6 +89,10 @@ export class BrowsePageComponent implements OnInit {
   fetchTranslation(key) {
     return this.translateService.fetchTranslation(key);
   }
+  showFilterAside: boolean = false; // Hide filter aside menu by default.
+  onFilterBtnSelect() {
+      this.showFilterAside = !this.showFilterAside ? true : false;
+  }
   switchLanguage(language: string) {
     if (language == 'en') {
       localStorage.setItem('lang', JSON.stringify('en'));

@@ -17,6 +17,12 @@
       "Copyright"
     ]
   },
+  "landing_page": {
+      "heading": "Plan a School Trip",
+      "subheading": "Plan Your Day at the Museum",
+      "button_browse": "Browse Itineraries",
+      "button_create": "Create Your Own" 
+  },
   "canada_wordmark_alt": "Symbol of the Government of Canada",
   "facebook_link": "https://www.facebook.com/CanMusHistory/",
   "twitter_link": "https://twitter.com/CanMusHistory",
