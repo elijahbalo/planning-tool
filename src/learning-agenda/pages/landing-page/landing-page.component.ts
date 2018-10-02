@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import * as Lodash from 'lodash';
 import * as $ from 'jquery';
 import { TranslationService } from '../../../services/translation.service';
-import { FormService } from '../../../services/form.service';
+
 import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
@@ -16,7 +16,7 @@ import { HttpClient } from '@angular/common/http';
   // ,encapsulation: ViewEncapsulation.None
 })
 export class LandingPageComponent implements OnInit {
-  private url = '/test.php';
+
   body = {
     subject: 'Test email',
     from_name: 'History Museum',
@@ -34,7 +34,6 @@ export class LandingPageComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private translateService: TranslationService,
-    private formService: FormService,
     private http: HttpClient
   ) { }
   ngOnInit() {

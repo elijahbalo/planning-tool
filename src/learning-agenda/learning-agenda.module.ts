@@ -49,7 +49,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
-import { FormService } from '../services/form.service';
+
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 
 @NgModule({
@@ -112,9 +112,9 @@ import { AppHeaderComponent } from './components/app-header/app-header.component
     ItineraryPageComponent,
     AppHeaderComponent
   ],
-  providers: [AngularFirestoreModule, TranslationService, FormService]
+  providers: [AngularFirestoreModule, TranslationService]
 })
-export class LearningAgendaModule {}
+export class LearningAgendaModule { }
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
