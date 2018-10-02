@@ -1,43 +1,46 @@
-<div class="contact-info">
+<div class="contact-info" id="custom-form">
     <div class="fieldset fieldset--text-input">
         <label class="required" for="first_name">{{'contact_info.first_name' | translate}}</label>
-        <input type="text" required id="first_name" name="first_name" />
+        <input type="text" [(ngModel)]="firstName" required id="first_name" name="first_name" />
     </div>
     <div class="fieldset fieldset--text-input">
         <label class="required" for="last_name">{{'contact_info.last_name' | translate}}</label>
-        <input type="text" required id="last_name" name="last_name" />
+        <input type="text" [(ngModel)]="lastName" required id="last_name" name="last_name" />
     </div>
     <div class="fieldset fieldset--text-input">
         <label class="required" for="email">{{'contact_info.email' | translate}}</label>
-        <input type="text" required id="email" name="email" />
+        <input type="text" [(ngModel)]="email" required id="email" name="email" />
     </div>
     <div class="fieldset fieldset--text-input">
         <label for="phone">{{'contact_info.phone' | translate}}</label>
-        <input type="text" id="phone" name="phone" />
+        <input type="text" [(ngModel)]="phone" id="phone" name="phone" />
     </div>
     <div class="fieldset fieldset--radio-inputs">
         <span class="required fieldset__heading">{{'contact_info.group.heading' | translate}}</span>
         <label class="radio-label radio-label--inline" for="group_lang-en">
-            <input type="radio" name="group_lang" checked id="group_lang-en" value="{{'contact_info.group.eng.input_val' | translate}}" />
-            {{'contact_info.group.eng.label' | translate}}
+            <input type="radio" name="group_lang" [(ngModel)]="lang" checked id="group_lang-en" (change)="changeLang()" value="{{'contact_info.group.eng.input_val' | translate}}"
+            /> {{'contact_info.group.eng.label' | translate}}
         </label>
         <label class="radio-label radio-label--inline" for="group_lang-fr">
-            <input type="radio" name="group_lang" id="group_lang-fr" value="{{'contact_info.group.fra.input_val' | translate}}" />
-            {{'contact_info.group.fra.label' | translate}}
+            <input type="radio" name="group_lang" id="group_lang-fr" [(ngModel)]="lang" (change)="changeLang()" value="{{'contact_info.group.fra.input_val' | translate}}"
+            /> {{'contact_info.group.fra.label' | translate}}
         </label>
     </div>
     <div class="fieldset fieldset--checkbox fieldset--border">
         <span class="fieldset__heading">{{'contact_info.newsletter.heading' | translate}}</span>
         <label for="newletter" class="multiline">
-            <input type="checkbox" name="newletter" checked id="newletter" value="{{'contact_info.newsletter.input_val' | translate}}" />
-             {{'contact_info.newsletter.label' | translate}}
+            <input type="checkbox" name="newletter" [(ngModel)]="news" checked id="newletter" (change)="changeNews()" value="{{'contact_info.newsletter.input_val' | translate}}"
+            /> {{'contact_info.newsletter.label' | translate}}
         </label>
     </div>
     <div class="fieldset fieldset--checkbox">
         <span class="fieldset__heading">{{'contact_info.consent.heading' | translate}}</span>
         <label for="consentment" class="multiline">
-            <input type="checkbox" name="consentment" id="consentment" value="{{'contact_info.consent.input_val' | translate}}" />
-             {{'contact_info.consent.label' | translate}}
+            <input type="checkbox" name="consentment" [(ngModel)]="consent" id="consentment" (change)="changeConsent()" value="{{'contact_info.consent.input_val' | translate}}"
+            /> {{'contact_info.consent.label' | translate}}
         </label>
     </div>
 </div>
+
+<button class="la-button la-button--clr-primary" (click)="postUserData()">submit form</button>
+<button class="la-button la-button--clr-primary" (click)="sendUserEmail()">send itinerary</button>

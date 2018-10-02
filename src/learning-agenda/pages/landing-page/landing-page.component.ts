@@ -58,17 +58,17 @@ export class LandingPageComponent implements OnInit {
   fetchTranslation(key) {
     return this.translateService.fetchTranslation(key);
   }
-  switchLanguage() {
-    let lang = JSON.parse(localStorage.getItem('lang'));
+  switchLanguage(event) {
+    let lang = event
 
     if (lang == 'en') {
-      localStorage.setItem('lang', JSON.stringify('fr'));
+      localStorage.setItem('lang', JSON.stringify('en'));
 
       this.fr = false;
       this.en = true;
     }
     if (lang == 'fr') {
-      localStorage.setItem('lang', JSON.stringify('en'));
+      localStorage.setItem('lang', JSON.stringify('fr'));
 
       this.en = false;
       this.fr = true;
@@ -107,42 +107,5 @@ export class LandingPageComponent implements OnInit {
        );
    } */
 
-  postForm() {
-    let data = {
-      subject: 'Test email',
-      from_name: 'History Museum',
-      from_email: 'elijah.balogun@museedelhistoire.ca',
-      to: 'pierre.mageau@museedelhistoire.ca',
-      message: 'This is to test that the form email service works.',
-      AKEY: 'uK21MLM0A2'
-    }
-    var urlEncodedData = "";
-    var urlEncodedDataPairs = [];
-    var name
-
-    for (name in data) {
-      urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
-    }
-
-    // Combine the pairs into a single string and replace all %-encoded spaces to 
-    // the '+' character; matches the behaviour of browser form submissions.
-    urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
-
-
-    var http = new XMLHttpRequest();
-    var url = '/form-util/';
-    var params = data;
-    http.open('POST', url, true);
-
-    //Send the proper header information along with the request
-    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
-    http.onreadystatechange = function () {//Call a function when the state changes.
-      if (http.readyState == 4 && http.status == 200) {
-        alert(http.responseText);
-      }
-    }
-    http.send(urlEncodedData);
-  }
 
 }

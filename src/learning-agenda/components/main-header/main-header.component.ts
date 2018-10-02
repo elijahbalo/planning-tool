@@ -12,7 +12,7 @@ export class MainHeaderComponent implements OnInit {
   en;
   @Input()
   fr;
-  constructor(private translateService: TranslationService) {}
+  constructor(private translateService: TranslationService) { }
   ngOnInit() {
     if (JSON.parse(localStorage.getItem('lang')) == 'en') {
       this.fr = false;
@@ -22,6 +22,13 @@ export class MainHeaderComponent implements OnInit {
     if (JSON.parse(localStorage.getItem('lang')) == 'fr') {
       this.fr = true;
       this.en = false;
+    }
+
+    if (this.en == true) {
+      this.switchLanguage('en')
+    }
+    if (this.fr == true) {
+      this.switchLanguage('fr')
     }
   }
   getDefaultLang() {
@@ -49,5 +56,6 @@ export class MainHeaderComponent implements OnInit {
       this.fr = true;
     }
     this.translateService.switchLanguage(language);
+    this.lang.emit(language)
   }
 }
