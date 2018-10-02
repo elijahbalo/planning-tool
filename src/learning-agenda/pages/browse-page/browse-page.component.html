@@ -14,45 +14,45 @@
         </header>
         <div class="ms__aside-groups">
             <fieldset class="ms__aside-group">
-                <span class="ms__aside-group-heading">{{'aside_filter.grade.heading' | translate}}</span>
+                <span class="ms__aside-group-heading">{{'aside_filter.grade_heading' | translate}}</span>
                 <label class="ms__aside-label" for="grade-kindergarden_2">
-                    <span class="text">{{'aside_filter.grade.label_grade_kg2' | translate}}</span>
+                    <span class="text">{{'grades.kg2.text' | translate}}</span>
                     <input id="grade-kindergarden_2" [(ngModel)]="check1" name="grade-kindergarden_grade_2" type="checkbox" (change)="filterItems('KinderTo2', check1)" />
                     <span class="faux-checkbox unchecked"></span>
                 </label>
                 <label class="ms__aside-label" for="grade-3_5">
-                    <span class="text">{{'aside_filter.grade.label_grade_35' | translate}}</span>
+                    <span class="text">{{'grades.three5.text' | translate}}</span>
                     <input id="grade-3_5" [(ngModel)]="check2" name="grade-3_5" type="checkbox" (change)="filterItems('Gr3To5', check2)" />
                     <span class="faux-checkbox unchecked"></span>
                 </label>
                 <label class="ms__aside-label" for="grade-6_8">
-                    <span class="text">{{'aside_filter.grade.label_grade_68' | translate}}</span>
+                    <span class="text">{{'grades.six8.text' | translate}}</span>
                     <input id="grade-6_8" [(ngModel)]="check3" name="grade-6_8" type="checkbox" (change)="filterItems('Gr6To8', check3)" />
                     <span class="faux-checkbox unchecked"></span>
                 </label>
             </fieldset>
             <fieldset class="ms__aside-group">
-                <span class="ms__aside-group-heading">{{'aside_filter.toy.heading' | translate}}</span>
+                <span class="ms__aside-group-heading">{{'aside_filter.toy_heading' | translate}}</span>
                 <label class="ms__aside-label" for="toy-oct_apr">
-                    <span class="text">{{'aside_filter.toy.label_oct_apr' | translate}}</span>
+                    <span class="text">{{'toy.oct_apr' | translate}}</span>
                     <input id="toy-oct_apr" [(ngModel)]="check4" name="toy-oct_apr" type="checkbox" (change)="filterItems('OctoberToApril', check4)" />
                     <span class="faux-checkbox unchecked"></span>
                 </label>
                 <label class="ms__aside-label" for="toy-may_jun">
-                    <span class="text">{{'aside_filter.toy.label_may_jun' | translate}}</span>
+                    <span class="text">{{'toy.may_jun' | translate}}</span>
                     <input id="toy-may_jun" [(ngModel)]="check5" name="toy-may_jun" type="checkbox" (change)="filterItems('MayToJune', check5)" />
                     <span class="faux-checkbox unchecked"></span>
                 </label>
             </fieldset>
             <fieldset class="ms__aside-group">
-                <span class="ms__aside-group-heading">{{'aside_filter.length.heading' | translate}}</span>
+                <span class="ms__aside-group-heading">{{'aside_filter.dur_heading' | translate}}</span>
                 <label class="ms__aside-label" for="length-half">
-                    <span class="text">{{'aside_filter.length.label_half' | translate}}</span>
+                    <span class="text">{{'durations.half' | translate}}</span>
                     <input id="length-half" [(ngModel)]="check6" name="length-half" type="checkbox" (change)="filterItems('Half-Day', check6)" />
                     <span class="faux-checkbox unchecked"></span>
                 </label>
                 <label class="ms__aside-label" for="length-full">
-                    <span class="text">{{'aside_filter.length.label_full' | translate}}</span>
+                    <span class="text">{{'durations.full' | translate}}</span>
                     <input id="length-full" [(ngModel)]="check7" name="length-full" type="checkbox" (change)="filterItems('Full-Day', check7)" />
                     <span class="faux-checkbox unchecked"></span>
                 </label>

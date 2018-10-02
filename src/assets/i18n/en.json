@@ -26,24 +26,35 @@
       "support_link": ["https://www.historymuseum.ca/support/", "Support"],
       "about_link": ["https://www.historymuseum.ca/about/", "About"]
   },
+  "grades": {
+      "kg2": {
+          "text": "Kindergarden to Grade 2",
+          "input_val": ""
+      },
+      "three5": {
+          "text": "Grades 3 to 5",
+          "input_val": ""
+      },
+      "six8": {
+          "text": "Grades 6 to 8",
+          "input_val": ""
+      }
+  },
+  "rem_button": "Remove Activity",
+  "swap_button": "Swap Activity",
+  "durations": {
+      "half": "Half-Day",
+      "full": "Full Day"
+  },
+  "toy": {
+      "oct_apr": "October to April",
+      "may_jun": "May to June"
+  },
   "aside_filter": {
       "filter_button": "Filters",
-      "grade": {
-          "heading": "Grade",
-          "label_grade_kg2": "Kindergarden to Grade 2",
-          "label_grade_35": "Grades 3 to 5",
-          "label_grade_68": "Grades 6 to 8"
-      },
-      "toy": {
-          "heading": "Time of Year",
-          "label_oct_apr": "October to April",
-          "label_may_jun": "May to June"
-      },
-      "length": {
-          "heading": "Length",
-          "label_half": "Half-Day",
-          "label_full": "Full Day"
-      }
+      "grade_heading": "Grade",
+      "toy_heading": "Time of Year",
+      "dur_heading": "Length"
   },
   "aside_header": {
       "heading": {
@@ -63,6 +74,8 @@
       "contact": "Contact Information",
       "review_submit": "Review and Submit"
   },
+  "button_next": "Next",
+  "back": "Back",
   "msm_back_link": "Back to Landing Page",
   "msm_heading": "Itineraries",
   "utils_bar": {

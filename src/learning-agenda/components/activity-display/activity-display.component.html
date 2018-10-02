@@ -14,14 +14,14 @@
       <img class="activity-list-item__image" src="{{act.img}}" width="227" height="161" alt="" />
     </a>
     <button *ngIf="showDelete" class="activity-list-item__rem-button" (click)="removeActivity(act.order)">
-      <span class="text">Remove Activity</span>
+      <span class="text">{{'rem_button' | translate}}</span>
     </button>
-    <button *ngIf="showSwap" class="activity-list-item__swap-button" (click)="toggleSwapBox(act.order)">Swap Activity</button>
+    <button *ngIf="showSwap" class="activity-list-item__swap-button" (click)="toggleSwapBox(act.order)">{{'swap_button' | translate}}</button>
   </figure>
   <div class="activity-list-item__body">
     <span class="activity-list-item__title">{{act.name}}</span>
     <span class="activity-list-item__desc" appEllipsis>{{act.description}}
-      <a href="javascript:void(0)" style="cursor:pointer">Full Description</a>
+      <a href="javascript:void(0)" style="cursor:pointer;">{{'full_desc_link' | translate}}</a>
     </span>
   </div>
 </main>
