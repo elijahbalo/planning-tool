@@ -414,7 +414,21 @@
           "length": 45,
           "type": "Guided Workshop",
           "order": "1",
-          "time": "10:45"
+          "time": "11:15"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "2",
+          "time": "13:00"
         }
       ]
     },
