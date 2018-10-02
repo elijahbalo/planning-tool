@@ -388,15 +388,29 @@
       "type": "Lunch",
       "order": "15",
       "time": ""
+    },
+    {
+      "name": "Think Like a Historian",
+      "ageRange": "Prek-2",
+      "kinderTo2": false,
+      "Gr3To5": false,
+      "Gr6To8": true,
+      "description": "When examining an object, museum historians begin with a series of questions. What is this? What is it made of? Who made it? Who used it? How did it get here? Using authentic “mystery” objects from the Museum’s Northwest Coast learning collection, this program trains your students to think like historians. From basic observations and descriptions of their mystery objects, students will build their inquiries to include historical thinking concepts. Further exploration of primary-source artifacts on display will help students identify aspects of continuity and change, as they absorb fresh historical perspectives.",
+      "fees": "",
+      "img": "assets/images/IMG2018-0032-0202-Dm.jpg",
+      "length": 45,
+      "type": "Workshop",
+      "order": "16",
+      "time": ""
     }
   ],
   "itineraries": [
     {
       "id": 1,
-      "title": "Explore the North",
+      "title": "Itinerary 1",
       "timeOfYear": "Oct — Apr",
       "grades": "Kindergarden to Grade 2",
-      "day": "Half-day",
+      "day": "Full-day",
       "img": "assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
       "OctoberToApril": true,
       "HalfDay": true,
@@ -452,29 +466,40 @@
     },
     {
       "id": 2,
-      "title": "Medieval Times",
-      "timeOfYear": "May — Jun",
+      "title": "Itinerary 2",
+      "timeOfYear": "Oct - Apr",
       "grades": "Grade 3 to 5",
       "day": "Full-day",
       "img": "assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
-      "OctoberToApril": false,
+      "OctoberToApril": true,
       "HalfDay": false,
       "FullDay": true,
-      "MayToJune": true,
+      "MayToJune": false,
       "KinderTo2": false,
       "Gr6To8": false,
       "Gr3To5": true,
       "activities": [
         {
-          "name": "Globe Trekkers at the Canadian Children’s Museum",
+          "name": "Traditions of the Anishinabe (Algonquin)",
           "ageRange": "Prek-2",
-          "description": "Based on the concept of learning through play, these multisensory, interactive programs promote students’ awareness of themselves and others. In the exciting and colourful international environment of the Canadian Children’s Museum, children explore how people live, work and interact in communities around the world.",
+          "description": "Explore the continuity of Anishinabe (Algonquin) culture through their traditions, oral histories, the objects they created, and the knowledge that community members have shared with the Museum. Students will explore objects related to six different traditions in Anishinabe (Algonquin) culture, and use the knowledge they acquire to compare Anishinabe (Algonquin) culture with their own.",
           "fees": "Group admission fee + $1 per student",
-          "img": "assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
+          "img": "assets/images/IMG2018-0032-0151-Dm.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "9",
+          "time": "10:00"
+        },
+        {
+          "name": "Explore the Museum",
+          "ageRange": "Prek-2",
+          "description": "Take some time to explore all the Museum has to offer. Enjoy our special exhibitions, wander through the Gift Shop, or take in the beautiful scenery of the Museum grounds.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0186-Dm.jpg",
           "length": 45,
           "type": "Self-Guided",
-          "order": "2",
-          "time": "10:00"
+          "order": "13",
+          "time": "11:15"
         },
         {
           "name": "The People of New France: Forging Relationships, Changing Landscapes",
@@ -485,24 +510,24 @@
           "length": 45,
           "type": "Self-Guided",
           "order": "5",
-          "time": "10:45"
+          "time": "13:00"
         },
         {
           "name": "Ciné+",
           "ageRange": "Prek-2",
           "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
-          "fees": "Group admission fee + $1 per student",
+          "fees": "Group admission fee",
           "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
           "length": 45,
-          "type": "Ciné +",
-          "order": "9",
-          "time": "11:30"
+          "type": "Ciné+",
+          "order": "12",
+          "time": "13:45"
         }
       ]
     },
     {
       "id": 3,
-      "title": "First Peoples of Canada",
+      "title": "Itinerary 3",
       "timeOfYear": "Oct — Apr",
       "grades": "Grade 6 to 8",
       "day": "Full-day",
@@ -525,14 +550,36 @@
           "type": "Tour",
           "order": "3",
           "time": "10:00"
+        },
+        {
+          "name": "Think Like a Historian",
+          "ageRange": "Prek-2",
+          "description": "When examining an object, museum historians begin with a series of questions. What is this? What is it made of? Who made it? Who used it? How did it get here? Using authentic “mystery” objects from the Museum’s Northwest Coast learning collection, this program trains your students to think like historians. From basic observations and descriptions of their mystery objects, students will build their inquiries to include historical thinking concepts. Further exploration of primary-source artifacts on display will help students identify aspects of continuity and change, as they absorb fresh historical perspectives.",
+          "fees": "",
+          "img": "assets/images/IMG2018-0032-0202-Dm.jpg",
+          "length": 45,
+          "type": "Workshop",
+          "order": "16",
+          "time": "11:15"
+        },
+        {
+          "name": "Men and Women of the Fur Trade",
+          "ageRange": "Prek-2",
+          "description": "During the fur trade, Europeans relied heavily on the knowledge of Indigenous women and men. This program highlights multiple perspectives on the fur trade following the Seven Years’ War (1756–1763), and examines the relationships that made trade networks possible. Students will use primary text sources and artifacts to explore the perspectives of Indigenous women, Indigenous men, and Europeans.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0215-Dm.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "10",
+          "time": "13:00"
         }
       ]
     },
     {
       "id": 4,
-      "title": "A Journey Through Prehistory",
+      "title": "Itinerary 4",
       "timeOfYear": "Oct — Apr",
-      "grades": "Grade 6 to 8",
+      "grades": "Grade 9 to 12",
       "day": "Full-day",
       "img": "assets/images/IMG2018-0032-0165-Dm.jpg",
       "OctoberToApril": true,
@@ -541,7 +588,42 @@
       "MayToJune": false,
       "KinderTo2": false,
       "Gr6To8": true,
-      "Gr3To5": false
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Grand Tour",
+          "ageRange": "Prek-2",
+          "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+          "length": 45,
+          "type": "Tour",
+          "order": "3",
+          "time": "10:00"
+        },
+        {
+          "name": "It's Your History",
+          "ageRange": "Prek-2",
+          "description": "This activity sheet is intended for students who visit the Canadian Museum of History. It offers them an engaging and thought-provoking self-guided exploration of four permanent exhibitions located on Level 1 of the Museum: the Grand Hall, From Time Immemorial: Tsimshian Prehistory, the First Peoples Hall and the Canadian Stamp Collection. Students will make their way through the exhibitions by answering questions that require observation, comparison, reflection and exploration.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0197-Dm.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "11",
+          "time": "11:15"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "13:00"
+        }
+      ]
     },
     {
       "id": 5,
