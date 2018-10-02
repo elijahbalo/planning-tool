@@ -13,6 +13,16 @@
     &:last-child {margin:0;}
     &:after {@include clearfix;}
 }
+.fieldset--border {
+    padding-top:20px;
+    padding-bottom:20px;
+    border-top:1px solid rgba(0,0,0,0.1);
+    border-bottom:1px solid rgba(0,0,0,0.1);
+}
+.required:after {
+    content:' *';
+    color:red;
+}
 input[type="text"] {
     padding:0 15px;
     height:50px;
@@ -33,4 +43,24 @@ input[type="text"] {
         font-weight:bold;
         margin-bottom:10px;
     }
+}
+.fieldset__heading {
+    font-weight:bold;
+    display:block;
+    margin-bottom:10px;
+    .fieldset--radio-inputs & {margin-bottom:15px;}
+}
+.radio-label--inline {
+    display:block;
+    float:left;
+    margin:0 20px 0 0;
+}
+.radio-label--inline {
+    input {margin-right:3px;}
+}
+.multiline {
+    line-height:1.4;
+}
+.fieldset--checkbox {
+    input {margin-right:3px;}
 }
