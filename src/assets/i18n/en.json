@@ -26,6 +26,36 @@
       "support_link": ["https://www.historymuseum.ca/support/", "Support"],
       "about_link": ["https://www.historymuseum.ca/about/", "About"]
   },
+  "aside_filter": {
+      "filter_button": "Filters",
+      "heading": "Filter By",
+      "reset_button": "Clear All",
+      "grade": {
+          "heading": "Grade",
+          "label_grade_kg2": "Kindergarden to Grade 2",
+          "label_grade_35": "Grades 3 to 5",
+          "label_grade_68": "Grades 6 to 8"
+      },
+      "toy": {
+          "heading": "Time of Year",
+          "label_oct_apr": "October to April",
+          "label_may_jun": "May to June"
+      },
+      "length": {
+          "heading": "Length",
+          "label_half": "Half-Day",
+          "label_full": "Full Day"
+      }
+  },
+  "msm_back_link": "Back to Landing Page",
+  "msm_heading": "Itineraries",
+  "utils_bar": {
+      "url_label": "Url",
+      "copy_url_btn": "Copy URL",
+      "print_btn": "Print",
+      "dl_pdf_btn": "Download PDF"
+  },
+  "full_desc_link": "Full Description",
   "contact_info": {
       "first_name": "First Name",
       "last_name": "Last Name",
