@@ -114,7 +114,7 @@ export class SubmitFormComponent implements OnInit {
 
 
     var http = new XMLHttpRequest();
-    var url = '/test.php';
+    var url = '/form-util/';
     var params = data;
     http.open('POST', url, true);
 
