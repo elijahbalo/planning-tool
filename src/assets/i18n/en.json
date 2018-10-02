@@ -375,10 +375,10 @@
   "itineraries": [
     {
       "id": 1,
-      "title": "Explore the North",
+      "title": "Itinerary 1",
       "timeOfYear": "Oct — Apr",
       "grades": "Kindergarden to Grade 2",
-      "day": "Half-day",
+      "day": "Full-day",
       "img": "assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
       "OctoberToApril": true,
       "HalfDay": true,
@@ -434,29 +434,40 @@
     },
     {
       "id": 2,
-      "title": "Medieval Times",
-      "timeOfYear": "May — Jun",
+      "title": "Itinerary 2",
+      "timeOfYear": "Oct - Apr",
       "grades": "Grade 3 to 5",
       "day": "Full-day",
       "img": "assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
-      "OctoberToApril": false,
+      "OctoberToApril": true,
       "HalfDay": false,
       "FullDay": true,
-      "MayToJune": true,
+      "MayToJune": false,
       "KinderTo2": false,
       "Gr6To8": false,
       "Gr3To5": true,
       "activities": [
         {
-          "name": "Globe Trekkers at the Canadian Children’s Museum",
+          "name": "Traditions of the Anishinabe (Algonquin)",
           "ageRange": "Prek-2",
-          "description": "Based on the concept of learning through play, these multisensory, interactive programs promote students’ awareness of themselves and others. In the exciting and colourful international environment of the Canadian Children’s Museum, children explore how people live, work and interact in communities around the world.",
+          "description": "Explore the continuity of Anishinabe (Algonquin) culture through their traditions, oral histories, the objects they created, and the knowledge that community members have shared with the Museum. Students will explore objects related to six different traditions in Anishinabe (Algonquin) culture, and use the knowledge they acquire to compare Anishinabe (Algonquin) culture with their own.",
           "fees": "Group admission fee + $1 per student",
-          "img": "assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
+          "img": "assets/images/IMG2018-0032-0151-Dm.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "9",
+          "time": "10:00"
+        },
+        {
+          "name": "Explore the Museum",
+          "ageRange": "Prek-2",
+          "description": "Take some time to explore all the Museum has to offer. Enjoy our special exhibitions, wander through the Gift Shop, or take in the beautiful scenery of the Museum grounds.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0186-Dm.jpg",
           "length": 45,
           "type": "Self-Guided",
-          "order": "2",
-          "time": "10:00"
+          "order": "13",
+          "time": "11:15"
         },
         {
           "name": "The People of New France: Forging Relationships, Changing Landscapes",
@@ -467,18 +478,7 @@
           "length": 45,
           "type": "Self-Guided",
           "order": "5",
-          "time": "10:45"
-        },
-        {
-          "name": "Ciné+",
-          "ageRange": "Prek-2",
-          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
-          "fees": "Group admission fee + $1 per student",
-          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
-          "length": 45,
-          "type": "Ciné +",
-          "order": "9",
-          "time": "11:30"
+          "time": "13:00"
         }
       ]
     },
