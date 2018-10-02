@@ -1,11 +1,13 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFirestore } from 'angularfire2/firestore';
+import { Observable } from 'rxjs';
 import * as Lodash from 'lodash';
 import * as $ from 'jquery';
 import { TranslationService } from '../../../services/translation.service';
 import { FormService } from '../../../services/form.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-landing-page',
@@ -14,6 +16,15 @@ import { Router, ActivatedRoute } from '@angular/router';
   // ,encapsulation: ViewEncapsulation.None
 })
 export class LandingPageComponent implements OnInit {
+  private url = '/test.php';
+  body = {
+    subject: 'Test email',
+    from_name: 'History Museum',
+    from_email: 'elijah.balogun@museedelhistoire.ca',
+    to: 'pierre.mageau@museedelhistoire.ca',
+    message: 'This is to test that the form email service works.',
+    AKEY: 'uK21MLM0A2'
+  }
   en;
   fr;
   activities;
@@ -23,8 +34,9 @@ export class LandingPageComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private translateService: TranslationService,
-    private formService: FormService
-  ) {}
+    private formService: FormService,
+    private http: HttpClient
+  ) { }
   ngOnInit() {
     this.setDefaultLang();
   }
@@ -64,14 +76,73 @@ export class LandingPageComponent implements OnInit {
     this.translateService.switchLanguage(lang);
   }
 
-  postForm() {
-    this.formService.sendFormData().subscribe(
-      response => {
-        console.log(response);
-      },
-      err => {
-        console.log(err);
+  /*   postForm() {
+      let data = {
+        subject: 'Test email',
+        from_name: 'History Museum',
+        from_email: 'elijah.balogun@museedelhistoire.ca',
+        to: 'pierre.mageau@museedelhistoire.ca',
+        message: 'This is to test that the form email service works.',
+        AKEY: 'uK21MLM0A2'
       }
-    );
+      var xhr = new XMLHttpRequest();
+      // we defined the xhr
+      xhr.open("POST", this.url, true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+      xhr.send(data);
+      console.log(data)
+    }
+   */
+  /*  postForm() {
+     console.log(this.body);
+     return this.http
+       .post(this.url, this.body)
+       .subscribe(
+         res => {
+           console.log(res);
+         },
+         err => {
+           console.log('Error occured');
+         }
+       );
+   } */
+
+  postForm() {
+    let data = {
+      subject: 'Test email',
+      from_name: 'History Museum',
+      from_email: 'elijah.balogun@museedelhistoire.ca',
+      to: 'pierre.mageau@museedelhistoire.ca',
+      message: 'This is to test that the form email service works.',
+      AKEY: 'uK21MLM0A2'
+    }
+    var urlEncodedData = "";
+    var urlEncodedDataPairs = [];
+    var name
+
+    for (name in data) {
+      urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
+    }
+
+    // Combine the pairs into a single string and replace all %-encoded spaces to 
+    // the '+' character; matches the behaviour of browser form submissions.
+    urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+
+
+    var http = new XMLHttpRequest();
+    var url = '/form-util/';
+    var params = data;
+    http.open('POST', url, true);
+
+    //Send the proper header information along with the request
+    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    http.onreadystatechange = function () {//Call a function when the state changes.
+      if (http.readyState == 4 && http.status == 200) {
+        alert(http.responseText);
+      }
+    }
+    http.send(urlEncodedData);
   }
+
 }
