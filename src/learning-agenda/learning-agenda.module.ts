@@ -45,9 +45,11 @@ import { AppRoutingModule } from './router';
 import { SlideshowModule } from 'ng-simple-slideshow';
 import { environment } from './environments/environment';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
+import { FormService } from '../services/form.service';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 
 @NgModule({
@@ -65,6 +67,7 @@ import { AppHeaderComponent } from './components/app-header/app-header.component
     }),
     EllipsisModule,
     AppRoutingModule,
+    HttpModule,
     ClipboardModule,
     MultilineEllipsisModule,
     HttpClientModule,
@@ -109,7 +112,7 @@ import { AppHeaderComponent } from './components/app-header/app-header.component
     ItineraryPageComponent,
     AppHeaderComponent
   ],
-  providers: [AngularFirestoreModule, TranslationService]
+  providers: [AngularFirestoreModule, TranslationService, FormService]
 })
 export class LearningAgendaModule {}
 

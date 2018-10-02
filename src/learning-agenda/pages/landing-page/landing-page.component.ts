@@ -4,6 +4,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import * as Lodash from 'lodash';
 import * as $ from 'jquery';
 import { TranslationService } from '../../../services/translation.service';
+import { FormService } from '../../../services/form.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -21,7 +22,8 @@ export class LandingPageComponent implements OnInit {
     private db: AngularFirestore,
     private router: Router,
     private route: ActivatedRoute,
-    private translateService: TranslationService
+    private translateService: TranslationService,
+    private formService: FormService
   ) {}
   ngOnInit() {
     this.setDefaultLang();
@@ -60,5 +62,16 @@ export class LandingPageComponent implements OnInit {
       this.fr = true;
     }
     this.translateService.switchLanguage(lang);
+  }
+
+  postForm() {
+    this.formService.sendFormData().subscribe(
+      response => {
+        console.log(response);
+      },
+      err => {
+        console.log(err);
+      }
+    );
   }
 }
