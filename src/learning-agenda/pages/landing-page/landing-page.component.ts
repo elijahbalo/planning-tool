@@ -23,7 +23,9 @@ export class LandingPageComponent implements OnInit {
     private route: ActivatedRoute,
     private translateService: TranslationService
   ) {}
-  ngOnInit() {}
+  ngOnInit() {
+    this.setDefaultLang();
+  }
 
   navigateToBrowsePage(event) {
     event.preventDefault();
@@ -33,6 +35,10 @@ export class LandingPageComponent implements OnInit {
   navigateToCreatePage(event) {
     event.preventDefault();
     this.router.navigate(['CreatePage']);
+  }
+  setDefaultLang() {
+    this.en = true;
+    this.fr = false;
   }
 
   fetchTranslation(key) {

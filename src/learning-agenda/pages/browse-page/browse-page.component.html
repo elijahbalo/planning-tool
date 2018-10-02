@@ -1,4 +1,4 @@
-<main-header></main-header>
+<main-header [en]="en" [fr]="fr"></main-header>
 
 <app-header [route]="route"></app-header>
 
@@ -63,93 +63,104 @@
     <main class="main-section__main" id="main-sect">
       <div *ngIf="!dis">
         <header>
-            <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToLanding()">{{'msm_back_link' | translate}}</a>
-            <h2 class="msm__heading">{{'msm_heading' | translate}}</h2>
+          <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToLanding()">{{'msm_back_link' | translate}}</a>
+          <h2 class="msm__heading">{{'msm_heading' | translate}}</h2>
         </header>
         <ul class="card-list" id="itinerary-browse">
-            <li *ngFor="let item of items" class="card-wrapper">
-                <a class="la-card" href="javascript:void(0)" (click)="displayItem(item)" [ngStyle]="{ 'background-image': 'url(' + item.img + ')'}">
-                    <main class="la-card__main">
-                        <span class="la-card__subtitle">{{item.grades}}</span><br />
-                        <span class="la-card__title">{{item.title}}</span><br />
-                        <span class="la-card__toy">{{item.timeOfYear}}</span>
-                    </main>
-                </a>
-            </li>
+          <li *ngFor="let item of items" class="card-wrapper">
+            <a class="la-card" href="javascript:void(0)" (click)="displayItem(item)" [ngStyle]="{ 'background-image': 'url(' + item.img + ')'}">
+              <main class="la-card__main">
+                <span class="la-card__subtitle">{{item.grades}}</span>
+                <br />
+                <span class="la-card__title">{{item.title}}</span>
+                <br />
+                <span class="la-card__toy">{{item.timeOfYear}}</span>
+              </main>
+            </a>
+          </li>
         </ul>
       </div>
 
       <div *ngIf="dis">
         <header>
-            <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToLanding()">{{'msm_back_link' | translate}}</a>
-            <h2 class="msm__heading">{{'msm_heading' | translate}}</h2>
+          <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToLanding()">{{'msm_back_link' | translate}}</a>
+          <h2 class="msm__heading">{{'msm_heading' | translate}}</h2>
         </header>
         <div class="la-banner" [ngStyle]="{'background-image': 'url(' + itn.img + ')'}">
-            <main class="la-banner__main">
-                <span class="la-banner__subtitle">{{itn.grades}}</span>
-                <h3 class="la-banner__title">{{itn.title}}</h3>
-                <span class="la-banner__toy">{{itn.timeOfYear}}</span>
-            </main>
-            <div class="utils-bar">
-                <div class="url-copier">
-                    <label for="url">{{'utils_bar.url_label' | translate}}</label>
-                    <input id="url" value="http://localhost:4200/BrowsePage" name="url" type="text" />
-                    <button class="la-button la-button--utils-bar la-button--clr-primary">{{'utils_bar.copy_url_btn' | translate}}</button>
-                </div>
-                <aside class="utils-bar__aside">
-                    <button class="la-button la-button--utils-bar" (click)="printDiv()">{{'utils_bar.print_btn' | translate}}</button>
-                    <button class="la-button la-button--utils-bar" (click)="pdf()">{{'utils_bar.dl_pdf_btn' | translate}}</button>
-                </aside>
-            </div><!--/.utils-bar-->
-            <span class="la-banner__image-cover"></span>
-        </div><!--/.la-banner-->
+          <main class="la-banner__main">
+            <span class="la-banner__subtitle">{{itn.grades}}</span>
+            <h3 class="la-banner__title">{{itn.title}}</h3>
+            <span class="la-banner__toy">{{itn.timeOfYear}}</span>
+          </main>
+          <div class="utils-bar">
+            <div class="url-copier">
+              <label for="url">{{'utils_bar.url_label' | translate}}</label>
+              <input id="url" value="http://localhost:4200/BrowsePage" name="url" type="text" />
+              <button class="la-button la-button--utils-bar la-button--clr-primary">{{'utils_bar.copy_url_btn' | translate}}</button>
+            </div>
+            <aside class="utils-bar__aside">
+              <button class="la-button la-button--utils-bar" (click)="printDiv()">{{'utils_bar.print_btn' | translate}}</button>
+              <button class="la-button la-button--utils-bar" (click)="pdf()">{{'utils_bar.dl_pdf_btn' | translate}}</button>
+            </aside>
+          </div>
+          <!--/.utils-bar-->
+          <span class="la-banner__image-cover"></span>
+        </div>
+        <!--/.la-banner-->
 
         <div class="la-activities">
-            <ul>
-                <li class="activity-list-item">
-                    <span class="activity-list-item__time">{{arrive.time}}</span>
-                    <figure class="activity-list-item__figure">
-                        <a class="activity-list-item__image-link" href="#figure">
-                            <img class="activity-list-item__image" src="{{arrive.img}}" width="227" height="161" alt="" />
-                        </a>
-                    </figure>
-                    <div class="activity-list-item__body">
-                        <span class="activity-list-item__title">{{arrive.name}}</span>
-                        <span class="activity-list-item__desc" appEllipsis>{{arrive.description}} ... <a href="#desc">{{'full_desc_link' | translate}}</a></span>
-                    </div>
-                </li>
-                <li *ngFor="let act of itn__act" class="activity-list-item">
-                    <app-activity-display [act]="act" [activities]="activities" (itmDel)="update($event)" (itmRpl)="update($event)" [itn]="itn__act" 
-                    (toggle)="updateTog($event)" [showSwap]="showSwap" [showDelete]="showDelete"></app-activity-display>
-                </li>
-                <!--
-                <li class="activity-list-item">
-                    <span class="activity-list-item__time">10:00 AM</span>
-                    <figure class="activity-list-item__figure">
-                        <a class="activity-list-item__image-link" href="#figure">
-                            <img class="activity-list-item__image" src="/assets/images/IMG2018-0032-0151-Dm.jpg" width="227" height="161" alt="" />
-                        </a>
-                        <button class="activity-list-item__rem-button">
-                            <span class="text">Remove Activity</span>
-                        </button>
-                        <button class="activity-list-item__swap-button">Swap Activity</button>
-                    </figure>
-                    <div class="activity-list-item__body">
-                        <span class="activity-list-item__title">Traditions of the Anishinabe (Algonquin)</span>
-                        <span class="activity-list-item__desc">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
-                        consectetur purus sit amet fermentum.</span>
-                    </div>
-                </li>
-                -->
-                <li class="activity-list-item activity-list-item--add">
-                    <app-empty-activity-display (addItem)="addItem($event)" [showNext]="showNext" [disable]="max" [isClickable]="clickable"></app-empty-activity-display>
-                </li>
-            </ul>
-        </div><!--/.la-activities-->
-      </div><!--/#itinerary-single-->
-    </main><!--/.main-section__main-->
+          <ul>
+            <li class="activity-list-item">
+              <span class="activity-list-item__time">{{arrive.time}}</span>
 
-  </div><!--/.main-section__wrapper-->
-</section><!--/.main-section-->
+              <figure class="activity-list-item__figure">
+                <a class="activity-list-item__image-link" href="#figure">
+                  <img class="activity-list-item__image" src="{{arrive.img}}" width="227" height="161" alt="" />
+                </a>
+              </figure>
+              <div class="activity-list-item__body">
+                <span class="activity-list-item__title">{{arrive.name}}</span>
+                <span class="activity-list-item__desc" appEllipsis>{{arrive.description}}
+                  <a href="#desc">Full Description</a>
+                </span>
+              </div>
+            </li>
+            <li *ngFor="let act of itn__act" class="activity-list-item">
+              <app-activity-display [act]="act" [activities]="activities" (itmDel)="update($event)" (itmRpl)="update($event)" [itn]="itn__act"
+                (toggle)="updateTog($event)" [showSwap]="showSwap" [showDelete]="showDelete"></app-activity-display>
+            </li>
+            <!--  <li class="activity-list-item">
+              <span class="activity-list-item__time">10:00 AM</span>
+              <figure class="activity-list-item__figure">
+                <a class="activity-list-item__image-link" href="#figure">
+                  <img class="activity-list-item__image" src="/assets/images/IMG2018-0032-0151-Dm.jpg" width="227" height="161" alt="" />
+                </a>
+                <button class="activity-list-item__rem-button">
+                  <span class="text">Remove Activity</span>
+                </button>
+                <button class="activity-list-item__swap-button">Swap Activity</button>
+              </figure>
+              <div class="activity-list-item__body">
+                <span class="activity-list-item__title">Traditions of the Anishinabe (Algonquin)</span>
+                <span class="activity-list-item__desc">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis
+                  consectetur purus sit amet fermentum.</span>
+              </div>
+            </li> -->
+            <li class="activity-list-item activity-list-item--add">
+              <app-empty-activity-display (addItem)="addItem($event)" [showNext]="showNext" [disable]="max" [isClickable]="clickable"></app-empty-activity-display>
+
+            </li>
+          </ul>
+        </div>
+        <!--/.la-activities-->
+      </div>
+      <!--/#itinerary-single-->
+    </main>
+    <!--/.main-section__main-->
+
+  </div>
+  <!--/.main-section__wrapper-->
+</section>
+<!--/.main-section-->
 
 <app-main-footer></app-main-footer>
