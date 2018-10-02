@@ -57,8 +57,15 @@ export class BrowsePageComponent implements OnInit {
     private changeDetector: ChangeDetectorRef
   ) {}
   ngOnInit() {
-    localStorage.clear();
-    localStorage.setItem('lang', JSON.stringify('en'));
+    if (JSON.parse(localStorage.getItem('lang')) == 'en') {
+      this.en = true;
+      this.fr = false;
+    }
+
+    if (JSON.parse(localStorage.getItem('lang')) == 'fr') {
+      this.fr = true;
+      this.en = true;
+    }
     /* this.items = this.db
       .collection('/itineraries')
       .valueChanges()
@@ -321,12 +328,9 @@ export class BrowsePageComponent implements OnInit {
   }
 
   filter() {
-    let lang = JSON.parse(localStorage.getItem('lang'));
-    if (lang == 'en') {
+  
       var items = itn_E.itineraries;
-    } else {
-      var items = itn_F.itineraries;
-    }
+   
     if (this.g_filter.length == 0) {
       /* should set items to the two langs, using en for now....*/
       this.filters = itn_E.itineraries;

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TranslationService } from '../../../services/translation.service';
 @Component({
   selector: 'main-header',
@@ -8,19 +8,26 @@ import { TranslationService } from '../../../services/translation.service';
 export class MainHeaderComponent implements OnInit {
   @Output()
   lang: EventEmitter<any> = new EventEmitter<any>();
-  en = false;
-  fr = false;
+  @Input()
+  en;
+  @Input()
+  fr;
   constructor(private translateService: TranslationService) {}
   ngOnInit() {
-    localStorage.setItem('lang', JSON.stringify('en'));
     if (JSON.parse(localStorage.getItem('lang')) == 'en') {
+      this.fr = false;
       this.en = true;
     }
 
     if (JSON.parse(localStorage.getItem('lang')) == 'fr') {
       this.fr = true;
+      this.en = false;
     }
   }
+  getDefaultLang() {
+    this.translateService.getDefaultLang();
+  }
+
   fetchTranslation(key) {
     return this.translateService.fetchTranslation(key);
   }
