@@ -119,24 +119,16 @@
     "button_browse": "Browse Itineraries",
     "button_create": "Create Your Own"
   },
+  "modal_close_button": "Hide Details",
+  "modal_show_full_button": "Show Full Information",
   "canada_wordmark_alt": "Symbol of the Government of Canada",
   "facebook_link": "https://www.facebook.com/CanMusHistory/",
   "twitter_link": "https://twitter.com/CanMusHistory",
   "instagram_link": "https://www.instagram.com/canmushistory/",
-  "sidebar_head": "Instructions",
-  "sidebar_rst": "Restart",
-  "sidebar_option1": "Select a Grade",
-  "sidebar_option2": "Select a Duration",
-  "sidebar_option3": "select a Date",
-
-  "sidebar_option4": "Select your Activities",
-  "sidebar_option5": "Review and Submit",
-  "sidebar_option6": "Contact Information",
-
   "arrive": {
     "name": "Arrive",
     "img": "assets/images/Nordik_Massana_12.20.16_0786.jpg",
-    "time": "9:30AM",
+    "time": "9:30 AM",
     "length": 30,
     "order": "10",
     "description": "Barton did feebly change man she afford square add. Want eyes by neat so just must. Past draw tall up face show rent oh mr. Required is debating extended wondered as do. New get described applauded incommode shameless out extremity but"
@@ -287,7 +279,6 @@
         }
       ]
     },
-
     {
       "id": 2,
       "title": "Medieval Times",

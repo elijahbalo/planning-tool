@@ -62,9 +62,9 @@
 
     <main class="main-section__main" id="main-sect">
       <div *ngIf="!dis">
-        <header>
-          <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToLanding()">{{'msm_back_link' | translate}}</a>
-          <h2 class="msm__heading">{{'msm_heading' | translate}}</h2>
+        <header class="msm__header">
+            <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToLanding()">{{'msm_back_link' | translate}}</a>
+            <h2 class="msm__heading">{{'msm_heading' | translate}}</h2>
         </header>
         <ul class="card-list" id="itinerary-browse">
           <li *ngFor="let item of items" class="card-wrapper">
@@ -81,8 +81,8 @@
         </ul>
       </div>
 
-      <div *ngIf="dis">
-        <header>
+      <div *ngIf="dis" style="clear:both;">
+        <header class="msm__header">
           <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToLanding()">{{'msm_back_link' | translate}}</a>
           <h2 class="msm__heading">{{'msm_heading' | translate}}</h2>
         </header>

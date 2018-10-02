@@ -1,46 +1,41 @@
 <div *ngIf="modal">
-
   <!-- Modal content -->
+    <div class="la-modal on">
+        <div class="la-modal__container">
+            <main class="la-modal__main">
+                <div class="la-modal__main-wrapper">
+                    <button class="la-button la-modal__close-button" (click)="toggleModal()">{{'modal_close_button' | translate}}</button>
+                    <header class="la-modal__header" [ngStyle]="{'background-image': 'url(' + item.img + ')'}">
+                        <div class="la-modal__header-main">
+                            <span class="la-modal__sub-heading">{{item.type}}</span>
+                            <span class="la-modal__heading">{{item.name}}</span>
+                        </div>
+                        <span class="la-modal__image-cover"></span>
+                    </header>
+                    <div class="la-modal__summary">
+                        <p>{{item.description}}</p>
+                        <button class="la-button la-button--clr-primary" (click)="toggleHide()">{{'modal_show_full_button' | translate}}</button>
+                    </div><!--/.la-modal__summary-->
+                    <div *ngIf="hide" class="la-modal__body">
+                        <p>This course builds students' capacity to conduct quantitative research in education at the doctoral level. It
+                        covers all topics related to experimental and quasi-experimental design and the application of univariate statistics
+                        to educational research problems.</p>
 
+                        <p>In doing so, the course addresses the basic theory underlying quantitative approaches, selection of an initial
+                        research question, the types of questions best suited to quantitative methods, managing and analyzing quantitative
+                        data, external and internal validity, reliability and objectivity. This course also provides opportunities
+                        to analyze quantitative data.</p>
 
-  <div class="la-modal on">
-    <div class="la-modal__container">
-      <main class="la-modal__main">
-        <div class="la-modal__main-wrapper">
-          <button class="la-button la-modal__close-button" (click)="toggleModal()">Hide Details</button>
-          <header class="la-modal__header" [ngStyle]="{ 'background-image': 'url(' + item.img + ')'}">
-            <div class="la-modal__header-main">
-              <span class="la-modal__sub-heading">{{item.type}}</span>
-              <span class="la-modal__heading">{{item.name}}</span>
-            </div>
-            <span class="la-modal__image-cover"></span>
-          </header>
-          <div class="la-modal__summary">
-            <p>T{{item.description}}</p>
-            <button class="la-button la-button--clr-primary" (click)="toggleHide()">Show Full Information</button>
-          </div>
-          <!--/.la-modal__summary-->
-          <div *ngIf="hide" class="la-modal__body">
-            <p>This course builds students' capacity to conduct quantitative research in education at the doctoral level. It
-              covers all topics related to experimental and quasi-experimental design and the application of univariate statistics
-              to educational research problems.</p>
+                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id
+                        ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+                        odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
+                        justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla.</p>
 
-            <p>In doing so, the course addresses the basic theory underlying quantitative approaches, selection of an initial
-              research question, the types of questions best suited to quantitative methods, managing and analyzing quantitative
-              data, external and internal validity, reliability and objectivity. This course also provides opportunities
-              to analyze quantitative data.</p>
-
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id
-              ligula porta felis euismod semper. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
-              odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa
-              justo sit amet risus. Donec ullamcorper nulla non metus auctor fringilla.</p>
-
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla
-              non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-          </div>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla
+                        non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    </div><!--/.la-modal__body-->
+                </div><!--/.la-modal__main-wrapper-->
+            </main>
         </div>
-        <!--/.la-modal__main-->
-      </main>
-    </div>
-  </div>
+    </div><!--/.la-modal-->
 </div>

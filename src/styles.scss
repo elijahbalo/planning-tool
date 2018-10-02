@@ -125,15 +125,12 @@ $main_back_link_button_size: 32px;
   width: calc(65% - #{$left_margin});
   margin-left: $left_margin;
   height: 100%; // !! temp assignment, make sure to remove.
-  header {
-    margin-bottom: 30px;
-    position: relative;
-    padding-left: $main_back_link_button_size + 20px;
-    //min-height:$main_back_link_button_size;
-    &:after {
-      @include clearfix;
-    }
-  }
+}
+.msm__header {
+    margin-bottom:30px;
+    position:relative;
+    padding-left:$main_back_link_button_size + 20px;
+    &:after {@include clearfix;}
 }
 .msm__back-link {
   display: block;
@@ -334,6 +331,8 @@ $activity_list_item_time_bg_clr: #d8d8d8;
     padding-left:30px;
     padding-bottom:30px;
     &:after {@include clearfix;}
+    &:last-child {border-left:0;}
+    &:last-child .activity-list-item__time {right:calc(100% - 3px);}
 }
 .activity-list-item--add {
   border: 0;
