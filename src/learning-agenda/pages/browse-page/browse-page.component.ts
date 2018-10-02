@@ -310,7 +310,7 @@ export class BrowsePageComponent implements OnInit {
 
     $('#grade-kindergarden_2').prop('checked', false);
 
-    $('#grade-3_6').prop('checked', false);
+    $('#grade-3_5').prop('checked', false);
 
     $('#grade-6_8').prop('checked', false);
 
@@ -328,9 +328,8 @@ export class BrowsePageComponent implements OnInit {
   }
 
   filter() {
-  
-      var items = itn_E.itineraries;
-   
+    var items = itn_E.itineraries;
+
     if (this.g_filter.length == 0) {
       /* should set items to the two langs, using en for now....*/
       this.filters = itn_E.itineraries;

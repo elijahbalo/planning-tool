@@ -1,50 +1,43 @@
 <div class="contact-info">
     <div class="fieldset fieldset--text-input">
-        <label for="first_name">First Name</label>
-        <input type="text" id="first_name" name="first_name" />
+        <label class="required" for="first_name">{{'contact_info.first_name' | translate}}</label>
+        <input type="text" required id="first_name" name="first_name" />
     </div>
     <div class="fieldset fieldset--text-input">
-        <label for="last_name">Last Name</label>
-        <input type="text" id="last_name" name="last_name" />
+        <label class="required" for="last_name">{{'contact_info.last_name' | translate}}</label>
+        <input type="text" required id="last_name" name="last_name" />
     </div>
     <div class="fieldset fieldset--text-input">
-        <label for="school_institution">School / Institution</label>
-        <input type="text" id="school_institution" name="school_institution" />
+        <label class="required" for="email">{{'contact_info.email' | translate}}</label>
+        <input type="text" required id="email" name="email" />
     </div>
     <div class="fieldset fieldset--text-input">
-        <label for="num_attendees">Number of Attendees</label>
-        <input type="text" id="num_attendees" name="num_attendees" />
-    </div>
-    <div class="fieldset fieldset--text-input">
-        <label for="phone">Phone</label>
+        <label for="phone">{{'contact_info.phone' | translate}}</label>
         <input type="text" id="phone" name="phone" />
     </div>
-    <div class="fieldset fieldset--text-input">
-        <label for="email">Email Address</label>
-        <input type="text" id="email" name="email" />
+    <div class="fieldset fieldset--radio-inputs">
+        <span class="required fieldset__heading">{{'contact_info.group.heading' | translate}}</span>
+        <label class="radio-label radio-label--inline" for="group_lang-en">
+            <input type="radio" name="group_lang" checked id="group_lang-en" value="{{'contact_info.group.eng.input_val' | translate}}" />
+            {{'contact_info.group.eng.label' | translate}}
+        </label>
+        <label class="radio-label radio-label--inline" for="group_lang-fr">
+            <input type="radio" name="group_lang" id="group_lang-fr" value="{{'contact_info.group.fra.input_val' | translate}}" />
+            {{'contact_info.group.fra.label' | translate}}
+        </label>
     </div>
-    <div class="fieldset">
-        <h3>Preferred Method of Contact</h3>
-        <label for="contact_method-phone"><input type="radio" name="contact_method" id="contact_method-phone" value="Phone" /> Phone</label>
-        <label for="contact_method-email"><input type="radio" name="contact_method" id="contact_method-email" value="Email" /> Email</label>
+    <div class="fieldset fieldset--checkbox fieldset--border">
+        <span class="fieldset__heading">{{'contact_info.newsletter.heading' | translate}}</span>
+        <label for="newletter" class="multiline">
+            <input type="checkbox" name="newletter" checked id="newletter" value="{{'contact_info.newsletter.input_val' | translate}}" />
+             {{'contact_info.newsletter.label' | translate}}
+        </label>
     </div>
-    <div class="fieldset">
-        <h3>Preferred Time of Contact</h3>
-        <label for="pref_time-from">From</label>
-        <select name="pref_time-from" id="pref_time-from">
-            <option value="9:30 AM">9:30 AM</option>
-            <option value="10:30 AM">10:30 AM</option>
-        </select>
-        <label for="pref_time-to">To</label>
-        <select name="pref_time-to" id="pref_time-to">
-            <option value="4:00 PM">4:00 PM</option>
-            <option value="7:00 PM">7:00 PM</option>
-        </select>
+    <div class="fieldset fieldset--checkbox">
+        <span class="fieldset__heading">{{'contact_info.consent.heading' | translate}}</span>
+        <label for="consentment" class="multiline">
+            <input type="checkbox" name="consentment" id="consentment" value="{{'contact_info.consent.input_val' | translate}}" />
+             {{'contact_info.consent.label' | translate}}
+        </label>
     </div>
-    <div class="fieldset">
-        <label for="comments">Comments</label>
-        <p>Let us know about about any special instructions 
-        for contacting you or special needs for your group.</p>
-        <textarea id="comments" name="comments"></textarea>
-    </div>
-</div><!--/.contact-info-->
+</div>

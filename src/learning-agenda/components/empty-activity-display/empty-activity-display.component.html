@@ -8,6 +8,8 @@
     <button *ngIf="!disable" disabled class="la-button la-button--add">Add Another Activity</button>
   </div>
   <button *ngIf="disable" disabled class="la-button la-button--add">Maximum Activities</button>
-  <button *ngIf="!enabled" class="la-button la-button--clr-primary" disabled (click)="next()">Next</button>
-  <button *ngIf="enabled" class="la-button la-button--clr-primary" (click)="next()">Next</button>
+  <div *ngIf="showNext">
+    <button *ngIf="!enabled" class="la-button la-button--clr-primary" disabled (click)="next()">Next</button>
+    <button *ngIf="enabled" class="la-button la-button--clr-primary" (click)="next()">Next</button>
+  </div>
 </div>
