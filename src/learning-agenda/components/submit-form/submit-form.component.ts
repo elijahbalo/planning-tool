@@ -38,7 +38,7 @@ export class SubmitFormComponent implements OnInit {
       subject: 'New User Data',
       from_name: 'History Museum',
       from_email: 'elijah.balogun@museedelhistoire.ca',
-      to: 'pierre.mageau@museedelhistoire.ca',
+      to: this.email,
       message: 'New user alert received from ' + this.firstName + '' + this.lastName + '\n email address is: ' + this.email + '\n phone:' + this.phone + '\n group language:' + this.lang + '\n' + this.shouldSendNews,
       AKEY: 'uK21MLM0A2'
     }
@@ -81,7 +81,7 @@ export class SubmitFormComponent implements OnInit {
       from_name: 'History Museum',
       from_email: 'elijah.balogun@museedelhistoire.ca',
       to: this.email,
-      message: div.innerHTML,
+      message: "test",
       AKEY: 'uK21MLM0A2'
     }
     console.log(data)
