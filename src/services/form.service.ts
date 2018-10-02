@@ -9,10 +9,10 @@ import { throwError } from 'rxjs';
 @Injectable()
 export class FormService {
   // Resolve HTTP using the constructor
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   // private instance variable to hold base url
   //private Url = '/form-util/';
-  private Url = 'http://localhost/test.php';
+  //private Url = 'http://localhost/test.php';
   /*  sendFormData(): Observable<any> {
     //pass the parameter to the data properties
     let data = {

@@ -55,7 +55,7 @@ export class BrowsePageComponent implements OnInit {
     private db: AngularFirestore,
     private router: Router,
     private changeDetector: ChangeDetectorRef
-  ) {}
+  ) { }
   ngOnInit() {
     if (JSON.parse(localStorage.getItem('lang')) == 'en') {
       this.en = true;
@@ -102,7 +102,7 @@ export class BrowsePageComponent implements OnInit {
   onFilterBtnSelect() {
     this.showFilterAside = !this.showFilterAside ? true : false;
   }
-  switchLanguage(language: string) {
+  switchLanguage(language) {
     if (language == 'en') {
       localStorage.setItem('lang', JSON.stringify('en'));
 
@@ -281,13 +281,13 @@ export class BrowsePageComponent implements OnInit {
 
     newWin.document.write(
       '<html><body onload="window.print()">' +
-        divToPrint.innerHTML +
-        '</body></html>'
+      divToPrint.innerHTML +
+      '</body></html>'
     );
 
     newWin.document.close();
 
-    setTimeout(function() {
+    setTimeout(function () {
       newWin.close();
     }, 10);
   }
