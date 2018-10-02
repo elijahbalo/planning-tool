@@ -249,7 +249,7 @@
   "itineraries": [
     {
       "id": 1,
-      "title": "Explore the Arctic",
+      "title": "Explore the North",
       "timeOfYear": "Oct — Apr",
       "grades": "Kindergarden to Grade 2",
       "day": "Half-day",
@@ -387,7 +387,7 @@
     },
     {
       "id": 5,
-      "title": "Explore the Arctic",
+      "title": "Explore the North",
       "timeOfYear": "May — Jun",
       "grades": "Grade 3 to 5",
       "day": "Half-day",
