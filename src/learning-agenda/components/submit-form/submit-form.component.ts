@@ -72,7 +72,22 @@ export class SubmitFormComponent implements OnInit {
     http.send(urlEncodedData);
   }
 
+  convertItn(itn) {
+    let str = '\nyour itineraries:'
+    for (var i = 0; i < itn.length; i++) {
+      str += '\n title: ' + itn[i].name
+    }
+    return str
+  }
+
   sendUserEmail() {
+    let day = JSON.parse(localStorage.getItem('day'))
+    let grade = JSON.parse(localStorage.getItem('f_grade'))
+    let itn = JSON.parse(localStorage.getItem('itn_En'))
+    console.log(day)
+    console.log(grade)
+    console.log(itn)
+
     var div = document.getElementById('custom-form');
 
 
@@ -81,7 +96,7 @@ export class SubmitFormComponent implements OnInit {
       from_name: 'History Museum',
       from_email: 'elijah.balogun@museedelhistoire.ca',
       to: this.email,
-      message: "test",
+      message: 'you have a ' + day + ' itinerary ' + '\n for the grade ' + grade + this.convertItn(itn),
       AKEY: 'uK21MLM0A2'
     }
     console.log(data)
@@ -99,7 +114,7 @@ export class SubmitFormComponent implements OnInit {
 
 
     var http = new XMLHttpRequest();
-    var url = '/form-util/';
+    var url = '/test.php';
     var params = data;
     http.open('POST', url, true);
 
