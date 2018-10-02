@@ -5,17 +5,12 @@
 <section class="main-section">
   <div class="main-section__wrapper">
 
-    <!--
-    <button (click)="switchLanguage('en')">en</button>
-    <button (click)="switchLanguage('fr')">fr</button>
-    -->
-
     <button (click)="onFilterBtnSelect()" class="la-button la-button--filter">{{'aside_filter.filter_button' | translate}}</button>
 
     <aside class="main-section__aside" [ngClass]="{on: showFilterAside}">
         <header class="main-section__aside-header">
-            <span class="main-section__aside-heading">{{'aside_filter.heading' | translate}}</span>
-            <button class="ms__aside-header-btn" (click)="clearAll()">{{'aside_filter.reset_button' | translate}}</button>
+            <span class="main-section__aside-heading">{{'aside_header.heading.browse' | translate}}</span>
+            <button class="ms__aside-header-btn" (click)="clearAll()">{{'aside_header.button.browse' | translate}}</button>
         </header>
         <div class="ms__aside-groups">
             <fieldset class="ms__aside-group">

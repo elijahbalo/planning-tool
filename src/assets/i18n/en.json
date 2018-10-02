@@ -28,8 +28,6 @@
   },
   "aside_filter": {
       "filter_button": "Filters",
-      "heading": "Filter By",
-      "reset_button": "Clear All",
       "grade": {
           "heading": "Grade",
           "label_grade_kg2": "Kindergarden to Grade 2",
@@ -46,6 +44,24 @@
           "label_half": "Half-Day",
           "label_full": "Full Day"
       }
+  },
+  "aside_header": {
+      "heading": {
+          "create": "Instructions",
+          "browse": "Filter By"
+      },
+      "button": {
+          "create": "Restart",
+          "browse": "Clear All"
+      }
+  },
+  "aside_checklist": {
+      "grade": "Select a Grade",
+      "duration": "Select a Duration",
+      "date": "Select a Date",
+      "activities": "Select your Activities",
+      "contact": "Contact Information",
+      "review_submit": "Review and Submit"
   },
   "msm_back_link": "Back to Landing Page",
   "msm_heading": "Itineraries",
