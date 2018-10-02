@@ -373,6 +373,8 @@ export class CreatePageComponent implements OnInit {
     this.step1 = false;
     this.step2 = event;
     this.step1Done = true;
+    // @ Elijah: Can I leave it with you to localize this stuff? We don't 
+    // want any static text in business logic, we should make calls to json file.
     this.createTitle = '2. Select a Duration';
   }
 

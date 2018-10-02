@@ -1,75 +1,66 @@
-<app-header [route]="route"></app-header>
+<main-header></main-header>
 
-<div style="position:absolute;top:0;right:0;background:green;padding:10px;z-index:999;">
-  <button (click)="switchLanguage('en')" style="margin-right:10px;">en</button>
-  <button (click)="switchLanguage('fr')">fr</button>
-</div>
+<app-header [route]="route"></app-header>
 
 <section class="main-section">
   <div class="main-section__wrapper">
     <aside class="main-section__aside">
-      <header class="main-section__aside-header">
-        <span class="main-section__aside-heading">Instructions</span>
-        <button class="ms__aside-header-btn" (click)="restart()">Restart</button>
-      </header>
-      <ul class="ms__aside-checklist">
-        <!-- @ Elijah: We need conditional classes here. -->
-        <!-- 1. If user has made "acceptable" selection, assign sub class "checklist-item--done" -->
-        <!-- 2. Move "on" subclass (checklist-item--on) according to where user is -->
+        <header class="main-section__aside-header">
+            <span class="main-section__aside-heading">{{'aside_header.heading.create' | translate}}</span>
+            <button class="ms__aside-header-btn" (click)="restart()">{{'aside_header.button.create' | translate}}</button>
+        </header>
+        <ul class="ms__aside-checklist">
+            <li *ngIf="step1" class="checklist-item checklist-item--on">
+                <span>1. {{'aside_checklist.grade' | translate}}</span>
+            </li>
+            <li *ngIf="step1Done" class="checklist-item checklist-item--done">
+                <span tabindex="0">1. {{'aside_checklist.grade' | translate}}</span>
+            </li>
 
-        <li *ngIf="step1" class="checklist-item checklist-item--on">
-          <span>1. Select a Grade</span>
-        </li>
-        <li *ngIf="step1Done" class="checklist-item checklist-item--done">
-          <span tabindex="0">1. Select a Grade</span>
-        </li>
+            <li *ngIf=" !step2Done && !step2" class="checklist-item">
+                <span>2. {{'aside_checklist.duration' | translate}}</span>
+            </li>
+            <li *ngIf="step2" class="checklist-item checklist-item--on">
+                <span>2. {{'aside_checklist.duration' | translate}}</span>
+            </li>
+            <li *ngIf="step2Done" class="checklist-item checklist-item--done">
+                <span tabindex="0">2. {{'aside_checklist.duration' | translate}}</span>
+            </li>
 
-        <li *ngIf=" !step2Done && !step2" class="checklist-item">
-          <span>2. Select a Duration</span>
-        </li>
-        <li *ngIf="step2" class="checklist-item checklist-item--on">
-          <span>2. Select a Duration</span>
-        </li>
-        <li *ngIf="step2Done" class="checklist-item checklist-item--done">
-          <span tabindex="0">2. Select a Duration</span>
-        </li>
+            <li *ngIf="!step3Done && !step3" class="checklist-item">
+                <span>3. {{'aside_checklist.date' | translate}}</span>
+            </li>
+            <li *ngIf="step3" class="checklist-item checklist-item--on">
+                <span>3. {{'aside_checklist.date' | translate}}</span>
+            </li>
+            <li *ngIf="step3Done" class="checklist-item checklist-item--done">
+                <span>3. {{'aside_checklist.date' | translate}}</span>
+            </li>
 
-        <li *ngIf="!step3Done && !step3" class="checklist-item">
-          <span>3. Select a Date</span>
-        </li>
-        <li *ngIf="step3" class="checklist-item checklist-item--on">
-          <span>3. Select a Date</span>
-        </li>
-        <li *ngIf="step3Done" class="checklist-item checklist-item--done">
-          <span>3. Select a Date</span>
-        </li>
+            <li *ngIf=" !step4Done && !step4" class="checklist-item">
+                <span>4. {{'aside_checklist.activities' | translate}}</span>
+            </li>
+            <li *ngIf="step4" class="checklist-item checklist-item--on">
+                <span>4. {{'aside_checklist.activities' | translate}}</span>
+            </li>
+            <li *ngIf="step4Done" class="checklist-item checklist-item--done">
+                <span>4. {{'aside_checklist.activities' | translate}}</span>
+            </li>
 
+            <li *ngIf="!step5Done && !step5" class="checklist-item">
+                <span>5. {{'aside_checklist.contact' | translate}}</span>
+            </li>
+            <li *ngIf="step5" class="checklist-item checklist-item--on">
+                <span>5. {{'aside_checklist.contact' | translate}}</span>
+            </li>
+            <li *ngIf="step5Done" class="checklist-item checklist-item--done">
+                <span>5. {{'aside_checklist.contact' | translate}}</span>
+            </li>
 
-        <li *ngIf=" !step4Done && !step4" class="checklist-item">
-          <span>4. Select your Activities</span>
-        </li>
-        <li *ngIf="step4" class="checklist-item checklist-item--on">
-          <span>4. Select your Activities</span>
-        </li>
-        <li *ngIf="step4Done" class="checklist-item checklist-item--done">
-          <span>4. Select your Activities</span>
-        </li>
-
-        <li *ngIf="!step5Done && !step5" class="checklist-item">
-          <span>5. Contact Information</span>
-        </li>
-        <li *ngIf="step5" class="checklist-item checklist-item--on">
-          <span>5. Contact Information</span>
-        </li>
-        <li *ngIf="step5Done" class="checklist-item checklist-item--done">
-          <span>5. Contact Information</span>
-        </li>
-
-
-        <li *ngIf="!step6" class="checklist-item">
-          <span>6. Review and Submit</span>
-        </li>
-      </ul>
+            <li *ngIf="!step6" class="checklist-item">
+                <span>6. {{'aside_checklist.review_submit' | translate}}</span>
+            </li>
+        </ul>
     </aside>
     <main class="main-section__main">
       <!-- This (<header />) is a shared component, .. we need to decouple and somehow pass data to component,
@@ -82,8 +73,6 @@
       <!--/.msm__sub-section-->
       <app-select-duration *ngIf="step2" (nxt)="setStep3($event)" (prev)="setPrev($event)" [model]="day_select.options" [enabled]="e_grade"></app-select-duration>
       <app-calendar *ngIf="step3" (nxt)="setStep4($event)" (prev)="setPrev($event)" (newDate)="setDate($event)" [enabled]="e_calendar"></app-calendar>
-
-
       <!--/.msm__sub-section-->
 
       <div *ngIf="step4" class="la-activities">
@@ -130,9 +119,8 @@
 
           </li>
         </ul>
-      </div>
+      </div><!--/.la-activities-->
 
-      <!--/.la-activities-->
       <div *ngIf="step5">
         <app-submit-form></app-submit-form>
         <app-contact-info (nxt)="setStep6($event)" (prev)="setPrev($event)"></app-contact-info>
@@ -150,9 +138,7 @@
             </figure>
             <div class="activity-list-item__body">
               <span class="activity-list-item__title">{{arrive.name}}</span>
-              <span class="activity-list-item__desc" appEllipsis>{{arrive.description}}
-                <a href="#desc">Full Description</a>
-              </span>
+              <span class="activity-list-item__desc" appEllipsis>{{arrive.description}} <a href="#desc">{{'full_desc_link' | translate}}</a></span>
             </div>
           </li>
           <li *ngFor="let act of itn__act" class="activity-list-item">
@@ -182,169 +168,3 @@
     </main>
   </div>
 </section>
-
-<!--
-<div class="content">
-  <div id="print" class="side-bar">
-    <div class="first">
-      <div style="float:left;margin:4%; font-size:1.5rem">{{'sidebar_head' | translate}}</div>
-      <div style="float:right; background:#8a8d8a; width:17%; text-align:center; padding:5px; margin:4%; color:#fff; font-size:0.7rem; cursor:pointer"
-        (click)="restart()">{{'sidebar_rst' | translate}}</div>
-    </div>
-    <ol>
-      <li>
-        <span *ngIf="step1">
-          <label style="background:#BEBEBE">{{'sidebar_option1' | translate}}</label>
-        </span>
-        <span *ngIf="!step1">
-          <label>{{'sidebar_option1' | translate}}</label>
-        </span>
-        <input type="checkbox" id="step1">
-      </li>
-      <li>
-        <span *ngIf="step2">
-          <label style="background:#BEBEBE">{{'sidebar_option2' | translate}}</label>
-        </span>
-        <span *ngIf="!step2">
-          <label>{{'sidebar_option2' | translate}}</label>
-        </span>
-        <input type="checkbox" id="step2">
-      </li>
-      <li>
-        <span *ngIf="step3">
-          <label style="background:#BEBEBE">{{'sidebar_option3' | translate}}</label>
-        </span>
-        <span *ngIf="!step3">
-          <label>{{'sidebar_option3' | translate}}</label>
-        </span>
-        <input type="checkbox" id="step3">
-      </li>
-      <li>
-        <span *ngIf="step4">
-          <label style="background:#BEBEBE">{{'sidebar_option4' | translate}}</label>
-        </span>
-        <span *ngIf="!step4">
-          <label>{{'sidebar_option4' | translate}}</label>
-        </span>
-
-        <input type="checkbox" id="step4">
-      </li>
-      <li>
-        <span *ngIf="step5">
-          <label style="background:#BEBEBE">{{'sidebar_option5' | translate}}</label>
-        </span>
-        <span *ngIf="!step5">
-          <label>{{'sidebar_option5' | translate}}</label>
-        </span>
-        <input type="checkbox" id="step5">
-      </li>
-      <li>
-        <span *ngIf="!step6">
-          <label>{{'sidebar_option6' | translate}}</label>
-        </span>
-        <div *ngIf="step6" style="width:95%; background:#BEBEBE; margin:auto;">
-          <div style="width:90%; margin:auto;">
-            <h3 style="padding:2%">{{'sidebar_option6' | translate}}</h3>
-            <p style="padding:2%">Review your Itinerary plan and make sure everything looks good. Otherwise, go back and make changes where neccessary.
-              When you're ready, submit your plan and we'll get in touch with next steps!</p>
-            <button style="width:100%; background:red; color:#fff; padding:3%; margin-bottom:2%;">SUBMIT</button>
-          </div>
-        </div>
-      </li>
-    </ol>
-  </div>
-
-  <div class="itineraries2">
-
-    <div style="height:5%; position:relative;">
-      <div class="row2">
-        <div class="left" (click)="create_Back()">
-          <div class="arrow-left"></div>
-        </div>
-
-        <div class="back-title2">{{createTitle}}</div>
-
-      </div>
-      <app-select-grade *ngIf="step1" (nxt)="setStep2($event)" (prev)="setPrev($event)"></app-select-grade>
-      <app-select-duration *ngIf="step2" (nxt)="setStep3($event)" (prev)="setPrev($event)"></app-select-duration>
-      <app-calendar *ngIf="step3" (nxt)="setStep4($event)" (prev)="setPrev($event)" (newDate)="setDate($event)"></app-calendar>
-      <div *ngIf="step4">
-        <app-arrive-display [itinerary]="fetchTranslation('arrive')"></app-arrive-display>
-        <div *ngIf="en">
-          <app-activity-display *ngFor="let itinerary of itn_E" [itinerary]="itinerary" [langItems]="fetchTranslation('activities')"
-            (item)="setItem($event)" (order)="emitOrder($event)" (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap"
-            [showDet]="showDet" [description]="description"></app-activity-display>
-        </div>
-        <div *ngIf="fr">
-          <app-activity-display *ngFor="let itinerary of itn_F" [itinerary]="itinerary" [langItems]="fetchTranslation('activities')"
-            (item)="setItem($event)" (order)="emitOrder($event)" (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap"
-            [showDet]="showDet" [description]="description"></app-activity-display>
-        </div>
-
-        <app-new-activity (set)="add($event)" (nxt)="setStep5($event)" (prev)="setPrev($event)"></app-new-activity>
-
-      </div>
-      <div *ngIf="step5">
-        <app-submit-form></app-submit-form>
-        <app-contact-info (nxt)="setStep6($event)" (prev)="setPrev($event)"></app-contact-info>
-      </div>
-      <div *ngIf="step6" id="printx">
-        <app-review [id]="rId" [url]="url" [date]="date"></app-review>
-
-
-        <div class="link">
-
-          <div class="urlbox">
-
-            <div class="url">
-              <span>{{url}}</span>
-            </div>
-
-            <div>
-              <button class="url-btn" ngxClipboard [cbContent]="url">COPY URL</button>
-            </div>
-          </div>
-
-
-          <div class="printbox">
-
-            <div>
-              <button class="print" (click)="printDiv()">PRINT</button>
-            </div>
-            <div style="margin-right:13%;margin-left:2%">
-              <button class="download" (click)="pdf()">DOWNLOAD PDF</button>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div style="margin-top:25px;">
-          <app-arrive-display [itinerary]="arrive"></app-arrive-display>
-          <div *ngIf="en">
-            <app-activity-display *ngFor="let itinerary of itn_E" [itinerary]="itinerary" (item)="setItem($event)" (order)="emitOrder($event)"
-              (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap" [showDet]="showDet" [enableSwap]="enableSwap"
-              [description]="description" [enableDelete]="enableDelete"></app-activity-display>
-          </div>
-
-          <div *ngIf="fr">
-            <app-activity-display *ngFor="let itinerary of itn_F" [itinerary]="itinerary" (item)="setItem($event)" (order)="emitOrder($event)"
-              (notify)="notice($event)" (modify)="modify($event)" [showSwap]="showSwap" [showDet]="showDet" [enableSwap]="enableSwap"
-              [description]="description" [enableDelete]="enableDelete"></app-activity-display>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
-
-
-
-
-
-</div>
-<div>
-</div>
--->

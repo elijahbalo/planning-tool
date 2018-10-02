@@ -26,27 +26,56 @@
       "support_link": ["https://www.historymuseum.ca/support/", "Support"],
       "about_link": ["https://www.historymuseum.ca/about/", "About"]
   },
-  "aside_filter": {
-      "filter_button": "Filters",
-      "heading": "Filter By",
-      "reset_button": "Clear All",
-      "grade": {
-          "heading": "Grade",
-          "label_grade_kg2": "Kindergarden to Grade 2",
-          "label_grade_35": "Grades 3 to 5",
-          "label_grade_68": "Grades 6 to 8"
+  "grades": {
+      "kg2": {
+          "text": "Kindergarden to Grade 2",
+          "input_val": ""
       },
-      "toy": {
-          "heading": "Time of Year",
-          "label_oct_apr": "October to April",
-          "label_may_jun": "May to June"
+      "three5": {
+          "text": "Grades 3 to 5",
+          "input_val": ""
       },
-      "length": {
-          "heading": "Length",
-          "label_half": "Half-Day",
-          "label_full": "Full Day"
+      "six8": {
+          "text": "Grades 6 to 8",
+          "input_val": ""
       }
   },
+  "rem_button": "Remove Activity",
+  "swap_button": "Swap Activity",
+  "durations": {
+      "half": "Half-Day",
+      "full": "Full Day"
+  },
+  "toy": {
+      "oct_apr": "October to April",
+      "may_jun": "May to June"
+  },
+  "aside_filter": {
+      "filter_button": "Filters",
+      "grade_heading": "Grade",
+      "toy_heading": "Time of Year",
+      "dur_heading": "Length"
+  },
+  "aside_header": {
+      "heading": {
+          "create": "Instructions",
+          "browse": "Filter By"
+      },
+      "button": {
+          "create": "Restart",
+          "browse": "Clear All"
+      }
+  },
+  "aside_checklist": {
+      "grade": "Select a Grade",
+      "duration": "Select a Duration",
+      "date": "Select a Date",
+      "activities": "Select your Activities",
+      "contact": "Contact Information",
+      "review_submit": "Review and Submit"
+  },
+  "button_next": "Next",
+  "back": "Back",
   "msm_back_link": "Back to Landing Page",
   "msm_heading": "Itineraries",
   "utils_bar": {
@@ -103,24 +132,16 @@
     "button_browse": "Browse Itineraries",
     "button_create": "Create Your Own"
   },
+  "modal_close_button": "Hide Details",
+  "modal_show_full_button": "Show Full Information",
   "canada_wordmark_alt": "Symbol of the Government of Canada",
   "facebook_link": "https://www.facebook.com/CanMusHistory/",
   "twitter_link": "https://twitter.com/CanMusHistory",
   "instagram_link": "https://www.instagram.com/canmushistory/",
-  "sidebar_head": "Instructions",
-  "sidebar_rst": "Restart",
-  "sidebar_option1": "Select a Grade",
-  "sidebar_option2": "Select a Duration",
-  "sidebar_option3": "select a Date",
-
-  "sidebar_option4": "Select your Activities",
-  "sidebar_option5": "Review and Submit",
-  "sidebar_option6": "Contact Information",
-
   "arrive": {
     "name": "Arrive",
     "img": "assets/images/Nordik_Massana_12.20.16_0786.jpg",
-    "time": "9:30AM",
+    "time": "9:30 AM",
     "length": 30,
     "order": "10",
     "description": "Barton did feebly change man she afford square add. Want eyes by neat so just must. Past draw tall up face show rent oh mr. Required is debating extended wondered as do. New get described applauded incommode shameless out extremity but"
@@ -271,7 +292,6 @@
         }
       ]
     },
-
     {
       "id": 2,
       "title": "Medieval Times",
