@@ -26,6 +26,33 @@
       "support_link": ["https://www.historymuseum.ca/support/", "Support"],
       "about_link": ["https://www.historymuseum.ca/about/", "About"]
   },
+  "contact_info": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "group": {
+          "heading": "Language of Group",
+          "eng": {
+              "label": "English",
+              "input_val": "English"
+          },
+          "fra": {
+              "label": "Français",
+              "input_val": "Français"
+          }
+      },
+      "newsletter": {
+          "heading": "Newsletter",
+          "input_val": "Newsletter",
+          "label": "I would like to receive communications from the Canadian Museum of History and Canadian War Museum."
+      },
+      "consent": {
+          "heading": "Consent",
+          "input_val": "Consentment",
+          "label": "I consent to my submitted data being collected and stored by the Canadian Museum of History for the sole purpose of responding to my inquiry."
+      }
+  },
   "search_button": "Search",
   "language_toggle_button": "Français",
   "main_footer": {
