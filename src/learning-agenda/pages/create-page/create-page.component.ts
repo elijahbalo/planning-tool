@@ -109,7 +109,7 @@ export class CreatePageComponent implements OnInit {
     private db: AngularFirestore,
     private router: Router,
     private changeDetector: ChangeDetectorRef
-  ) {}
+  ) { }
   ngOnInit() {
     localStorage.clear();
     this.enabled = false;
@@ -136,6 +136,7 @@ export class CreatePageComponent implements OnInit {
     if (day == 'Full-day') {
       if (num == 7) {
         this.max = true;
+        console.log('at max')
       } else {
         this.max = false;
       }

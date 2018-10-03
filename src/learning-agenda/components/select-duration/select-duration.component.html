@@ -11,20 +11,21 @@
 <div class="msm__sub-section">
   <div class="msm__label-input-grp">
     <div class="la__label-input">
-      <input id="duration_half" name="duration" [(ngModel)]="model" value="Half-Day" (change)="enable()" type="radio" />
+      <input id="duration_half" name="duration" [(ngModel)]="model" value="Half-day" (change)="enable()" type="radio" />
       <label class="msm__label" for="duration_half">
         <span class="text">{{'durations.half' | translate}}</span>
         <span class="faux-radio unselected"></span>
       </label>
     </div>
     <div class="la__label-input">
-      <input id="duration_full" name="duration" [(ngModel)]="model" value="Full Day" (change)="enable()" type="radio" />
+      <input id="duration_full" name="duration" [(ngModel)]="model" value="Full-day" (change)="enable()" type="radio" />
       <label class="msm__label" for="duration_full">
         <span class="text">{{'durations.full' | translate}}</span>
         <span class="faux-radio unselected"></span>
       </label>
     </div>
-  </div><!--/.msm__label-input-grp-->
+  </div>
+  <!--/.msm__label-input-grp-->
   <button *ngIf="!enabled" class="la-button la-button--clr-primary" disabled (click)="next()">{{'button_next' | translate}}</button>
   <button *ngIf="enabled" class="la-button la-button--clr-primary" (click)="next()">{{'button_next' | translate}}</button>
 </div>

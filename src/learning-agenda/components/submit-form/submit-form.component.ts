@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-submit-form',
@@ -6,19 +6,83 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./submit-form.component.scss']
 })
 export class SubmitFormComponent implements OnInit {
-  firstName
-  lastName
-  email
-  phone
-  lang
+
+  @Output()
+  nxt: EventEmitter<any> = new EventEmitter<any>();
+  @Output()
+  prev: EventEmitter<any> = new EventEmitter<any>();
+  firstName = ''
+  lastName = ''
+  email = ''
+  phone = ''
+  lang = ''
   news
-  consent
+  consent = false
   shouldSendNews
 
+
+  firstNameDone
+  lastNameDone
+  emailDone
+  langDone
+  consentDone
+
+
+  enabled = false
   constructor() { }
 
   ngOnInit() {
   }
+
+  changeFirstName() {
+    this.firstNameDone = true
+    console.log(this.firstNameDone)
+  }
+  changeLastName() {
+    this.lastNameDone = true
+    console.log(this.lastNameDone)
+  }
+
+  changeEmail() {
+    this.emailDone = true
+    console.log(this.emailDone)
+  }
+
+  changeLang() {
+    this.langDone = true
+    console.log(this.langDone)
+  }
+
+  changeNews() {
+    console.log(this.news)
+  }
+  changeConsent() {
+    this.consentDone = true
+    console.log(this.consentDone)
+  }
+
+  next() {
+    this.nxt.emit(true);
+    this.prev.emit('step5');
+  }
+
+  checkForm() {
+    console.log(this.firstName)
+    console.log(this.lastName)
+    console.log(this.email)
+    console.log(this.phone)
+    console.log(this.lang)
+    console.log(this.consent)
+    if (this.firstName == '' || this.lastName == '' || this.email == '' || this.lang == '' || this.consent == false) {
+      console.log("should do nothing")
+      this.enabled = false
+    }
+    else {
+      console.log("got here")
+      this.enabled = true
+    }
+  }
+
   postUserData() {
     if (this.news == true) {
       this.shouldSendNews = "wants to be notified with newsletters"
@@ -57,7 +121,7 @@ export class SubmitFormComponent implements OnInit {
 
 
     var http = new XMLHttpRequest();
-    var url = '/form-util/';
+    var url = '/test.php';
     var params = data;
     http.open('POST', url, true);
 
@@ -114,7 +178,7 @@ export class SubmitFormComponent implements OnInit {
 
 
     var http = new XMLHttpRequest();
-    var url = '/form-util/';
+    var url = '/test.php';
     var params = data;
     http.open('POST', url, true);
 
@@ -134,19 +198,7 @@ export class SubmitFormComponent implements OnInit {
 
 
 
-  changeLang() {
-    console.log(this.firstName, this.lastName, this.email, this.phone)
-    console.log(this.lang)
-
-
-  }
-  changeNews() {
-    console.log(this.news)
-  }
-  changeConsent() {
-    console.log(this.consent)
-  }
-  setLang() {
+  Lang() {
 
   }
   setnews() {

@@ -146,6 +146,7 @@ export class BrowsePageComponent implements OnInit {
     if (day == 'Half-day') {
       if (num == 4) {
         this.max = true;
+        console.log('max')
       } else {
         this.max = false;
       }
