@@ -13,14 +13,14 @@
     <div class="la__label-input">
       <input id="duration_half" name="duration" [(ngModel)]="model" value="Half-day" (change)="enable()" type="radio" />
       <label class="msm__label" for="duration_half">
-        <span class="text">{{'durations.half' | translate}}</span>
+        <span class="text">{{'durations.half.text' | translate}} ({{'durations.half.time' | translate}})</span>
         <span class="faux-radio unselected"></span>
       </label>
     </div>
     <div class="la__label-input">
       <input id="duration_full" name="duration" [(ngModel)]="model" value="Full-day" (change)="enable()" type="radio" />
       <label class="msm__label" for="duration_full">
-        <span class="text">{{'durations.full' | translate}}</span>
+        <span class="text">{{'durations.full.text' | translate}} ({{'durations.full.time' | translate}})</span>
         <span class="faux-radio unselected"></span>
       </label>
     </div>
