@@ -43,7 +43,7 @@ export class ActivityDisplayComponent implements OnInit {
   constructor(
     private db: AngularFirestore,
     private translationService: TranslationService
-  ) {}
+  ) { }
 
   ngOnInit() {
     if (JSON.parse(localStorage.getItem('swap_id'))) {
@@ -139,7 +139,9 @@ export class ActivityDisplayComponent implements OnInit {
     act_F.splice(index1, 1);
     if (!lastItemEn) {
       for (var i = index; i < act_E.length; i++) {
+        console.log(act_E[i].time)
         act_E[i].time = this.timeConvert(act_E[i].time, -45);
+
       }
     }
     if (!lastItemFr) {

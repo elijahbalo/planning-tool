@@ -5,74 +5,75 @@
 <section class="main-section">
   <div class="main-section__wrapper">
     <aside class="main-section__aside">
-        <header class="main-section__aside-header">
-            <span class="main-section__aside-heading">{{'aside_header.heading.create' | translate}}</span>
-            <button class="ms__aside-header-btn" (click)="restart()">{{'aside_header.button.create' | translate}}</button>
-        </header>
-        <ul class="ms__aside-checklist">
-            <li *ngIf="step1" class="checklist-item checklist-item--on">
-                <span>1. {{'aside_checklist.grade' | translate}}</span>
-            </li>
-            <li *ngIf="step1Done" class="checklist-item checklist-item--done">
-                <span tabindex="0">1. {{'aside_checklist.grade' | translate}}</span>
-            </li>
+      <header class="main-section__aside-header">
+        <span class="main-section__aside-heading">{{'aside_header.heading.create' | translate}}</span>
+        <button class="ms__aside-header-btn" (click)="restart()">{{'aside_header.button.create' | translate}}</button>
+      </header>
+      <ul class="ms__aside-checklist">
+        <li *ngIf="step1" class="checklist-item checklist-item--on">
+          <span>1. {{'aside_checklist.grade' | translate}}</span>
+        </li>
+        <li *ngIf="step1Done" class="checklist-item checklist-item--done">
+          <span tabindex="0">1. {{'aside_checklist.grade' | translate}}</span>
+        </li>
 
-            <li *ngIf=" !step2Done && !step2" class="checklist-item">
-                <span>2. {{'aside_checklist.duration' | translate}}</span>
-            </li>
-            <li *ngIf="step2" class="checklist-item checklist-item--on">
-                <span>2. {{'aside_checklist.duration' | translate}}</span>
-            </li>
-            <li *ngIf="step2Done" class="checklist-item checklist-item--done">
-                <span tabindex="0">2. {{'aside_checklist.duration' | translate}}</span>
-            </li>
+        <li *ngIf=" !step2Done && !step2" class="checklist-item">
+          <span>2. {{'aside_checklist.duration' | translate}}</span>
+        </li>
+        <li *ngIf="step2" class="checklist-item checklist-item--on">
+          <span>2. {{'aside_checklist.duration' | translate}}</span>
+        </li>
+        <li *ngIf="step2Done" class="checklist-item checklist-item--done">
+          <span tabindex="0">2. {{'aside_checklist.duration' | translate}}</span>
+        </li>
 
-            <li *ngIf="!step3Done && !step3" class="checklist-item">
-                <span>3. {{'aside_checklist.date' | translate}}</span>
-            </li>
-            <li *ngIf="step3" class="checklist-item checklist-item--on">
-                <span>3. {{'aside_checklist.date' | translate}}</span>
-            </li>
-            <li *ngIf="step3Done" class="checklist-item checklist-item--done">
-                <span>3. {{'aside_checklist.date' | translate}}</span>
-            </li>
+        <li *ngIf="!step3Done && !step3" class="checklist-item">
+          <span>3. {{'aside_checklist.date' | translate}}</span>
+        </li>
+        <li *ngIf="step3" class="checklist-item checklist-item--on">
+          <span>3. {{'aside_checklist.date' | translate}}</span>
+        </li>
+        <li *ngIf="step3Done" class="checklist-item checklist-item--done">
+          <span>3. {{'aside_checklist.date' | translate}}</span>
+        </li>
 
-            <li *ngIf=" !step4Done && !step4" class="checklist-item">
-                <span>4. {{'aside_checklist.activities' | translate}}</span>
-            </li>
-            <li *ngIf="step4" class="checklist-item checklist-item--on">
-                <span>4. {{'aside_checklist.activities' | translate}}</span>
-            </li>
-            <li *ngIf="step4Done" class="checklist-item checklist-item--done">
-                <span>4. {{'aside_checklist.activities' | translate}}</span>
-            </li>
+        <li *ngIf=" !step4Done && !step4" class="checklist-item">
+          <span>4. {{'aside_checklist.activities' | translate}}</span>
+        </li>
+        <li *ngIf="step4" class="checklist-item checklist-item--on">
+          <span>4. {{'aside_checklist.activities' | translate}}</span>
+        </li>
+        <li *ngIf="step4Done" class="checklist-item checklist-item--done">
+          <span>4. {{'aside_checklist.activities' | translate}}</span>
+        </li>
 
-            <li *ngIf="!step5Done && !step5" class="checklist-item">
-                <span>5. {{'aside_checklist.contact' | translate}}</span>
-            </li>
-            <li *ngIf="step5" class="checklist-item checklist-item--on">
-                <span>5. {{'aside_checklist.contact' | translate}}</span>
-            </li>
-            <li *ngIf="step5Done" class="checklist-item checklist-item--done">
-                <span>5. {{'aside_checklist.contact' | translate}}</span>
-            </li>
+        <li *ngIf="!step5Done && !step5" class="checklist-item">
+          <span>5. {{'aside_checklist.contact' | translate}}</span>
+        </li>
+        <li *ngIf="step5" class="checklist-item checklist-item--on">
+          <span>5. {{'aside_checklist.contact' | translate}}</span>
+        </li>
+        <li *ngIf="step5Done" class="checklist-item checklist-item--done">
+          <span>5. {{'aside_checklist.contact' | translate}}</span>
+        </li>
 
-            <li *ngIf="!step6" class="checklist-item">
-                <span>6. {{'aside_checklist.review_submit' | translate}}</span>
-            </li>
-        </ul>
+        <li *ngIf="!step6" class="checklist-item">
+          <span>6. {{'aside_checklist.review_submit' | translate}}</span>
+        </li>
+      </ul>
     </aside>
     <main class="main-section__main">
       <!-- This (<header />) is a shared component, .. we need to decouple and somehow pass data to component,
             1. Back link destination / route,
             2. msm__heading (main section main heading) text value.
             -->
-      <app-header-old [title]="createTitle" (back)="create_Back($event)"></app-header-old>
+      <app-header-old [title]="createTitle" [showHead]="showHead" (back)="create_Back($event)"></app-header-old>
 
       <app-select-grade *ngIf="step1" (nxt)="setStep2($event)" (prev)="setPrev($event)" [model]="grade_select.options" [enabled]="enabled"></app-select-grade>
       <!--/.msm__sub-section-->
       <app-select-duration *ngIf="step2" (nxt)="setStep3($event)" (prev)="setPrev($event)" [model]="day_select.options" [enabled]="e_grade"></app-select-duration>
-      <app-calendar *ngIf="step3" (nxt)="setStep4($event)" (prev)="setPrev($event)" (newDate)="setDate($event)" [enabled]="e_calendar"></app-calendar>
+      <app-calendar *ngIf="step3" (nxt)="setStep4($event)" (prev)="setPrev($event)" (newDate)="setDate($event)" (setDates)="setDates($event)"
+        [sDate]="sDate" [enabled]="e_calendar"></app-calendar>
       <!--/.msm__sub-section-->
 
       <div *ngIf="step4" class="la-activities">
@@ -119,11 +120,13 @@
 
           </li>
         </ul>
-      </div><!--/.la-activities-->
+      </div>
+      <!--/.la-activities-->
 
       <div *ngIf="step5">
-        <app-submit-form></app-submit-form>
-        <app-contact-info (nxt)="setStep6($event)" (prev)="setPrev($event)"></app-contact-info>
+        <app-submit-form (nxt)="setStep6($event)" (prev)="setPrev($event)" (userData)="setUsrData($event)" (emplData)="setEmplData($event)"
+          [fname]="fname" [lname]="lname" [mail]="mail" [phn]="phn" [lang]="lang" [news]="news" [consent]="consent" [enabled]="enable"></app-submit-form>
+
       </div>
 
       <div *ngIf="step6" class="la-activities">
@@ -138,7 +141,9 @@
             </figure>
             <div class="activity-list-item__body">
               <span class="activity-list-item__title">{{arrive.name}}</span>
-              <span class="activity-list-item__desc" appEllipsis>{{arrive.description}} <a href="#desc">{{'full_desc_link' | translate}}</a></span>
+              <span class="activity-list-item__desc" appEllipsis>{{arrive.description}}
+                <a href="#desc">{{'full_desc_link' | translate}}</a>
+              </span>
             </div>
           </li>
           <li *ngFor="let act of itn__act" class="activity-list-item">
@@ -164,6 +169,7 @@
           </li> -->
 
         </ul>
+        <button class="la-button la-button--clr-primary" (click)="submitForm()">Submit</button>
       </div>
     </main>
   </div>

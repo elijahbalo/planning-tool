@@ -12,6 +12,8 @@ export class CalendarComponent implements OnInit {
   @Output()
   prev: EventEmitter<any> = new EventEmitter<any>();
   @Output()
+  setDates: EventEmitter<any> = new EventEmitter<any>();
+  @Output()
   newDate: EventEmitter<any> = new EventEmitter<any>();
   hoveredDate: NgbDateStruct;
   set = false;
@@ -19,19 +21,20 @@ export class CalendarComponent implements OnInit {
   js_date: Date;
   @Input()
   enabled = false;
-
-  click = false;
-  constructor(private calendar: NgbCalendar) {}
+  @Input() sDate
+  click
+  constructor(private calendar: NgbCalendar) { }
   ngOnInit() {
-    this.js_date = null;
+    console.log(this.js_date === undefined)
   }
-  ngOnChanges() {
-    this.click = true;
-  }
+
   get today() {
     return new Date();
   }
-
+  onDateSelect(event) {
+    this.click = true
+    this.enabled = false
+  }
   setDate(year, month, day) {
     if (day === undefined) {
       return;
@@ -39,23 +42,20 @@ export class CalendarComponent implements OnInit {
 
     this.js_date = new Date(year, month, day);
     if (this.js_date) {
-      this.click = true;
-      console.log(this.click);
-      this.ngOnChanges();
+      this.setDates.emit(this.js_date)
+      localStorage.setItem('sDate', JSON.stringify(this.js_date))
       return this.js_date;
     } else {
       return 'no date selected';
     }
   }
 
-  enable() {
-    this.enabled = true;
-  }
 
   next() {
     this.newDate.emit(this.js_date);
 
     this.nxt.emit(true);
     this.prev.emit('step3');
+
   }
 }

@@ -11,6 +11,7 @@ import { JSONP_ERR_NO_CALLBACK } from '@angular/common/http/src/jsonp';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Input() showHead
   @Input()
   title;
   @Output()
@@ -19,8 +20,8 @@ export class HeaderComponent implements OnInit {
     private modalService: NgbModal,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
-  ngOnInit() {}
+  ) { }
+  ngOnInit() { }
 
   goBack() {
     this.back.emit(true);
