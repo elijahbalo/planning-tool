@@ -21,7 +21,11 @@
   <div class="activity-list-item__body">
     <span class="activity-list-item__title">{{act.name}}</span>
     <span class="activity-list-item__desc" appEllipsis>{{act.description}}
-      <a href="javascript:void(0)" style="cursor:pointer;">{{'full_desc_link' | translate}}</a>
+
+
+    </span>
+    <span (click)="toggleModal()" style=" display:inline; text-decoration:underline; cursor:pointer;font-style: italic;">
+      {{'full_desc_link' | translate}}
     </span>
   </div>
 </main>

@@ -52,10 +52,26 @@ export class CreatePageComponent implements OnInit {
   enableSwap = false;
   enableDelete = false;
 
+  click = false
+  usrData
+  empData
+
+  sDate
+
   enabled;
   e_grade;
   e_calendar;
   e_activities;
+
+  fname
+  lname
+  mail
+  phn
+  lang = ''
+  news
+  consent
+
+  enable
 
   itn_E = [];
   itn_F = [];
@@ -94,6 +110,7 @@ export class CreatePageComponent implements OnInit {
   closeResult: string;
   items = [];
 
+  showHead = true
   step1Done;
   step2Done;
   step3Done;
@@ -109,7 +126,7 @@ export class CreatePageComponent implements OnInit {
     private db: AngularFirestore,
     private router: Router,
     private changeDetector: ChangeDetectorRef
-  ) {}
+  ) { }
   ngOnInit() {
     localStorage.clear();
     this.enabled = false;
@@ -119,10 +136,27 @@ export class CreatePageComponent implements OnInit {
     this.setCreate();
     localStorage.setItem('lang', JSON.stringify('en'));
     this.displayItem();
-
+    this.enable = false
     this.activities = itn_E.activities;
+    this.showHeading()
+    this.sDate = ''
+    this.fname = ''
+    this.lname = ''
+    this.lang = ''
+    this.mail = ''
+
+
+  }
+  showHeading() {
+    if (this.createTitle == '1. Select a Grade') {
+      this.showHead = false
+    }
+    else {
+      this.showHead = true
+    }
   }
   ngOnChanges() {
+    this.showHeading()
     let lang = JSON.parse(localStorage.getItem('lang'));
     let num = JSON.parse(localStorage.getItem('num'));
     let day = JSON.parse(localStorage.getItem('day'));
@@ -136,6 +170,7 @@ export class CreatePageComponent implements OnInit {
     if (day == 'Full-day') {
       if (num == 7) {
         this.max = true;
+        console.log('at max')
       } else {
         this.max = false;
       }
@@ -168,7 +203,44 @@ export class CreatePageComponent implements OnInit {
     } else {
       this.day_select.options = '';
     }
-    this.filterActivities();
+
+    if (this.sDate) {
+      this.e_calendar = true
+
+    } else {
+      this.click = false
+    }
+
+
+
+
+
+    if (JSON.parse(localStorage.getItem('fname'))) {
+      this.fname = JSON.parse(localStorage.getItem('fname'))
+    }
+    if (JSON.parse(localStorage.getItem('lname'))) {
+      this.lname = JSON.parse(localStorage.getItem('lname'))
+    }
+    if (JSON.parse(localStorage.getItem('email'))) {
+      this.mail = JSON.parse(localStorage.getItem('email'))
+    }
+    if (JSON.parse(localStorage.getItem('phone'))) {
+      this.phn = JSON.parse(localStorage.getItem('phone'))
+
+    }
+    if (JSON.parse(localStorage.getItem('langs'))) {
+      this.lang = JSON.parse(localStorage.getItem('langs'))
+
+    }
+    if (JSON.parse(localStorage.getItem('news'))) {
+      this.news = JSON.parse(localStorage.getItem('news'))
+
+    }
+    if (JSON.parse(localStorage.getItem('consent'))) {
+      this.consent = JSON.parse(localStorage.getItem('consent'))
+
+    }
+
   }
 
   navigateToBrowsePage() {
@@ -376,6 +448,7 @@ export class CreatePageComponent implements OnInit {
     // @ Elijah: Can I leave it with you to localize this stuff? We don't 
     // want any static text in business logic, we should make calls to json file.
     this.createTitle = '2. Select a Duration';
+    this.ngOnChanges()
   }
 
   setStep3(event) {
@@ -385,6 +458,7 @@ export class CreatePageComponent implements OnInit {
     this.createTitle = '3. Select a Date';
     $('#step2').prop('checked', false);
     $('#step2').prop('checked', true);
+    this.ngOnChanges()
   }
 
   setStep4(event) {
@@ -396,6 +470,7 @@ export class CreatePageComponent implements OnInit {
     this.createTitle = '4. Select your Activities';
     $('#step3').prop('checked', false);
     $('#step3').prop('checked', true);
+    this.ngOnChanges()
   }
 
   setStep5(event) {
@@ -405,6 +480,7 @@ export class CreatePageComponent implements OnInit {
     this.createTitle = '5. Contact Information';
     $('#step4').prop('checked', false);
     $('#step4').prop('checked', true);
+    this.ngOnChanges()
   }
 
   setPrev(event) {
@@ -422,6 +498,7 @@ export class CreatePageComponent implements OnInit {
     this.createTitle = '6. Review and Submit';
     $('#step5').prop('checked', false);
     $('#step5').prop('checked', true);
+    this.ngOnChanges()
   }
 
   back() {
@@ -431,6 +508,16 @@ export class CreatePageComponent implements OnInit {
     localStorage.removeItem('french');
   }
   restart() {
+
+    localStorage.removeItem('sDate')
+    localStorage.removeItem('fname')
+    localStorage.removeItem('lname')
+    localStorage.removeItem('email')
+    localStorage.removeItem('phone')
+    localStorage.removeItem('langs')
+    localStorage.removeItem('news')
+    localStorage.removeItem('consent')
+    this.enable = false
     this.ngOnInit();
     this.step1 = true;
     this.step2 = false;
@@ -476,11 +563,13 @@ export class CreatePageComponent implements OnInit {
       this.prev = 'step3';
     }
     if (this.prev == 'step5') {
+      this.enable = true
       this.step6 = false;
       this.step5 = true;
       this.step5Done = false;
       this.createTitle = '5. Contact Information';
       this.prev = 'step4';
+
     }
     this.ngOnChanges();
   }
@@ -522,4 +611,93 @@ export class CreatePageComponent implements OnInit {
       }
     }
   }
+
+  setUsrData(event) {
+    this.usrData = event
+  }
+  setEmplData(event) {
+    this.empData = event
+  }
+
+  submitForm() {
+    console.log(this.usrData)
+    console.log(this.empData)
+    this.postUserData()
+    this.sendUserEmail()
+    localStorage.clear()
+    this.router.navigate(['LandingPage']);
+
+  }
+
+  setDates(event) {
+    this.sDate = event
+  }
+  postUserData() {
+
+
+    var urlEncodedData = "";
+    var urlEncodedDataPairs = [];
+    var name
+
+    for (name in this.empData) {
+      urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(this.empData[name]));
+    }
+
+    // Combine the pairs into a single string and replace all %-encoded spaces to 
+    // the '+' character; matches the behaviour of browser form submissions.
+    urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+
+
+    var http = new XMLHttpRequest();
+    var url = '/form-util/';
+    var params = this.empData;
+    http.open('POST', url, true);
+
+    //Send the proper header information along with the request
+    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    http.onreadystatechange = function () {//Call a function when the state changes.
+      if (http.readyState == 4 && http.status == 200) {
+        alert(http.responseText);
+      }
+    }
+    http.send(urlEncodedData);
+  }
+
+
+
+  sendUserEmail() {
+
+
+    var urlEncodedData = "";
+    var urlEncodedDataPairs = [];
+    var name
+
+    for (name in this.usrData) {
+      urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(this.usrData[name]));
+    }
+
+    // Combine the pairs into a single string and replace all %-encoded spaces to 
+    // the '+' character; matches the behaviour of browser form submissions.
+    urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+
+
+    var http = new XMLHttpRequest();
+    var url = '/form-util/';
+    var params = this.usrData;
+    http.open('POST', url, true);
+
+    //Send the proper header information along with the request
+    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+    http.onreadystatechange = function () {//Call a function when the state changes.
+      if (http.readyState == 4 && http.status == 200) {
+        alert(http.responseText);
+      }
+    }
+    http.send(urlEncodedData);
+  }
+
+
+
 }

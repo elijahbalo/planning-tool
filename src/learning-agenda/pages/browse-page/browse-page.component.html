@@ -8,62 +8,68 @@
     <button (click)="onFilterBtnSelect()" class="la-button la-button--filter">{{'aside_filter.filter_button' | translate}}</button>
 
     <aside class="main-section__aside" [ngClass]="{on: showFilterAside}">
-        <header class="main-section__aside-header">
-            <span class="main-section__aside-heading">{{'aside_header.heading.browse' | translate}}</span>
-            <button class="ms__aside-header-btn" (click)="clearAll()">{{'aside_header.button.browse' | translate}}</button>
-        </header>
-        <div class="ms__aside-groups">
-            <fieldset class="ms__aside-group">
-                <span class="ms__aside-group-heading">{{'aside_filter.grade_heading' | translate}}</span>
-                <label class="ms__aside-label" for="grade-kindergarden_2">
-                    <span class="text">{{'grades.kg2.text' | translate}}</span>
-                    <input id="grade-kindergarden_2" [(ngModel)]="check1" name="grade-kindergarden_grade_2" type="checkbox" (change)="filterItems('KinderTo2', check1)" />
-                    <span class="faux-checkbox unchecked"></span>
-                </label>
-                <label class="ms__aside-label" for="grade-3_5">
-                    <span class="text">{{'grades.three5.text' | translate}}</span>
-                    <input id="grade-3_5" [(ngModel)]="check2" name="grade-3_5" type="checkbox" (change)="filterItems('Gr3To5', check2)" />
-                    <span class="faux-checkbox unchecked"></span>
-                </label>
-                <label class="ms__aside-label" for="grade-6_8">
-                    <span class="text">{{'grades.six8.text' | translate}}</span>
-                    <input id="grade-6_8" [(ngModel)]="check3" name="grade-6_8" type="checkbox" (change)="filterItems('Gr6To8', check3)" />
-                    <span class="faux-checkbox unchecked"></span>
-                </label>
-            </fieldset>
-            <fieldset class="ms__aside-group">
-                <span class="ms__aside-group-heading">{{'aside_filter.toy_heading' | translate}}</span>
-                <label class="ms__aside-label" for="toy-oct_apr">
-                    <span class="text">{{'toy.oct_apr' | translate}}</span>
-                    <input id="toy-oct_apr" [(ngModel)]="check4" name="toy-oct_apr" type="checkbox" (change)="filterItems('OctoberToApril', check4)" />
-                    <span class="faux-checkbox unchecked"></span>
-                </label>
-                <label class="ms__aside-label" for="toy-may_jun">
-                    <span class="text">{{'toy.may_jun' | translate}}</span>
-                    <input id="toy-may_jun" [(ngModel)]="check5" name="toy-may_jun" type="checkbox" (change)="filterItems('MayToJune', check5)" />
-                    <span class="faux-checkbox unchecked"></span>
-                </label>
-            </fieldset>
-            <fieldset class="ms__aside-group">
-                <span class="ms__aside-group-heading">{{'aside_filter.dur_heading' | translate}}</span>
-                <label class="ms__aside-label" for="length-half">
-                    <span class="text">{{'durations.half.text' | translate}}</span>
-                    <input id="length-half" [(ngModel)]="check6" name="length-half" type="checkbox" (change)="filterItems('Half-Day', check6)" />
-                    <span class="faux-checkbox unchecked"></span>
-                </label>
-                <label class="ms__aside-label" for="length-full">
-                    <span class="text">{{'durations.full.text' | translate}}</span>
-                    <input id="length-full" [(ngModel)]="check7" name="length-full" type="checkbox" (change)="filterItems('Full-Day', check7)" />
-                    <span class="faux-checkbox unchecked"></span>
-                </label>
-            </fieldset>
-        </div><!--/.ms__aside-groups-->
+      <header class="main-section__aside-header">
+        <span class="main-section__aside-heading">{{'aside_header.heading.browse' | translate}}</span>
+        <button class="ms__aside-header-btn" (click)="clearAll()">{{'aside_header.button.browse' | translate}}</button>
+      </header>
+      <div class="ms__aside-groups">
+        <fieldset class="ms__aside-group">
+          <span class="ms__aside-group-heading">{{'aside_filter.grade_heading' | translate}}</span>
+          <label class="ms__aside-label" for="grade-kindergarden_2">
+            <span class="text">{{'grades.kg2.text' | translate}}</span>
+            <input id="grade-kindergarden_2" [(ngModel)]="check1" name="grade-kindergarden_grade_2" type="checkbox" (change)="filterItems('KinderTo2', check1)"
+            />
+            <span class="faux-checkbox unchecked"></span>
+          </label>
+          <label class="ms__aside-label" for="grade-3_5">
+            <span class="text">{{'grades.three5.text' | translate}}</span>
+            <input id="grade-3_5" [(ngModel)]="check2" name="grade-3_5" type="checkbox" (change)="filterItems('Gr3To5', check2)" />
+            <span class="faux-checkbox unchecked"></span>
+          </label>
+          <label class="ms__aside-label" for="grade-6_8">
+            <span class="text">{{'grades.six8.text' | translate}}</span>
+            <input id="grade-6_8" [(ngModel)]="check3" name="grade-6_8" type="checkbox" (change)="filterItems('Gr6To8', check3)" />
+            <span class="faux-checkbox unchecked"></span>
+          </label>
+        </fieldset>
+        <fieldset class="ms__aside-group">
+          <span class="ms__aside-group-heading">{{'aside_filter.toy_heading' | translate}}</span>
+          <label class="ms__aside-label" for="toy-oct_apr">
+            <span class="text">{{'toy.oct_apr' | translate}}</span>
+            <input id="toy-oct_apr" [(ngModel)]="check4" name="toy-oct_apr" type="checkbox" (change)="filterItems('OctoberToApril', check4)"
+            />
+            <span class="faux-checkbox unchecked"></span>
+          </label>
+          <label class="ms__aside-label" for="toy-may_jun">
+            <span class="text">{{'toy.may_jun' | translate}}</span>
+            <input id="toy-may_jun" [(ngModel)]="check5" name="toy-may_jun" type="checkbox" (change)="filterItems('MayToJune', check5)"
+            />
+            <span class="faux-checkbox unchecked"></span>
+          </label>
+        </fieldset>
+        <fieldset class="ms__aside-group">
+          <span class="ms__aside-group-heading">{{'aside_filter.dur_heading' | translate}}</span>
+          <label class="ms__aside-label" for="length-half">
+            <span class="text">{{'durations.half.text' | translate}}</span>
+            <input id="length-half" [(ngModel)]="check6" name="length-half" type="checkbox" (change)="filterItems('Half-Day', check6)"
+            />
+            <span class="faux-checkbox unchecked"></span>
+          </label>
+          <label class="ms__aside-label" for="length-full">
+            <span class="text">{{'durations.full.text' | translate}}</span>
+            <input id="length-full" [(ngModel)]="check7" name="length-full" type="checkbox" (change)="filterItems('Full-Day', check7)"
+            />
+            <span class="faux-checkbox unchecked"></span>
+          </label>
+        </fieldset>
+      </div>
+      <!--/.ms__aside-groups-->
     </aside>
 
     <main class="main-section__main" id="main-sect">
       <div *ngIf="!dis">
         <header class="msm__header">
-          <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToLanding()">{{'msm_back_link' | translate}}</a>
+          <a *ngIf="showHead" class="msm__back-link" href="javascript:void(0)">{{'msm_back_link' | translate}}</a>
           <h2 class="msm__heading">{{'msm_heading' | translate}}</h2>
         </header>
         <ul class="card-list" id="itinerary-browse">
@@ -83,7 +89,7 @@
 
       <div *ngIf="dis" style="clear:both;">
         <header class="msm__header">
-          <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToLanding()">{{'msm_back_link' | translate}}</a>
+          <a class="msm__back-link" href="javascript:void(0)" (click)="navigateToMain()">{{'msm_back_link' | translate}}</a>
           <h2 class="msm__heading">{{'msm_heading' | translate}}</h2>
         </header>
         <div class="la-banner" [ngStyle]="{'background-image': 'url(' + itn.img + ')'}">
@@ -93,13 +99,14 @@
             <span class="la-banner__toy">{{itn.timeOfYear}}</span>
           </main>
           <div class="utils-bar">
-            <div class="url-copier">
+            <!--  <div class="url-copier">
               <label for="url">{{'utils_bar.url_label' | translate}}</label>
               <input id="url" value="http://localhost:4200/BrowsePage" name="url" type="text" />
               <button class="la-button la-button--utils-bar la-button--clr-primary">{{'utils_bar.copy_url_btn' | translate}}</button>
-            </div>
+            </div> -->
             <aside class="utils-bar__aside">
-              <button class="la-button la-button--utils-bar" (click)="printDiv()">{{'utils_bar.print_btn' | translate}}</button>
+              <!-- 
+              <button class="la-button la-button--utils-bar" (click)="printDiv()">{{'utils_bar.print_btn' | translate}}</button> -->
               <button class="la-button la-button--utils-bar" (click)="pdf()">{{'utils_bar.dl_pdf_btn' | translate}}</button>
             </aside>
           </div>
@@ -114,7 +121,7 @@
               <span class="activity-list-item__time">{{arrive.time}}</span>
 
               <figure class="activity-list-item__figure">
-                <a class="activity-list-item__image-link" href="#figure">
+                <a class="activity-list-item__image-link" href="javascript:void(0)">
                   <img class="activity-list-item__image" src="{{arrive.img}}" width="227" height="161" alt="" />
                 </a>
               </figure>
@@ -128,7 +135,7 @@
             </li>
             <li *ngFor="let act of itn__act" class="activity-list-item">
               <app-activity-display [act]="act" [activities]="activities" (itmDel)="update($event)" (itmRpl)="update($event)" [itn]="itn__act"
-              (toggle)="updateTog($event)" [showSwap]="showSwap" [showDelete]="showDelete"></app-activity-display>
+                (toggle)="updateTog($event)" [showSwap]="showSwap" [showDelete]="showDelete"></app-activity-display>
             </li>
             <!--  <li class="activity-list-item">
               <span class="activity-list-item__time">10:00 AM</span>

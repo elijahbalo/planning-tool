@@ -46,6 +46,8 @@ export class BrowsePageComponent implements OnInit {
     left: 30,
     width: 550
   };
+
+  showHead = false
   //grades: string;
   //timeOfYear: string;
   day: string;
@@ -128,8 +130,9 @@ export class BrowsePageComponent implements OnInit {
       .toString(36)
       .substr(2, 9);
   }
-  navigateToLanding() {
-    this.router.navigate(['LandingPage']);
+  navigateToMain() {
+    this.dis = false
+    this.showHead = false
   }
   toggleDis() {
     console.log('dis is clicked');
@@ -147,6 +150,7 @@ export class BrowsePageComponent implements OnInit {
     if (day == 'Half-day') {
       if (num == 4) {
         this.max = true;
+        console.log('max')
       } else {
         this.max = false;
       }
@@ -195,6 +199,7 @@ export class BrowsePageComponent implements OnInit {
   }
 
   displayItem(item) {
+    this.showHead = true
     this.clickable = true;
     let num = 0;
     this.dis = true;

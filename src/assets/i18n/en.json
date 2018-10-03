@@ -419,8 +419,8 @@
       "day": "Full-day",
       "img": "assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
       "OctoberToApril": true,
-      "HalfDay": true,
-      "FullDay": false,
+      "HalfDay": false,
+      "FullDay": true,
       "MayToJune": false,
       "KinderTo2": true,
       "Gr6To8": false,
@@ -465,7 +465,7 @@
           "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
           "length": 45,
           "type": "Ciné+",
-          "order": "2",
+          "order": "12",
           "time": "13:00"
         }
       ]
