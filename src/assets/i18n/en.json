@@ -46,7 +46,7 @@
   },
   "grades": {
     "kg2": {
-      "text": "Kindergarden to Grade 2",
+      "text": "Kindergarten to Grade 2",
       "input_val": ""
     },
     "three5": {
@@ -415,7 +415,7 @@
       "id": 1,
       "title": "Itinerary 1",
       "timeOfYear": "Oct — Apr",
-      "grades": "Kindergarden to Grade 2",
+      "grades": "Kindergarten to Grade 2",
       "day": "Full-day",
       "img": "assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
       "OctoberToApril": true,
@@ -635,7 +635,7 @@
       "id": 5,
       "title": "Itinerary 5",
       "timeOfYear": "May — Jun",
-      "grades": "Kindergarden to Grade 2",
+      "grades": "Kindergarten to Grade 2",
       "day": "Full-day",
       "img": "assets/images/Nordik_Massana_12.20.16_0786.jpg",
       "OctoberToApril": false,
@@ -655,7 +655,7 @@
           "length": 45,
           "type": "Guided Workshop",
           "order": "1",
-          "time": "10:00 AM"
+          "time": "10:00"
         },
         {
           "name": "Ancient Bond",
@@ -666,7 +666,7 @@
           "length": 45,
           "type": "Guided Workshop",
           "order": "7",
-          "time": "11:15 AM"
+          "time": "11:15"
         },
         {
           "name": "Ciné+",
@@ -677,7 +677,7 @@
           "length": 45,
           "type": "Ciné+",
           "order": "12",
-          "time": "1:00 PM"
+          "time": "13:00"
         }
       ]
     },
@@ -708,7 +708,7 @@
           "length": 45,
           "type": "Guided Workshop",
           "order": "7",
-          "time": "10:00 AM"
+          "time": "10:00"
         },
         {
           "name": "Mark Your History!",
@@ -722,7 +722,7 @@
           "length": 45,
           "type": "Self-Guided",
           "order": "6",
-          "time": "1:00 PM"
+          "time": "13:00"
         }
       ]
     },
@@ -753,7 +753,7 @@
           "length": 45,
           "type": "Tour",
           "order": "3",
-          "time": "10:00 AM"
+          "time": "10:00"
         },
         {
           "name": "Ciné+",
@@ -767,7 +767,7 @@
           "length": 45,
           "type": "Ciné+",
           "order": "12",
-          "time": "11:15 AM"
+          "time": "11:15"
         },
         {
           "name": "Mark Your History!",
@@ -781,7 +781,7 @@
           "length": 45,
           "type": "Self-Guided",
           "order": "6",
-          "time": "1:45 PM"
+          "time": "13:45"
         }
       ]
     },
@@ -812,7 +812,7 @@
           "length": 45,
           "type": "Tour",
           "order": "3",
-          "time": "10:00 AM"
+          "time": "10:00"
         },
         {
           "name": "Mark Your History!",
@@ -826,7 +826,7 @@
           "length": 45,
           "type": "Self-Guided",
           "order": "6",
-          "time": "11:15 AM"
+          "time": "11:15"
         },
         {
           "name": "Ciné+",
@@ -840,7 +840,7 @@
           "length": 45,
           "type": "Ciné+",
           "order": "12",
-          "time": "1:00 PM"
+          "time": "13:00"
         }
       ]
     },
@@ -848,7 +848,7 @@
       "id": 9,
       "title": "Itinerary 9",
       "timeOfYear": "Jul – Sep",
-      "grades": "Kindergarden to Grade 2",
+      "grades": "Kindergarten to Grade 2",
       "day": "Full-day",
       "img": "assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
       "OctoberToApril": false,
@@ -871,7 +871,7 @@
           "length": 45,
           "type": "Self-Guided",
           "order": "2",
-          "time": "10:00 AM"
+          "time": "10:00"
         },
         {
           "name": "Ciné+",
@@ -885,21 +885,7 @@
           "length": 45,
           "type": "Ciné+",
           "order": "12",
-          "time": "11:15 AM"
-        },
-        {
-          "name": "Temporary Exhibitions / Boutique",
-          "ageRange": "Prek-2",
-          "kinderTo2": true,
-          "Gr3To5": true,
-          "Gr6To8": true,
-          "description": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
-          "fees": "Group admission fee + $1 per student",
-          "img": "",
-          "length": 45,
-          "type": "Other",
-          "order": "",
-          "time": "1:00 PM"
+          "time": "11:15"
         }
       ]
     },
@@ -930,7 +916,7 @@
           "length": 45,
           "type": "Self-Guided",
           "order": "4",
-          "time": "10:00 AM"
+          "time": "10:00"
         },
         {
           "name": "Free Time",
@@ -943,8 +929,8 @@
           "img": "",
           "length": 45,
           "type": "Self-Guided",
-          "order": "4",
-          "time": "11:15 AM"
+          "order": "18",
+          "time": "11:15"
         },
         {
           "name": "Ciné+",
@@ -958,7 +944,7 @@
           "length": 45,
           "type": "Ciné+",
           "order": "12",
-          "time": "1:00 PM"
+          "time": "13:00"
         }
       ]
     },
@@ -989,7 +975,7 @@
           "length": 45,
           "type": "Self-Guided",
           "order": "11",
-          "time": "10:00 AM"
+          "time": "10:00"
         },
         {
           "name": "Grand Tour",
@@ -1003,21 +989,7 @@
           "length": 45,
           "type": "Tour",
           "order": "3",
-          "time": "11:15 AM"
-        },
-        {
-          "name": "Temporary Exhibitions / Boutique",
-          "ageRange": "Prek-2",
-          "kinderTo2": true,
-          "Gr3To5": true,
-          "Gr6To8": true,
-          "description": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
-          "fees": "Group admission fee + $1 per student",
-          "img": "",
-          "length": 45,
-          "type": "",
-          "order": "3",
-          "time": "1:00 PM"
+          "time": "11:15"
         },
         {
           "name": "Ciné+",
@@ -1031,7 +1003,7 @@
           "length": 45,
           "type": "Ciné+",
           "order": "12",
-          "time": "1:45 PM"
+          "time": "13:45"
         }
       ]
     },
@@ -1062,7 +1034,7 @@
           "length": 45,
           "type": "Tour",
           "order": "3",
-          "time": "10:00 AM"
+          "time": "10:00"
         },
         {
           "name": "Mark Your History!",
@@ -1076,7 +1048,7 @@
           "length": 45,
           "type": "Self-Guided",
           "order": "6",
-          "time": "11:15 AM"
+          "time": "11:15"
         },
         {
           "name": "Ciné+",
@@ -1090,21 +1062,1059 @@
           "length": 45,
           "type": "Ciné+",
           "order": "12",
-          "time": "1:00 PM"
+          "time": "13:00"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "HD-M Itinerary 13",
+      "timeOfYear": "Oct – Apr",
+      "grades": "Kindergarten to Grade 2",
+      "day": "Half-day",
+      "img": "assets/images/Nordik_Massana_12.20.16_0786.jpg",
+      "OctoberToApril": true,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": true,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Baker, “Knead” a Hand",
+          "ageRange": "Pre-Kindergarten to Grade 2",
+          "kinderTo2": true,
+          "Gr3To5": false,
+          "Gr6To8": false,
+          "description": "Children will discover the fascinating secrets behind that most universal of foods, bread! As they make and bake a loaf of their own, they will learn about the variety of flours and breads enjoyed throughout the world, finally delivering their creations to the houses of the International Village. This program gives students an opportunity to learn and practice their measuring and early literacy skills.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/Nordik_Massana_12.20.16_0786.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "0",
+          "time": "10:00"
         },
         {
-          "name": "Temporary Exhibitions / Boutique",
+          "name": "Ciné+",
           "ageRange": "Prek-2",
           "kinderTo2": true,
           "Gr3To5": true,
           "Gr6To8": true,
-          "description": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
           "fees": "Group admission fee + $1 per student",
-          "img": "",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
           "length": 45,
-          "type": "",
+          "type": "Ciné+",
+          "order": "12",
+          "time": "11:15"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "HD-M Itinerary 14",
+      "timeOfYear": "Oct – Apr",
+      "grades": "Grade 3 to 5",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0151-Dm.jpg",
+      "OctoberToApril": true,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": true,
+      "activities": [
+        {
+          "name": "Traditions of the Anishinabe (Algonquin)",
+          "ageRange": "Prek-2",
+          "kinderTo2": false,
+          "Gr3To5": true,
+          "Gr6To8": false,
+          "description": "Explore the continuity of Anishinabe (Algonquin) culture through their traditions, oral histories, the objects they created, and the knowledge that community members have shared with the Museum. Students will explore objects related to six different traditions in Anishinabe (Algonquin) culture, and use the knowledge they acquire to compare Anishinabe (Algonquin) culture with their own.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0151-Dm.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "9",
+          "time": "10:00"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "HD-M Itinerary 15",
+      "timeOfYear": "Oct – Apr",
+      "grades": "Grade 6 to 8",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0202-Dm.jpg",
+      "OctoberToApril": true,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": true,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Grand Tour",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+          "length": 45,
+          "type": "Tour",
           "order": "3",
-          "time": "1:45 PM"
+          "time": "10:00"
+        },
+        {
+          "name": "Think Like a Historian",
+          "ageRange": "Prek-2",
+          "kinderTo2": false,
+          "Gr3To5": false,
+          "Gr6To8": true,
+          "description": "When examining an object, museum historians begin with a series of questions. What is this? What is it made of? Who made it? Who used it? How did it get here? Using authentic “mystery” objects from the Museum’s Northwest Coast learning collection, this program trains your students to think like historians. From basic observations and descriptions of their mystery objects, students will build their inquiries to include historical thinking concepts. Further exploration of primary-source artifacts on display will help students identify aspects of continuity and change, as they absorb fresh historical perspectives.",
+          "fees": "",
+          "img": "assets/images/IMG2018-0032-0202-Dm.jpg",
+          "length": 45,
+          "type": "Workshop",
+          "order": "16",
+          "time": "11:15"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "HD-M Itinerary 16",
+      "timeOfYear": "Oct – Apr",
+      "grades": "Grade 9 to 12",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0057-Dm.jpg",
+      "OctoberToApril": true,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Grand Tour",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+          "length": 45,
+          "type": "Tour",
+          "order": "3",
+          "time": "10:00"
+        },
+        {
+          "name": "Mark Your History!",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Student groups can enhance their visit with this new self-guided itinerary which offers an activity throughout the Museum. Program Interpreters will be stationed at key locations to provide animations and encourage students to explore objects and events that tell important stories that have shaped Canada. Students will discover First Peoples’ interwoven history with the natural world and the adaptations made and relationships forged with French colonists and British settlers. This fun-filled and engaging program will help students connect historically with the perspectives of other Canadians and consider what it means to be Canadian today!",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0057-Dm.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "6",
+          "time": "11:15"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "HD-A Itinerary 17",
+      "timeOfYear": "Oct – Apr",
+      "grades": "Kindergarten to Grade 2",
+      "day": "Half-day",
+      "img": "assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
+      "OctoberToApril": true,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": true,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Music Works!",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": false,
+          "Gr6To8": false,
+          "description": "Take your students on a musical odyssey to far-off places! Children play the roles of musicians from Indonesia and Nigeria, learning and practicing some useful techniques and musical beats while preparing for their performances. Music Works! promotes intercultural understanding as children explore the role of music in communities around the world.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "1",
+          "time": "13:00"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "14:00"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "HD-A Itinerary 18",
+      "timeOfYear": "Oct – Apr",
+      "grades": "Grade 3 to 5",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0151-Dm.jpg",
+      "OctoberToApril": true,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": true,
+      "activities": [
+        {
+          "name": "Traditions of the Anishinabe (Algonquin)",
+          "ageRange": "Prek-2",
+          "kinderTo2": false,
+          "Gr3To5": true,
+          "Gr6To8": false,
+          "description": "Explore the continuity of Anishinabe (Algonquin) culture through their traditions, oral histories, the objects they created, and the knowledge that community members have shared with the Museum. Students will explore objects related to six different traditions in Anishinabe (Algonquin) culture, and use the knowledge they acquire to compare Anishinabe (Algonquin) culture with their own.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0151-Dm.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "9",
+          "time": "13:00"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "14:00"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "HD-A Itinerary 19",
+      "timeOfYear": "Oct – Apr",
+      "grades": "Grade 6 to 8",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0215-Dm.jpg",
+      "OctoberToApril": true,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": true,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Men and Women of the Fur Trade",
+          "ageRange": "Prek-2",
+          "kinderTo2": false,
+          "Gr3To5": false,
+          "Gr6To8": true,
+          "description": "During the fur trade, Europeans relied heavily on the knowledge of Indigenous women and men. This program highlights multiple perspectives on the fur trade following the Seven Years’ War (1756–1763), and examines the relationships that made trade networks possible. Students will use primary text sources and artifacts to explore the perspectives of Indigenous women, Indigenous men, and Europeans.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0215-Dm.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "10",
+          "time": "13:00"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "14:00"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "HD-A Itinerary 20",
+      "timeOfYear": "Oct – Apr",
+      "grades": "Grade 9 to 12",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+      "OctoberToApril": true,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Grand Tour",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+          "length": 45,
+          "type": "Tour",
+          "order": "3",
+          "time": "13:00"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "14:00"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "HD-M Itinerary 21",
+      "timeOfYear": "May – Jun",
+      "grades": "Kindergarten to Grade 2",
+      "day": "Half-day",
+      "img": "assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": true,
+      "KinderTo2": true,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Baker, “Knead” a Hand",
+          "ageRange": "Pre-Kindergarten to Grade 2",
+          "kinderTo2": true,
+          "Gr3To5": false,
+          "Gr6To8": false,
+          "description": "Children will discover the fascinating secrets behind that most universal of foods, bread! As they make and bake a loaf of their own, they will learn about the variety of flours and breads enjoyed throughout the world, finally delivering their creations to the houses of the International Village. This program gives students an opportunity to learn and practice their measuring and early literacy skills.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/Nordik_Massana_12.20.16_0786.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "0",
+          "time": "10:00"
+        },
+        {
+          "name": "Music Works!",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": false,
+          "Gr6To8": false,
+          "description": "Take your students on a musical odyssey to far-off places! Children play the roles of musicians from Indonesia and Nigeria, learning and practicing some useful techniques and musical beats while preparing for their performances. Music Works! promotes intercultural understanding as children explore the role of music in communities around the world.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "1",
+          "time": "11:15"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "HD-M Itinerary 22",
+      "timeOfYear": "May – Jun",
+      "grades": "Grade 3 to 5",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": true,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": true,
+      "activities": [
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "10:00"
+        },
+        {
+          "name": "Ancient Bond",
+          "ageRange": "Prek-2",
+          "kinderTo2": false,
+          "Gr3To5": true,
+          "Gr6To8": false,
+          "description": "Over the centuries, Canada’s First Peoples have adapted to a vast array of climates, landscapes and environments. Working in small teams, your students will explore the First Peoples Hall to identify ways in which First Peoples met their needs for food, clothing, shelter and transportation using traditional technologies and life-ways. Your students will also draw parallels between these adaptations and their own lives.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "7",
+          "time": "11:15"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "HD-M Itinerary 23",
+      "timeOfYear": "May – Jun",
+      "grades": "Grade 6 to 8",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": true,
+      "KinderTo2": false,
+      "Gr6To8": true,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Grand Tour",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+          "length": 45,
+          "type": "Tour",
+          "order": "3",
+          "time": "10:00"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "11:15"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "HD-M Itinerary 24",
+      "timeOfYear": "May – Jun",
+      "grades": "Grade 9 to 12",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0057-Dm.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": true,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Grand Tour",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+          "length": 45,
+          "type": "Tour",
+          "order": "3",
+          "time": "10:00"
+        },
+        {
+          "name": "Mark Your History!",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Student groups can enhance their visit with this new self-guided itinerary which offers an activity throughout the Museum. Program Interpreters will be stationed at key locations to provide animations and encourage students to explore objects and events that tell important stories that have shaped Canada. Students will discover First Peoples’ interwoven history with the natural world and the adaptations made and relationships forged with French colonists and British settlers. This fun-filled and engaging program will help students connect historically with the perspectives of other Canadians and consider what it means to be Canadian today!",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0057-Dm.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "6",
+          "time": ""
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "HD-A Itinerary 25",
+      "timeOfYear": "May – Jun",
+      "grades": "Kindergarten to Grade 2",
+      "day": "Half-day",
+      "img": "assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": true,
+      "KinderTo2": true,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Baker, “Knead” a Hand",
+          "ageRange": "Pre-Kindergarten to Grade 2",
+          "kinderTo2": true,
+          "Gr3To5": false,
+          "Gr6To8": false,
+          "description": "Children will discover the fascinating secrets behind that most universal of foods, bread! As they make and bake a loaf of their own, they will learn about the variety of flours and breads enjoyed throughout the world, finally delivering their creations to the houses of the International Village. This program gives students an opportunity to learn and practice their measuring and early literacy skills.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/Nordik_Massana_12.20.16_0786.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "0",
+          "time": "13:00"
+        },
+        {
+          "name": "Globe Trekkers at the Canadian Children’s Museum",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": false,
+          "description": "Based on the concept of learning through play, these multisensory, interactive programs promote students’ awareness of themselves and others. In the exciting and colourful international environment of the Canadian Children’s Museum, children explore how people live, work and interact in communities around the world.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "2",
+          "time": "14:00"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title": "HD-A Itinerary 26",
+      "timeOfYear": "May – Jun",
+      "grades": "Grade 3 to 5",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": true,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": true,
+      "activities": [
+        {
+          "name": "Ancient Bond",
+          "ageRange": "Prek-2",
+          "kinderTo2": false,
+          "Gr3To5": true,
+          "Gr6To8": false,
+          "description": "Over the centuries, Canada’s First Peoples have adapted to a vast array of climates, landscapes and environments. Working in small teams, your students will explore the First Peoples Hall to identify ways in which First Peoples met their needs for food, clothing, shelter and transportation using traditional technologies and life-ways. Your students will also draw parallels between these adaptations and their own lives.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/MuseeEnfants_Lifestyle_Day2_1.18.201753511_2.jpg",
+          "length": 45,
+          "type": "Guided Workshop",
+          "order": "7",
+          "time": "13:00"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "14:00"
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "title": "HD-A Itinerary 27",
+      "timeOfYear": "May – Jun",
+      "grades": "Grade 6 to 8",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0165-Dm.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": true,
+      "KinderTo2": false,
+      "Gr6To8": true,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "The People of New France: Forging Relationships, Changing Landscapes",
+          "ageRange": "Prek-2",
+          "kinderTo2": false,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "For settlers in New France, adapting to a new land required a different way of life, as well as new interactions and exchanges. Working with replica artifacts from the Museum’s collections, students will explore some of the ways in which the people of New France adapted to their surroundings, and will learn about some of the interactions between European settlers and First Peoples and how they influenced one another.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0165-Dm.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "5",
+          "time": "13:00"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "14:00"
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "title": "HD-A Itinerary 28",
+      "timeOfYear": "May – Jun",
+      "grades": "Grade 9 to 12",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": true,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Grand Tour",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+          "length": 45,
+          "type": "Tour",
+          "order": "3",
+          "time": "13:00"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "14:00"
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "title": "HD-M Itinerary 29",
+      "timeOfYear": "Jul – Sep",
+      "grades": "Kindergarten to Grade 2",
+      "day": "Half-day",
+      "img": "assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": true,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Globe Trekkers at the Canadian Children’s Museum",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": false,
+          "description": "Based on the concept of learning through play, these multisensory, interactive programs promote students’ awareness of themselves and others. In the exciting and colourful international environment of the Canadian Children’s Museum, children explore how people live, work and interact in communities around the world.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "2",
+          "time": "10:00"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "11:15"
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "title": "HD-M Itinerary 30",
+      "timeOfYear": "Jul – Sep",
+      "grades": "Grade 3 to 5",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0093-Dm.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": true,
+      "activities": [
+        {
+          "name": "Artifact Hunt in the First Peoples’ Hall",
+          "ageRange": "Prek-2",
+          "kinderTo2": false,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "This self-guided activity sheet helps students to discover fascinating objects and stories reflecting the history, individuals, beliefs and cultural traditions of Canada’s First Peoples. Students will explore the First Peoples Hall as they look for 12 key artifacts among the many historical and contemporary objects on view. Students will come away with greater appreciation of the diversity, richness and vitality of Canada’s First Nations, Métis and Inuit.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0093-Dm.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "4",
+          "time": "10:00"
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "title": "HD-M Itinerary 31",
+      "timeOfYear": "Jul – Sep",
+      "grades": "Grade 6 to 8",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0057-Dm.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": true,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Mark Your History!",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Student groups can enhance their visit with this new self-guided itinerary which offers an activity throughout the Museum. Program Interpreters will be stationed at key locations to provide animations and encourage students to explore objects and events that tell important stories that have shaped Canada. Students will discover First Peoples’ interwoven history with the natural world and the adaptations made and relationships forged with French colonists and British settlers. This fun-filled and engaging program will help students connect historically with the perspectives of other Canadians and consider what it means to be Canadian today!",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0057-Dm.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "6",
+          "time": "10:00"
+        },
+        {
+          "name": "Grand Tour",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+          "length": 45,
+          "type": "Tour",
+          "order": "3",
+          "time": "11:15"
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "title": "HD-M Itinerary 32",
+      "timeOfYear": "Jul – Sep",
+      "grades": "Grade 9 to 12",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Grand Tour",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+          "length": 45,
+          "type": "Tour",
+          "order": "3",
+          "time": ""
+        },
+        {
+          "name": "Mark Your History!",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Student groups can enhance their visit with this new self-guided itinerary which offers an activity throughout the Museum. Program Interpreters will be stationed at key locations to provide animations and encourage students to explore objects and events that tell important stories that have shaped Canada. Students will discover First Peoples’ interwoven history with the natural world and the adaptations made and relationships forged with French colonists and British settlers. This fun-filled and engaging program will help students connect historically with the perspectives of other Canadians and consider what it means to be Canadian today!",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0057-Dm.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "6",
+          "time": ""
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "title": "HD-A Itinerary 33",
+      "timeOfYear": "Jul – Sep",
+      "grades": "Kindergarten to Grade 2",
+      "day": "Half-day",
+      "img": "assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": true,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Globe Trekkers at the Canadian Children’s Museum",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": false,
+          "description": "Based on the concept of learning through play, these multisensory, interactive programs promote students’ awareness of themselves and others. In the exciting and colourful international environment of the Canadian Children’s Museum, children explore how people live, work and interact in communities around the world.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/MuseeEnfants_Lifestyle_1.16.17_53118.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "2",
+          "time": "13:00"
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "14:00"
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "title": "HD-A Itinerary 34",
+      "timeOfYear": "Jul – Sep",
+      "grades": "Grade 3 to 5",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0197-Dm.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": true,
+      "activities": [
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": "13:00"
+        },
+        {
+          "name": "Artifact Hunt in the First Peoples’ Hall",
+          "ageRange": "Prek-2",
+          "kinderTo2": false,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "This self-guided activity sheet helps students to discover fascinating objects and stories reflecting the history, individuals, beliefs and cultural traditions of Canada’s First Peoples. Students will explore the First Peoples Hall as they look for 12 key artifacts among the many historical and contemporary objects on view. Students will come away with greater appreciation of the diversity, richness and vitality of Canada’s First Nations, Métis and Inuit.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0093-Dm.jpg",
+          "length": 45,
+          "type": "Self-Guided",
+          "order": "4",
+          "time": "14:00"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "title": "HD-A Itinerary 35",
+      "timeOfYear": "Jul – Sep",
+      "grades": "Grade 6 to 8",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0186-Dm.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": true,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Grand Tour",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+          "length": 45,
+          "type": "Tour",
+          "order": "3",
+          "time": ""
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": ""
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "title": "HD-A Itinerary 36",
+      "timeOfYear": "Jul – Sep",
+      "grades": "Grade 9 to 12",
+      "day": "Half-day",
+      "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+      "OctoberToApril": false,
+      "HalfDay": true,
+      "FullDay": false,
+      "MayToJune": false,
+      "KinderTo2": false,
+      "Gr6To8": false,
+      "Gr3To5": false,
+      "activities": [
+        {
+          "name": "Grand Tour",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "Awaken your students’ historical imaginations with this guided tour that explores the many amazing sights and stories at the Canadian Museum of History. Students will gain an appreciation for the lives and contributions of those who came before us, and will learn to value the evidence left behind.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0219-Dm.jpg",
+          "length": 45,
+          "type": "Tour",
+          "order": "3",
+          "time": ""
+        },
+        {
+          "name": "Ciné+",
+          "ageRange": "Prek-2",
+          "kinderTo2": true,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "The Museum’s movie theatre presents unique and enriching adventures into the heart of history and culture. Experience a wide assortment of sensational, touching and inspiring films, each lasting from 20 to 45 minutes.",
+          "fees": "Group admission fee + $1 per student",
+          "img": "assets/images/IMG2018-0032-0145-Dm.jpg",
+          "length": 45,
+          "type": "Ciné+",
+          "order": "12",
+          "time": ""
         }
       ]
     }

@@ -31,7 +31,7 @@ export class SubmitFormComponent implements OnInit {
   @Input() phn
 
 
-  @Input() enabled = false
+  @Input() enabled
   constructor() { }
 
   ngOnInit() {
@@ -103,10 +103,6 @@ export class SubmitFormComponent implements OnInit {
     }
     else {
       console.log("first")
-      this.enabled = true
-    }
-    if (!(this.fname === undefined) || !(this.lname === undefined) || !(this.mail === undefined)) {
-      console.log("second")
       this.enabled = true
     }
 

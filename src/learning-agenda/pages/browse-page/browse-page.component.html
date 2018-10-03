@@ -99,13 +99,14 @@
             <span class="la-banner__toy">{{itn.timeOfYear}}</span>
           </main>
           <div class="utils-bar">
-            <div class="url-copier">
+            <!--  <div class="url-copier">
               <label for="url">{{'utils_bar.url_label' | translate}}</label>
               <input id="url" value="http://localhost:4200/BrowsePage" name="url" type="text" />
               <button class="la-button la-button--utils-bar la-button--clr-primary">{{'utils_bar.copy_url_btn' | translate}}</button>
-            </div>
+            </div> -->
             <aside class="utils-bar__aside">
-              <button class="la-button la-button--utils-bar" (click)="printDiv()">{{'utils_bar.print_btn' | translate}}</button>
+              <!-- 
+              <button class="la-button la-button--utils-bar" (click)="printDiv()">{{'utils_bar.print_btn' | translate}}</button> -->
               <button class="la-button la-button--utils-bar" (click)="pdf()">{{'utils_bar.dl_pdf_btn' | translate}}</button>
             </aside>
           </div>
@@ -127,7 +128,8 @@
               <div class="activity-list-item__body">
                 <span class="activity-list-item__title">{{arrive.name}}</span>
                 <span class="activity-list-item__desc" appEllipsis>{{arrive.description}}
-                  <a href="#desc">Full Description</a>
+                  <!-- @Elijah: Can you factor in a basic control structure here? Only if arrive.description has value should we show this... -->
+                  <a href="#desc">{{'full_desc_link' | translate}}</a>
                 </span>
               </div>
             </li>

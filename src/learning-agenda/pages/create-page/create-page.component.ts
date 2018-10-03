@@ -136,9 +136,15 @@ export class CreatePageComponent implements OnInit {
     this.setCreate();
     localStorage.setItem('lang', JSON.stringify('en'));
     this.displayItem();
-
+    this.enable = false
     this.activities = itn_E.activities;
     this.showHeading()
+    this.sDate = ''
+    this.fname = ''
+    this.lname = ''
+    this.lang = ''
+    this.mail = ''
+
 
   }
   showHeading() {
@@ -502,6 +508,16 @@ export class CreatePageComponent implements OnInit {
     localStorage.removeItem('french');
   }
   restart() {
+
+    localStorage.removeItem('sDate')
+    localStorage.removeItem('fname')
+    localStorage.removeItem('lname')
+    localStorage.removeItem('email')
+    localStorage.removeItem('phone')
+    localStorage.removeItem('langs')
+    localStorage.removeItem('news')
+    localStorage.removeItem('consent')
+    this.enable = false
     this.ngOnInit();
     this.step1 = true;
     this.step2 = false;
