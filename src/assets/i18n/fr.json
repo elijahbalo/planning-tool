@@ -58,8 +58,8 @@
       "input_val": ""
     }
   },
-  "rem_button": "Remove Activity",
-  "swap_button": "Swap Activity",
+  "rem_button": "Enlever activité",
+  "swap_button": "Échanger activité",
   "durations": {
     "half": {
       "text": "demi-journée",
