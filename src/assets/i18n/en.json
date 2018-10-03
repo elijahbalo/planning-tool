@@ -886,20 +886,6 @@
           "type": "Ciné+",
           "order": "12",
           "time": "11:15"
-        },
-        {
-          "name": "Temporary Exhibitions / Boutique",
-          "ageRange": "Prek-2",
-          "kinderTo2": true,
-          "Gr3To5": true,
-          "Gr6To8": true,
-          "description": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
-          "fees": "",
-          "img": "",
-          "length": 45,
-          "type": "",
-          "order": "17",
-          "time": "13:00"
         }
       ]
     },
@@ -1004,20 +990,6 @@
           "type": "Tour",
           "order": "3",
           "time": "11:15"
-        },
-        {
-          "name": "Temporary Exhibitions / Boutique",
-          "ageRange": "Prek-2",
-          "kinderTo2": true,
-          "Gr3To5": true,
-          "Gr6To8": true,
-          "description": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.",
-          "fees": "",
-          "img": "",
-          "length": 45,
-          "type": "",
-          "order": "17",
-          "time": "13:00"
         },
         {
           "name": "Ciné+",
