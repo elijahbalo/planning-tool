@@ -919,20 +919,6 @@
           "time": "10:00"
         },
         {
-          "name": "Free Time",
-          "ageRange": "Prek-2",
-          "kinderTo2": false,
-          "Gr3To5": true,
-          "Gr6To8": true,
-          "description": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
-          "fees": "",
-          "img": "",
-          "length": 45,
-          "type": "Self-Guided",
-          "order": "18",
-          "time": "11:15"
-        },
-        {
           "name": "Ciné+",
           "ageRange": "Prek-2",
           "kinderTo2": true,
@@ -1068,7 +1054,7 @@
     },
     {
       "id": 13,
-      "title": "HD-M Itinerary 13",
+      "title": "Itinerary 13 (Morning)",
       "timeOfYear": "Oct – Apr",
       "grades": "Kindergarten to Grade 2",
       "day": "Half-day",
@@ -1113,7 +1099,7 @@
     },
     {
       "id": 14,
-      "title": "HD-M Itinerary 14",
+      "title": "Itinerary 14 (Morning)",
       "timeOfYear": "Oct – Apr",
       "grades": "Grade 3 to 5",
       "day": "Half-day",
@@ -1144,7 +1130,7 @@
     },
     {
       "id": 15,
-      "title": "HD-M Itinerary 15",
+      "title": "Itinerary 15 (Morning)",
       "timeOfYear": "Oct – Apr",
       "grades": "Grade 6 to 8",
       "day": "Half-day",
@@ -1189,7 +1175,7 @@
     },
     {
       "id": 16,
-      "title": "HD-M Itinerary 16",
+      "title": "Itinerary 16 (Morning)",
       "timeOfYear": "Oct – Apr",
       "grades": "Grade 9 to 12",
       "day": "Half-day",
@@ -1234,7 +1220,7 @@
     },
     {
       "id": 17,
-      "title": "HD-A Itinerary 17",
+      "title": "Itinerary 17 (Afternoon)",
       "timeOfYear": "Oct – Apr",
       "grades": "Kindergarten to Grade 2",
       "day": "Half-day",
@@ -1279,7 +1265,7 @@
     },
     {
       "id": 18,
-      "title": "HD-A Itinerary 18",
+      "title": "Itinerary 18 (Afternoon)",
       "timeOfYear": "Oct – Apr",
       "grades": "Grade 3 to 5",
       "day": "Half-day",
@@ -1324,7 +1310,7 @@
     },
     {
       "id": 19,
-      "title": "HD-A Itinerary 19",
+      "title": "Itinerary 19 (Afternoon)",
       "timeOfYear": "Oct – Apr",
       "grades": "Grade 6 to 8",
       "day": "Half-day",
@@ -1369,7 +1355,7 @@
     },
     {
       "id": 20,
-      "title": "HD-A Itinerary 20",
+      "title": "Itinerary 20 (Afternoon)",
       "timeOfYear": "Oct – Apr",
       "grades": "Grade 9 to 12",
       "day": "Half-day",
@@ -1414,7 +1400,7 @@
     },
     {
       "id": 21,
-      "title": "HD-M Itinerary 21",
+      "title": "Itinerary 21 (Morning)",
       "timeOfYear": "May – Jun",
       "grades": "Kindergarten to Grade 2",
       "day": "Half-day",
@@ -1459,7 +1445,7 @@
     },
     {
       "id": 22,
-      "title": "HD-M Itinerary 22",
+      "title": "Itinerary 22 (Afternoon)",
       "timeOfYear": "May – Jun",
       "grades": "Grade 3 to 5",
       "day": "Half-day",
@@ -1504,7 +1490,7 @@
     },
     {
       "id": 23,
-      "title": "HD-M Itinerary 23",
+      "title": "Itinerary 23 (Morning)",
       "timeOfYear": "May – Jun",
       "grades": "Grade 6 to 8",
       "day": "Half-day",
@@ -1549,7 +1535,7 @@
     },
     {
       "id": 24,
-      "title": "HD-M Itinerary 24",
+      "title": "Itinerary 24 (Morning)",
       "timeOfYear": "May – Jun",
       "grades": "Grade 9 to 12",
       "day": "Half-day",
@@ -1594,7 +1580,7 @@
     },
     {
       "id": 25,
-      "title": "HD-A Itinerary 25",
+      "title": "Itinerary 25 (Afternoon)",
       "timeOfYear": "May – Jun",
       "grades": "Kindergarten to Grade 2",
       "day": "Half-day",
@@ -1639,7 +1625,7 @@
     },
     {
       "id": 26,
-      "title": "HD-A Itinerary 26",
+      "title": "Itinerary 26 (Afternoon)",
       "timeOfYear": "May – Jun",
       "grades": "Grade 3 to 5",
       "day": "Half-day",
@@ -1684,7 +1670,7 @@
     },
     {
       "id": 27,
-      "title": "HD-A Itinerary 27",
+      "title": "Itinerary 27 (Afternoon)",
       "timeOfYear": "May – Jun",
       "grades": "Grade 6 to 8",
       "day": "Half-day",
@@ -1729,7 +1715,7 @@
     },
     {
       "id": 28,
-      "title": "HD-A Itinerary 28",
+      "title": "Itinerary 28 (Afternoon)",
       "timeOfYear": "May – Jun",
       "grades": "Grade 9 to 12",
       "day": "Half-day",
@@ -1774,7 +1760,7 @@
     },
     {
       "id": 29,
-      "title": "HD-M Itinerary 29",
+      "title": "Itinerary 29 (Morning)",
       "timeOfYear": "Jul – Sep",
       "grades": "Kindergarten to Grade 2",
       "day": "Half-day",
@@ -1819,7 +1805,7 @@
     },
     {
       "id": 30,
-      "title": "HD-M Itinerary 30",
+      "title": "Itinerary 30 (Morning)",
       "timeOfYear": "Jul – Sep",
       "grades": "Grade 3 to 5",
       "day": "Half-day",
@@ -1850,7 +1836,7 @@
     },
     {
       "id": 31,
-      "title": "HD-M Itinerary 31",
+      "title": "Itinerary 31 (Morning)",
       "timeOfYear": "Jul – Sep",
       "grades": "Grade 6 to 8",
       "day": "Half-day",
@@ -1895,7 +1881,7 @@
     },
     {
       "id": 32,
-      "title": "HD-M Itinerary 32",
+      "title": "Itinerary 32 (Morning)",
       "timeOfYear": "Jul – Sep",
       "grades": "Grade 9 to 12",
       "day": "Half-day",
@@ -1940,7 +1926,7 @@
     },
     {
       "id": 33,
-      "title": "HD-A Itinerary 33",
+      "title": "Itinerary 33 (Afternoon)",
       "timeOfYear": "Jul – Sep",
       "grades": "Kindergarten to Grade 2",
       "day": "Half-day",
@@ -1985,7 +1971,7 @@
     },
     {
       "id": 34,
-      "title": "HD-A Itinerary 34",
+      "title": "Itinerary 34 (Afternoon)",
       "timeOfYear": "Jul – Sep",
       "grades": "Grade 3 to 5",
       "day": "Half-day",
@@ -2030,7 +2016,7 @@
     },
     {
       "id": 35,
-      "title": "HD-A Itinerary 35",
+      "title": "Itinerary 35 (Afternoon)",
       "timeOfYear": "Jul – Sep",
       "grades": "Grade 6 to 8",
       "day": "Half-day",
@@ -2055,7 +2041,7 @@
           "length": 45,
           "type": "Tour",
           "order": "3",
-          "time": ""
+          "time": "13:00"
         },
         {
           "name": "Ciné+",
@@ -2069,13 +2055,13 @@
           "length": 45,
           "type": "Ciné+",
           "order": "12",
-          "time": ""
+          "time": "14:00"
         }
       ]
     },
     {
       "id": 36,
-      "title": "HD-A Itinerary 36",
+      "title": "Itinerary 36 (Afternoon)",
       "timeOfYear": "Jul – Sep",
       "grades": "Grade 9 to 12",
       "day": "Half-day",
@@ -2100,7 +2086,7 @@
           "length": 45,
           "type": "Tour",
           "order": "3",
-          "time": ""
+          "time": "13:00"
         },
         {
           "name": "Ciné+",
@@ -2114,7 +2100,7 @@
           "length": 45,
           "type": "Ciné+",
           "order": "12",
-          "time": ""
+          "time": "14:00"
         }
       ]
     }
