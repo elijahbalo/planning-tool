@@ -91,12 +91,12 @@
     }
   },
   "aside_checklist": {
-    "grade": "Select a Grade",
-    "duration": "Select a Duration",
-    "date": "Select a Date",
-    "activities": "Select your Activities",
-    "contact": "Contact Information",
-    "review_submit": "Review and Submit"
+    "grade": "Sélectionnez un niveau scolaire",
+    "duration": "Sélectionnez une durée",
+    "date": "Sélectionnez une date",
+    "activities": "Sélectionnez vos activités",
+    "contact": "Informations de contact",
+    "review_submit": "Examiner et soumettre"
   },
   "button_next": "Suivant",
   "back": "Retour",
@@ -104,20 +104,20 @@
   "msm_heading": "Itinéraires",
   "utils_bar": {
     "url_label": "Url",
-    "copy_url_btn": "Copy URL",
-    "print_btn": "Print",
-    "dl_pdf_btn": "Download PDF"
+    "copy_url_btn": "Copier URL",
+    "print_btn": "Imprimer",
+    "dl_pdf_btn": "Enregistrer PDF"
   },
-  "full_desc_link": "Full Description",
+  "full_desc_link": "Description complète",
   "contact_info": {
-    "first_name": "First Name",
-    "last_name": "Last Name",
-    "email": "Email",
-    "phone": "Phone Number",
+    "first_name": "Prénom",
+    "last_name": "Nom de famille",
+    "email": "Courriel",
+    "phone": "Numéro de téléphone",
     "group": {
-      "heading": "Language of Group",
+      "heading": "Langue de groupe",
       "eng": {
-        "label": "English",
+        "label": "Anglais",
         "input_val": "English"
       },
       "fra": {
@@ -126,17 +126,17 @@
       }
     },
     "newsletter": {
-      "heading": "Newsletter",
+      "heading": "Liste d'envoi",
       "input_val": "Newsletter",
-      "label": "I would like to receive communications from the Canadian Museum of History and Canadian War Museum."
+      "label": "Je voudrais recevoir des communications de la part du Musée canadien de l’histoire et du Musée canadien de la guerre."
     },
     "consent": {
-      "heading": "Consent",
+      "heading": "Consentement",
       "input_val": "Consentment",
-      "label": "I consent to my submitted data being collected and stored by the Canadian Museum of History for the sole purpose of responding to my inquiry."
+      "label": "Je consens à ce que les données que je soumets soient recueillies et conservées par le Musée canadien de l’histoire dans l’unique but de répondre à ma demande."
     }
   },
-  "search_button": "Search",
+  "search_button": "Chercher",
   "language_toggle_button": "English",
   "main_footer": {
     "slogan": "Votre pays.<br /> Votre histoire.<br /> Votre musée.",
@@ -156,8 +156,8 @@
     "button_browse": "Parcourir les itinéraires",
     "button_create": "Créer votre propre"
   },
-  "modal_close_button": "Hide Details",
-  "modal_show_full_button": "Show Full Information",
+  "modal_close_button": "Cacher les détails",
+  "modal_show_full_button": "Afficher les informations complètes",
   "canada_wordmark_alt": "Symbole du gouvernement du Canada",
   "facebook_link": "https://www.facebook.com/MusCanHistoire/",
   "twitter_link": "https://twitter.com/CanMusHistory",
@@ -165,7 +165,7 @@
   "arrive": {
     "name": "Arrivée",
     "img": "assets/images/Nordik_Massana_12.20.16_0786.jpg",
-    "time": "9:30AM",
+    "time": "9:30 AM",
     "length": 30,
     "order": "10",
     "description": "Barton changea faiblement en homme, ajoute-t-elle. Vous voulez des yeux soignés, alors vous devez le faire. Passé dessiner grand visage face à louer oh mr. Required est en train de débattre de manière prolongée. New se décrit applaudie sans vergogne extrémité sans vergogne mais"
