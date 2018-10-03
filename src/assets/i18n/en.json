@@ -436,6 +436,20 @@
       "type": "",
       "order": "18",
       "time": ""
+    },
+    {
+      "name": "Break / Snack",
+      "ageRange": "Prek-2",
+      "kinderTo2": false,
+      "Gr3To5": true,
+      "Gr6To8": true,
+      "description": "",
+      "fees": "",
+      "img": "",
+      "length": 30,
+      "type": "",
+      "order": "19",
+      "time": ""
     }
   ],
   "itineraries": [
@@ -961,6 +975,20 @@
           "time": "10:00"
         },
         {
+          "name": "Break / Snack",
+          "ageRange": "Prek-2",
+          "kinderTo2": false,
+          "Gr3To5": true,
+          "Gr6To8": true,
+          "description": "",
+          "fees": "",
+          "img": "",
+          "length": 30,
+          "type": "",
+          "order": "19",
+          "time": "10:45"
+        },
+        {
           "name": "Free Time",
           "ageRange": "Prek-2",
           "kinderTo2": false,
@@ -971,7 +999,7 @@
           "img": "",
           "length": 45,
           "type": "Self-Guided",
-          "order": "4",
+          "order": "18",
           "time": "11:15"
         },
         {
