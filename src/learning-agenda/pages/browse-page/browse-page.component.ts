@@ -75,6 +75,7 @@ export class BrowsePageComponent implements OnInit {
       }); */
     this.items = itn_E.itineraries;
     this.activities = itn_E.activities;
+    console.log(this.items);
     /*     this.arrive = itn.arrive;
     this.c_activities = itn.c_activities; */
   }
