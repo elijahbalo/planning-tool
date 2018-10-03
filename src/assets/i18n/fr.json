@@ -1,37 +1,143 @@
 {
   "app_header": {
-    "breadcrumb_link": "Planifiez votre visite",
+    "breadcrumb_link": [
+      "https://www.museedelhistoire.ca/visiter/",
+      "Planifiez votre visite"
+    ],
     "heading": "Planifier un voyage scolaire",
     "btn_browse": "Feuilleter",
     "btn_create": "Créer"
   },
+  "bypass_link": {
+    "main": "Passer au contenu principal",
+    "footer": "Passer à la navigation principale"
+  },
+  "main_logo": {
+    "url": "https://www.museedelhistoire.ca",
+    "src": "/assets/images/cmh-main-logo-fr.svg",
+    "alt": "Musée de l'histoire Canadienne"
+  },
   "main_header": {
-    "menu_button": "Main Menu",
+    "menu_button": "Menu Principale",
     "visit_link": [
-      "https://www.historymuseum.ca/visit/",
-      "Visite"
+      "https://www.museedelhistoire.ca/visiter/",
+      "Visiter"
     ],
     "exhibitions_link": [
-      "https://www.historymuseum.ca/exhibitions/",
-      "Des expositions"
+      "https://www.museedelhistoire.ca/expositions/",
+      "Expositions"
     ],
     "learn_link": [
-      "https://www.historymuseum.ca/learn/",
+      "https://www.museedelhistoire.ca/apprendre/",
       "Apprendre"
     ],
     "shop_link": [
-      "https://www.historymuseum.ca/shop/",
-      "Boutique"
+      "https://www.museedelhistoire.ca/magasiner/",
+      "Magasiner"
     ],
     "support_link": [
-      "https://www.historymuseum.ca/support/",
-      "Soutien"
+      "https://www.museedelhistoire.ca/appuyer/",
+      "Appuyer"
     ],
     "about_link": [
-      "https://www.historymuseum.ca/about/",
-      "Sur"
+      "https://www.museedelhistoire.ca/a-propos/",
+      "À propos"
     ]
   },
+  "grades": {
+    "kg2": {
+      "text": "Maternelle à la 2e année",
+      "input_val": ""
+    },
+    "three5": {
+      "text": "3e à 5e année",
+      "input_val": ""
+    },
+    "six8": {
+      "text": "6e à 8e année",
+      "input_val": ""
+    }
+  },
+  "rem_button": "Remove Activity",
+  "swap_button": "Swap Activity",
+  "durations": {
+    "half": {
+      "text": "demi-journée",
+      "time": "2 à 3 heures"
+    },
+    "full": {
+      "text": "Journée complète",
+      "time": "4+ heures"
+    }
+  },
+  "toy": {
+    "oct_apr": "Octobre à avril",
+    "may_jun": "Mai à juin"
+  },
+  "aside_filter": {
+    "filter_button": "Filtres",
+    "grade_heading": "Niveaux scolaires",
+    "toy_heading": "Période de l'année",
+    "dur_heading": "Durée"
+  },
+  "aside_header": {
+    "heading": {
+      "create": "Instructions",
+      "browse": "Filtrer par"
+    },
+    "button": {
+      "create": "Redémarrer",
+      "browse": "Tout effacer"
+    }
+  },
+  "aside_checklist": {
+    "grade": "Select a Grade",
+    "duration": "Select a Duration",
+    "date": "Select a Date",
+    "activities": "Select your Activities",
+    "contact": "Contact Information",
+    "review_submit": "Review and Submit"
+  },
+  "button_next": "Suivant",
+  "back": "Retour",
+  "msm_back_link": "Retour à la page d'accueil",
+  "msm_heading": "Itinéraires",
+  "utils_bar": {
+    "url_label": "Url",
+    "copy_url_btn": "Copy URL",
+    "print_btn": "Print",
+    "dl_pdf_btn": "Download PDF"
+  },
+  "full_desc_link": "Full Description",
+  "contact_info": {
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email",
+    "phone": "Phone Number",
+    "group": {
+      "heading": "Language of Group",
+      "eng": {
+        "label": "English",
+        "input_val": "English"
+      },
+      "fra": {
+        "label": "Français",
+        "input_val": "Français"
+      }
+    },
+    "newsletter": {
+      "heading": "Newsletter",
+      "input_val": "Newsletter",
+      "label": "I would like to receive communications from the Canadian Museum of History and Canadian War Museum."
+    },
+    "consent": {
+      "heading": "Consent",
+      "input_val": "Consentment",
+      "label": "I consent to my submitted data being collected and stored by the Canadian Museum of History for the sole purpose of responding to my inquiry."
+    }
+  },
+  "search_button": "Search",
+  "language_toggle_button": "English",
   "main_footer": {
     "slogan": "Votre pays.<br /> Votre histoire.<br /> Votre musée.",
     "copyright_text": "&copy; Musée canadien de l'histoire",
@@ -50,18 +156,12 @@
     "button_browse": "Parcourir les itinéraires",
     "button_create": "Créer votre propre"
   },
+  "modal_close_button": "Hide Details",
+  "modal_show_full_button": "Show Full Information",
   "canada_wordmark_alt": "Symbole du gouvernement du Canada",
   "facebook_link": "https://www.facebook.com/MusCanHistoire/",
   "twitter_link": "https://twitter.com/CanMusHistory",
   "instagram_link": "https://www.instagram.com/muscanhistoire/",
-  "sidebar_head": "instructions",
-  "sidebar_rst": "redémarrer",
-  "sidebar_option1": "Sélectionnez une note",
-  "sidebar_option2": "Sélectionnez une durée",
-  "sidebar_option3": "Sélectionnez une date",
-  "sidebar_option4": "Sélectionnez vos activités",
-  "sidebar_option5": "Revoir et soumettre",
-  "sidebar_option6": "Informations de contact",
   "arrive": {
     "name": "Arrivée",
     "img": "assets/images/Nordik_Massana_12.20.16_0786.jpg",
