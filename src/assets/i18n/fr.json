@@ -58,8 +58,8 @@
       "input_val": ""
     }
   },
-  "rem_button": "Remove Activity",
-  "swap_button": "Swap Activity",
+  "rem_button": "Enlever activité",
+  "swap_button": "Échanger activité",
   "durations": {
     "half": {
       "text": "demi-journée",
@@ -164,11 +164,11 @@
   "instagram_link": "https://www.instagram.com/muscanhistoire/",
   "arrive": {
     "name": "Arrivée",
-    "img": "assets/images/Nordik_Massana_12.20.16_0786.jpg",
+    "img": "assets/images/landing.jpg",
     "time": "9:30 AM",
     "length": 30,
     "order": "10",
-    "description": "Barton changea faiblement en homme, ajoute-t-elle. Vous voulez des yeux soignés, alors vous devez le faire. Passé dessiner grand visage face à louer oh mr. Required est en train de débattre de manière prolongée. New se décrit applaudie sans vergogne extrémité sans vergogne mais"
+    "description": "Arrivée de groupe au musée."
   },
   "activities": [
     {
@@ -1068,7 +1068,7 @@
     },
     {
       "id": 13,
-      "title": "HD-M Itinéraire 13",
+      "title": "Itinéraire 13 (matin)",
       "timeOfYear": "Octobre à avril",
       "grades": "Maternelle à 2e année",
       "day": "Half-day",
@@ -1113,7 +1113,7 @@
     },
     {
       "id": 14,
-      "title": "HD-M Itinéraire 14",
+      "title": "Itinéraire 14 (matin)",
       "timeOfYear": "Octobre à avril",
       "grades": "3e à 5e année",
       "day": "Half-day",
@@ -1144,7 +1144,7 @@
     },
     {
       "id": 15,
-      "title": "HD-M Itinéraire 15",
+      "title": "Itinéraire 15 (matin)",
       "timeOfYear": "Octobre à avril",
       "grades": "6e à 8e année",
       "day": "Half-day",
@@ -1189,7 +1189,7 @@
     },
     {
       "id": 16,
-      "title": "HD-M Itinéraire 16",
+      "title": "Itinéraire 16 (matin)",
       "timeOfYear": "Octobre à avril",
       "grades": "9e à la 12e année",
       "day": "Half-day",
@@ -1234,7 +1234,7 @@
     },
     {
       "id": 17,
-      "title": "HD-A Itinéraire 17",
+      "title": "Itinéraire 17 (après-midi)",
       "timeOfYear": "Octobre à avril",
       "grades": "Maternelle à 2e année",
       "day": "Half-day",
@@ -1279,7 +1279,7 @@
     },
     {
       "id": 18,
-      "title": "HD-A Itinéraire 18",
+      "title": "Itinéraire 18 (après-midi)",
       "timeOfYear": "Octobre à avril",
       "grades": "3e à 5e année",
       "day": "Half-day",
@@ -1324,7 +1324,7 @@
     },
     {
       "id": 19,
-      "title": "HD-A Itinéraire 19",
+      "title": "Itinéraire 19 (après-midi)",
       "timeOfYear": "Octobre à avril",
       "grades": "6e à 8e année",
       "day": "Half-day",
@@ -1369,7 +1369,7 @@
     },
     {
       "id": 20,
-      "title": "HD-A Itinéraire 20",
+      "title": "Itinéraire 20 (après-midi)",
       "timeOfYear": "Octobre à avril",
       "grades": "9e à la 12e année",
       "day": "Half-day",
@@ -1414,7 +1414,7 @@
     },
     {
       "id": 21,
-      "title": "HD-M Itinéraire 21",
+      "title": "Itinéraire 21 (matin)",
       "timeOfYear": "Mai à juin",
       "grades": "Maternelle à 2e année",
       "day": "Half-day",
@@ -1459,7 +1459,7 @@
     },
     {
       "id": 22,
-      "title": "HD-M Itinéraire 22",
+      "title": "Itinéraire 22 (matin)",
       "timeOfYear": "Mai à juin",
       "grades": "3e à 5e année",
       "day": "Half-day",
@@ -1504,7 +1504,7 @@
     },
     {
       "id": 23,
-      "title": "HD-M Itinéraire 23",
+      "title": "Itinéraire 23 (matin)",
       "timeOfYear": "Mai à juin",
       "grades": "6e à 8e année",
       "day": "Half-day",
@@ -1549,7 +1549,7 @@
     },
     {
       "id": 24,
-      "title": "HD-M Itinéraire 24",
+      "title": "Itinéraire 24 (matin)",
       "timeOfYear": "Mai à juin",
       "grades": "9e à la 12e année",
       "day": "Half-day",
@@ -1594,7 +1594,7 @@
     },
     {
       "id": 25,
-      "title": "HD-A Itinéraire 25",
+      "title": "Itinéraire 25 (après-midi)",
       "timeOfYear": "Mai à juin",
       "grades": "Maternelle à 2e année",
       "day": "Half-day",
@@ -1639,7 +1639,7 @@
     },
     {
       "id": 26,
-      "title": "HD-A Itinéraire 26",
+      "title": "Itinéraire 26 (après-midi)",
       "timeOfYear": "Mai à juin",
       "grades": "3e à 5e année",
       "day": "Half-day",
@@ -1684,7 +1684,7 @@
     },
     {
       "id": 27,
-      "title": "HD-A Itinéraire 27",
+      "title": "Itinéraire 27 (après-midi)",
       "timeOfYear": "Mai à juin",
       "grades": "6e à 8e année",
       "day": "Half-day",
@@ -1729,7 +1729,7 @@
     },
     {
       "id": 28,
-      "title": "HD-A Itinéraire 28",
+      "title": "Itinéraire 28 (après-midi)",
       "timeOfYear": "Mai à juin",
       "grades": "9e à la 12e année",
       "day": "Half-day",
@@ -1774,7 +1774,7 @@
     },
     {
       "id": 29,
-      "title": "HD-M Itinéraire 29",
+      "title": "Itinéraire 29 (matin)",
       "timeOfYear": "Juillet à septembre",
       "grades": "Maternelle à 2e année",
       "day": "Half-day",
@@ -1819,7 +1819,7 @@
     },
     {
       "id": 30,
-      "title": "HD-M Itinéraire 30",
+      "title": "Itinéraire 30 (matin)",
       "timeOfYear": "Juillet à septembre",
       "grades": "3e à 5e année",
       "day": "Half-day",
@@ -1850,7 +1850,7 @@
     },
     {
       "id": 31,
-      "title": "HD-M Itinéraire 31",
+      "title": "Itinéraire 31 (matin)",
       "timeOfYear": "Juillet à septembre",
       "grades": "6e à 8e année",
       "day": "Half-day",
@@ -1895,7 +1895,7 @@
     },
     {
       "id": 32,
-      "title": "HD-M Itinéraire 32",
+      "title": "Itinéraire 32 (matin)",
       "timeOfYear": "Juillet à septembre",
       "grades": "9e à la 12e année",
       "day": "Half-day",
@@ -1920,7 +1920,7 @@
           "length": 45,
           "type": "Visite guidé",
           "order": "3",
-          "time": ""
+          "time": "10:00"
         },
         {
           "name": "Retracez Votre Histoire!",
@@ -1934,13 +1934,13 @@
           "length": 45,
           "type": "Autoguidé",
           "order": "6",
-          "time": ""
+          "time": "11:15"
         }
       ]
     },
     {
       "id": 33,
-      "title": "HD-A Itinéraire 33",
+      "title": "Itinéraire 33 (après-midi)",
       "timeOfYear": "Juillet à septembre",
       "grades": "Maternelle à 2e année",
       "day": "Half-day",
@@ -1985,7 +1985,7 @@
     },
     {
       "id": 34,
-      "title": "HD-A Itinéraire 34",
+      "title": "Itinéraire 34 (après-midi)",
       "timeOfYear": "Juillet à septembre",
       "grades": "3e à 5e année",
       "day": "Half-day",
@@ -2030,7 +2030,7 @@
     },
     {
       "id": 35,
-      "title": "HD-A Itinéraire 35",
+      "title": "Itinéraire 35 (après-midi)",
       "timeOfYear": "Juillet à septembre",
       "grades": "6e à 8e année",
       "day": "Half-day",
@@ -2055,7 +2055,7 @@
           "length": 45,
           "type": "Visite guidé",
           "order": "3",
-          "time": ""
+          "time": "13:00"
         },
         {
           "name": "Ciné+",
@@ -2069,13 +2069,13 @@
           "length": 45,
           "type": "Ciné+",
           "order": "12",
-          "time": ""
+          "time": "14:00"
         }
       ]
     },
     {
       "id": 36,
-      "title": "HD-A Itinéraire 36",
+      "title": "Itinéraire 36 (après-midi)",
       "timeOfYear": "Juillet à septembre",
       "grades": "9e à la 12e année",
       "day": "Half-day",
@@ -2100,7 +2100,7 @@
           "length": 45,
           "type": "Visite guidé",
           "order": "3",
-          "time": ""
+          "time": "13:00"
         },
         {
           "name": "Ciné+",
@@ -2114,7 +2114,7 @@
           "length": 45,
           "type": "Ciné+",
           "order": "12",
-          "time": ""
+          "time": "14:00"
         }
       ]
     }
