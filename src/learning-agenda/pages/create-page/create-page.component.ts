@@ -130,8 +130,19 @@ export class CreatePageComponent implements OnInit {
     private changeDetector: ChangeDetectorRef
   ) { }
   ngOnInit() {
-     localStorage.removeItem('num')
-     localStorage.removeItem('day')
+    localStorage.removeItem('sDate')
+    localStorage.removeItem('fname')
+    localStorage.removeItem('lname')
+    localStorage.removeItem('email')
+    localStorage.removeItem('phone')
+    localStorage.removeItem('langs')
+    localStorage.removeItem('news')
+    localStorage.removeItem('consent')
+    localStorage.removeItem('day')
+    localStorage.removeItem('f_grade')
+    localStorage.removeItem('add')
+    localStorage.removeItem('num')
+    localStorage.removeItem('day')
     let lang = JSON.parse(localStorage.getItem('lang'));
     if (lang == 'en') {
       this.createTitle = '1. Select a Grade'
@@ -153,12 +164,12 @@ export class CreatePageComponent implements OnInit {
     this.lang = ''
     this.mail = ''
 
- 
+
 
 
   }
   showHeading() {
-    if (this.createTitle == '1. Select a Grade'|| this.createTitle == '1. Sélectionnez une note' || this.createTitle == 'Thank You!' || this.createTitle == 'Merci!')  {
+    if (this.createTitle == '1. Select a Grade' || this.createTitle == '1. Sélectionnez une note' || this.createTitle == 'Thank You!' || this.createTitle == 'Merci!') {
       this.showHead = false
     }
     else {
@@ -167,7 +178,8 @@ export class CreatePageComponent implements OnInit {
   }
   ngOnChanges() {
     this.showHeading()
-    
+    this.filterActivities()
+
     let lang = JSON.parse(localStorage.getItem('lang'));
     let num = JSON.parse(localStorage.getItem('num'));
     let day = JSON.parse(localStorage.getItem('day'));
@@ -190,13 +202,13 @@ export class CreatePageComponent implements OnInit {
       this.items = itn_E.itineraries;
       this.arrive = itn_E.arrive;
       this.itn__act = JSON.parse(localStorage.getItem('itn_En'));
-      this.activities = itn_E.activities;
+
       this.switchHeaderText()
     } else {
       this.items = itn_F.itineraries;
       this.arrive = itn_F.arrive;
       this.itn__act = JSON.parse(localStorage.getItem('itn_Fr'));
-      this.activities = itn_F.activities;
+
       this.switchFrench()
     }
     if (this.step4 == true) {
@@ -276,25 +288,25 @@ export class CreatePageComponent implements OnInit {
         activities: this.itn_E
       });
   }
-   switchHeaderText(){
-    if (this.createTitle == '1. Sélectionnez une note'){ this.createTitle = '1. Select a Grade'}
-    if (this.createTitle == '2. Sélectionnez une durée'){ this.createTitle = '2. Select a Duration'}
-    if (this.createTitle == '3. Sélectionnez une date'){ this.createTitle = '3. Select a Date'}
-    if (this.createTitle == '4. Sélectionnez vos activités'){ this.createTitle = '4. Select your Activities'}
-    if (this.createTitle ==  '5. Coordonnées'){ this.createTitle = '5. Contact Information'}
-    if (this.createTitle == '6. Examiner et soumettre'){this.createTitle = '6. Review and Submit'}
-    if (this.createTitle == 'Merci!'){this.createTitle = 'Thank You!'}
-   
-   }
-   switchFrench(){
-    if (this.createTitle == '1. Select a Grade'){ this.createTitle = '1. Sélectionnez une note'}
-    if (this.createTitle == '2. Select a Duration'){ this.createTitle ='2. Sélectionnez une durée'}
-    if (this.createTitle == '3. Select a Date'){ this.createTitle ='3. Sélectionnez une date'}
-    if (this.createTitle == '4. Select your Activities'){ this.createTitle ='4. Sélectionnez vos activités'}
-    if (this.createTitle == '5. Contact Information'){ this.createTitle = '5. Coordonnées'}
-    if (this.createTitle == '6. Review and Submit'){this.createTitle = '6. Examiner et soumettre'}
-    if (this.createTitle == 'Thank You!'){this.createTitle = 'Merci!'}
-   }
+  switchHeaderText() {
+    if (this.createTitle == '1. Sélectionnez une note') { this.createTitle = '1. Select a Grade' }
+    if (this.createTitle == '2. Sélectionnez une durée') { this.createTitle = '2. Select a Duration' }
+    if (this.createTitle == '3. Sélectionnez une date') { this.createTitle = '3. Select a Date' }
+    if (this.createTitle == '4. Sélectionnez vos activités') { this.createTitle = '4. Select your Activities' }
+    if (this.createTitle == '5. Coordonnées') { this.createTitle = '5. Contact Information' }
+    if (this.createTitle == '6. Examiner et soumettre') { this.createTitle = '6. Review and Submit' }
+    if (this.createTitle == 'Merci!') { this.createTitle = 'Thank You!' }
+
+  }
+  switchFrench() {
+    if (this.createTitle == '1. Select a Grade') { this.createTitle = '1. Sélectionnez une note' }
+    if (this.createTitle == '2. Select a Duration') { this.createTitle = '2. Sélectionnez une durée' }
+    if (this.createTitle == '3. Select a Date') { this.createTitle = '3. Sélectionnez une date' }
+    if (this.createTitle == '4. Select your Activities') { this.createTitle = '4. Sélectionnez vos activités' }
+    if (this.createTitle == '5. Contact Information') { this.createTitle = '5. Coordonnées' }
+    if (this.createTitle == '6. Review and Submit') { this.createTitle = '6. Examiner et soumettre' }
+    if (this.createTitle == 'Thank You!') { this.createTitle = 'Merci!' }
+  }
   fetchTranslation(key) {
     return this.translateService.fetchTranslation(key);
   }
@@ -503,7 +515,9 @@ export class CreatePageComponent implements OnInit {
     this.createTitle = '4. Select your Activities';
     $('#step3').prop('checked', false);
     $('#step3').prop('checked', true);
+    console.log(this.activities)
     this.ngOnChanges()
+    console.log(this.activities)
   }
 
   setStep5(event) {
@@ -526,8 +540,6 @@ export class CreatePageComponent implements OnInit {
     this.step5Done = true;
     this.showSwap = false;
     this.showDelete = false;
-    localStorage.setItem('itinerary', JSON.stringify(this.itn_E));
-    localStorage.setItem('french', JSON.stringify(this.itn_F));
     this.createTitle = '6. Review and Submit';
     $('#step5').prop('checked', false);
     $('#step5').prop('checked', true);
@@ -537,8 +549,8 @@ export class CreatePageComponent implements OnInit {
     this.step6 = false;
     this.step7 = event;
     this.step6Done = true;
-  this.showHead = false
-   this.createTitle = 'Thank You!'
+    this.showHead = false
+    this.createTitle = 'Thank You!'
     this.ngOnChanges()
   }
 
@@ -560,6 +572,8 @@ export class CreatePageComponent implements OnInit {
     localStorage.removeItem('consent')
     localStorage.removeItem('day')
     localStorage.removeItem('f_grade')
+    localStorage.removeItem('add')
+
     this.enable = false
     this.ngOnInit();
     this.step1 = true;
@@ -638,23 +652,37 @@ export class CreatePageComponent implements OnInit {
   }
 
   filterActivities() {
+    console.log("this method was called")
+    let activities = []
+    let lang = JSON.parse(localStorage.getItem('lang'));
+    if (lang == 'en') {
+
+      activities = itn_E.activities;
+
+    } else {
+
+      activities = itn_F.activities;
+
+    }
     if (JSON.parse(localStorage.getItem('f_grade'))) {
       let grade = JSON.parse(localStorage.getItem('f_grade'));
 
       if (grade == 'KinderTo2') {
-        this.activities = this.activities.filter(
+        this.activities = activities.filter(
           elem => elem.kinderTo2 == true
         );
       }
 
       if (grade == 'Gr3To5') {
-        this.activities = this.activities.filter(elem => elem.Gr3To5 == true);
+        this.activities = activities.filter(elem => elem.Gr3To5 == true);
       }
 
       if (grade == 'Gr6To8') {
-        this.activities = this.activities.filter(elem => elem.Gr6To8 == true);
+        this.activities = activities.filter(elem => elem.Gr6To8 == true);
       }
     }
+    console.log(JSON.parse(localStorage.getItem('f_grade')))
+    console.log(this.activities)
   }
 
   setUsrData(event) {
@@ -669,8 +697,7 @@ export class CreatePageComponent implements OnInit {
     console.log(this.empData)
     this.postUserData()
     this.sendUserEmail()
-    localStorage.clear()
-  this.setStep7(true)
+    this.setStep7(true)
 
   }
 
