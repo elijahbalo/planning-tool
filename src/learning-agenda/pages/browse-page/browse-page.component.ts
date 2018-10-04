@@ -39,6 +39,11 @@ export class BrowsePageComponent implements OnInit {
   rId: string;
   showNext;
   g_filter = [];
+  y_filter = [];
+  d_filter = [];
+  g_filter_ = [];
+  y_filter_ = [];
+  d_filter_ = [];
   filters = [];
   margins = {
     top: 70,
@@ -77,7 +82,7 @@ export class BrowsePageComponent implements OnInit {
         this.items = items;
         this.applyFilters();
       }); */
-    
+
     this.activities = itn_E.activities;
     console.log(this.items);
     /*     this.arrive = itn.arrive;
@@ -113,8 +118,8 @@ export class BrowsePageComponent implements OnInit {
 
       this.fr = false;
       this.en = true;
-      if (this.dis == true){
-      this.setEnglish(this.itn)
+      if (this.dis == true) {
+        this.setEnglish(this.itn)
       }
     }
     if (language == 'fr') {
@@ -122,11 +127,17 @@ export class BrowsePageComponent implements OnInit {
 
       this.en = false;
       this.fr = true;
-      if (this.dis == true){
-      this.setFrench(this.itn)
+      if (this.dis == true) {
+        this.setFrench(this.itn)
       }
     }
     this.translateService.switchLanguage(language);
+    this.g_filter_ = []
+    this.y_filter_ = []
+    this.d_filter_ = []
+    this.filterGrade()
+    this.filterYear()
+    this.filterDay()
     this.ngOnChanges();
   }
 
@@ -152,6 +163,8 @@ export class BrowsePageComponent implements OnInit {
   }
 
   ngOnChanges() {
+
+
     let lang = JSON.parse(localStorage.getItem('lang'));
     let num = JSON.parse(localStorage.getItem('num'));
     let day = JSON.parse(localStorage.getItem('day'));
@@ -171,15 +184,14 @@ export class BrowsePageComponent implements OnInit {
       }
     }
     if (lang == 'en') {
-      this.items = itn_E.itineraries;
       this.arrive = itn_E.arrive;
       this.itn__act = JSON.parse(localStorage.getItem('itn_En'));
-      this.activities = itn_E.activities;
+
     } else {
-      this.items = itn_F.itineraries;
       this.arrive = itn_F.arrive;
       this.itn__act = JSON.parse(localStorage.getItem('itn_Fr'));
-      this.activities = itn_F.activities;
+
+      this.filterActivities()
     }
   }
 
@@ -219,7 +231,7 @@ export class BrowsePageComponent implements OnInit {
       num = num + 1;
     });
     localStorage.setItem('num', JSON.stringify(num));
-    localStorage.setItem('itn_En', JSON.stringify(activities));
+    localStorage.setItem('itn_En', JSON.stringify(this.saveEnglish_v(item)));
     localStorage.setItem('itn_Fr', JSON.stringify(this.saveFrench_v(item)));
     let lang = JSON.parse(localStorage.getItem('lang'));
     if (lang == 'en') {
@@ -238,13 +250,13 @@ export class BrowsePageComponent implements OnInit {
       this.activities = itn_F.activities;
     }
   }
-  setFrench(item){
+  setFrench(item) {
     let index = itn_F.itineraries.findIndex(elem => elem.id == item.id);
 
     this.itn = itn_F.itineraries[index]
   }
 
-  setEnglish(item){
+  setEnglish(item) {
     let index = itn_E.itineraries.findIndex(elem => elem.id == item.id);
 
     this.itn = itn_E.itineraries[index]
@@ -255,24 +267,10 @@ export class BrowsePageComponent implements OnInit {
     return itn_F.itineraries[index].activities;
   }
 
-  saveEnglish_v(order, time) {
-    let index = itn_E.activities.findIndex(elem => elem.order == order);
-    //  localStorage.setItem('itinerary', JSON.stringify(itn_F.activities[index]));
-    let activity = new Activity(
-      time,
-      itn_E.activities[index].name,
-      itn_E.activities[index].type,
-      itn_E.activities[index].length,
-      itn_E.activities[index].description,
-      itn_E.activities[index].fees,
-      itn_E.activities[index].img,
-      itn_E.activities[index].ageRange,
-      itn_E.activities[index].order,
-      itn_E.activities[index].kinderTo2,
-      itn_E.activities[index].Gr3To5,
-      itn_E.activities[index].Gr6To8
-    );
-    return activity;
+  saveEnglish_v(item) {
+    let index = itn_E.itineraries.findIndex(elem => elem.id == item.id);
+
+    return itn_E.itineraries[index].activities;
   }
   pdf() {
     html2canvas(document.getElementById('main-sect')).then(canvas => {
@@ -297,6 +295,7 @@ export class BrowsePageComponent implements OnInit {
       doc.save('itinerary.pdf');
     });
   }
+
   printDiv() {
     var divToPrint = document.getElementById('main-sect');
 
@@ -317,7 +316,7 @@ export class BrowsePageComponent implements OnInit {
     }, 10);
   }
 
-  filterItems(field, event) {
+  filterGradeItems(field, event) {
     if (event == false) {
       let index = this.g_filter.findIndex(elem => elem == field);
       this.g_filter.splice(index, 1);
@@ -325,13 +324,40 @@ export class BrowsePageComponent implements OnInit {
     } else {
       this.g_filter.push(field);
     }
-    this.filter();
+    this.filterGrade();
+  }
+
+  filterYearItems(field, event) {
+    if (event == false) {
+      let index = this.y_filter.findIndex(elem => elem == field);
+      this.y_filter.splice(index, 1);
+      console.log(this.y_filter);
+    } else {
+      this.y_filter.push(field);
+    }
+    this.filterYear();
+  }
+
+  filterDayItems(field, event) {
+    if (event == false) {
+      let index = this.d_filter.findIndex(elem => elem == field);
+      this.d_filter.splice(index, 1);
+      console.log(this.d_filter);
+    } else {
+      this.d_filter.push(field);
+    }
+    this.filterDay();
   }
 
   clearAll() {
     console.log(this.g_filter);
     console.log(this.g_filter.length);
     this.g_filter = [];
+    this.y_filter = [];
+    this.d_filter = [];
+    this.g_filter_ = [];
+    this.y_filter_ = [];
+    this.d_filter_ = [];
 
     $('#grade-kindergarden_2').prop('checked', false);
 
@@ -349,15 +375,25 @@ export class BrowsePageComponent implements OnInit {
 
     console.log(this.g_filter);
     console.log(this.g_filter.length);
-    this.filter();
+    this.filterGrade();
+    this.filterYear();
+    this.filterDay();
   }
+  filterGrade() {
+    let lang = JSON.parse(localStorage.getItem('lang'));
+    if (lang == 'en') {
+      var items = itn_E.itineraries;
+      this.itn__act = JSON.parse(localStorage.getItem('itn_En'));
+    } else {
+      var items = itn_F.itineraries;
+      this.itn__act = JSON.parse(localStorage.getItem('itn_Fr'));
+      console.log("lang was changed")
 
-  filter() {
-    var items = itn_E.itineraries;
+    }
 
     if (this.g_filter.length == 0) {
-      /* should set items to the two langs, using en for now....*/
-      this.filters = itn_E.itineraries;
+
+      this.filters = items
     } else {
       for (var i = 0; i < this.g_filter.length; i++) {
         if (this.g_filter[i] == 'KinderTo2') {
@@ -419,8 +455,33 @@ export class BrowsePageComponent implements OnInit {
             });
           }
         }
+      }
+    }
+    this.filterActivities()
+    this.g_filter_ = this.filters;
+    this.computeIntersection()
+    console.log(this.g_filter, this.y_filter, this.d_filter)
+    //console.log(this.g_filter_, this.y_filter_, this.d_filter_)
+  }
 
-        if (this.g_filter[i] == 'OctoberToApril') {
+
+  filterYear() {
+    let lang = JSON.parse(localStorage.getItem('lang'));
+    if (lang == 'en') {
+      var items = itn_E.itineraries;
+      this.itn__act = JSON.parse(localStorage.getItem('itn_En'));
+    } else {
+      var items = itn_F.itineraries;
+      this.itn__act = JSON.parse(localStorage.getItem('itn_Fr'));
+    }
+
+    if (this.y_filter.length == 0) {
+
+      this.filters = items
+    } else {
+      for (var i = 0; i < this.y_filter.length; i++) {
+
+        if (this.y_filter[i] == 'OctoberToApril') {
           let newItems = items.filter(elem => elem.OctoberToApril == true);
           if (i == 0) {
             this.filters = newItems;
@@ -440,7 +501,7 @@ export class BrowsePageComponent implements OnInit {
           }
         }
 
-        if (this.g_filter[i] == 'MayToJune') {
+        if (this.y_filter[i] == 'MayToJune') {
           let newItems = items.filter(elem => elem.MayToJune == true);
           if (i == 0) {
             this.filters = newItems;
@@ -460,7 +521,34 @@ export class BrowsePageComponent implements OnInit {
           }
         }
 
-        if (this.g_filter[i] == 'Half-Day') {
+
+
+      }
+    }
+    this.y_filter_ = this.filters;
+    this.computeIntersection()
+    console.log(this.g_filter, this.y_filter, this.d_filter)
+    // console.log(this.g_filter_, this.y_filter_, this.d_filter_)
+  }
+
+
+  filterDay() {
+    let lang = JSON.parse(localStorage.getItem('lang'));
+    if (lang == 'en') {
+      var items = itn_E.itineraries;
+      this.itn__act = JSON.parse(localStorage.getItem('itn_En'));
+    } else {
+      var items = itn_F.itineraries;
+      this.itn__act = JSON.parse(localStorage.getItem('itn_Fr'));
+    }
+
+    if (this.d_filter.length == 0) {
+
+      this.filters = items
+    } else {
+      for (var i = 0; i < this.d_filter.length; i++) {
+
+        if (this.d_filter[i] == 'Half-Day') {
           let newItems = items.filter(elem => elem.HalfDay == true);
           if (i == 0) {
             this.filters = newItems;
@@ -480,7 +568,7 @@ export class BrowsePageComponent implements OnInit {
           }
         }
 
-        if (this.g_filter[i] == 'Full-Day') {
+        if (this.d_filter[i] == 'Full-Day') {
           let newItems = items.filter(elem => elem.FullDay == true);
           if (i == 0) {
             this.filters = newItems;
@@ -501,6 +589,324 @@ export class BrowsePageComponent implements OnInit {
         }
       }
     }
-    this.items = this.filters;
+    this.d_filter_ = this.filters;
+    this.computeIntersection()
+    console.log(this.g_filter, this.y_filter, this.d_filter)
+    //console.log(this.g_filter_, this.y_filter_, this.d_filter_)
   }
+  computeIntersection() {
+    let temp = []
+    let final = []
+    let toggler = false
+    console.log(this.g_filter_, this.y_filter_, this.d_filter_)
+    if (this.g_filter_.length > 0 && this.y_filter_.length == 0 && this.d_filter_.length == 0) {
+      console.log("1")
+
+      this.items = this.g_filter_
+    }
+    else {
+      if (this.g_filter_.length == 0 && this.y_filter_.length == 0 && this.d_filter_.length > 0) {
+        console.log("2")
+        this.items = this.d_filter_
+      }
+      else {
+        if (this.g_filter_.length == 0 && this.y_filter_.length > 0 && this.d_filter_.length == 0) {
+          console.log("3")
+          this.items = this.y_filter_
+        }
+        else {
+
+          if (this.g_filter_.length > 0 && this.y_filter_.length > 0 && this.d_filter_.length == 0) {
+            console.log("1")
+
+            this.g_filter_.map(elem => {
+              this.y_filter_.map(element => {
+                if (elem.id == element.id) { temp.push(elem) }
+              })
+            })
+            this.items = temp
+
+          }
+
+          if (this.g_filter_.length > 0 && this.y_filter_.length == 0 && this.d_filter_.length > 0) {
+            console.log("2")
+            this.g_filter_.map(elem => {
+              this.d_filter_.map(element => {
+                if (elem.id == element.id) { temp.push(elem) }
+              })
+            })
+            this.items = temp
+          }
+
+          if (this.g_filter_.length == 0 && this.y_filter_.length > 0 && this.d_filter_.length > 0) {
+            console.log("2")
+            this.y_filter_.map(elem => {
+              this.d_filter_.map(element => {
+                if (elem.id == element.id) { temp.push(elem) }
+              })
+            })
+            this.items = temp
+          }
+
+          if (this.g_filter_.length > 0 && this.y_filter_.length > 0 && this.d_filter_.length > 0) {
+            this.g_filter_.map(elem => {
+              this.y_filter_.map(element => {
+                if (elem.id == element.id) { temp.push(elem) }
+              })
+            })
+            temp.map(elem => {
+              this.d_filter_.map(element => {
+                if (elem.id == element.id) { final.push(elem) }
+              })
+            })
+
+            this.items = final
+          }
+
+        }
+      }
+
+
+      /*   */
+    }
+  }
+
+  filterActivities() {
+    let filters = []
+    let lang = JSON.parse(localStorage.getItem('lang'));
+    if (lang == 'en') {
+      var items = itn_E.activities;
+      this.itn__act = JSON.parse(localStorage.getItem('itn_En'));
+    } else {
+      var items = itn_F.activities;
+      this.itn__act = JSON.parse(localStorage.getItem('itn_Fr'));
+      console.log("lang was changed")
+
+    }
+
+    if (this.g_filter.length == 0) {
+
+      filters = items
+    } else {
+      for (var i = 0; i < this.g_filter.length; i++) {
+        if (this.g_filter[i] == 'KinderTo2') {
+          let newItems = items.filter(elem => elem.kinderTo2 == true);
+          if (i == 0) {
+            filters = newItems;
+          }
+          if (i > 0) {
+            let toggler = false;
+            newItems.map(elem => {
+              filters.map(element => {
+                if (elem.id == element.id) {
+                  toggler = true;
+                }
+              });
+              if (toggler == false) {
+                filters.push(elem);
+              }
+            });
+          }
+        }
+
+        if (this.g_filter[i] == 'Gr3To5') {
+          let newItems = items.filter(elem => elem.Gr3To5 == true);
+          if (i == 0) {
+            filters = newItems;
+          }
+          if (i > 0) {
+            let toggler = false;
+            newItems.map(elem => {
+              filters.map(element => {
+                if (elem.id == element.id) {
+                  toggler = true;
+                }
+              });
+              if (toggler == false) {
+                filters.push(elem);
+              }
+            });
+          }
+        }
+
+        if (this.g_filter[i] == 'Gr6To8') {
+          let newItems = items.filter(elem => elem.Gr6To8 == true);
+          if (i == 0) {
+            filters = newItems;
+          }
+          if (i > 0) {
+            let toggler = false;
+            newItems.map(elem => {
+              filters.map(element => {
+                if (elem.id == element.id) {
+                  toggler = true;
+                }
+              });
+              if (toggler == false) {
+                filters.push(elem);
+              }
+            });
+          }
+        }
+      }
+    }
+    this.activities = filters
+
+  }
+
+
+
+
+
+  /*   filter() {
+      var items = itn_E.itineraries;
+  
+      if (this.g_filter.length == 0) {
+  
+        this.filters = itn_E.itineraries;
+      } else {
+        for (var i = 0; i < this.g_filter.length; i++) {
+          if (this.g_filter[i] == 'KinderTo2') {
+            let newItems = items.filter(elem => elem.KinderTo2 == true);
+            if (i == 0) {
+              this.filters = newItems;
+            }
+            if (i > 0) {
+              let toggler = false;
+              newItems.map(elem => {
+                this.filters.map(element => {
+                  if (elem.id == element.id) {
+                    toggler = true;
+                  }
+                });
+                if (toggler == false) {
+                  this.filters.push(elem);
+                }
+              });
+            }
+          }
+  
+          if (this.g_filter[i] == 'Gr3To5') {
+            let newItems = items.filter(elem => elem.Gr3To5 == true);
+            if (i == 0) {
+              this.filters = newItems;
+            }
+            if (i > 0) {
+              let toggler = false;
+              newItems.map(elem => {
+                this.filters.map(element => {
+                  if (elem.id == element.id) {
+                    toggler = true;
+                  }
+                });
+                if (toggler == false) {
+                  this.filters.push(elem);
+                }
+              });
+            }
+          }
+  
+          if (this.g_filter[i] == 'Gr6To8') {
+            let newItems = items.filter(elem => elem.Gr6To8 == true);
+            if (i == 0) {
+              this.filters = newItems;
+            }
+            if (i > 0) {
+              let toggler = false;
+              newItems.map(elem => {
+                this.filters.map(element => {
+                  if (elem.id == element.id) {
+                    toggler = true;
+                  }
+                });
+                if (toggler == false) {
+                  this.filters.push(elem);
+                }
+              });
+            }
+          }
+  
+          if (this.g_filter[i] == 'OctoberToApril') {
+            let newItems = items.filter(elem => elem.OctoberToApril == true);
+            if (i == 0) {
+              this.filters = newItems;
+            }
+            if (i > 0) {
+              let toggler = false;
+              newItems.map(elem => {
+                this.filters.map(element => {
+                  if (elem.id == element.id) {
+                    toggler = true;
+                  }
+                });
+                if (toggler == false) {
+                  this.filters.push(elem);
+                }
+              });
+            }
+          }
+  
+          if (this.g_filter[i] == 'MayToJune') {
+            let newItems = items.filter(elem => elem.MayToJune == true);
+            if (i == 0) {
+              this.filters = newItems;
+            }
+            if (i > 0) {
+              let toggler = false;
+              newItems.map(elem => {
+                this.filters.map(element => {
+                  if (elem.id == element.id) {
+                    toggler = true;
+                  }
+                });
+                if (toggler == false) {
+                  this.filters.push(elem);
+                }
+              });
+            }
+          }
+  
+          if (this.g_filter[i] == 'Half-Day') {
+            let newItems = items.filter(elem => elem.HalfDay == true);
+            if (i == 0) {
+              this.filters = newItems;
+            }
+            if (i > 0) {
+              let toggler = false;
+              newItems.map(elem => {
+                this.filters.map(element => {
+                  if (elem.id == element.id) {
+                    toggler = true;
+                  }
+                });
+                if (toggler == false) {
+                  this.filters.push(elem);
+                }
+              });
+            }
+          }
+  
+          if (this.g_filter[i] == 'Full-Day') {
+            let newItems = items.filter(elem => elem.FullDay == true);
+            if (i == 0) {
+              this.filters = newItems;
+            }
+            if (i > 0) {
+              let toggler = false;
+              newItems.map(elem => {
+                this.filters.map(element => {
+                  if (elem.id == element.id) {
+                    toggler = true;
+                  }
+                });
+                if (toggler == false) {
+                  this.filters.push(elem);
+                }
+              });
+            }
+          }
+        }
+      }
+      this.items = this.filters;
+    } */
 }

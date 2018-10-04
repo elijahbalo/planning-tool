@@ -17,18 +17,20 @@
           <span class="ms__aside-group-heading">{{'aside_filter.grade_heading' | translate}}</span>
           <label class="ms__aside-label" for="grade-kindergarden_2">
             <span class="text">{{'grades.kg2.text' | translate}}</span>
-            <input id="grade-kindergarden_2" [(ngModel)]="check1" name="grade-kindergarden_grade_2" type="checkbox" (change)="filterItems('KinderTo2', check1)"
+            <input id="grade-kindergarden_2" [(ngModel)]="check1" name="grade-kindergarden_grade_2" type="checkbox" (change)="filterGradeItems('KinderTo2', check1)"
             />
             <span class="faux-checkbox unchecked"></span>
           </label>
           <label class="ms__aside-label" for="grade-3_5">
             <span class="text">{{'grades.three5.text' | translate}}</span>
-            <input id="grade-3_5" [(ngModel)]="check2" name="grade-3_5" type="checkbox" (change)="filterItems('Gr3To5', check2)" />
+            <input id="grade-3_5" [(ngModel)]="check2" name="grade-3_5" type="checkbox" (change)="filterGradeItems('Gr3To5', check2)"
+            />
             <span class="faux-checkbox unchecked"></span>
           </label>
           <label class="ms__aside-label" for="grade-6_8">
             <span class="text">{{'grades.six8.text' | translate}}</span>
-            <input id="grade-6_8" [(ngModel)]="check3" name="grade-6_8" type="checkbox" (change)="filterItems('Gr6To8', check3)" />
+            <input id="grade-6_8" [(ngModel)]="check3" name="grade-6_8" type="checkbox" (change)="filterGradeItems('Gr6To8', check3)"
+            />
             <span class="faux-checkbox unchecked"></span>
           </label>
         </fieldset>
@@ -36,13 +38,13 @@
           <span class="ms__aside-group-heading">{{'aside_filter.toy_heading' | translate}}</span>
           <label class="ms__aside-label" for="toy-oct_apr">
             <span class="text">{{'toy.oct_apr' | translate}}</span>
-            <input id="toy-oct_apr" [(ngModel)]="check4" name="toy-oct_apr" type="checkbox" (change)="filterItems('OctoberToApril', check4)"
+            <input id="toy-oct_apr" [(ngModel)]="check4" name="toy-oct_apr" type="checkbox" (change)="filterYearItems('OctoberToApril', check4)"
             />
             <span class="faux-checkbox unchecked"></span>
           </label>
           <label class="ms__aside-label" for="toy-may_jun">
             <span class="text">{{'toy.may_jun' | translate}}</span>
-            <input id="toy-may_jun" [(ngModel)]="check5" name="toy-may_jun" type="checkbox" (change)="filterItems('MayToJune', check5)"
+            <input id="toy-may_jun" [(ngModel)]="check5" name="toy-may_jun" type="checkbox" (change)="filterYearItems('MayToJune', check5)"
             />
             <span class="faux-checkbox unchecked"></span>
           </label>
@@ -51,13 +53,13 @@
           <span class="ms__aside-group-heading">{{'aside_filter.dur_heading' | translate}}</span>
           <label class="ms__aside-label" for="length-half">
             <span class="text">{{'durations.half.text' | translate}}</span>
-            <input id="length-half" [(ngModel)]="check6" name="length-half" type="checkbox" (change)="filterItems('Half-Day', check6)"
+            <input id="length-half" [(ngModel)]="check6" name="length-half" type="checkbox" (change)="filterDayItems('Half-Day', check6)"
             />
             <span class="faux-checkbox unchecked"></span>
           </label>
           <label class="ms__aside-label" for="length-full">
             <span class="text">{{'durations.full.text' | translate}}</span>
-            <input id="length-full" [(ngModel)]="check7" name="length-full" type="checkbox" (change)="filterItems('Full-Day', check7)"
+            <input id="length-full" [(ngModel)]="check7" name="length-full" type="checkbox" (change)="filterDayItems('Full-Day', check7)"
             />
             <span class="faux-checkbox unchecked"></span>
           </label>
@@ -129,7 +131,7 @@
                 <span class="activity-list-item__title">{{arrive.name | translate}}</span>
                 <span class="activity-list-item__desc" appEllipsis>{{arrive.description | translate}}
                   <!-- @Elijah: Can you factor in a basic control structure here? Only if arrive.description has value should we show this... -->
-              
+
                 </span>
               </div>
             </li>
