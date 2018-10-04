@@ -130,13 +130,19 @@ export class CreatePageComponent implements OnInit {
     private changeDetector: ChangeDetectorRef
   ) { }
   ngOnInit() {
-    localStorage.clear();
+     localStorage.removeItem('num')
+     localStorage.removeItem('day')
+    let lang = JSON.parse(localStorage.getItem('lang'));
+    if (lang == 'en') {
+      this.createTitle = '1. Select a Grade'
+    } else {
+      this.createTitle = '1. Sélectionnez une note'
+    }
     this.enabled = false;
     this.e_grade = false;
     this.e_calendar = false;
     this.e_activities = false;
     this.setCreate();
-    localStorage.setItem('lang', JSON.stringify('en'));
     this.displayItem();
     this.enable = false
     this.activities = itn_E.activities;
@@ -552,6 +558,8 @@ export class CreatePageComponent implements OnInit {
     localStorage.removeItem('langs')
     localStorage.removeItem('news')
     localStorage.removeItem('consent')
+    localStorage.removeItem('day')
+    localStorage.removeItem('f_grade')
     this.enable = false
     this.ngOnInit();
     this.step1 = true;

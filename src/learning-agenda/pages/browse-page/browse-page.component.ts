@@ -62,11 +62,13 @@ export class BrowsePageComponent implements OnInit {
     if (JSON.parse(localStorage.getItem('lang')) == 'en') {
       this.en = true;
       this.fr = false;
+      this.items = itn_E.itineraries;
     }
 
     if (JSON.parse(localStorage.getItem('lang')) == 'fr') {
       this.fr = true;
       this.en = true;
+      this.items = itn_F.itineraries;
     }
     /* this.items = this.db
       .collection('/itineraries')
@@ -75,7 +77,7 @@ export class BrowsePageComponent implements OnInit {
         this.items = items;
         this.applyFilters();
       }); */
-    this.items = itn_E.itineraries;
+    
     this.activities = itn_E.activities;
     console.log(this.items);
     /*     this.arrive = itn.arrive;
@@ -111,14 +113,18 @@ export class BrowsePageComponent implements OnInit {
 
       this.fr = false;
       this.en = true;
+      if (this.dis == true){
       this.setEnglish(this.itn)
+      }
     }
     if (language == 'fr') {
       localStorage.setItem('lang', JSON.stringify('fr'));
 
       this.en = false;
       this.fr = true;
+      if (this.dis == true){
       this.setFrench(this.itn)
+      }
     }
     this.translateService.switchLanguage(language);
     this.ngOnChanges();
