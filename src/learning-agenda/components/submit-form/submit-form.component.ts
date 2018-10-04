@@ -21,7 +21,9 @@ export class SubmitFormComponent implements OnInit {
   phone = ''
   @Input() lang
   @Input() news = false
-  @Input() consent = false
+  @Input() consent 
+
+
   shouldSendNews
 
 
@@ -97,7 +99,7 @@ export class SubmitFormComponent implements OnInit {
     localStorage.setItem('consent', JSON.stringify(this.consent))
 
 
-    if (this.firstName == '' || this.lastName == '' || this.email == '' || this.lang == '') {
+    if (this.firstName == '' || this.lastName == '' || this.email == '' || this.lang == '' || this.consent === undefined) {
 
       this.enabled = false
     }

@@ -126,10 +126,10 @@
                 </a>
               </figure>
               <div class="activity-list-item__body">
-                <span class="activity-list-item__title">{{arrive.name}}</span>
-                <span class="activity-list-item__desc" appEllipsis>{{arrive.description}}
+                <span class="activity-list-item__title">{{arrive.name | translate}}</span>
+                <span class="activity-list-item__desc" appEllipsis>{{arrive.description | translate}}
                   <!-- @Elijah: Can you factor in a basic control structure here? Only if arrive.description has value should we show this... -->
-                  <a href="#desc">{{'full_desc_link' | translate}}</a>
+              
                 </span>
               </div>
             </li>

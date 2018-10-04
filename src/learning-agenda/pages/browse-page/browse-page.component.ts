@@ -111,12 +111,14 @@ export class BrowsePageComponent implements OnInit {
 
       this.fr = false;
       this.en = true;
+      this.setEnglish(this.itn)
     }
     if (language == 'fr') {
       localStorage.setItem('lang', JSON.stringify('fr'));
 
       this.en = false;
       this.fr = true;
+      this.setFrench(this.itn)
     }
     this.translateService.switchLanguage(language);
     this.ngOnChanges();
@@ -229,6 +231,17 @@ export class BrowsePageComponent implements OnInit {
     } else {
       this.activities = itn_F.activities;
     }
+  }
+  setFrench(item){
+    let index = itn_F.itineraries.findIndex(elem => elem.id == item.id);
+
+    this.itn = itn_F.itineraries[index]
+  }
+
+  setEnglish(item){
+    let index = itn_E.itineraries.findIndex(elem => elem.id == item.id);
+
+    this.itn = itn_E.itineraries[index]
   }
   saveFrench_v(item) {
     let index = itn_F.itineraries.findIndex(elem => elem.id == item.id);

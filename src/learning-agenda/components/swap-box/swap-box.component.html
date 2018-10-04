@@ -32,8 +32,13 @@
       </figure>
       <span class="la-micro-list__title">{{activity.name}}</span>
       <span class="la-micro-list__desc">{{activity.description}}
-        <span class="linklusion">Full Description</span>
+      
+      </span>
+      <span (click)="toggleModal()" style=" display:inline; text-decoration:underline; cursor:pointer;font-style: italic;">
+        {{'full_desc_link' | translate}}
       </span>
     </li>
   </div>
 </div>
+
+<app-details [modal]="modal" [item]="activity" (set)="setModalFromChild($event)"></app-details>

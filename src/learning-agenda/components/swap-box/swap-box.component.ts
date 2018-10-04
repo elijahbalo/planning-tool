@@ -37,7 +37,7 @@ export class SwapBoxComponent implements OnInit {
       this.closeResult = `Closed with: ${result}`;
     });
   }
-
+  
   selected() {
     if (this.activity.order == this.presentItem.order) {
       return true;

@@ -1,4 +1,4 @@
-<main-header></main-header>
+<main-header (lang)="switchLanguage($event)"></main-header>
 
 <app-header [route]="route"></app-header>
 
@@ -57,7 +57,13 @@
           <span>5. {{'aside_checklist.contact' | translate}}</span>
         </li>
 
-        <li *ngIf="!step6" class="checklist-item">
+        <li *ngIf="!step6Done && !step6" class="checklist-item">
+          <span>6. {{'aside_checklist.review_submit' | translate}}</span>
+        </li>
+        <li *ngIf="step6" class="checklist-item checklist-item--on">
+          <span>6. {{'aside_checklist.review_submit' | translate}}</span>
+        </li>
+        <li *ngIf="step6Done" class="checklist-item checklist-item--done">
           <span>6. {{'aside_checklist.review_submit' | translate}}</span>
         </li>
       </ul>
@@ -82,14 +88,14 @@
             <span class="activity-list-item__time">{{arrive.time}}</span>
 
             <figure class="activity-list-item__figure">
-              <a class="activity-list-item__image-link" href="#figure">
+              <a class="activity-list-item__image-link" href="javascript:void(0)">
                 <img class="activity-list-item__image" src="{{arrive.img}}" width="227" height="161" alt="" />
               </a>
             </figure>
             <div class="activity-list-item__body">
-              <span class="activity-list-item__title">{{arrive.name}}</span>
-              <span class="activity-list-item__desc" appEllipsis>{{arrive.description}}
-                <a href="#desc">Full Description</a>
+              <span class="activity-list-item__title">{{arrive.name | translate}}</span>
+              <span class="activity-list-item__desc" appEllipsis>{{arrive.description | translate}}
+               
               </span>
             </div>
           </li>
@@ -135,14 +141,14 @@
             <span class="activity-list-item__time">{{arrive.time}}</span>
 
             <figure class="activity-list-item__figure">
-              <a class="activity-list-item__image-link" href="#figure">
+              <a class="activity-list-item__image-link" href="javascript:void(0)">
                 <img class="activity-list-item__image" src="{{arrive.img}}" width="227" height="161" alt="" />
               </a>
             </figure>
             <div class="activity-list-item__body">
-              <span class="activity-list-item__title">{{arrive.name}}</span>
-              <span class="activity-list-item__desc" appEllipsis>{{arrive.description}}
-                <a href="#desc">{{'full_desc_link' | translate}}</a>
+              <span class="activity-list-item__title">{{arrive.name | translate}}</span>
+              <span class="activity-list-item__desc" appEllipsis>{{arrive.description | translate}}
+                
               </span>
             </div>
           </li>
@@ -170,6 +176,8 @@
 
         </ul>
         <button class="la-button la-button--clr-primary" (click)="submitForm()">Submit</button>
+      </div>
+      <div *ngIf="step7" style="font-size:25x;"> {{'welcome_1' | translate}} <span style="font-weight:bold">{{'welcome_2' | translate}}</span>{{'welcome_3' | translate}}
       </div>
     </main>
   </div>

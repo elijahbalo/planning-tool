@@ -2,12 +2,12 @@
 </span>
 <div class="activity-list-item__body">
   <div *ngIf="isClickable">
-    <button *ngIf="!disable" class="la-button la-button--add" (click)="addActivity()">Add Another Activity</button>
+    <button *ngIf="!disable" class="la-button la-button--add" (click)="addActivity()">{{'add_button' | translate}}</button>
   </div>
   <div *ngIf="!isClickable">
-    <button *ngIf="!disable" disabled class="la-button la-button--add">Add Another Activity</button>
+    <button *ngIf="!disable" disabled class="la-button la-button--add">{{'add_button' | translate}}</button>
   </div>
-  <button *ngIf="disable" disabled class="la-button la-button--add">Maximum Activities</button>
+  <button *ngIf="disable" disabled class="la-button la-button--add">{{'maximum_button' | translate}}</button>
   <div *ngIf="showNext">
     <button *ngIf="!enabled" class="la-button la-button--clr-primary" disabled (click)="next()">Next</button>
     <button *ngIf="enabled" class="la-button la-button--clr-primary" (click)="next()">Next</button>

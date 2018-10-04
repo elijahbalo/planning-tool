@@ -90,6 +90,11 @@
       "browse": "Tout effacer"
     }
   },
+  "welcome_1":"Votre itinéraire demandé a été soumis à notre centre d'appels.",
+  "welcome_2":"Veuillez noter qu'il ne s'agit pas d'une confirmation de réservation et que les programmes sont sujets à changement, sous réserve de disponibilité.",
+  "welcome_3":"Notre personnel vous contactera dans un délai de 1 à 3 jours ouvrables pour confirmer votre demande.",
+  "add_button":"Ajouter une autre Activités",
+  "maximum_button":"Activités Maximale",
   "aside_checklist": {
     "grade": "Sélectionnez un niveau scolaire",
     "duration": "Sélectionnez une durée",
